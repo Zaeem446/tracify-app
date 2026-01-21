@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "GYIK",
+    "pricing": "Árak",
+    "contact": "Kapcsolat",
+    "cancel": "Előfizetés lemondása",
+    "login": "Bejelentkezés"
+  },
+  "hero": {
+    "title": "Bármely telefon megtalálása, bárhol",
+    "subtitle": "Adja meg a megkeresni kívánt telefonszámot",
+    "placeholder": "Telefonszám megadása",
+    "locateBtn": "Megkeresés",
+    "disclaimer": "Valós idejű telefonhelyzet kérése SMS-ben. *A nyomkövetés csak a címzett kifejezett hozzájárulásával történik.",
+    "locationFound": "Helyzet megtalálva!",
+    "locationExample": "A <strong>123 678-9012</strong> szám helyzete: <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Különleges ajánlat!",
+    "title": "Próbálja ki a Tracify képességeit mindössze",
+    "forFullDay": "egy teljes napra!",
+    "subtitle": "A Tracify szolgáltatásait könnyen kezelhető havi előfizetésen keresztül kínálja.",
+    "trialPeriod": "Próbaidőszak",
+    "trial24h": "24 órás próba",
+    "trialDesc": "A Tracify havi előfizetés alapján működik. A kezdeti fizetés 24 órára korlátlan hozzáférést biztosít az összes platformszolgáltatáshoz. Ezt követően az előfizetési díj",
+    "perMonth": "havonta érvényes.",
+    "startTrial": "Próba indítása",
+    "subscription": "Előfizetés",
+    "monthlyFee": "Havi díj",
+    "subscriptionDesc": "A 24 órás próbaidőszak lejárta után az ajánlat automatikusan havi előfizetéssé alakul. Ne feledje, hogy bármikor lemondhatja az előfizetést.",
+    "subscribeNow": "Előfizetés most"
+  },
+  "howItWorks": {
+    "title": "Hogyan működik?",
+    "step1Title": "Telefonszám megadása",
+    "step1Desc": "Adja meg a megkeresni kívánt telefonszámot és szabja testre az SMS üzenetet, amelyet a címzett kap.",
+    "step2Title": "Nyomkövető SMS küldése",
+    "step2Desc": "A Tracify elküldi a címzettnek az Ön egyedi SMS-ét, amely a telefon helyzetét kéri.",
+    "step3Title": "Pontos helyzet fogadása",
+    "step3Desc": "Értesítést kap, amint a címzett hozzájárul a helyzete megosztásához. Tekintse meg a pontos pozíciót a térképen az irányítópultján."
+  },
+  "features": {
+    "title": "Miért válassza a Tracifyt?",
+    "subtitle": "Egy kattintás és nulla erőfeszítés bárki helyzetének megtalálásához a világon",
+    "feature1Title": "Diszkrét szolgáltatás",
+    "feature1Desc": "Bár a telefon tulajdonosa értesítést kap a helyzetkérésről, a kérelmező személyazonossága bizalmas marad. Minden geolokációs kérés a magánélet tiszteletben tartásával történik, és az átvitt adatok titkosítottak a biztonság érdekében.",
+    "feature2Title": "Nincs szükség telepítésre",
+    "feature2Desc": "Nem kell szoftvert telepíteni a telefonjára vagy a céleszközre. Minden távolról működik! Csak adja meg a nyomon követni kívánt telefonszámot. Amint az SMS címzettje hozzájárul, azonnal hozzáférhet.",
+    "feature3Title": "Világszerte lefedettség",
+    "feature3Desc": "A Tracify minden hálózattal működik világszerte. A sikeres nyomkövetéshez azonban szükséges, hogy a telefon be legyen kapcsolva, a szolgáltatás elérhető legyen, és az SMS címzettje kifejezetten hozzájáruljon a helyzete megosztásához.",
+    "feature4Title": "iOS és Android kompatibilis",
+    "feature4Desc": "A Tracify zökkenőmentesen támogatja az iOS és Android mobileszközöket. Amíg rendelkezik a telefonszámmal és a személy kifejezett engedélyével a nyomkövetéshez, megtalálhatja őket szolgáltatásunk segítségével.",
+    "locatePhone": "Telefon megkeresése"
+  },
+  "faq": {
+    "title": "Gyakran ismételt kérdések",
+    "subtitle": "Itt megtalálhatja a válaszokat a mobil geolokációs szolgáltatásunkkal, a Tracifyval kapcsolatban leggyakrabban feltett kérdésekre.",
+    "tabAbout": "A Tracifyról",
+    "tabPayments": "Fizetések és számlázás",
+    "tabAccount": "Fiókom",
+    "q1": "Mi az a Tracify?",
+    "a1": "A Tracify egy mobil geolokációs szolgáltatás, amely lehetővé teszi bármely telefonszám megtalálását világszerte. Szolgáltatásunk úgy működik, hogy SMS-t küld a céltelefnra, amelyben a helyzet megosztásához való hozzájárulást kér. A hozzájárulás megadása után megkapja a pontos GPS koordinátákat.",
+    "q2": "Legális egyáltalán a Tracify telefonszám-nyomkövető használata?",
+    "a2": "Igen, a Tracify teljesen legális, mert a nyomon követett személy kifejezett hozzájárulását igényli. A címzettnek aktívan bele kell egyeznie a helyzete megosztásába az SMS kérésre válaszolva. Minden adatvédelmi előírásnak és adatvédelmi törvénynek megfelelünk.",
+    "q3": "Milyen hálózatokat támogat a Tracify?",
+    "a3": "A Tracify minden főbb mobilhálózatot támogat világszerte. Akár GSM, CDMA, LTE vagy 5G hálózatot használ a céltelefon, szolgáltatásunk bármely érvényes telefonszámra küldhet helyzetkérést.",
+    "q4": "Nyomon követhetem a telefonszám helyzetét, ha nem ismerem a modelljét?",
+    "a4": "Abszolút! Nem kell ismernie a telefon modelljét, gyártóját vagy operációs rendszerét. Csak a telefonszámra van szüksége. Rendszerünk automatikusan kezeli az összes technikai részletet az eszköz típusától függetlenül.",
+    "q5": "Támogatja a Tracify az iOS és Android operációs rendszerű mobileszközöket is?",
+    "a5": "Igen, a Tracify iOS (iPhone) és Android eszközökkel is működik. SMS-alapú helyzetkérő rendszerünk kompatibilis minden okostelefonnal, amely képes szöveges üzeneteket fogadni és rendelkezik helymeghatározási szolgáltatásokkal.",
+    "q6": "Milyen gyorsan találhatja meg a Tracify a telefonszám helyzetét?",
+    "a6": "Amint az SMS címzettje hozzájárul a helyzete megosztásához, szinte azonnal megkapja a koordinátákat. A teljes idő attól függ, milyen gyorsan válaszol a címzett a helyzetkérésre.",
+    "q7": "Hogyan kövessünk nyomon egy telefonszámot a céleszközhöz való fizikai hozzáférés nélkül?",
+    "a7": "Egyszerűen adja meg a telefonszámot a rendszerünkben, szabja testre az üzenetét, és mi SMS-t küldünk, amelyben a helyzet megosztásához való hozzájárulást kérjük. Minden távolról történik - a céleszközhöz való fizikai hozzáférés soha nem szükséges.",
+    "q8": "Nyomon követhetek valakit a mobiltelefonszáma alapján?",
+    "a8": "Igen, de csak a kifejezett hozzájárulásukkal. A Tracify SMS-ben küld helyzetkérést, és a nyomkövetés csak akkor történik, ha a címzett beleegyezik a helyzete megosztásába. Ez biztosítja a magánélet védelmét és a jogszabályi megfelelést.",
+    "q9": "Ingyen követhetek nyomon valakit a mobiltelefonszáma alapján?",
+    "a9p1": "24 órás próbaidőszakot kínálunk mindössze",
+    "a9p2": "áron, amely teljes hozzáférést biztosít az összes funkcióhoz. A próba után folytathatja havi előfizetésünket",
+    "a9p3": "/hó áron.",
+    "q10": "Még mindig segítségre van szüksége?",
+    "a10": "Ha bármilyen más kérdése van vagy segítségre van szüksége, kérjük, ne habozzon kapcsolatba lépni ügyfélszolgálatunkkal. Napi 24 órában, a hét minden napján segítünk Önnek. Elérhet minket a Kapcsolat oldalunkon vagy közvetlenül e-mailben."
+  },
+  "footer": {
+    "description": "A Tracify lehetővé teszi a mobiltelefon földrajzi helyzetének meghatározását, és minden telefontípussal, hálózattal és országgal működik.",
+    "legalInfo": "Jogi információk",
+    "account": "Fiók",
+    "signup": "Regisztráció",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Cookie szabályzat",
+    "privacy": "Adatvédelmi szabályzat",
+    "terms": "Általános szerződési feltételek"
+  },
+  "contact": {
+    "title": "Kapcsolat",
+    "subtitle": "Ügyfélszolgálatunk a nap 24 órájában, a hét minden napján rendelkezésére áll.",
+    "cardTitle": "Segítünk Önnek",
+    "cardSubtitle": "Ügyfélszolgálatunk a nap 24 órájában, a hét minden napján rendelkezésére áll.",
+    "form": {
+      "name": "Név",
+      "namePlaceholder": "Az Ön neve",
+      "email": "E-mail",
+      "emailPlaceholder": "az.on.emailje@pelda.com",
+      "subject": "Tárgy",
+      "selectSubject": "Válasszon tárgyat",
+      "technical": "Technikai támogatás",
+      "billing": "Számlázási kérdés",
+      "feature": "Funkció kérése",
+      "feedback": "Általános visszajelzés",
+      "other": "Egyéb",
+      "message": "Üzenet",
+      "messagePlaceholder": "Mondja el, hogyan segíthetünk...",
+      "notRobot": "Nem vagyok robot",
+      "send": "Üzenet küldése"
+    },
+    "footer": {
+      "home": "Kezdőlap"
+    }
+  },
+  "cancel": {
+    "title": "Előfizetés lemondása",
+    "subtitle": "Adja meg e-mail címét az előfizetés lemondásához. Ez kikapcsolja az automatikus megújítást és megakadályozza a jövőbeli díjak felszámítását.",
+    "form": {
+      "emailLabel": "E-mail cím",
+      "emailPlaceholder": "hello@email.com",
+      "submitBtn": "Előfizetés lemondása",
+      "helpText": "Ha nem emlékszik, melyik e-mail címet használta, ellenőrizze a postaládáját a Tracify üdvözlő e-mailje után. Ha még mindig nem találja,",
+      "contactSupport": "lépjen kapcsolatba az ügyfélszolgálattal"
+    },
+    "whyCharged": {
+      "title": "Miért számítottak fel díjat?"
+    },
+    "needHelp": {
+      "title": "Segítségre van szüksége?",
+      "description": "Ha problémája van vagy bármilyen kérdése van, ügyfélszolgálatunk a nap 24 órájában, a hét minden napján rendelkezésére áll. Csak lépjen kapcsolatba velünk, és gyorsan válaszolunk!",
+      "contactBtn": "Kapcsolat az ügyfélszolgálattal"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Irányítópult",
+      "account": "Fiók",
+      "contact": "Kapcsolat",
+      "settings": "Beállítások",
+      "logout": "Kijelentkezés"
+    },
+    "title": "Telefon helyzetének nyomon követése",
+    "subtitle": "Helyzetkérés küldése hozzájárulás-alapú nyomkövetéssel",
+    "sendRequest": {
+      "title": "Helyzetkérés küldése",
+      "phoneNumber": "Telefonszám",
+      "phonePlaceholder": "3001234567",
+      "message": "Üzenet",
+      "send": "Küldés",
+      "previewMessage": "Üzenet előnézete",
+      "rateLimit": "Biztonsági és adatvédelmi okokból csak 3 óránként küldhet üzenetet."
+    },
+    "recentRequests": {
+      "title": "Legutóbbi kérések",
+      "noRequests": "Még nincsenek nyomkövetési kérések"
+    },
+    "trackingActivity": {
+      "title": "Legutóbbi nyomkövetési tevékenység"
+    },
+    "disclaimer": {
+      "title": "Fontos figyelmeztetés",
+      "point1": "A Tracify a telefon tulajdonosának kifejezett hozzájárulását igényli a helyzete megosztása előtt",
+      "point2": "Ez a szolgáltatás csak jogszerű célokra szolgál (elveszett eszközök megtalálása, családi biztonság)",
+      "point3": "A jogosulatlan nyomkövetés vagy zaklatás illegális és szigorúan tilos",
+      "point4": "A helyzet pontossága az eszköz beállításaitól és a hálózati feltételektől függ",
+      "point5": "Nem vállalunk felelősséget a szolgáltatás visszaéléséért",
+      "needHelp": "Segítségre van szüksége?",
+      "contactSupport": "Lépjen kapcsolatba ügyfélszolgálatunkkal"
+    },
+    "subscription": {
+      "currentPlan": "Jelenlegi csomag",
+      "loading": "Betöltés...",
+      "manage": "Előfizetés kezelése"
+    },
+    "messageModal": {
+      "title": "Üzenet beállítások",
+      "description": "Kiválasztottuk a legmagasabb helyzet-megosztási arányú üzeneteket. Válasszon egyet az alábbi listából.",
+      "language": "Üzenet nyelve",
+      "selectTemplate": "Üzenetsablon kiválasztása",
+      "template1": "Én vagyok ennek a telefonnak a tulajdonosa, és jelenleg elveszett. Ha megtalálta, kérem tudassa velem.",
+      "template2": "Ha ez a telefon nem az Öné, tudna szólni nekem?",
+      "template3": "Nem sürgős, de nézze meg ezt, ha van egy perce:",
+      "apply": "Alkalmaz"
+    },
+    "trustpilot": {
+      "title": "Segítsen nekünk fejlődni!",
+      "subtitle": "Ossza meg tapasztalatait a Tracify használata előtt",
+      "message": "Nagyra értékeljük visszajelzését! Kérjük, szánjon egy percet arra, hogy értékelje tapasztalatait a Trustpiloton.",
+      "helpText": "Az Ön értékelése segít nekünk fenntartani a minőségi szolgáltatást",
+      "leaveReview": "Értékelés írása a Trustpiloton",
+      "skip": "Kihagyás most"
+    },
+    "locationModal": {
+      "title": "Helyzet megérkezett",
+      "coordinates": "Koordináták",
+      "openMap": "Megnyitás a Google Térképen",
+      "close": "Bezárás"
+    }
+  },
+  "payment": {
+    "completeSubscription": "Fejezze be előfizetését",
+    "subtitle": "Kezdje el a telefonhelyzetek nyomon követését hozzájárulással",
+    "title": "Fizetés",
+    "trialThen": "24 órás próba, majd",
+    "monthAfterTrial": "/hó a próba után",
+    "whatsIncluded": "Mi tartozik bele:",
+    "unlimitedRequests": "✓ Korlátlan helyzetkérés",
+    "realtimeTracking": "✓ Valós idejű nyomkövetés",
+    "smsNotifications": "✓ SMS értesítések",
+    "247support": "✓ 24/7 támogatás",
+    "paymentDetails": "Fizetési részletek",
+    "plan": "Csomag",
+    "24hourTrial": "24 órás próba",
+    "total": "Összesen",
+    "pay": "Fizetés",
+    "securePayment": "Biztonságos fizetés SSL titkosítással"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "Irányítópult",
+      "account": "Fiók",
+      "contact": "Kapcsolat",
+      "logout": "Kijelentkezés"
+    },
+    "title": "Fiókbeállítások",
+    "subtitle": "Kezelje fiókját és előfizetését",
+    "accountInfo": {
+      "title": "Fiókinformációk",
+      "email": "E-mail cím",
+      "memberSince": "Tag",
+      "loading": "Betöltés..."
+    },
+    "subscription": {
+      "title": "Előfizetés",
+      "plan": "Csomag",
+      "nextPayment": "Következő fizetés",
+      "status": "Állapot",
+      "active": "Aktív",
+      "loading": "Betöltés...",
+      "cancelButton": "Előfizetés lemondása"
+    },
+    "paymentHistory": {
+      "title": "Fizetési előzmények",
+      "noHistory": "Nincs elérhető fizetési előzmény"
+    },
+    "cancelModal": {
+      "title": "Biztos benne?",
+      "description": "Az előfizetés lemondása azt jelenti:",
+      "point1": "Elveszíti a prémium funkciókhoz való hozzáférést",
+      "point2": "Az előfizetése azonnal véget ér",
+      "point3": "Nem számítunk fel több díjat",
+      "confirm": "Előfizetés lemondása",
+      "goBack": "Vissza"
+    },
+    "successModal": {
+      "title": "Előfizetés lemondva",
+      "message": "Megerősítettük a lemondását, és nem kap több díjszámlázást tőlünk. Egy megerősítő e-mailt is küldtünk a postaládájába.",
+      "close": "Bezárás"
+    }
+  }
+}

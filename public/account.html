@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings - Tracify</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Language Selector Styles -->
+    <style>
+        .lang-selector-wrapper { position: relative; margin-right: 15px; }
+        .lang-selector { appearance: none; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 8px 30px 8px 12px; color: var(--text); font-size: 0.9rem; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
+        .lang-selector option { background: #fff; color: #333; }
+        [dir="rtl"] body { direction: rtl; text-align: right; }
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4CAF50;
+            --primary-dark: #388E3C;
+            --text: #333;
+            --text-light: #666;
+            --bg: #f5f7fa;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+            --success: #4CAF50;
+            --warning: #ff9800;
+            --danger: #f44336;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo svg {
+            width: 36px;
+            height: 36px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+
+        .nav-item {
+            padding: 8px 16px;
+            color: var(--text);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-item:hover {
+            background: var(--bg);
+        }
+
+        .nav-item.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .user-menu {
+            position: relative;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 50px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            min-width: 180px;
+            overflow: hidden;
+        }
+
+        .dropdown.active {
+            display: block;
+        }
+
+        .dropdown-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text);
+        }
+
+        .dropdown-item:hover {
+            background: var(--bg);
+        }
+
+        .dropdown-item.danger {
+            color: var(--danger);
+        }
+
+        /* Main Content */
+        .main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .page-title {
+            font-size: 1.8rem;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .page-subtitle {
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        /* Card */
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .card-header {
+            padding: 20px 25px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        /* Account Info */
+        .info-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .info-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .info-value {
+            font-size: 1rem;
+            color: var(--text);
+        }
+
+        /* Subscription */
+        .subscription-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .sub-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .sub-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .sub-value {
+            font-size: 1rem;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .badge-active {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .badge-trial {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .btn-cancel {
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid var(--danger);
+            color: var(--danger);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-cancel:hover {
+            background: var(--danger);
+            color: white;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 16px;
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow: auto;
+            animation: modalSlideIn 0.3s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            padding: 25px;
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .modal-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            background: linear-gradient(135deg, #FFA500, #FF6347);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        .modal-title {
+            font-size: 1.4rem;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .modal-body {
+            padding: 25px;
+        }
+
+        .modal-text {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .modal-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .modal-list li {
+            padding: 8px 0;
+            color: var(--text);
+            display: flex;
+            align-items: start;
+            gap: 10px;
+        }
+
+        .modal-list li:before {
+            content: "•";
+            color: var(--danger);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, var(--danger), #c62828);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 10px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(244, 67, 54, 0.4);
+        }
+
+        .btn-secondary {
+            width: 100%;
+            padding: 14px;
+            background: white;
+            color: var(--text);
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg);
+        }
+
+        .success-modal .modal-icon {
+            background: linear-gradient(135deg, var(--success), var(--primary-dark));
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                gap: 3px;
+            }
+
+            .nav-item span {
+                display: none;
+            }
+
+            .info-row, .subscription-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="3"/>
+                    <circle cx="20" cy="20" r="8" fill="currentColor"/>
+                    <path d="M20 2V10M20 30V38M2 20H10M30 20H38" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <span>Tracify</span>
+            </a>
+            <div class="nav-menu">
+                <a href="/dashboard" class="nav-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+                        <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+                    </svg>
+                    <span data-i18n="account.nav.dashboard">Dashboard</span>
+                </a>
+                <a href="/account" class="nav-item active">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <span data-i18n="account.nav.account">Account</span>
+                </a>
+                <a href="/contact" class="nav-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                    <span data-i18n="account.nav.contact">Contact</span>
+                </a>
+                <div class="user-menu">
+                    <div class="user-avatar" id="userAvatar" onclick="toggleDropdown()">U</div>
+                    <div class="dropdown" id="userDropdown">
+                        <div class="dropdown-item" onclick="window.location.href='/dashboard'">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+                                <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+                            </svg>
+                            <span data-i18n="account.nav.dashboard">Dashboard</span>
+                        </div>
+                        <div class="dropdown-item danger" onclick="logout()">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/>
+                                <line x1="21" y1="12" x2="9" y2="12"/>
+                            </svg>
+                            <span data-i18n="account.nav.logout">Logout</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <h1 class="page-title" data-i18n="account.title">Account Settings</h1>
+        <p class="page-subtitle" data-i18n="account.subtitle">Manage your account and subscription</p>
+
+        <!-- Account Information -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <span data-i18n="account.accountInfo.title">Account Information</span>
+                </h2>
+            </div>
+            <div class="card-body">
+                <div class="info-row">
+                    <div class="info-item">
+                        <div class="info-label" data-i18n="account.accountInfo.email">Email Address</div>
+                        <div class="info-value" id="accountEmail"><span data-i18n="account.accountInfo.loading">Loading...</span></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label" data-i18n="account.accountInfo.memberSince">Member Since</div>
+                        <div class="info-value" id="memberSince"><span data-i18n="account.accountInfo.loading">Loading...</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subscription -->
+        <div class="card" id="subscriptionCard">
+            <div class="card-header">
+                <h2 class="card-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                        <line x1="1" y1="10" x2="23" y2="10"/>
+                    </svg>
+                    <span data-i18n="account.subscription.title">Subscription</span>
+                </h2>
+            </div>
+            <div class="card-body">
+                <div class="subscription-grid">
+                    <div class="sub-item">
+                        <div class="sub-label" data-i18n="account.subscription.plan">Plan</div>
+                        <div class="sub-value" id="subPlan"><span data-i18n="account.subscription.loading">Loading...</span></div>
+                    </div>
+                    <div class="sub-item">
+                        <div class="sub-label" data-i18n="account.subscription.nextPayment">Next Payment</div>
+                        <div class="sub-value" id="subNextPayment"><span data-i18n="account.subscription.loading">Loading...</span></div>
+                    </div>
+                    <div class="sub-item">
+                        <div class="sub-label" data-i18n="account.subscription.status">Status</div>
+                        <div class="sub-value" id="subStatus">
+                            <span class="badge badge-active" data-i18n="account.subscription.active">Active</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-cancel" onclick="showCancelModal()" data-i18n="account.subscription.cancelButton">Cancel Subscription</button>
+            </div>
+        </div>
+
+        <!-- Payment History -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                    <span data-i18n="account.paymentHistory.title">Payment History</span>
+                </h2>
+            </div>
+            <div class="card-body">
+                <div id="paymentHistory">
+                    <p style="text-align: center; color: var(--text-light); padding: 20px;" data-i18n="account.paymentHistory.noHistory">No payment history available</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cancel Subscription Modal -->
+    <div class="modal" id="cancelModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-icon">❓</div>
+                <h3 class="modal-title" data-i18n="account.cancelModal.title">Are You Sure?</h3>
+            </div>
+            <div class="modal-body">
+                <p class="modal-text" data-i18n="account.cancelModal.description">Cancelling your subscription means:</p>
+                <ul class="modal-list">
+                    <li data-i18n="account.cancelModal.point1">You'll lose access to premium features</li>
+                    <li data-i18n="account.cancelModal.point2">Your subscription will end immediately</li>
+                    <li data-i18n="account.cancelModal.point3">You won't be charged again</li>
+                </ul>
+                <button class="btn-primary" onclick="confirmCancel()" data-i18n="account.cancelModal.confirm">Cancel Subscription</button>
+                <button class="btn-secondary" onclick="closeCancelModal()" data-i18n="account.cancelModal.goBack">Go Back</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-modal">
+            <div class="modal-header">
+                <div class="modal-icon">✓</div>
+                <h3 class="modal-title" data-i18n="account.successModal.title">Subscription Cancelled</h3>
+            </div>
+            <div class="modal-body">
+                <p class="modal-text" data-i18n="account.successModal.message">We've confirmed your cancellation, and you won't receive any further charges from us. A confirmation email has also been sent to your inbox.</p>
+                <button class="btn-secondary" onclick="closeSuccessModal()" data-i18n="account.successModal.close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let customerData = null;
+
+        // Toggle dropdown
+        function toggleDropdown() {
+            document.getElementById('userDropdown').classList.toggle('active');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('userDropdown');
+            const avatar = document.getElementById('userAvatar');
+            if (!avatar.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // Check authentication
+        async function checkAuth() {
+            try {
+                const res = await fetch('/api/auth/me');
+                if (!res.ok) {
+                    window.location.href = '/';
+                    return;
+                }
+
+                customerData = await res.json();
+
+                document.getElementById('userAvatar').textContent = customerData.customer.email[0].toUpperCase();
+                document.getElementById('accountEmail').textContent = customerData.customer.email;
+                document.getElementById('memberSince').textContent = new Date(customerData.customer.created_at).toLocaleDateString('en-US', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric'
+                });
+
+                if (customerData.subscription) {
+                    const planType = customerData.subscription.planType === 'trial' ? '24-Hour Trial' : 'Monthly Plan';
+                    const planBadge = customerData.subscription.planType === 'trial' ?
+                        '<span class="badge badge-trial">Trial</span>' : '';
+
+                    document.getElementById('subPlan').innerHTML = planType + ' ' + planBadge;
+                    document.getElementById('subNextPayment').textContent =
+                        new Date(customerData.subscription.expiresAt).toLocaleDateString('en-US', {
+                            month: 'short',
+                            day: 'numeric',
+                            year: 'numeric'
+                        }) + ' for Rs ' + (customerData.subscription.planType === 'trial' ? '325' : '8,700');
+                } else {
+                    document.getElementById('subscriptionCard').innerHTML = `
+                        <div class="card-header">
+                            <h2 class="card-title">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                                    <line x1="1" y1="10" x2="23" y2="10"/>
+                                </svg>
+                                Subscription
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <p style="text-align: center; color: var(--text-light); padding: 20px;">
+                                No active subscription. <a href="/payment" style="color: var(--primary); font-weight: 600;">Subscribe now</a>
+                            </p>
+                        </div>
+                    `;
+                }
+
+                loadPaymentHistory();
+            } catch (error) {
+                window.location.href = '/';
+            }
+        }
+
+        // Load payment history
+        async function loadPaymentHistory() {
+            try {
+                const res = await fetch('/api/payment/history');
+                if (!res.ok) return;
+
+                const data = await res.json();
+                const container = document.getElementById('paymentHistory');
+
+                if (data.payments.length === 0) {
+                    container.innerHTML = '<p style="text-align: center; color: var(--text-light); padding: 20px;">No payment history available</p>';
+                    return;
+                }
+
+                container.innerHTML = data.payments.map(p => `
+                    <div style="padding: 15px 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <div style="font-weight: 600; color: var(--text);">${p.payment_method || 'Card Payment'}</div>
+                            <div style="font-size: 0.85rem; color: var(--text-light); margin-top: 4px;">
+                                ${new Date(p.created_at).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                            </div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div style="font-weight: 600; color: var(--text);">Rs ${p.amount.toLocaleString()}</div>
+                            <span class="badge badge-active" style="margin-top: 4px;">Completed</span>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error('Failed to load payment history:', error);
+            }
+        }
+
+        // Modal functions
+        function showCancelModal() {
+            document.getElementById('cancelModal').classList.add('active');
+        }
+
+        function closeCancelModal() {
+            document.getElementById('cancelModal').classList.remove('active');
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.remove('active');
+            window.location.reload();
+        }
+
+        async function confirmCancel() {
+            try {
+                const res = await fetch('/api/payment/cancel', { method: 'POST' });
+                const data = await res.json();
+
+                closeCancelModal();
+
+                if (res.ok) {
+                    document.getElementById('successModal').classList.add('active');
+                } else {
+                    alert(data.error || 'Failed to cancel subscription.');
+                }
+            } catch (error) {
+                alert('Error cancelling subscription.');
+            }
+        }
+
+        // Logout
+        async function logout() {
+            await fetch('/api/auth/logout', { method: 'POST' });
+            window.location.href = '/';
+        }
+
+        // Initialize
+        checkAuth();
+    </script>
+    <script src="/js/i18n.js"></script>
+</body>
+</html>

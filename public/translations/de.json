@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "FAQ",
+    "pricing": "Preise",
+    "contact": "Kontakt",
+    "cancel": "Abo kundigen",
+    "login": "Anmelden"
+  },
+  "hero": {
+    "title": "Finden Sie jedes Telefon, uberall",
+    "subtitle": "Geben Sie die Telefonnummer ein, die Sie orten mochten",
+    "placeholder": "Telefonnummer eingeben",
+    "locateBtn": "Orten",
+    "disclaimer": "Fordern Sie Echtzeit-Telefonstandorte per SMS an. *Tracking erfolgt nur mit ausdrucklicher Zustimmung des Empfangers.",
+    "locationFound": "Standort gefunden!",
+    "locationExample": "Der Standort der Nummer <strong>123 678-9012</strong> ist <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Sonderangebot!",
+    "title": "Testen Sie Tracifys Fahigkeiten fur nur",
+    "forFullDay": "fur einen ganzen Tag!",
+    "subtitle": "Tracify bietet seine Dienste uber ein leicht zu verwaltendes monatliches Abonnement an.",
+    "trialPeriod": "Testzeitraum",
+    "trial24h": "24-Stunden-Test",
+    "trialDesc": "Tracify arbeitet auf monatlicher Abonnementbasis. Ihre erste Zahlung gewahrt uneingeschrankten Zugang zu allen Plattformdiensten fur 24 Stunden. Danach gilt die Abonnementgebuhr von",
+    "perMonth": "pro Monat.",
+    "startTrial": "Test starten",
+    "subscription": "Abonnement",
+    "monthlyFee": "Monatliche Gebuhr",
+    "subscriptionDesc": "Nach Ablauf der 24-stundigen Testphase wird das Angebot automatisch auf ein monatliches Abonnement verlangert. Denken Sie daran, dass Sie das Abonnement jederzeit kundigen konnen.",
+    "subscribeNow": "Jetzt abonnieren"
+  },
+  "howItWorks": {
+    "title": "Wie funktioniert es?",
+    "step1Title": "Telefonnummer eingeben",
+    "step1Desc": "Geben Sie die Telefonnummer ein, die Sie orten mochten, und passen Sie die SMS-Nachricht an, die der Empfanger erhalten soll.",
+    "step2Title": "Tracking-SMS senden",
+    "step2Desc": "Tracify sendet dem Empfanger Ihre individuelle SMS, die den Standort des Telefons anfordert.",
+    "step3Title": "Genauen Standort erhalten",
+    "step3Desc": "Lassen Sie sich benachrichtigen, sobald der Empfanger zustimmt, seinen Standort zu teilen. Sehen Sie die genaue Position auf der Karte in Ihrem Dashboard."
+  },
+  "features": {
+    "title": "Warum Tracify wahlen?",
+    "subtitle": "Ein Klick und kein Aufwand, um den Standort von jedem auf der Welt zu finden",
+    "feature1Title": "Diskreter Service",
+    "feature1Desc": "Wahrend der Telefonbesitzer uber eine Standortanfrage informiert wird, bleibt die Identitat des Anfragenden vertraulich. Alle Geolokalisierungsanfragen werden unter Beachtung der Privatsphare gestellt, und ubertragene Daten werden zur Sicherheit verschlusselt.",
+    "feature2Title": "Keine Installation erforderlich",
+    "feature2Desc": "Es muss keine Software auf Ihrem Telefon oder dem Zielgerat installiert werden. Alles funktioniert aus der Ferne! Geben Sie einfach die Telefonnummer ein, die Sie verfolgen mochten. Sobald der SMS-Empfanger zustimmt, haben Sie sofortigen Zugang.",
+    "feature3Title": "Weltweite Abdeckung",
+    "feature3Desc": "Tracify funktioniert mit allen Netzwerken weltweit. Erfolgreiches Tracking erfordert jedoch, dass das Telefon eingeschaltet ist, der Dienst verfugbar ist und der SMS-Empfanger ausdrucklich zustimmt, seinen Standort zu teilen.",
+    "feature4Title": "iOS und Android kompatibel",
+    "feature4Desc": "Tracify unterstutzt nahtlos sowohl iOS- als auch Android-Mobilgerate. Solange Sie die Telefonnummer und die ausdruckliche Genehmigung der Person zum Tracking haben, konnen Sie sie mit unserem Service orten.",
+    "locatePhone": "Telefon orten"
+  },
+  "faq": {
+    "title": "Haufig gestellte Fragen",
+    "subtitle": "Hier finden Sie alle Antworten auf die Fragen, die uns am haufigsten zu unserem mobilen Geolokalisierungsdienst Tracify gestellt werden.",
+    "tabAbout": "Uber Tracify",
+    "tabPayments": "Zahlungen & Abrechnung",
+    "tabAccount": "Mein Konto",
+    "q1": "Was ist Tracify?",
+    "a1": "Tracify ist ein mobiler Geolokalisierungsdienst, mit dem Sie jede Telefonnummer weltweit orten konnen. Unser Service funktioniert, indem er eine SMS an das Zieltelefon sendet, die um Zustimmung zur Standortfreigabe bittet. Sobald die Zustimmung erteilt wird, erhalten Sie die genauen GPS-Koordinaten.",
+    "q2": "Ist es legal, den Tracify Telefonnummern-Tracker zu verwenden?",
+    "a2": "Ja, Tracify ist vollig legal, da es die ausdruckliche Zustimmung der zu verfolgenden Person erfordert. Der Empfanger muss aktiv zustimmen, seinen Standort zu teilen, indem er auf die SMS-Anfrage antwortet. Wir halten alle Datenschutzvorschriften und Datenschutzgesetze ein.",
+    "q3": "Welche Netzwerke unterstutzt Tracify?",
+    "a3": "Tracify unterstutzt alle grossen Mobilfunknetze weltweit. Ob das Zieltelefon GSM, CDMA, LTE oder 5G-Netze verwendet, unser Service kann Standortanfragen an jede gultige Telefonnummer senden.",
+    "q4": "Kann ich den Standort einer Telefonnummer verfolgen, ohne das Modell zu kennen?",
+    "a4": "Absolut! Sie mussen das Telefonmodell, den Hersteller oder das Betriebssystem nicht kennen. Alles, was Sie brauchen, ist die Telefonnummer. Unser System kummert sich automatisch um alle technischen Details unabhangig vom Geratetyp.",
+    "q5": "Unterstutzt Tracify sowohl iOS- als auch Android-Mobilgerate?",
+    "a5": "Ja, Tracify funktioniert sowohl mit iOS (iPhone) als auch mit Android-Geraten. Unser SMS-basiertes Standortanfragesystem ist mit jedem Smartphone kompatibel, das Textnachrichten empfangen kann und uber Standortdienste verfugt.",
+    "q6": "Wie schnell kann Tracify den Standort einer Telefonnummer finden?",
+    "a6": "Sobald der SMS-Empfanger zustimmt, seinen Standort zu teilen, erhalten Sie die Koordinaten fast sofort. Die Gesamtzeit hangt davon ab, wie schnell der Empfanger auf die Standortanfrage antwortet.",
+    "q7": "Wie kann man eine Telefonnummer ohne physischen Zugang zum Zielgerat verfolgen?",
+    "a7": "Geben Sie einfach die Telefonnummer in unser System ein, passen Sie Ihre Nachricht an, und wir senden eine SMS, die um Standortzustimmung bittet. Alles wird aus der Ferne erledigt - physischer Zugang zum Zielgerat ist niemals erforderlich.",
+    "q8": "Kann ich jemanden uber seine Handynummer verfolgen?",
+    "a8": "Ja, aber nur mit dessen ausdrucklicher Zustimmung. Tracify sendet eine Standortanfrage per SMS, und das Tracking erfolgt nur, wenn der Empfanger zustimmt, seinen Standort zu teilen. Dies gewahrleistet Privatsphare und rechtliche Konformitat.",
+    "q9": "Kann ich jemanden kostenlos uber seine Handynummer verfolgen?",
+    "a9p1": "Wir bieten eine 24-stundige Testphase fur nur",
+    "a9p2": ", die Ihnen vollen Zugang zu allen Funktionen gibt. Nach der Testphase konnen Sie mit unserem monatlichen Abonnement fur",
+    "a9p3": "/Monat fortfahren.",
+    "q10": "Brauchen Sie noch Hilfe?",
+    "a10": "Wenn Sie weitere Fragen haben oder Hilfe benotigen, zogern Sie bitte nicht, unser Support-Team zu kontaktieren. Wir sind 24/7 fur Sie da. Sie erreichen uns uber unsere Kontaktseite oder per E-Mail."
+  },
+  "footer": {
+    "description": "Tracify ermoglicht es Ihnen, den geografischen Standort eines Mobiltelefons zu ermitteln und funktioniert mit allen Telefontypen, Netzwerken und Landern.",
+    "legalInfo": "Rechtliche Informationen",
+    "account": "Konto",
+    "signup": "Registrieren",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Cookie-Richtlinie",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Allgemeine Geschaftsbedingungen"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Our support team is here 24/7 to help you right away.",
+    "cardTitle": "We're Here to Help",
+    "cardSubtitle": "Our support team is here 24/7 to help you right away.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "subject": "Subject",
+      "selectSubject": "Select a subject",
+      "technical": "Technical Support",
+      "billing": "Billing Question",
+      "feature": "Feature Request",
+      "feedback": "General Feedback",
+      "other": "Other",
+      "message": "Message",
+      "messagePlaceholder": "Tell us how we can help...",
+      "notRobot": "I'm not a robot",
+      "send": "Send Message"
+    },
+    "footer": {
+      "home": "Home"
+    }
+  },
+  "cancel": {
+    "title": "Cancel Your Subscription",
+    "subtitle": "Enter your email to cancel your subscription. This will turn off auto-renewal and prevent any future charges.",
+    "form": {
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "hello@email.com",
+      "submitBtn": "Cancel Subscription",
+      "helpText": "If you don't remember which email you used, check your inbox for a welcome email from Tracify. If you still can't find it,",
+      "contactSupport": "contact support"
+    },
+    "whyCharged": {
+      "title": "Why was I charged?"
+    },
+    "needHelp": {
+      "title": "Need help?",
+      "description": "If you're experiencing an issue or have any questions, our support team is here for you 24/7. Just reach out and we'll get back to you quickly!",
+      "contactBtn": "Contact Support"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "account": "Account",
+      "contact": "Contact",
+      "settings": "Settings",
+      "logout": "Logout"
+    },
+    "title": "Track a Phone Location",
+    "subtitle": "Send a location request with consent-based tracking",
+    "sendRequest": {
+      "title": "Send Location Request",
+      "phoneNumber": "Phone Number",
+      "phonePlaceholder": "3001234567",
+      "message": "Message",
+      "send": "Send",
+      "previewMessage": "Preview Message",
+      "rateLimit": "Due to security and privacy reasons, you can only send a message once every 3 hours."
+    },
+    "recentRequests": {
+      "title": "Recent Requests",
+      "noRequests": "No tracking requests yet"
+    },
+    "trackingActivity": {
+      "title": "Recent Tracking Activity"
+    },
+    "disclaimer": {
+      "title": "Important Disclaimer",
+      "point1": "Tracify requires explicit consent from the phone owner before sharing their location",
+      "point2": "This service is intended for legitimate purposes only (finding lost devices, family safety)",
+      "point3": "Unauthorized tracking or stalking is illegal and strictly prohibited",
+      "point4": "Location accuracy depends on device settings and network conditions",
+      "point5": "We are not responsible for misuse of this service",
+      "needHelp": "Need help?",
+      "contactSupport": "Contact our support team"
+    },
+    "subscription": {
+      "currentPlan": "Current Plan",
+      "loading": "Loading...",
+      "manage": "Manage Subscription"
+    },
+    "messageModal": {
+      "title": "Message Settings",
+      "description": "We've selected the messages with the highest location-sharing rates. Select one from the list below.",
+      "language": "Message Language",
+      "selectTemplate": "Select a message template",
+      "template1": "I'm the owner of this phone, and it's currently lost. If you've found it, please let me know.",
+      "template2": "If this phone isn't yours, could you let me know?",
+      "template3": "No rush, but check this out when you have a sec:",
+      "apply": "Apply"
+    },
+    "trustpilot": {
+      "title": "Help Us Improve!",
+      "subtitle": "Share your experience before using Tracify",
+      "message": "We value your feedback! Please take a moment to rate your experience on Trustpilot.",
+      "helpText": "Your review helps us maintain quality service",
+      "leaveReview": "Leave a Review on Trustpilot",
+      "skip": "Skip for Now"
+    },
+    "locationModal": {
+      "title": "Location Received",
+      "coordinates": "Coordinates",
+      "openMap": "Open in Google Maps",
+      "close": "Close"
+    }
+  },
+  "payment": {
+    "completeSubscription": "Complete Your Subscription",
+    "subtitle": "Start tracking phone locations with consent",
+    "title": "Payment",
+    "trialThen": "24h trial, then",
+    "monthAfterTrial": "/month after trial",
+    "whatsIncluded": "What's included:",
+    "unlimitedRequests": "✓ Unlimited location requests",
+    "realtimeTracking": "✓ Real-time tracking",
+    "smsNotifications": "✓ SMS notifications",
+    "247support": "✓ 24/7 support",
+    "paymentDetails": "Payment Details",
+    "plan": "Plan",
+    "24hourTrial": "24-Hour Trial",
+    "total": "Total",
+    "pay": "Pay",
+    "securePayment": "Secure payment with SSL encryption"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "account": "Account",
+      "contact": "Contact",
+      "logout": "Logout"
+    },
+    "title": "Account Settings",
+    "subtitle": "Manage your account and subscription",
+    "accountInfo": {
+      "title": "Account Information",
+      "email": "Email Address",
+      "memberSince": "Member Since",
+      "loading": "Loading..."
+    },
+    "subscription": {
+      "title": "Subscription",
+      "plan": "Plan",
+      "nextPayment": "Next Payment",
+      "status": "Status",
+      "active": "Active",
+      "loading": "Loading...",
+      "cancelButton": "Cancel Subscription"
+    },
+    "paymentHistory": {
+      "title": "Payment History",
+      "noHistory": "No payment history available"
+    },
+    "cancelModal": {
+      "title": "Are You Sure?",
+      "description": "Cancelling your subscription means:",
+      "point1": "You'll lose access to premium features",
+      "point2": "Your subscription will end immediately",
+      "point3": "You won't be charged again",
+      "confirm": "Cancel Subscription",
+      "goBack": "Go Back"
+    },
+    "successModal": {
+      "title": "Subscription Cancelled",
+      "message": "We've confirmed your cancellation, and you won't receive any further charges from us. A confirmation email has also been sent to your inbox.",
+      "close": "Close"
+    }
+  }
+}

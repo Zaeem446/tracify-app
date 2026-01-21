@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "D.U.K.",
+    "pricing": "Kainos",
+    "contact": "Susisiekite",
+    "cancel": "Atšaukti prenumeratą",
+    "login": "Prisijungti"
+  },
+  "hero": {
+    "title": "Raskite bet kurį telefoną, bet kur",
+    "subtitle": "Įveskite telefono numerį, kurį norite rasti",
+    "placeholder": "Įveskite telefono numerį",
+    "locateBtn": "Rasti",
+    "disclaimer": "Užklausite realaus laiko telefono buvimo vietą per SMS. *Sekimas vyksta tik gavus aiškų gavėjo sutikimą.",
+    "locationFound": "Vieta rasta!",
+    "locationExample": "Numerio <strong>123 678-9012</strong> vieta yra <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Specialus pasiūlymas!",
+    "title": "Išbandykite Tracify galimybes tik už",
+    "forFullDay": "visą dieną!",
+    "subtitle": "Tracify siūlo savo paslaugas per lengvai valdomą mėnesinę prenumeratą.",
+    "trialPeriod": "Bandomasis laikotarpis",
+    "trial24h": "24 valandų bandomasis laikotarpis",
+    "trialDesc": "Tracify veikia mėnesinės prenumeratos pagrindu. Jūsų pradinis mokėjimas suteikia neribotą prieigą prie visų platformos paslaugų 24 valandoms. Po to taikomas prenumeratos mokestis",
+    "perMonth": "per mėnesį.",
+    "startTrial": "Pradėti bandomąjį laikotarpį",
+    "subscription": "Prenumerata",
+    "monthlyFee": "Mėnesinis mokestis",
+    "subscriptionDesc": "Pasibaigus 24 valandų bandomajam laikotarpiui, pasiūlymas automatiškai atsinaujins į mėnesinę prenumeratą. Atminkite, kad prenumeratą galite atšaukti bet kada.",
+    "subscribeNow": "Prenumeruoti dabar"
+  },
+  "howItWorks": {
+    "title": "Kaip tai veikia?",
+    "step1Title": "Įveskite telefono numerį",
+    "step1Desc": "Įveskite telefono numerį, kurį norite rasti, ir pritaikykite SMS žinutę, kurią norite, kad gavėjas gautų.",
+    "step2Title": "Išsiųskite sekimo SMS",
+    "step2Desc": "Tracify išsiųs gavėjui jūsų pasirinktinę SMS, kuri paprašys telefono buvimo vietos.",
+    "step3Title": "Gaukite tikslią vietą",
+    "step3Desc": "Būsite informuoti, kai tik gavėjas sutiks dalintis savo buvimo vieta. Peržiūrėkite tikslią poziciją žemėlapyje savo valdymo skydelyje."
+  },
+  "features": {
+    "title": "Kodėl rinktis Tracify?",
+    "subtitle": "Vienas paspaudimas ir jokių pastangų rasti bet kieno buvimo vietą visame pasaulyje",
+    "feature1Title": "Diskreti paslauga",
+    "feature1Desc": "Nors telefono savininkas bus informuotas apie vietos užklausą, prašytojo tapatybė lieka konfidenciali. Visos geolokacijos užklausos atliekamos gerbiant privatumą, o perduodami duomenys yra šifruojami saugumo sumetimais.",
+    "feature2Title": "Nereikia įdiegti",
+    "feature2Desc": "Jūsų telefone ar tiksliniame įrenginyje nereikia įdiegti jokios programinės įrangos. Viskas veikia nuotoliniu būdu! Tiesiog įveskite telefono numerį, kurį norite sekti. Kai tik SMS gavėjas duos sutikimą, iš karto turėsite prieigą.",
+    "feature3Title": "Visame pasaulyje",
+    "feature3Desc": "Tracify veikia su visais tinklais visame pasaulyje. Tačiau sėkmingam sekimui reikia, kad telefonas būtų įjungtas, paslauga būtų prieinama ir SMS gavėjas aiškiai sutiktų dalintis savo buvimo vieta.",
+    "feature4Title": "Suderinamas su iOS ir Android",
+    "feature4Desc": "Tracify sklandžiai palaiko iOS ir Android mobiliuosius įrenginius. Kol turite telefono numerį ir aiškų asmens sutikimą sekti, galite jį rasti naudodami mūsų paslaugą.",
+    "locatePhone": "Rasti telefoną"
+  },
+  "faq": {
+    "title": "Dažnai užduodami klausimai",
+    "subtitle": "Čia galite rasti visus atsakymus į klausimus, kuriuos mums dažniausiai užduoda apie mūsų mobiliojo ryšio geolokacijos paslaugą Tracify.",
+    "tabAbout": "Apie Tracify",
+    "tabPayments": "Mokėjimai ir atsiskaitymas",
+    "tabAccount": "Mano paskyra",
+    "q1": "Kas yra Tracify?",
+    "a1": "Tracify yra mobiliojo ryšio geolokacijos paslauga, leidžianti rasti bet kurį telefono numerį visame pasaulyje. Mūsų paslauga veikia siunčiant SMS į tikslinį telefoną, prašant sutikimo dalintis buvimo vieta. Gavus sutikimą, gausite tikslias GPS koordinates.",
+    "q2": "Ar teisėta naudoti Tracify telefono numerio sekiklį?",
+    "a2": "Taip, Tracify yra visiškai teisėta, nes reikalauja aiškaus sekamo asmens sutikimo. Gavėjas turi aktyviai sutikti dalintis savo buvimo vieta atsakydamas į SMS užklausą. Laikomės visų privatumo reglamentų ir duomenų apsaugos įstatymų.",
+    "q3": "Kokius tinklus palaiko Tracify?",
+    "a3": "Tracify palaiko visus pagrindinius mobiliojo ryšio tinklus visame pasaulyje. Nesvarbu, ar tikslinis telefonas naudoja GSM, CDMA, LTE ar 5G tinklus, mūsų paslauga gali siųsti vietos užklausas į bet kurį galiojantį telefono numerį.",
+    "q4": "Ar galiu sekti telefono numerio vietą, jei nežinau jo modelio?",
+    "a4": "Žinoma! Jums nereikia žinoti telefono modelio, gamintojo ar operacinės sistemos. Viskas, ko jums reikia, yra telefono numeris. Mūsų sistema automatiškai tvarko visas technines detales, nepriklausomai nuo įrenginio tipo.",
+    "q5": "Ar Tracify palaiko iOS ir Android valdomus mobiliuosius įrenginius?",
+    "a5": "Taip, Tracify veikia su iOS (iPhone) ir Android įrenginiais. Mūsų SMS pagrindu veikianti vietos užklausų sistema suderinama su bet kuriuo išmaniuoju telefonu, kuris gali gauti tekstines žinutes ir turi prieinamas vietos paslaugas.",
+    "q6": "Kaip greitai Tracify gali rasti telefono numerio vietą?",
+    "a6": "Kai tik SMS gavėjas sutinka dalintis savo buvimo vieta, koordinates gausite beveik akimirksniu. Bendras laikas priklauso nuo to, kaip greitai gavėjas atsako į vietos užklausą.",
+    "q7": "Kaip sekti telefono numerį be fizinės prieigos prie tikslinio įrenginio?",
+    "a7": "Tiesiog įveskite telefono numerį mūsų sistemoje, pritaikykite savo žinutę, ir mes išsiųsime SMS, prašydami sutikimo dėl vietos. Viskas atliekama nuotoliniu būdu - fizinė prieiga prie tikslinio įrenginio niekada nereikalinga.",
+    "q8": "Ar galiu sekti ką nors pagal mobiliojo telefono numerį?",
+    "a8": "Taip, bet tik su jų aiškiu sutikimu. Tracify siunčia vietos užklausą per SMS, ir sekimas vyksta tik tada, kai gavėjas sutinka dalintis savo buvimo vieta. Tai užtikrina privatumą ir teisinę atitiktį.",
+    "q9": "Ar galiu nemokamai sekti ką nors pagal mobiliojo telefono numerį?",
+    "a9p1": "Siūlome 24 valandų bandomąjį laikotarpį tik už",
+    "a9p2": ", kuris suteikia pilną prieigą prie visų funkcijų. Po bandomojo laikotarpio galite tęsti su mūsų mėnesine prenumerata už",
+    "a9p3": "/mėn.",
+    "q10": "Vis dar reikia pagalbos?",
+    "a10": "Jei turite kitų klausimų ar reikia pagalbos, nedvejodami susisiekite su mūsų palaikymo komanda. Mes čia, kad jums padėtume 24/7. Galite susisiekti per mūsų Susisiekite puslapį arba tiesiogiai el. paštu."
+  },
+  "footer": {
+    "description": "Tracify leidžia gauti mobiliojo telefono geografinę vietą ir veikia su visų tipų telefonais, tinklais ir šalimis.",
+    "legalInfo": "Teisinė informacija",
+    "account": "Paskyra",
+    "signup": "Registruotis",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Slapukų politika",
+    "privacy": "Privatumo politika",
+    "terms": "Naudojimo sąlygos"
+  },
+  "contact": {
+    "title": "Susisiekite",
+    "subtitle": "Mūsų palaikymo komanda čia 24/7, kad jums padėtų iš karto.",
+    "cardTitle": "Mes čia, kad padėtume",
+    "cardSubtitle": "Mūsų palaikymo komanda čia 24/7, kad jums padėtų iš karto.",
+    "form": {
+      "name": "Vardas",
+      "namePlaceholder": "Jūsų vardas",
+      "email": "El. paštas",
+      "emailPlaceholder": "jusu.pastas@pavyzdys.lt",
+      "subject": "Tema",
+      "selectSubject": "Pasirinkite temą",
+      "technical": "Techninė pagalba",
+      "billing": "Klausimas dėl atsiskaitymo",
+      "feature": "Funkcijos užklausa",
+      "feedback": "Bendras atsiliepimas",
+      "other": "Kita",
+      "message": "Žinutė",
+      "messagePlaceholder": "Pasakykite, kaip galime padėti...",
+      "notRobot": "Aš nesu robotas",
+      "send": "Siųsti žinutę"
+    },
+    "footer": {
+      "home": "Pradžia"
+    }
+  },
+  "cancel": {
+    "title": "Atšaukite savo prenumeratą",
+    "subtitle": "Įveskite savo el. paštą, kad atšauktumėte prenumeratą. Tai išjungs automatinį atnaujinimą ir užkirs kelią būsimiems mokėjimams.",
+    "form": {
+      "emailLabel": "El. pašto adresas",
+      "emailPlaceholder": "labas@email.lt",
+      "submitBtn": "Atšaukti prenumeratą",
+      "helpText": "Jei neprisimenate, kurį el. paštą naudojote, patikrinkite savo pašto dėžutę, ar nėra sveikinimo laiško iš Tracify. Jei vis tiek nerandate,",
+      "contactSupport": "susisiekite su palaikymu"
+    },
+    "whyCharged": {
+      "title": "Kodėl man buvo nuskaičiuota?"
+    },
+    "needHelp": {
+      "title": "Reikia pagalbos?",
+      "description": "Jei susiduriate su problema ar turite klausimų, mūsų palaikymo komanda yra jums 24/7. Tiesiog susisiekite ir mes greitai atsakysime!",
+      "contactBtn": "Susisiekti su palaikymu"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Valdymo skydelis",
+      "account": "Paskyra",
+      "contact": "Kontaktai",
+      "settings": "Nustatymai",
+      "logout": "Atsijungti"
+    },
+    "title": "Sekite telefono vietą",
+    "subtitle": "Siųskite vietos užklausą su sutikimu pagrįstu sekimu",
+    "sendRequest": {
+      "title": "Siųsti vietos užklausą",
+      "phoneNumber": "Telefono numeris",
+      "phonePlaceholder": "3001234567",
+      "message": "Žinutė",
+      "send": "Siųsti",
+      "previewMessage": "Peržiūrėti žinutę",
+      "rateLimit": "Dėl saugumo ir privatumo priežasčių galite siųsti žinutę tik kartą per 3 valandas."
+    },
+    "recentRequests": {
+      "title": "Paskutinės užklausos",
+      "noRequests": "Dar nėra sekimo užklausų"
+    },
+    "trackingActivity": {
+      "title": "Paskutinė sekimo veikla"
+    },
+    "disclaimer": {
+      "title": "Svarbus perspėjimas",
+      "point1": "Tracify reikalauja aiškaus telefono savininko sutikimo prieš dalijantis jų buvimo vieta",
+      "point2": "Ši paslauga skirta tik teisėtiems tikslams (pamestų įrenginių radimas, šeimos saugumas)",
+      "point3": "Neteisėtas sekimas ar persekiojimas yra neteisėtas ir griežtai draudžiamas",
+      "point4": "Vietos tikslumas priklauso nuo įrenginio nustatymų ir tinklo sąlygų",
+      "point5": "Mes nesame atsakingi už šios paslaugos netinkamą naudojimą",
+      "needHelp": "Reikia pagalbos?",
+      "contactSupport": "Susisiekite su mūsų palaikymo komanda"
+    },
+    "subscription": {
+      "currentPlan": "Dabartinis planas",
+      "loading": "Kraunama...",
+      "manage": "Valdyti prenumeratą"
+    },
+    "messageModal": {
+      "title": "Žinutės nustatymai",
+      "description": "Pasirinkome žinutes su aukščiausiu vietos dalijimosi rodikliu. Pasirinkite vieną iš žemiau esančio sąrašo.",
+      "language": "Žinutės kalba",
+      "selectTemplate": "Pasirinkite žinutės šabloną",
+      "template1": "Aš esu šio telefono savininkas ir jis šiuo metu yra pamestas. Jei jį radote, prašau praneškite.",
+      "template2": "Jei šis telefonas nėra jūsų, ar galėtumėte man pranešti?",
+      "template3": "Neskubu, bet peržiūrėkite tai, kai turėsite minutę:",
+      "apply": "Taikyti"
+    },
+    "trustpilot": {
+      "title": "Padėkite mums tobulėti!",
+      "subtitle": "Pasidalinkite savo patirtimi prieš naudodami Tracify",
+      "message": "Vertiname jūsų atsiliepimus! Skirkite minutę įvertinti savo patirtį Trustpilot.",
+      "helpText": "Jūsų atsiliepimas padeda mums išlaikyti kokybišką paslaugą",
+      "leaveReview": "Palikite atsiliepimą Trustpilot",
+      "skip": "Praleisti kol kas"
+    },
+    "locationModal": {
+      "title": "Vieta gauta",
+      "coordinates": "Koordinatės",
+      "openMap": "Atidaryti Google žemėlapiuose",
+      "close": "Uždaryti"
+    }
+  },
+  "payment": {
+    "completeSubscription": "Užbaikite savo prenumeratą",
+    "subtitle": "Pradėkite sekti telefonų vietas su sutikimu",
+    "title": "Mokėjimas",
+    "trialThen": "24 val. bandomasis, po to",
+    "monthAfterTrial": "/mėn. po bandomojo",
+    "whatsIncluded": "Kas įtraukta:",
+    "unlimitedRequests": "✓ Neriboti vietos užklausos",
+    "realtimeTracking": "✓ Realaus laiko sekimas",
+    "smsNotifications": "✓ SMS pranešimai",
+    "247support": "✓ 24/7 palaikymas",
+    "paymentDetails": "Mokėjimo informacija",
+    "plan": "Planas",
+    "24hourTrial": "24 valandų bandomasis",
+    "total": "Iš viso",
+    "pay": "Mokėti",
+    "securePayment": "Saugus mokėjimas su SSL šifravimu"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "Valdymo skydelis",
+      "account": "Paskyra",
+      "contact": "Kontaktai",
+      "logout": "Atsijungti"
+    },
+    "title": "Paskyros nustatymai",
+    "subtitle": "Valdykite savo paskyrą ir prenumeratą",
+    "accountInfo": {
+      "title": "Paskyros informacija",
+      "email": "El. pašto adresas",
+      "memberSince": "Narys nuo",
+      "loading": "Kraunama..."
+    },
+    "subscription": {
+      "title": "Prenumerata",
+      "plan": "Planas",
+      "nextPayment": "Kitas mokėjimas",
+      "status": "Būsena",
+      "active": "Aktyvi",
+      "loading": "Kraunama...",
+      "cancelButton": "Atšaukti prenumeratą"
+    },
+    "paymentHistory": {
+      "title": "Mokėjimų istorija",
+      "noHistory": "Nėra mokėjimų istorijos"
+    },
+    "cancelModal": {
+      "title": "Ar tikrai?",
+      "description": "Prenumeratos atšaukimas reiškia:",
+      "point1": "Prarasite prieigą prie premium funkcijų",
+      "point2": "Jūsų prenumerata baigsis iš karto",
+      "point3": "Jums daugiau nebus taikomi mokesčiai",
+      "confirm": "Atšaukti prenumeratą",
+      "goBack": "Grįžti"
+    },
+    "successModal": {
+      "title": "Prenumerata atšaukta",
+      "message": "Patvirtinome jūsų atšaukimą ir daugiau negausite mokėjimų iš mūsų. Patvirtinimo laiškas taip pat buvo išsiųstas į jūsų pašto dėžutę.",
+      "close": "Uždaryti"
+    }
+  }
+}

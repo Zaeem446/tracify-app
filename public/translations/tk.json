@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "Köp soralýan soraglar",
+    "pricing": "Bahalar",
+    "contact": "Biziň bilen habarlaşyň",
+    "cancel": "Abunany ýatyrmak",
+    "login": "Giriş"
+  },
+  "hero": {
+    "title": "Islendik telefony, islendik ýerde tapyň",
+    "subtitle": "Gözlemek isleýän telefon belgiňizi giriziň",
+    "placeholder": "Telefon belgisini giriziň",
+    "locateBtn": "Tap",
+    "disclaimer": "SMS arkaly real wagt telefon ýerlerini soraň. *Yzarlamak diňe alyjynyň aç-açan razylygy bilen amala aşyrylýar.",
+    "locationFound": "Ýer tapyldy!",
+    "locationExample": "Belginiň <strong>123 678-9012</strong> ýeri <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Aýratyn teklip!",
+    "title": "Tracify-niň mümkinçiliklerini diňe",
+    "forFullDay": "doly bir gün üçin synap görüň!",
+    "subtitle": "Tracify hyzmatlaryny aňsat dolandyrylýan aýlyk abuna arkaly hödürleýär.",
+    "trialPeriod": "Synag döwri",
+    "trial24h": "24 sagatlaýyn synag",
+    "trialDesc": "Tracify aýlyk abuna esasynda işleýär. Ilkinji tölegiňiz 24 sagat üçin platformanyň ähli hyzmatlaryna çäklendirilmedik giriş berýär. Şondan soň",
+    "perMonth": "aýlyk abuna hakynyň tölenilmegi talap edilýär.",
+    "startTrial": "Synag başlamak",
+    "subscription": "Abuna",
+    "monthlyFee": "Aýlyk töleg",
+    "subscriptionDesc": "24 sagatlaýyn synag döwri gutarandan soň, teklip awtomatiki usulda aýlyk abuna täzelenýär. Islendik wagty abunany ýatyrmagy unutmaň.",
+    "subscribeNow": "Häzir abuna bolmak"
+  },
+  "howItWorks": {
+    "title": "Nädip işleýär?",
+    "step1Title": "Telefon belgisini giriziň",
+    "step1Desc": "Gözlemek isleýän telefon belgiňizi giriziň we alyjynyň almagyny isleýän SMS habaryny sazlaň.",
+    "step2Title": "Yzarlama SMS-i iberiň",
+    "step2Desc": "Tracify alyjynyň telefon ýerini soraýan sazlanan SMS habaryňyzy iberer.",
+    "step3Title": "Takyk ýeri alyň",
+    "step3Desc": "Alyjy öz ýerini paýlaşmaga razyçylyk berenden dessine habar alyň. Kontrolýor panelinde kartada takyk pozisiýany görüň."
+  },
+  "features": {
+    "title": "Näme üçin Tracify-ni saýlamaly?",
+    "subtitle": "Bir basmak we dünýäniň islendik ýerinde islendik adamyň ýerini tapmak üçin ýokary çärmelendirmek",
+    "feature1Title": "Diskret hyzmat",
+    "feature1Desc": "Telefonyň eýesine ýer soragy barada habar berilse-de, sorag berijiniň şahsyýeti gizlinlikde galýar. Geolocation soraglarynyň ählisi hususylyga hormat goýmak bilen edilýär we iberilýän maglumatlar howpsuzlyk üçin şifrlenendir.",
+    "feature2Title": "Gurnamagy talap etmeýär",
+    "feature2Desc": "Telefonyňyza ýa-da nyşana alnan enjama gurulmagy zerur bolan programma ýok. Hemme zat uzakdan işleýär! Diňe yzarlamak isleýän telefon belgiňizi giriziň. SMS alyjy razyçylyk berenden dessine derrew giriş alarsynyz.",
+    "feature3Title": "Dünýä derejesinde örtük",
+    "feature3Desc": "Tracify dünýädäki ähli ulgamlar bilen işleýär. Şeýle-de bolsa, üstünlikli yzarlama telefonyň açyk bolmagyny, hyzmaty elýeterliligini we SMS alyjynyň öz ýerini paýlaşmaga aç-açan razyçylygyny talap edýär.",
+    "feature4Title": "iOS we Android bilen utgaşýar",
+    "feature4Desc": "Tracify iOS we Android ykjam enjamlaryny ajaýyp goldaýar. Telefon belgisi we şahsyýetiň yzarlamak üçin aç-açan razylygy bar bolsa, hyzmatymyzy ulanyp olary tapyp bilersiňiz.",
+    "locatePhone": "Telefony tap"
+  },
+  "faq": {
+    "title": "Köp soralýan soraglar",
+    "subtitle": "Bu ýerde ykjam geolocation hyzmatymyz Tracify barada iň köp soralýan soragyň ähli jogaplaryny tapyp bilersiňiz.",
+    "tabAbout": "Tracify barada",
+    "tabPayments": "Tölegler we hasaplamak",
+    "tabAccount": "Meniň hasabym",
+    "q1": "Tracify näme?",
+    "a1": "Tracify dünýädäki islendik telefon belgisini tapmagy mümkin edýän ykjam geolocation hyzmaty. Hyzmatymyz nyşana alnan telefona ýer paýlaşmak razylygynyň soralýan SMS iberilmegi arkaly işleýär. Razyçylyk berilenden soň takyk GPS koordinatlaryny alýarsyňyz.",
+    "q2": "Tracify telefon belgisi yzarlama hyzmatyny ulanmak kanuny?",
+    "a2": "Hawa, Tracify doly kanuny, sebäbi yzarlanýan adamyň aç-açan razylygy talap edýär. Alyjy SMS soragyna jogap bermek arkaly öz ýerini paýlaşmaga işjeň razyçylyk bermeli. Biziň ähli hususylyk düzgünlerine we maglumatlary goramak kanunlaryna laýyk gelýäris.",
+    "q3": "Tracify haýsy ulgamlary goldaýar?",
+    "a3": "Tracify dünýädäki esasy ykjam ulgamlaryň hemmesini goldaýar. Nyşana alnan telefon GSM, CDMA, LTE ýa-da 5G ulgamlaryny ulanýan bolsa-da, hyzmatymyz islendik dogry telefon belgisine ýer soragyny iberip biler.",
+    "q4": "Modelini bilmesem, telefon belgisiniň ýerini yzarlap bilerinmi?",
+    "a4": "Elbetde! Telefon modelini, öndürijisini ýa-da operasion ulgamyny bilmegiň zerurlygy ýok. Diňe telefon belgisi gerek. Ulgamymyz enjamyň görnüşine garamazdan ähli tehniki jikme-jiklikleri awtomatiki dolandyrýar.",
+    "q5": "Tracify iOS we Android ykjam enjamlaryny goldaýarmy?",
+    "a5": "Hawa, Tracify iOS (iPhone) we Android enjamlary bilen işleýär. SMS esasly ýer sorag ulgamymyz tekst habarlaryny alyp bilýän we ýer hyzmatlary bar islendik akylly telefon bilen utgaşýar.",
+    "q6": "Tracify telefon belgisiniň ýerini näçe çalt tapyp biler?",
+    "a6": "SMS alyjy öz ýerini paýlaşmaga razyçylyk berenden soň, koordinatlary derrew alarsynyz. Umumy wagt alyjynyň ýer soragyna näçe çalt jogap berýändigine baglydyr.",
+    "q7": "Nyşana alnan enjama fiziki girmezden telefon belgisini nädip yzarlamaly?",
+    "a7": "Diňe telefon belgisini ulgamymyza giriziň, habaryňyzy sazlaň we biz ýer razylygynyň soralýan SMS ibereris. Hemme zat uzakdan edilýär - nyşana alnan enjama fiziki girmek hiç haçan talap edilmeýär.",
+    "q8": "Birini öýjükli telefon belgisi bilen yzarlap bilerinmi?",
+    "a8": "Hawa, ýöne diňe olaryň aç-açan razylygy bilen. Tracify SMS arkaly ýer soraýar we yzarlama diňe alyjy öz ýerini paýlaşmaga razyçylyk berýände amala aşyrylýar. Bu hususylygy we kanuny laýyklygy üpjün edýär.",
+    "q9": "Birini öýjükli telefon belgisi bilen mugt yzarlap bilerinmi?",
+    "a9p1": "Biz diňe",
+    "a9p2": "üçin 24 sagatlaýyn synag döwrini hödürleýäris, bu ähli aýratynlyklara doly giriş berýär. Synagdan soň",
+    "a9p3": "/aýda aýlyk abuna bilen dowam edip bilersiňiz.",
+    "q10": "Henizem kömek gerekmi?",
+    "a10": "Başga soragyňyz bar bolsa ýa-da kömek gerek bolsa, goldaw toparymyz bilen habarlaşmakdan çekinmäň. 24/7 size kömek etmäge taýýardyrys. Biziň Habarlaşma sahypamyz arkaly ýa-da göni e-poçta iberip bilersiňiz."
+  },
+  "footer": {
+    "description": "Tracify ykjam telefonyň geo ýerini almak mümkinçiligini berýär we ähli telefon görnüşlerinde, ulgamlarda we ýurtlarda işleýär.",
+    "legalInfo": "Kanun maglumatlary",
+    "account": "Hasap",
+    "signup": "Hasaba alynmak",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Kukilar syýasaty",
+    "privacy": "Gizlinlik syýasaty",
+    "terms": "Şertler we düzgünler"
+  },
+  "contact": {
+    "title": "Biziň bilen habarlaşyň",
+    "subtitle": "Goldaw toparymyz size derrew kömek etmek üçin 24/7 şu ýerde.",
+    "cardTitle": "Kömek etmäge taýýardyrys",
+    "cardSubtitle": "Goldaw toparymyz size derrew kömek etmek üçin 24/7 şu ýerde.",
+    "form": {
+      "name": "Ady",
+      "namePlaceholder": "Siziň adyňyz",
+      "email": "E-poçta",
+      "emailPlaceholder": "sizin.email@mysal.com",
+      "subject": "Tema",
+      "selectSubject": "Tema saýlaň",
+      "technical": "Tehniki goldaw",
+      "billing": "Hasaplama soragynyň",
+      "feature": "Aýratynlyk soragynyň",
+      "feedback": "Umumy seslenme",
+      "other": "Başga",
+      "message": "Habar",
+      "messagePlaceholder": "Nähili kömek edip biljekdigimizi aýdyň...",
+      "notRobot": "Men robot däl",
+      "send": "Habar ibermek"
+    },
+    "footer": {
+      "home": "Baş sahypa"
+    }
+  },
+  "cancel": {
+    "title": "Abunany ýatyr",
+    "subtitle": "Abunany ýatyrmak üçin e-poçtaňyzy giriziň. Bu awtomatiki täzelenişi öçürer we geljekki tölegleriň öňüni alar.",
+    "form": {
+      "emailLabel": "E-poçta salgysy",
+      "emailPlaceholder": "salam@email.com",
+      "submitBtn": "Abunany ýatyr",
+      "helpText": "Haýsy e-poçta ulanan bolsaňyz ýatdan çykan bolsa, Tracify-den gelen hoş geldiňiz e-poçtasyndan gözläň. Henizem tapyp bilmeseňiz,",
+      "contactSupport": "goldaw bilen habarlaşyň"
+    },
+    "whyCharged": {
+      "title": "Näme üçin töleg alyndy?"
+    },
+    "needHelp": {
+      "title": "Kömek gerekmi?",
+      "description": "Mesele bar bolsa ýa-da soraglaryňyz bar bolsa, goldaw toparymyz siziň üçin 24/7 şu ýerde. Diňe habarlaşyň we tiz jogap bereris!",
+      "contactBtn": "Goldaw bilen habarlaşmak"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Kontrolýor paneli",
+      "account": "Hasap",
+      "contact": "Habarlaşmak",
+      "settings": "Sazlamalar",
+      "logout": "Çykyş"
+    },
+    "title": "Telefon ýerini yzarlamak",
+    "subtitle": "Razyçylyk esasly yzarlama bilen ýer soragyny ibermek",
+    "sendRequest": {
+      "title": "Ýer soragyny ibermek",
+      "phoneNumber": "Telefon belgisi",
+      "phonePlaceholder": "3001234567",
+      "message": "Habar",
+      "send": "Ibermek",
+      "previewMessage": "Habara seredip görmek",
+      "rateLimit": "Howpsuzlyk we hususylyk sebäpleri üçin her 3 sagatda diňe bir gezek habar iberip bilersiňiz."
+    },
+    "recentRequests": {
+      "title": "Soňky soraglar",
+      "noRequests": "Heniz yzarlama soragy ýok"
+    },
+    "trackingActivity": {
+      "title": "Soňky yzarlama işi"
+    },
+    "disclaimer": {
+      "title": "Möhüm duýduryş",
+      "point1": "Tracify telefon eýesiniň öz ýerini paýlaşmazdan ozal aç-açan razylygy talap edýär",
+      "point2": "Bu hyzmat diňe kanuny maksatlar üçin niýetlenilen (ýitirilen enjamlary tapmak, maşgala howpsuzlygy)",
+      "point3": "Ygtyýarsyz yzarlama ýa-da yzarlamak kanunsyz we berk gadagan",
+      "point4": "Ýer takyklygy enjam sazlamalary we ulgam şertlerine baglydyr",
+      "point5": "Bu hyzmatyň nädogry ulanylmagy üçin jogapkär däldiris",
+      "needHelp": "Kömek gerekmi?",
+      "contactSupport": "Goldaw toparymyz bilen habarlaşyň"
+    },
+    "subscription": {
+      "currentPlan": "Häzirki meýilnama",
+      "loading": "Ýüklenýär...",
+      "manage": "Abunany dolandyrmak"
+    },
+    "messageModal": {
+      "title": "Habar sazlamalary",
+      "description": "Iň ýokary ýer paýlaşma derejesine eýe bolan habarlary saýladyk. Aşakdaky sanawdan birini saýlaň.",
+      "language": "Habar dili",
+      "selectTemplate": "Habar şablonyny saýlaň",
+      "template1": "Men bu telefonyň eýesi, häzir ýitirilen. Tapan bolsaňyz, maňa habar beriň.",
+      "template2": "Bu telefon siziňki däl bolsa, maňa habar berip bilersiňizmi?",
+      "template3": "Howlukma, ýöne wagtyňyz bar haçan serediň:",
+      "apply": "Ulanmak"
+    },
+    "trustpilot": {
+      "title": "Ösüşimize kömek ediň!",
+      "subtitle": "Tracify ulanmazdan ozal tejribäňizi paýlaşyň",
+      "message": "Seslenmeňize baha berýäris! Trustpilot-da tejribäňize baha bermek üçin bir salym wagt aýyryň.",
+      "helpText": "Siziň synanyňyz hil hyzmatyny saklamaga kömek edýär",
+      "leaveReview": "Trustpilot-da syn galdyrmak",
+      "skip": "Häzirlikçe geçmek"
+    },
+    "locationModal": {
+      "title": "Ýer alyndy",
+      "coordinates": "Koordinatlar",
+      "openMap": "Google Maps-da açmak",
+      "close": "Ýapmak"
+    }
+  },
+  "payment": {
+    "completeSubscription": "Abunany tamamlaň",
+    "subtitle": "Razyçylyk bilen telefon ýerlerini yzarlama başlamak",
+    "title": "Töleg",
+    "trialThen": "24 sag synag, soňra",
+    "monthAfterTrial": "/aý synagdan soň",
+    "whatsIncluded": "Nämeler bar:",
+    "unlimitedRequests": "✓ Çäklendirilmedik ýer soragynyň",
+    "realtimeTracking": "✓ Real wagt yzarlaýyş",
+    "smsNotifications": "✓ SMS habarnamalary",
+    "247support": "✓ 24/7 goldaw",
+    "paymentDetails": "Töleg jikme-jiklikleri",
+    "plan": "Meýilnama",
+    "24hourTrial": "24 sagatlaýyn synag",
+    "total": "Jemi",
+    "pay": "Tölemek",
+    "securePayment": "SSL şifrlemek bilen howpsuz töleg"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "Kontrolýor paneli",
+      "account": "Hasap",
+      "contact": "Habarlaşmak",
+      "logout": "Çykyş"
+    },
+    "title": "Hasap sazlamalary",
+    "subtitle": "Hasabyňyzy we abunany dolandyryň",
+    "accountInfo": {
+      "title": "Hasap maglumatlary",
+      "email": "E-poçta salgysy",
+      "memberSince": "Agza bolanyndan bäri",
+      "loading": "Ýüklenýär..."
+    },
+    "subscription": {
+      "title": "Abuna",
+      "plan": "Meýilnama",
+      "nextPayment": "Indiki töleg",
+      "status": "Ýagdaý",
+      "active": "Işjeň",
+      "loading": "Ýüklenýär...",
+      "cancelButton": "Abunany ýatyr"
+    },
+    "paymentHistory": {
+      "title": "Töleg taryhy",
+      "noHistory": "Töleg taryhy ýok"
+    },
+    "cancelModal": {
+      "title": "Ynanýarsyňyzmy?",
+      "description": "Abunany ýatyrmak nämeleri aňladýar:",
+      "point1": "Premium aýratynlyklara giriş ýitirýäňiz",
+      "point2": "Abunanyňyz derrew gutarýar",
+      "point3": "Täzeden töleg alynmaýar",
+      "confirm": "Abunany ýatyr",
+      "goBack": "Yza dolan"
+    },
+    "successModal": {
+      "title": "Abuna ýatyryldy",
+      "message": "Ýatyrylyşyňyzy tassykladyk we bizden başga töleg almaýarsyňyz. Tassyklama e-poçtasy hem size iberildi.",
+      "close": "Ýapmak"
+    }
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "常见问题",
+    "pricing": "价格",
+    "contact": "联系我们",
+    "cancel": "取消订阅",
+    "login": "登录"
+  },
+  "hero": {
+    "title": "定位任何手机，任何地方",
+    "subtitle": "输入您想要定位的电话号码",
+    "placeholder": "输入电话号码",
+    "locateBtn": "定位",
+    "disclaimer": "通过短信请求实时手机位置。*仅在收件人明确同意的情况下进行跟踪。",
+    "locationFound": "已找到位置！",
+    "locationExample": "号码<strong>123 678-9012</strong>的位置是<strong>88.234502, 7.688104</strong>。"
+  },
+  "pricing": {
+    "specialOffer": "特别优惠！",
+    "title": "仅需",
+    "forFullDay": "即可试用Tracify的全部功能整整一天！",
+    "subtitle": "Tracify通过易于管理的月度订阅提供服务。",
+    "trialPeriod": "试用期",
+    "trial24h": "24小时试用",
+    "trialDesc": "Tracify按月订阅运营。您的初始付款可让您在24小时内无限制访问所有平台服务。在此期间之后，订阅费为",
+    "perMonth": "每月。",
+    "startTrial": "开始试用",
+    "subscription": "订阅",
+    "monthlyFee": "月费",
+    "subscriptionDesc": "24小时试用期结束后，优惠将自动续订为月度订阅。请记住，您可以随时取消订阅。",
+    "subscribeNow": "立即订阅"
+  },
+  "howItWorks": {
+    "title": "如何运作？",
+    "step1Title": "输入电话号码",
+    "step1Desc": "输入您想要定位的电话号码并自定义您希望收件人收到的短信消息。",
+    "step2Title": "发送跟踪短信",
+    "step2Desc": "Tracify将向收件人发送您的自定义短信，请求手机的位置。",
+    "step3Title": "接收精确位置",
+    "step3Desc": "一旦收件人同意分享其位置，立即收到通知。在您的仪表板中的地图上查看确切位置。"
+  },
+  "features": {
+    "title": "为什么选择Tracify？",
+    "subtitle": "一键点击，零努力即可找到全球任何人的位置",
+    "feature1Title": "谨慎服务",
+    "feature1Desc": "虽然手机所有者会被告知位置请求，但请求者的身份保持保密。所有地理位置请求都尊重隐私，传输的数据经过加密以确保安全。",
+    "feature2Title": "无需安装",
+    "feature2Desc": "您的手机或目标设备上无需安装任何软件。一切都远程操作！只需输入您想要跟踪的电话号码。一旦短信收件人提供同意，您将立即获得访问权限。",
+    "feature3Title": "全球覆盖",
+    "feature3Desc": "Tracify适用于全球所有网络。但是，成功跟踪需要手机开机、服务可用以及短信收件人明确同意分享其位置。",
+    "feature4Title": "兼容iOS和Android",
+    "feature4Desc": "Tracify无缝支持iOS和Android移动设备。只要您有电话号码和个人明确批准跟踪，就可以使用我们的服务定位他们。",
+    "locatePhone": "定位手机"
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "在这里您可以找到关于我们的移动地理位置服务Tracify最常被问到的问题的所有答案。",
+    "tabAbout": "关于Tracify",
+    "tabPayments": "付款和账单",
+    "tabAccount": "我的账户",
+    "q1": "什么是Tracify？",
+    "a1": "Tracify是一项移动地理位置服务，允许您在全球范围内定位任何电话号码。我们的服务通过向目标手机发送短信请求位置共享同意来运作。一旦获得同意，您将收到精确的GPS坐标。",
+    "q2": "使用Tracify电话号码跟踪器合法吗？",
+    "a2": "是的，Tracify完全合法，因为它需要被跟踪者的明确同意。收件人必须通过回复短信请求主动同意分享其位置。我们遵守所有隐私法规和数据保护法律。",
+    "q3": "Tracify支持哪些网络？",
+    "a3": "Tracify支持全球所有主要移动网络。无论目标手机使用GSM、CDMA、LTE还是5G网络，我们的服务都可以向任何有效的电话号码发送位置请求。",
+    "q4": "如果我不知道手机型号，能否跟踪电话号码的位置？",
+    "a4": "当然可以！您不需要知道手机型号、制造商或操作系统。您只需要电话号码。我们的系统会自动处理所有技术细节，无论设备类型如何。",
+    "q5": "Tracify是否支持iOS和Android操作的移动设备？",
+    "a5": "是的，Tracify适用于iOS（iPhone）和Android设备。我们基于短信的位置请求系统与任何可以接收短信并具有位置服务的智能手机兼容。",
+    "q6": "Tracify能多快找到电话号码的位置？",
+    "a6": "一旦短信收件人同意分享其位置，您几乎立即就会收到坐标。总时间取决于收件人响应位置请求的速度。",
+    "q7": "如何在没有物理访问目标设备的情况下跟踪电话号码？",
+    "a7": "只需在我们的系统中输入电话号码，自定义您的消息，我们将发送请求位置同意的短信。一切都是远程完成的 - 永远不需要物理访问目标设备。",
+    "q8": "我可以通过手机号码跟踪某人吗？",
+    "a8": "可以，但只能在他们明确同意的情况下。Tracify通过短信发送位置请求，只有当收件人同意分享其位置时才会进行跟踪。这确保了隐私和法律合规性。",
+    "q9": "我可以免费通过手机号码跟踪某人吗？",
+    "a9p1": "我们提供24小时试用期，仅需",
+    "a9p2": "，让您完全访问所有功能。试用后，您可以以",
+    "a9p3": "/月的价格继续我们的月度订阅。",
+    "q10": "还需要帮助吗？",
+    "a10": "如果您有任何其他问题或需要帮助，请随时联系我们的支持团队。我们全天候为您提供帮助。您可以通过我们的'联系我们'页面联系我们或直接给我们发送电子邮件。"
+  },
+  "footer": {
+    "description": "Tracify让您获取手机的地理位置，适用于所有电话类型、网络和国家。",
+    "legalInfo": "法律信息",
+    "account": "账户",
+    "signup": "注册",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Cookie政策",
+    "privacy": "隐私政策",
+    "terms": "条款和条件"
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "我们的支持团队全天候为您提供即时帮助。",
+    "cardTitle": "我们随时为您服务",
+    "cardSubtitle": "我们的支持团队全天候为您提供即时帮助。",
+    "form": {
+      "name": "姓名",
+      "namePlaceholder": "您的姓名",
+      "email": "电子邮件",
+      "emailPlaceholder": "your.email@example.com",
+      "subject": "主题",
+      "selectSubject": "选择主题",
+      "technical": "技术支持",
+      "billing": "账单问题",
+      "feature": "功能请求",
+      "feedback": "一般反馈",
+      "other": "其他",
+      "message": "消息",
+      "messagePlaceholder": "告诉我们如何帮助您...",
+      "notRobot": "我不是机器人",
+      "send": "发送消息"
+    },
+    "footer": {
+      "home": "主页"
+    }
+  },
+  "cancel": {
+    "title": "取消您的订阅",
+    "subtitle": "输入您的电子邮件以取消订阅。这将关闭自动续订并防止任何未来的费用。",
+    "form": {
+      "emailLabel": "电子邮件地址",
+      "emailPlaceholder": "hello@email.com",
+      "submitBtn": "取消订阅",
+      "helpText": "如果您不记得使用了哪个电子邮件，请检查收件箱中来自Tracify的欢迎电子邮件。如果仍然找不到，",
+      "contactSupport": "联系支持"
+    },
+    "whyCharged": {
+      "title": "为什么会收费？"
+    },
+    "needHelp": {
+      "title": "需要帮助吗？",
+      "description": "如果您遇到问题或有任何疑问，我们的支持团队全天候为您服务。只需联系我们，我们会迅速回复您！",
+      "contactBtn": "联系支持"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "仪表板",
+      "account": "账户",
+      "contact": "联系",
+      "settings": "设置",
+      "logout": "登出"
+    },
+    "title": "跟踪手机位置",
+    "subtitle": "发送基于同意的跟踪位置请求",
+    "sendRequest": {
+      "title": "发送位置请求",
+      "phoneNumber": "电话号码",
+      "phonePlaceholder": "3001234567",
+      "message": "消息",
+      "send": "发送",
+      "previewMessage": "预览消息",
+      "rateLimit": "出于安全和隐私原因，您每3小时只能发送一次消息。"
+    },
+    "recentRequests": {
+      "title": "最近的请求",
+      "noRequests": "尚无跟踪请求"
+    },
+    "trackingActivity": {
+      "title": "最近的跟踪活动"
+    },
+    "disclaimer": {
+      "title": "重要免责声明",
+      "point1": "Tracify要求手机所有者在分享其位置之前明确同意",
+      "point2": "此服务仅用于合法目的（查找丢失的设备、家庭安全）",
+      "point3": "未经授权的跟踪或跟踪是非法的，严格禁止",
+      "point4": "位置准确性取决于设备设置和网络条件",
+      "point5": "我们对滥用此服务不承担责任",
+      "needHelp": "需要帮助吗？",
+      "contactSupport": "联系我们的支持团队"
+    },
+    "subscription": {
+      "currentPlan": "当前计划",
+      "loading": "加载中...",
+      "manage": "管理订阅"
+    },
+    "messageModal": {
+      "title": "消息设置",
+      "description": "我们选择了位置共享率最高的消息。从下面的列表中选择一个。",
+      "language": "消息语言",
+      "selectTemplate": "选择消息模板",
+      "template1": "我是这部手机的所有者，它目前丢失了。如果您找到了，请告诉我。",
+      "template2": "如果这部手机不是您的，您能告诉我吗？",
+      "template3": "不急，但有空时看看这个：",
+      "apply": "应用"
+    },
+    "trustpilot": {
+      "title": "帮助我们改进！",
+      "subtitle": "在使用Tracify之前分享您的体验",
+      "message": "我们重视您的反馈！请花点时间在Trustpilot上评价您的体验。",
+      "helpText": "您的评价帮助我们保持优质服务",
+      "leaveReview": "在Trustpilot上留下评价",
+      "skip": "暂时跳过"
+    },
+    "locationModal": {
+      "title": "已收到位置",
+      "coordinates": "坐标",
+      "openMap": "在Google地图中打开",
+      "close": "关闭"
+    }
+  },
+  "payment": {
+    "completeSubscription": "完成您的订阅",
+    "subtitle": "开始使用同意跟踪手机位置",
+    "title": "付款",
+    "trialThen": "24小时试用，然后",
+    "monthAfterTrial": "/月试用后",
+    "whatsIncluded": "包含内容：",
+    "unlimitedRequests": "✓ 无限位置请求",
+    "realtimeTracking": "✓ 实时跟踪",
+    "smsNotifications": "✓ 短信通知",
+    "247support": "✓ 全天候支持",
+    "paymentDetails": "付款详情",
+    "plan": "计划",
+    "24hourTrial": "24小时试用",
+    "total": "总计",
+    "pay": "支付",
+    "securePayment": "使用SSL加密的安全付款"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "仪表板",
+      "account": "账户",
+      "contact": "联系",
+      "logout": "登出"
+    },
+    "title": "账户设置",
+    "subtitle": "管理您的账户和订阅",
+    "accountInfo": {
+      "title": "账户信息",
+      "email": "电子邮件地址",
+      "memberSince": "成员自",
+      "loading": "加载中..."
+    },
+    "subscription": {
+      "title": "订阅",
+      "plan": "计划",
+      "nextPayment": "下次付款",
+      "status": "状态",
+      "active": "活跃",
+      "loading": "加载中...",
+      "cancelButton": "取消订阅"
+    },
+    "paymentHistory": {
+      "title": "付款历史",
+      "noHistory": "无付款历史记录"
+    },
+    "cancelModal": {
+      "title": "您确定吗？",
+      "description": "取消订阅意味着：",
+      "point1": "您将失去对高级功能的访问权限",
+      "point2": "您的订阅将立即结束",
+      "point3": "您不会再被收费",
+      "confirm": "取消订阅",
+      "goBack": "返回"
+    },
+    "successModal": {
+      "title": "订阅已取消",
+      "message": "我们已确认您的取消，您不会再收到我们的任何费用。确认电子邮件也已发送到您的收件箱。",
+      "close": "关闭"
+    }
+  }
+}

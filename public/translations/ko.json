@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "자주 묻는 질문",
+    "pricing": "요금제",
+    "contact": "문의하기",
+    "cancel": "구독 취소",
+    "login": "로그인"
+  },
+  "hero": {
+    "title": "어디서든 모든 휴대폰 위치 찾기",
+    "subtitle": "찾고 싶은 전화번호를 입력하세요",
+    "placeholder": "전화번호 입력",
+    "locateBtn": "위치 찾기",
+    "disclaimer": "SMS를 통해 실시간 휴대폰 위치를 요청하세요. *추적은 수신자의 명시적 동의가 있을 때만 진행됩니다.",
+    "locationFound": "위치를 찾았습니다!",
+    "locationExample": "<strong>123 678-9012</strong> 번호의 위치는 <strong>88.234502, 7.688104</strong>입니다."
+  },
+  "pricing": {
+    "specialOffer": "특별 할인!",
+    "title": "단",
+    "forFullDay": "에 하루 종일 Tracify의 기능을 체험하세요!",
+    "subtitle": "Tracify는 관리하기 쉬운 월간 구독을 통해 서비스를 제공합니다.",
+    "trialPeriod": "체험 기간",
+    "trial24h": "24시간 체험",
+    "trialDesc": "Tracify는 월간 구독 방식으로 운영됩니다. 초기 결제로 24시간 동안 모든 플랫폼 서비스에 무제한 접근이 가능합니다. 그 이후에는 구독료",
+    "perMonth": "가 월별로 적용됩니다.",
+    "startTrial": "체험 시작",
+    "subscription": "구독",
+    "monthlyFee": "월간 요금",
+    "subscriptionDesc": "24시간 체험 기간이 종료되면 자동으로 월간 구독으로 갱신됩니다. 언제든지 구독을 취소할 수 있습니다.",
+    "subscribeNow": "지금 구독하기"
+  },
+  "howItWorks": {
+    "title": "어떻게 작동하나요?",
+    "step1Title": "전화번호 입력",
+    "step1Desc": "찾고 싶은 전화번호를 입력하고 수신자에게 보낼 SMS 메시지를 맞춤 설정하세요.",
+    "step2Title": "추적 SMS 전송",
+    "step2Desc": "Tracify가 수신자에게 휴대폰 위치를 요청하는 맞춤 SMS를 전송합니다.",
+    "step3Title": "정확한 위치 수신",
+    "step3Desc": "수신자가 위치 공유에 동의하면 즉시 알림을 받습니다. 대시보드의 지도에서 정확한 위치를 확인하세요."
+  },
+  "features": {
+    "title": "왜 Tracify를 선택해야 할까요?",
+    "subtitle": "클릭 한 번으로 전 세계 누구의 위치든 쉽게 찾을 수 있습니다",
+    "feature1Title": "비밀 서비스",
+    "feature1Desc": "휴대폰 소유자에게 위치 요청이 통보되지만 요청자의 신원은 비밀로 유지됩니다. 모든 위치 요청은 개인정보를 존중하며 이루어지고, 전송되는 데이터는 보안을 위해 암호화됩니다.",
+    "feature2Title": "설치 필요 없음",
+    "feature2Desc": "귀하의 휴대폰이나 대상 기기에 설치할 소프트웨어가 없습니다. 모든 것이 원격으로 작동합니다! 추적하려는 전화번호만 입력하세요. SMS 수신자가 동의하면 즉시 접근할 수 있습니다.",
+    "feature3Title": "전 세계 지원",
+    "feature3Desc": "Tracify는 전 세계 모든 네트워크에서 작동합니다. 단, 성공적인 추적을 위해서는 휴대폰이 켜져 있고, 서비스가 가능하며, SMS 수신자가 위치 공유에 명시적으로 동의해야 합니다.",
+    "feature4Title": "iOS 및 Android 호환",
+    "feature4Desc": "Tracify는 iOS와 Android 모바일 기기를 모두 완벽하게 지원합니다. 전화번호와 추적에 대한 개인의 명시적 승인이 있으면 저희 서비스를 사용하여 위치를 찾을 수 있습니다.",
+    "locatePhone": "휴대폰 찾기"
+  },
+  "faq": {
+    "title": "자주 묻는 질문",
+    "subtitle": "모바일 위치 추적 서비스 Tracify에 대해 가장 자주 묻는 질문에 대한 모든 답변을 여기서 찾을 수 있습니다.",
+    "tabAbout": "Tracify 소개",
+    "tabPayments": "결제 및 청구",
+    "tabAccount": "내 계정",
+    "q1": "Tracify란 무엇인가요?",
+    "a1": "Tracify는 전 세계 어디서나 모든 전화번호의 위치를 찾을 수 있는 모바일 위치 추적 서비스입니다. 저희 서비스는 대상 휴대폰에 위치 공유 동의를 요청하는 SMS를 보내는 방식으로 작동합니다. 동의가 이루어지면 정확한 GPS 좌표를 받게 됩니다.",
+    "q2": "Tracify 전화번호 추적기 사용은 합법인가요?",
+    "a2": "네, Tracify는 추적 대상자의 명시적 동의가 필요하기 때문에 완전히 합법입니다. 수신자는 SMS 요청에 응답하여 위치 공유에 적극적으로 동의해야 합니다. 저희는 모든 개인정보 보호 규정과 데이터 보호법을 준수합니다.",
+    "q3": "Tracify는 어떤 네트워크를 지원하나요?",
+    "a3": "Tracify는 전 세계 모든 주요 모바일 네트워크를 지원합니다. 대상 휴대폰이 GSM, CDMA, LTE 또는 5G 네트워크를 사용하든, 저희 서비스는 유효한 모든 전화번호로 위치 요청을 보낼 수 있습니다.",
+    "q4": "휴대폰 모델을 모르는 경우에도 전화번호 위치를 추적할 수 있나요?",
+    "a4": "물론입니다! 휴대폰 모델, 제조사 또는 운영 체제를 알 필요가 없습니다. 전화번호만 있으면 됩니다. 저희 시스템은 기기 유형에 관계없이 모든 기술적 세부 사항을 자동으로 처리합니다.",
+    "q5": "Tracify는 iOS와 Android 기기를 모두 지원하나요?",
+    "a5": "네, Tracify는 iOS(iPhone)와 Android 기기 모두에서 작동합니다. 저희의 SMS 기반 위치 요청 시스템은 문자 메시지를 받을 수 있고 위치 서비스가 가능한 모든 스마트폰과 호환됩니다.",
+    "q6": "Tracify가 전화번호 위치를 얼마나 빨리 찾을 수 있나요?",
+    "a6": "SMS 수신자가 위치 공유에 동의하면 거의 즉시 좌표를 받게 됩니다. 총 소요 시간은 수신자가 위치 요청에 얼마나 빨리 응답하느냐에 따라 달라집니다.",
+    "q7": "대상 기기에 물리적으로 접근하지 않고 전화번호를 추적하는 방법은?",
+    "a7": "저희 시스템에 전화번호를 입력하고 메시지를 맞춤 설정하면 위치 동의를 요청하는 SMS를 보내드립니다. 모든 것이 원격으로 이루어지며 대상 기기에 물리적으로 접근할 필요가 전혀 없습니다.",
+    "q8": "휴대폰 번호로 누군가를 추적할 수 있나요?",
+    "a8": "네, 하지만 명시적 동의가 있어야만 가능합니다. Tracify는 SMS를 통해 위치 요청을 보내며, 수신자가 위치 공유에 동의할 때만 추적이 이루어집니다. 이것은 개인정보 보호와 법적 준수를 보장합니다.",
+    "q9": "휴대폰 번호로 무료로 누군가를 추적할 수 있나요?",
+    "a9p1": "단",
+    "a9p2": "에 24시간 체험 기간을 제공하며, 모든 기능에 완전히 접근할 수 있습니다. 체험 후에는 월",
+    "a9p3": "의 월간 구독을 계속할 수 있습니다.",
+    "q10": "아직 도움이 필요하신가요?",
+    "a10": "다른 질문이 있거나 도움이 필요하시면 언제든지 지원팀에 문의해 주세요. 24시간 연중무휴로 도움을 드립니다. 문의하기 페이지를 통해 또는 직접 이메일로 연락할 수 있습니다."
+  },
+  "footer": {
+    "description": "Tracify는 모바일 휴대폰의 위치를 얻을 수 있게 해주며 모든 휴대폰 유형, 네트워크 및 국가에서 작동합니다.",
+    "legalInfo": "법적 정보",
+    "account": "계정",
+    "signup": "가입하기",
+    "copyright": "© Tracify - 2026",
+    "cookies": "쿠키 정책",
+    "privacy": "개인정보 처리방침",
+    "terms": "이용약관"
+  },
+  "contact": {
+    "title": "문의하기",
+    "subtitle": "지원팀이 24시간 연중무휴로 즉시 도움을 드립니다.",
+    "cardTitle": "도움이 필요하신가요",
+    "cardSubtitle": "지원팀이 24시간 연중무휴로 즉시 도움을 드립니다.",
+    "form": {
+      "name": "이름",
+      "namePlaceholder": "귀하의 이름",
+      "email": "이메일",
+      "emailPlaceholder": "your.email@example.com",
+      "subject": "제목",
+      "selectSubject": "제목 선택",
+      "technical": "기술 지원",
+      "billing": "결제 문의",
+      "feature": "기능 요청",
+      "feedback": "일반 피드백",
+      "other": "기타",
+      "message": "메시지",
+      "messagePlaceholder": "어떻게 도움을 드릴까요...",
+      "notRobot": "저는 로봇이 아닙니다",
+      "send": "메시지 보내기"
+    },
+    "footer": {
+      "home": "홈"
+    }
+  },
+  "cancel": {
+    "title": "구독 취소",
+    "subtitle": "구독을 취소하려면 이메일을 입력하세요. 자동 갱신이 중지되고 향후 청구가 방지됩니다.",
+    "form": {
+      "emailLabel": "이메일 주소",
+      "emailPlaceholder": "hello@email.com",
+      "submitBtn": "구독 취소",
+      "helpText": "어떤 이메일을 사용했는지 기억나지 않으면 받은 편지함에서 Tracify 환영 이메일을 확인하세요. 그래도 찾을 수 없다면",
+      "contactSupport": "지원팀에 문의하세요"
+    },
+    "whyCharged": {
+      "title": "왜 청구되었나요?"
+    },
+    "needHelp": {
+      "title": "도움이 필요하신가요?",
+      "description": "문제가 있거나 질문이 있으시면 지원팀이 24시간 연중무휴로 도움을 드립니다. 연락주시면 빠르게 답변 드리겠습니다!",
+      "contactBtn": "지원팀 문의"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "대시보드",
+      "account": "계정",
+      "contact": "문의",
+      "settings": "설정",
+      "logout": "로그아웃"
+    },
+    "title": "휴대폰 위치 추적",
+    "subtitle": "동의 기반 추적으로 위치 요청 보내기",
+    "sendRequest": {
+      "title": "위치 요청 보내기",
+      "phoneNumber": "전화번호",
+      "phonePlaceholder": "3001234567",
+      "message": "메시지",
+      "send": "보내기",
+      "previewMessage": "메시지 미리보기",
+      "rateLimit": "보안 및 개인정보 보호를 위해 3시간에 한 번만 메시지를 보낼 수 있습니다."
+    },
+    "recentRequests": {
+      "title": "최근 요청",
+      "noRequests": "아직 추적 요청이 없습니다"
+    },
+    "trackingActivity": {
+      "title": "최근 추적 활동"
+    },
+    "disclaimer": {
+      "title": "중요 고지",
+      "point1": "Tracify는 위치 공유 전에 휴대폰 소유자의 명시적 동의가 필요합니다",
+      "point2": "이 서비스는 합법적인 목적으로만 사용됩니다 (분실 기기 찾기, 가족 안전)",
+      "point3": "무단 추적 또는 스토킹은 불법이며 엄격히 금지됩니다",
+      "point4": "위치 정확도는 기기 설정 및 네트워크 상태에 따라 달라집니다",
+      "point5": "이 서비스의 오용에 대해 당사는 책임지지 않습니다",
+      "needHelp": "도움이 필요하신가요?",
+      "contactSupport": "지원팀에 문의하세요"
+    },
+    "subscription": {
+      "currentPlan": "현재 요금제",
+      "loading": "로딩 중...",
+      "manage": "구독 관리"
+    },
+    "messageModal": {
+      "title": "메시지 설정",
+      "description": "위치 공유율이 가장 높은 메시지를 선정했습니다. 아래 목록에서 하나를 선택하세요.",
+      "language": "메시지 언어",
+      "selectTemplate": "메시지 템플릿 선택",
+      "template1": "저는 이 휴대폰의 주인이고, 현재 분실 상태입니다. 찾으셨다면 알려주세요.",
+      "template2": "이 휴대폰이 당신 것이 아니라면 알려주실 수 있나요?",
+      "template3": "급하지 않지만, 시간 될 때 확인해 주세요:",
+      "apply": "적용"
+    },
+    "trustpilot": {
+      "title": "개선에 도움을 주세요!",
+      "subtitle": "Tracify 사용 전 경험을 공유해 주세요",
+      "message": "귀하의 피드백을 소중히 여깁니다! 잠시 시간을 내어 Trustpilot에서 경험을 평가해 주세요.",
+      "helpText": "귀하의 리뷰가 품질 서비스 유지에 도움이 됩니다",
+      "leaveReview": "Trustpilot에 리뷰 남기기",
+      "skip": "지금은 건너뛰기"
+    },
+    "locationModal": {
+      "title": "위치 수신됨",
+      "coordinates": "좌표",
+      "openMap": "Google 지도에서 열기",
+      "close": "닫기"
+    }
+  },
+  "payment": {
+    "completeSubscription": "구독 완료하기",
+    "subtitle": "동의와 함께 휴대폰 위치 추적 시작",
+    "title": "결제",
+    "trialThen": "24시간 체험, 이후",
+    "monthAfterTrial": "/월 체험 후",
+    "whatsIncluded": "포함 내용:",
+    "unlimitedRequests": "✓ 무제한 위치 요청",
+    "realtimeTracking": "✓ 실시간 추적",
+    "smsNotifications": "✓ SMS 알림",
+    "247support": "✓ 24/7 지원",
+    "paymentDetails": "결제 세부 정보",
+    "plan": "요금제",
+    "24hourTrial": "24시간 체험",
+    "total": "총액",
+    "pay": "결제",
+    "securePayment": "SSL 암호화로 안전한 결제"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "대시보드",
+      "account": "계정",
+      "contact": "문의",
+      "logout": "로그아웃"
+    },
+    "title": "계정 설정",
+    "subtitle": "계정 및 구독 관리",
+    "accountInfo": {
+      "title": "계정 정보",
+      "email": "이메일 주소",
+      "memberSince": "가입일",
+      "loading": "로딩 중..."
+    },
+    "subscription": {
+      "title": "구독",
+      "plan": "요금제",
+      "nextPayment": "다음 결제",
+      "status": "상태",
+      "active": "활성",
+      "loading": "로딩 중...",
+      "cancelButton": "구독 취소"
+    },
+    "paymentHistory": {
+      "title": "결제 내역",
+      "noHistory": "결제 내역이 없습니다"
+    },
+    "cancelModal": {
+      "title": "정말 취소하시겠습니까?",
+      "description": "구독을 취소하면:",
+      "point1": "프리미엄 기능에 대한 접근 권한을 잃게 됩니다",
+      "point2": "구독이 즉시 종료됩니다",
+      "point3": "더 이상 청구되지 않습니다",
+      "confirm": "구독 취소",
+      "goBack": "돌아가기"
+    },
+    "successModal": {
+      "title": "구독이 취소되었습니다",
+      "message": "취소가 확인되었으며 더 이상 청구되지 않습니다. 확인 이메일도 받은 편지함으로 전송되었습니다.",
+      "close": "닫기"
+    }
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "Soalan Lazim",
+    "pricing": "Harga",
+    "contact": "Hubungi Kami",
+    "cancel": "Batalkan Langganan",
+    "login": "Log Masuk"
+  },
+  "hero": {
+    "title": "Cari Mana-mana Telefon, Di Mana Sahaja",
+    "subtitle": "Masukkan nombor telefon yang ingin anda cari",
+    "placeholder": "Masukkan nombor telefon",
+    "locateBtn": "Cari",
+    "disclaimer": "Minta lokasi telefon masa nyata melalui SMS. *Penjejakan hanya berlaku dengan persetujuan jelas penerima.",
+    "locationFound": "Lokasi Ditemui!",
+    "locationExample": "Lokasi nombor <strong>123 678-9012</strong> ialah <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Tawaran istimewa!",
+    "title": "Cuba keupayaan Tracify dengan hanya",
+    "forFullDay": "untuk satu hari penuh!",
+    "subtitle": "Tracify menawarkan perkhidmatannya melalui langganan bulanan yang mudah diurus.",
+    "trialPeriod": "Tempoh percubaan",
+    "trial24h": "Percubaan 24 Jam",
+    "trialDesc": "Tracify beroperasi berdasarkan langganan bulanan. Pembayaran awal anda memberikan akses tanpa had kepada semua perkhidmatan platform selama 24 jam. Selepas tempoh itu, yuran langganan sebanyak",
+    "perMonth": "sebulan dikenakan.",
+    "startTrial": "Mulakan Percubaan",
+    "subscription": "Langganan",
+    "monthlyFee": "Yuran bulanan",
+    "subscriptionDesc": "Setelah tempoh percubaan 24 jam tamat, tawaran akan diperbaharui secara automatik kepada langganan bulanan. Ingat bahawa anda boleh membatalkan langganan bila-bila masa.",
+    "subscribeNow": "Langgan Sekarang"
+  },
+  "howItWorks": {
+    "title": "Bagaimana Ia Berfungsi?",
+    "step1Title": "Masukkan Nombor Telefon",
+    "step1Desc": "Masukkan nombor telefon yang ingin anda cari dan sesuaikan mesej SMS yang anda mahu penerima terima.",
+    "step2Title": "Hantar SMS Penjejakan",
+    "step2Desc": "Tracify akan menghantar SMS tersuai anda kepada penerima yang akan meminta lokasi telefon.",
+    "step3Title": "Terima Lokasi Tepat",
+    "step3Desc": "Dapatkan pemberitahuan sebaik sahaja penerima bersetuju untuk berkongsi lokasi mereka. Lihat kedudukan tepat pada peta dalam papan pemuka anda."
+  },
+  "features": {
+    "title": "Mengapa pilih Tracify?",
+    "subtitle": "Satu klik dan sifar usaha untuk mencari lokasi sesiapa di seluruh dunia",
+    "feature1Title": "Perkhidmatan Berhemah",
+    "feature1Desc": "Walaupun pemilik telefon akan dimaklumkan tentang permintaan lokasi, identiti peminta kekal sulit. Semua permintaan geolokasi dibuat dengan menghormati privasi, dan data yang dihantar disulitkan untuk keselamatan.",
+    "feature2Title": "Tiada pemasangan diperlukan",
+    "feature2Desc": "Tiada perisian untuk dipasang pada telefon anda atau peranti sasaran. Semuanya beroperasi dari jauh! Hanya masukkan nombor telefon yang anda ingin jejak. Sebaik sahaja penerima SMS memberikan persetujuan, anda akan mempunyai akses serta-merta.",
+    "feature3Title": "Liputan seluruh dunia",
+    "feature3Desc": "Tracify berfungsi dengan semua rangkaian di seluruh dunia. Walau bagaimanapun, penjejakan yang berjaya memerlukan telefon dihidupkan, ketersediaan perkhidmatan, dan persetujuan jelas penerima SMS untuk berkongsi lokasi mereka.",
+    "feature4Title": "Serasi dengan iOS dan Android",
+    "feature4Desc": "Tracify menyokong peranti mudah alih iOS dan Android dengan lancar. Selagi anda mempunyai nombor telefon dan kelulusan jelas individu untuk menjejak, anda boleh mencari mereka menggunakan perkhidmatan kami.",
+    "locatePhone": "Cari Telefon"
+  },
+  "faq": {
+    "title": "Soalan Lazim",
+    "subtitle": "Di sini anda boleh menemui semua jawapan kepada soalan yang paling kerap ditanya tentang perkhidmatan geolokasi mudah alih kami, Tracify.",
+    "tabAbout": "Tentang Tracify",
+    "tabPayments": "Pembayaran & Bil",
+    "tabAccount": "Akaun Saya",
+    "q1": "Apakah Tracify?",
+    "a1": "Tracify ialah perkhidmatan geolokasi mudah alih yang membolehkan anda mencari mana-mana nombor telefon di seluruh dunia. Perkhidmatan kami berfungsi dengan menghantar SMS ke telefon sasaran yang meminta persetujuan perkongsian lokasi. Setelah persetujuan diberikan, anda menerima koordinat GPS yang tepat.",
+    "q2": "Adakah sah menggunakan penjejak nombor telefon Tracify?",
+    "a2": "Ya, Tracify sepenuhnya sah kerana ia memerlukan persetujuan jelas daripada orang yang dijejaki. Penerima mesti bersetuju secara aktif untuk berkongsi lokasi mereka dengan membalas permintaan SMS. Kami mematuhi semua peraturan privasi dan undang-undang perlindungan data.",
+    "q3": "Apakah rangkaian yang disokong Tracify?",
+    "a3": "Tracify menyokong semua rangkaian mudah alih utama di seluruh dunia. Sama ada telefon sasaran menggunakan rangkaian GSM, CDMA, LTE, atau 5G, perkhidmatan kami boleh menghantar permintaan lokasi ke mana-mana nombor telefon yang sah.",
+    "q4": "Bolehkah saya menjejak lokasi nombor telefon jika saya tidak tahu modelnya?",
+    "a4": "Sudah tentu! Anda tidak perlu tahu model telefon, pengeluar, atau sistem pengendalian. Apa yang anda perlukan hanyalah nombor telefon. Sistem kami secara automatik mengendalikan semua butiran teknikal tanpa mengira jenis peranti.",
+    "q5": "Adakah Tracify menyokong peranti mudah alih iOS dan Android?",
+    "a5": "Ya, Tracify berfungsi dengan kedua-dua peranti iOS (iPhone) dan Android. Sistem permintaan lokasi berasaskan SMS kami serasi dengan mana-mana telefon pintar yang boleh menerima mesej teks dan mempunyai perkhidmatan lokasi tersedia.",
+    "q6": "Seberapa pantas Tracify boleh mencari lokasi nombor telefon?",
+    "a6": "Sebaik sahaja penerima SMS bersetuju untuk berkongsi lokasi mereka, anda akan menerima koordinat hampir serta-merta. Jumlah masa bergantung pada seberapa cepat penerima membalas permintaan lokasi.",
+    "q7": "Bagaimana untuk menjejak nombor telefon tanpa akses fizikal ke peranti sasaran?",
+    "a7": "Cuma masukkan nombor telefon dalam sistem kami, sesuaikan mesej anda, dan kami akan menghantar SMS yang meminta persetujuan lokasi. Semuanya dilakukan dari jauh - akses fizikal ke peranti sasaran tidak pernah diperlukan.",
+    "q8": "Bolehkah saya menjejak seseorang melalui nombor telefon bimbit?",
+    "a8": "Ya, tetapi hanya dengan persetujuan jelas mereka. Tracify menghantar permintaan lokasi melalui SMS, dan penjejakan hanya berlaku apabila penerima bersetuju untuk berkongsi lokasi mereka. Ini memastikan privasi dan pematuhan undang-undang.",
+    "q9": "Bolehkah saya menjejak seseorang melalui nombor telefon bimbit secara percuma?",
+    "a9p1": "Kami menawarkan tempoh percubaan 24 jam dengan hanya",
+    "a9p2": ", yang memberikan anda akses penuh kepada semua ciri. Selepas percubaan, anda boleh meneruskan dengan langganan bulanan kami pada",
+    "a9p3": "/bulan.",
+    "q10": "Masih Perlukan Bantuan?",
+    "a10": "Jika anda mempunyai sebarang soalan lain atau memerlukan bantuan, jangan teragak-agak untuk menghubungi pasukan sokongan kami. Kami di sini untuk membantu anda 24/7. Anda boleh menghubungi kami melalui halaman Hubungi Kami atau e-mel kami secara langsung."
+  },
+  "footer": {
+    "description": "Tracify membolehkan anda mendapatkan lokasi geo telefon bimbit dan berfungsi pada semua jenis telefon, rangkaian dan negara.",
+    "legalInfo": "Maklumat undang-undang",
+    "account": "Akaun",
+    "signup": "Daftar",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Dasar Kuki",
+    "privacy": "Dasar Privasi",
+    "terms": "Terma dan Syarat"
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "subtitle": "Pasukan sokongan kami di sini 24/7 untuk membantu anda dengan segera.",
+    "cardTitle": "Kami Di Sini Untuk Membantu",
+    "cardSubtitle": "Pasukan sokongan kami di sini 24/7 untuk membantu anda dengan segera.",
+    "form": {
+      "name": "Nama",
+      "namePlaceholder": "Nama anda",
+      "email": "E-mel",
+      "emailPlaceholder": "anda.email@contoh.com",
+      "subject": "Subjek",
+      "selectSubject": "Pilih subjek",
+      "technical": "Sokongan Teknikal",
+      "billing": "Soalan Bil",
+      "feature": "Permintaan Ciri",
+      "feedback": "Maklum Balas Umum",
+      "other": "Lain-lain",
+      "message": "Mesej",
+      "messagePlaceholder": "Beritahu kami bagaimana kami boleh membantu...",
+      "notRobot": "Saya bukan robot",
+      "send": "Hantar Mesej"
+    },
+    "footer": {
+      "home": "Laman Utama"
+    }
+  },
+  "cancel": {
+    "title": "Batalkan Langganan Anda",
+    "subtitle": "Masukkan e-mel anda untuk membatalkan langganan anda. Ini akan mematikan pembaharuan automatik dan menghalang sebarang caj masa depan.",
+    "form": {
+      "emailLabel": "Alamat E-mel",
+      "emailPlaceholder": "hello@email.com",
+      "submitBtn": "Batalkan Langganan",
+      "helpText": "Jika anda tidak ingat e-mel mana yang anda gunakan, semak peti masuk anda untuk e-mel alu-aluan dari Tracify. Jika anda masih tidak dapat menemuinya,",
+      "contactSupport": "hubungi sokongan"
+    },
+    "whyCharged": {
+      "title": "Mengapa saya dicaj?"
+    },
+    "needHelp": {
+      "title": "Perlukan bantuan?",
+      "description": "Jika anda mengalami masalah atau mempunyai sebarang soalan, pasukan sokongan kami di sini untuk anda 24/7. Hubungi sahaja dan kami akan membalas dengan cepat!",
+      "contactBtn": "Hubungi Sokongan"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Papan Pemuka",
+      "account": "Akaun",
+      "contact": "Hubungi",
+      "settings": "Tetapan",
+      "logout": "Log Keluar"
+    },
+    "title": "Jejak Lokasi Telefon",
+    "subtitle": "Hantar permintaan lokasi dengan penjejakan berasaskan persetujuan",
+    "sendRequest": {
+      "title": "Hantar Permintaan Lokasi",
+      "phoneNumber": "Nombor Telefon",
+      "phonePlaceholder": "3001234567",
+      "message": "Mesej",
+      "send": "Hantar",
+      "previewMessage": "Pratonton Mesej",
+      "rateLimit": "Disebabkan alasan keselamatan dan privasi, anda hanya boleh menghantar mesej sekali setiap 3 jam."
+    },
+    "recentRequests": {
+      "title": "Permintaan Terkini",
+      "noRequests": "Belum ada permintaan penjejakan"
+    },
+    "trackingActivity": {
+      "title": "Aktiviti Penjejakan Terkini"
+    },
+    "disclaimer": {
+      "title": "Penafian Penting",
+      "point1": "Tracify memerlukan persetujuan jelas daripada pemilik telefon sebelum berkongsi lokasi mereka",
+      "point2": "Perkhidmatan ini bertujuan untuk tujuan sah sahaja (mencari peranti yang hilang, keselamatan keluarga)",
+      "point3": "Penjejakan tanpa kebenaran atau mengekori adalah haram dan dilarang keras",
+      "point4": "Ketepatan lokasi bergantung pada tetapan peranti dan keadaan rangkaian",
+      "point5": "Kami tidak bertanggungjawab atas penyalahgunaan perkhidmatan ini",
+      "needHelp": "Perlukan bantuan?",
+      "contactSupport": "Hubungi pasukan sokongan kami"
+    },
+    "subscription": {
+      "currentPlan": "Pelan Semasa",
+      "loading": "Memuatkan...",
+      "manage": "Urus Langganan"
+    },
+    "messageModal": {
+      "title": "Tetapan Mesej",
+      "description": "Kami telah memilih mesej dengan kadar perkongsian lokasi tertinggi. Pilih satu daripada senarai di bawah.",
+      "language": "Bahasa Mesej",
+      "selectTemplate": "Pilih templat mesej",
+      "template1": "Saya pemilik telefon ini, dan ia kini hilang. Jika anda menjumpainya, sila beritahu saya.",
+      "template2": "Jika telefon ini bukan milik anda, bolehkah anda beritahu saya?",
+      "template3": "Tiada tergesa-gesa, tetapi semak ini apabila anda ada masa:",
+      "apply": "Guna"
+    },
+    "trustpilot": {
+      "title": "Bantu Kami Memperbaiki!",
+      "subtitle": "Kongsi pengalaman anda sebelum menggunakan Tracify",
+      "message": "Kami menghargai maklum balas anda! Sila luangkan masa untuk menilai pengalaman anda di Trustpilot.",
+      "helpText": "Ulasan anda membantu kami mengekalkan perkhidmatan berkualiti",
+      "leaveReview": "Tinggalkan Ulasan di Trustpilot",
+      "skip": "Langkau Buat Masa Ini"
+    },
+    "locationModal": {
+      "title": "Lokasi Diterima",
+      "coordinates": "Koordinat",
+      "openMap": "Buka dalam Google Maps",
+      "close": "Tutup"
+    }
+  },
+  "payment": {
+    "completeSubscription": "Lengkapkan Langganan Anda",
+    "subtitle": "Mula menjejak lokasi telefon dengan persetujuan",
+    "title": "Pembayaran",
+    "trialThen": "Percubaan 24j, kemudian",
+    "monthAfterTrial": "/bulan selepas percubaan",
+    "whatsIncluded": "Apa yang termasuk:",
+    "unlimitedRequests": "✓ Permintaan lokasi tanpa had",
+    "realtimeTracking": "✓ Penjejakan masa nyata",
+    "smsNotifications": "✓ Pemberitahuan SMS",
+    "247support": "✓ Sokongan 24/7",
+    "paymentDetails": "Butiran Pembayaran",
+    "plan": "Pelan",
+    "24hourTrial": "Percubaan 24 Jam",
+    "total": "Jumlah",
+    "pay": "Bayar",
+    "securePayment": "Pembayaran selamat dengan penyulitan SSL"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "Papan Pemuka",
+      "account": "Akaun",
+      "contact": "Hubungi",
+      "logout": "Log Keluar"
+    },
+    "title": "Tetapan Akaun",
+    "subtitle": "Urus akaun dan langganan anda",
+    "accountInfo": {
+      "title": "Maklumat Akaun",
+      "email": "Alamat E-mel",
+      "memberSince": "Ahli Sejak",
+      "loading": "Memuatkan..."
+    },
+    "subscription": {
+      "title": "Langganan",
+      "plan": "Pelan",
+      "nextPayment": "Pembayaran Seterusnya",
+      "status": "Status",
+      "active": "Aktif",
+      "loading": "Memuatkan...",
+      "cancelButton": "Batalkan Langganan"
+    },
+    "paymentHistory": {
+      "title": "Sejarah Pembayaran",
+      "noHistory": "Tiada sejarah pembayaran tersedia"
+    },
+    "cancelModal": {
+      "title": "Adakah Anda Pasti?",
+      "description": "Membatalkan langganan anda bermakna:",
+      "point1": "Anda akan kehilangan akses kepada ciri premium",
+      "point2": "Langganan anda akan tamat serta-merta",
+      "point3": "Anda tidak akan dicaj lagi",
+      "confirm": "Batalkan Langganan",
+      "goBack": "Kembali"
+    },
+    "successModal": {
+      "title": "Langganan Dibatalkan",
+      "message": "Kami telah mengesahkan pembatalan anda, dan anda tidak akan menerima sebarang caj lanjut daripada kami. E-mel pengesahan juga telah dihantar ke peti masuk anda.",
+      "close": "Tutup"
+    }
+  }
+}

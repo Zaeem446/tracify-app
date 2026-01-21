@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "Veelgestelde vragen",
+    "pricing": "Prijzen",
+    "contact": "Neem contact op",
+    "cancel": "Abonnement opzeggen",
+    "login": "Inloggen"
+  },
+  "hero": {
+    "title": "Localiseer elke telefoon, overal",
+    "subtitle": "Voer een telefoonnummer in dat u wilt lokaliseren",
+    "placeholder": "Voer telefoonnummer in",
+    "locateBtn": "Lokaliseren",
+    "disclaimer": "Vraag realtime telefoonlocaties aan via SMS. *Tracking vindt alleen plaats met expliciete toestemming van de ontvanger.",
+    "locationFound": "Locatie gevonden!",
+    "locationExample": "De locatie van het nummer <strong>123 678-9012</strong> is <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Speciale aanbieding!",
+    "title": "Test de mogelijkheden van Tracify voor slechts",
+    "forFullDay": "voor een hele dag!",
+    "subtitle": "Tracify biedt zijn diensten aan via een eenvoudig te beheren maandabonnement.",
+    "trialPeriod": "Proefperiode",
+    "trial24h": "24-uurs proefperiode",
+    "trialDesc": "Tracify werkt op basis van een maandabonnement. Uw eerste betaling geeft u 24 uur onbeperkte toegang tot alle platformdiensten. Daarna geldt het abonnementstarief van",
+    "perMonth": "per maand.",
+    "startTrial": "Start proefperiode",
+    "subscription": "Abonnement",
+    "monthlyFee": "Maandelijkse vergoeding",
+    "subscriptionDesc": "Zodra de proefperiode van 24 uur is afgelopen, wordt het aanbod automatisch verlengd tot een maandabonnement. Vergeet niet dat u het abonnement op elk gewenst moment kunt opzeggen.",
+    "subscribeNow": "Nu abonneren"
+  },
+  "howItWorks": {
+    "title": "Hoe werkt het?",
+    "step1Title": "Voer een telefoonnummer in",
+    "step1Desc": "Voer het telefoonnummer in dat u wilt lokaliseren en pas het SMS-bericht aan dat u wilt dat de ontvanger ontvangt.",
+    "step2Title": "Stuur tracking SMS",
+    "step2Desc": "Tracify stuurt de ontvanger uw aangepaste SMS die de locatie van de telefoon zal opvragen.",
+    "step3Title": "Ontvang precieze locatie",
+    "step3Desc": "Ontvang een melding zodra de ontvanger toestemming geeft om zijn locatie te delen. Bekijk de exacte positie op de kaart in uw dashboard."
+  },
+  "features": {
+    "title": "Waarom kiezen voor Tracify?",
+    "subtitle": "Eén klik en geen moeite om de locatie van iedereen over de hele wereld te vinden",
+    "feature1Title": "Discrete service",
+    "feature1Desc": "Hoewel de eigenaar van de telefoon wordt geïnformeerd over een locatieverzoek, blijft de identiteit van de aanvrager vertrouwelijk. Alle geolocatieverzoeken worden gedaan met respect voor privacy, en verzonden gegevens worden versleuteld voor beveiliging.",
+    "feature2Title": "Geen installatie vereist",
+    "feature2Desc": "Er is geen software te installeren op uw telefoon of het doelapparaat. Alles werkt op afstand! Voer gewoon het telefoonnummer in dat u wilt volgen. Zodra de SMS-ontvanger toestemming geeft, heeft u onmiddellijke toegang.",
+    "feature3Title": "Wereldwijde dekking",
+    "feature3Desc": "Tracify werkt met alle netwerken wereldwijd. Succesvolle tracking vereist echter dat de telefoon aan staat, beschikbaarheid van de service en de expliciete toestemming van de SMS-ontvanger om zijn locatie te delen.",
+    "feature4Title": "iOS en Android compatibel",
+    "feature4Desc": "Tracify ondersteunt naadloos zowel iOS- als Android-mobiele apparaten. Zolang u het telefoonnummer en de expliciete goedkeuring van het individu heeft om te volgen, kunt u ze lokaliseren met onze service.",
+    "locatePhone": "Lokaliseer telefoon"
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "subtitle": "Hier vindt u alle antwoorden op de vragen die ons het vaakst worden gesteld over onze mobiele geolocatieservice, Tracify.",
+    "tabAbout": "Over Tracify",
+    "tabPayments": "Betalingen & Facturering",
+    "tabAccount": "Mijn account",
+    "q1": "Wat is Tracify?",
+    "a1": "Tracify is een mobiele geolocatieservice waarmee u elk telefoonnummer wereldwijd kunt lokaliseren. Onze service werkt door een SMS naar de doeltelefoon te sturen met het verzoek om toestemming tot locatiedeling. Zodra toestemming is gegeven, ontvangt u de precieze GPS-coördinaten.",
+    "q2": "Is het überhaupt legaal om de Tracify-telefoonnummertracker te gebruiken?",
+    "a2": "Ja, Tracify is volledig legaal omdat het expliciete toestemming vereist van de persoon die wordt gevolgd. De ontvanger moet actief akkoord gaan met het delen van zijn locatie door te reageren op het SMS-verzoek. We voldoen aan alle privacyregelgeving en gegevensbeschermingswetten.",
+    "q3": "Welke netwerken ondersteunt Tracify?",
+    "a3": "Tracify ondersteunt alle grote mobiele netwerken wereldwijd. Of de doeltelefoon nu GSM-, CDMA-, LTE- of 5G-netwerken gebruikt, onze service kan locatieverzoeken naar elk geldig telefoonnummer sturen.",
+    "q4": "Kan ik de locatie van het telefoonnummer volgen als ik het model niet ken?",
+    "a4": "Absoluut! U hoeft het telefoonmodel, de fabrikant of het besturingssysteem niet te kennen. Het enige wat u nodig heeft is het telefoonnummer. Ons systeem regelt automatisch alle technische details, ongeacht het type apparaat.",
+    "q5": "Ondersteunt Tracify zowel iOS- als Android-bediende mobiele apparaten?",
+    "a5": "Ja, Tracify werkt met zowel iOS- (iPhone) als Android-apparaten. Ons SMS-gebaseerde locatieverzoeksysteem is compatibel met elke smartphone die tekstberichten kan ontvangen en locatieservices beschikbaar heeft.",
+    "q6": "Hoe snel kan Tracify de locatie van een telefoonnummer vinden?",
+    "a6": "Zodra de SMS-ontvanger toestemming geeft om zijn locatie te delen, ontvangt u de coördinaten bijna onmiddellijk. De totale tijd hangt af van hoe snel de ontvanger reageert op het locatieverzoek.",
+    "q7": "Hoe volg ik een telefoonnummer zonder fysieke toegang tot het doelapparaat?",
+    "a7": "Voer gewoon het telefoonnummer in ons systeem in, pas uw bericht aan en we sturen een SMS met een verzoek om locatietoestemming. Alles wordt op afstand gedaan - fysieke toegang tot het doelapparaat is nooit vereist.",
+    "q8": "Kan ik iemand volgen via een mobiel telefoonnummer?",
+    "a8": "Ja, maar alleen met hun expliciete toestemming. Tracify stuurt een locatieverzoek via SMS en tracking vindt alleen plaats wanneer de ontvanger ermee instemt zijn locatie te delen. Dit zorgt voor privacy en juridische naleving.",
+    "q9": "Kan ik iemand gratis volgen via een mobiel telefoonnummer?",
+    "a9p1": "We bieden een proefperiode van 24 uur aan voor slechts",
+    "a9p2": ", waarmee u volledige toegang krijgt tot alle functies. Na de proefperiode kunt u doorgaan met ons maandabonnement tegen",
+    "a9p3": "/maand.",
+    "q10": "Nog steeds hulp nodig?",
+    "a10": "Als u nog andere vragen heeft of hulp nodig heeft, aarzel dan niet om contact op te nemen met ons ondersteuningsteam. We zijn hier om u 24/7 te helpen. U kunt ons bereiken via onze contactpagina of stuur ons direct een e-mail."
+  },
+  "footer": {
+    "description": "Tracify laat u de geolocatie van een mobiele telefoon verkrijgen en werkt op alle telefoontypen, netwerken en landen.",
+    "legalInfo": "Juridische informatie",
+    "account": "Account",
+    "signup": "Aanmelden",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Cookiebeleid",
+    "privacy": "Privacybeleid",
+    "terms": "Algemene voorwaarden"
+  },
+  "contact": {
+    "title": "Neem contact op",
+    "subtitle": "Ons ondersteuningsteam is hier 24/7 om u meteen te helpen.",
+    "cardTitle": "We zijn er om te helpen",
+    "cardSubtitle": "Ons ondersteuningsteam is hier 24/7 om u meteen te helpen.",
+    "form": {
+      "name": "Naam",
+      "namePlaceholder": "Uw naam",
+      "email": "E-mail",
+      "emailPlaceholder": "uw.email@voorbeeld.nl",
+      "subject": "Onderwerp",
+      "selectSubject": "Selecteer een onderwerp",
+      "technical": "Technische ondersteuning",
+      "billing": "Factureringsvraag",
+      "feature": "Functieverzoek",
+      "feedback": "Algemene feedback",
+      "other": "Overig",
+      "message": "Bericht",
+      "messagePlaceholder": "Vertel ons hoe we kunnen helpen...",
+      "notRobot": "Ik ben geen robot",
+      "send": "Bericht verzenden"
+    },
+    "footer": {
+      "home": "Home"
+    }
+  },
+  "cancel": {
+    "title": "Uw abonnement opzeggen",
+    "subtitle": "Voer uw e-mailadres in om uw abonnement op te zeggen. Dit schakelt automatische verlenging uit en voorkomt toekomstige kosten.",
+    "form": {
+      "emailLabel": "E-mailadres",
+      "emailPlaceholder": "hallo@email.nl",
+      "submitBtn": "Abonnement opzeggen",
+      "helpText": "Als u niet meer weet welk e-mailadres u heeft gebruikt, controleer dan uw inbox op een welkomstmail van Tracify. Als u het nog steeds niet kunt vinden,",
+      "contactSupport": "neem contact op met ondersteuning"
+    },
+    "whyCharged": {
+      "title": "Waarom ben ik in rekening gebracht?"
+    },
+    "needHelp": {
+      "title": "Hulp nodig?",
+      "description": "Als u een probleem ondervindt of vragen heeft, is ons ondersteuningsteam 24/7 voor u beschikbaar. Neem gewoon contact op en we reageren snel!",
+      "contactBtn": "Neem contact op met ondersteuning"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "account": "Account",
+      "contact": "Contact",
+      "settings": "Instellingen",
+      "logout": "Uitloggen"
+    },
+    "title": "Telefoonlocatie volgen",
+    "subtitle": "Stuur een locatieverzoek met toestemmingsgebaseerde tracking",
+    "sendRequest": {
+      "title": "Locatieverzoek verzenden",
+      "phoneNumber": "Telefoonnummer",
+      "phonePlaceholder": "3001234567",
+      "message": "Bericht",
+      "send": "Verzenden",
+      "previewMessage": "Voorbeeld van bericht",
+      "rateLimit": "Om veiligheids- en privacyredenen kunt u slechts één keer per 3 uur een bericht verzenden."
+    },
+    "recentRequests": {
+      "title": "Recente verzoeken",
+      "noRequests": "Nog geen trackingverzoeken"
+    },
+    "trackingActivity": {
+      "title": "Recente trackingactiviteit"
+    },
+    "disclaimer": {
+      "title": "Belangrijke disclaimer",
+      "point1": "Tracify vereist expliciete toestemming van de telefooneigenaar voordat hun locatie wordt gedeeld",
+      "point2": "Deze service is alleen bedoeld voor legitieme doeleinden (verloren apparaten vinden, gezinsveiligheid)",
+      "point3": "Ongeautoriseerde tracking of stalking is illegaal en streng verboden",
+      "point4": "Locatienauwkeurigheid isafhankelijk van apparaatinstellingen en netwerkomstandigheden",
+      "point5": "We zijn niet verantwoordelijk voor misbruik van deze service",
+      "needHelp": "Hulp nodig?",
+      "contactSupport": "Neem contact op met ons ondersteuningsteam"
+    },
+    "subscription": {
+      "currentPlan": "Huidig abonnement",
+      "loading": "Laden...",
+      "manage": "Beheer abonnement"
+    },
+    "messageModal": {
+      "title": "Berichtinstellingen",
+      "description": "We hebben de berichten geselecteerd met de hoogste percentages voor locatiedeling. Selecteer er een uit de onderstaande lijst.",
+      "language": "Berichttaal",
+      "selectTemplate": "Selecteer een berichtsjabloon",
+      "template1": "Ik ben de eigenaar van deze telefoon en deze is momenteel verloren. Als u hem heeft gevonden, laat het me dan weten.",
+      "template2": "Als deze telefoon niet van jou is, zou je me dat kunnen laten weten?",
+      "template3": "Geen haast, maar bekijk dit als je even tijd hebt:",
+      "apply": "Toepassen"
+    },
+    "trustpilot": {
+      "title": "Help ons verbeteren!",
+      "subtitle": "Deel uw ervaring voordat u Tracify gebruikt",
+      "message": "We waarderen uw feedback! Neem even de tijd om uw ervaring op Trustpilot te beoordelen.",
+      "helpText": "Uw beoordeling helpt ons om kwaliteitsservice te handhaven",
+      "leaveReview": "Laat een beoordeling achter op Trustpilot",
+      "skip": "Nu overslaan"
+    },
+    "locationModal": {
+      "title": "Locatie ontvangen",
+      "coordinates": "Coördinaten",
+      "openMap": "Open in Google Maps",
+      "close": "Sluiten"
+    }
+  },
+  "payment": {
+    "completeSubscription": "Voltooi uw abonnement",
+    "subtitle": "Begin met het volgen van telefoonlocaties met toestemming",
+    "title": "Betaling",
+    "trialThen": "24-uurs proef, dan",
+    "monthAfterTrial": "/maand na proefperiode",
+    "whatsIncluded": "Wat is inbegrepen:",
+    "unlimitedRequests": "✓ Onbeperkte locatieverzoeken",
+    "realtimeTracking": "✓ Realtime tracking",
+    "smsNotifications": "✓ SMS-meldingen",
+    "247support": "✓ 24/7 ondersteuning",
+    "paymentDetails": "Betalingsgegevens",
+    "plan": "Abonnement",
+    "24hourTrial": "24-uurs proefperiode",
+    "total": "Totaal",
+    "pay": "Betalen",
+    "securePayment": "Veilige betaling met SSL-versleuteling"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "account": "Account",
+      "contact": "Contact",
+      "logout": "Uitloggen"
+    },
+    "title": "Accountinstellingen",
+    "subtitle": "Beheer uw account en abonnement",
+    "accountInfo": {
+      "title": "Accountinformatie",
+      "email": "E-mailadres",
+      "memberSince": "Lid sinds",
+      "loading": "Laden..."
+    },
+    "subscription": {
+      "title": "Abonnement",
+      "plan": "Abonnement",
+      "nextPayment": "Volgende betaling",
+      "status": "Status",
+      "active": "Actief",
+      "loading": "Laden...",
+      "cancelButton": "Abonnement opzeggen"
+    },
+    "paymentHistory": {
+      "title": "Betalingsgeschiedenis",
+      "noHistory": "Geen betalingsgeschiedenis beschikbaar"
+    },
+    "cancelModal": {
+      "title": "Weet u het zeker?",
+      "description": "Het opzeggen van uw abonnement betekent:",
+      "point1": "U verliest toegang tot premium functies",
+      "point2": "Uw abonnement eindigt onmiddellijk",
+      "point3": "U wordt niet opnieuw in rekening gebracht",
+      "confirm": "Abonnement opzeggen",
+      "goBack": "Ga terug"
+    },
+    "successModal": {
+      "title": "Abonnement opgezegd",
+      "message": "We hebben uw opzegging bevestigd en u ontvangt geen verdere kosten van ons. Er is ook een bevestigingsmail naar uw inbox verzonden.",
+      "close": "Sluiten"
+    }
+  }
+}

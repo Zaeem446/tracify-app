@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "FAQ",
+    "pricing": "Prezzi",
+    "contact": "Contattaci",
+    "cancel": "Annulla abbonamento",
+    "login": "Accedi"
+  },
+  "hero": {
+    "title": "Localizza qualsiasi telefono, ovunque",
+    "subtitle": "Inserisci il numero di telefono che vuoi localizzare",
+    "placeholder": "Inserisci numero di telefono",
+    "locateBtn": "Localizza",
+    "disclaimer": "Richiedi posizioni telefoniche in tempo reale tramite SMS. *Il tracciamento avviene solo con il consenso esplicito del destinatario.",
+    "locationFound": "Posizione trovata!",
+    "locationExample": "La posizione del numero <strong>123 678-9012</strong> è <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Offerta speciale!",
+    "title": "Prova le capacità di Tracify per soli",
+    "forFullDay": "per un giorno intero!",
+    "subtitle": "Tracify offre i suoi servizi attraverso un abbonamento mensile facile da gestire.",
+    "trialPeriod": "Periodo di prova",
+    "trial24h": "Prova di 24 ore",
+    "trialDesc": "Tracify funziona con un abbonamento mensile. Il tuo pagamento iniziale garantisce accesso illimitato a tutti i servizi della piattaforma per 24 ore. Dopo tale periodo, si applica la quota di abbonamento di",
+    "perMonth": "al mese.",
+    "startTrial": "Inizia la prova",
+    "subscription": "Abbonamento",
+    "monthlyFee": "Quota mensile",
+    "subscriptionDesc": "Al termine del periodo di prova di 24 ore, l'offerta si rinnoverà automaticamente in un abbonamento mensile. Ricorda che puoi annullare l'abbonamento quando vuoi.",
+    "subscribeNow": "Abbonati ora"
+  },
+  "howItWorks": {
+    "title": "Come funziona?",
+    "step1Title": "Inserisci un numero di telefono",
+    "step1Desc": "Inserisci il numero di telefono che vuoi localizzare e personalizza il messaggio SMS che vuoi far ricevere al destinatario.",
+    "step2Title": "Invia SMS di tracciamento",
+    "step2Desc": "Tracify invierà al destinatario il tuo SMS personalizzato che richiederà la posizione del telefono.",
+    "step3Title": "Ricevi la posizione precisa",
+    "step3Desc": "Ricevi una notifica non appena il destinatario acconsente a condividere la sua posizione. Visualizza la posizione esatta sulla mappa nella tua dashboard."
+  },
+  "features": {
+    "title": "Perché scegliere Tracify?",
+    "subtitle": "Un clic e zero sforzo per trovare la posizione di chiunque nel mondo",
+    "feature1Title": "Servizio discreto",
+    "feature1Desc": "Mentre il proprietario del telefono sarà informato di una richiesta di posizione, l'identità del richiedente rimane riservata. Tutte le richieste di geolocalizzazione sono fatte nel rispetto della privacy e i dati trasmessi sono crittografati per la sicurezza.",
+    "feature2Title": "Nessuna installazione richiesta",
+    "feature2Desc": "Non c'è software da installare sul tuo telefono o sul dispositivo target. Tutto funziona da remoto! Basta inserire il numero di telefono che vuoi tracciare. Non appena il destinatario SMS fornisce il consenso, avrai accesso immediato.",
+    "feature3Title": "Copertura mondiale",
+    "feature3Desc": "Tracify funziona con tutte le reti in tutto il mondo. Tuttavia, il tracciamento riuscito richiede che il telefono sia acceso, la disponibilità del servizio e il consenso esplicito del destinatario SMS per condividere la sua posizione.",
+    "feature4Title": "Compatibile con iOS e Android",
+    "feature4Desc": "Tracify supporta senza problemi dispositivi mobili iOS e Android. Finché hai il numero di telefono e l'approvazione esplicita dell'individuo per il tracciamento, puoi localizzarlo usando il nostro servizio.",
+    "locatePhone": "Localizza telefono"
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "subtitle": "Qui puoi trovare tutte le risposte alle domande che ci vengono poste più spesso sul nostro servizio di geolocalizzazione mobile, Tracify.",
+    "tabAbout": "Informazioni su Tracify",
+    "tabPayments": "Pagamenti e fatturazione",
+    "tabAccount": "Il mio account",
+    "q1": "Cos'è Tracify?",
+    "a1": "Tracify è un servizio di geolocalizzazione mobile che ti permette di localizzare qualsiasi numero di telefono nel mondo. Il nostro servizio funziona inviando un SMS al telefono target richiedendo il consenso alla condivisione della posizione. Una volta dato il consenso, ricevi le coordinate GPS precise.",
+    "q2": "È legale usare il localizzatore di numeri telefonici Tracify?",
+    "a2": "Sì, Tracify è completamente legale perché richiede il consenso esplicito della persona tracciata. Il destinatario deve accettare attivamente di condividere la sua posizione rispondendo alla richiesta SMS. Rispettiamo tutte le normative sulla privacy e le leggi sulla protezione dei dati.",
+    "q3": "Quali reti supporta Tracify?",
+    "a3": "Tracify supporta tutte le principali reti mobili in tutto il mondo. Che il telefono target utilizzi reti GSM, CDMA, LTE o 5G, il nostro servizio può inviare richieste di posizione a qualsiasi numero di telefono valido.",
+    "q4": "Posso tracciare la posizione del numero di telefono se non conosco il suo modello?",
+    "a4": "Assolutamente! Non hai bisogno di conoscere il modello del telefono, il produttore o il sistema operativo. Tutto ciò di cui hai bisogno è il numero di telefono. Il nostro sistema gestisce automaticamente tutti i dettagli tecnici indipendentemente dal tipo di dispositivo.",
+    "q5": "Tracify supporta sia dispositivi mobili iOS che Android?",
+    "a5": "Sì, Tracify funziona sia con dispositivi iOS (iPhone) che Android. Il nostro sistema di richiesta posizione basato su SMS è compatibile con qualsiasi smartphone che può ricevere messaggi di testo e ha servizi di localizzazione disponibili.",
+    "q6": "Quanto velocemente può Tracify trovare la posizione di un numero di telefono?",
+    "a6": "Una volta che il destinatario SMS acconsente a condividere la sua posizione, riceverai le coordinate quasi istantaneamente. Il tempo totale dipende da quanto velocemente il destinatario risponde alla richiesta di posizione.",
+    "q7": "Come tracciare un numero di telefono senza accesso fisico al dispositivo target?",
+    "a7": "Basta inserire il numero di telefono nel nostro sistema, personalizzare il tuo messaggio e invieremo un SMS richiedendo il consenso alla posizione. Tutto viene fatto da remoto - non è mai richiesto l'accesso fisico al dispositivo target.",
+    "q8": "Posso tracciare qualcuno tramite il numero di cellulare?",
+    "a8": "Sì, ma solo con il suo consenso esplicito. Tracify invia una richiesta di posizione via SMS e il tracciamento avviene solo quando il destinatario accetta di condividere la sua posizione. Questo garantisce privacy e conformità legale.",
+    "q9": "Posso tracciare qualcuno tramite il numero di cellulare gratuitamente?",
+    "a9p1": "Offriamo un periodo di prova di 24 ore per soli",
+    "a9p2": ", che ti dà accesso completo a tutte le funzionalità. Dopo la prova, puoi continuare con il nostro abbonamento mensile a",
+    "a9p3": "/mese.",
+    "q10": "Hai ancora bisogno di aiuto?",
+    "a10": "Se hai altre domande o hai bisogno di assistenza, non esitare a contattare il nostro team di supporto. Siamo qui per aiutarti 24/7. Puoi raggiungerci attraverso la nostra pagina Contattaci o inviarci un'email direttamente."
+  },
+  "footer": {
+    "description": "Tracify ti permette di ottenere la geolocalizzazione di un telefono cellulare e funziona su tutti i tipi di telefono, reti e paesi.",
+    "legalInfo": "Informazioni legali",
+    "account": "Account",
+    "signup": "Registrati",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Politica sui cookie",
+    "privacy": "Politica sulla privacy",
+    "terms": "Termini e condizioni"
+  },
+  "contact": {
+    "title": "Contattaci",
+    "subtitle": "Il nostro team di supporto è qui 24/7 per aiutarti subito.",
+    "cardTitle": "Siamo qui per aiutarti",
+    "cardSubtitle": "Il nostro team di supporto è qui 24/7 per aiutarti subito.",
+    "form": {
+      "name": "Nome",
+      "namePlaceholder": "Il tuo nome",
+      "email": "Email",
+      "emailPlaceholder": "tua.email@esempio.com",
+      "subject": "Oggetto",
+      "selectSubject": "Seleziona un oggetto",
+      "technical": "Supporto tecnico",
+      "billing": "Domanda sulla fatturazione",
+      "feature": "Richiesta funzionalità",
+      "feedback": "Feedback generale",
+      "other": "Altro",
+      "message": "Messaggio",
+      "messagePlaceholder": "Dicci come possiamo aiutarti...",
+      "notRobot": "Non sono un robot",
+      "send": "Invia messaggio"
+    },
+    "footer": {
+      "home": "Home"
+    }
+  },
+  "cancel": {
+    "title": "Annulla il tuo abbonamento",
+    "subtitle": "Inserisci la tua email per annullare l'abbonamento. Questo disattiverà il rinnovo automatico e impedirà addebiti futuri.",
+    "form": {
+      "emailLabel": "Indirizzo email",
+      "emailPlaceholder": "ciao@email.com",
+      "submitBtn": "Annulla abbonamento",
+      "helpText": "Se non ricordi quale email hai usato, controlla la tua casella di posta per un'email di benvenuto da Tracify. Se ancora non riesci a trovarla,",
+      "contactSupport": "contatta il supporto"
+    },
+    "whyCharged": {
+      "title": "Perché mi è stato addebitato?"
+    },
+    "needHelp": {
+      "title": "Hai bisogno di aiuto?",
+      "description": "Se stai riscontrando un problema o hai domande, il nostro team di supporto è qui per te 24/7. Contattaci e ti risponderemo rapidamente!",
+      "contactBtn": "Contatta il supporto"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "account": "Account",
+      "contact": "Contatto",
+      "settings": "Impostazioni",
+      "logout": "Esci"
+    },
+    "title": "Traccia la posizione di un telefono",
+    "subtitle": "Invia una richiesta di posizione con tracciamento basato sul consenso",
+    "sendRequest": {
+      "title": "Invia richiesta di posizione",
+      "phoneNumber": "Numero di telefono",
+      "phonePlaceholder": "3001234567",
+      "message": "Messaggio",
+      "send": "Invia",
+      "previewMessage": "Anteprima messaggio",
+      "rateLimit": "Per motivi di sicurezza e privacy, puoi inviare un messaggio solo una volta ogni 3 ore."
+    },
+    "recentRequests": {
+      "title": "Richieste recenti",
+      "noRequests": "Nessuna richiesta di tracciamento ancora"
+    },
+    "trackingActivity": {
+      "title": "Attività di tracciamento recente"
+    },
+    "disclaimer": {
+      "title": "Avviso importante",
+      "point1": "Tracify richiede il consenso esplicito del proprietario del telefono prima di condividere la sua posizione",
+      "point2": "Questo servizio è destinato solo a scopi legittimi (trovare dispositivi smarriti, sicurezza familiare)",
+      "point3": "Il tracciamento non autorizzato o lo stalking è illegale e severamente proibito",
+      "point4": "La precisione della posizione dipende dalle impostazioni del dispositivo e dalle condizioni di rete",
+      "point5": "Non siamo responsabili per l'uso improprio di questo servizio",
+      "needHelp": "Hai bisogno di aiuto?",
+      "contactSupport": "Contatta il nostro team di supporto"
+    },
+    "subscription": {
+      "currentPlan": "Piano attuale",
+      "loading": "Caricamento...",
+      "manage": "Gestisci abbonamento"
+    },
+    "messageModal": {
+      "title": "Impostazioni messaggio",
+      "description": "Abbiamo selezionato i messaggi con i tassi più alti di condivisione della posizione. Seleziona uno dalla lista qui sotto.",
+      "language": "Lingua del messaggio",
+      "selectTemplate": "Seleziona un modello di messaggio",
+      "template1": "Sono il proprietario di questo telefono ed è attualmente smarrito. Se lo hai trovato, per favore fammelo sapere.",
+      "template2": "Se questo telefono non è tuo, potresti farmelo sapere?",
+      "template3": "Nessuna fretta, ma dai un'occhiata quando hai un momento:",
+      "apply": "Applica"
+    },
+    "trustpilot": {
+      "title": "Aiutaci a migliorare!",
+      "subtitle": "Condividi la tua esperienza prima di usare Tracify",
+      "message": "Apprezziamo il tuo feedback! Per favore prenditi un momento per valutare la tua esperienza su Trustpilot.",
+      "helpText": "La tua recensione ci aiuta a mantenere un servizio di qualità",
+      "leaveReview": "Lascia una recensione su Trustpilot",
+      "skip": "Salta per ora"
+    },
+    "locationModal": {
+      "title": "Posizione ricevuta",
+      "coordinates": "Coordinate",
+      "openMap": "Apri in Google Maps",
+      "close": "Chiudi"
+    }
+  },
+  "payment": {
+    "completeSubscription": "Completa il tuo abbonamento",
+    "subtitle": "Inizia a tracciare le posizioni dei telefoni con consenso",
+    "title": "Pagamento",
+    "trialThen": "Prova 24h, poi",
+    "monthAfterTrial": "/mese dopo la prova",
+    "whatsIncluded": "Cosa è incluso:",
+    "unlimitedRequests": "✓ Richieste di posizione illimitate",
+    "realtimeTracking": "✓ Tracciamento in tempo reale",
+    "smsNotifications": "✓ Notifiche SMS",
+    "247support": "✓ Supporto 24/7",
+    "paymentDetails": "Dettagli pagamento",
+    "plan": "Piano",
+    "24hourTrial": "Prova 24 ore",
+    "total": "Totale",
+    "pay": "Paga",
+    "securePayment": "Pagamento sicuro con crittografia SSL"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "account": "Account",
+      "contact": "Contatto",
+      "logout": "Esci"
+    },
+    "title": "Impostazioni account",
+    "subtitle": "Gestisci il tuo account e abbonamento",
+    "accountInfo": {
+      "title": "Informazioni account",
+      "email": "Indirizzo email",
+      "memberSince": "Membro dal",
+      "loading": "Caricamento..."
+    },
+    "subscription": {
+      "title": "Abbonamento",
+      "plan": "Piano",
+      "nextPayment": "Prossimo pagamento",
+      "status": "Stato",
+      "active": "Attivo",
+      "loading": "Caricamento...",
+      "cancelButton": "Annulla abbonamento"
+    },
+    "paymentHistory": {
+      "title": "Cronologia pagamenti",
+      "noHistory": "Nessuna cronologia pagamenti disponibile"
+    },
+    "cancelModal": {
+      "title": "Sei sicuro?",
+      "description": "Annullare il tuo abbonamento significa:",
+      "point1": "Perderai l'accesso alle funzionalità premium",
+      "point2": "Il tuo abbonamento terminerà immediatamente",
+      "point3": "Non ti verrà addebitato di nuovo",
+      "confirm": "Annulla abbonamento",
+      "goBack": "Torna indietro"
+    },
+    "successModal": {
+      "title": "Abbonamento annullato",
+      "message": "Abbiamo confermato la tua cancellazione e non riceverai ulteriori addebiti da noi. Un'email di conferma è stata anche inviata alla tua casella di posta.",
+      "close": "Chiudi"
+    }
+  }
+}

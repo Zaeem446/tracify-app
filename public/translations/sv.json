@@ -1,0 +1,284 @@
+{
+  "nav": {
+    "faq": "FAQ",
+    "pricing": "Priser",
+    "contact": "Kontakta oss",
+    "cancelSubscription": "Avbryt prenumeration",
+    "login": "Logga in",
+    "dashboard": "Instrumentpanel",
+    "account": "Konto",
+    "logout": "Logga ut"
+  },
+  "hero": {
+    "title": "Lokalisera vilken telefon som helst, var som helst",
+    "subtitle": "Ange ett telefonnummer du vill lokalisera",
+    "phonePlaceholder": "Ange telefonnummer",
+    "locateButton": "Lokalisera",
+    "disclaimer": "Begär telefonpositioner i realtid via SMS. *Spårning sker endast med mottagarens uttryckliga samtycke.",
+    "locationFound": "Plats hittad!",
+    "locationExample": "Platsen för numret <strong>123 678-9012</strong> är <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Specialerbjudande!",
+    "testOut": "Testa Tracifys funktioner för bara",
+    "forFullDay": "för en hel dag!",
+    "subtitle": "Tracify erbjuder sina tjänster genom sin lätthanterliga månatliga prenumeration.",
+    "trialPeriod": "Provperiod",
+    "24hourTrial": "24-timmars prov",
+    "trialDescription1": "Tracify fungerar på prenumerationsbasis. Din första betalning ger obegränsad åtkomst till alla plattformstjänster i 24 timmar. Efter den perioden gäller prenumerationsavgiften på",
+    "trialDescription2": "per månad.",
+    "startTrial": "Starta prov",
+    "subscription": "Prenumeration",
+    "monthlyFee": "Månadsavgift",
+    "subscriptionDescription": "När 24-timmars provperioden har avslutats förnyas erbjudandet automatiskt till en månatlig prenumeration. Kom ihåg att du kan avbryta prenumerationen när du vill.",
+    "subscribeNow": "Prenumerera nu"
+  },
+  "howItWorks": {
+    "title": "Hur fungerar det?",
+    "step1Title": "Ange ett telefonnummer",
+    "step1Description": "Ange telefonnumret du vill lokalisera och anpassa SMS-meddelandet du vill att mottagaren ska få.",
+    "step2Title": "Skicka spårnings-SMS",
+    "step2Description": "Tracify skickar mottagaren ditt anpassade SMS som begär telefonens plats.",
+    "step3Title": "Ta emot exakt plats",
+    "step3Description": "Få en avisering så snart mottagaren samtycker till att dela sin plats. Visa den exakta positionen på kartan i din instrumentpanel."
+  },
+  "features": {
+    "title": "Varför välja Tracify?",
+    "subtitle": "Ett klick och noll ansträngning för att hitta någons plats var som helst i världen",
+    "feature1Title": "Diskret tjänst",
+    "feature1Description": "Även om telefonägaren kommer att informeras om en platsbegäran förblir begärarens identitet konfidentiell. Alla geolokaliseringsbegäranden görs med respekt för integritet, och överförda data krypteras för säkerhet.",
+    "feature2Title": "Ingen installation krävs",
+    "feature2Description": "Det finns ingen programvara att installera på din telefon eller målenheten. Allt fungerar på distans! Ange bara telefonnumret du vill spåra. Så snart SMS-mottagaren ger sitt samtycke har du omedelbar åtkomst.",
+    "feature3Title": "Världsomfattande täckning",
+    "feature3Description": "Tracify fungerar med alla nätverk världen över. Framgångsrik spårning kräver dock att telefonen är på, tjänstetillgänglighet och SMS-mottagarens uttryckliga samtycke till att dela sin plats.",
+    "feature4Title": "iOS- och Android-kompatibel",
+    "feature4Description": "Tracify stöder sömlöst både iOS- och Android-mobilenheter. Så länge du har telefonnumret och individens uttryckliga godkännande för att spåra kan du lokalisera dem med vår tjänst.",
+    "locatePhone": "Lokalisera telefon"
+  },
+  "faq": {
+    "title": "Vanliga frågor",
+    "subtitle": "Här kan du hitta alla svar på de frågor vi oftast får om vår mobila geolokaliseringstjänst, Tracify.",
+    "tabAbout": "Om Tracify",
+    "tabPayments": "Betalningar & Fakturering",
+    "tabAccount": "Mitt konto",
+    "q1": "Vad är Tracify?",
+    "a1": "Tracify är en mobil geolokaliseringstjänst som låter dig lokalisera vilket telefonnummer som helst världen över. Vår tjänst fungerar genom att skicka ett SMS till måltelefonen som begär samtycke för platsdelning. När samtycke ges får du de exakta GPS-koordinaterna.",
+    "q2": "Är det ens lagligt att använda Tracify telefonnummerspåraren?",
+    "a2": "Ja, Tracify är helt lagligt eftersom det kräver uttryckligt samtycke från personen som spåras. Mottagaren måste aktivt samtycka till att dela sin plats genom att svara på SMS-begäran. Vi följer alla integritetsregler och dataskyddslagar.",
+    "q3": "Vilka nätverk stöder Tracify?",
+    "a3": "Tracify stöder alla större mobilnätverk världen över. Oavsett om måltelefonen använder GSM-, CDMA-, LTE- eller 5G-nätverk kan vår tjänst skicka platsbegäranden till vilket giltigt telefonnummer som helst.",
+    "q4": "Kan jag spåra platsen för telefonnumret om jag inte känner till dess modell?",
+    "a4": "Absolut! Du behöver inte känna till telefonmodellen, tillverkaren eller operativsystemet. Allt du behöver är telefonnumret. Vårt system hanterar automatiskt alla tekniska detaljer oavsett enhetstyp.",
+    "q5": "Stöder Tracify både iOS- och Android-drivna mobilenheter?",
+    "a5": "Ja, Tracify fungerar med både iOS (iPhone)- och Android-enheter. Vårt SMS-baserade platsbegäransystem är kompatibelt med alla smartphones som kan ta emot textmeddelanden och har platstjänster tillgängliga.",
+    "q6": "Hur snabbt kan Tracify hitta platsen för ett telefonnummer?",
+    "a6": "När SMS-mottagaren samtycker till att dela sin plats får du koordinaterna nästan omedelbart. Den totala tiden beror på hur snabbt mottagaren svarar på platsbegäran.",
+    "q7": "Hur spårar man ett telefonnummer utan fysisk åtkomst till målenheten?",
+    "a7": "Ange bara telefonnumret i vårt system, anpassa ditt meddelande så skickar vi ett SMS som begär platssamtycke. Allt görs på distans - fysisk åtkomst till målenheten krävs aldrig.",
+    "q8": "Kan jag spåra någon via mobiltelefonnummer?",
+    "a8": "Ja, men endast med deras uttryckliga samtycke. Tracify skickar en platsbegäran via SMS, och spårning sker endast när mottagaren samtycker till att dela sin plats. Detta säkerställer integritet och efterlevnad av lagar.",
+    "q9": "Kan jag spåra någon via mobiltelefonnummer gratis?",
+    "a9part1": "Vi erbjuder en 24-timmars provperiod för bara",
+    "a9part2": ", vilket ger dig full åtkomst till alla funktioner. Efter provet kan du fortsätta med vår månatliga prenumeration för",
+    "a9part3": "/månad.",
+    "q10": "Behöver du fortfarande hjälp?",
+    "a10": "Om du har några andra frågor eller behöver hjälp, tveka inte att kontakta vårt supportteam. Vi är här för att hjälpa dig 24/7. Du kan nå oss via vår Kontakta oss-sida eller maila oss direkt."
+  },
+  "footer": {
+    "description": "Tracify låter dig få en mobiltelefons geolokalisering och fungerar på alla telefontyper, nätverk och länder.",
+    "legalInfo": "Juridisk information",
+    "account": "Konto",
+    "signup": "Registrera dig",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Cookiepolicy",
+    "privacy": "Integritetspolicy",
+    "terms": "Villkor"
+  },
+  "payment": {
+    "completeSubscription": "Slutför din prenumeration",
+    "subtitle": "Börja spåra telefonplatser med samtycke",
+    "title": "Betalning",
+    "paymentDetails": "Betalningsdetaljer",
+    "24hourTrial": "24-timmars prov",
+    "bestValue": "Bästa värde",
+    "per24hours": "/ 24 timmar",
+    "fullAccess": "Full åtkomst till alla plattformsfunktioner i 24 timmar.",
+    "whatsIncluded": "Vad som ingår:",
+    "unlimitedRequests": "✓ Obegränsade platsbegäranden",
+    "realtimeTracking": "✓ Realtidsspårning",
+    "smsNotifications": "✓ SMS-aviseringar",
+    "247support": "✓ 24/7 support",
+    "cardDetails": "Kortinformation",
+    "cardNumber": "Kortnummer",
+    "expiryDate": "Utgångsdatum",
+    "cvv": "CVV",
+    "nameOnCard": "Namn på kort",
+    "plan": "Plan",
+    "total": "Totalt",
+    "pay": "Betala",
+    "securePayment": "Säker betalning med SSL-kryptering",
+    "trialThen": "24h prov, sedan",
+    "monthAfterTrial": "/månad efter prov"
+  },
+  "dashboard": {
+    "title": "Spåra telefonplats",
+    "subtitle": "Skicka en platsbegäran med samtyckesbaserad spårning",
+    "nav": {
+      "dashboard": "Instrumentpanel",
+      "account": "Konto",
+      "contact": "Kontakt",
+      "settings": "Inställningar",
+      "logout": "Logga ut"
+    },
+    "sendRequest": {
+      "title": "Skicka platsbegäran",
+      "phoneNumber": "Telefonnummer",
+      "phonePlaceholder": "3001234567",
+      "message": "Meddelande",
+      "send": "Skicka",
+      "previewMessage": "Förhandsgranska meddelande",
+      "rateLimit": "Av säkerhets- och integritetsskäl kan du bara skicka ett meddelande var 3:e timme."
+    },
+    "recentRequests": {
+      "title": "Senaste begäranden",
+      "noRequests": "Inga spårningsbegäranden än"
+    },
+    "trackingActivity": {
+      "title": "Senaste spårningsaktivitet"
+    },
+    "disclaimer": {
+      "title": "Viktig ansvarsfriskrivning",
+      "point1": "Tracify kräver uttryckligt samtycke från telefonägaren innan platsen delas",
+      "point2": "Denna tjänst är endast avsedd för legitima syften (hitta förlorade enheter, familjesäkerhet)",
+      "point3": "Obehörig spårning eller förföljelse är olagligt och strängt förbjudet",
+      "point4": "Platsnoggrannhet beror på enhetsinställningar och nätverksförhållanden",
+      "point5": "Vi ansvarar inte för missbruk av denna tjänst",
+      "needHelp": "Behöver du hjälp?",
+      "contactSupport": "Kontakta vårt supportteam"
+    },
+    "subscription": {
+      "currentPlan": "Nuvarande plan",
+      "loading": "Laddar...",
+      "manage": "Hantera prenumeration"
+    },
+    "messageModal": {
+      "title": "Meddelandeinställningar",
+      "description": "Vi har valt meddelanden med högsta platsdelningsgrad. Välj ett från listan nedan.",
+      "language": "Meddelandespråk",
+      "selectTemplate": "Välj en meddelandemall",
+      "template1": "Jag är ägare av denna telefon och den är för närvarande förlorad. Om du har hittat den, vänligen låt mig veta.",
+      "template2": "Om denna telefon inte är din, kan du låta mig veta?",
+      "template3": "Ingen brådska, men kolla detta när du har en sekund:",
+      "apply": "Tillämpa"
+    },
+    "trustpilot": {
+      "title": "Hjälp oss förbättra!",
+      "subtitle": "Dela din upplevelse innan du använder Tracify",
+      "message": "Vi värdesätter din feedback! Vänligen ta en stund att betygsätta din upplevelse på Trustpilot.",
+      "helpText": "Din recension hjälper oss att upprätthålla kvalitetstjänst",
+      "leaveReview": "Lämna en recension på Trustpilot",
+      "skip": "Hoppa över nu"
+    },
+    "locationModal": {
+      "title": "Plats mottagen",
+      "coordinates": "Koordinater",
+      "openMap": "Öppna i Google Maps",
+      "close": "Stäng"
+    }
+  },
+  "account": {
+    "title": "Kontoinställningar",
+    "subtitle": "Hantera ditt konto och din prenumeration",
+    "nav": {
+      "dashboard": "Instrumentpanel",
+      "account": "Konto",
+      "contact": "Kontakt",
+      "logout": "Logga ut"
+    },
+    "accountInfo": {
+      "title": "Kontoinformation",
+      "email": "E-postadress",
+      "memberSince": "Medlem sedan",
+      "loading": "Laddar..."
+    },
+    "subscription": {
+      "title": "Prenumeration",
+      "plan": "Plan",
+      "nextPayment": "Nästa betalning",
+      "status": "Status",
+      "active": "Aktiv",
+      "loading": "Laddar...",
+      "cancelButton": "Avbryt prenumeration"
+    },
+    "paymentHistory": {
+      "title": "Betalningshistorik",
+      "noHistory": "Ingen betalningshistorik tillgänglig"
+    },
+    "cancelModal": {
+      "title": "Är du säker?",
+      "description": "Att avbryta din prenumeration innebär:",
+      "point1": "Du förlorar åtkomst till premiumfunktioner",
+      "point2": "Din prenumeration avslutas omedelbart",
+      "point3": "Du kommer inte att debiteras igen",
+      "confirm": "Avbryt prenumeration",
+      "goBack": "Gå tillbaka"
+    },
+    "successModal": {
+      "title": "Prenumeration avbruten",
+      "message": "Vi har bekräftat din avbokning och du kommer inte att få några ytterligare avgifter från oss. Ett bekräftelsemail har också skickats till din inkorg.",
+      "close": "Stäng"
+    }
+  },
+  "common": {
+    "loading": "Laddar...",
+    "error": "Ett fel uppstod",
+    "tryAgain": "Vänligen försök igen",
+    "required": "Obligatorisk",
+    "optional": "Valfri"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Our support team is here 24/7 to help you right away.",
+    "cardTitle": "We're Here to Help",
+    "cardSubtitle": "Our support team is here 24/7 to help you right away.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "subject": "Subject",
+      "selectSubject": "Select a subject",
+      "technical": "Technical Support",
+      "billing": "Billing Question",
+      "feature": "Feature Request",
+      "feedback": "General Feedback",
+      "other": "Other",
+      "message": "Message",
+      "messagePlaceholder": "Tell us how we can help...",
+      "notRobot": "I'm not a robot",
+      "send": "Send Message"
+    },
+    "footer": {
+      "home": "Home"
+    }
+  },
+  "cancel": {
+    "title": "Cancel Your Subscription",
+    "subtitle": "Enter your email to cancel your subscription. This will turn off auto-renewal and prevent any future charges.",
+    "form": {
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "hello@email.com",
+      "submitBtn": "Cancel Subscription",
+      "helpText": "If you don't remember which email you used, check your inbox for a welcome email from Tracify. If you still can't find it,",
+      "contactSupport": "contact support"
+    },
+    "whyCharged": {
+      "title": "Why was I charged?"
+    },
+    "needHelp": {
+      "title": "Need help?",
+      "description": "If you're experiencing an issue or have any questions, our support team is here for you 24/7. Just reach out and we'll get back to you quickly!",
+      "contactBtn": "Contact Support"
+    }
+  }
+}

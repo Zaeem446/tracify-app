@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracify - Locate Any Phone, Anywhere</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stripe Integration -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="/js/pricing-config.js"></script>
+    <script src="/js/stripe-integration.js"></script>
+
+    <style>
+        /* RTL Support */
+        [dir="rtl"] .nav-links {
+            flex-direction: row-reverse;
+        }
+        [dir="rtl"] .phone-input-wrapper {
+            flex-direction: row-reverse;
+        }
+        [dir="rtl"] .country-flag {
+            margin-right: 0;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">
+                    <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="3"/>
+                        <circle cx="20" cy="20" r="8" fill="currentColor"/>
+                        <path d="M20 2V10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M20 30V38" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M2 20H10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M30 20H38" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <span>Tracify</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#faq" data-i18n="nav.faq">F.A.Q</a></li>
+                    <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+                    <li><a href="/contact" data-i18n="nav.contact">Contact Us</a></li>
+                    <li><a href="/cancel" data-i18n="nav.cancel">Cancel Subscription</a></li>
+                </ul>
+                <div class="nav-right">
+                    <a href="#login" class="btn btn-login" data-i18n="nav.login">Login</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-i18n="hero.title">Locate Any Phone, Anywhere</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Insert a phone number you want to locate</p>
+
+                <div class="phone-input-wrapper">
+                    <div class="country-code-wrapper">
+                        <span id="countryFlag" class="country-flag">🇺🇸</span>
+                        <input type="text" id="countryCode" class="country-code" list="countryCodes" value="+1" placeholder="+1">
+                    </div>
+                    <datalist id="countryCodes">
+                        <!-- North America -->
+                        <option value="+1">🇺🇸 USA / 🇨🇦 Canada</option>
+                        <!-- Europe -->
+                        <option value="+44">🇬🇧 United Kingdom</option>
+                        <option value="+49">🇩🇪 Germany</option>
+                        <option value="+33">🇫🇷 France</option>
+                        <option value="+39">🇮🇹 Italy</option>
+                        <option value="+34">🇪🇸 Spain</option>
+                        <option value="+31">🇳🇱 Netherlands</option>
+                        <option value="+32">🇧🇪 Belgium</option>
+                        <option value="+41">🇨🇭 Switzerland</option>
+                        <option value="+43">🇦🇹 Austria</option>
+                        <option value="+45">🇩🇰 Denmark</option>
+                        <option value="+46">🇸🇪 Sweden</option>
+                        <option value="+47">🇳🇴 Norway</option>
+                        <option value="+48">🇵🇱 Poland</option>
+                        <option value="+351">🇵🇹 Portugal</option>
+                        <option value="+353">🇮🇪 Ireland</option>
+                        <option value="+358">🇫🇮 Finland</option>
+                        <option value="+30">🇬🇷 Greece</option>
+                        <option value="+36">🇭🇺 Hungary</option>
+                        <option value="+40">🇷🇴 Romania</option>
+                        <option value="+420">🇨🇿 Czech Republic</option>
+                        <option value="+380">🇺🇦 Ukraine</option>
+                        <option value="+7">🇷🇺 Russia</option>
+                        <option value="+90">🇹🇷 Turkey</option>
+                        <!-- Asia -->
+                        <option value="+91">🇮🇳 India</option>
+                        <option value="+92">🇵🇰 Pakistan</option>
+                        <option value="+86">🇨🇳 China</option>
+                        <option value="+81">🇯🇵 Japan</option>
+                        <option value="+82">🇰🇷 South Korea</option>
+                        <option value="+65">🇸🇬 Singapore</option>
+                        <option value="+60">🇲🇾 Malaysia</option>
+                        <option value="+62">🇮🇩 Indonesia</option>
+                        <option value="+63">🇵🇭 Philippines</option>
+                        <option value="+66">🇹🇭 Thailand</option>
+                        <option value="+84">🇻🇳 Vietnam</option>
+                        <option value="+880">🇧🇩 Bangladesh</option>
+                        <option value="+94">🇱🇰 Sri Lanka</option>
+                        <option value="+852">🇭🇰 Hong Kong</option>
+                        <option value="+886">🇹🇼 Taiwan</option>
+                        <!-- Middle East -->
+                        <option value="+971">🇦🇪 UAE</option>
+                        <option value="+966">🇸🇦 Saudi Arabia</option>
+                        <option value="+974">🇶🇦 Qatar</option>
+                        <option value="+965">🇰🇼 Kuwait</option>
+                        <option value="+968">🇴🇲 Oman</option>
+                        <option value="+973">🇧🇭 Bahrain</option>
+                        <option value="+962">🇯🇴 Jordan</option>
+                        <option value="+961">🇱🇧 Lebanon</option>
+                        <option value="+972">🇮🇱 Israel</option>
+                        <option value="+98">🇮🇷 Iran</option>
+                        <option value="+964">🇮🇶 Iraq</option>
+                        <!-- Africa -->
+                        <option value="+20">🇪🇬 Egypt</option>
+                        <option value="+27">🇿🇦 South Africa</option>
+                        <option value="+234">🇳🇬 Nigeria</option>
+                        <option value="+254">🇰🇪 Kenya</option>
+                        <option value="+212">🇲🇦 Morocco</option>
+                        <option value="+213">🇩🇿 Algeria</option>
+                        <option value="+216">🇹🇳 Tunisia</option>
+                        <option value="+233">🇬🇭 Ghana</option>
+                        <option value="+251">🇪🇹 Ethiopia</option>
+                        <option value="+255">🇹🇿 Tanzania</option>
+                        <option value="+256">🇺🇬 Uganda</option>
+                        <!-- Oceania -->
+                        <option value="+61">🇦🇺 Australia</option>
+                        <option value="+64">🇳🇿 New Zealand</option>
+                        <!-- South America -->
+                        <option value="+55">🇧🇷 Brazil</option>
+                        <option value="+54">🇦🇷 Argentina</option>
+                        <option value="+56">🇨🇱 Chile</option>
+                        <option value="+57">🇨🇴 Colombia</option>
+                        <option value="+51">🇵🇪 Peru</option>
+                        <option value="+58">🇻🇪 Venezuela</option>
+                        <option value="+593">🇪🇨 Ecuador</option>
+                        <!-- Central America & Caribbean -->
+                        <option value="+52">🇲🇽 Mexico</option>
+                        <option value="+502">🇬🇹 Guatemala</option>
+                        <option value="+503">🇸🇻 El Salvador</option>
+                        <option value="+504">🇭🇳 Honduras</option>
+                        <option value="+506">🇨🇷 Costa Rica</option>
+                        <option value="+507">🇵🇦 Panama</option>
+                        <option value="+509">🇭🇹 Haiti</option>
+                        <option value="+1-809">🇩🇴 Dominican Republic</option>
+                        <option value="+1-876">🇯🇲 Jamaica</option>
+                        <!-- Other -->
+                        <option value="+977">🇳🇵 Nepal</option>
+                        <option value="+95">🇲🇲 Myanmar</option>
+                        <option value="+855">🇰🇭 Cambodia</option>
+                        <option value="+856">🇱🇦 Laos</option>
+                        <option value="+93">🇦🇫 Afghanistan</option>
+                        <option value="+994">🇦🇿 Azerbaijan</option>
+                        <option value="+995">🇬🇪 Georgia</option>
+                        <option value="+998">🇺🇿 Uzbekistan</option>
+                    </datalist>
+                    <input type="tel" id="phoneNumber" data-i18n-placeholder="hero.placeholder" placeholder="Enter phone number" class="phone-input">
+                    <button class="btn btn-locate" id="locateBtn">
+                        <svg viewBox="0 0 24 24" fill="none" class="locate-icon">
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span data-i18n="hero.locateBtn">Locate</span>
+                    </button>
+                </div>
+
+                <p class="disclaimer" data-i18n="hero.disclaimer">Request real-time phone locations via SMS. *Tracking only occurs with the recipient's explicit consent.</p>
+            </div>
+
+            <div class="hero-image">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="map-placeholder">
+                            <svg viewBox="0 0 200 200" class="map-svg">
+                                <rect fill="#e8f4e8" width="200" height="200"/>
+                                <path d="M0 50 Q50 30 100 50 T200 50" stroke="#c8e6c9" stroke-width="2" fill="none"/>
+                                <path d="M0 100 Q50 80 100 100 T200 100" stroke="#c8e6c9" stroke-width="2" fill="none"/>
+                                <path d="M0 150 Q50 130 100 150 T200 150" stroke="#c8e6c9" stroke-width="2" fill="none"/>
+                                <path d="M50 0 Q30 50 50 100 T50 200" stroke="#c8e6c9" stroke-width="2" fill="none"/>
+                                <path d="M100 0 Q80 50 100 100 T100 200" stroke="#c8e6c9" stroke-width="2" fill="none"/>
+                                <path d="M150 0 Q130 50 150 100 T150 200" stroke="#c8e6c9" stroke-width="2" fill="none"/>
+                            </svg>
+                            <div class="location-pin">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#4CAF50"/>
+                                    <circle cx="12" cy="9" r="2.5" fill="#fff"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <div class="location-card-header">
+                        <svg viewBox="0 0 24 24" fill="none" class="check-icon">
+                            <circle cx="12" cy="12" r="10" fill="#4CAF50"/>
+                            <path d="M8 12l3 3 5-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span data-i18n="hero.locationFound">Location Found!</span>
+                    </div>
+                    <p data-i18n="hero.locationExample">The location of the number <strong>123 678-9012</strong> is <strong>88.234502, 7.688104</strong>.</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="special-offer-badge">
+                <span data-i18n="pricing.specialOffer">Special offer!</span>
+            </div>
+            <h2><span data-i18n="pricing.title">Test out Tracify's capabilities for just</span> <span class="highlight">$1.25</span> <span data-i18n="pricing.forFullDay">for a full day!</span></h2>
+            <p class="pricing-subtitle" data-i18n="pricing.subtitle">Tracify offers its services through its easy-to-manage monthly subscription.</p>
+
+            <div class="pricing-cards">
+                <div class="pricing-card trial">
+                    <div class="card-badge" data-i18n="pricing.specialOffer">Special Offer</div>
+                    <h3 data-i18n="pricing.trialPeriod">Trial period</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">1.25</span>
+                    </div>
+                    <p class="duration" data-i18n="pricing.trial24h">24 Hour Trial</p>
+                    <p class="card-description"><span data-i18n="pricing.trialDesc">Tracify operates on a monthly subscription basis. Your initial payment grants unrestricted access to all platform services for 24 hours. After that period, the subscription fee of</span> <strong>$30</strong> <span data-i18n="pricing.perMonth">per month applies.</span></p>
+                    <button class="btn btn-primary" data-i18n="pricing.startTrial">Start Trial</button>
+                </div>
+
+                <div class="pricing-card subscription">
+                    <h3 data-i18n="pricing.subscription">Subscription</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">30</span>
+                    </div>
+                    <p class="duration" data-i18n="pricing.monthlyFee">Monthly fee</p>
+                    <p class="card-description" data-i18n="pricing.subscriptionDesc">Once the 24 hour trial period has ended, the offer will automatically renew to a monthly subscription. Remember that you can cancel the subscription whenever you want.</p>
+                    <button class="btn btn-secondary" data-i18n="pricing.subscribeNow">Subscribe Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 data-i18n="howItWorks.title">How Does It Work?</h2>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <rect x="16" y="4" width="32" height="56" rx="4" stroke="currentColor" stroke-width="3"/>
+                            <rect x="20" y="10" width="24" height="38" rx="2" fill="currentColor" opacity="0.1"/>
+                            <circle cx="32" cy="54" r="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M28 7h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="howItWorks.step1Title">Enter a Phone Number</h3>
+                    <p data-i18n="howItWorks.step1Desc">Enter the phone number you want to locate and customize the SMS message you want the recipient to receive.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <rect x="8" y="12" width="48" height="40" rx="4" stroke="currentColor" stroke-width="3"/>
+                            <path d="M8 20h48" stroke="currentColor" stroke-width="3"/>
+                            <circle cx="14" cy="16" r="2" fill="currentColor"/>
+                            <circle cx="22" cy="16" r="2" fill="currentColor"/>
+                            <circle cx="30" cy="16" r="2" fill="currentColor"/>
+                            <rect x="16" y="28" width="32" height="4" rx="2" fill="currentColor" opacity="0.3"/>
+                            <rect x="16" y="36" width="24" height="4" rx="2" fill="currentColor" opacity="0.3"/>
+                            <rect x="16" y="44" width="28" height="4" rx="2" fill="currentColor" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="howItWorks.step2Title">Send Tracking SMS</h3>
+                    <p data-i18n="howItWorks.step2Desc">Tracify will send the recipient your custom SMS that will request the phone's location.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="28" r="20" stroke="currentColor" stroke-width="3"/>
+                            <path d="M32 8v8M32 40v8M12 28h8M44 28h8" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="32" cy="28" r="6" fill="currentColor"/>
+                            <path d="M32 48L28 60h8l-4-12z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="howItWorks.step3Title">Receive Precise Location</h3>
+                    <p data-i18n="howItWorks.step3Desc">Get notified as soon as the recipient consents to share their location. View the exact position on the map in your dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 data-i18n="features.title">Why choose Tracify?</h2>
+            <p class="features-subtitle" data-i18n="features.subtitle">One click and zero effort to find anyone's location across the globe</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="3"/>
+                            <path d="M32 16v16l12 8" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M20 8l-4-4M44 8l4-4" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="features.feature1Title">Discreet Service</h3>
+                    <p data-i18n="features.feature1Desc">While the phone's owner will be informed of a location request, the requester's identity remains confidential. All geolocation requests are made with respect to privacy, and transmitted data is encrypted for security.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <rect x="8" y="20" width="48" height="36" rx="4" stroke="currentColor" stroke-width="3"/>
+                            <path d="M20 20V12a12 12 0 1124 0v8" stroke="currentColor" stroke-width="3"/>
+                            <circle cx="32" cy="40" r="6" stroke="currentColor" stroke-width="3"/>
+                            <path d="M32 44v6" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="features.feature2Title">No installation required</h3>
+                    <p data-i18n="features.feature2Desc">There's no software to install on your phone or the targeted device. Everything operates remotely! Just input the phone number you wish to track. As soon as the SMS recipient provides consent, you'll have immediate access.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="32" r="26" stroke="currentColor" stroke-width="3"/>
+                            <ellipse cx="32" cy="32" rx="26" ry="10" stroke="currentColor" stroke-width="2"/>
+                            <ellipse cx="32" cy="32" rx="10" ry="26" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="32" cy="32" r="4" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="features.feature3Title">Worldwide coverage</h3>
+                    <p data-i18n="features.feature3Desc">Tracify works with all networks worldwide. However, successful tracking requires the phone to be on, service availability, and the SMS recipient's explicit consent to share their location.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <rect x="6" y="8" width="24" height="48" rx="4" stroke="currentColor" stroke-width="3"/>
+                            <rect x="34" y="8" width="24" height="48" rx="4" stroke="currentColor" stroke-width="3"/>
+                            <circle cx="18" cy="50" r="2" fill="currentColor"/>
+                            <path d="M42 50h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M12 14h12M40 14h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M28 28l4-4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M32 24v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="features.feature4Title">iOS and Android compatible</h3>
+                    <p data-i18n="features.feature4Desc">Tracify seamlessly supports both iOS and Android mobile devices. As long as you have the phone number and the individual's explicit approval to track, you can locate them using our service.</p>
+                </div>
+            </div>
+
+            <div class="cta-button">
+                <button class="btn btn-large" data-i18n="features.locatePhone">Locate Phone</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 data-i18n="faq.title">Frequently Asked Questions</h2>
+            <p class="faq-subtitle" data-i18n="faq.subtitle">Here you can find all the answers to the questions we are most often asked about our mobile geolocation service, Tracify.</p>
+
+            <div class="faq-tabs">
+                <button class="faq-tab active" data-tab="about" data-i18n="faq.tabAbout">About Tracify</button>
+                <button class="faq-tab" data-tab="payments" data-i18n="faq.tabPayments">Payments & Billing</button>
+                <button class="faq-tab" data-tab="account" data-i18n="faq.tabAccount">My Account</button>
+            </div>
+
+            <div class="faq-content" id="faq-content">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q1">What is Tracify?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a1">Tracify is a mobile geolocation service that allows you to locate any phone number worldwide. Our service works by sending an SMS to the target phone requesting location sharing consent. Once consent is given, you receive the precise GPS coordinates.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q2">Is it even legal to use the Tracify phone number tracker?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a2">Yes, Tracify is completely legal because it requires explicit consent from the person being tracked. The recipient must actively agree to share their location by responding to the SMS request. We comply with all privacy regulations and data protection laws.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q3">What networks does Tracify support?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a3">Tracify supports all major mobile networks worldwide. Whether the target phone uses GSM, CDMA, LTE, or 5G networks, our service can send location requests to any valid phone number.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q4">Can I track the location of the phone number if I don't know its model?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a4">Absolutely! You don't need to know the phone model, manufacturer, or operating system. All you need is the phone number. Our system automatically handles all the technical details regardless of the device type.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q5">Does Tracify support both iOS and Android operated mobile devices?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a5">Yes, Tracify works with both iOS (iPhone) and Android devices. Our SMS-based location request system is compatible with any smartphone that can receive text messages and has location services available.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q6">How fast can Tracify find the location of a phone number?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a6">Once the SMS recipient consents to share their location, you'll receive the coordinates almost instantly. The total time depends on how quickly the recipient responds to the location request.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q7">How to track a phone number without physical access to the target device?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a7">Simply enter the phone number in our system, customize your message, and we'll send an SMS requesting location consent. Everything is done remotely - no physical access to the target device is ever required.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q8">Can I track someone by cell phone number?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a8">Yes, but only with their explicit consent. Tracify sends a location request via SMS, and tracking only occurs when the recipient agrees to share their location. This ensures privacy and legal compliance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q9">Can I track someone by cell phone number for free?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p><span data-i18n="faq.a9p1">We offer a 24-hour trial period for just</span> <strong>$1.25</strong><span data-i18n="faq.a9p2">, which gives you full access to all features. After the trial, you can continue with our monthly subscription at</span> <strong>$30</strong><span data-i18n="faq.a9p3">/month.</span></p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq.q10">Still Need Help?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a10">If you have any other questions or need assistance, please don't hesitate to contact our support team. We're here to help you 24/7. You can reach us through our Contact Us page or email us directly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="3"/>
+                            <circle cx="20" cy="20" r="8" fill="currentColor"/>
+                            <path d="M20 2V10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M20 30V38" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M2 20H10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M30 20H38" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span>Tracify</span>
+                    </a>
+                    <p data-i18n="footer.description">Tracify lets you get a mobile phone's geo location and works on all phone types, networks and countries.</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.legalInfo">Legal info</h4>
+                        <ul>
+                            <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+                            <li><a href="/contact" data-i18n="nav.contact">Contact Us</a></li>
+                            <li><a href="#faq" data-i18n="nav.faq">F.A.Q</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 data-i18n="footer.account">Account</h4>
+                        <ul>
+                            <li><a href="#login" data-i18n="nav.login">Login</a></li>
+                            <li><a href="#signup" data-i18n="footer.signup">Sign up</a></li>
+                            <li><a href="/cancel" data-i18n="nav.cancel">Cancel Subscription</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; Tracify - 2026</p>
+                <div class="footer-legal">
+                    <a href="#cookies" data-i18n="footer.cookies">Cookies Policy</a>
+                    <a href="#privacy" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="#terms" data-i18n="footer.terms">Terms and Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script>
+        // Country code to flag mapping
+        const countryFlags = {
+            '+1': '🇺🇸', '+44': '🇬🇧', '+49': '🇩🇪', '+33': '🇫🇷', '+39': '🇮🇹',
+            '+34': '🇪🇸', '+31': '🇳🇱', '+32': '🇧🇪', '+41': '🇨🇭', '+43': '🇦🇹',
+            '+45': '🇩🇰', '+46': '🇸🇪', '+47': '🇳🇴', '+48': '🇵🇱', '+351': '🇵🇹',
+            '+353': '🇮🇪', '+358': '🇫🇮', '+30': '🇬🇷', '+36': '🇭🇺', '+40': '🇷🇴',
+            '+420': '🇨🇿', '+380': '🇺🇦', '+7': '🇷🇺', '+90': '🇹🇷',
+            '+91': '🇮🇳', '+92': '🇵🇰', '+86': '🇨🇳', '+81': '🇯🇵', '+82': '🇰🇷',
+            '+65': '🇸🇬', '+60': '🇲🇾', '+62': '🇮🇩', '+63': '🇵🇭', '+66': '🇹🇭',
+            '+84': '🇻🇳', '+880': '🇧🇩', '+94': '🇱🇰', '+852': '🇭🇰', '+886': '🇹🇼',
+            '+971': '🇦🇪', '+966': '🇸🇦', '+974': '🇶🇦', '+965': '🇰🇼', '+968': '🇴🇲',
+            '+973': '🇧🇭', '+962': '🇯🇴', '+961': '🇱🇧', '+972': '🇮🇱', '+98': '🇮🇷', '+964': '🇮🇶',
+            '+20': '🇪🇬', '+27': '🇿🇦', '+234': '🇳🇬', '+254': '🇰🇪', '+212': '🇲🇦',
+            '+213': '🇩🇿', '+216': '🇹🇳', '+233': '🇬🇭', '+251': '🇪🇹', '+255': '🇹🇿', '+256': '🇺🇬',
+            '+61': '🇦🇺', '+64': '🇳🇿',
+            '+55': '🇧🇷', '+54': '🇦🇷', '+56': '🇨🇱', '+57': '🇨🇴', '+51': '🇵🇪', '+58': '🇻🇪', '+593': '🇪🇨',
+            '+52': '🇲🇽', '+502': '🇬🇹', '+503': '🇸🇻', '+504': '🇭🇳', '+506': '🇨🇷', '+507': '🇵🇦', '+509': '🇭🇹',
+            '+977': '🇳🇵', '+95': '🇲🇲', '+855': '🇰🇭', '+856': '🇱🇦', '+93': '🇦🇫', '+994': '🇦🇿', '+995': '🇬🇪', '+998': '🇺🇿'
+        };
+
+        // Update flag when country code changes
+        const countryCodeInput = document.getElementById('countryCode');
+        const countryFlagSpan = document.getElementById('countryFlag');
+
+        function updateFlag() {
+            const code = countryCodeInput.value.trim();
+            const flag = countryFlags[code] || '🌍';
+            countryFlagSpan.textContent = flag;
+        }
+
+        countryCodeInput.addEventListener('input', updateFlag);
+        countryCodeInput.addEventListener('change', updateFlag);
+    </script>
+    <style>
+        .country-code-wrapper {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 0 12px;
+            transition: border-color 0.3s;
+        }
+        .country-code-wrapper:focus-within {
+            border-color: #4CAF50;
+        }
+        .country-flag {
+            font-size: 1.5rem;
+            margin-right: 8px;
+        }
+        .country-code {
+            border: none !important;
+            outline: none !important;
+            background: transparent !important;
+            width: 70px;
+            font-size: 1rem;
+            padding: 12px 0 !important;
+        }
+    </style>
+</body>
+</html>

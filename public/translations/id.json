@@ -1,0 +1,284 @@
+{
+  "nav": {
+    "faq": "Pertanyaan Umum",
+    "pricing": "Harga",
+    "contact": "Hubungi Kami",
+    "cancelSubscription": "Batalkan Langganan",
+    "login": "Masuk",
+    "dashboard": "Dasbor",
+    "account": "Akun",
+    "logout": "Keluar"
+  },
+  "hero": {
+    "title": "Temukan Telepon Apa Pun, Di Mana Saja",
+    "subtitle": "Masukkan nomor telepon yang ingin Anda lacak",
+    "phonePlaceholder": "Masukkan nomor telepon",
+    "locateButton": "Lacak",
+    "disclaimer": "Minta lokasi telepon secara real-time melalui SMS. *Pelacakan hanya terjadi dengan persetujuan eksplisit penerima.",
+    "locationFound": "Lokasi Ditemukan!",
+    "locationExample": "Lokasi nomor <strong>123 678-9012</strong> adalah <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Penawaran spesial!",
+    "testOut": "Uji kemampuan Tracify hanya dengan",
+    "forFullDay": "untuk satu hari penuh!",
+    "subtitle": "Tracify menawarkan layanannya melalui langganan bulanan yang mudah dikelola.",
+    "trialPeriod": "Periode uji coba",
+    "24hourTrial": "Uji Coba 24 Jam",
+    "trialDescription1": "Tracify beroperasi berdasarkan langganan bulanan. Pembayaran awal Anda memberikan akses tak terbatas ke semua layanan platform selama 24 jam. Setelah periode itu, biaya langganan sebesar",
+    "trialDescription2": "per bulan berlaku.",
+    "startTrial": "Mulai Uji Coba",
+    "subscription": "Langganan",
+    "monthlyFee": "Biaya bulanan",
+    "subscriptionDescription": "Setelah periode uji coba 24 jam berakhir, penawaran akan secara otomatis diperpanjang menjadi langganan bulanan. Ingat bahwa Anda dapat membatalkan langganan kapan saja.",
+    "subscribeNow": "Berlangganan Sekarang"
+  },
+  "howItWorks": {
+    "title": "Bagaimana Cara Kerjanya?",
+    "step1Title": "Masukkan Nomor Telepon",
+    "step1Description": "Masukkan nomor telepon yang ingin Anda lacak dan sesuaikan pesan SMS yang ingin diterima oleh penerima.",
+    "step2Title": "Kirim SMS Pelacakan",
+    "step2Description": "Tracify akan mengirim SMS khusus Anda kepada penerima yang akan meminta lokasi telepon.",
+    "step3Title": "Terima Lokasi Tepat",
+    "step3Description": "Dapatkan notifikasi segera setelah penerima menyetujui untuk membagikan lokasi mereka. Lihat posisi yang tepat di peta di dasbor Anda."
+  },
+  "features": {
+    "title": "Mengapa memilih Tracify?",
+    "subtitle": "Satu klik dan nol usaha untuk menemukan lokasi siapa pun di seluruh dunia",
+    "feature1Title": "Layanan Diskrit",
+    "feature1Description": "Meskipun pemilik telepon akan diberitahu tentang permintaan lokasi, identitas pemohon tetap rahasia. Semua permintaan geolokasi dibuat dengan menghormati privasi, dan data yang dikirim dienkripsi untuk keamanan.",
+    "feature2Title": "Tidak perlu instalasi",
+    "feature2Description": "Tidak ada perangkat lunak untuk diinstal di ponsel Anda atau perangkat yang ditargetkan. Semuanya beroperasi dari jarak jauh! Cukup masukkan nomor telepon yang ingin Anda lacak. Segera setelah penerima SMS memberikan persetujuan, Anda akan memiliki akses langsung.",
+    "feature3Title": "Cakupan di seluruh dunia",
+    "feature3Description": "Tracify bekerja dengan semua jaringan di seluruh dunia. Namun, pelacakan yang berhasil memerlukan telepon menyala, ketersediaan layanan, dan persetujuan eksplisit penerima SMS untuk membagikan lokasi mereka.",
+    "feature4Title": "Kompatibel dengan iOS dan Android",
+    "feature4Description": "Tracify mendukung dengan mulus perangkat seluler iOS dan Android. Selama Anda memiliki nomor telepon dan persetujuan eksplisit individu untuk melacak, Anda dapat menemukan mereka menggunakan layanan kami.",
+    "locatePhone": "Lacak Telepon"
+  },
+  "faq": {
+    "title": "Pertanyaan yang Sering Diajukan",
+    "subtitle": "Di sini Anda dapat menemukan semua jawaban atas pertanyaan yang paling sering kami tanyakan tentang layanan geolokasi seluler kami, Tracify.",
+    "tabAbout": "Tentang Tracify",
+    "tabPayments": "Pembayaran & Penagihan",
+    "tabAccount": "Akun Saya",
+    "q1": "Apa itu Tracify?",
+    "a1": "Tracify adalah layanan geolokasi seluler yang memungkinkan Anda menemukan nomor telepon mana pun di seluruh dunia. Layanan kami bekerja dengan mengirim SMS ke telepon target yang meminta persetujuan berbagi lokasi. Setelah persetujuan diberikan, Anda menerima koordinat GPS yang tepat.",
+    "q2": "Apakah legal menggunakan pelacak nomor telepon Tracify?",
+    "a2": "Ya, Tracify sepenuhnya legal karena memerlukan persetujuan eksplisit dari orang yang dilacak. Penerima harus secara aktif menyetujui untuk membagikan lokasi mereka dengan menanggapi permintaan SMS. Kami mematuhi semua peraturan privasi dan undang-undang perlindungan data.",
+    "q3": "Jaringan apa yang didukung Tracify?",
+    "a3": "Tracify mendukung semua jaringan seluler utama di seluruh dunia. Apakah telepon target menggunakan jaringan GSM, CDMA, LTE, atau 5G, layanan kami dapat mengirim permintaan lokasi ke nomor telepon yang valid.",
+    "q4": "Bisakah saya melacak lokasi nomor telepon jika saya tidak tahu modelnya?",
+    "a4": "Tentu saja! Anda tidak perlu mengetahui model telepon, pabrikan, atau sistem operasi. Yang Anda butuhkan hanyalah nomor telepon. Sistem kami secara otomatis menangani semua detail teknis terlepas dari jenis perangkat.",
+    "q5": "Apakah Tracify mendukung perangkat seluler yang dioperasikan iOS dan Android?",
+    "a5": "Ya, Tracify bekerja dengan perangkat iOS (iPhone) dan Android. Sistem permintaan lokasi berbasis SMS kami kompatibel dengan smartphone apa pun yang dapat menerima pesan teks dan memiliki layanan lokasi yang tersedia.",
+    "q6": "Seberapa cepat Tracify dapat menemukan lokasi nomor telepon?",
+    "a6": "Setelah penerima SMS menyetujui untuk membagikan lokasi mereka, Anda akan menerima koordinat hampir seketika. Waktu total tergantung pada seberapa cepat penerima merespons permintaan lokasi.",
+    "q7": "Bagaimana cara melacak nomor telepon tanpa akses fisik ke perangkat target?",
+    "a7": "Cukup masukkan nomor telepon di sistem kami, sesuaikan pesan Anda, dan kami akan mengirim SMS yang meminta persetujuan lokasi. Semuanya dilakukan dari jarak jauh - akses fisik ke perangkat target tidak pernah diperlukan.",
+    "q8": "Bisakah saya melacak seseorang dengan nomor ponsel?",
+    "a8": "Ya, tetapi hanya dengan persetujuan eksplisit mereka. Tracify mengirim permintaan lokasi melalui SMS, dan pelacakan hanya terjadi ketika penerima setuju untuk membagikan lokasi mereka. Ini memastikan privasi dan kepatuhan hukum.",
+    "q9": "Bisakah saya melacak seseorang dengan nomor ponsel secara gratis?",
+    "a9part1": "Kami menawarkan periode uji coba 24 jam hanya dengan",
+    "a9part2": ", yang memberi Anda akses penuh ke semua fitur. Setelah uji coba, Anda dapat melanjutkan dengan langganan bulanan kami sebesar",
+    "a9part3": "/bulan.",
+    "q10": "Masih Butuh Bantuan?",
+    "a10": "Jika Anda memiliki pertanyaan lain atau memerlukan bantuan, jangan ragu untuk menghubungi tim dukungan kami. Kami di sini untuk membantu Anda 24/7. Anda dapat menghubungi kami melalui halaman Hubungi Kami atau mengirim email kepada kami secara langsung."
+  },
+  "footer": {
+    "description": "Tracify memungkinkan Anda mendapatkan lokasi geografis ponsel dan berfungsi pada semua jenis ponsel, jaringan, dan negara.",
+    "legalInfo": "Info hukum",
+    "account": "Akun",
+    "signup": "Daftar",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Kebijakan Cookie",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat dan Ketentuan"
+  },
+  "payment": {
+    "completeSubscription": "Selesaikan Langganan Anda",
+    "subtitle": "Mulai melacak lokasi telepon dengan persetujuan",
+    "title": "Pembayaran",
+    "paymentDetails": "Detail Pembayaran",
+    "24hourTrial": "Uji Coba 24 Jam",
+    "bestValue": "Nilai Terbaik",
+    "per24hours": "/ 24 jam",
+    "fullAccess": "Akses penuh ke semua fitur platform selama 24 jam.",
+    "whatsIncluded": "Yang termasuk:",
+    "unlimitedRequests": "✓ Permintaan lokasi tak terbatas",
+    "realtimeTracking": "✓ Pelacakan real-time",
+    "smsNotifications": "✓ Notifikasi SMS",
+    "247support": "✓ Dukungan 24/7",
+    "cardDetails": "Detail Kartu",
+    "cardNumber": "Nomor Kartu",
+    "expiryDate": "Tanggal Kedaluwarsa",
+    "cvv": "CVV",
+    "nameOnCard": "Nama di Kartu",
+    "plan": "Paket",
+    "total": "Total",
+    "pay": "Bayar",
+    "securePayment": "Pembayaran aman dengan enkripsi SSL",
+    "trialThen": "Uji coba 24 jam, lalu",
+    "monthAfterTrial": "/bulan setelah uji coba"
+  },
+  "dashboard": {
+    "title": "Lacak Lokasi Telepon",
+    "subtitle": "Kirim permintaan lokasi dengan pelacakan berbasis persetujuan",
+    "nav": {
+      "dashboard": "Dasbor",
+      "account": "Akun",
+      "contact": "Kontak",
+      "settings": "Pengaturan",
+      "logout": "Keluar"
+    },
+    "sendRequest": {
+      "title": "Kirim Permintaan Lokasi",
+      "phoneNumber": "Nomor Telepon",
+      "phonePlaceholder": "3001234567",
+      "message": "Pesan",
+      "send": "Kirim",
+      "previewMessage": "Pratinjau Pesan",
+      "rateLimit": "Karena alasan keamanan dan privasi, Anda hanya dapat mengirim pesan sekali setiap 3 jam."
+    },
+    "recentRequests": {
+      "title": "Permintaan Terbaru",
+      "noRequests": "Belum ada permintaan pelacakan"
+    },
+    "trackingActivity": {
+      "title": "Aktivitas Pelacakan Terbaru"
+    },
+    "disclaimer": {
+      "title": "Penafian Penting",
+      "point1": "Tracify memerlukan persetujuan eksplisit dari pemilik telepon sebelum membagikan lokasi mereka",
+      "point2": "Layanan ini ditujukan hanya untuk tujuan yang sah (menemukan perangkat yang hilang, keamanan keluarga)",
+      "point3": "Pelacakan atau penguntitan yang tidak sah adalah ilegal dan sangat dilarang",
+      "point4": "Akurasi lokasi tergantung pada pengaturan perangkat dan kondisi jaringan",
+      "point5": "Kami tidak bertanggung jawab atas penyalahgunaan layanan ini",
+      "needHelp": "Butuh bantuan?",
+      "contactSupport": "Hubungi tim dukungan kami"
+    },
+    "subscription": {
+      "currentPlan": "Paket Saat Ini",
+      "loading": "Memuat...",
+      "manage": "Kelola Langganan"
+    },
+    "messageModal": {
+      "title": "Pengaturan Pesan",
+      "description": "Kami telah memilih pesan dengan tingkat berbagi lokasi tertinggi. Pilih satu dari daftar di bawah ini.",
+      "language": "Bahasa Pesan",
+      "selectTemplate": "Pilih template pesan",
+      "template1": "Saya pemilik telepon ini, dan saat ini hilang. Jika Anda menemukannya, beri tahu saya.",
+      "template2": "Jika telepon ini bukan milik Anda, bisakah Anda beri tahu saya?",
+      "template3": "Tidak terburu-buru, tapi periksa ini saat Anda ada waktu:",
+      "apply": "Terapkan"
+    },
+    "trustpilot": {
+      "title": "Bantu Kami Meningkatkan!",
+      "subtitle": "Bagikan pengalaman Anda sebelum menggunakan Tracify",
+      "message": "Kami menghargai umpan balik Anda! Silakan luangkan waktu sejenak untuk menilai pengalaman Anda di Trustpilot.",
+      "helpText": "Ulasan Anda membantu kami mempertahankan layanan berkualitas",
+      "leaveReview": "Tinggalkan Ulasan di Trustpilot",
+      "skip": "Lewati untuk Sekarang"
+    },
+    "locationModal": {
+      "title": "Lokasi Diterima",
+      "coordinates": "Koordinat",
+      "openMap": "Buka di Google Maps",
+      "close": "Tutup"
+    }
+  },
+  "account": {
+    "title": "Pengaturan Akun",
+    "subtitle": "Kelola akun dan langganan Anda",
+    "nav": {
+      "dashboard": "Dasbor",
+      "account": "Akun",
+      "contact": "Kontak",
+      "logout": "Keluar"
+    },
+    "accountInfo": {
+      "title": "Informasi Akun",
+      "email": "Alamat Email",
+      "memberSince": "Anggota Sejak",
+      "loading": "Memuat..."
+    },
+    "subscription": {
+      "title": "Langganan",
+      "plan": "Paket",
+      "nextPayment": "Pembayaran Berikutnya",
+      "status": "Status",
+      "active": "Aktif",
+      "loading": "Memuat...",
+      "cancelButton": "Batalkan Langganan"
+    },
+    "paymentHistory": {
+      "title": "Riwayat Pembayaran",
+      "noHistory": "Tidak ada riwayat pembayaran yang tersedia"
+    },
+    "cancelModal": {
+      "title": "Apakah Anda Yakin?",
+      "description": "Membatalkan langganan Anda berarti:",
+      "point1": "Anda akan kehilangan akses ke fitur premium",
+      "point2": "Langganan Anda akan berakhir segera",
+      "point3": "Anda tidak akan dikenai biaya lagi",
+      "confirm": "Batalkan Langganan",
+      "goBack": "Kembali"
+    },
+    "successModal": {
+      "title": "Langganan Dibatalkan",
+      "message": "Kami telah mengonfirmasi pembatalan Anda, dan Anda tidak akan menerima tagihan lebih lanjut dari kami. Email konfirmasi juga telah dikirim ke kotak masuk Anda.",
+      "close": "Tutup"
+    }
+  },
+  "common": {
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan",
+    "tryAgain": "Silakan coba lagi",
+    "required": "Wajib",
+    "optional": "Opsional"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Our support team is here 24/7 to help you right away.",
+    "cardTitle": "We're Here to Help",
+    "cardSubtitle": "Our support team is here 24/7 to help you right away.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "subject": "Subject",
+      "selectSubject": "Select a subject",
+      "technical": "Technical Support",
+      "billing": "Billing Question",
+      "feature": "Feature Request",
+      "feedback": "General Feedback",
+      "other": "Other",
+      "message": "Message",
+      "messagePlaceholder": "Tell us how we can help...",
+      "notRobot": "I'm not a robot",
+      "send": "Send Message"
+    },
+    "footer": {
+      "home": "Home"
+    }
+  },
+  "cancel": {
+    "title": "Cancel Your Subscription",
+    "subtitle": "Enter your email to cancel your subscription. This will turn off auto-renewal and prevent any future charges.",
+    "form": {
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "hello@email.com",
+      "submitBtn": "Cancel Subscription",
+      "helpText": "If you don't remember which email you used, check your inbox for a welcome email from Tracify. If you still can't find it,",
+      "contactSupport": "contact support"
+    },
+    "whyCharged": {
+      "title": "Why was I charged?"
+    },
+    "needHelp": {
+      "title": "Need help?",
+      "description": "If you're experiencing an issue or have any questions, our support team is here for you 24/7. Just reach out and we'll get back to you quickly!",
+      "contactBtn": "Contact Support"
+    }
+  }
+}

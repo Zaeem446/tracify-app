@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "Često postavljena pitanja",
+    "pricing": "Cijene",
+    "contact": "Kontaktirajte nas",
+    "cancel": "Otkaži pretplatu",
+    "login": "Prijava"
+  },
+  "hero": {
+    "title": "Locirajte bilo koji telefon, bilo gdje",
+    "subtitle": "Unesite broj telefona koji želite locirati",
+    "placeholder": "Unesite broj telefona",
+    "locateBtn": "Lociraj",
+    "disclaimer": "Zatražite lokacije telefona u realnom vremenu putem SMS-a. *Praćenje se dešava samo uz izričitu saglasnost primaoca.",
+    "locationFound": "Lokacija pronađena!",
+    "locationExample": "Lokacija broja <strong>123 678-9012</strong> je <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Specijalna ponuda!",
+    "title": "Isprobajte mogućnosti Tracify-a za samo",
+    "forFullDay": "za cijeli dan!",
+    "subtitle": "Tracify nudi svoje usluge putem jednostavne mjesečne pretplate.",
+    "trialPeriod": "Probni period",
+    "trial24h": "24-satni probni period",
+    "trialDesc": "Tracify funkcioniše na bazi mjesečne pretplate. Vaša početna uplata vam daje neograničen pristup svim uslugama platforme tokom 24 sata. Nakon tog perioda, primjenjuje se pretplatnička naknada od",
+    "perMonth": "mjesečno.",
+    "startTrial": "Započni probni period",
+    "subscription": "Pretplata",
+    "monthlyFee": "Mjesečna naknada",
+    "subscriptionDesc": "Nakon isteka 24-satnog probnog perioda, ponuda će se automatski obnoviti u mjesečnu pretplatu. Zapamtite da pretplatu možete otkazati kada god želite.",
+    "subscribeNow": "Pretplati se sada"
+  },
+  "howItWorks": {
+    "title": "Kako funkcioniše?",
+    "step1Title": "Unesite broj telefona",
+    "step1Desc": "Unesite broj telefona koji želite locirati i prilagodite SMS poruku koju želite da primalac primi.",
+    "step2Title": "Pošaljite SMS za praćenje",
+    "step2Desc": "Tracify će primaocu poslati vašu prilagođenu SMS poruku koja će zatražiti lokaciju telefona.",
+    "step3Title": "Primite preciznu lokaciju",
+    "step3Desc": "Budite obaviješteni čim primalac pristane podijeliti svoju lokaciju. Pogledajte tačnu poziciju na mapi na vašoj kontrolnoj ploči."
+  },
+  "features": {
+    "title": "Zašto odabrati Tracify?",
+    "subtitle": "Jedan klik i nula napora da pronađete lokaciju bilo koga u svijetu",
+    "feature1Title": "Diskretna usluga",
+    "feature1Desc": "Iako će vlasnik telefona biti obaviješten o zahtjevu za lokaciju, identitet podnosioca zahtjeva ostaje povjerljiv. Svi zahtjevi za geolokaciju se podnose uz poštovanje privatnosti, a preneseni podaci su šifrirani radi sigurnosti.",
+    "feature2Title": "Nije potrebna instalacija",
+    "feature2Desc": "Nema softvera za instalaciju na vaš telefon ili ciljni uređaj. Sve funkcioniše na daljinu! Samo unesite broj telefona koji želite pratiti. Čim primalac SMS-a da saglasnost, imat ćete trenutni pristup.",
+    "feature3Title": "Svjetska pokrivenost",
+    "feature3Desc": "Tracify radi sa svim mrežama širom svijeta. Međutim, uspješno praćenje zahtijeva da telefon bude uključen, dostupnost usluge i izričitu saglasnost primaoca SMS-a za dijeljenje svoje lokacije.",
+    "feature4Title": "Kompatibilno sa iOS i Android",
+    "feature4Desc": "Tracify besprijekorno podržava iOS i Android mobilne uređaje. Sve dok imate broj telefona i izričito odobrenje osobe za praćenje, možete je locirati koristeći našu uslugu.",
+    "locatePhone": "Lociraj telefon"
+  },
+  "faq": {
+    "title": "Često postavljena pitanja",
+    "subtitle": "Ovdje možete pronaći sve odgovore na pitanja koja nam najčešće postavljaju o našoj usluzi mobilne geolokacije, Tracify.",
+    "tabAbout": "O Tracify-u",
+    "tabPayments": "Plaćanja i fakturisanje",
+    "tabAccount": "Moj račun",
+    "q1": "Šta je Tracify?",
+    "a1": "Tracify je usluga mobilne geolokacije koja vam omogućava da locirate bilo koji broj telefona širom svijeta. Naša usluga funkcioniše slanjem SMS-a na ciljni telefon sa zahtjevom za saglasnost za dijeljenje lokacije. Kada se saglasnost dobije, primate precizne GPS koordinate.",
+    "q2": "Da li je legalno koristiti Tracify praćenje broja telefona?",
+    "a2": "Da, Tracify je potpuno legalan jer zahtijeva izričitu saglasnost osobe koja se prati. Primalac mora aktivno pristati na dijeljenje svoje lokacije odgovarajući na SMS zahtjev. Pridržavamo se svih propisa o privatnosti i zakona o zaštiti podataka.",
+    "q3": "Koje mreže Tracify podržava?",
+    "a3": "Tracify podržava sve glavne mobilne mreže širom svijeta. Bez obzira da li ciljni telefon koristi GSM, CDMA, LTE ili 5G mreže, naša usluga može slati zahtjeve za lokaciju na bilo koji važeći broj telefona.",
+    "q4": "Mogu li pratiti lokaciju broja telefona ako ne znam njegov model?",
+    "a4": "Apsolutno! Ne morate znati model telefona, proizvođača ili operativni sistem. Sve što trebate je broj telefona. Naš sistem automatski obrađuje sve tehničke detalje bez obzira na tip uređaja.",
+    "q5": "Da li Tracify podržava iOS i Android mobilne uređaje?",
+    "a5": "Da, Tracify radi i sa iOS (iPhone) i Android uređajima. Naš sistem zahtjeva za lokaciju baziran na SMS-u je kompatibilan sa bilo kojim pametnim telefonom koji može primati tekstualne poruke i ima dostupne lokacijske usluge.",
+    "q6": "Koliko brzo Tracify može pronaći lokaciju broja telefona?",
+    "a6": "Čim primalac SMS-a pristane podijeliti svoju lokaciju, primit ćete koordinate gotovo trenutno. Ukupno vrijeme zavisi od toga koliko brzo primalac odgovori na zahtjev za lokaciju.",
+    "q7": "Kako pratiti broj telefona bez fizičkog pristupa ciljnom uređaju?",
+    "a7": "Jednostavno unesite broj telefona u naš sistem, prilagodite svoju poruku, i mi ćemo poslati SMS sa zahtjevom za saglasnost lokacije. Sve se radi na daljinu - nikada nije potreban fizički pristup ciljnom uređaju.",
+    "q8": "Mogu li pratiti nekoga po broju mobilnog telefona?",
+    "a8": "Da, ali samo uz njihovu izričitu saglasnost. Tracify šalje zahtjev za lokaciju putem SMS-a, i praćenje se dešava samo kada primalac pristane podijeliti svoju lokaciju. Ovo osigurava privatnost i pravnu usklađenost.",
+    "q9": "Mogu li besplatno pratiti nekoga po broju mobilnog telefona?",
+    "a9p1": "Nudimo 24-satni probni period za samo",
+    "a9p2": ", koji vam daje pun pristup svim funkcijama. Nakon probnog perioda, možete nastaviti sa našom mjesečnom pretplatom za",
+    "a9p3": "/mjesečno.",
+    "q10": "Još uvijek trebate pomoć?",
+    "a10": "Ako imate bilo kakvih drugih pitanja ili vam je potrebna pomoć, ne ustručavajte se kontaktirati naš tim za podršku. Tu smo da vam pomognemo 24/7. Možete nas kontaktirati putem naše stranice za kontakt ili nam direktno poslati email."
+  },
+  "footer": {
+    "description": "Tracify vam omogućava da dobijete geolokaciju mobilnog telefona i radi sa svim vrstama telefona, mreža i zemalja.",
+    "legalInfo": "Pravne informacije",
+    "account": "Račun",
+    "signup": "Registracija",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Politika kolačića",
+    "privacy": "Politika privatnosti",
+    "terms": "Uvjeti i odredbe"
+  },
+  "contact": {
+    "title": "Kontaktirajte nas",
+    "subtitle": "Naš tim za podršku je tu 24/7 da vam odmah pomogne.",
+    "cardTitle": "Tu smo da pomognemo",
+    "cardSubtitle": "Naš tim za podršku je tu 24/7 da vam odmah pomogne.",
+    "form": {
+      "name": "Ime",
+      "namePlaceholder": "Vaše ime",
+      "email": "Email",
+      "emailPlaceholder": "vas.email@primjer.com",
+      "subject": "Predmet",
+      "selectSubject": "Odaberite predmet",
+      "technical": "Tehnička podrška",
+      "billing": "Pitanje o fakturisanju",
+      "feature": "Zahtjev za funkciju",
+      "feedback": "Opće povratne informacije",
+      "other": "Ostalo",
+      "message": "Poruka",
+      "messagePlaceholder": "Recite nam kako vam možemo pomoći...",
+      "notRobot": "Nisam robot",
+      "send": "Pošalji poruku"
+    },
+    "footer": {
+      "home": "Početna"
+    }
+  },
+  "cancel": {
+    "title": "Otkaži svoju pretplatu",
+    "subtitle": "Unesite svoj email da otkažete pretplatu. Ovo će onemogućiti automatsko obnavljanje i spriječiti buduće naplate.",
+    "form": {
+      "emailLabel": "Email adresa",
+      "emailPlaceholder": "zdravo@email.com",
+      "submitBtn": "Otkaži pretplatu",
+      "helpText": "Ako se ne sjećate koji email ste koristili, provjerite svoj inbox za email dobrodošlice od Tracify-a. Ako ga i dalje ne možete pronaći,",
+      "contactSupport": "kontaktirajte podršku"
+    },
+    "whyCharged": {
+      "title": "Zašto mi je naplaćeno?"
+    },
+    "needHelp": {
+      "title": "Trebate pomoć?",
+      "description": "Ako imate problem ili pitanje, naš tim za podršku je tu za vas 24/7. Samo nas kontaktirajte i brzo ćemo odgovoriti!",
+      "contactBtn": "Kontaktiraj podršku"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Kontrolna ploča",
+      "account": "Račun",
+      "contact": "Kontakt",
+      "settings": "Postavke",
+      "logout": "Odjava"
+    },
+    "title": "Prati lokaciju telefona",
+    "subtitle": "Pošaljite zahtjev za lokaciju sa praćenjem baziranim na saglasnosti",
+    "sendRequest": {
+      "title": "Pošalji zahtjev za lokaciju",
+      "phoneNumber": "Broj telefona",
+      "phonePlaceholder": "3001234567",
+      "message": "Poruka",
+      "send": "Pošalji",
+      "previewMessage": "Pregled poruke",
+      "rateLimit": "Iz sigurnosnih i privatnih razloga, možete slati samo jednu poruku svaka 3 sata."
+    },
+    "recentRequests": {
+      "title": "Nedavni zahtjevi",
+      "noRequests": "Još nema zahtjeva za praćenje"
+    },
+    "trackingActivity": {
+      "title": "Nedavna aktivnost praćenja"
+    },
+    "disclaimer": {
+      "title": "Važna napomena",
+      "point1": "Tracify zahtijeva izričitu saglasnost vlasnika telefona prije dijeljenja njihove lokacije",
+      "point2": "Ova usluga je namijenjena samo za legitimne svrhe (pronalaženje izgubljenih uređaja, porodična sigurnost)",
+      "point3": "Neovlašteno praćenje ili uhođenje je nezakonito i strogo zabranjeno",
+      "point4": "Tačnost lokacije zavisi od postavki uređaja i mrežnih uslova",
+      "point5": "Nismo odgovorni za zloupotrebu ove usluge",
+      "needHelp": "Trebate pomoć?",
+      "contactSupport": "Kontaktirajte naš tim za podršku"
+    },
+    "subscription": {
+      "currentPlan": "Trenutni plan",
+      "loading": "Učitavanje...",
+      "manage": "Upravljaj pretplatom"
+    },
+    "messageModal": {
+      "title": "Postavke poruke",
+      "description": "Odabrali smo poruke sa najvišom stopom dijeljenja lokacije. Odaberite jednu iz liste ispod.",
+      "language": "Jezik poruke",
+      "selectTemplate": "Odaberite predložak poruke",
+      "template1": "Ja sam vlasnik ovog telefona i trenutno je izgubljen. Ako ste ga pronašli, molim vas javite mi.",
+      "template2": "Ako ovaj telefon nije vaš, možete li me obavijestiti?",
+      "template3": "Nema žurbe, ali pogledajte ovo kad budete imali trenutak:",
+      "apply": "Primijeni"
+    },
+    "trustpilot": {
+      "title": "Pomozite nam da se poboljšamo!",
+      "subtitle": "Podijelite svoje iskustvo prije korištenja Tracify-a",
+      "message": "Cijenimo vaše povratne informacije! Molimo vas da odvojite trenutak da ocijenite svoje iskustvo na Trustpilotu.",
+      "helpText": "Vaša recenzija nam pomaže da održimo kvalitetnu uslugu",
+      "leaveReview": "Ostavite recenziju na Trustpilotu",
+      "skip": "Preskoči za sada"
+    },
+    "locationModal": {
+      "title": "Lokacija primljena",
+      "coordinates": "Koordinate",
+      "openMap": "Otvori u Google Mapama",
+      "close": "Zatvori"
+    }
+  },
+  "payment": {
+    "completeSubscription": "Dovršite svoju pretplatu",
+    "subtitle": "Počnite pratiti lokacije telefona uz saglasnost",
+    "title": "Plaćanje",
+    "trialThen": "24h probni period, zatim",
+    "monthAfterTrial": "/mjesečno nakon probnog perioda",
+    "whatsIncluded": "Šta je uključeno:",
+    "unlimitedRequests": "✓ Neograničeni zahtjevi za lokaciju",
+    "realtimeTracking": "✓ Praćenje u realnom vremenu",
+    "smsNotifications": "✓ SMS obavještenja",
+    "247support": "✓ Podrška 24/7",
+    "paymentDetails": "Detalji plaćanja",
+    "plan": "Plan",
+    "24hourTrial": "24-satni probni period",
+    "total": "Ukupno",
+    "pay": "Plati",
+    "securePayment": "Sigurno plaćanje sa SSL enkripcijom"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "Kontrolna ploča",
+      "account": "Račun",
+      "contact": "Kontakt",
+      "logout": "Odjava"
+    },
+    "title": "Postavke računa",
+    "subtitle": "Upravljajte svojim računom i pretplatom",
+    "accountInfo": {
+      "title": "Informacije o računu",
+      "email": "Email adresa",
+      "memberSince": "Član od",
+      "loading": "Učitavanje..."
+    },
+    "subscription": {
+      "title": "Pretplata",
+      "plan": "Plan",
+      "nextPayment": "Sljedeće plaćanje",
+      "status": "Status",
+      "active": "Aktivno",
+      "loading": "Učitavanje...",
+      "cancelButton": "Otkaži pretplatu"
+    },
+    "paymentHistory": {
+      "title": "Historija plaćanja",
+      "noHistory": "Nema dostupne historije plaćanja"
+    },
+    "cancelModal": {
+      "title": "Jeste li sigurni?",
+      "description": "Otkazivanje pretplate znači:",
+      "point1": "Izgubit ćete pristup premium funkcijama",
+      "point2": "Vaša pretplata će odmah završiti",
+      "point3": "Više vam neće biti naplaćeno",
+      "confirm": "Otkaži pretplatu",
+      "goBack": "Vrati se"
+    },
+    "successModal": {
+      "title": "Pretplata otkazana",
+      "message": "Potvrdili smo vaše otkazivanje i više vam nećemo naplaćivati. Email potvrde je također poslan u vaš inbox.",
+      "close": "Zatvori"
+    }
+  }
+}

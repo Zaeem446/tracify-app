@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "Imibuzo Evamile",
+    "pricing": "Amanani",
+    "contact": "Sithinte",
+    "cancel": "Khansela Ukubhaliselwa",
+    "login": "Ngena"
+  },
+  "hero": {
+    "title": "Thola Noma Yiluphi Ucingo, Noma Kuphi",
+    "subtitle": "Faka inombolo yocingo ofuna ukuyithola",
+    "placeholder": "Faka inombolo yocingo",
+    "locateBtn": "Thola",
+    "disclaimer": "Cela izindawo zocingo ngesikhathi sangempela nge-SMS. *Ukulandelela kwenzeka kuphela ngevumo elicacile lomamukeli.",
+    "locationFound": "Indawo Itholakele!",
+    "locationExample": "Indawo yenombolo <strong>123 678-9012</strong> ngu <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Isipesheli esikhethekile!",
+    "title": "Hlola amandla ka-Tracify nge",
+    "forFullDay": "usuku olugcwele!",
+    "subtitle": "I-Tracify inikeza amasevisi ayo ngokubhaliselwa kwanyanga nganyanga okulula ukuphatha.",
+    "trialPeriod": "Isikhathi sokuhlola",
+    "trial24h": "Ukuhlola Kwamahora angu-24",
+    "trialDesc": "I-Tracify isebenza ngokusekelwe kokubhaliselwa kwenyanga. Inkokhelo yakho yokuqala ikunika ukufinyelela okungenammingcele kuwo wonke amasevisi wenkundla amahora angu-24. Ngemva kwaleso sikhathi, imali yokubhaliselwa",
+    "perMonth": "ngenyanga iyasebenza.",
+    "startTrial": "Qala Ukuhlola",
+    "subscription": "Ukubhaliselwa",
+    "monthlyFee": "Imali Yenyanga",
+    "subscriptionDesc": "Uma isikhathi sokuhlola samahora angu-24 sesiphelile, isipesheli sizovuselelwa ngokuzenzakalelayo sibe ukubhaliselwa kwenyanga. Khumbula ukuthi ungakhansela ukubhaliselwa noma nini.",
+    "subscribeNow": "Bhalisa Manje"
+  },
+  "howItWorks": {
+    "title": "Kusebenza Kanjani?",
+    "step1Title": "Faka Inombolo Yocingo",
+    "step1Desc": "Faka inombolo yocingo ofuna ukuyithola futhi wenze umlayezo we-SMS ofuna umamukeli awuthole.",
+    "step2Title": "Thumela i-SMS Yokulandelela",
+    "step2Desc": "I-Tracify izothumela umamukeli umlayezo wakho we-SMS oyobe ucela indawo yocingo.",
+    "step3Title": "Thola Indawo Enembile",
+    "step3Desc": "Thola isaziso ngokushesha nje uma umamukeli evuma ukwabelana ngendawo yakhe. Buka indawo enqika emephini edeshibhodini lakho."
+  },
+  "features": {
+    "title": "Kungani Ukhetha i-Tracify?",
+    "subtitle": "Ukuchofoza okukodwa kanye nomzamo ongenalutho ukuthola indawo yanoma ubani emhlabeni wonke",
+    "feature1Title": "Isevisi Engafihli",
+    "feature1Desc": "Nakuba umnikazi wocingo ezokwaziswa ngesicelo sendawo, ubunikazi bomceli sisala buyimfihlo. Zonke izicelo zendawo zenziwa ngokuhlonipha ubumfihlo, nedatha edluliswayo ibethelwe ukuphepha.",
+    "feature2Title": "Akudingeki Ukufakwa",
+    "feature2Desc": "Akukho software okufanele ifakwe kuocingo lwakho noma kudivayisi elihlosiwe. Konke kusebenza kude! Vele ufake inombolo yocingo ofuna ukulandelela. Ngokushesha nje umamukeli we-SMS enika imvume, uzoba nokufinyelela ngokushesha.",
+    "feature3Title": "Ukumbozwa Komhlaba Wonke",
+    "feature3Desc": "I-Tracify isebenza namanethiwekhi wonke emhlabeni wonke. Nokho, ukulandelela okuphumelelayo kudinga ukuthi ucingo luvuliwe, ukutholakala kwesevisi, kanye nemvume ecacile yomamukeli we-SMS ukwabelana ngendawo yabo.",
+    "feature4Title": "Ihambisana ne-iOS ne-Android",
+    "feature4Desc": "I-Tracify isekela ngokungaphazamisi amadivayisi eselula i-iOS ne-Android. Uma nje unayo inombolo yocingo kanye nemvumo ecacile yomuntu wokulandelela, ungabathola usebenzisa isevisi yethu.",
+    "locatePhone": "Thola Ucingo"
+  },
+  "faq": {
+    "title": "Imibuzo Evamile",
+    "subtitle": "Lapha ungathola zonke izimpendulo zemibuzo esibuzwa kakhulu ngayo mayelana nesevisi yethu yendawo yeselula, i-Tracify.",
+    "tabAbout": "Mayelana Ne-Tracify",
+    "tabPayments": "Izinkokhelo Nokubhalisa",
+    "tabAccount": "I-akhawunti Yami",
+    "q1": "Yini i-Tracify?",
+    "a1": "I-Tracify iyisevisi yendawo yeselula ekuvumela ukuthola noma yiluphi inombolo yocingo emhlabeni wonke. Isevisi yethu isebenza ngokuthumela i-SMS kucingo elihlosiwe licela imvumo yokwabelana ngendawo. Uma imvumo inikeziwe, uthola izixhumanisi ze-GPS ezinembile.",
+    "q2": "Ingabe kusemthethweni ukusebenzisa ukulandelela inombolo yocingo kwe-Tracify?",
+    "a2": "Yebo, i-Tracify isemthethweni ngokuphelele ngoba idinga imvumo ecacile kumuntu olandelwayo. Umamukeli kumele avume ngokusebenzayo ukwabelana ngendawo yakhe ngokuphendula isicelo se-SMS. Sihambisana nazo zonke izimiso zobumfihlo nemithetho yokuvikela idatha.",
+    "q3": "Yimaphi amanethiwekhi asekelwa yi-Tracify?",
+    "a3": "I-Tracify isekela wonke amanethiwekhi amakhulu eselula emhlabeni wonke. Noma ucingo elihlosiwe lisebenzisa amanethiwekhi e-GSM, CDMA, LTE, noma 5G, isevisi yethu ingathume sela izicelo zendawo kunoma yiluphi inombolo yocingo evumelekile.",
+    "q4": "Ngingakulandelela yini indawo yenombolo yocingo uma ngingazi imodeli yayo?",
+    "a4": "Impela! Akudingeki ukwazi imodeli yocingo, umkhiqizi, noma uhlelo lokusebenza. Konke okudingayo yinombolo yocingo. Uhlelo lwethu liphatha ngokuzenzakalelayo zonke imininingwane yezobuchwepheshe kungakhathaliseki uhlobo lwedivayisi.",
+    "q5": "Ingabe i-Tracify isekela amadivayisi eselula e-iOS ne-Android?",
+    "a5": "Yebo, i-Tracify isebenza namadivayisi e-iOS (iPhone) ne-Android. Uhlelo lwethu lwesicelo sendawo olusekelwe ku-SMS luhambisana nanoma yiluphi i-smartphone engathole imilayezo yombhalo futhi inezinsizakalo zendawo ezitholakalayo.",
+    "q6": "I-Tracify ingathola ngokushesha kangakanani indawo yenombolo yocingo?",
+    "a6": "Uma umamukeli we-SMS evuma ukwabelana ngendawo yakhe, uzothola izixhumanisi cishe ngokushesha. Isikhathi esiphelele sincike ekutheni umamukeli uphendula ngokushesha kangakanani esicelo sendawo.",
+    "q7": "Ukulandelela kanjani inombolo yocingo ngaphandle kokufinyelela ngokoqobo kudivayisi elihlosiwe?",
+    "a7": "Vele ufake inombolo yocingo ohlelweni lwethu, wenze umlayezo wakho, bese sithumela i-SMS ecela imvumo yendawo. Konke kwenziwa kude - akudingeki ukufinyelela ngokoqobo kudivayisi elihlosiwe.",
+    "q8": "Nginganoma ubani ngenombolo yocingo?",
+    "a8": "Yebo, kodwa kuphela ngemvumo yabo ecacile. I-Tracify ithumela isicelo sendawo nge-SMS, futhi ukulandelela kwenzeka kuphela uma umamukeli evuma ukwabelana ngendawo yakhe. Lokhu kuqinisekisa ubumfihlo nokuhambisana nomthetho.",
+    "q9": "Nginganoma ubani ngenombolo yocingo mahhala?",
+    "a9p1": "Sinikeza isikhathi sokuhlola samahora angu-24 nge",
+    "a9p2": ", esikunika ukufinyelela okugcwele kuzo zonke izici. Ngemva kokuhlola, ungaqhubeka nokubhaliselwa kwethu kwenyanga nge",
+    "a9p3": "/ngenyanga.",
+    "q10": "Usadinga Usizo?",
+    "a10": "Uma unemibuzo enye noma udinga usizo, ungangabazi ukuxhumana nethimba lethu lokusekela. Silapha ukusiza wena 24/7. Ungasithinta ngekhasi lethu Lokusithinta noma usithumelele i-imeyli ngqo."
+  },
+  "footer": {
+    "description": "I-Tracify ikuvumela ukuthola indawo yocingo lwaseluhlaza futhi isebenza kuzo zonke izinhlobo zocingo, amanethiwekhi namazwe.",
+    "legalInfo": "Ulwazi Lwezomthetho",
+    "account": "I-akhawunti",
+    "signup": "Bhalisa",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Inqubomgomo Yamakhukhi",
+    "privacy": "Inqubomgomo Yobumfihlo",
+    "terms": "Imibandela Nemibandela"
+  },
+  "contact": {
+    "title": "Sithinte",
+    "subtitle": "Ithimba lethu lokusekela lilapha 24/7 ukusiza ngokushesha.",
+    "cardTitle": "Silapha Ukusiza",
+    "cardSubtitle": "Ithimba lethu lokusekela lilapha 24/7 ukusiza ngokushesha.",
+    "form": {
+      "name": "Igama",
+      "namePlaceholder": "Igama lakho",
+      "email": "I-imeyli",
+      "emailPlaceholder": "your.email@example.com",
+      "subject": "Isihloko",
+      "selectSubject": "Khetha isihloko",
+      "technical": "Ukwesekwa Kwezobuchwepheshe",
+      "billing": "Umbuzo Wokubhalisa",
+      "feature": "Isicelo Sesici",
+      "feedback": "Impendulo Ejwayelekile",
+      "other": "Okunye",
+      "message": "Umlayezo",
+      "messagePlaceholder": "Sitshele ukuthi singakusiza kanjani...",
+      "notRobot": "Angiyona irobhothi",
+      "send": "Thumela Umlayezo"
+    },
+    "footer": {
+      "home": "Ekhaya"
+    }
+  },
+  "cancel": {
+    "title": "Khansela Ukubhaliselwa Kwakho",
+    "subtitle": "Faka i-imeyli yakho ukuze ukhansele ukubhaliselwa kwakho. Lokhu kuzocisha ukuvuselelwa okuzenzakalelayo futhi kuvimbele noma yiziphi izimali zesikhathi esizayo.",
+    "form": {
+      "emailLabel": "Ikheli Le-imeyli",
+      "emailPlaceholder": "sawubona@email.com",
+      "submitBtn": "Khansela Ukubhaliselwa",
+      "helpText": "Uma ungakhumbuli ukuthi yiliphi i-imeyli olusebenzisile, hlola ibhokisi lakho lokungenayo nge-imeyli yokwamukelwa evela ku-Tracify. Uma usangakwazi ukulithola,",
+      "contactSupport": "xhumana nokwesekwa"
+    },
+    "whyCharged": {
+      "title": "Kungani Ngibizelwe?"
+    },
+    "needHelp": {
+      "title": "Udinga Usizo?",
+      "description": "Uma ubhekene nenkinga noma unemibuzo, ithimba lethu lokusekela lilapha wena 24/7. Vele uthinte futhi sizokuphendula ngokushesha!",
+      "contactBtn": "Xhumana Nokwesekwa"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Ideshibhodi",
+      "account": "I-akhawunti",
+      "contact": "Xhumana",
+      "settings": "Izilungiselelo",
+      "logout": "Phuma"
+    },
+    "title": "Landelela Indawo Yocingo",
+    "subtitle": "Thumela isicelo sendawo ngokulandelela okusekelwe emvumweni",
+    "sendRequest": {
+      "title": "Thumela Isicelo Sendawo",
+      "phoneNumber": "Inombolo Yocingo",
+      "phonePlaceholder": "3001234567",
+      "message": "Umlayezo",
+      "send": "Thumela",
+      "previewMessage": "Buka Umlayezo",
+      "rateLimit": "Ngenxa yezizathu zokuphepha nobumfihlo, ungathuma umlayezo kanye nje ngamahora ayi-3."
+    },
+    "recentRequests": {
+      "title": "Izicelo Zakamuva",
+      "noRequests": "Azikho izicelo zokulandelela okwamanje"
+    },
+    "trackingActivity": {
+      "title": "Umsebenzi Wokulandelela Wakamuva"
+    },
+    "disclaimer": {
+      "title": "Isexwayiso Esibalulekile",
+      "point1": "I-Tracify idinga imvumo ecacile kumnikazi wocingo ngaphambi kokwabelana ngendawo yabo",
+      "point2": "Lesi sevisi senzelwe izinhloso ezisemthethweni kuphela (ukuthola amadivayisi alahlekile, ukuphepha komndeni)",
+      "point3": "Ukulandelela okungagunyaziwe noma ukusola akusemthethweni futhi kunqunyanyiselwe ngokuphelele",
+      "point4": "Ukunemba kwendawo kuncike ezilungiselelweni zedivayisi nasezimweni zenethiwekhi",
+      "point5": "Asithatheli umthwalo wemfanelo ngokusebenzisa kabi lesi sevisi",
+      "needHelp": "Udinga Usizo?",
+      "contactSupport": "Xhumana nethimba lethu lokusekela"
+    },
+    "subscription": {
+      "currentPlan": "Uhlelo Lwamanje",
+      "loading": "Iyalayisha...",
+      "manage": "Phatha Ukubhaliselwa"
+    },
+    "messageModal": {
+      "title": "Izilungiselelo Zomlayezo",
+      "description": "Sikhethe imilayezo enezinga eliphezulu lokwabelana ngendawo. Khetha eyodwa ohlwini olungezansi.",
+      "language": "Ulimi Lomlayezo",
+      "selectTemplate": "Khetha isifanekiso somlayezo",
+      "template1": "Ngingumnikazi walolu cingo, futhi manje lilahlekile. Uma ukulitholile, ngicela ungazise.",
+      "template2": "Uma lolu cingo akulona elakho, ungangitshela?",
+      "template3": "Akukho ukuphuthuma, kodwa hlola lokhu uma unesikhathi:",
+      "apply": "Sebenzisa"
+    },
+    "trustpilot": {
+      "title": "Sisize Sithuthuke!",
+      "subtitle": "Yabelana ngokuhlangenwe nakho kwakho ngaphambi kokusebenzisa i-Tracify",
+      "message": "Sibeka umqondo impendulo yakho! Sicela uthathe isikhashana ukuhlola ulwazi lwakho ku-Trustpilot.",
+      "helpText": "Ukubuyekeza kwakho kusisiza sigcine isevisi yekhwalithi",
+      "leaveReview": "Shiya Ukubuyekezwa ku-Trustpilot",
+      "skip": "Yeqa Okwamanje"
+    },
+    "locationModal": {
+      "title": "Indawo Itholakele",
+      "coordinates": "Izixhumanisi",
+      "openMap": "Vula Ku-Google Maps",
+      "close": "Vala"
+    }
+  },
+  "payment": {
+    "completeSubscription": "Qedela Ukubhaliselwa Kwakho",
+    "subtitle": "Qala ukulandelela izindawo zocingo ngemvumo",
+    "title": "Inkokhelo",
+    "trialThen": "Ukuhlola kwamahora angu-24, bese",
+    "monthAfterTrial": "/ngenyanga ngemva kokuhlola",
+    "whatsIncluded": "Yini Ehlanganisiwe:",
+    "unlimitedRequests": "✓ Izicelo zendawo ezingenammingcele",
+    "realtimeTracking": "✓ Ukulandelela ngesikhathi sangempela",
+    "smsNotifications": "✓ Izaziso ze-SMS",
+    "247support": "✓ Ukwesekwa 24/7",
+    "paymentDetails": "Imininingwane Yenkokhelo",
+    "plan": "Uhlelo",
+    "24hourTrial": "Ukuhlola Kwamahora angu-24",
+    "total": "Isamba",
+    "pay": "Khokha",
+    "securePayment": "Inkokhelo ephephile nge-SSL encryption"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "Ideshibhodi",
+      "account": "I-akhawunti",
+      "contact": "Xhumana",
+      "logout": "Phuma"
+    },
+    "title": "Izilungiselelo Ze-akhawunti",
+    "subtitle": "Phatha i-akhawunti yakho nokubhaliselwa",
+    "accountInfo": {
+      "title": "Ulwazi Lwe-akhawunti",
+      "email": "Ikheli Le-imeyli",
+      "memberSince": "Ilungu Kusukela",
+      "loading": "Iyalayisha..."
+    },
+    "subscription": {
+      "title": "Ukubhaliselwa",
+      "plan": "Uhlelo",
+      "nextPayment": "Inkokhelo Elandelayo",
+      "status": "Isimo",
+      "active": "Iyasebenza",
+      "loading": "Iyalayisha...",
+      "cancelButton": "Khansela Ukubhaliselwa"
+    },
+    "paymentHistory": {
+      "title": "Umlando Wenkokhelo",
+      "noHistory": "Awukho umlando wenkokhelo otholakalayo"
+    },
+    "cancelModal": {
+      "title": "Uqinisekile?",
+      "description": "Ukukhansela ukubhaliselwa kwakho kusho:",
+      "point1": "Uzolahlekelwa ukufinyelela ezicini ezithuthukile",
+      "point2": "Ukubhaliselwa kwakho kuzophela ngokushesha",
+      "point3": "Ngeke uphinde ubizelwe",
+      "confirm": "Khansela Ukubhaliselwa",
+      "goBack": "Buyela Emuva"
+    },
+    "successModal": {
+      "title": "Ukubhaliselwa Kukhanseliwe",
+      "message": "Siqinisekisile ukukhansela kwakho, futhi ngeke uthhole ezinye izimali ezivela kithi. I-imeyli yokuqinisekisa nayo ithunyelwe kubhokisi lakho lokungenayo.",
+      "close": "Vala"
+    }
+  }
+}

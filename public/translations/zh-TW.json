@@ -1,0 +1,284 @@
+{
+  "nav": {
+    "faq": "常見問題",
+    "pricing": "價格",
+    "contact": "聯絡我們",
+    "cancelSubscription": "取消訂閱",
+    "login": "登入",
+    "dashboard": "儀表板",
+    "account": "帳戶",
+    "logout": "登出"
+  },
+  "hero": {
+    "title": "定位任何手機，無論何處",
+    "subtitle": "輸入您想要定位的電話號碼",
+    "phonePlaceholder": "輸入電話號碼",
+    "locateButton": "定位",
+    "disclaimer": "通過短信請求實時手機位置。*僅在接收者明確同意的情況下進行跟蹤。",
+    "locationFound": "找到位置！",
+    "locationExample": "號碼 <strong>123 678-9012</strong> 的位置是 <strong>88.234502, 7.688104</strong>。"
+  },
+  "pricing": {
+    "specialOffer": "特別優惠！",
+    "testOut": "僅需",
+    "forFullDay": "即可體驗 Tracify 的功能整整一天！",
+    "subtitle": "Tracify 通過易於管理的月度訂閱提供服務。",
+    "trialPeriod": "試用期",
+    "24hourTrial": "24 小時試用",
+    "trialDescription1": "Tracify 採用月度訂閱制。您的初次付款可在 24 小時內無限制訪問所有平台服務。之後，訂閱費用為",
+    "trialDescription2": "每月。",
+    "startTrial": "開始試用",
+    "subscription": "訂閱",
+    "monthlyFee": "月費",
+    "subscriptionDescription": "24 小時試用期結束後，優惠將自動續訂為月度訂閱。請記住，您可以隨時取消訂閱。",
+    "subscribeNow": "立即訂閱"
+  },
+  "howItWorks": {
+    "title": "如何運作？",
+    "step1Title": "輸入電話號碼",
+    "step1Description": "輸入您想要定位的電話號碼，並自定義您希望接收者收到的短信。",
+    "step2Title": "發送跟蹤短信",
+    "step2Description": "Tracify 將向接收者發送您的自定義短信，請求手機位置。",
+    "step3Title": "接收精確位置",
+    "step3Description": "一旦接收者同意分享其位置，立即收到通知。在儀表板上查看地圖上的確切位置。"
+  },
+  "features": {
+    "title": "為什麼選擇 Tracify？",
+    "subtitle": "一鍵操作，零努力即可找到全球任何人的位置",
+    "feature1Title": "謹慎服務",
+    "feature1Description": "雖然手機主人會收到位置請求通知，但請求者的身份保持機密。所有地理定位請求均尊重隱私，傳輸的數據已加密以確保安全。",
+    "feature2Title": "無需安裝",
+    "feature2Description": "無需在您的手機或目標設備上安裝任何軟件。一切都遠程操作！只需輸入您想要跟蹤的電話號碼。一旦短信接收者同意，您將立即獲得訪問權限。",
+    "feature3Title": "全球覆蓋",
+    "feature3Description": "Tracify 可在全球所有網絡上使用。但是，成功跟蹤需要手機開機、服務可用，以及短信接收者明確同意分享其位置。",
+    "feature4Title": "兼容 iOS 和 Android",
+    "feature4Description": "Tracify 無縫支持 iOS 和 Android 移動設備。只要您有電話號碼和個人的明確批准進行跟蹤，就可以使用我們的服務定位他們。",
+    "locatePhone": "定位手機"
+  },
+  "faq": {
+    "title": "常見問題",
+    "subtitle": "在這裡您可以找到關於我們的移動地理定位服務 Tracify 最常被問到的問題的所有答案。",
+    "tabAbout": "關於 Tracify",
+    "tabPayments": "付款和帳單",
+    "tabAccount": "我的帳戶",
+    "q1": "什麼是 Tracify？",
+    "a1": "Tracify 是一項移動地理定位服務，允許您定位全球任何電話號碼。我們的服務通過向目標手機發送短信請求位置共享同意來工作。一旦獲得同意，您就會收到精確的 GPS 坐標。",
+    "q2": "使用 Tracify 電話號碼跟蹤器是否合法？",
+    "a2": "是的，Tracify 完全合法，因為它需要被跟蹤者的明確同意。接收者必須通過回復短信請求主動同意分享其位置。我們遵守所有隱私法規和數據保護法。",
+    "q3": "Tracify 支持哪些網絡？",
+    "a3": "Tracify 支持全球所有主要移動網絡。無論目標手機使用 GSM、CDMA、LTE 還是 5G 網絡，我們的服務都可以向任何有效的電話號碼發送位置請求。",
+    "q4": "如果我不知道手機型號，我還能跟蹤電話號碼的位置嗎？",
+    "a4": "當然可以！您不需要知道手機型號、製造商或操作系統。您只需要電話號碼。我們的系統會自動處理所有技術細節，無論設備類型如何。",
+    "q5": "Tracify 是否同時支持 iOS 和 Android 操作的移動設備？",
+    "a5": "是的，Tracify 適用於 iOS（iPhone）和 Android 設備。我們基於短信的位置請求系統與任何可以接收短信並具有位置服務的智能手機兼容。",
+    "q6": "Tracify 能多快找到電話號碼的位置？",
+    "a6": "一旦短信接收者同意分享其位置，您幾乎會立即收到坐標。總時間取決於接收者對位置請求的響應速度。",
+    "q7": "如何在沒有物理訪問目標設備的情況下跟蹤電話號碼？",
+    "a7": "只需在我們的系統中輸入電話號碼，自定義您的消息，我們將發送一條請求位置同意的短信。一切都是遠程完成的 - 永遠不需要物理訪問目標設備。",
+    "q8": "我可以通過手機號碼跟蹤某人嗎？",
+    "a8": "可以，但僅限於他們的明確同意。Tracify 通過短信發送位置請求，只有當接收者同意分享其位置時才會進行跟蹤。這確保了隱私和法律合規。",
+    "q9": "我可以免費通過手機號碼跟蹤某人嗎？",
+    "a9part1": "我們提供 24 小時試用期，僅需",
+    "a9part2": "，讓您完全訪問所有功能。試用後，您可以繼續我們的月度訂閱，費用為",
+    "a9part3": "/月。",
+    "q10": "仍需幫助？",
+    "a10": "如果您有任何其他問題或需要幫助，請隨時聯繫我們的支持團隊。我們全天候為您服務。您可以通過我們的聯絡我們頁面與我們聯繫，或直接發送電子郵件給我們。"
+  },
+  "footer": {
+    "description": "Tracify 讓您獲得手機的地理位置，適用於所有手機類型、網絡和國家。",
+    "legalInfo": "法律信息",
+    "account": "帳戶",
+    "signup": "註冊",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Cookie 政策",
+    "privacy": "隱私政策",
+    "terms": "條款和條件"
+  },
+  "payment": {
+    "completeSubscription": "完成您的訂閱",
+    "subtitle": "在徵得同意的情況下開始跟蹤手機位置",
+    "title": "付款",
+    "paymentDetails": "付款詳情",
+    "24hourTrial": "24 小時試用",
+    "bestValue": "最佳價值",
+    "per24hours": "/ 24 小時",
+    "fullAccess": "24 小時內完全訪問所有平台功能。",
+    "whatsIncluded": "包含內容：",
+    "unlimitedRequests": "✓ 無限位置請求",
+    "realtimeTracking": "✓ 實時跟蹤",
+    "smsNotifications": "✓ 短信通知",
+    "247support": "✓ 24/7 支持",
+    "cardDetails": "卡片詳情",
+    "cardNumber": "卡號",
+    "expiryDate": "到期日",
+    "cvv": "CVV",
+    "nameOnCard": "持卡人姓名",
+    "plan": "計劃",
+    "total": "總計",
+    "pay": "支付",
+    "securePayment": "SSL 加密的安全付款",
+    "trialThen": "24 小時試用，然後",
+    "monthAfterTrial": "/月（試用後）"
+  },
+  "dashboard": {
+    "title": "跟蹤手機位置",
+    "subtitle": "發送基於同意的跟蹤位置請求",
+    "nav": {
+      "dashboard": "儀表板",
+      "account": "帳戶",
+      "contact": "聯絡",
+      "settings": "設置",
+      "logout": "登出"
+    },
+    "sendRequest": {
+      "title": "發送位置請求",
+      "phoneNumber": "電話號碼",
+      "phonePlaceholder": "3001234567",
+      "message": "消息",
+      "send": "發送",
+      "previewMessage": "預覽消息",
+      "rateLimit": "出於安全和隱私原因，您每 3 小時只能發送一條消息。"
+    },
+    "recentRequests": {
+      "title": "最近的請求",
+      "noRequests": "尚無跟蹤請求"
+    },
+    "trackingActivity": {
+      "title": "最近的跟蹤活動"
+    },
+    "disclaimer": {
+      "title": "重要免責聲明",
+      "point1": "Tracify 需要手機主人的明確同意才能分享其位置",
+      "point2": "此服務僅用於合法目的（查找丟失的設備、家庭安全）",
+      "point3": "未經授權的跟蹤或騷擾是非法的，嚴格禁止",
+      "point4": "位置準確性取決於設備設置和網絡條件",
+      "point5": "我們對濫用此服務不承擔責任",
+      "needHelp": "需要幫助？",
+      "contactSupport": "聯繫我們的支持團隊"
+    },
+    "subscription": {
+      "currentPlan": "當前計劃",
+      "loading": "加載中...",
+      "manage": "管理訂閱"
+    },
+    "messageModal": {
+      "title": "消息設置",
+      "description": "我們選擇了位置共享率最高的消息。從下面的列表中選擇一個。",
+      "language": "消息語言",
+      "selectTemplate": "選擇消息模板",
+      "template1": "我是這部手機的主人，它目前丟失了。如果您找到了它，請告訴我。",
+      "template2": "如果這部手機不是您的，您能告訴我嗎？",
+      "template3": "不急，但有空時看一下：",
+      "apply": "應用"
+    },
+    "trustpilot": {
+      "title": "幫助我們改進！",
+      "subtitle": "在使用 Tracify 之前分享您的體驗",
+      "message": "我們重視您的反饋！請花點時間在 Trustpilot 上評價您的體驗。",
+      "helpText": "您的評論幫助我們保持優質服務",
+      "leaveReview": "在 Trustpilot 上留下評論",
+      "skip": "暫時跳過"
+    },
+    "locationModal": {
+      "title": "收到位置",
+      "coordinates": "坐標",
+      "openMap": "在 Google 地圖中打開",
+      "close": "關閉"
+    }
+  },
+  "account": {
+    "title": "帳戶設置",
+    "subtitle": "管理您的帳戶和訂閱",
+    "nav": {
+      "dashboard": "儀表板",
+      "account": "帳戶",
+      "contact": "聯絡",
+      "logout": "登出"
+    },
+    "accountInfo": {
+      "title": "帳戶信息",
+      "email": "電子郵件地址",
+      "memberSince": "成為會員自",
+      "loading": "加載中..."
+    },
+    "subscription": {
+      "title": "訂閱",
+      "plan": "計劃",
+      "nextPayment": "下次付款",
+      "status": "狀態",
+      "active": "活躍",
+      "loading": "加載中...",
+      "cancelButton": "取消訂閱"
+    },
+    "paymentHistory": {
+      "title": "付款歷史",
+      "noHistory": "沒有可用的付款歷史"
+    },
+    "cancelModal": {
+      "title": "您確定嗎？",
+      "description": "取消訂閱意味著：",
+      "point1": "您將失去對高級功能的訪問權限",
+      "point2": "您的訂閱將立即結束",
+      "point3": "您不會再被收費",
+      "confirm": "取消訂閱",
+      "goBack": "返回"
+    },
+    "successModal": {
+      "title": "訂閱已取消",
+      "message": "我們已確認您的取消，您不會再收到我們的任何費用。確認電子郵件也已發送到您的收件箱。",
+      "close": "關閉"
+    }
+  },
+  "common": {
+    "loading": "加載中...",
+    "error": "發生錯誤",
+    "tryAgain": "請重試",
+    "required": "必填",
+    "optional": "可選"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Our support team is here 24/7 to help you right away.",
+    "cardTitle": "We're Here to Help",
+    "cardSubtitle": "Our support team is here 24/7 to help you right away.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "subject": "Subject",
+      "selectSubject": "Select a subject",
+      "technical": "Technical Support",
+      "billing": "Billing Question",
+      "feature": "Feature Request",
+      "feedback": "General Feedback",
+      "other": "Other",
+      "message": "Message",
+      "messagePlaceholder": "Tell us how we can help...",
+      "notRobot": "I'm not a robot",
+      "send": "Send Message"
+    },
+    "footer": {
+      "home": "Home"
+    }
+  },
+  "cancel": {
+    "title": "Cancel Your Subscription",
+    "subtitle": "Enter your email to cancel your subscription. This will turn off auto-renewal and prevent any future charges.",
+    "form": {
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "hello@email.com",
+      "submitBtn": "Cancel Subscription",
+      "helpText": "If you don't remember which email you used, check your inbox for a welcome email from Tracify. If you still can't find it,",
+      "contactSupport": "contact support"
+    },
+    "whyCharged": {
+      "title": "Why was I charged?"
+    },
+    "needHelp": {
+      "title": "Need help?",
+      "description": "If you're experiencing an issue or have any questions, our support team is here for you 24/7. Just reach out and we'll get back to you quickly!",
+      "contactBtn": "Contact Support"
+    }
+  }
+}

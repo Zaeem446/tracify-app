@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "Usein kysytyt kysymykset",
+    "pricing": "Hinnat",
+    "contact": "Ota yhteyttä",
+    "cancel": "Peruuta tilaus",
+    "login": "Kirjaudu"
+  },
+  "hero": {
+    "title": "Paikanna mikä tahansa puhelin, missä tahansa",
+    "subtitle": "Syötä puhelinnumero, jonka haluat paikantaa",
+    "placeholder": "Syötä puhelinnumero",
+    "locateBtn": "Paikanna",
+    "disclaimer": "Pyydä reaaliaikaisia puhelinten sijainteja tekstiviestillä. *Seuranta tapahtuu vain vastaanottajan nimenomaisella suostumuksella.",
+    "locationFound": "Sijainti löydetty!",
+    "locationExample": "Numeron <strong>123 678-9012</strong> sijainti on <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Erikoistarjous!",
+    "title": "Kokeile Tracifyn ominaisuuksia vain",
+    "forFullDay": "kokonaiseksi päiväksi!",
+    "subtitle": "Tracify tarjoaa palvelunsa helposti hallittavan kuukausitilauksen kautta.",
+    "trialPeriod": "Kokeilujakso",
+    "trial24h": "24 tunnin kokeilu",
+    "trialDesc": "Tracify toimii kuukausitilauksen pohjalta. Ensimmäinen maksusi antaa rajoittamattoman pääsyn kaikkiin alustan palveluihin 24 tunniksi. Tämän jälkeen tilausmaksu on",
+    "perMonth": "kuukaudessa.",
+    "startTrial": "Aloita kokeilu",
+    "subscription": "Tilaus",
+    "monthlyFee": "Kuukausimaksu",
+    "subscriptionDesc": "Kun 24 tunnin kokeilujakso päättyy, tarjous uusitaan automaattisesti kuukausitilaukseksi. Muista, että voit peruuttaa tilauksen milloin tahansa.",
+    "subscribeNow": "Tilaa nyt"
+  },
+  "howItWorks": {
+    "title": "Miten se toimii?",
+    "step1Title": "Syötä puhelinnumero",
+    "step1Desc": "Syötä puhelinnumero, jonka haluat paikantaa, ja muokkaa tekstiviestiä, jonka haluat vastaanottajan saavan.",
+    "step2Title": "Lähetä seurantatekstiviesti",
+    "step2Desc": "Tracify lähettää vastaanottajalle mukautetun tekstiviestisi, joka pyytää puhelimen sijaintia.",
+    "step3Title": "Vastaanota tarkka sijainti",
+    "step3Desc": "Saat ilmoituksen heti, kun vastaanottaja suostuu jakamaan sijaintinsa. Näe tarkka sijainti kartalla hallintapaneelissasi."
+  },
+  "features": {
+    "title": "Miksi valita Tracify?",
+    "subtitle": "Yksi klikkaus ja nolla vaivaa löytääksesi kenen tahansa sijainnin ympäri maailmaa",
+    "feature1Title": "Huomaamaton palvelu",
+    "feature1Desc": "Vaikka puhelimen omistajalle ilmoitetaan sijaintipyynnöstä, pyytäjän henkilöllisyys pysyy luottamuksellisena. Kaikki geolokaatiopyynnöt tehdään yksityisyyttä kunnioittaen, ja siirretyt tiedot salataan turvallisuuden takaamiseksi.",
+    "feature2Title": "Asennusta ei tarvita",
+    "feature2Desc": "Puhelimeesi tai kohdelaitteeseen ei tarvitse asentaa ohjelmistoa. Kaikki toimii etänä! Syötä vain puhelinnumero, jota haluat seurata. Heti kun tekstiviestin vastaanottaja antaa suostumuksen, saat välittömän pääsyn.",
+    "feature3Title": "Maailmanlaajuinen kattavuus",
+    "feature3Desc": "Tracify toimii kaikkien verkkojen kanssa maailmanlaajuisesti. Onnistunut seuranta edellyttää kuitenkin, että puhelin on päällä, palvelu on saatavilla ja tekstiviestin vastaanottaja antaa nimenomaisen suostumuksen sijaintinsa jakamiseen.",
+    "feature4Title": "Yhteensopiva iOS:n ja Androidin kanssa",
+    "feature4Desc": "Tracify tukee saumattomasti sekä iOS- että Android-mobiililaitteita. Kunhan sinulla on puhelinnumero ja henkilön nimenomainen hyväksyntä seurantaan, voit paikantaa hänet palvelumme avulla.",
+    "locatePhone": "Paikanna puhelin"
+  },
+  "faq": {
+    "title": "Usein kysytyt kysymykset",
+    "subtitle": "Täältä löydät vastaukset kysymyksiin, joita meiltä useimmin kysytään mobiili-geolokaatiopalvelustamme, Tracifysta.",
+    "tabAbout": "Tietoa Tracifysta",
+    "tabPayments": "Maksut ja laskutus",
+    "tabAccount": "Oma tili",
+    "q1": "Mikä on Tracify?",
+    "a1": "Tracify on mobiili-geolokaatiopalvelu, jonka avulla voit paikantaa minkä tahansa puhelinnumeron maailmanlaajuisesti. Palvelumme toimii lähettämällä tekstiviestin kohdepuhelimeen pyytäen suostumusta sijainnin jakamiseen. Kun suostumus on annettu, saat tarkat GPS-koordinaatit.",
+    "q2": "Onko Tracify-puhelinnumeron seurannan käyttö edes laillista?",
+    "a2": "Kyllä, Tracify on täysin laillinen, koska se vaatii seurattavan henkilön nimenomaisen suostumuksen. Vastaanottajan on aktiivisesti suostuttava jakamaan sijaintinsa vastaamalla tekstiviestipyyntöön. Noudatamme kaikkia yksityisyyssäännöksiä ja tietosuojalakeja.",
+    "q3": "Mitä verkkoja Tracify tukee?",
+    "a3": "Tracify tukee kaikkia suuria matkapuhelinverkkoja maailmanlaajuisesti. Olipa kohdepuhelin GSM-, CDMA-, LTE- tai 5G-verkossa, palvelumme voi lähettää sijaintipyyntöjä mihin tahansa voimassa olevaan puhelinnumeroon.",
+    "q4": "Voinko seurata puhelinnumeron sijaintia, vaikka en tiedä sen mallia?",
+    "a4": "Ehdottomasti! Sinun ei tarvitse tietää puhelimen mallia, valmistajaa tai käyttöjärjestelmää. Tarvitset vain puhelinnumeron. Järjestelmämme käsittelee automaattisesti kaikki tekniset yksityiskohdat laitteen tyypistä riippumatta.",
+    "q5": "Tukeeko Tracify sekä iOS- että Android-mobiililaitteita?",
+    "a5": "Kyllä, Tracify toimii sekä iOS- (iPhone) että Android-laitteiden kanssa. Tekstiviestipohjainen sijaintipyyntöjärjestelmämme on yhteensopiva minkä tahansa älypuhelimen kanssa, joka voi vastaanottaa tekstiviestejä ja jossa sijaintipalvelut ovat käytettävissä.",
+    "q6": "Kuinka nopeasti Tracify voi löytää puhelinnumeron sijainnin?",
+    "a6": "Heti kun tekstiviestin vastaanottaja suostuu jakamaan sijaintinsa, saat koordinaatit lähes välittömästi. Kokonaisaika riippuu siitä, kuinka nopeasti vastaanottaja vastaa sijaintipyyntöön.",
+    "q7": "Miten seurata puhelinnumeroa ilman fyysistä pääsyä kohdelaitteeseen?",
+    "a7": "Syötä vain puhelinnumero järjestelmäämme, muokkaa viestisi, ja lähetämme tekstiviestin, jossa pyydämme sijaintisuostumusta. Kaikki tehdään etänä – fyysistä pääsyä kohdelaitteeseen ei koskaan tarvita.",
+    "q8": "Voinko seurata jotakuta matkapuhelinnumerolla?",
+    "a8": "Kyllä, mutta vain hänen nimenomaisella suostumuksellaan. Tracify lähettää sijaintipyynnön tekstiviestillä, ja seuranta tapahtuu vain, kun vastaanottaja suostuu jakamaan sijaintinsa. Tämä varmistaa yksityisyyden ja laillisen vaatimustenmukaisuuden.",
+    "q9": "Voinko seurata jotakuta matkapuhelinnumerolla ilmaiseksi?",
+    "a9p1": "Tarjoamme 24 tunnin kokeilujakson vain",
+    "a9p2": " hintaan, joka antaa täyden pääsyn kaikkiin ominaisuuksiin. Kokeilun jälkeen voit jatkaa kuukausitilauksellamme hintaan",
+    "a9p3": "/kuukausi.",
+    "q10": "Tarvitsetko vielä apua?",
+    "a10": "Jos sinulla on muita kysymyksiä tai tarvitset apua, älä epäröi ottaa yhteyttä tukitiimiimme. Olemme täällä auttamassa sinua 24/7. Voit ottaa meihin yhteyttä Ota yhteyttä -sivumme kautta tai lähettämällä meille sähköpostia suoraan."
+  },
+  "footer": {
+    "description": "Tracify antaa sinulle matkapuhelimen geosijainnin ja toimii kaikilla puhelintyypeillä, verkoilla ja maissa.",
+    "legalInfo": "Oikeudelliset tiedot",
+    "account": "Tili",
+    "signup": "Rekisteröidy",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Evästekäytäntö",
+    "privacy": "Tietosuojakäytäntö",
+    "terms": "Käyttöehdot"
+  },
+  "contact": {
+    "title": "Ota yhteyttä",
+    "subtitle": "Tukitiimimme on täällä 24/7 auttaakseen sinua heti.",
+    "cardTitle": "Olemme täällä auttaaksemme",
+    "cardSubtitle": "Tukitiimimme on täällä 24/7 auttaakseen sinua heti.",
+    "form": {
+      "name": "Nimi",
+      "namePlaceholder": "Nimesi",
+      "email": "Sähköposti",
+      "emailPlaceholder": "sinun.email@esimerkki.fi",
+      "subject": "Aihe",
+      "selectSubject": "Valitse aihe",
+      "technical": "Tekninen tuki",
+      "billing": "Laskutuskysymys",
+      "feature": "Ominaisuuspyyntö",
+      "feedback": "Yleinen palaute",
+      "other": "Muu",
+      "message": "Viesti",
+      "messagePlaceholder": "Kerro meille, miten voimme auttaa...",
+      "notRobot": "En ole robotti",
+      "send": "Lähetä viesti"
+    },
+    "footer": {
+      "home": "Etusivu"
+    }
+  },
+  "cancel": {
+    "title": "Peruuta tilauksesi",
+    "subtitle": "Syötä sähköpostisi peruuttaaksesi tilauksesi. Tämä kytkee automaattisen uusimisen pois päältä ja estää tulevat maksut.",
+    "form": {
+      "emailLabel": "Sähköpostiosoite",
+      "emailPlaceholder": "hei@email.fi",
+      "submitBtn": "Peruuta tilaus",
+      "helpText": "Jos et muista mitä sähköpostia käytit, tarkista postilaatikkosi Tracifyn tervetuloviesti. Jos et silti löydä sitä,",
+      "contactSupport": "ota yhteyttä tukeen"
+    },
+    "whyCharged": {
+      "title": "Miksi minulta veloitettiin?"
+    },
+    "needHelp": {
+      "title": "Tarvitsetko apua?",
+      "description": "Jos sinulla on ongelma tai kysymyksiä, tukitiimimme on täällä sinua varten 24/7. Ota vain yhteyttä, niin vastaamme nopeasti!",
+      "contactBtn": "Ota yhteyttä tukeen"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Hallintapaneeli",
+      "account": "Tili",
+      "contact": "Yhteystiedot",
+      "settings": "Asetukset",
+      "logout": "Kirjaudu ulos"
+    },
+    "title": "Seuraa puhelimen sijaintia",
+    "subtitle": "Lähetä sijaintipyyntö suostumukseen perustuvalla seurannalla",
+    "sendRequest": {
+      "title": "Lähetä sijaintipyyntö",
+      "phoneNumber": "Puhelinnumero",
+      "phonePlaceholder": "3001234567",
+      "message": "Viesti",
+      "send": "Lähetä",
+      "previewMessage": "Esikatsele viestiä",
+      "rateLimit": "Turvallisuus- ja yksityisyyssyistä voit lähettää viestin vain kerran 3 tunnin välein."
+    },
+    "recentRequests": {
+      "title": "Viimeaikaiset pyynnöt",
+      "noRequests": "Ei seurantapyyntöjä vielä"
+    },
+    "trackingActivity": {
+      "title": "Viimeaikainen seurantatoiminta"
+    },
+    "disclaimer": {
+      "title": "Tärkeä huomautus",
+      "point1": "Tracify vaatii puhelimen omistajan nimenomaisen suostumuksen ennen hänen sijaintinsa jakamista",
+      "point2": "Tämä palvelu on tarkoitettu vain laillisiin tarkoituksiin (kadonneiden laitteiden löytäminen, perheen turvallisuus)",
+      "point3": "Luvaton seuranta tai vainoaminen on laitonta ja ankarasti kiellettyä",
+      "point4": "Sijainnin tarkkuus riippuu laitteen asetuksista ja verkon olosuhteista",
+      "point5": "Emme ole vastuussa tämän palvelun väärinkäytöstä",
+      "needHelp": "Tarvitsetko apua?",
+      "contactSupport": "Ota yhteyttä tukitiimiimme"
+    },
+    "subscription": {
+      "currentPlan": "Nykyinen suunnitelma",
+      "loading": "Ladataan...",
+      "manage": "Hallitse tilausta"
+    },
+    "messageModal": {
+      "title": "Viestiasetukset",
+      "description": "Olemme valinneet viestit, joilla on korkeimmat sijainnin jakamisasteet. Valitse yksi alla olevasta listasta.",
+      "language": "Viestin kieli",
+      "selectTemplate": "Valitse viestipohja",
+      "template1": "Olen tämän puhelimen omistaja, ja se on tällä hetkellä kadonnut. Jos olet löytänyt sen, ilmoita minulle.",
+      "template2": "Jos tämä puhelin ei ole sinun, voisitko ilmoittaa minulle?",
+      "template3": "Ei kiirettä, mutta katso tämä kun sinulla on hetki:",
+      "apply": "Käytä"
+    },
+    "trustpilot": {
+      "title": "Auta meitä parantamaan!",
+      "subtitle": "Jaa kokemuksesi ennen Tracifyn käyttöä",
+      "message": "Arvostamme palautettasi! Ota hetki aikaa arvioidaksesi kokemuksesi Trustpilotissa.",
+      "helpText": "Arvostelusi auttaa meitä ylläpitämään laadukasta palvelua",
+      "leaveReview": "Jätä arvostelu Trustpilotiin",
+      "skip": "Ohita toistaiseksi"
+    },
+    "locationModal": {
+      "title": "Sijainti vastaanotettu",
+      "coordinates": "Koordinaatit",
+      "openMap": "Avaa Google Mapsissa",
+      "close": "Sulje"
+    }
+  },
+  "payment": {
+    "completeSubscription": "Viimeistele tilauksesi",
+    "subtitle": "Aloita puhelimen sijaintien seuranta suostumuksella",
+    "title": "Maksu",
+    "trialThen": "24h kokeilu, sitten",
+    "monthAfterTrial": "/kuukausi kokeilun jälkeen",
+    "whatsIncluded": "Mitä sisältyy:",
+    "unlimitedRequests": "✓ Rajattomat sijaintipyynnöt",
+    "realtimeTracking": "✓ Reaaliaikainen seuranta",
+    "smsNotifications": "✓ Tekstiviesti-ilmoitukset",
+    "247support": "✓ 24/7 tuki",
+    "paymentDetails": "Maksutiedot",
+    "plan": "Suunnitelma",
+    "24hourTrial": "24 tunnin kokeilu",
+    "total": "Yhteensä",
+    "pay": "Maksa",
+    "securePayment": "Turvallinen maksu SSL-salauksella"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "Hallintapaneeli",
+      "account": "Tili",
+      "contact": "Yhteystiedot",
+      "logout": "Kirjaudu ulos"
+    },
+    "title": "Tiliasetukset",
+    "subtitle": "Hallitse tiliäsi ja tilaustasi",
+    "accountInfo": {
+      "title": "Tilin tiedot",
+      "email": "Sähköpostiosoite",
+      "memberSince": "Jäsen alkaen",
+      "loading": "Ladataan..."
+    },
+    "subscription": {
+      "title": "Tilaus",
+      "plan": "Suunnitelma",
+      "nextPayment": "Seuraava maksu",
+      "status": "Tila",
+      "active": "Aktiivinen",
+      "loading": "Ladataan...",
+      "cancelButton": "Peruuta tilaus"
+    },
+    "paymentHistory": {
+      "title": "Maksuhistoria",
+      "noHistory": "Ei maksuhistoriaa saatavilla"
+    },
+    "cancelModal": {
+      "title": "Oletko varma?",
+      "description": "Tilauksen peruuttaminen tarkoittaa:",
+      "point1": "Menetät pääsyn premium-ominaisuuksiin",
+      "point2": "Tilauksesi päättyy heti",
+      "point3": "Sinua ei veloiteta enää",
+      "confirm": "Peruuta tilaus",
+      "goBack": "Takaisin"
+    },
+    "successModal": {
+      "title": "Tilaus peruutettu",
+      "message": "Olemme vahvistaneet peruutuksesi, etkä saa meiltä enää veloituksia. Vahvistussähköposti on myös lähetetty postilaatikkoosi.",
+      "close": "Sulje"
+    }
+  }
+}

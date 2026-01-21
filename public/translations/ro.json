@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "Întrebări frecvente",
+    "pricing": "Prețuri",
+    "contact": "Contactează-ne",
+    "cancel": "Anulează abonamentul",
+    "login": "Autentificare"
+  },
+  "hero": {
+    "title": "Localizează orice telefon, oriunde",
+    "subtitle": "Introdu un număr de telefon pe care vrei să-l localizezi",
+    "placeholder": "Introdu numărul de telefon",
+    "locateBtn": "Localizează",
+    "disclaimer": "Solicită locații de telefon în timp real prin SMS. *Urmărirea are loc doar cu consimțământul explicit al destinatarului.",
+    "locationFound": "Locație găsită!",
+    "locationExample": "Locația numărului <strong>123 678-9012</strong> este <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Ofertă specială!",
+    "title": "Testează capacitățile Tracify pentru doar",
+    "forFullDay": "pentru o zi întreagă!",
+    "subtitle": "Tracify oferă serviciile sale printr-un abonament lunar ușor de gestionat.",
+    "trialPeriod": "Perioada de probă",
+    "trial24h": "Probă de 24 de ore",
+    "trialDesc": "Tracify funcționează pe bază de abonament lunar. Plata inițială îți oferă acces nelimitat la toate serviciile platformei timp de 24 de ore. După această perioadă, se aplică taxa de abonament de",
+    "perMonth": "pe lună.",
+    "startTrial": "Începe proba",
+    "subscription": "Abonament",
+    "monthlyFee": "Taxă lunară",
+    "subscriptionDesc": "Odată ce perioada de probă de 24 de ore s-a încheiat, oferta se va reînnoi automat la un abonament lunar. Reține că poți anula abonamentul oricând dorești.",
+    "subscribeNow": "Abonează-te acum"
+  },
+  "howItWorks": {
+    "title": "Cum funcționează?",
+    "step1Title": "Introdu un număr de telefon",
+    "step1Desc": "Introdu numărul de telefon pe care vrei să-l localizezi și personalizează mesajul SMS pe care vrei ca destinatarul să-l primească.",
+    "step2Title": "Trimite SMS de urmărire",
+    "step2Desc": "Tracify va trimite destinatarului SMS-ul tău personalizat care va solicita locația telefonului.",
+    "step3Title": "Primește locația precisă",
+    "step3Desc": "Fii notificat imediat ce destinatarul consimte să-și partajeze locația. Vezi poziția exactă pe hartă în panoul tău de control."
+  },
+  "features": {
+    "title": "De ce să alegi Tracify?",
+    "subtitle": "Un singur clic și zero efort pentru a găsi locația oricui din întreaga lume",
+    "feature1Title": "Serviciu discret",
+    "feature1Desc": "Deși proprietarul telefonului va fi informat despre o solicitare de locație, identitatea solicitantului rămâne confidențială. Toate solicitările de geolocalizare sunt făcute cu respectarea confidențialității, iar datele transmise sunt criptate pentru securitate.",
+    "feature2Title": "Nu necesită instalare",
+    "feature2Desc": "Nu există software de instalat pe telefonul tău sau pe dispozitivul țintă. Totul funcționează la distanță! Doar introdu numărul de telefon pe care dorești să-l urmărești. De îndată ce destinatarul SMS-ului oferă consimțământul, vei avea acces imediat.",
+    "feature3Title": "Acoperire mondială",
+    "feature3Desc": "Tracify funcționează cu toate rețelele din întreaga lume. Cu toate acestea, urmărirea reușită necesită ca telefonul să fie pornit, disponibilitatea serviciului și consimțământul explicit al destinatarului SMS-ului pentru a-și partaja locația.",
+    "feature4Title": "Compatibil cu iOS și Android",
+    "feature4Desc": "Tracify suportă perfect dispozitivele mobile iOS și Android. Atâta timp cât ai numărul de telefon și aprobarea explicită a persoanei pentru a urmări, o poți localiza folosind serviciul nostru.",
+    "locatePhone": "Localizează telefonul"
+  },
+  "faq": {
+    "title": "Întrebări frecvente",
+    "subtitle": "Aici poți găsi toate răspunsurile la întrebările care ne sunt cel mai des adresate despre serviciul nostru de geolocalizare mobilă, Tracify.",
+    "tabAbout": "Despre Tracify",
+    "tabPayments": "Plăți și facturare",
+    "tabAccount": "Contul meu",
+    "q1": "Ce este Tracify?",
+    "a1": "Tracify este un serviciu de geolocalizare mobilă care îți permite să localizezi orice număr de telefon din întreaga lume. Serviciul nostru funcționează prin trimiterea unui SMS către telefonul țintă solicitând consimțământul pentru partajarea locației. Odată ce consimțământul este dat, primești coordonatele GPS precise.",
+    "q2": "Este chiar legal să folosești dispozitivul de urmărire a numerelor de telefon Tracify?",
+    "a2": "Da, Tracify este complet legal deoarece necesită consimțământul explicit al persoanei urmărite. Destinatarul trebuie să fie activ de acord să-și partajeze locația răspunzând la solicitarea prin SMS. Respectăm toate reglementările privind confidențialitatea și legile de protecție a datelor.",
+    "q3": "Ce rețele suportă Tracify?",
+    "a3": "Tracify suportă toate rețelele mobile majore din întreaga lume. Indiferent dacă telefonul țintă folosește rețele GSM, CDMA, LTE sau 5G, serviciul nostru poate trimite solicitări de locație către orice număr de telefon valid.",
+    "q4": "Pot urmări locația numărului de telefon dacă nu cunosc modelul său?",
+    "a4": "Absolut! Nu trebuie să cunoști modelul telefonului, producătorul sau sistemul de operare. Tot ce ai nevoie este numărul de telefon. Sistemul nostru gestionează automat toate detaliile tehnice, indiferent de tipul dispozitivului.",
+    "q5": "Tracify suportă atât dispozitive mobile iOS, cât și Android?",
+    "a5": "Da, Tracify funcționează atât cu dispozitive iOS (iPhone), cât și Android. Sistemul nostru de solicitare de locație bazat pe SMS este compatibil cu orice smartphone care poate primi mesaje text și are servicii de localizare disponibile.",
+    "q6": "Cât de rapid poate Tracify să găsească locația unui număr de telefon?",
+    "a6": "Odată ce destinatarul SMS-ului consimte să-și partajeze locația, vei primi coordonatele aproape instantaneu. Timpul total depinde de cât de rapid răspunde destinatarul la solicitarea de locație.",
+    "q7": "Cum să urmăresc un număr de telefon fără acces fizic la dispozitivul țintă?",
+    "a7": "Pur și simplu introdu numărul de telefon în sistemul nostru, personalizează mesajul tău și vom trimite un SMS solicitând consimțământul pentru locație. Totul se face la distanță - nu este niciodată necesar accesul fizic la dispozitivul țintă.",
+    "q8": "Pot urmări pe cineva după numărul de telefon mobil?",
+    "a8": "Da, dar doar cu consimțământul lor explicit. Tracify trimite o solicitare de locație prin SMS, iar urmărirea are loc doar când destinatarul acceptă să-și partajeze locația. Acest lucru asigură confidențialitatea și conformitatea legală.",
+    "q9": "Pot urmări pe cineva după numărul de telefon mobil gratuit?",
+    "a9p1": "Oferim o perioadă de probă de 24 de ore pentru doar",
+    "a9p2": ", care îți oferă acces complet la toate funcțiile. După probă, poți continua cu abonamentul nostru lunar la",
+    "a9p3": "/lună.",
+    "q10": "Ai încă nevoie de ajutor?",
+    "a10": "Dacă ai alte întrebări sau ai nevoie de asistență, te rugăm să nu eziti să contactezi echipa noastră de suport. Suntem aici pentru a te ajuta 24/7. Ne poți contacta prin pagina noastră de Contact sau ne poți trimite un e-mail direct."
+  },
+  "footer": {
+    "description": "Tracify îți permite să obții geolocalizarea unui telefon mobil și funcționează pe toate tipurile de telefoane, rețele și țări.",
+    "legalInfo": "Informații juridice",
+    "account": "Cont",
+    "signup": "Înregistrare",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Politica privind cookie-urile",
+    "privacy": "Politica de confidențialitate",
+    "terms": "Termeni și condiții"
+  },
+  "contact": {
+    "title": "Contactează-ne",
+    "subtitle": "Echipa noastră de suport este aici 24/7 pentru a te ajuta imediat.",
+    "cardTitle": "Suntem aici pentru a ajuta",
+    "cardSubtitle": "Echipa noastră de suport este aici 24/7 pentru a te ajuta imediat.",
+    "form": {
+      "name": "Nume",
+      "namePlaceholder": "Numele tău",
+      "email": "E-mail",
+      "emailPlaceholder": "email.tau@exemplu.ro",
+      "subject": "Subiect",
+      "selectSubject": "Selectează un subiect",
+      "technical": "Suport tehnic",
+      "billing": "Întrebare despre facturare",
+      "feature": "Solicitare de funcție",
+      "feedback": "Feedback general",
+      "other": "Altceva",
+      "message": "Mesaj",
+      "messagePlaceholder": "Spune-ne cum te putem ajuta...",
+      "notRobot": "Nu sunt un robot",
+      "send": "Trimite mesajul"
+    },
+    "footer": {
+      "home": "Acasă"
+    }
+  },
+  "cancel": {
+    "title": "Anulează abonamentul tău",
+    "subtitle": "Introdu e-mailul tău pentru a anula abonamentul. Acest lucru va opri reînnoirea automată și va preveni orice taxe viitoare.",
+    "form": {
+      "emailLabel": "Adresă de e-mail",
+      "emailPlaceholder": "salut@email.ro",
+      "submitBtn": "Anulează abonamentul",
+      "helpText": "Dacă nu-ți amintești ce e-mail ai folosit, verifică-ți inbox-ul pentru un e-mail de bun venit de la Tracify. Dacă încă nu-l găsești,",
+      "contactSupport": "contactează suportul"
+    },
+    "whyCharged": {
+      "title": "De ce am fost taxat?"
+    },
+    "needHelp": {
+      "title": "Ai nevoie de ajutor?",
+      "description": "Dacă întâmpini o problemă sau ai întrebări, echipa noastră de suport este aici pentru tine 24/7. Doar contactează-ne și vom reveni rapid!",
+      "contactBtn": "Contactează suportul"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Panou de control",
+      "account": "Cont",
+      "contact": "Contact",
+      "settings": "Setări",
+      "logout": "Deconectare"
+    },
+    "title": "Urmărește o locație de telefon",
+    "subtitle": "Trimite o solicitare de locație cu urmărire bazată pe consimțământ",
+    "sendRequest": {
+      "title": "Trimite solicitare de locație",
+      "phoneNumber": "Număr de telefon",
+      "phonePlaceholder": "3001234567",
+      "message": "Mesaj",
+      "send": "Trimite",
+      "previewMessage": "Previzualizează mesajul",
+      "rateLimit": "Din motive de securitate și confidențialitate, poți trimite un mesaj doar o dată la fiecare 3 ore."
+    },
+    "recentRequests": {
+      "title": "Solicitări recente",
+      "noRequests": "Încă nu există solicitări de urmărire"
+    },
+    "trackingActivity": {
+      "title": "Activitate de urmărire recentă"
+    },
+    "disclaimer": {
+      "title": "Declinare importantă a responsabilității",
+      "point1": "Tracify necesită consimțământul explicit al proprietarului telefonului înainte de a-și partaja locația",
+      "point2": "Acest serviciu este destinat doar scopurilor legitime (găsirea dispozitivelor pierdute, siguranța familiei)",
+      "point3": "Urmărirea neautorizată sau hărțuirea este ilegală și strict interzisă",
+      "point4": "Precizia locației depinde de setările dispozitivului și condițiile de rețea",
+      "point5": "Nu suntem responsabili pentru utilizarea greșită a acestui serviciu",
+      "needHelp": "Ai nevoie de ajutor?",
+      "contactSupport": "Contactează echipa noastră de suport"
+    },
+    "subscription": {
+      "currentPlan": "Plan curent",
+      "loading": "Se încarcă...",
+      "manage": "Gestionează abonamentul"
+    },
+    "messageModal": {
+      "title": "Setări mesaj",
+      "description": "Am selectat mesajele cu cele mai mari rate de partajare a locației. Selectează unul din lista de mai jos.",
+      "language": "Limba mesajului",
+      "selectTemplate": "Selectează un șablon de mesaj",
+      "template1": "Sunt proprietarul acestui telefon și este momentan pierdut. Dacă l-ai găsit, te rog anunță-mă.",
+      "template2": "Dacă acest telefon nu este al tău, ai putea să-mi spui?",
+      "template3": "Fără grabă, dar verifică asta când ai un moment:",
+      "apply": "Aplică"
+    },
+    "trustpilot": {
+      "title": "Ajută-ne să ne îmbunătățim!",
+      "subtitle": "Partajează experiența ta înainte de a folosi Tracify",
+      "message": "Apreciem feedback-ul tău! Te rugăm să-ți iei un moment pentru a evalua experiența ta pe Trustpilot.",
+      "helpText": "Recenzia ta ne ajută să menținem un serviciu de calitate",
+      "leaveReview": "Lasă o recenzie pe Trustpilot",
+      "skip": "Sari deocamdată"
+    },
+    "locationModal": {
+      "title": "Locație primită",
+      "coordinates": "Coordonate",
+      "openMap": "Deschide în Google Maps",
+      "close": "Închide"
+    }
+  },
+  "payment": {
+    "completeSubscription": "Completează abonamentul tău",
+    "subtitle": "Începe să urmărești locațiile de telefon cu consimțământ",
+    "title": "Plată",
+    "trialThen": "Probă de 24h, apoi",
+    "monthAfterTrial": "/lună după probă",
+    "whatsIncluded": "Ce este inclus:",
+    "unlimitedRequests": "✓ Solicitări de locație nelimitate",
+    "realtimeTracking": "✓ Urmărire în timp real",
+    "smsNotifications": "✓ Notificări SMS",
+    "247support": "✓ Suport 24/7",
+    "paymentDetails": "Detalii de plată",
+    "plan": "Plan",
+    "24hourTrial": "Probă de 24 de ore",
+    "total": "Total",
+    "pay": "Plătește",
+    "securePayment": "Plată securizată cu criptare SSL"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "Panou de control",
+      "account": "Cont",
+      "contact": "Contact",
+      "logout": "Deconectare"
+    },
+    "title": "Setări cont",
+    "subtitle": "Gestionează-ți contul și abonamentul",
+    "accountInfo": {
+      "title": "Informații cont",
+      "email": "Adresă de e-mail",
+      "memberSince": "Membru din",
+      "loading": "Se încarcă..."
+    },
+    "subscription": {
+      "title": "Abonament",
+      "plan": "Plan",
+      "nextPayment": "Plata următoare",
+      "status": "Status",
+      "active": "Activ",
+      "loading": "Se încarcă...",
+      "cancelButton": "Anulează abonamentul"
+    },
+    "paymentHistory": {
+      "title": "Istoric plăți",
+      "noHistory": "Niciun istoric de plăți disponibil"
+    },
+    "cancelModal": {
+      "title": "Ești sigur?",
+      "description": "Anularea abonamentului tău înseamnă:",
+      "point1": "Vei pierde accesul la funcțiile premium",
+      "point2": "Abonamentul tău se va încheia imediat",
+      "point3": "Nu vei mai fi taxat",
+      "confirm": "Anulează abonamentul",
+      "goBack": "Înapoi"
+    },
+    "successModal": {
+      "title": "Abonament anulat",
+      "message": "Am confirmat anularea ta și nu vei primi alte taxe de la noi. Un e-mail de confirmare a fost trimis și în inbox-ul tău.",
+      "close": "Închide"
+    }
+  }
+}

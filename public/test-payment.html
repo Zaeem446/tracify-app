@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Stripe Payment</title>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <h1>Stripe Payment Test</h1>
+    <div id="card-element"></div>
+    <div id="card-errors" style="color:red;margin-top:10px;"></div>
+    <button onclick="testPayment()" style="margin-top:20px;padding:10px 20px;">Test Payment</button>
+    <div id="result" style="margin-top:20px;white-space:pre-wrap;"></div>
+
+    <script>
+        const stripe = Stripe('pk_test_51SrNKbEUATNzWM0CoBPd226YJp4Fb4l5YEEMkmjoES03TfHxLi3MvfpwRiDVwZze2RhaVbqqtQ63wAF91Al2TilO001qMTT72O');
+        const elements = stripe.elements();
+        const cardElement = elements.create('card');
+        cardElement.mount('#card-element');
+
+        cardElement.on('change', (event) => {
+            const displayError = document.getElementById('card-errors');
+            if (event.error) {
+                displayError.textContent = event.error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+
+        async function testPayment() {
+            document.getElementById('result').textContent = 'Creating payment method...';
+            
+            const { error, paymentMethod } = await stripe.createPaymentMethod({
+                type: 'card',
+                card: cardElement
+            });
+
+            if (error) {
+                document.getElementById('result').textContent = 'ERROR: ' + error.message;
+                return;
+            }
+
+            document.getElementById('result').textContent = 'Payment Method Created!\n' + JSON.stringify(paymentMethod, null, 2);
+        }
+    </script>
+</body>
+</html>

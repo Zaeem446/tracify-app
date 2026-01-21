@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "Ofte stillede spørgsmål",
+    "pricing": "Priser",
+    "contact": "Kontakt os",
+    "cancel": "Annuller abonnement",
+    "login": "Log ind"
+  },
+  "hero": {
+    "title": "Find enhver telefon, hvor som helst",
+    "subtitle": "Indtast det telefonnummer, du vil finde",
+    "placeholder": "Indtast telefonnummer",
+    "locateBtn": "Find",
+    "disclaimer": "Anmod om telefonplaceringer i realtid via SMS. *Sporing sker kun med modtagerens udtrykkelige samtykke.",
+    "locationFound": "Placering fundet!",
+    "locationExample": "Placeringen af nummeret <strong>123 678-9012</strong> er <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Specialtilbud!",
+    "title": "Prøv Tracifys muligheder for kun",
+    "forFullDay": "i en hel dag!",
+    "subtitle": "Tracify tilbyder sine tjenester gennem et let håndterbart månedligt abonnement.",
+    "trialPeriod": "Prøveperiode",
+    "trial24h": "24-timers prøveversion",
+    "trialDesc": "Tracify fungerer på et månedligt abonnement. Din første betaling giver dig ubegrænset adgang til alle platformens tjenester i 24 timer. Derefter gælder abonnementsgebyret på",
+    "perMonth": "om måneden.",
+    "startTrial": "Start prøveversion",
+    "subscription": "Abonnement",
+    "monthlyFee": "Månedligt gebyr",
+    "subscriptionDesc": "Når 24-timers prøveperioden udløber, fornyes tilbuddet automatisk til et månedligt abonnement. Husk at du kan annullere abonnementet når som helst.",
+    "subscribeNow": "Abonner nu"
+  },
+  "howItWorks": {
+    "title": "Hvordan fungerer det?",
+    "step1Title": "Indtast et telefonnummer",
+    "step1Desc": "Indtast det telefonnummer, du vil finde, og tilpas den SMS-besked, du vil have modtageren til at modtage.",
+    "step2Title": "Send sporings-SMS",
+    "step2Desc": "Tracify sender din tilpassede SMS-besked til modtageren med anmodning om telefonens placering.",
+    "step3Title": "Modtag præcis placering",
+    "step3Desc": "Bliv underrettet, så snart modtageren giver samtykke til at dele sin placering. Se den nøjagtige position på kortet på dit kontrolpanel."
+  },
+  "features": {
+    "title": "Hvorfor vælge Tracify?",
+    "subtitle": "Et klik og nul besvær for at finde enhvers placering over hele verden",
+    "feature1Title": "Diskret service",
+    "feature1Desc": "Selvom telefonens ejer vil blive informeret om en placeringsanmodning, forbliver anmoderens identitet fortrolig. Alle geolokationsanmodninger foretages med respekt for privatlivets fred, og overførte data krypteres for sikkerhed.",
+    "feature2Title": "Ingen installation nødvendig",
+    "feature2Desc": "Der er ingen software at installere på din telefon eller målenheden. Alt fungerer eksternt! Indtast blot det telefonnummer, du vil spore. Så snart SMS-modtageren giver samtykke, har du øjeblikkelig adgang.",
+    "feature3Title": "Verdensomspændende dækning",
+    "feature3Desc": "Tracify fungerer med alle netværk over hele verden. Dog kræver vellykket sporing, at telefonen er tændt, tilgængelighed af service og SMS-modtagerens udtrykkelige samtykke til at dele deres placering.",
+    "feature4Title": "Kompatibel med iOS og Android",
+    "feature4Desc": "Tracify understøtter problemfrit iOS- og Android-mobilenheder. Så længe du har telefonnummeret og den pågældende persons udtrykkelige godkendelse til at spore, kan du finde dem ved hjælp af vores service.",
+    "locatePhone": "Find telefon"
+  },
+  "faq": {
+    "title": "Ofte stillede spørgsmål",
+    "subtitle": "Her kan du finde alle svar på de spørgsmål, vi oftest bliver stillet om vores mobile geolokationstjeneste, Tracify.",
+    "tabAbout": "Om Tracify",
+    "tabPayments": "Betalinger og fakturering",
+    "tabAccount": "Min konto",
+    "q1": "Hvad er Tracify?",
+    "a1": "Tracify er en mobil geolokationstjeneste, der giver dig mulighed for at finde ethvert telefonnummer over hele verden. Vores service fungerer ved at sende en SMS til måltelefonen med anmodning om samtykke til deling af placering. Når samtykket er givet, modtager du præcise GPS-koordinater.",
+    "q2": "Er det lovligt at bruge Tracify telefonnummersporer?",
+    "a2": "Ja, Tracify er helt lovlig, fordi den kræver udtrykkeligt samtykke fra den person, der spores. Modtageren skal aktivt acceptere at dele deres placering ved at svare på SMS-anmodningen. Vi overholder alle privatlivsregler og databeskyttelseslove.",
+    "q3": "Hvilke netværk understøtter Tracify?",
+    "a3": "Tracify understøtter alle større mobilnetværk over hele verden. Uanset om måltelefonen bruger GSM-, CDMA-, LTE- eller 5G-netværk, kan vores service sende placeringsanmodninger til ethvert gyldigt telefonnummer.",
+    "q4": "Kan jeg spore et telefonnummers placering, hvis jeg ikke kender dets model?",
+    "a4": "Absolut! Du behøver ikke at kende telefonens model, producent eller operativsystem. Alt du behøver er telefonnummeret. Vores system håndterer automatisk alle tekniske detaljer uanset enhedstype.",
+    "q5": "Understøtter Tracify iOS- og Android-mobilenheder?",
+    "a5": "Ja, Tracify fungerer med både iOS (iPhone) og Android-enheder. Vores SMS-baserede placeringsanmodningssystem er kompatibelt med enhver smartphone, der kan modtage tekstbeskeder og har placeringstjenester tilgængelige.",
+    "q6": "Hvor hurtigt kan Tracify finde et telefonnummers placering?",
+    "a6": "Så snart SMS-modtageren giver samtykke til at dele deres placering, modtager du koordinaterne næsten øjeblikkeligt. Den samlede tid afhænger af, hvor hurtigt modtageren svarer på placeringsanmodningen.",
+    "q7": "Hvordan sporer man et telefonnummer uden fysisk adgang til målenheden?",
+    "a7": "Indtast blot telefonnummeret i vores system, tilpas din besked, og vi sender en SMS med anmodning om placeringssamtykke. Alt gøres eksternt – fysisk adgang til målenheden er aldrig nødvendig.",
+    "q8": "Kan jeg spore nogen ved deres mobiltelefonnummer?",
+    "a8": "Ja, men kun med deres udtrykkelige samtykke. Tracify sender en placeringsanmodning via SMS, og sporing sker kun, når modtageren accepterer at dele deres placering. Dette sikrer privatliv og lovlig overholdelse.",
+    "q9": "Kan jeg gratis spore nogen ved deres mobiltelefonnummer?",
+    "a9p1": "Vi tilbyder en 24-timers prøveperiode for kun",
+    "a9p2": ", som giver dig fuld adgang til alle funktioner. Efter prøveperioden kan du fortsætte med vores månedlige abonnement til",
+    "a9p3": "/måned.",
+    "q10": "Har du stadig brug for hjælp?",
+    "a10": "Hvis du har andre spørgsmål eller har brug for hjælp, er du velkommen til at kontakte vores supportteam. Vi er her for at hjælpe dig 24/7. Du kan kontakte os via vores kontaktside eller sende os en e-mail direkte."
+  },
+  "footer": {
+    "description": "Tracify giver dig mulighed for at få geolokaliseringen af en mobiltelefon og fungerer med alle typer telefoner, netværk og lande.",
+    "legalInfo": "Juridisk information",
+    "account": "Konto",
+    "signup": "Tilmeld",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Cookiepolitik",
+    "privacy": "Privatlivspolitik",
+    "terms": "Vilkår og betingelser"
+  },
+  "contact": {
+    "title": "Kontakt os",
+    "subtitle": "Vores supportteam er her 24/7 for at hjælpe dig med det samme.",
+    "cardTitle": "Vi er her for at hjælpe",
+    "cardSubtitle": "Vores supportteam er her 24/7 for at hjælpe dig med det samme.",
+    "form": {
+      "name": "Navn",
+      "namePlaceholder": "Dit navn",
+      "email": "E-mail",
+      "emailPlaceholder": "din.email@eksempel.dk",
+      "subject": "Emne",
+      "selectSubject": "Vælg et emne",
+      "technical": "Teknisk support",
+      "billing": "Faktureringsspørgsmål",
+      "feature": "Funktionsanmodning",
+      "feedback": "Generel feedback",
+      "other": "Andet",
+      "message": "Besked",
+      "messagePlaceholder": "Fortæl os, hvordan vi kan hjælpe...",
+      "notRobot": "Jeg er ikke en robot",
+      "send": "Send besked"
+    },
+    "footer": {
+      "home": "Hjem"
+    }
+  },
+  "cancel": {
+    "title": "Annuller dit abonnement",
+    "subtitle": "Indtast din e-mail for at annullere dit abonnement. Dette deaktiverer automatisk fornyelse og forhindrer fremtidige opkrævninger.",
+    "form": {
+      "emailLabel": "E-mailadresse",
+      "emailPlaceholder": "hej@email.dk",
+      "submitBtn": "Annuller abonnement",
+      "helpText": "Hvis du ikke kan huske, hvilken e-mail du brugte, så tjek din indbakke for en velkomstmail fra Tracify. Hvis du stadig ikke kan finde den,",
+      "contactSupport": "kontakt support"
+    },
+    "whyCharged": {
+      "title": "Hvorfor blev jeg opkrævet?"
+    },
+    "needHelp": {
+      "title": "Brug for hjælp?",
+      "description": "Hvis du har et problem eller spørgsmål, er vores supportteam her for dig 24/7. Kontakt os, og vi svarer hurtigt!",
+      "contactBtn": "Kontakt support"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Kontrolpanel",
+      "account": "Konto",
+      "contact": "Kontakt",
+      "settings": "Indstillinger",
+      "logout": "Log ud"
+    },
+    "title": "Spor telefonplacering",
+    "subtitle": "Send en placeringsanmodning med samtykkebaseret sporing",
+    "sendRequest": {
+      "title": "Send placeringsanmodning",
+      "phoneNumber": "Telefonnummer",
+      "phonePlaceholder": "3001234567",
+      "message": "Besked",
+      "send": "Send",
+      "previewMessage": "Forhåndsvis besked",
+      "rateLimit": "Af sikkerheds- og privatlivshensyn kan du kun sende én besked hver 3. time."
+    },
+    "recentRequests": {
+      "title": "Seneste anmodninger",
+      "noRequests": "Ingen sporingsanmodninger endnu"
+    },
+    "trackingActivity": {
+      "title": "Seneste sporingsaktivitet"
+    },
+    "disclaimer": {
+      "title": "Vigtig meddelelse",
+      "point1": "Tracify kræver telefonens ejers udtrykkelige samtykke, før deres placering deles",
+      "point2": "Denne service er kun beregnet til legitime formål (finde tabte enheder, familiesikkerhed)",
+      "point3": "Uautoriseret sporing eller stalking er ulovligt og strengt forbudt",
+      "point4": "Placeringens nøjagtighed afhænger af enhedsindstillinger og netværksforhold",
+      "point5": "Vi er ikke ansvarlige for misbrug af denne service",
+      "needHelp": "Brug for hjælp?",
+      "contactSupport": "Kontakt vores supportteam"
+    },
+    "subscription": {
+      "currentPlan": "Nuværende plan",
+      "loading": "Indlæser...",
+      "manage": "Administrer abonnement"
+    },
+    "messageModal": {
+      "title": "Beskedindstillinger",
+      "description": "Vi har udvalgt beskeder med de højeste placeringsdelingsrater. Vælg en fra listen nedenfor.",
+      "language": "Beskedsprog",
+      "selectTemplate": "Vælg en beskedskabelon",
+      "template1": "Jeg er ejeren af denne telefon, og den er i øjeblikket væk. Hvis du har fundet den, så lad mig venligst vide det.",
+      "template2": "Hvis denne telefon ikke er din, kan du så give mig besked?",
+      "template3": "Ingen hastværk, men se på dette, når du har et øjeblik:",
+      "apply": "Anvend"
+    },
+    "trustpilot": {
+      "title": "Hjælp os med at blive bedre!",
+      "subtitle": "Del din oplevelse før du bruger Tracify",
+      "message": "Vi værdsætter din feedback! Tag venligst et øjeblik til at bedømme din oplevelse på Trustpilot.",
+      "helpText": "Din anmeldelse hjælper os med at opretholde kvalitetsservice",
+      "leaveReview": "Skriv en anmeldelse på Trustpilot",
+      "skip": "Spring over for nu"
+    },
+    "locationModal": {
+      "title": "Placering modtaget",
+      "coordinates": "Koordinater",
+      "openMap": "Åbn i Google Maps",
+      "close": "Luk"
+    }
+  },
+  "payment": {
+    "completeSubscription": "Fuldfør dit abonnement",
+    "subtitle": "Begynd at spore telefonplaceringer med samtykke",
+    "title": "Betaling",
+    "trialThen": "24h prøve, derefter",
+    "monthAfterTrial": "/måned efter prøveperioden",
+    "whatsIncluded": "Hvad er inkluderet:",
+    "unlimitedRequests": "✓ Ubegrænsede placeringsanmodninger",
+    "realtimeTracking": "✓ Realtidssporing",
+    "smsNotifications": "✓ SMS-notifikationer",
+    "247support": "✓ 24/7 support",
+    "paymentDetails": "Betalingsdetaljer",
+    "plan": "Plan",
+    "24hourTrial": "24-timers prøve",
+    "total": "Total",
+    "pay": "Betal",
+    "securePayment": "Sikker betaling med SSL-kryptering"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "Kontrolpanel",
+      "account": "Konto",
+      "contact": "Kontakt",
+      "logout": "Log ud"
+    },
+    "title": "Kontoindstillinger",
+    "subtitle": "Administrer din konto og dit abonnement",
+    "accountInfo": {
+      "title": "Kontoinformation",
+      "email": "E-mailadresse",
+      "memberSince": "Medlem siden",
+      "loading": "Indlæser..."
+    },
+    "subscription": {
+      "title": "Abonnement",
+      "plan": "Plan",
+      "nextPayment": "Næste betaling",
+      "status": "Status",
+      "active": "Aktiv",
+      "loading": "Indlæser...",
+      "cancelButton": "Annuller abonnement"
+    },
+    "paymentHistory": {
+      "title": "Betalingshistorik",
+      "noHistory": "Ingen betalingshistorik tilgængelig"
+    },
+    "cancelModal": {
+      "title": "Er du sikker?",
+      "description": "Annullering af dit abonnement betyder:",
+      "point1": "Du mister adgang til premiumfunktioner",
+      "point2": "Dit abonnement slutter med det samme",
+      "point3": "Du vil ikke blive opkrævet igen",
+      "confirm": "Annuller abonnement",
+      "goBack": "Gå tilbage"
+    },
+    "successModal": {
+      "title": "Abonnement annulleret",
+      "message": "Vi har bekræftet din annullering, og du vil ikke modtage flere opkrævninger fra os. En bekræftelsesmail er også sendt til din indbakke.",
+      "close": "Luk"
+    }
+  }
+}

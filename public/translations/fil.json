@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "Mga Madalas Itanong",
+    "pricing": "Presyo",
+    "contact": "Makipag-ugnayan",
+    "cancel": "Kanselahin ang Subscription",
+    "login": "Mag-login"
+  },
+  "hero": {
+    "title": "Hanapin ang Anumang Telepono, Kahit Saan",
+    "subtitle": "Ilagay ang numero ng telepono na gusto mong hanapin",
+    "placeholder": "Ilagay ang numero ng telepono",
+    "locateBtn": "Hanapin",
+    "disclaimer": "Humiling ng real-time na lokasyon ng telepono sa pamamagitan ng SMS. *Ang pagsubaybay ay nangyayari lamang sa tahasang pahintulot ng tatanggap.",
+    "locationFound": "Natagpuan ang Lokasyon!",
+    "locationExample": "Ang lokasyon ng numero <strong>123 678-9012</strong> ay <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Espesyal na alok!",
+    "title": "Subukan ang mga kakayahan ng Tracify sa halagang",
+    "forFullDay": "sa buong araw!",
+    "subtitle": "Nag-aalok ang Tracify ng mga serbisyo nito sa pamamagitan ng madaling pamahalaan na buwanang subscription.",
+    "trialPeriod": "Panahon ng pagsubok",
+    "trial24h": "24 na Oras na Pagsubok",
+    "trialDesc": "Ang Tracify ay gumagana sa buwanang subscription. Ang iyong unang bayad ay nagbibigay ng walang limitasyong access sa lahat ng serbisyo ng platform sa loob ng 24 na oras. Pagkatapos nito, ang bayad sa subscription na",
+    "perMonth": "bawat buwan ay ipapatupad.",
+    "startTrial": "Simulan ang Pagsubok",
+    "subscription": "Subscription",
+    "monthlyFee": "Buwanang bayad",
+    "subscriptionDesc": "Kapag natapos na ang 24 na oras na panahon ng pagsubok, ang alok ay awtomatikong magre-renew sa buwanang subscription. Tandaan na maaari mong kanselahin ang subscription kailan mo man gusto.",
+    "subscribeNow": "Mag-subscribe Ngayon"
+  },
+  "howItWorks": {
+    "title": "Paano Ito Gumagana?",
+    "step1Title": "Ilagay ang Numero ng Telepono",
+    "step1Desc": "Ilagay ang numero ng telepono na gusto mong hanapin at i-customize ang SMS na gusto mong matanggap ng tatanggap.",
+    "step2Title": "Magpadala ng Tracking SMS",
+    "step2Desc": "Magpapadala ang Tracify sa tatanggap ng iyong custom na SMS na hihingi ng lokasyon ng telepono.",
+    "step3Title": "Tumanggap ng Tumpak na Lokasyon",
+    "step3Desc": "Maabisuhan kaagad kapag pumayag ang tatanggap na ibahagi ang kanilang lokasyon. Tingnan ang eksaktong posisyon sa mapa sa iyong dashboard."
+  },
+  "features": {
+    "title": "Bakit Piliin ang Tracify?",
+    "subtitle": "Isang click at walang pagsisikap para mahanap ang lokasyon ng kahit sino sa buong mundo",
+    "feature1Title": "Discreet na Serbisyo",
+    "feature1Desc": "Bagaman aabisuhan ang may-ari ng telepono tungkol sa kahilingan sa lokasyon, nananatiling kumpidensyal ang pagkakakilanlan ng humihiling. Lahat ng kahilingan sa geolokasyon ay ginagawa nang may paggalang sa privacy, at ang ipinadala na data ay naka-encrypt para sa seguridad.",
+    "feature2Title": "Hindi kailangan ng installation",
+    "feature2Desc": "Walang software na kailangang i-install sa iyong telepono o sa target na device. Lahat ay gumagana nang malayo! Ilagay lang ang numero ng telepono na gusto mong subaybayan. Kapag nagbigay ng pahintulot ang tatanggap ng SMS, magkakaroon ka kaagad ng access.",
+    "feature3Title": "Pandaigdigang saklaw",
+    "feature3Desc": "Gumagana ang Tracify sa lahat ng network sa buong mundo. Gayunpaman, ang matagumpay na pagsubaybay ay nangangailangan na naka-on ang telepono, available ang serbisyo, at tahasang pahintulot ng tatanggap ng SMS na ibahagi ang kanilang lokasyon.",
+    "feature4Title": "Tugma sa iOS at Android",
+    "feature4Desc": "Sinusuportahan ng Tracify ang parehong iOS at Android na mobile device. Hangga't mayroon kang numero ng telepono at tahasang pahintulot ng indibidwal na subaybayan, mahahanap mo sila gamit ang aming serbisyo.",
+    "locatePhone": "Hanapin ang Telepono"
+  },
+  "faq": {
+    "title": "Mga Madalas Itanong",
+    "subtitle": "Dito mo mahahanap ang lahat ng sagot sa mga tanong na madalas naming matanggap tungkol sa aming serbisyo ng mobile geolokasyon, ang Tracify.",
+    "tabAbout": "Tungkol sa Tracify",
+    "tabPayments": "Pagbabayad at Billing",
+    "tabAccount": "Aking Account",
+    "q1": "Ano ang Tracify?",
+    "a1": "Ang Tracify ay isang serbisyo ng mobile geolokasyon na nagbibigay-daan sa iyo na hanapin ang anumang numero ng telepono sa buong mundo. Gumagana ang aming serbisyo sa pamamagitan ng pagpapadala ng SMS sa target na telepono na humihiling ng pahintulot sa pagbabahagi ng lokasyon. Kapag naibigay ang pahintulot, matatanggap mo ang tumpak na GPS coordinates.",
+    "q2": "Legal ba ang paggamit ng Tracify phone number tracker?",
+    "a2": "Oo, ang Tracify ay ganap na legal dahil nangangailangan ito ng tahasang pahintulot mula sa taong sinusubaybayan. Ang tatanggap ay dapat aktibong sumang-ayon na ibahagi ang kanilang lokasyon sa pamamagitan ng pagtugon sa kahilingan sa SMS. Sumusunod kami sa lahat ng regulasyon sa privacy at batas sa proteksyon ng data.",
+    "q3": "Anong mga network ang sinusuportahan ng Tracify?",
+    "a3": "Sinusuportahan ng Tracify ang lahat ng pangunahing mobile network sa buong mundo. Kung ang target na telepono ay gumagamit ng GSM, CDMA, LTE, o 5G network, ang aming serbisyo ay maaaring magpadala ng mga kahilingan sa lokasyon sa anumang valid na numero ng telepono.",
+    "q4": "Maaari ko bang subaybayan ang lokasyon ng numero ng telepono kung hindi ko alam ang modelo nito?",
+    "a4": "Oo naman! Hindi mo kailangang malaman ang modelo ng telepono, manufacturer, o operating system. Ang kailangan mo lang ay ang numero ng telepono. Awtomatikong pinangangasiwaan ng aming sistema ang lahat ng teknikal na detalye anuman ang uri ng device.",
+    "q5": "Sinusuportahan ba ng Tracify ang parehong iOS at Android na mobile device?",
+    "a5": "Oo, gumagana ang Tracify sa parehong iOS (iPhone) at Android device. Ang aming SMS-based na sistema ng kahilingan sa lokasyon ay tugma sa anumang smartphone na maaaring tumanggap ng mga text message at may available na location services.",
+    "q6": "Gaano kabilis mahahanap ng Tracify ang lokasyon ng numero ng telepono?",
+    "a6": "Kapag pumayag ang tatanggap ng SMS na ibahagi ang kanilang lokasyon, matatanggap mo ang coordinates halos kaagad. Ang kabuuang oras ay depende sa kung gaano kabilis tumugon ang tatanggap sa kahilingan sa lokasyon.",
+    "q7": "Paano subaybayan ang numero ng telepono nang walang pisikal na access sa target na device?",
+    "a7": "Ilagay lang ang numero ng telepono sa aming sistema, i-customize ang iyong mensahe, at magpapadala kami ng SMS na humihiling ng pahintulot sa lokasyon. Lahat ay ginagawa nang malayo - hindi kailanman kailangan ng pisikal na access sa target na device.",
+    "q8": "Maaari ko bang subaybayan ang isang tao gamit ang numero ng cellphone?",
+    "a8": "Oo, ngunit sa kanilang tahasang pahintulot lamang. Nagpapadala ang Tracify ng kahilingan sa lokasyon sa pamamagitan ng SMS, at ang pagsubaybay ay nangyayari lamang kapag pumayag ang tatanggap na ibahagi ang kanilang lokasyon. Tinitiyak nito ang privacy at legal na pagsunod.",
+    "q9": "Maaari ko bang subaybayan ang isang tao gamit ang numero ng cellphone nang libre?",
+    "a9p1": "Nag-aalok kami ng 24 na oras na panahon ng pagsubok sa halagang",
+    "a9p2": " lamang, na nagbibigay sa iyo ng buong access sa lahat ng feature. Pagkatapos ng pagsubok, maaari kang magpatuloy sa aming buwanang subscription sa halagang",
+    "a9p3": "/buwan.",
+    "q10": "Kailangan Pa Ba ng Tulong?",
+    "a10": "Kung mayroon kang iba pang mga tanong o kailangan ng tulong, huwag mag-atubiling makipag-ugnayan sa aming support team. Nandito kami upang tulungan ka 24/7. Maaari mo kaming maabot sa pamamagitan ng aming Contact Us page o direktang mag-email sa amin."
+  },
+  "footer": {
+    "description": "Binibigyang-daan ka ng Tracify na makuha ang geo lokasyon ng mobile phone at gumagana sa lahat ng uri ng telepono, network at bansa.",
+    "legalInfo": "Legal na impormasyon",
+    "account": "Account",
+    "signup": "Mag-sign up",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Patakaran sa Cookies",
+    "privacy": "Patakaran sa Privacy",
+    "terms": "Mga Tuntunin at Kundisyon"
+  },
+  "contact": {
+    "title": "Makipag-ugnayan",
+    "subtitle": "Nandito ang aming support team 24/7 upang tulungan ka kaagad.",
+    "cardTitle": "Nandito Kami upang Tumulong",
+    "cardSubtitle": "Nandito ang aming support team 24/7 upang tulungan ka kaagad.",
+    "form": {
+      "name": "Pangalan",
+      "namePlaceholder": "Ang iyong pangalan",
+      "email": "Email",
+      "emailPlaceholder": "iyong.email@halimbawa.com",
+      "subject": "Paksa",
+      "selectSubject": "Pumili ng paksa",
+      "technical": "Technical Support",
+      "billing": "Tanong sa Billing",
+      "feature": "Kahilingan sa Feature",
+      "feedback": "Pangkalahatang Feedback",
+      "other": "Iba pa",
+      "message": "Mensahe",
+      "messagePlaceholder": "Sabihin sa amin kung paano kami makakatulong...",
+      "notRobot": "Hindi ako robot",
+      "send": "Ipadala ang Mensahe"
+    },
+    "footer": {
+      "home": "Home"
+    }
+  },
+  "cancel": {
+    "title": "Kanselahin ang Iyong Subscription",
+    "subtitle": "Ilagay ang iyong email upang kanselahin ang iyong subscription. Ito ay magpapatay ng auto-renewal at mapipigilan ang anumang mga bayarin sa hinaharap.",
+    "form": {
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "hello@email.com",
+      "submitBtn": "Kanselahin ang Subscription",
+      "helpText": "Kung hindi mo matandaan kung anong email ang ginamit mo, tingnan ang iyong inbox para sa welcome email mula sa Tracify. Kung hindi mo pa rin mahanap,",
+      "contactSupport": "makipag-ugnayan sa support"
+    },
+    "whyCharged": {
+      "title": "Bakit ako siningil?"
+    },
+    "needHelp": {
+      "title": "Kailangan ng tulong?",
+      "description": "Kung nagkakaroon ka ng problema o may mga tanong, nandito ang aming support team para sa iyo 24/7. Makipag-ugnayan lang at kaagad kaming tutugon!",
+      "contactBtn": "Makipag-ugnayan sa Support"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "account": "Account",
+      "contact": "Makipag-ugnayan",
+      "settings": "Mga Setting",
+      "logout": "Mag-logout"
+    },
+    "title": "Subaybayan ang Lokasyon ng Telepono",
+    "subtitle": "Magpadala ng kahilingan sa lokasyon na may consent-based na pagsubaybay",
+    "sendRequest": {
+      "title": "Magpadala ng Kahilingan sa Lokasyon",
+      "phoneNumber": "Numero ng Telepono",
+      "phonePlaceholder": "3001234567",
+      "message": "Mensahe",
+      "send": "Ipadala",
+      "previewMessage": "I-preview ang Mensahe",
+      "rateLimit": "Dahil sa seguridad at privacy, maaari ka lamang magpadala ng mensahe isang beses bawat 3 oras."
+    },
+    "recentRequests": {
+      "title": "Mga Kamakailan Kahilingan",
+      "noRequests": "Wala pang kahilingan sa pagsubaybay"
+    },
+    "trackingActivity": {
+      "title": "Kamakailan na Aktibidad ng Pagsubaybay"
+    },
+    "disclaimer": {
+      "title": "Mahalagang Paalala",
+      "point1": "Nangangailangan ang Tracify ng tahasang pahintulot mula sa may-ari ng telepono bago ibahagi ang kanilang lokasyon",
+      "point2": "Ang serbisyong ito ay inilaan lamang para sa mga lehitimong layunin (paghahanap ng nawawalang device, kaligtasan ng pamilya)",
+      "point3": "Ang hindi awtorisadong pagsubaybay o stalking ay ilegal at mahigpit na ipinagbabawal",
+      "point4": "Ang katumpakan ng lokasyon ay depende sa mga setting ng device at kondisyon ng network",
+      "point5": "Hindi kami responsable sa maling paggamit ng serbisyong ito",
+      "needHelp": "Kailangan ng tulong?",
+      "contactSupport": "Makipag-ugnayan sa aming support team"
+    },
+    "subscription": {
+      "currentPlan": "Kasalukuyang Plano",
+      "loading": "Naglo-load...",
+      "manage": "Pamahalaan ang Subscription"
+    },
+    "messageModal": {
+      "title": "Mga Setting ng Mensahe",
+      "description": "Pinili namin ang mga mensahe na may pinakamataas na rate ng pagbabahagi ng lokasyon. Pumili ng isa mula sa listahan sa ibaba.",
+      "language": "Wika ng Mensahe",
+      "selectTemplate": "Pumili ng template ng mensahe",
+      "template1": "Ako ang may-ari ng teleponong ito, at kasalukuyan itong nawawala. Kung natagpuan mo ito, pakisabi sa akin.",
+      "template2": "Kung hindi sa iyo ang teleponong ito, maaari mo ba akong sabihan?",
+      "template3": "Walang pagmamadali, pero tingnan mo ito kapag may oras ka:",
+      "apply": "Ilapat"
+    },
+    "trustpilot": {
+      "title": "Tulungan Kaming Mag-improve!",
+      "subtitle": "Ibahagi ang iyong karanasan bago gamitin ang Tracify",
+      "message": "Pinapahalagahan namin ang iyong feedback! Pakimagsabi ng iyong karanasan sa Trustpilot.",
+      "helpText": "Ang iyong review ay tumutulong sa amin na mapanatili ang kalidad ng serbisyo",
+      "leaveReview": "Mag-iwan ng Review sa Trustpilot",
+      "skip": "Laktawan Muna"
+    },
+    "locationModal": {
+      "title": "Natanggap ang Lokasyon",
+      "coordinates": "Coordinates",
+      "openMap": "Buksan sa Google Maps",
+      "close": "Isara"
+    }
+  },
+  "payment": {
+    "completeSubscription": "Kumpletuhin ang Iyong Subscription",
+    "subtitle": "Simulan ang pagsubaybay sa mga lokasyon ng telepono na may pahintulot",
+    "title": "Pagbabayad",
+    "trialThen": "24h na pagsubok, pagkatapos",
+    "monthAfterTrial": "/buwan pagkatapos ng pagsubok",
+    "whatsIncluded": "Ano ang kasama:",
+    "unlimitedRequests": "✓ Walang limitasyong kahilingan sa lokasyon",
+    "realtimeTracking": "✓ Real-time na pagsubaybay",
+    "smsNotifications": "✓ Mga SMS notification",
+    "247support": "✓ 24/7 na support",
+    "paymentDetails": "Mga Detalye ng Pagbabayad",
+    "plan": "Plano",
+    "24hourTrial": "24 na Oras na Pagsubok",
+    "total": "Kabuuan",
+    "pay": "Magbayad",
+    "securePayment": "Ligtas na pagbabayad na may SSL encryption"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "account": "Account",
+      "contact": "Makipag-ugnayan",
+      "logout": "Mag-logout"
+    },
+    "title": "Mga Setting ng Account",
+    "subtitle": "Pamahalaan ang iyong account at subscription",
+    "accountInfo": {
+      "title": "Impormasyon ng Account",
+      "email": "Email Address",
+      "memberSince": "Miyembro Mula",
+      "loading": "Naglo-load..."
+    },
+    "subscription": {
+      "title": "Subscription",
+      "plan": "Plano",
+      "nextPayment": "Susunod na Bayad",
+      "status": "Status",
+      "active": "Aktibo",
+      "loading": "Naglo-load...",
+      "cancelButton": "Kanselahin ang Subscription"
+    },
+    "paymentHistory": {
+      "title": "Kasaysayan ng Pagbabayad",
+      "noHistory": "Walang kasaysayan ng pagbabayad"
+    },
+    "cancelModal": {
+      "title": "Sigurado Ka Ba?",
+      "description": "Ang pagkansela ng iyong subscription ay nangangahulugang:",
+      "point1": "Mawawalan ka ng access sa mga premium feature",
+      "point2": "Matatapos agad ang iyong subscription",
+      "point3": "Hindi ka na sisisingilin muli",
+      "confirm": "Kanselahin ang Subscription",
+      "goBack": "Bumalik"
+    },
+    "successModal": {
+      "title": "Nakansela ang Subscription",
+      "message": "Nakumpirma na namin ang iyong pagkansela, at hindi ka na makakatanggap ng mga karagdagang singil mula sa amin. Isang confirmation email din ay ipinadala sa iyong inbox.",
+      "close": "Isara"
+    }
+  }
+}

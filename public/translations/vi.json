@@ -1,0 +1,284 @@
+{
+  "nav": {
+    "faq": "Câu hỏi thường gặp",
+    "pricing": "Giá cả",
+    "contact": "Liên hệ",
+    "cancelSubscription": "Hủy đăng ký",
+    "login": "Đăng nhập",
+    "dashboard": "Bảng điều khiển",
+    "account": "Tài khoản",
+    "logout": "Đăng xuất"
+  },
+  "hero": {
+    "title": "Định vị bất kỳ điện thoại nào, ở bất kỳ đâu",
+    "subtitle": "Nhập số điện thoại bạn muốn định vị",
+    "phonePlaceholder": "Nhập số điện thoại",
+    "locateButton": "Định vị",
+    "disclaimer": "Yêu cầu vị trí điện thoại theo thời gian thực qua SMS. *Theo dõi chỉ xảy ra với sự đồng ý rõ ràng của người nhận.",
+    "locationFound": "Đã tìm thấy vị trí!",
+    "locationExample": "Vị trí của số <strong>123 678-9012</strong> là <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Ưu đãi đặc biệt!",
+    "testOut": "Dùng thử khả năng của Tracify chỉ với",
+    "forFullDay": "cho cả ngày!",
+    "subtitle": "Tracify cung cấp dịch vụ thông qua đăng ký hàng tháng dễ quản lý.",
+    "trialPeriod": "Thời gian dùng thử",
+    "24hourTrial": "Dùng thử 24 giờ",
+    "trialDescription1": "Tracify hoạt động theo cơ chế đăng ký hàng tháng. Khoản thanh toán đầu tiên của bạn cấp quyền truy cập không hạn chế vào tất cả các dịch vụ nền tảng trong 24 giờ. Sau thời gian đó, phí đăng ký",
+    "trialDescription2": "mỗi tháng sẽ được áp dụng.",
+    "startTrial": "Bắt đầu dùng thử",
+    "subscription": "Đăng ký",
+    "monthlyFee": "Phí hàng tháng",
+    "subscriptionDescription": "Sau khi kết thúc thời gian dùng thử 24 giờ, ưu đãi sẽ tự động gia hạn thành đăng ký hàng tháng. Hãy nhớ rằng bạn có thể hủy đăng ký bất cứ lúc nào.",
+    "subscribeNow": "Đăng ký ngay"
+  },
+  "howItWorks": {
+    "title": "Cách thức hoạt động?",
+    "step1Title": "Nhập số điện thoại",
+    "step1Description": "Nhập số điện thoại bạn muốn định vị và tùy chỉnh tin nhắn SMS mà bạn muốn người nhận nhận được.",
+    "step2Title": "Gửi SMS theo dõi",
+    "step2Description": "Tracify sẽ gửi cho người nhận tin nhắn SMS tùy chỉnh của bạn để yêu cầu vị trí điện thoại.",
+    "step3Title": "Nhận vị trí chính xác",
+    "step3Description": "Nhận thông báo ngay khi người nhận đồng ý chia sẻ vị trí của họ. Xem vị trí chính xác trên bản đồ trong bảng điều khiển của bạn."
+  },
+  "features": {
+    "title": "Tại sao chọn Tracify?",
+    "subtitle": "Một cú nhấp chuột và không cần nỗ lực để tìm vị trí của bất kỳ ai trên toàn cầu",
+    "feature1Title": "Dịch vụ kín đáo",
+    "feature1Description": "Mặc dù chủ sở hữu điện thoại sẽ được thông báo về yêu cầu vị trí, danh tính của người yêu cầu vẫn được giữ bí mật. Tất cả các yêu cầu định vị địa lý đều được thực hiện với sự tôn trọng quyền riêng tư và dữ liệu truyền đi được mã hóa để bảo mật.",
+    "feature2Title": "Không cần cài đặt",
+    "feature2Description": "Không có phần mềm nào cần cài đặt trên điện thoại của bạn hoặc thiết bị mục tiêu. Mọi thứ đều hoạt động từ xa! Chỉ cần nhập số điện thoại bạn muốn theo dõi. Ngay khi người nhận SMS đồng ý, bạn sẽ có quyền truy cập ngay lập tức.",
+    "feature3Title": "Phủ sóng toàn cầu",
+    "feature3Description": "Tracify hoạt động với tất cả các mạng trên toàn thế giới. Tuy nhiên, việc theo dõi thành công yêu cầu điện thoại đang bật, dịch vụ khả dụng và sự đồng ý rõ ràng của người nhận SMS để chia sẻ vị trí của họ.",
+    "feature4Title": "Tương thích với iOS và Android",
+    "feature4Description": "Tracify hỗ trợ liền mạch cả thiết bị di động iOS và Android. Miễn là bạn có số điện thoại và sự chấp thuận rõ ràng của cá nhân để theo dõi, bạn có thể định vị họ bằng dịch vụ của chúng tôi.",
+    "locatePhone": "Định vị điện thoại"
+  },
+  "faq": {
+    "title": "Câu hỏi thường gặp",
+    "subtitle": "Tại đây bạn có thể tìm thấy tất cả các câu trả lời cho những câu hỏi thường được hỏi về dịch vụ định vị địa lý di động của chúng tôi, Tracify.",
+    "tabAbout": "Về Tracify",
+    "tabPayments": "Thanh toán & Hóa đơn",
+    "tabAccount": "Tài khoản của tôi",
+    "q1": "Tracify là gì?",
+    "a1": "Tracify là dịch vụ định vị địa lý di động cho phép bạn định vị bất kỳ số điện thoại nào trên toàn thế giới. Dịch vụ của chúng tôi hoạt động bằng cách gửi SMS đến điện thoại mục tiêu yêu cầu sự đồng ý chia sẻ vị trí. Sau khi được đồng ý, bạn nhận được tọa độ GPS chính xác.",
+    "q2": "Việc sử dụng trình theo dõi số điện thoại Tracify có hợp pháp không?",
+    "a2": "Có, Tracify hoàn toàn hợp pháp vì nó yêu cầu sự đồng ý rõ ràng của người được theo dõi. Người nhận phải chủ động đồng ý chia sẻ vị trí của họ bằng cách trả lời yêu cầu SMS. Chúng tôi tuân thủ tất cả các quy định về quyền riêng tư và luật bảo vệ dữ liệu.",
+    "q3": "Tracify hỗ trợ những mạng nào?",
+    "a3": "Tracify hỗ trợ tất cả các mạng di động chính trên toàn thế giới. Cho dù điện thoại mục tiêu sử dụng mạng GSM, CDMA, LTE hay 5G, dịch vụ của chúng tôi đều có thể gửi yêu cầu vị trí đến bất kỳ số điện thoại hợp lệ nào.",
+    "q4": "Tôi có thể theo dõi vị trí của số điện thoại nếu tôi không biết mẫu mã của nó không?",
+    "a4": "Hoàn toàn có thể! Bạn không cần biết mẫu điện thoại, nhà sản xuất hay hệ điều hành. Tất cả những gì bạn cần là số điện thoại. Hệ thống của chúng tôi tự động xử lý tất cả các chi tiết kỹ thuật bất kể loại thiết bị.",
+    "q5": "Tracify có hỗ trợ cả thiết bị di động chạy iOS và Android không?",
+    "a5": "Có, Tracify hoạt động với cả thiết bị iOS (iPhone) và Android. Hệ thống yêu cầu vị trí dựa trên SMS của chúng tôi tương thích với bất kỳ điện thoại thông minh nào có thể nhận tin nhắn văn bản và có dịch vụ vị trí.",
+    "q6": "Tracify có thể tìm vị trí của một số điện thoại nhanh như thế nào?",
+    "a6": "Sau khi người nhận SMS đồng ý chia sẻ vị trí của họ, bạn sẽ nhận được tọa độ gần như ngay lập tức. Tổng thời gian phụ thuộc vào tốc độ người nhận phản hồi yêu cầu vị trí.",
+    "q7": "Làm cách nào để theo dõi số điện thoại mà không cần truy cập vật lý vào thiết bị mục tiêu?",
+    "a7": "Chỉ cần nhập số điện thoại vào hệ thống của chúng tôi, tùy chỉnh tin nhắn của bạn và chúng tôi sẽ gửi SMS yêu cầu sự đồng ý vị trí. Mọi thứ đều được thực hiện từ xa - không bao giờ cần truy cập vật lý vào thiết bị mục tiêu.",
+    "q8": "Tôi có thể theo dõi ai đó qua số điện thoại di động không?",
+    "a8": "Có, nhưng chỉ với sự đồng ý rõ ràng của họ. Tracify gửi yêu cầu vị trí qua SMS và việc theo dõi chỉ xảy ra khi người nhận đồng ý chia sẻ vị trí của họ. Điều này đảm bảo quyền riêng tư và tuân thủ pháp luật.",
+    "q9": "Tôi có thể theo dõi ai đó qua số điện thoại di động miễn phí không?",
+    "a9part1": "Chúng tôi cung cấp thời gian dùng thử 24 giờ chỉ với",
+    "a9part2": ", cho phép bạn truy cập đầy đủ vào tất cả các tính năng. Sau khi dùng thử, bạn có thể tiếp tục với đăng ký hàng tháng của chúng tôi với giá",
+    "a9part3": "/tháng.",
+    "q10": "Vẫn cần trợ giúp?",
+    "a10": "Nếu bạn có bất kỳ câu hỏi nào khác hoặc cần hỗ trợ, đừng ngần ngại liên hệ với đội ngũ hỗ trợ của chúng tôi. Chúng tôi ở đây để giúp bạn 24/7. Bạn có thể liên hệ với chúng tôi qua trang Liên hệ hoặc gửi email trực tiếp cho chúng tôi."
+  },
+  "footer": {
+    "description": "Tracify cho phép bạn lấy vị trí địa lý của điện thoại di động và hoạt động trên tất cả các loại điện thoại, mạng và quốc gia.",
+    "legalInfo": "Thông tin pháp lý",
+    "account": "Tài khoản",
+    "signup": "Đăng ký",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Chính sách Cookie",
+    "privacy": "Chính sách Bảo mật",
+    "terms": "Điều khoản và Điều kiện"
+  },
+  "payment": {
+    "completeSubscription": "Hoàn tất đăng ký của bạn",
+    "subtitle": "Bắt đầu theo dõi vị trí điện thoại với sự đồng ý",
+    "title": "Thanh toán",
+    "paymentDetails": "Chi tiết thanh toán",
+    "24hourTrial": "Dùng thử 24 giờ",
+    "bestValue": "Giá trị tốt nhất",
+    "per24hours": "/ 24 giờ",
+    "fullAccess": "Quyền truy cập đầy đủ vào tất cả các tính năng nền tảng trong 24 giờ.",
+    "whatsIncluded": "Bao gồm:",
+    "unlimitedRequests": "✓ Yêu cầu vị trí không giới hạn",
+    "realtimeTracking": "✓ Theo dõi thời gian thực",
+    "smsNotifications": "✓ Thông báo SMS",
+    "247support": "✓ Hỗ trợ 24/7",
+    "cardDetails": "Chi tiết thẻ",
+    "cardNumber": "Số thẻ",
+    "expiryDate": "Ngày hết hạn",
+    "cvv": "CVV",
+    "nameOnCard": "Tên trên thẻ",
+    "plan": "Gói",
+    "total": "Tổng cộng",
+    "pay": "Thanh toán",
+    "securePayment": "Thanh toán an toàn với mã hóa SSL",
+    "trialThen": "Dùng thử 24h, sau đó",
+    "monthAfterTrial": "/tháng sau khi dùng thử"
+  },
+  "dashboard": {
+    "title": "Theo dõi vị trí điện thoại",
+    "subtitle": "Gửi yêu cầu vị trí với theo dõi dựa trên sự đồng ý",
+    "nav": {
+      "dashboard": "Bảng điều khiển",
+      "account": "Tài khoản",
+      "contact": "Liên hệ",
+      "settings": "Cài đặt",
+      "logout": "Đăng xuất"
+    },
+    "sendRequest": {
+      "title": "Gửi yêu cầu vị trí",
+      "phoneNumber": "Số điện thoại",
+      "phonePlaceholder": "3001234567",
+      "message": "Tin nhắn",
+      "send": "Gửi",
+      "previewMessage": "Xem trước tin nhắn",
+      "rateLimit": "Vì lý do bảo mật và quyền riêng tư, bạn chỉ có thể gửi tin nhắn mỗi 3 giờ một lần."
+    },
+    "recentRequests": {
+      "title": "Yêu cầu gần đây",
+      "noRequests": "Chưa có yêu cầu theo dõi nào"
+    },
+    "trackingActivity": {
+      "title": "Hoạt động theo dõi gần đây"
+    },
+    "disclaimer": {
+      "title": "Tuyên bố miễn trừ trách nhiệm quan trọng",
+      "point1": "Tracify yêu cầu sự đồng ý rõ ràng của chủ sở hữu điện thoại trước khi chia sẻ vị trí của họ",
+      "point2": "Dịch vụ này chỉ dành cho mục đích hợp pháp (tìm thiết bị bị mất, an toàn gia đình)",
+      "point3": "Theo dõi trái phép hoặc quấy rối là bất hợp pháp và bị nghiêm cấm",
+      "point4": "Độ chính xác vị trí phụ thuộc vào cài đặt thiết bị và điều kiện mạng",
+      "point5": "Chúng tôi không chịu trách nhiệm về việc lạm dụng dịch vụ này",
+      "needHelp": "Cần giúp đỡ?",
+      "contactSupport": "Liên hệ đội ngũ hỗ trợ của chúng tôi"
+    },
+    "subscription": {
+      "currentPlan": "Gói hiện tại",
+      "loading": "Đang tải...",
+      "manage": "Quản lý đăng ký"
+    },
+    "messageModal": {
+      "title": "Cài đặt tin nhắn",
+      "description": "Chúng tôi đã chọn những tin nhắn có tỷ lệ chia sẻ vị trí cao nhất. Chọn một từ danh sách bên dưới.",
+      "language": "Ngôn ngữ tin nhắn",
+      "selectTemplate": "Chọn mẫu tin nhắn",
+      "template1": "Tôi là chủ sở hữu của điện thoại này và hiện tại nó đang bị mất. Nếu bạn tìm thấy nó, vui lòng cho tôi biết.",
+      "template2": "Nếu điện thoại này không phải của bạn, bạn có thể cho tôi biết được không?",
+      "template3": "Không vội, nhưng hãy xem khi bạn có thời gian:",
+      "apply": "Áp dụng"
+    },
+    "trustpilot": {
+      "title": "Giúp chúng tôi cải thiện!",
+      "subtitle": "Chia sẻ trải nghiệm của bạn trước khi sử dụng Tracify",
+      "message": "Chúng tôi đánh giá cao phản hồi của bạn! Vui lòng dành chút thời gian để đánh giá trải nghiệm của bạn trên Trustpilot.",
+      "helpText": "Đánh giá của bạn giúp chúng tôi duy trì dịch vụ chất lượng",
+      "leaveReview": "Để lại đánh giá trên Trustpilot",
+      "skip": "Bỏ qua bây giờ"
+    },
+    "locationModal": {
+      "title": "Đã nhận vị trí",
+      "coordinates": "Tọa độ",
+      "openMap": "Mở trong Google Maps",
+      "close": "Đóng"
+    }
+  },
+  "account": {
+    "title": "Cài đặt tài khoản",
+    "subtitle": "Quản lý tài khoản và đăng ký của bạn",
+    "nav": {
+      "dashboard": "Bảng điều khiển",
+      "account": "Tài khoản",
+      "contact": "Liên hệ",
+      "logout": "Đăng xuất"
+    },
+    "accountInfo": {
+      "title": "Thông tin tài khoản",
+      "email": "Địa chỉ email",
+      "memberSince": "Thành viên từ",
+      "loading": "Đang tải..."
+    },
+    "subscription": {
+      "title": "Đăng ký",
+      "plan": "Gói",
+      "nextPayment": "Thanh toán tiếp theo",
+      "status": "Trạng thái",
+      "active": "Hoạt động",
+      "loading": "Đang tải...",
+      "cancelButton": "Hủy đăng ký"
+    },
+    "paymentHistory": {
+      "title": "Lịch sử thanh toán",
+      "noHistory": "Không có lịch sử thanh toán"
+    },
+    "cancelModal": {
+      "title": "Bạn có chắc không?",
+      "description": "Hủy đăng ký của bạn có nghĩa là:",
+      "point1": "Bạn sẽ mất quyền truy cập vào các tính năng cao cấp",
+      "point2": "Đăng ký của bạn sẽ kết thúc ngay lập tức",
+      "point3": "Bạn sẽ không bị tính phí nữa",
+      "confirm": "Hủy đăng ký",
+      "goBack": "Quay lại"
+    },
+    "successModal": {
+      "title": "Đăng ký đã bị hủy",
+      "message": "Chúng tôi đã xác nhận việc hủy của bạn và bạn sẽ không nhận được bất kỳ khoản phí nào khác từ chúng tôi. Email xác nhận cũng đã được gửi đến hộp thư đến của bạn.",
+      "close": "Đóng"
+    }
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Đã xảy ra lỗi",
+    "tryAgain": "Vui lòng thử lại",
+    "required": "Bắt buộc",
+    "optional": "Tùy chọn"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Our support team is here 24/7 to help you right away.",
+    "cardTitle": "We're Here to Help",
+    "cardSubtitle": "Our support team is here 24/7 to help you right away.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "subject": "Subject",
+      "selectSubject": "Select a subject",
+      "technical": "Technical Support",
+      "billing": "Billing Question",
+      "feature": "Feature Request",
+      "feedback": "General Feedback",
+      "other": "Other",
+      "message": "Message",
+      "messagePlaceholder": "Tell us how we can help...",
+      "notRobot": "I'm not a robot",
+      "send": "Send Message"
+    },
+    "footer": {
+      "home": "Home"
+    }
+  },
+  "cancel": {
+    "title": "Cancel Your Subscription",
+    "subtitle": "Enter your email to cancel your subscription. This will turn off auto-renewal and prevent any future charges.",
+    "form": {
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "hello@email.com",
+      "submitBtn": "Cancel Subscription",
+      "helpText": "If you don't remember which email you used, check your inbox for a welcome email from Tracify. If you still can't find it,",
+      "contactSupport": "contact support"
+    },
+    "whyCharged": {
+      "title": "Why was I charged?"
+    },
+    "needHelp": {
+      "title": "Need help?",
+      "description": "If you're experiencing an issue or have any questions, our support team is here for you 24/7. Just reach out and we'll get back to you quickly!",
+      "contactBtn": "Contact Support"
+    }
+  }
+}

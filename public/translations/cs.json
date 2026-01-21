@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "Často kladené otázky",
+    "pricing": "Ceny",
+    "contact": "Kontaktujte nás",
+    "cancel": "Zrušit předplatné",
+    "login": "Přihlásit se"
+  },
+  "hero": {
+    "title": "Najděte jakýkoli telefon, kdekoli",
+    "subtitle": "Zadejte telefonní číslo, které chcete najít",
+    "placeholder": "Zadejte telefonní číslo",
+    "locateBtn": "Najít",
+    "disclaimer": "Vyžádejte si polohu telefonu v reálném čase prostřednictvím SMS. *Sledování probíhá pouze s výslovným souhlasem příjemce.",
+    "locationFound": "Poloha nalezena!",
+    "locationExample": "Poloha čísla <strong>123 678-9012</strong> je <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Speciální nabídka!",
+    "title": "Vyzkoušejte možnosti Tracify pouze za",
+    "forFullDay": "na celý den!",
+    "subtitle": "Tracify nabízí své služby prostřednictvím snadno spravovatelného měsíčního předplatného.",
+    "trialPeriod": "Zkušební období",
+    "trial24h": "24hodinová zkušební verze",
+    "trialDesc": "Tracify funguje na měsíčním předplatném. Vaše počáteční platba vám poskytne neomezený přístup ke všem službám platformy po dobu 24 hodin. Po uplynutí této doby se uplatňuje předplatné ve výši",
+    "perMonth": "měsíčně.",
+    "startTrial": "Zahájit zkušební verzi",
+    "subscription": "Předplatné",
+    "monthlyFee": "Měsíční poplatek",
+    "subscriptionDesc": "Po skončení 24hodinového zkušebního období se nabídka automaticky obnoví na měsíční předplatné. Pamatujte, že předplatné můžete kdykoli zrušit.",
+    "subscribeNow": "Přihlásit se k odběru"
+  },
+  "howItWorks": {
+    "title": "Jak to funguje?",
+    "step1Title": "Zadejte telefonní číslo",
+    "step1Desc": "Zadejte telefonní číslo, které chcete najít, a přizpůsobte SMS zprávu, kterou chcete, aby příjemce obdržel.",
+    "step2Title": "Odešlete sledovací SMS",
+    "step2Desc": "Tracify odešle příjemci vaši přizpůsobenou SMS zprávu s žádostí o polohu telefonu.",
+    "step3Title": "Získejte přesnou polohu",
+    "step3Desc": "Buďte upozorněni, jakmile příjemce souhlasí se sdílením své polohy. Zobrazte přesnou pozici na mapě na vašem ovládacím panelu."
+  },
+  "features": {
+    "title": "Proč si vybrat Tracify?",
+    "subtitle": "Jedno kliknutí a nulová námaha pro nalezení polohy kohokoli na světě",
+    "feature1Title": "Diskrétní služba",
+    "feature1Desc": "I když bude majitel telefonu informován o žádosti o polohu, identita žadatele zůstane důvěrná. Všechny žádosti o geolokaci jsou podávány s respektem k soukromí a přenášená data jsou šifrována pro zajištění bezpečnosti.",
+    "feature2Title": "Není nutná instalace",
+    "feature2Desc": "Na váš telefon ani cílové zařízení není třeba instalovat žádný software. Vše funguje na dálku! Stačí zadat telefonní číslo, které chcete sledovat. Jakmile příjemce SMS udělí souhlas, budete mít okamžitý přístup.",
+    "feature3Title": "Celosvětové pokrytí",
+    "feature3Desc": "Tracify funguje se všemi sítěmi po celém světě. Úspěšné sledování však vyžaduje, aby byl telefon zapnutý, dostupnost služby a výslovný souhlas příjemce SMS se sdílením své polohy.",
+    "feature4Title": "Kompatibilní s iOS a Androidem",
+    "feature4Desc": "Tracify bezproblémově podporuje mobilní zařízení iOS a Android. Pokud máte telefonní číslo a výslovné schválení jednotlivce ke sledování, můžete ho najít pomocí naší služby.",
+    "locatePhone": "Najít telefon"
+  },
+  "faq": {
+    "title": "Často kladené otázky",
+    "subtitle": "Zde najdete všechny odpovědi na nejčastěji kladené otázky o naší službě mobilní geolokace, Tracify.",
+    "tabAbout": "O Tracify",
+    "tabPayments": "Platby a fakturace",
+    "tabAccount": "Můj účet",
+    "q1": "Co je Tracify?",
+    "a1": "Tracify je služba mobilní geolokace, která vám umožňuje najít jakékoli telefonní číslo po celém světě. Naše služba funguje odesláním SMS na cílový telefon s žádostí o souhlas se sdílením polohy. Jakmile je souhlas udělen, obdržíte přesné GPS souřadnice.",
+    "q2": "Je používání sledovače telefonních čísel Tracify legální?",
+    "a2": "Ano, Tracify je zcela legální, protože vyžaduje výslovný souhlas sledované osoby. Příjemce musí aktivně souhlasit se sdílením své polohy odpovědí na SMS žádost. Dodržujeme všechny předpisy o ochraně soukromí a zákony o ochraně osobních údajů.",
+    "q3": "Jaké sítě Tracify podporuje?",
+    "a3": "Tracify podporuje všechny hlavní mobilní sítě po celém světě. Ať už cílový telefon používá sítě GSM, CDMA, LTE nebo 5G, naše služba může odesílat žádosti o polohu na jakékoli platné telefonní číslo.",
+    "q4": "Mohu sledovat polohu telefonního čísla, pokud neznám jeho model?",
+    "a4": "Absolutně! Nemusíte znát model telefonu, výrobce ani operační systém. Vše, co potřebujete, je telefonní číslo. Náš systém automaticky zpracuje všechny technické podrobnosti bez ohledu na typ zařízení.",
+    "q5": "Podporuje Tracify mobilní zařízení iOS a Android?",
+    "a5": "Ano, Tracify funguje jak se zařízeními iOS (iPhone), tak Android. Náš systém žádostí o polohu založený na SMS je kompatibilní s jakýmkoli chytrým telefonem, který může přijímat textové zprávy a má k dispozici lokalizační služby.",
+    "q6": "Jak rychle může Tracify najít polohu telefonního čísla?",
+    "a6": "Jakmile příjemce SMS souhlasí se sdílením své polohy, obdržíte souřadnice téměř okamžitě. Celkový čas závisí na tom, jak rychle příjemce odpoví na žádost o polohu.",
+    "q7": "Jak sledovat telefonní číslo bez fyzického přístupu k cílovému zařízení?",
+    "a7": "Jednoduše zadejte telefonní číslo do našeho systému, přizpůsobte svou zprávu a my odešleme SMS s žádostí o souhlas s polohou. Vše se provádí na dálku – fyzický přístup k cílovému zařízení není nikdy potřeba.",
+    "q8": "Mohu sledovat někoho podle čísla mobilního telefonu?",
+    "a8": "Ano, ale pouze s jejich výslovným souhlasem. Tracify odesílá žádost o polohu prostřednictvím SMS a sledování probíhá pouze tehdy, když příjemce souhlasí se sdílením své polohy. Tím je zajištěno soukromí a soulad s právními předpisy.",
+    "q9": "Mohu sledovat někoho podle čísla mobilního telefonu zdarma?",
+    "a9p1": "Nabízíme 24hodinové zkušební období pouze za",
+    "a9p2": ", které vám poskytne plný přístup ke všem funkcím. Po zkušební době můžete pokračovat s naším měsíčním předplatným za",
+    "a9p3": "/měsíc.",
+    "q10": "Stále potřebujete pomoc?",
+    "a10": "Pokud máte další otázky nebo potřebujete pomoc, neváhejte kontaktovat náš tým podpory. Jsme tu, abychom vám pomohli 24/7. Můžete nás kontaktovat prostřednictvím naší kontaktní stránky nebo nám poslat e-mail přímo."
+  },
+  "footer": {
+    "description": "Tracify vám umožňuje získat geolokaci mobilního telefonu a funguje se všemi typy telefonů, sítí a zemí.",
+    "legalInfo": "Právní informace",
+    "account": "Účet",
+    "signup": "Registrace",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Zásady používání souborů cookie",
+    "privacy": "Zásady ochrany osobních údajů",
+    "terms": "Obchodní podmínky"
+  },
+  "contact": {
+    "title": "Kontaktujte nás",
+    "subtitle": "Náš tým podpory je tu 24/7, aby vám okamžitě pomohl.",
+    "cardTitle": "Jsme tu, abychom pomohli",
+    "cardSubtitle": "Náš tým podpory je tu 24/7, aby vám okamžitě pomohl.",
+    "form": {
+      "name": "Jméno",
+      "namePlaceholder": "Vaše jméno",
+      "email": "E-mail",
+      "emailPlaceholder": "vas.email@priklad.cz",
+      "subject": "Předmět",
+      "selectSubject": "Vyberte předmět",
+      "technical": "Technická podpora",
+      "billing": "Dotaz k fakturaci",
+      "feature": "Žádost o funkci",
+      "feedback": "Obecná zpětná vazba",
+      "other": "Jiné",
+      "message": "Zpráva",
+      "messagePlaceholder": "Řekněte nám, jak vám můžeme pomoci...",
+      "notRobot": "Nejsem robot",
+      "send": "Odeslat zprávu"
+    },
+    "footer": {
+      "home": "Domů"
+    }
+  },
+  "cancel": {
+    "title": "Zrušte své předplatné",
+    "subtitle": "Zadejte svůj e-mail pro zrušení předplatného. Tím se deaktivuje automatické obnovování a zabrání se budoucím poplatkům.",
+    "form": {
+      "emailLabel": "E-mailová adresa",
+      "emailPlaceholder": "ahoj@email.cz",
+      "submitBtn": "Zrušit předplatné",
+      "helpText": "Pokud si nepamatujete, jaký e-mail jste použili, zkontrolujte svou doručenou poštu pro uvítací e-mail od Tracify. Pokud ho stále nemůžete najít,",
+      "contactSupport": "kontaktujte podporu"
+    },
+    "whyCharged": {
+      "title": "Proč mi bylo účtováno?"
+    },
+    "needHelp": {
+      "title": "Potřebujete pomoc?",
+      "description": "Pokud máte problém nebo dotaz, náš tým podpory je tu pro vás 24/7. Stačí se ozvat a my vám rychle odpovíme!",
+      "contactBtn": "Kontaktovat podporu"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Ovládací panel",
+      "account": "Účet",
+      "contact": "Kontakt",
+      "settings": "Nastavení",
+      "logout": "Odhlásit se"
+    },
+    "title": "Sledovat polohu telefonu",
+    "subtitle": "Odešlete žádost o polohu se sledováním založeným na souhlasu",
+    "sendRequest": {
+      "title": "Odeslat žádost o polohu",
+      "phoneNumber": "Telefonní číslo",
+      "phonePlaceholder": "3001234567",
+      "message": "Zpráva",
+      "send": "Odeslat",
+      "previewMessage": "Náhled zprávy",
+      "rateLimit": "Z bezpečnostních a soukromých důvodů můžete odeslat pouze jednu zprávu každé 3 hodiny."
+    },
+    "recentRequests": {
+      "title": "Nedávné žádosti",
+      "noRequests": "Zatím žádné žádosti o sledování"
+    },
+    "trackingActivity": {
+      "title": "Nedávná aktivita sledování"
+    },
+    "disclaimer": {
+      "title": "Důležité upozornění",
+      "point1": "Tracify vyžaduje výslovný souhlas majitele telefonu před sdílením jeho polohy",
+      "point2": "Tato služba je určena pouze pro legitimní účely (hledání ztracených zařízení, rodinná bezpečnost)",
+      "point3": "Neoprávněné sledování nebo pronásledování je nezákonné a přísně zakázané",
+      "point4": "Přesnost polohy závisí na nastavení zařízení a síťových podmínkách",
+      "point5": "Neneseme odpovědnost za zneužití této služby",
+      "needHelp": "Potřebujete pomoc?",
+      "contactSupport": "Kontaktujte náš tým podpory"
+    },
+    "subscription": {
+      "currentPlan": "Aktuální plán",
+      "loading": "Načítání...",
+      "manage": "Spravovat předplatné"
+    },
+    "messageModal": {
+      "title": "Nastavení zprávy",
+      "description": "Vybrali jsme zprávy s nejvyšší mírou sdílení polohy. Vyberte jednu ze seznamu níže.",
+      "language": "Jazyk zprávy",
+      "selectTemplate": "Vyberte šablonu zprávy",
+      "template1": "Jsem majitel tohoto telefonu a je momentálně ztracený. Pokud jste ho našli, dejte mi prosím vědět.",
+      "template2": "Pokud tento telefon není váš, mohli byste mi dát vědět?",
+      "template3": "Nespěchám, ale podívejte se na to, až budete mít chvilku:",
+      "apply": "Použít"
+    },
+    "trustpilot": {
+      "title": "Pomozte nám zlepšit se!",
+      "subtitle": "Sdílejte své zkušenosti před použitím Tracify",
+      "message": "Vážíme si vaší zpětné vazby! Věnujte prosím chvilku ohodnocení svých zkušeností na Trustpilotu.",
+      "helpText": "Vaše recenze nám pomáhá udržovat kvalitní služby",
+      "leaveReview": "Zanechat recenzi na Trustpilotu",
+      "skip": "Přeskočit prozatím"
+    },
+    "locationModal": {
+      "title": "Poloha přijata",
+      "coordinates": "Souřadnice",
+      "openMap": "Otevřít v Google Mapách",
+      "close": "Zavřít"
+    }
+  },
+  "payment": {
+    "completeSubscription": "Dokončete své předplatné",
+    "subtitle": "Začněte sledovat polohy telefonů se souhlasem",
+    "title": "Platba",
+    "trialThen": "24h zkušební verze, poté",
+    "monthAfterTrial": "/měsíc po zkušební verzi",
+    "whatsIncluded": "Co je zahrnuto:",
+    "unlimitedRequests": "✓ Neomezené žádosti o polohu",
+    "realtimeTracking": "✓ Sledování v reálném čase",
+    "smsNotifications": "✓ SMS oznámení",
+    "247support": "✓ Podpora 24/7",
+    "paymentDetails": "Platební údaje",
+    "plan": "Plán",
+    "24hourTrial": "24hodinová zkušební verze",
+    "total": "Celkem",
+    "pay": "Zaplatit",
+    "securePayment": "Bezpečná platba se šifrováním SSL"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "Ovládací panel",
+      "account": "Účet",
+      "contact": "Kontakt",
+      "logout": "Odhlásit se"
+    },
+    "title": "Nastavení účtu",
+    "subtitle": "Spravujte svůj účet a předplatné",
+    "accountInfo": {
+      "title": "Informace o účtu",
+      "email": "E-mailová adresa",
+      "memberSince": "Členem od",
+      "loading": "Načítání..."
+    },
+    "subscription": {
+      "title": "Předplatné",
+      "plan": "Plán",
+      "nextPayment": "Další platba",
+      "status": "Stav",
+      "active": "Aktivní",
+      "loading": "Načítání...",
+      "cancelButton": "Zrušit předplatné"
+    },
+    "paymentHistory": {
+      "title": "Historie plateb",
+      "noHistory": "Historie plateb není k dispozici"
+    },
+    "cancelModal": {
+      "title": "Jste si jistí?",
+      "description": "Zrušení předplatného znamená:",
+      "point1": "Ztratíte přístup k prémiovým funkcím",
+      "point2": "Vaše předplatné skončí okamžitě",
+      "point3": "Nebude vám již účtováno",
+      "confirm": "Zrušit předplatné",
+      "goBack": "Vrátit se"
+    },
+    "successModal": {
+      "title": "Předplatné zrušeno",
+      "message": "Potvrdili jsme vaše zrušení a již vám nebude účtováno. Potvrzovací e-mail byl také odeslán do vaší schránky.",
+      "close": "Zavřít"
+    }
+  }
+}

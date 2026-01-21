@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "S.S.S",
+    "pricing": "Fiyatlandirma",
+    "contact": "Bize Ulasin",
+    "cancel": "Aboneligi Iptal Et",
+    "login": "Giris Yap"
+  },
+  "hero": {
+    "title": "Herhangi Bir Telefonu, Her Yerden Bulun",
+    "subtitle": "Bulmak istediginiz telefon numarasini girin",
+    "placeholder": "Telefon numarasi girin",
+    "locateBtn": "Bul",
+    "disclaimer": "SMS ile gercek zamanli telefon konumlari isteyin. *Izleme yalnizca alicinin acik onayi ile gerceklesir.",
+    "locationFound": "Konum Bulundu!",
+    "locationExample": "<strong>123 678-9012</strong> numarasinin konumu <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Ozel teklif!",
+    "title": "Tracify'in yeteneklerini sadece",
+    "forFullDay": "ile tam bir gun test edin!",
+    "subtitle": "Tracify, hizmetlerini kolay yonetilebilir aylik abonelik yoluyla sunar.",
+    "trialPeriod": "Deneme suresi",
+    "trial24h": "24 Saatlik Deneme",
+    "trialDesc": "Tracify aylik abonelik bazinda calisir. Ilk odemeniz, tum platform hizmetlerine 24 saat boyunca sinirsiz erisim saglar. Bu sureden sonra",
+    "perMonth": "aylik abonelik ucreti uygulanir.",
+    "startTrial": "Denemeyi Baslat",
+    "subscription": "Abonelik",
+    "monthlyFee": "Aylik ucret",
+    "subscriptionDesc": "24 saatlik deneme suresi sona erdikten sonra, teklif otomatik olarak aylik abonelige yenilenir. Aboneligi istediginiz zaman iptal edebileceginizi unutmayin.",
+    "subscribeNow": "Simdi Abone Ol"
+  },
+  "howItWorks": {
+    "title": "Nasil Calisir?",
+    "step1Title": "Bir Telefon Numarasi Girin",
+    "step1Desc": "Bulmak istediginiz telefon numarasini girin ve alicinin almasini istediginiz SMS mesajini ozellestirin.",
+    "step2Title": "Izleme SMS'i Gonderin",
+    "step2Desc": "Tracify, aliciya telefonun konumunu isteyecek ozel SMS'inizi gonderecektir.",
+    "step3Title": "Kesin Konumu Alin",
+    "step3Desc": "Alici konumunu paylasmayi kabul eder etmez bildirim alin. Kontrol panelinizde haritada tam konumu gorun."
+  },
+  "features": {
+    "title": "Neden Tracify'i secmelisiniz?",
+    "subtitle": "Dunyanin her yerindeki herhangi birinin konumunu bulmak icin tek tiklama ve sifir caba",
+    "feature1Title": "Gizli Hizmet",
+    "feature1Desc": "Telefon sahibi konum istegi hakkinda bilgilendirilecek olsa da, istekte bulunan kisinin kimligi gizli kalir. Tum cografi konum istekleri gizlilige saygi gosterilerek yapilir ve iletilen veriler guvenlik icin sifrelenir.",
+    "feature2Title": "Kurulum gerektirmez",
+    "feature2Desc": "Telefonunuza veya hedef cihaza kurulacak yazilim yoktur. Her sey uzaktan calisir! Sadece izlemek istediginiz telefon numarasini girin. SMS alicisi onay verdiginde hemen erisime sahip olacaksiniz.",
+    "feature3Title": "Dunya capinda kapsama",
+    "feature3Desc": "Tracify, dunya capindaki tum sebekelerle calisir. Ancak basarili izleme, telefonun acik olmasi, hizmet kullanilabilirligi ve SMS alicisinin konumunu paylasma konusundaki acik onayi gerektirir.",
+    "feature4Title": "iOS ve Android uyumlu",
+    "feature4Desc": "Tracify hem iOS hem de Android mobil cihazlari sorunsuz destekler. Telefon numarasina ve kisinin izleme icin acik onayina sahip oldugunuz surece, hizmetimizi kullanarak onlari bulabilirsiniz.",
+    "locatePhone": "Telefonu Bul"
+  },
+  "faq": {
+    "title": "Sikca Sorulan Sorular",
+    "subtitle": "Burada, mobil cografi konum hizmetimiz Tracify hakkinda en sik sorulan sorularin tum yanitlarini bulabilirsiniz.",
+    "tabAbout": "Tracify Hakkinda",
+    "tabPayments": "Odemeler ve Faturalama",
+    "tabAccount": "Hesabim",
+    "q1": "Tracify nedir?",
+    "a1": "Tracify, dunya capinda herhangi bir telefon numarasini bulmanizi saglayan bir mobil cografi konum hizmetidir. Hizmetimiz, hedef telefona konum paylasimi onayi isteyen bir SMS gondererek calisir. Onay verildikten sonra, kesin GPS koordinatlarini alirsiniz.",
+    "q2": "Tracify telefon numarasi izleyicisini kullanmak yasal mi?",
+    "a2": "Evet, Tracify tamamen yasaldir cunku izlenen kisiden acik onay gerektirir. Alici, SMS istegine yanit vererek konumunu paylasmayi aktif olarak kabul etmelidir. Tum gizlilik duzenlemelerine ve veri koruma yasalarina uyuyoruz.",
+    "q3": "Tracify hangi sebekeleri destekler?",
+    "a3": "Tracify, dunya capindaki tum buyuk mobil sebekeleri destekler. Hedef telefon GSM, CDMA, LTE veya 5G sebekeleri kullaniyor olsa da, hizmetimiz herhangi bir gecerli telefon numarasina konum istekleri gonderebilir.",
+    "q4": "Modelini bilmeden telefon numarasinin konumunu izleyebilir miyim?",
+    "a4": "Kesinlikle! Telefon modelini, ureticiyi veya isletim sistemini bilmenize gerek yok. Tek ihtiyaciniz olan telefon numarasi. Sistemimiz, cihaz turundan bagimsiz olarak tum teknik detaylari otomatik olarak halleder.",
+    "q5": "Tracify hem iOS hem de Android isletim sistemli mobil cihazlari destekler mi?",
+    "a5": "Evet, Tracify hem iOS (iPhone) hem de Android cihazlarla calisir. SMS tabanli konum istegi sistemimiz, metin mesajlari alabilen ve konum hizmetleri mevcut olan herhangi bir akilli telefonla uyumludur.",
+    "q6": "Tracify bir telefon numarasinin konumunu ne kadar hizli bulabilir?",
+    "a6": "SMS alicisi konumunu paylasmayi kabul eder etmez, koordinatlari neredeyse aninda alirsiniz. Toplam sure, alicinin konum istegine ne kadar hizli yanit verdigine baglidir.",
+    "q7": "Hedef cihaza fiziksel erisim olmadan telefon numarasi nasil izlenir?",
+    "a7": "Basitce sistemimize telefon numarasini girin, mesajinizi ozellestirin ve konum onayi isteyen bir SMS gonderelim. Her sey uzaktan yapilir - hedef cihaza fiziksel erisim asla gerekmez.",
+    "q8": "Birini cep telefonu numarasiyla izleyebilir miyim?",
+    "a8": "Evet, ancak yalnizca acik onaylariyla. Tracify SMS yoluyla konum istegi gonderir ve izleme yalnizca alici konumunu paylasmayi kabul ettiginde gerceklesir. Bu, gizlilik ve yasal uyumu saglar.",
+    "q9": "Birini cep telefonu numarasiyla ucretsiz izleyebilir miyim?",
+    "a9p1": "Sadece",
+    "a9p2": " karsiliginda tum ozelliklere tam erisim saglayan 24 saatlik bir deneme suresi sunuyoruz. Denemeden sonra",
+    "a9p3": "/aylik aboneligimizle devam edebilirsiniz.",
+    "q10": "Hala Yardima mi Ihtiyaciniz Var?",
+    "a10": "Baska sorulariniz varsa veya yardima ihtiyaciniz varsa, lutfen destek ekibimizle iletisime gecmekten cekinmeyin. 7/24 size yardimci olmak icin buradayiz. Bize Ulasin sayfamiz veya dogrudan e-posta yoluyla bize ulasabilirsiniz."
+  },
+  "footer": {
+    "description": "Tracify, bir cep telefonunun cografi konumunu almanizi saglar ve tum telefon turleri, sebekeler ve ulkelerde calisir.",
+    "legalInfo": "Yasal bilgiler",
+    "account": "Hesap",
+    "signup": "Kaydol",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Cerez Politikasi",
+    "privacy": "Gizlilik Politikasi",
+    "terms": "Sartlar ve Kosullar"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Our support team is here 24/7 to help you right away.",
+    "cardTitle": "We're Here to Help",
+    "cardSubtitle": "Our support team is here 24/7 to help you right away.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "subject": "Subject",
+      "selectSubject": "Select a subject",
+      "technical": "Technical Support",
+      "billing": "Billing Question",
+      "feature": "Feature Request",
+      "feedback": "General Feedback",
+      "other": "Other",
+      "message": "Message",
+      "messagePlaceholder": "Tell us how we can help...",
+      "notRobot": "I'm not a robot",
+      "send": "Send Message"
+    },
+    "footer": {
+      "home": "Home"
+    }
+  },
+  "cancel": {
+    "title": "Cancel Your Subscription",
+    "subtitle": "Enter your email to cancel your subscription. This will turn off auto-renewal and prevent any future charges.",
+    "form": {
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "hello@email.com",
+      "submitBtn": "Cancel Subscription",
+      "helpText": "If you don't remember which email you used, check your inbox for a welcome email from Tracify. If you still can't find it,",
+      "contactSupport": "contact support"
+    },
+    "whyCharged": {
+      "title": "Why was I charged?"
+    },
+    "needHelp": {
+      "title": "Need help?",
+      "description": "If you're experiencing an issue or have any questions, our support team is here for you 24/7. Just reach out and we'll get back to you quickly!",
+      "contactBtn": "Contact Support"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "account": "Account",
+      "contact": "Contact",
+      "settings": "Settings",
+      "logout": "Logout"
+    },
+    "title": "Track a Phone Location",
+    "subtitle": "Send a location request with consent-based tracking",
+    "sendRequest": {
+      "title": "Send Location Request",
+      "phoneNumber": "Phone Number",
+      "phonePlaceholder": "3001234567",
+      "message": "Message",
+      "send": "Send",
+      "previewMessage": "Preview Message",
+      "rateLimit": "Due to security and privacy reasons, you can only send a message once every 3 hours."
+    },
+    "recentRequests": {
+      "title": "Recent Requests",
+      "noRequests": "No tracking requests yet"
+    },
+    "trackingActivity": {
+      "title": "Recent Tracking Activity"
+    },
+    "disclaimer": {
+      "title": "Important Disclaimer",
+      "point1": "Tracify requires explicit consent from the phone owner before sharing their location",
+      "point2": "This service is intended for legitimate purposes only (finding lost devices, family safety)",
+      "point3": "Unauthorized tracking or stalking is illegal and strictly prohibited",
+      "point4": "Location accuracy depends on device settings and network conditions",
+      "point5": "We are not responsible for misuse of this service",
+      "needHelp": "Need help?",
+      "contactSupport": "Contact our support team"
+    },
+    "subscription": {
+      "currentPlan": "Current Plan",
+      "loading": "Loading...",
+      "manage": "Manage Subscription"
+    },
+    "messageModal": {
+      "title": "Message Settings",
+      "description": "We've selected the messages with the highest location-sharing rates. Select one from the list below.",
+      "language": "Message Language",
+      "selectTemplate": "Select a message template",
+      "template1": "I'm the owner of this phone, and it's currently lost. If you've found it, please let me know.",
+      "template2": "If this phone isn't yours, could you let me know?",
+      "template3": "No rush, but check this out when you have a sec:",
+      "apply": "Apply"
+    },
+    "trustpilot": {
+      "title": "Help Us Improve!",
+      "subtitle": "Share your experience before using Tracify",
+      "message": "We value your feedback! Please take a moment to rate your experience on Trustpilot.",
+      "helpText": "Your review helps us maintain quality service",
+      "leaveReview": "Leave a Review on Trustpilot",
+      "skip": "Skip for Now"
+    },
+    "locationModal": {
+      "title": "Location Received",
+      "coordinates": "Coordinates",
+      "openMap": "Open in Google Maps",
+      "close": "Close"
+    }
+  },
+  "payment": {
+    "completeSubscription": "Complete Your Subscription",
+    "subtitle": "Start tracking phone locations with consent",
+    "title": "Payment",
+    "trialThen": "24h trial, then",
+    "monthAfterTrial": "/month after trial",
+    "whatsIncluded": "What's included:",
+    "unlimitedRequests": "✓ Unlimited location requests",
+    "realtimeTracking": "✓ Real-time tracking",
+    "smsNotifications": "✓ SMS notifications",
+    "247support": "✓ 24/7 support",
+    "paymentDetails": "Payment Details",
+    "plan": "Plan",
+    "24hourTrial": "24-Hour Trial",
+    "total": "Total",
+    "pay": "Pay",
+    "securePayment": "Secure payment with SSL encryption"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "account": "Account",
+      "contact": "Contact",
+      "logout": "Logout"
+    },
+    "title": "Account Settings",
+    "subtitle": "Manage your account and subscription",
+    "accountInfo": {
+      "title": "Account Information",
+      "email": "Email Address",
+      "memberSince": "Member Since",
+      "loading": "Loading..."
+    },
+    "subscription": {
+      "title": "Subscription",
+      "plan": "Plan",
+      "nextPayment": "Next Payment",
+      "status": "Status",
+      "active": "Active",
+      "loading": "Loading...",
+      "cancelButton": "Cancel Subscription"
+    },
+    "paymentHistory": {
+      "title": "Payment History",
+      "noHistory": "No payment history available"
+    },
+    "cancelModal": {
+      "title": "Are You Sure?",
+      "description": "Cancelling your subscription means:",
+      "point1": "You'll lose access to premium features",
+      "point2": "Your subscription will end immediately",
+      "point3": "You won't be charged again",
+      "confirm": "Cancel Subscription",
+      "goBack": "Go Back"
+    },
+    "successModal": {
+      "title": "Subscription Cancelled",
+      "message": "We've confirmed your cancellation, and you won't receive any further charges from us. A confirmation email has also been sent to your inbox.",
+      "close": "Close"
+    }
+  }
+}

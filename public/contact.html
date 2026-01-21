@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Tracify</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Language Selector Styles */
+        .lang-selector-wrapper { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+        .lang-selector { appearance: none; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); border-radius: 8px; padding: 8px 30px 8px 12px; color: #fff; font-size: 0.9rem; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='white' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
+        .lang-selector option { background: #1a1a2e; color: #fff; }
+        [dir="rtl"] body { direction: rtl; text-align: right; }
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4CAF50;
+            --primary-dark: #388E3C;
+            --primary-light: #81C784;
+            --text: #333;
+            --text-light: #666;
+            --bg: #f5f7fa;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .logo svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .header-title {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+
+        /* Contact Card */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .card-header {
+            text-align: center;
+            padding: 40px 30px 30px;
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+        }
+
+        .contact-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-icon svg {
+            width: 50px;
+            height: 50px;
+            color: #4CAF50;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .card-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+        }
+
+        .card-body {
+            padding: 40px 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+
+        .required {
+            color: #f44336;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .captcha-box {
+            background: #f9f9f9;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .captcha-checkbox {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #4CAF50;
+        }
+
+        .captcha-label {
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+
+        .captcha-logo {
+            margin-left: auto;
+            font-size: 0.7rem;
+            color: var(--text-light);
+            text-align: right;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .message {
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .message-success {
+            background: #e8f5e9;
+            color: #2e7d32;
+            display: block;
+        }
+
+        .message-error {
+            background: #ffebee;
+            color: #c62828;
+            display: block;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: white;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .footer-link:hover {
+            opacity: 0.8;
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 2rem;
+            }
+
+            .card-body {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/" class="logo">
+            <svg viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="3"/>
+                <circle cx="20" cy="20" r="8" fill="currentColor"/>
+                <path d="M20 2V10M20 30V38M2 20H10M30 20H38" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span>Tracify</span>
+        </a>
+        <h1 class="header-title" data-i18n="contact.title">Contact Us</h1>
+        <p class="header-subtitle" data-i18n="contact.subtitle">Our support team is here 24/7 to help you right away.</p>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-card">
+            <div class="card-header">
+                <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                </div>
+                <h2 class="card-title" data-i18n="contact.cardTitle">We're Here to Help</h2>
+                <p class="card-subtitle" data-i18n="contact.cardSubtitle">Our support team is here 24/7 to help you right away.</p>
+            </div>
+
+            <div class="card-body">
+                <!-- Direct Email Contact -->
+                <div style="background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%); border-radius: 12px; padding: 20px; margin-bottom: 25px; text-align: center;">
+                    <div style="color: white; font-size: 1.1rem; margin-bottom: 12px; font-weight: 600;">
+                        <span data-i18n="contact.directEmail">Prefer Email?</span>
+                    </div>
+                    <div style="color: rgba(255,255,255,0.95); margin-bottom: 15px; font-size: 0.95rem;">
+                        <span data-i18n="contact.emailDesc">Contact us directly at</span>
+                    </div>
+                    <a href="mailto:support@tracify-geo.com" style="display: inline-block; background: white; color: #4CAF50; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.2s;">
+                        support@tracify-geo.com
+                    </a>
+                </div>
+
+                <div style="text-align: center; color: #666; margin-bottom: 20px; font-size: 0.9rem;">
+                    <span data-i18n="contact.orUseForm">Or use the form below</span>
+                </div>
+
+                <div id="messageDiv"></div>
+
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name"><span data-i18n="contact.form.name">Name</span> <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" data-i18n-placeholder="contact.form.namePlaceholder" placeholder="Your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><span data-i18n="contact.form.email">Email</span> <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" data-i18n-placeholder="contact.form.emailPlaceholder" placeholder="your.email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject"><span data-i18n="contact.form.subject">Subject</span> <span class="required">*</span></label>
+                        <select id="subject" name="subject" required>
+                            <option value="" data-i18n="contact.form.selectSubject">Select a subject</option>
+                            <option value="technical" data-i18n="contact.form.technical">Technical Support</option>
+                            <option value="billing" data-i18n="contact.form.billing">Billing Question</option>
+                            <option value="feature" data-i18n="contact.form.feature">Feature Request</option>
+                            <option value="feedback" data-i18n="contact.form.feedback">General Feedback</option>
+                            <option value="other" data-i18n="contact.form.other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message"><span data-i18n="contact.form.message">Message</span> <span class="required">*</span></label>
+                        <textarea id="message" name="message" data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="Tell us how we can help..." required></textarea>
+                    </div>
+
+                    <div class="captcha-box">
+                        <input type="checkbox" id="captcha" class="captcha-checkbox" required>
+                        <label for="captcha" class="captcha-label" data-i18n="contact.form.notRobot">I'm not a robot</label>
+                        <div class="captcha-logo">
+                            <div style="font-weight: 600;">reCAPTCHA</div>
+                            <div style="font-size: 0.65rem;">Privacy - Terms</div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit" id="submitBtn" data-i18n="contact.form.send">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-links">
+            <a href="/" class="footer-link" data-i18n="contact.footer.home">Home</a>
+            <a href="/#pricing" class="footer-link" data-i18n="nav.pricing">Pricing</a>
+            <a href="/#faq" class="footer-link" data-i18n="nav.faq">F.A.Q</a>
+        </div>
+        <p class="footer-text" data-i18n="footer.copyright">&copy; Tracify - 2026</p>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const btn = document.getElementById('submitBtn');
+            const msgDiv = document.getElementById('messageDiv');
+            const captcha = document.getElementById('captcha');
+
+            if (!captcha.checked) {
+                msgDiv.innerHTML = '<div class="message message-error">Please verify you are not a robot.</div>';
+                return;
+            }
+
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            msgDiv.innerHTML = '';
+
+            try {
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+
+                const res = await fetch('/api/contact/send', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await res.json();
+
+                if (res.ok) {
+                    msgDiv.innerHTML = '<div class="message message-success">Message sent successfully! We\'ll get back to you soon.</div>';
+                    document.getElementById('contactForm').reset();
+                } else {
+                    msgDiv.innerHTML = `<div class="message message-error">${data.error || 'Failed to send message. Please try again.'}</div>`;
+                }
+            } catch (error) {
+                msgDiv.innerHTML = '<div class="message message-error">Connection error. Please try again.</div>';
+            }
+
+            btn.disabled = false;
+            btn.textContent = 'Send Message';
+        });
+    </script>
+    <script src="/js/i18n.js"></script>
+</body>
+</html>

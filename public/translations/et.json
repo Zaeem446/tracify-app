@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "Korduma kippuvad küsimused",
+    "pricing": "Hinnad",
+    "contact": "Võta ühendust",
+    "cancel": "Tühista tellimus",
+    "login": "Logi sisse"
+  },
+  "hero": {
+    "title": "Leia mis tahes telefon, kus iganes",
+    "subtitle": "Sisesta telefoninumber, mida soovid leida",
+    "placeholder": "Sisesta telefoninumber",
+    "locateBtn": "Leia",
+    "disclaimer": "Taotle reaalajas telefoni asukohti SMS-i teel. *Jälgimine toimub ainult saaja selgesõnalise nõusolekuga.",
+    "locationFound": "Asukoht leitud!",
+    "locationExample": "Numbri <strong>123 678-9012</strong> asukoht on <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Eripakkumine!",
+    "title": "Proovi Tracify võimalusi vaid",
+    "forFullDay": "terveks päevaks!",
+    "subtitle": "Tracify pakub oma teenuseid hõlpsasti hallatava kuutellimuse kaudu.",
+    "trialPeriod": "Prooviperiood",
+    "trial24h": "24-tunnine prooviversioon",
+    "trialDesc": "Tracify töötab kuutellimuse alusel. Sinu esialgne makse annab piiraamatu juurdepääsu kõigile platvormi teenustele 24 tunniks. Pärast seda perioodi rakendub tellimustasu",
+    "perMonth": "kuus.",
+    "startTrial": "Alusta prooviversiooni",
+    "subscription": "Tellimus",
+    "monthlyFee": "Kuutasu",
+    "subscriptionDesc": "Kui 24-tunnine prooviperiood on lõppenud, uueneb pakkumine automaatselt kuutellimuseks. Pea meeles, et saad tellimuse igal ajal tühistada.",
+    "subscribeNow": "Telli kohe"
+  },
+  "howItWorks": {
+    "title": "Kuidas see töötab?",
+    "step1Title": "Sisesta telefoninumber",
+    "step1Desc": "Sisesta telefoninumber, mida soovid leida, ja kohanda SMS-sõnumit, mille soovid saajale saata.",
+    "step2Title": "Saada jälgimis-SMS",
+    "step2Desc": "Tracify saadab saajale sinu kohandatud SMS-sõnumi, mis taotleb telefoni asukohta.",
+    "step3Title": "Saa täpne asukoht",
+    "step3Desc": "Saa teavitus kohe, kui saaja nõustub oma asukohta jagama. Vaata täpset positsiooni kaardil oma juhtpaneelil."
+  },
+  "features": {
+    "title": "Miks valida Tracify?",
+    "subtitle": "Üks klõps ja null vaeva, et leida kellegi asukoht üle maailma",
+    "feature1Title": "Diskreetne teenus",
+    "feature1Desc": "Kuigi telefoni omanikku teavitatakse asukoha taotlusest, jääb taotleja identiteet konfidentsiaalseks. Kõik geolokatsiooni taotlused tehakse privaatsust austades ja edastatud andmed on turvalisuse tagamiseks krüpteeritud.",
+    "feature2Title": "Paigaldamine pole vajalik",
+    "feature2Desc": "Sinu telefoni ega sihtseadmesse pole vaja tarkvara paigaldada. Kõik toimib kaugelt! Sisesta lihtsalt telefoninumber, mida soovid jälgida. Niipea kui SMS-i saaja annab nõusoleku, saad kohese juurdepääsu.",
+    "feature3Title": "Ülemaailmne katvus",
+    "feature3Desc": "Tracify töötab kõigi võrkudega üle maailma. Edukas jälgimine eeldab siiski, et telefon on sisse lülitatud, teenus on kättesaadav ja SMS-i saaja annab selgesõnalise nõusoleku oma asukoha jagamiseks.",
+    "feature4Title": "iOS-i ja Androidiga ühilduv",
+    "feature4Desc": "Tracify toetab sujuvalt nii iOS-i kui Androidi mobiilseadmeid. Kui sul on telefoninumber ja isiku selgesõnaline heakskiit jälgimiseks, saad meie teenust kasutades tema asukoha leida.",
+    "locatePhone": "Leia telefon"
+  },
+  "faq": {
+    "title": "Korduma kippuvad küsimused",
+    "subtitle": "Siit leiad kõik vastused küsimustele, mida meilt meie mobiilse geolokatsiooni teenuse Tracify kohta kõige sagedamini küsitakse.",
+    "tabAbout": "Tracify kohta",
+    "tabPayments": "Maksed ja arveldamine",
+    "tabAccount": "Minu konto",
+    "q1": "Mis on Tracify?",
+    "a1": "Tracify on mobiilne geolokatsiooniteenus, mis võimaldab sul leida mis tahes telefoninumbri üle maailma. Meie teenus töötab nii, et saadame sihttelefoni SMS-i, millega taotleme nõusolekut asukoha jagamiseks. Kui nõusolek on antud, saad täpsed GPS-koordinaadid.",
+    "q2": "Kas Tracify telefoninumbri jälgija kasutamine on üldse seaduslik?",
+    "a2": "Jah, Tracify on täiesti seaduslik, kuna see nõuab jälgitava isiku selgesõnalist nõusolekut. Saaja peab aktiivselt nõustuma oma asukoha jagamisega, vastates SMS-i taotlusele. Järgime kõiki privaatsusreegleid ja andmekaitseseadusi.",
+    "q3": "Milliseid võrke Tracify toetab?",
+    "a3": "Tracify toetab kõiki peamisi mobiilsidevõrke üle maailma. Olenemata sellest, kas sihttelefon kasutab GSM-, CDMA-, LTE- või 5G-võrke, saab meie teenus saata asukoha taotlusi igale kehtivale telefoninumbrile.",
+    "q4": "Kas ma saan jälgida telefoninumbri asukohta, kui ma ei tea selle mudelit?",
+    "a4": "Absoluutselt! Sa ei pea teadma telefoni mudelit, tootjat ega operatsioonisüsteemi. Kõik, mida vajad, on telefoninumber. Meie süsteem käsitleb automaatselt kõiki tehnilisi üksikasju olenemata seadme tüübist.",
+    "q5": "Kas Tracify toetab nii iOS-i kui Androidi mobiilseadmeid?",
+    "a5": "Jah, Tracify töötab nii iOS-i (iPhone) kui Androidi seadmetega. Meie SMS-põhine asukoha taotlussüsteem ühildub iga nutitelefoniga, mis saab tekstsõnumeid vastu võtta ja millel on asukohateenused saadaval.",
+    "q6": "Kui kiiresti suudab Tracify leida telefoninumbri asukoha?",
+    "a6": "Niipea kui SMS-i saaja nõustub oma asukohta jagama, saad koordinaadid peaaegu koheselt. Koguaeg sõltub sellest, kui kiiresti saaja asukoha taotlusele vastab.",
+    "q7": "Kuidas jälgida telefoninumbrit ilma füüsilise juurdepääsuta sihtseadmele?",
+    "a7": "Sisesta lihtsalt telefoninumber meie süsteemi, kohanda oma sõnum ja meie saadame SMS-i, mis taotleb asukoha nõusolekut. Kõik tehakse kaugelt – füüsilist juurdepääsu sihtseadmele pole kunagi vaja.",
+    "q8": "Kas ma saan kedagi mobiiltelefoninumbri järgi jälgida?",
+    "a8": "Jah, kuid ainult tema selgesõnalise nõusolekuga. Tracify saadab asukoha taotluse SMS-i teel ja jälgimine toimub ainult siis, kui saaja nõustub oma asukohta jagama. See tagab privaatsuse ja seadusliku vastavuse.",
+    "q9": "Kas ma saan kedagi mobiiltelefoninumbri järgi tasuta jälgida?",
+    "a9p1": "Pakume 24-tunnist prooviperioodi vaid",
+    "a9p2": " eest, mis annab täieliku juurdepääsu kõigile funktsioonidele. Pärast prooviversiooni saad jätkata meie kuutellimusega hinnaga",
+    "a9p3": "/kuus.",
+    "q10": "Kas vajad veel abi?",
+    "a10": "Kui sul on muid küsimusi või vajad abi, ära kõhkle meie tugimeeskonnaga ühendust võtmast. Oleme siin, et sind aidata 24/7. Saad meiega ühendust võtta meie kontaktilehe kaudu või saata meile otse e-kirja."
+  },
+  "footer": {
+    "description": "Tracify võimaldab sul saada mobiiltelefoni geolokatsiooni ja töötab kõigi telefonitüüpide, võrkude ja riikidega.",
+    "legalInfo": "Õiguslik teave",
+    "account": "Konto",
+    "signup": "Registreeru",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Küpsiste poliitika",
+    "privacy": "Privaatsuspoliitika",
+    "terms": "Tingimused"
+  },
+  "contact": {
+    "title": "Võta ühendust",
+    "subtitle": "Meie tugimeeskond on siin 24/7, et sind kohe aidata.",
+    "cardTitle": "Oleme siin, et aidata",
+    "cardSubtitle": "Meie tugimeeskond on siin 24/7, et sind kohe aidata.",
+    "form": {
+      "name": "Nimi",
+      "namePlaceholder": "Sinu nimi",
+      "email": "E-post",
+      "emailPlaceholder": "sinu.email@näide.ee",
+      "subject": "Teema",
+      "selectSubject": "Vali teema",
+      "technical": "Tehniline tugi",
+      "billing": "Arveldusküsimus",
+      "feature": "Funktsiooni taotlus",
+      "feedback": "Üldine tagasiside",
+      "other": "Muu",
+      "message": "Sõnum",
+      "messagePlaceholder": "Ütle meile, kuidas saame aidata...",
+      "notRobot": "Ma ei ole robot",
+      "send": "Saada sõnum"
+    },
+    "footer": {
+      "home": "Avaleht"
+    }
+  },
+  "cancel": {
+    "title": "Tühista oma tellimus",
+    "subtitle": "Sisesta oma e-post, et tellimus tühistada. See lülitab automaatse uuendamise välja ja hoiab ära tulevased tasud.",
+    "form": {
+      "emailLabel": "E-posti aadress",
+      "emailPlaceholder": "tere@email.ee",
+      "submitBtn": "Tühista tellimus",
+      "helpText": "Kui sa ei mäleta, millist e-posti kasutasid, kontrolli oma postkasti Tracify tervituskirja. Kui sa ikka ei leia,",
+      "contactSupport": "võta ühendust toega"
+    },
+    "whyCharged": {
+      "title": "Miks minult tasu võeti?"
+    },
+    "needHelp": {
+      "title": "Vajad abi?",
+      "description": "Kui sul on probleem või küsimusi, on meie tugimeeskond siin sinu jaoks 24/7. Võta lihtsalt ühendust ja me vastame kiiresti!",
+      "contactBtn": "Võta ühendust toega"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Juhtpaneel",
+      "account": "Konto",
+      "contact": "Kontakt",
+      "settings": "Seaded",
+      "logout": "Logi välja"
+    },
+    "title": "Jälgi telefoni asukohta",
+    "subtitle": "Saada asukoha taotlus nõusolekupõhise jälgimisega",
+    "sendRequest": {
+      "title": "Saada asukoha taotlus",
+      "phoneNumber": "Telefoninumber",
+      "phonePlaceholder": "3001234567",
+      "message": "Sõnum",
+      "send": "Saada",
+      "previewMessage": "Sõnumi eelvaade",
+      "rateLimit": "Turvalisuse ja privaatsuse kaalutlustel saad sõnumi saata vaid kord iga 3 tunni järel."
+    },
+    "recentRequests": {
+      "title": "Hiljutised taotlused",
+      "noRequests": "Jälgimistaotlusi veel pole"
+    },
+    "trackingActivity": {
+      "title": "Hiljutine jälgimistegevus"
+    },
+    "disclaimer": {
+      "title": "Oluline märkus",
+      "point1": "Tracify nõuab telefoni omaniku selgesõnalist nõusolekut enne tema asukoha jagamist",
+      "point2": "See teenus on mõeldud ainult seaduslikeks eesmärkideks (kadunud seadmete leidmine, pere turvalisus)",
+      "point3": "Loata jälgimine või jälitamine on ebaseaduslik ja rangelt keelatud",
+      "point4": "Asukoha täpsus sõltub seadme seadetest ja võrgu tingimustest",
+      "point5": "Me ei vastuta selle teenuse väärkasutuse eest",
+      "needHelp": "Vajad abi?",
+      "contactSupport": "Võta ühendust meie tugimeeskonnaga"
+    },
+    "subscription": {
+      "currentPlan": "Praegune plaan",
+      "loading": "Laadib...",
+      "manage": "Halda tellimust"
+    },
+    "messageModal": {
+      "title": "Sõnumi seaded",
+      "description": "Oleme valinud sõnumid kõrgeima asukoha jagamise määraga. Vali üks allolevast nimekirjast.",
+      "language": "Sõnumi keel",
+      "selectTemplate": "Vali sõnumi mall",
+      "template1": "Ma olen selle telefoni omanik ja see on praegu kadunud. Kui oled selle leidnud, palun anna mulle teada.",
+      "template2": "Kui see telefon pole sinu oma, kas saaksid mulle teada anda?",
+      "template3": "Pole kiiret, aga vaata seda, kui sul on hetk:",
+      "apply": "Rakenda"
+    },
+    "trustpilot": {
+      "title": "Aita meil paraneda!",
+      "subtitle": "Jaga oma kogemust enne Tracify kasutamist",
+      "message": "Me hindame sinu tagasisidet! Palun võta hetk, et hinnata oma kogemust Trustpilotis.",
+      "helpText": "Sinu arvustus aitab meil kvaliteetset teenust säilitada",
+      "leaveReview": "Jäta arvustus Trustpilotis",
+      "skip": "Jäta praegu vahele"
+    },
+    "locationModal": {
+      "title": "Asukoht saadud",
+      "coordinates": "Koordinaadid",
+      "openMap": "Ava Google Mapsis",
+      "close": "Sulge"
+    }
+  },
+  "payment": {
+    "completeSubscription": "Lõpeta oma tellimus",
+    "subtitle": "Alusta telefonide asukohtade jälgimist nõusolekuga",
+    "title": "Makse",
+    "trialThen": "24h prooviversioon, seejärel",
+    "monthAfterTrial": "/kuus pärast prooviversiooni",
+    "whatsIncluded": "Mis sisaldub:",
+    "unlimitedRequests": "✓ Piiramatult asukoha taotlusi",
+    "realtimeTracking": "✓ Reaalajas jälgimine",
+    "smsNotifications": "✓ SMS-teavitused",
+    "247support": "✓ 24/7 tugi",
+    "paymentDetails": "Makse üksikasjad",
+    "plan": "Plaan",
+    "24hourTrial": "24-tunnine prooviversioon",
+    "total": "Kokku",
+    "pay": "Maksa",
+    "securePayment": "Turvaline makse SSL-krüpteeringuga"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "Juhtpaneel",
+      "account": "Konto",
+      "contact": "Kontakt",
+      "logout": "Logi välja"
+    },
+    "title": "Konto seaded",
+    "subtitle": "Halda oma kontot ja tellimust",
+    "accountInfo": {
+      "title": "Konto teave",
+      "email": "E-posti aadress",
+      "memberSince": "Liige alates",
+      "loading": "Laadib..."
+    },
+    "subscription": {
+      "title": "Tellimus",
+      "plan": "Plaan",
+      "nextPayment": "Järgmine makse",
+      "status": "Olek",
+      "active": "Aktiivne",
+      "loading": "Laadib...",
+      "cancelButton": "Tühista tellimus"
+    },
+    "paymentHistory": {
+      "title": "Maksete ajalugu",
+      "noHistory": "Maksete ajalugu pole saadaval"
+    },
+    "cancelModal": {
+      "title": "Kas oled kindel?",
+      "description": "Tellimuse tühistamine tähendab:",
+      "point1": "Kaotad juurdepääsu premium-funktsioonidele",
+      "point2": "Sinu tellimus lõpeb kohe",
+      "point3": "Sinult ei võeta enam tasu",
+      "confirm": "Tühista tellimus",
+      "goBack": "Mine tagasi"
+    },
+    "successModal": {
+      "title": "Tellimus tühistatud",
+      "message": "Oleme sinu tühistamise kinnitanud ja sinult ei võeta enam tasusid. Kinnituskiri on samuti saadetud sinu postkasti.",
+      "close": "Sulge"
+    }
+  }
+}

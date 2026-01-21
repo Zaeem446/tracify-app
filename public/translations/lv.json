@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "faq": "BUJ",
+    "pricing": "Cenas",
+    "contact": "Sazinies ar mums",
+    "cancel": "Atcelt abonementu",
+    "login": "Pieteikties"
+  },
+  "hero": {
+    "title": "Atrodiet jebkuru tālruni, jebkur",
+    "subtitle": "Ievadiet tālruņa numuru, kuru vēlaties atrast",
+    "placeholder": "Ievadiet tālruņa numuru",
+    "locateBtn": "Atrast",
+    "disclaimer": "Pieprasiet reāllaika tālruņa atrašanās vietu caur SMS. *Izsekošana notiek tikai ar saņēmēja skaidru piekrišanu.",
+    "locationFound": "Atrašanās vieta atrasta!",
+    "locationExample": "Numura <strong>123 678-9012</strong> atrašanās vieta ir <strong>88.234502, 7.688104</strong>."
+  },
+  "pricing": {
+    "specialOffer": "Īpašais piedāvājums!",
+    "title": "Izmēģiniet Tracify iespējas tikai par",
+    "forFullDay": "uz visu dienu!",
+    "subtitle": "Tracify piedāvā savus pakalpojumus caur viegli pārvaldāmu mēneša abonementu.",
+    "trialPeriod": "Izmēģinājuma periods",
+    "trial24h": "24 stundu izmēģinājums",
+    "trialDesc": "Tracify darbojas uz mēneša abonementa bāzes. Jūsu sākotnējais maksājums nodrošina neierobežotu piekļuvi visiem platformas pakalpojumiem 24 stundas. Pēc tam tiek piemērota abonementa maksa",
+    "perMonth": "mēnesī.",
+    "startTrial": "Sākt izmēģinājumu",
+    "subscription": "Abonements",
+    "monthlyFee": "Mēneša maksa",
+    "subscriptionDesc": "Pēc 24 stundu izmēģinājuma perioda beigām piedāvājums automātiski atjaunosies uz mēneša abonementu. Atcerieties, ka varat atcelt abonementu jebkurā laikā.",
+    "subscribeNow": "Abonēt tagad"
+  },
+  "howItWorks": {
+    "title": "Kā tas darbojas?",
+    "step1Title": "Ievadiet tālruņa numuru",
+    "step1Desc": "Ievadiet tālruņa numuru, kuru vēlaties atrast, un pielāgojiet SMS ziņojumu, ko vēlaties, lai saņēmējs saņemtu.",
+    "step2Title": "Nosūtiet izsekošanas SMS",
+    "step2Desc": "Tracify nosūtīs saņēmējam jūsu pielāgoto SMS, kas pieprasīs tālruņa atrašanās vietu.",
+    "step3Title": "Saņemiet precīzu atrašanās vietu",
+    "step3Desc": "Saņemiet paziņojumu, tiklīdz saņēmējs piekrīt dalīties ar savu atrašanās vietu. Skatiet precīzu pozīciju kartē savā vadības panelī."
+  },
+  "features": {
+    "title": "Kāpēc izvēlēties Tracify?",
+    "subtitle": "Viens klikšķis un nekādu pūļu, lai atrastu jebkura cilvēka atrašanās vietu visā pasaulē",
+    "feature1Title": "Diskrēts pakalpojums",
+    "feature1Desc": "Lai gan tālruņa īpašnieks tiks informēts par atrašanās vietas pieprasījumu, pieprasītāja identitāte paliek konfidenciāla. Visi ģeolokācijas pieprasījumi tiek veikti, ievērojot privātumu, un pārsūtītie dati tiek šifrēti drošībai.",
+    "feature2Title": "Nav nepieciešama instalācija",
+    "feature2Desc": "Jūsu tālrunī vai mērķa ierīcē nav jāinstalē nekāda programmatūra. Viss darbojas attālināti! Vienkārši ievadiet tālruņa numuru, kuru vēlaties izsekot. Tiklīdz SMS saņēmējs sniegs piekrišanu, jums būs tūlītēja piekļuve.",
+    "feature3Title": "Visā pasaulē",
+    "feature3Desc": "Tracify darbojas ar visiem tīkliem visā pasaulē. Tomēr veiksmīgai izsekošanai nepieciešams, lai tālrunis būtu ieslēgts, pakalpojums būtu pieejams un SMS saņēmējs skaidri piekristu dalīties ar savu atrašanās vietu.",
+    "feature4Title": "Saderīgs ar iOS un Android",
+    "feature4Desc": "Tracify nemanāmi atbalsta gan iOS, gan Android mobilās ierīces. Kamēr jums ir tālruņa numurs un personas skaidra piekrišana izsekošanai, varat viņu atrast, izmantojot mūsu pakalpojumu.",
+    "locatePhone": "Atrast tālruni"
+  },
+  "faq": {
+    "title": "Biežāk uzdotie jautājumi",
+    "subtitle": "Šeit varat atrast visas atbildes uz jautājumiem, kas mums visbiežāk tiek uzdoti par mūsu mobilo ģeolokācijas pakalpojumu Tracify.",
+    "tabAbout": "Par Tracify",
+    "tabPayments": "Maksājumi un norēķini",
+    "tabAccount": "Mans konts",
+    "q1": "Kas ir Tracify?",
+    "a1": "Tracify ir mobilais ģeolokācijas pakalpojums, kas ļauj atrast jebkuru tālruņa numuru visā pasaulē. Mūsu pakalpojums darbojas, nosūtot SMS uz mērķa tālruni, pieprasot piekrišanu atrašanās vietas kopīgošanai. Kad piekrišana tiek sniegta, jūs saņemat precīzas GPS koordinātas.",
+    "q2": "Vai ir likumīgi izmantot Tracify tālruņa numura izsekotāju?",
+    "a2": "Jā, Tracify ir pilnīgi likumīgs, jo tas prasa skaidru izsekojamās personas piekrišanu. Saņēmējam aktīvi jāpiekrīt dalīties ar savu atrašanās vietu, atbildot uz SMS pieprasījumu. Mēs ievērojam visus privātuma noteikumus un datu aizsardzības likumus.",
+    "q3": "Kādus tīklus atbalsta Tracify?",
+    "a3": "Tracify atbalsta visus galvenos mobilo sakaru tīklus visā pasaulē. Neatkarīgi no tā, vai mērķa tālrunis izmanto GSM, CDMA, LTE vai 5G tīklus, mūsu pakalpojums var nosūtīt atrašanās vietas pieprasījumus uz jebkuru derīgu tālruņa numuru.",
+    "q4": "Vai varu izsekot tālruņa numura atrašanās vietu, ja nezinu tā modeli?",
+    "a4": "Noteikti! Jums nav jāzina tālruņa modelis, ražotājs vai operētājsistēma. Viss, kas jums nepieciešams, ir tālruņa numurs. Mūsu sistēma automātiski apstrādā visas tehniskās detaļas neatkarīgi no ierīces veida.",
+    "q5": "Vai Tracify atbalsta gan iOS, gan Android mobilās ierīces?",
+    "a5": "Jā, Tracify darbojas gan ar iOS (iPhone), gan Android ierīcēm. Mūsu uz SMS balstītā atrašanās vietas pieprasījumu sistēma ir saderīga ar jebkuru viedtālruni, kas var saņemt īsziņas un kam ir pieejami atrašanās vietas pakalpojumi.",
+    "q6": "Cik ātri Tracify var atrast tālruņa numura atrašanās vietu?",
+    "a6": "Tiklīdz SMS saņēmējs piekritīs dalīties ar savu atrašanās vietu, jūs saņemsiet koordinātas gandrīz uzreiz. Kopējais laiks ir atkarīgs no tā, cik ātri saņēmējs atbild uz atrašanās vietas pieprasījumu.",
+    "q7": "Kā izsekot tālruņa numuru bez fiziskas piekļuves mērķa ierīcei?",
+    "a7": "Vienkārši ievadiet tālruņa numuru mūsu sistēmā, pielāgojiet savu ziņojumu, un mēs nosūtīsim SMS, pieprasot piekrišanu atrašanās vietai. Viss tiek darīts attālināti - fiziska piekļuve mērķa ierīcei nekad nav nepieciešama.",
+    "q8": "Vai varu izsekot kādu pēc mobilā tālruņa numura?",
+    "a8": "Jā, bet tikai ar viņu skaidru piekrišanu. Tracify nosūta atrašanās vietas pieprasījumu caur SMS, un izsekošana notiek tikai tad, kad saņēmējs piekrīt dalīties ar savu atrašanās vietu. Tas nodrošina privātumu un juridisko atbilstību.",
+    "q9": "Vai varu bez maksas izsekot kādu pēc mobilā tālruņa numura?",
+    "a9p1": "Mēs piedāvājam 24 stundu izmēģinājuma periodu tikai par",
+    "a9p2": ", kas sniedz pilnu piekļuvi visām funkcijām. Pēc izmēģinājuma varat turpināt ar mūsu mēneša abonementu par",
+    "a9p3": "/mēnesī.",
+    "q10": "Joprojām nepieciešama palīdzība?",
+    "a10": "Ja jums ir citi jautājumi vai nepieciešama palīdzība, lūdzu, nekautrējieties sazināties ar mūsu atbalsta komandu. Mēs esam šeit, lai jums palīdzētu 24/7. Jūs varat sazināties ar mums caur mūsu Sazinieties ar mums lapu vai nosūtīt mums e-pastu tieši."
+  },
+  "footer": {
+    "description": "Tracify ļauj iegūt mobilā tālruņa ģeogrāfisko atrašanās vietu un darbojas ar visiem tālruņu veidiem, tīkliem un valstīm.",
+    "legalInfo": "Juridiskā informācija",
+    "account": "Konts",
+    "signup": "Reģistrēties",
+    "copyright": "© Tracify - 2026",
+    "cookies": "Sīkdatņu politika",
+    "privacy": "Privātuma politika",
+    "terms": "Noteikumi un nosacījumi"
+  },
+  "contact": {
+    "title": "Sazinies ar mums",
+    "subtitle": "Mūsu atbalsta komanda ir šeit 24/7, lai jums nekavējoties palīdzētu.",
+    "cardTitle": "Mēs esam šeit, lai palīdzētu",
+    "cardSubtitle": "Mūsu atbalsta komanda ir šeit 24/7, lai jums nekavējoties palīdzētu.",
+    "form": {
+      "name": "Vārds",
+      "namePlaceholder": "Jūsu vārds",
+      "email": "E-pasts",
+      "emailPlaceholder": "jusu.epasts@piemers.lv",
+      "subject": "Tēma",
+      "selectSubject": "Izvēlieties tēmu",
+      "technical": "Tehniskais atbalsts",
+      "billing": "Jautājums par norēķiniem",
+      "feature": "Funkcijas pieprasījums",
+      "feedback": "Vispārīga atsauksme",
+      "other": "Cits",
+      "message": "Ziņojums",
+      "messagePlaceholder": "Pastāstiet, kā mēs varam palīdzēt...",
+      "notRobot": "Es neesmu robots",
+      "send": "Nosūtīt ziņojumu"
+    },
+    "footer": {
+      "home": "Sākumlapa"
+    }
+  },
+  "cancel": {
+    "title": "Atceliet savu abonementu",
+    "subtitle": "Ievadiet savu e-pastu, lai atceltu abonementu. Tas izslēgs automātisko atjaunošanu un novērsīs turpmākos maksājumus.",
+    "form": {
+      "emailLabel": "E-pasta adrese",
+      "emailPlaceholder": "sveiki@epasts.lv",
+      "submitBtn": "Atcelt abonementu",
+      "helpText": "Ja neatceraties, kuru e-pastu izmantojāt, pārbaudiet savu iesūtni, vai nav sveiciena e-pasta no Tracify. Ja joprojām nevarat atrast,",
+      "contactSupport": "sazinieties ar atbalstu"
+    },
+    "whyCharged": {
+      "title": "Kāpēc man tika iekasēta maksa?"
+    },
+    "needHelp": {
+      "title": "Nepieciešama palīdzība?",
+      "description": "Ja jums ir problēma vai kādi jautājumi, mūsu atbalsta komanda ir šeit jums 24/7. Vienkārši sazinieties, un mēs ātri atbildēsim!",
+      "contactBtn": "Sazināties ar atbalstu"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Vadības panelis",
+      "account": "Konts",
+      "contact": "Kontakti",
+      "settings": "Iestatījumi",
+      "logout": "Iziet"
+    },
+    "title": "Izsekojiet tālruņa atrašanās vietu",
+    "subtitle": "Nosūtiet atrašanās vietas pieprasījumu ar uz piekrišanu balstītu izsekošanu",
+    "sendRequest": {
+      "title": "Nosūtīt atrašanās vietas pieprasījumu",
+      "phoneNumber": "Tālruņa numurs",
+      "phonePlaceholder": "3001234567",
+      "message": "Ziņojums",
+      "send": "Nosūtīt",
+      "previewMessage": "Priekšskatīt ziņojumu",
+      "rateLimit": "Drošības un privātuma apsvērumu dēļ ziņojumu varat nosūtīt tikai reizi 3 stundās."
+    },
+    "recentRequests": {
+      "title": "Nesenie pieprasījumi",
+      "noRequests": "Vēl nav izsekošanas pieprasījumu"
+    },
+    "trackingActivity": {
+      "title": "Nesenā izsekošanas aktivitāte"
+    },
+    "disclaimer": {
+      "title": "Svarīgs atruna",
+      "point1": "Tracify pieprasa skaidru tālruņa īpašnieka piekrišanu pirms viņa atrašanās vietas kopīgošanas",
+      "point2": "Šis pakalpojums paredzēts tikai likumīgiem mērķiem (pazaudētu ierīču atrašana, ģimenes drošība)",
+      "point3": "Neatļauta izsekošana vai vajāšana ir nelikumīga un stingri aizliegta",
+      "point4": "Atrašanās vietas precizitāte ir atkarīga no ierīces iestatījumiem un tīkla apstākļiem",
+      "point5": "Mēs neesam atbildīgi par šī pakalpojuma ļaunprātīgu izmantošanu",
+      "needHelp": "Nepieciešama palīdzība?",
+      "contactSupport": "Sazinieties ar mūsu atbalsta komandu"
+    },
+    "subscription": {
+      "currentPlan": "Pašreizējais plāns",
+      "loading": "Ielādē...",
+      "manage": "Pārvaldīt abonementu"
+    },
+    "messageModal": {
+      "title": "Ziņojuma iestatījumi",
+      "description": "Mēs esam izvēlējušies ziņojumus ar augstāko atrašanās vietas kopīgošanas līmeni. Izvēlieties vienu no zemāk esošā saraksta.",
+      "language": "Ziņojuma valoda",
+      "selectTemplate": "Izvēlieties ziņojuma veidni",
+      "template1": "Es esmu šī tālruņa īpašnieks, un tas pašlaik ir pazaudēts. Ja esat to atradis, lūdzu, paziņojiet man.",
+      "template2": "Ja šis tālrunis nav jūsu, vai varētu man paziņot?",
+      "template3": "Nesteidzies, bet paskaties uz šo, kad būs brīdis:",
+      "apply": "Lietot"
+    },
+    "trustpilot": {
+      "title": "Palīdziet mums uzlaboties!",
+      "subtitle": "Dalieties ar savu pieredzi pirms Tracify izmantošanas",
+      "message": "Mēs novērtējam jūsu atsauksmes! Lūdzu, veltiet brīdi, lai novērtētu savu pieredzi Trustpilot.",
+      "helpText": "Jūsu atsauksme palīdz mums uzturēt kvalitatīvu pakalpojumu",
+      "leaveReview": "Atstāt atsauksmi Trustpilot",
+      "skip": "Pagaidām izlaist"
+    },
+    "locationModal": {
+      "title": "Atrašanās vieta saņemta",
+      "coordinates": "Koordinātas",
+      "openMap": "Atvērt Google kartēs",
+      "close": "Aizvērt"
+    }
+  },
+  "payment": {
+    "completeSubscription": "Pabeidziet savu abonementu",
+    "subtitle": "Sāciet izsekot tālruņu atrašanās vietas ar piekrišanu",
+    "title": "Maksājums",
+    "trialThen": "24h izmēģinājums, pēc tam",
+    "monthAfterTrial": "/mēnesī pēc izmēģinājuma",
+    "whatsIncluded": "Kas iekļauts:",
+    "unlimitedRequests": "✓ Neierobežoti atrašanās vietas pieprasījumi",
+    "realtimeTracking": "✓ Reāllaika izsekošana",
+    "smsNotifications": "✓ SMS paziņojumi",
+    "247support": "✓ 24/7 atbalsts",
+    "paymentDetails": "Maksājuma informācija",
+    "plan": "Plāns",
+    "24hourTrial": "24 stundu izmēģinājums",
+    "total": "Kopā",
+    "pay": "Maksāt",
+    "securePayment": "Drošs maksājums ar SSL šifrēšanu"
+  },
+  "account": {
+    "nav": {
+      "dashboard": "Vadības panelis",
+      "account": "Konts",
+      "contact": "Kontakti",
+      "logout": "Iziet"
+    },
+    "title": "Konta iestatījumi",
+    "subtitle": "Pārvaldiet savu kontu un abonementu",
+    "accountInfo": {
+      "title": "Konta informācija",
+      "email": "E-pasta adrese",
+      "memberSince": "Dalībnieks kopš",
+      "loading": "Ielādē..."
+    },
+    "subscription": {
+      "title": "Abonements",
+      "plan": "Plāns",
+      "nextPayment": "Nākamais maksājums",
+      "status": "Statuss",
+      "active": "Aktīvs",
+      "loading": "Ielādē...",
+      "cancelButton": "Atcelt abonementu"
+    },
+    "paymentHistory": {
+      "title": "Maksājumu vēsture",
+      "noHistory": "Nav pieejama maksājumu vēsture"
+    },
+    "cancelModal": {
+      "title": "Vai esat pārliecināts?",
+      "description": "Abonementa atcelšana nozīmē:",
+      "point1": "Jūs zaudēsiet piekļuvi premium funkcijām",
+      "point2": "Jūsu abonements beigsies nekavējoties",
+      "point3": "Jums vairs netiks iekasēta maksa",
+      "confirm": "Atcelt abonementu",
+      "goBack": "Atgriezties"
+    },
+    "successModal": {
+      "title": "Abonements atcelts",
+      "message": "Mēs esam apstiprinājuši jūsu atcelšanu, un jūs vairs nesaņemsiet maksājumus no mums. Apstiprinājuma e-pasts arī tika nosūtīts uz jūsu iesūtni.",
+      "close": "Aizvērt"
+    }
+  }
+}
