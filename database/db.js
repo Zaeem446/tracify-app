@@ -1,12 +1,23 @@
 const { Pool } = require('pg');
 const bcrypt = require('bcryptjs');
 
-// PostgreSQL connection pool
+// PostgreSQL connection pool for Supabase
 console.log('Setting up PostgreSQL connection...');
 console.log('POSTGRES_URL exists:', !!process.env.POSTGRES_URL);
 
+// Get connection string and ensure proper SSL handling
+let connectionString = process.env.POSTGRES_URL || '';
+
+// Add sslmode=no-verify to connection string if not already present
+if (connectionString && !connectionString.includes('sslmode=')) {
+    const separator = connectionString.includes('?') ? '&' : '?';
+    connectionString = connectionString + separator + 'sslmode=no-verify';
+}
+
+console.log('Connection string configured (sslmode added)');
+
 const pool = new Pool({
-    connectionString: process.env.POSTGRES_URL,
+    connectionString: connectionString,
     ssl: {
         rejectUnauthorized: false
     }
