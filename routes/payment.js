@@ -94,7 +94,11 @@ router.post('/create-intent', requireCustomerAuth, async (req, res) => {
     }
 });
 
-// Process payment (development mode or manual processing)
+// Stripe Price ID for monthly subscription
+const MONTHLY_PRICE_ID = 'price_1Ss72i07KvnwjKtOjq8qFBGT';
+const TRIAL_AMOUNT = 125; // $1.25 in cents
+
+// Process payment - charges $1.25 trial, then sets up $30/month recurring
 router.post('/process', requireCustomerAuth, async (req, res) => {
     try {
         const { planType, paymentMethodId, cardLast4 } = req.body;
@@ -114,55 +118,84 @@ router.post('/process', requireCustomerAuth, async (req, res) => {
 
         let stripeCustomerId = null;
         let stripePaymentId = null;
+        let stripeSubscriptionId = null;
 
         if (stripe && paymentMethodId && !paymentMethodId.startsWith('dev_')) {
             // Real Stripe processing
             try {
                 console.log('Processing Stripe payment...', { customerId, amount, planType });
 
-                // Create or get Stripe customer
+                // Get customer from database
                 const customer = await db.customers.findById(customerId);
                 console.log('Creating Stripe customer for:', customer.email);
 
+                // Create Stripe customer
                 const stripeCustomer = await stripe.customers.create({
                     email: customer.email,
-                    metadata: { tracifyCustomerId: customerId }
+                    metadata: { tracifyCustomerId: String(customerId) }
                 });
                 stripeCustomerId = stripeCustomer.id;
                 console.log('Stripe customer created:', stripeCustomerId);
 
-                // Attach payment method
+                // Attach payment method to customer
                 console.log('Attaching payment method:', paymentMethodId);
                 await stripe.paymentMethods.attach(paymentMethodId, {
                     customer: stripeCustomerId
                 });
-                console.log('Payment method attached successfully');
 
-                // Create and confirm payment
-                console.log('Creating payment intent...');
+                // Set as default payment method
+                await stripe.customers.update(stripeCustomerId, {
+                    invoice_settings: {
+                        default_payment_method: paymentMethodId
+                    }
+                });
+                console.log('Payment method attached and set as default');
+
+                // Step 1: Charge $1.25 trial fee immediately
+                console.log('Charging $1.25 trial fee...');
                 const paymentIntent = await stripe.paymentIntents.create({
-                    amount: Math.round(amount * 100), // Convert to cents
+                    amount: TRIAL_AMOUNT,
                     currency: 'usd',
                     customer: stripeCustomerId,
                     payment_method: paymentMethodId,
                     confirm: true,
+                    description: 'Tracify 24-Hour Trial',
                     automatic_payment_methods: {
                         enabled: true,
                         allow_redirects: 'never'
                     }
                 });
 
-                console.log('Payment intent created:', paymentIntent.id, 'Status:', paymentIntent.status);
-
                 if (paymentIntent.status !== 'succeeded') {
-                    console.error('Payment not succeeded:', paymentIntent.status);
+                    console.error('Trial payment not succeeded:', paymentIntent.status);
                     return res.status(400).json({
                         error: `Payment ${paymentIntent.status}. Please try a different card.`
                     });
                 }
 
                 stripePaymentId = paymentIntent.id;
-                console.log('✅ Stripe payment successful!');
+                console.log('✅ Trial payment successful:', stripePaymentId);
+
+                // Step 2: Create subscription that starts after 24 hours
+                console.log('Creating recurring subscription (starts in 24 hours)...');
+                const trialEnd = Math.floor(Date.now() / 1000) + (24 * 60 * 60); // 24 hours from now
+
+                const subscription = await stripe.subscriptions.create({
+                    customer: stripeCustomerId,
+                    items: [{ price: MONTHLY_PRICE_ID }],
+                    trial_end: trialEnd,
+                    default_payment_method: paymentMethodId,
+                    metadata: {
+                        tracifyCustomerId: String(customerId),
+                        trialPaymentId: stripePaymentId
+                    }
+                });
+
+                stripeSubscriptionId = subscription.id;
+                console.log('✅ Subscription created:', stripeSubscriptionId);
+                console.log('   Trial ends:', new Date(trialEnd * 1000).toISOString());
+                console.log('   First $30 charge will be on:', new Date(trialEnd * 1000).toISOString());
+
             } catch (stripeError) {
                 console.error('❌ Stripe error details:', {
                     message: stripeError.message,
@@ -177,17 +210,19 @@ router.post('/process', requireCustomerAuth, async (req, res) => {
         } else {
             // Development mode - simulate successful payment
             stripePaymentId = 'dev_pay_' + Date.now();
-            console.log(`\n💳 DEV MODE: Payment of $${amount} processed for customer ${customerId}\n`);
+            stripeSubscriptionId = 'dev_sub_' + Date.now();
+            console.log(`\n💳 DEV MODE: Trial payment of $${amount} processed for customer ${customerId}`);
+            console.log(`📅 DEV MODE: Subscription created, will charge $30/month after 24 hours\n`);
         }
 
-        // Create subscription record
+        // Create subscription record in database
         const subscriptionResult = await db.subscriptions.create(
             customerId,
             planType,
             amount,
             expiresAt.toISOString(),
             stripeCustomerId,
-            null // subscription ID (not using Stripe subscriptions for trial)
+            stripeSubscriptionId
         );
 
         // Create payment record
@@ -206,7 +241,9 @@ router.post('/process', requireCustomerAuth, async (req, res) => {
                 id: subscriptionResult.lastInsertRowid,
                 planType,
                 amount,
-                expiresAt: expiresAt.toISOString()
+                expiresAt: expiresAt.toISOString(),
+                recurringAmount: 30.00,
+                recurringStartsAt: expiresAt.toISOString()
             },
             redirectTo: '/dashboard'
         });
@@ -253,8 +290,15 @@ router.post('/cancel', requireCustomerAuth, async (req, res) => {
         }
 
         // If using real Stripe subscription, cancel it
-        if (stripe && subscription.stripe_subscription_id) {
-            await stripe.subscriptions.cancel(subscription.stripe_subscription_id);
+        if (stripe && subscription.stripe_subscription_id && !subscription.stripe_subscription_id.startsWith('dev_')) {
+            try {
+                console.log('Cancelling Stripe subscription:', subscription.stripe_subscription_id);
+                await stripe.subscriptions.cancel(subscription.stripe_subscription_id);
+                console.log('✅ Stripe subscription cancelled');
+            } catch (stripeError) {
+                console.error('Stripe cancel error:', stripeError.message);
+                // Continue anyway to update local record
+            }
         }
 
         // Update local record
@@ -262,7 +306,7 @@ router.post('/cancel', requireCustomerAuth, async (req, res) => {
 
         res.json({
             success: true,
-            message: 'Subscription cancelled successfully'
+            message: 'Subscription cancelled successfully. You will not be charged again.'
         });
 
     } catch (error) {
