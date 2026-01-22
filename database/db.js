@@ -7,23 +7,37 @@ const dbPath = path.join(__dirname, 'tracify.db');
 let db = null;
 let SQL = null;
 
+// Check if running in Vercel (serverless environment)
+const isVercel = process.env.VERCEL || process.env.NODE_ENV === 'production';
+
 async function getDb() {
     if (db) return db;
 
     SQL = await initSqlJs();
 
-    // Load existing database or create new one
-    if (fs.existsSync(dbPath)) {
-        const fileBuffer = fs.readFileSync(dbPath);
-        db = new SQL.Database(fileBuffer);
-    } else {
+    // In Vercel, always use in-memory database
+    if (isVercel) {
+        console.log('Running in serverless mode - using in-memory database');
         db = new SQL.Database();
+    } else {
+        // Load existing database or create new one (local development only)
+        if (fs.existsSync(dbPath)) {
+            const fileBuffer = fs.readFileSync(dbPath);
+            db = new SQL.Database(fileBuffer);
+        } else {
+            db = new SQL.Database();
+        }
     }
 
     return db;
 }
 
 function saveDb() {
+    // Skip saving in serverless environment (Vercel)
+    if (isVercel) {
+        return;
+    }
+
     if (db) {
         const data = db.export();
         const buffer = Buffer.from(data);
