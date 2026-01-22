@@ -172,8 +172,7 @@ router.get('/me', async (req, res) => {
             customer: {
                 id: customer.id,
                 email: customer.email,
-                phoneToTrack: customer.phone_to_track,
-                createdAt: customer.created_at
+                phoneToTrack: customer.phone_to_track
             },
             subscription: subscription ? {
                 planType: subscription.plan_type,
