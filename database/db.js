@@ -1,27 +1,29 @@
 const { Pool } = require('pg');
 const bcrypt = require('bcryptjs');
 
-// PostgreSQL connection pool for Supabase
+// PostgreSQL connection pool for Supabase/Neon (via Vercel)
 console.log('Setting up PostgreSQL connection...');
-console.log('POSTGRES_URL exists:', !!process.env.POSTGRES_URL);
 
-// Get connection string and ensure proper SSL handling
-let connectionString = process.env.POSTGRES_URL || '';
+// Use the non-pooling URL for serverless (recommended by Vercel)
+const connectionString = process.env.POSTGRES_URL_NON_POOLING
+    || process.env.POSTGRES_URL
+    || '';
 
-// Add sslmode=no-verify to connection string if not already present
-if (connectionString && !connectionString.includes('sslmode=')) {
-    const separator = connectionString.includes('?') ? '&' : '?';
-    connectionString = connectionString + separator + 'sslmode=no-verify';
-}
+console.log('Connection string exists:', !!connectionString);
 
-console.log('Connection string configured (sslmode added)');
-
+// For Vercel + Supabase/Neon, we need proper SSL config
 const pool = new Pool({
     connectionString: connectionString,
     ssl: {
-        rejectUnauthorized: false
+        rejectUnauthorized: false,
+        require: true
     }
 });
+
+// Workaround for self-signed cert issue - set NODE_TLS_REJECT_UNAUTHORIZED
+if (process.env.NODE_ENV === 'production') {
+    process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+}
 
 pool.on('error', (err) => {
     console.error('PostgreSQL pool error:', err);
