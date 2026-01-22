@@ -1,442 +1,300 @@
-const initSqlJs = require('sql.js');
-const fs = require('fs');
-const path = require('path');
 const bcrypt = require('bcryptjs');
 
-const dbPath = path.join(__dirname, 'tracify.db');
-let db = null;
-let SQL = null;
+// In-memory database for Vercel serverless
+// Note: Data resets on each deployment - use a cloud database for production
+let customers = [];
+let subscriptions = [];
+let payments = [];
+let trackingRequests = [];
+let adminUsers = [];
+let sessions = [];
 
-// Check if running in Vercel (serverless environment)
-const isVercel = process.env.VERCEL || process.env.NODE_ENV === 'production';
-
-async function getDb() {
-    if (db) return db;
-
-    SQL = await initSqlJs();
-
-    // In Vercel, always use in-memory database
-    if (isVercel) {
-        console.log('Running in serverless mode - using in-memory database');
-        db = new SQL.Database();
-    } else {
-        // Load existing database or create new one (local development only)
-        if (fs.existsSync(dbPath)) {
-            const fileBuffer = fs.readFileSync(dbPath);
-            db = new SQL.Database(fileBuffer);
-        } else {
-            db = new SQL.Database();
-        }
-    }
-
-    return db;
-}
-
-function saveDb() {
-    // Skip saving in serverless environment (Vercel)
-    if (isVercel) {
-        return;
-    }
-
-    if (db) {
-        const data = db.export();
-        const buffer = Buffer.from(data);
-        fs.writeFileSync(dbPath, buffer);
-    }
-}
+let idCounters = {
+    customers: 1,
+    subscriptions: 1,
+    payments: 1,
+    trackingRequests: 1,
+    sessions: 1
+};
 
 async function initialize() {
-    const database = await getDb();
-
-    // Create customers table
-    database.run(`
-        CREATE TABLE IF NOT EXISTS customers (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            email TEXT UNIQUE NOT NULL,
-            password TEXT NOT NULL,
-            phone_to_track TEXT,
-            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-            last_login DATETIME,
-            is_active INTEGER DEFAULT 1
-        )
-    `);
-
-    // Create subscriptions table
-    database.run(`
-        CREATE TABLE IF NOT EXISTS subscriptions (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            customer_id INTEGER NOT NULL,
-            plan_type TEXT NOT NULL,
-            amount REAL NOT NULL,
-            currency TEXT DEFAULT 'PKR',
-            status TEXT DEFAULT 'active',
-            stripe_subscription_id TEXT,
-            stripe_customer_id TEXT,
-            started_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-            expires_at DATETIME,
-            cancelled_at DATETIME,
-            FOREIGN KEY (customer_id) REFERENCES customers(id)
-        )
-    `);
-
-    // Create payments table
-    database.run(`
-        CREATE TABLE IF NOT EXISTS payments (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            customer_id INTEGER NOT NULL,
-            subscription_id INTEGER,
-            amount REAL NOT NULL,
-            currency TEXT DEFAULT 'PKR',
-            status TEXT DEFAULT 'pending',
-            stripe_payment_id TEXT,
-            payment_method TEXT,
-            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-            FOREIGN KEY (customer_id) REFERENCES customers(id),
-            FOREIGN KEY (subscription_id) REFERENCES subscriptions(id)
-        )
-    `);
-
-    // Create tracking_requests table
-    database.run(`
-        CREATE TABLE IF NOT EXISTS tracking_requests (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            customer_id INTEGER NOT NULL,
-            phone_number TEXT NOT NULL,
-            country_code TEXT,
-            status TEXT DEFAULT 'pending',
-            consent_given INTEGER DEFAULT 0,
-            location_lat REAL,
-            location_lng REAL,
-            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-            consent_at DATETIME,
-            FOREIGN KEY (customer_id) REFERENCES customers(id)
-        )
-    `);
-
-    // Create admin_users table
-    database.run(`
-        CREATE TABLE IF NOT EXISTS admin_users (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            username TEXT UNIQUE NOT NULL,
-            password TEXT NOT NULL,
-            email TEXT,
-            role TEXT DEFAULT 'admin',
-            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-            last_login DATETIME
-        )
-    `);
-
-    // Create sessions table for customer sessions
-    database.run(`
-        CREATE TABLE IF NOT EXISTS sessions (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            customer_id INTEGER NOT NULL,
-            token TEXT UNIQUE NOT NULL,
-            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-            expires_at DATETIME NOT NULL,
-            FOREIGN KEY (customer_id) REFERENCES customers(id)
-        )
-    `);
+    console.log('Initializing in-memory database for serverless...');
 
     // Create default admin if not exists
-    const adminCheck = database.exec("SELECT id FROM admin_users WHERE username = 'admin'");
-    if (adminCheck.length === 0 || adminCheck[0].values.length === 0) {
+    const existingAdmin = adminUsers.find(a => a.username === 'admin');
+    if (!existingAdmin) {
         const hashedPassword = bcrypt.hashSync('admin123', 10);
-        database.run("INSERT INTO admin_users (username, password, email, role) VALUES (?, ?, ?, ?)", [
-            'admin',
-            hashedPassword,
-            'admin@tracify.com',
-            'superadmin'
-        ]);
+        adminUsers.push({
+            id: 1,
+            username: 'admin',
+            password: hashedPassword,
+            email: 'admin@tracify.com',
+            role: 'superadmin',
+            created_at: new Date().toISOString(),
+            last_login: null
+        });
         console.log('Default admin created - Username: admin, Password: admin123');
     }
 
-    saveDb();
-    console.log('Database initialized successfully');
-}
-
-// Helper functions to convert sql.js results to objects
-function resultToObject(result) {
-    if (!result || result.length === 0 || result[0].values.length === 0) return null;
-    const columns = result[0].columns;
-    const values = result[0].values[0];
-    const obj = {};
-    columns.forEach((col, i) => obj[col] = values[i]);
-    return obj;
-}
-
-function resultToArray(result) {
-    if (!result || result.length === 0) return [];
-    const columns = result[0].columns;
-    return result[0].values.map(values => {
-        const obj = {};
-        columns.forEach((col, i) => obj[col] = values[i]);
-        return obj;
-    });
+    console.log('Database initialized successfully (in-memory mode)');
 }
 
 // Customer functions
 const customerQueries = {
     create: (email, password) => {
         const hashedPassword = bcrypt.hashSync(password, 10);
-        db.run('INSERT INTO customers (email, password) VALUES (?, ?)', [email, hashedPassword]);
-        saveDb();
-        // Get the actual last inserted ID by querying max id
-        const result = db.exec('SELECT MAX(id) as id FROM customers');
-        const lastId = result[0]?.values[0]?.[0] || 1;
-        return { lastInsertRowid: lastId };
+        const customer = {
+            id: idCounters.customers++,
+            email,
+            password: hashedPassword,
+            phone_to_track: null,
+            created_at: new Date().toISOString(),
+            last_login: null,
+            is_active: 1
+        };
+        customers.push(customer);
+        return { lastInsertRowid: customer.id };
     },
 
     findByEmail: (email) => {
-        const result = db.exec('SELECT * FROM customers WHERE email = ?', [email]);
-        return resultToObject(result);
+        return customers.find(c => c.email === email) || null;
     },
 
     findById: (id) => {
-        const result = db.exec('SELECT * FROM customers WHERE id = ?', [id]);
-        return resultToObject(result);
+        return customers.find(c => c.id === id) || null;
     },
 
     updateLastLogin: (id) => {
-        db.run("UPDATE customers SET last_login = datetime('now') WHERE id = ?", [id]);
-        saveDb();
+        const customer = customers.find(c => c.id === id);
+        if (customer) customer.last_login = new Date().toISOString();
     },
 
     updatePhoneToTrack: (id, phone) => {
-        db.run('UPDATE customers SET phone_to_track = ? WHERE id = ?', [phone, id]);
-        saveDb();
+        const customer = customers.find(c => c.id === id);
+        if (customer) customer.phone_to_track = phone;
     },
 
     getAll: () => {
-        const result = db.exec(`
-            SELECT c.*,
-                   s.plan_type, s.status as subscription_status, s.started_at as subscription_started,
-                   s.expires_at as subscription_expires
-            FROM customers c
-            LEFT JOIN subscriptions s ON c.id = s.customer_id AND s.status = 'active'
-            ORDER BY c.created_at DESC
-        `);
-        return resultToArray(result);
+        return customers.map(c => {
+            const sub = subscriptions.find(s => s.customer_id === c.id && s.status === 'active');
+            return {
+                ...c,
+                plan_type: sub?.plan_type,
+                subscription_status: sub?.status,
+                subscription_started: sub?.started_at,
+                subscription_expires: sub?.expires_at
+            };
+        });
     },
 
-    getCount: () => {
-        const result = db.exec('SELECT COUNT(*) as count FROM customers');
-        return resultToObject(result);
-    },
+    getCount: () => ({ count: customers.length }),
 
     getRecentCustomers: (limit = 10) => {
-        const result = db.exec(`
-            SELECT c.*, s.plan_type, s.status as subscription_status
-            FROM customers c
-            LEFT JOIN subscriptions s ON c.id = s.customer_id
-            ORDER BY c.created_at DESC
-            LIMIT ?
-        `, [limit]);
-        return resultToArray(result);
+        return customers.slice(-limit).reverse().map(c => {
+            const sub = subscriptions.find(s => s.customer_id === c.id);
+            return { ...c, plan_type: sub?.plan_type, subscription_status: sub?.status };
+        });
     },
 
     delete: (id) => {
-        // Delete related data first (sessions, tracking requests, payments, subscriptions)
-        db.run('DELETE FROM sessions WHERE customer_id = ?', [id]);
-        db.run('DELETE FROM tracking_requests WHERE customer_id = ?', [id]);
-        db.run('DELETE FROM payments WHERE customer_id = ?', [id]);
-        db.run('DELETE FROM subscriptions WHERE customer_id = ?', [id]);
-        db.run('DELETE FROM customers WHERE id = ?', [id]);
-        saveDb();
+        sessions = sessions.filter(s => s.customer_id !== id);
+        trackingRequests = trackingRequests.filter(t => t.customer_id !== id);
+        payments = payments.filter(p => p.customer_id !== id);
+        subscriptions = subscriptions.filter(s => s.customer_id !== id);
+        customers = customers.filter(c => c.id !== id);
     },
 
     deleteByEmail: (email) => {
-        const customer = resultToObject(db.exec('SELECT id FROM customers WHERE email = ?', [email]));
+        const customer = customers.find(c => c.email === email);
         if (customer) {
-            db.run('DELETE FROM sessions WHERE customer_id = ?', [customer.id]);
-            db.run('DELETE FROM tracking_requests WHERE customer_id = ?', [customer.id]);
-            db.run('DELETE FROM payments WHERE customer_id = ?', [customer.id]);
-            db.run('DELETE FROM subscriptions WHERE customer_id = ?', [customer.id]);
-            db.run('DELETE FROM customers WHERE id = ?', [customer.id]);
-            saveDb();
+            customerQueries.delete(customer.id);
             return true;
         }
         return false;
     },
 
     hasActiveSubscription: (email) => {
-        const result = db.exec(`
-            SELECT s.id FROM subscriptions s
-            JOIN customers c ON s.customer_id = c.id
-            WHERE c.email = ? AND s.status = 'active' AND s.expires_at > datetime('now')
-            LIMIT 1
-        `, [email]);
-        return result.length > 0 && result[0].values.length > 0;
+        const customer = customers.find(c => c.email === email);
+        if (!customer) return false;
+        const now = new Date().toISOString();
+        return subscriptions.some(s =>
+            s.customer_id === customer.id &&
+            s.status === 'active' &&
+            s.expires_at > now
+        );
     }
 };
 
 // Subscription functions
 const subscriptionQueries = {
     create: (customerId, planType, amount, expiresAt, stripeCustomerId = null, stripeSubscriptionId = null) => {
-        db.run(`
-            INSERT INTO subscriptions (customer_id, plan_type, amount, expires_at, stripe_customer_id, stripe_subscription_id)
-            VALUES (?, ?, ?, ?, ?, ?)
-        `, [customerId, planType, amount, expiresAt, stripeCustomerId, stripeSubscriptionId]);
-        saveDb();
-        const result = db.exec('SELECT MAX(id) as id FROM subscriptions');
-        const lastId = result[0]?.values[0]?.[0] || 1;
-        return { lastInsertRowid: lastId };
+        const sub = {
+            id: idCounters.subscriptions++,
+            customer_id: customerId,
+            plan_type: planType,
+            amount,
+            currency: 'USD',
+            status: 'active',
+            stripe_subscription_id: stripeSubscriptionId,
+            stripe_customer_id: stripeCustomerId,
+            started_at: new Date().toISOString(),
+            expires_at: expiresAt,
+            cancelled_at: null
+        };
+        subscriptions.push(sub);
+        return { lastInsertRowid: sub.id };
     },
 
     findByCustomerId: (customerId) => {
-        const result = db.exec('SELECT * FROM subscriptions WHERE customer_id = ? ORDER BY started_at DESC', [customerId]);
-        return resultToArray(result);
+        return subscriptions.filter(s => s.customer_id === customerId).reverse();
     },
 
     findActiveByCustomerId: (customerId) => {
-        const result = db.exec(`
-            SELECT * FROM subscriptions
-            WHERE customer_id = ? AND status = 'active' AND expires_at > datetime('now')
-            ORDER BY started_at DESC LIMIT 1
-        `, [customerId]);
-        return resultToObject(result);
+        const now = new Date().toISOString();
+        return subscriptions.find(s =>
+            s.customer_id === customerId &&
+            s.status === 'active' &&
+            s.expires_at > now
+        ) || null;
     },
 
     getAll: () => {
-        const result = db.exec(`
-            SELECT s.*, c.email as customer_email
-            FROM subscriptions s
-            JOIN customers c ON s.customer_id = c.id
-            ORDER BY s.started_at DESC
-        `);
-        return resultToArray(result);
+        return subscriptions.map(s => {
+            const customer = customers.find(c => c.id === s.customer_id);
+            return { ...s, customer_email: customer?.email };
+        }).reverse();
     },
 
     getStats: () => {
-        const result = db.exec(`
-            SELECT
-                COUNT(*) as total,
-                SUM(CASE WHEN status = 'active' THEN 1 ELSE 0 END) as active,
-                SUM(CASE WHEN status = 'cancelled' THEN 1 ELSE 0 END) as cancelled,
-                SUM(CASE WHEN status = 'expired' THEN 1 ELSE 0 END) as expired,
-                SUM(CASE WHEN plan_type = 'trial' THEN 1 ELSE 0 END) as trials,
-                SUM(CASE WHEN plan_type = 'monthly' THEN 1 ELSE 0 END) as monthly
-            FROM subscriptions
-        `);
-        return resultToObject(result) || { total: 0, active: 0, cancelled: 0, expired: 0, trials: 0, monthly: 0 };
+        return {
+            total: subscriptions.length,
+            active: subscriptions.filter(s => s.status === 'active').length,
+            cancelled: subscriptions.filter(s => s.status === 'cancelled').length,
+            expired: subscriptions.filter(s => s.status === 'expired').length,
+            trials: subscriptions.filter(s => s.plan_type === 'trial').length,
+            monthly: subscriptions.filter(s => s.plan_type === 'monthly').length
+        };
     },
 
     cancel: (id) => {
-        db.run("UPDATE subscriptions SET status = 'cancelled', cancelled_at = datetime('now') WHERE id = ?", [id]);
-        saveDb();
+        const sub = subscriptions.find(s => s.id === id);
+        if (sub) {
+            sub.status = 'cancelled';
+            sub.cancelled_at = new Date().toISOString();
+        }
     },
 
     updateStatus: (id, status) => {
-        db.run('UPDATE subscriptions SET status = ? WHERE id = ?', [status, id]);
-        saveDb();
+        const sub = subscriptions.find(s => s.id === id);
+        if (sub) sub.status = status;
     }
 };
 
 // Payment functions
 const paymentQueries = {
     create: (customerId, subscriptionId, amount, stripePaymentId, paymentMethod, status = 'completed') => {
-        db.run(`
-            INSERT INTO payments (customer_id, subscription_id, amount, stripe_payment_id, payment_method, status)
-            VALUES (?, ?, ?, ?, ?, ?)
-        `, [customerId, subscriptionId, amount, stripePaymentId, paymentMethod, status]);
-        saveDb();
+        const payment = {
+            id: idCounters.payments++,
+            customer_id: customerId,
+            subscription_id: subscriptionId,
+            amount,
+            currency: 'USD',
+            status,
+            stripe_payment_id: stripePaymentId,
+            payment_method: paymentMethod,
+            created_at: new Date().toISOString()
+        };
+        payments.push(payment);
     },
 
     getAll: () => {
-        const result = db.exec(`
-            SELECT p.*, c.email as customer_email
-            FROM payments p
-            JOIN customers c ON p.customer_id = c.id
-            ORDER BY p.created_at DESC
-        `);
-        return resultToArray(result);
+        return payments.map(p => {
+            const customer = customers.find(c => c.id === p.customer_id);
+            return { ...p, customer_email: customer?.email };
+        }).reverse();
     },
 
     getByCustomerId: (customerId) => {
-        const result = db.exec('SELECT * FROM payments WHERE customer_id = ? ORDER BY created_at DESC', [customerId]);
-        return resultToArray(result);
+        return payments.filter(p => p.customer_id === customerId).reverse();
     },
 
     getTotalRevenue: () => {
-        const result = db.exec("SELECT SUM(amount) as total FROM payments WHERE status = 'completed'");
-        return resultToObject(result) || { total: 0 };
+        const total = payments.filter(p => p.status === 'completed').reduce((sum, p) => sum + p.amount, 0);
+        return { total };
     },
 
     getRevenueByPeriod: (days = 30) => {
-        const result = db.exec(`
-            SELECT DATE(created_at) as date, SUM(amount) as amount
-            FROM payments
-            WHERE status = 'completed' AND created_at >= datetime('now', '-' || ? || ' days')
-            GROUP BY DATE(created_at)
-            ORDER BY date ASC
-        `, [days]);
-        return resultToArray(result);
+        const cutoff = new Date();
+        cutoff.setDate(cutoff.getDate() - days);
+        return payments
+            .filter(p => p.status === 'completed' && new Date(p.created_at) >= cutoff)
+            .map(p => ({ date: p.created_at.split('T')[0], amount: p.amount }));
     }
 };
 
 // Tracking functions
 const trackingQueries = {
     create: (customerId, phoneNumber, countryCode) => {
-        db.run(`
-            INSERT INTO tracking_requests (customer_id, phone_number, country_code)
-            VALUES (?, ?, ?)
-        `, [customerId, phoneNumber, countryCode]);
-        saveDb();
-        const result = db.exec('SELECT MAX(id) as id FROM tracking_requests');
-        const lastId = result[0]?.values[0]?.[0] || 1;
-        return { lastInsertRowid: lastId };
+        const request = {
+            id: idCounters.trackingRequests++,
+            customer_id: customerId,
+            phone_number: phoneNumber,
+            country_code: countryCode,
+            status: 'pending',
+            consent_given: 0,
+            location_lat: null,
+            location_lng: null,
+            created_at: new Date().toISOString(),
+            consent_at: null
+        };
+        trackingRequests.push(request);
+        return { lastInsertRowid: request.id };
     },
 
     getByCustomerId: (customerId) => {
-        const result = db.exec('SELECT * FROM tracking_requests WHERE customer_id = ? ORDER BY created_at DESC', [customerId]);
-        return resultToArray(result);
+        return trackingRequests.filter(t => t.customer_id === customerId).reverse();
     },
 
     getAll: () => {
-        const result = db.exec(`
-            SELECT t.*, c.email as customer_email
-            FROM tracking_requests t
-            JOIN customers c ON t.customer_id = c.id
-            ORDER BY t.created_at DESC
-        `);
-        return resultToArray(result);
+        return trackingRequests.map(t => {
+            const customer = customers.find(c => c.id === t.customer_id);
+            return { ...t, customer_email: customer?.email };
+        }).reverse();
     },
 
     updateConsent: (id, lat, lng) => {
-        db.run(`
-            UPDATE tracking_requests
-            SET consent_given = 1, location_lat = ?, location_lng = ?, consent_at = datetime('now'), status = 'completed'
-            WHERE id = ?
-        `, [lat, lng, id]);
-        saveDb();
+        const request = trackingRequests.find(t => t.id === id);
+        if (request) {
+            request.consent_given = 1;
+            request.location_lat = lat;
+            request.location_lng = lng;
+            request.consent_at = new Date().toISOString();
+            request.status = 'completed';
+        }
     }
 };
 
 // Admin functions
 const adminQueries = {
     findByUsername: (username) => {
-        const result = db.exec('SELECT * FROM admin_users WHERE username = ?', [username]);
-        return resultToObject(result);
+        return adminUsers.find(a => a.username === username) || null;
     },
 
     updateLastLogin: (id) => {
-        db.run("UPDATE admin_users SET last_login = datetime('now') WHERE id = ?", [id]);
-        saveDb();
+        const admin = adminUsers.find(a => a.id === id);
+        if (admin) admin.last_login = new Date().toISOString();
     },
 
     getDashboardStats: () => {
-        const customers = db.exec('SELECT COUNT(*) as count FROM customers');
-        const activeSubscriptions = db.exec("SELECT COUNT(*) as count FROM subscriptions WHERE status = 'active'");
-        const totalRevenue = db.exec("SELECT COALESCE(SUM(amount), 0) as total FROM payments WHERE status = 'completed'");
-        const todayRevenue = db.exec("SELECT COALESCE(SUM(amount), 0) as total FROM payments WHERE status = 'completed' AND DATE(created_at) = DATE('now')");
-        const trackingRequests = db.exec('SELECT COUNT(*) as count FROM tracking_requests');
-
         return {
-            totalCustomers: resultToObject(customers)?.count || 0,
-            activeSubscriptions: resultToObject(activeSubscriptions)?.count || 0,
-            totalRevenue: resultToObject(totalRevenue)?.total || 0,
-            todayRevenue: resultToObject(todayRevenue)?.total || 0,
-            trackingRequests: resultToObject(trackingRequests)?.count || 0
+            totalCustomers: customers.length,
+            activeSubscriptions: subscriptions.filter(s => s.status === 'active').length,
+            totalRevenue: payments.filter(p => p.status === 'completed').reduce((sum, p) => sum + p.amount, 0),
+            todayRevenue: payments.filter(p => {
+                const today = new Date().toISOString().split('T')[0];
+                return p.status === 'completed' && p.created_at.startsWith(today);
+            }).reduce((sum, p) => sum + p.amount, 0),
+            trackingRequests: trackingRequests.length
         };
     }
 };
@@ -444,34 +302,37 @@ const adminQueries = {
 // Session functions
 const sessionQueries = {
     create: (customerId, token, expiresAt) => {
-        db.run('INSERT INTO sessions (customer_id, token, expires_at) VALUES (?, ?, ?)', [customerId, token, expiresAt]);
-        saveDb();
+        const session = {
+            id: idCounters.sessions++,
+            customer_id: customerId,
+            token,
+            created_at: new Date().toISOString(),
+            expires_at: expiresAt
+        };
+        sessions.push(session);
     },
 
     findByToken: (token) => {
-        const result = db.exec(`
-            SELECT s.*, c.email, c.id as customer_id
-            FROM sessions s
-            JOIN customers c ON s.customer_id = c.id
-            WHERE s.token = ? AND s.expires_at > datetime('now')
-        `, [token]);
-        return resultToObject(result);
+        const now = new Date().toISOString();
+        const session = sessions.find(s => s.token === token && s.expires_at > now);
+        if (!session) return null;
+        const customer = customers.find(c => c.id === session.customer_id);
+        return { ...session, email: customer?.email, customer_id: session.customer_id };
     },
 
     delete: (token) => {
-        db.run('DELETE FROM sessions WHERE token = ?', [token]);
-        saveDb();
+        sessions = sessions.filter(s => s.token !== token);
     },
 
     deleteExpired: () => {
-        db.run("DELETE FROM sessions WHERE expires_at <= datetime('now')");
-        saveDb();
+        const now = new Date().toISOString();
+        sessions = sessions.filter(s => s.expires_at > now);
     }
 };
 
 module.exports = {
     initialize,
-    getDb,
+    getDb: () => null, // Not used in memory mode
     customers: customerQueries,
     subscriptions: subscriptionQueries,
     payments: paymentQueries,
