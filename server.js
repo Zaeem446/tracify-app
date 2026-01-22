@@ -137,14 +137,33 @@ app.get('/:lang/cancel', (req, res, next) => {
     }
 });
 
-// Initialize database and start server
-db.initialize();
+// Initialize database (async-safe)
+let dbInitialized = false;
+const initDb = async () => {
+    if (!dbInitialized) {
+        try {
+            await db.initialize();
+            dbInitialized = true;
+            console.log('Database initialized');
+        } catch (err) {
+            console.error('Database init error:', err);
+        }
+    }
+};
 
-// For local development
+// Initialize on first request (lazy loading for serverless)
+app.use(async (req, res, next) => {
+    await initDb();
+    next();
+});
+
+// For local development only
 if (process.env.NODE_ENV !== 'production') {
-    app.listen(PORT, () => {
-        console.log(`Tracify server running on http://localhost:${PORT}`);
-        console.log(`Admin panel: http://localhost:${PORT}/admin`);
+    initDb().then(() => {
+        app.listen(PORT, () => {
+            console.log(`Tracify server running on http://localhost:${PORT}`);
+            console.log(`Admin panel: http://localhost:${PORT}/admin`);
+        });
     });
 }
 
