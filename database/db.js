@@ -232,7 +232,7 @@ const subscriptionQueries = {
 
     findByCustomerId: async (customerId) => {
         const result = await pool.query(
-            'SELECT * FROM subscriptions WHERE customer_id = $1 ORDER BY created_at DESC',
+            'SELECT * FROM subscriptions WHERE customer_id = $1 ORDER BY started_at DESC',
             [customerId]
         );
         return result.rows;
@@ -242,7 +242,7 @@ const subscriptionQueries = {
         const result = await pool.query(
             `SELECT * FROM subscriptions
              WHERE customer_id = $1 AND status = 'active' AND expires_at > NOW()
-             ORDER BY created_at DESC LIMIT 1`,
+             ORDER BY started_at DESC LIMIT 1`,
             [customerId]
         );
         return result.rows[0] || null;
