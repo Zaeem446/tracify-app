@@ -545,6 +545,7 @@
                 const res = await fetch('/api/payment/process', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include', // Required to send session cookie
                     body: JSON.stringify({
                         planType: selectedPlan,
                         paymentMethodId,

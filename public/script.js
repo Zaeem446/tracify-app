@@ -286,6 +286,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const res = await fetch('/api/auth/signup', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include', // Required to receive and store session cookie
                     body: JSON.stringify({
                         email,
                         phoneToTrack: sessionStorage.getItem('phoneToTrack'),
@@ -370,6 +371,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const res = await fetch('/api/auth/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include', // Required to receive and store session cookie
                     body: JSON.stringify({ email, password })
                 });
 
