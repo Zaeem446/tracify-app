@@ -139,22 +139,33 @@ router.get('/me', async (req, res) => {
     try {
         const sessionToken = req.cookies.session_token;
         console.log('Auth check - session_token exists:', !!sessionToken);
+        console.log('All cookies:', req.cookies);
 
         if (!sessionToken) {
             console.log('No session token in cookies');
             return res.status(401).json({ error: 'Not authenticated' });
         }
 
+        console.log('Looking up session token:', sessionToken.substring(0, 8) + '...');
         const session = await db.sessions.findByToken(sessionToken);
-        console.log('Session found:', !!session);
+        console.log('Session found:', !!session, session ? `customer_id: ${session.customer_id}` : '');
 
         if (!session) {
             console.log('Session not found in database');
             return res.status(401).json({ error: 'Session expired' });
         }
 
+        console.log('Looking up customer:', session.customer_id);
         const customer = await db.customers.findById(session.customer_id);
+        console.log('Customer found:', !!customer);
+
+        if (!customer) {
+            console.log('Customer not found for session');
+            return res.status(401).json({ error: 'Customer not found' });
+        }
+
         const subscription = await db.subscriptions.findActiveByCustomerId(customer.id);
+        console.log('Subscription found:', !!subscription);
 
         res.json({
             authenticated: true,
@@ -172,8 +183,9 @@ router.get('/me', async (req, res) => {
         });
 
     } catch (error) {
-        console.error('Auth check error:', error);
-        res.status(500).json({ error: 'Authentication check failed' });
+        console.error('Auth check error:', error.message);
+        console.error('Auth check error stack:', error.stack);
+        res.status(500).json({ error: 'Authentication check failed: ' + error.message });
     }
 });
 
