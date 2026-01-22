@@ -5,19 +5,19 @@ const { sendTrackingConsentRequest } = require('../utils/email');
 const router = express.Router();
 
 // Middleware to check customer authentication and subscription
-function requireActiveSubscription(req, res, next) {
+async function requireActiveSubscription(req, res, next) {
     const sessionToken = req.cookies.session_token;
 
     if (!sessionToken) {
         return res.status(401).json({ error: 'Please login to continue' });
     }
 
-    const session = db.sessions.findByToken(sessionToken);
+    const session = await db.sessions.findByToken(sessionToken);
     if (!session) {
         return res.status(401).json({ error: 'Session expired. Please login again.' });
     }
 
-    const subscription = db.subscriptions.findActiveByCustomerId(session.customer_id);
+    const subscription = await db.subscriptions.findActiveByCustomerId(session.customer_id);
     if (!subscription) {
         return res.status(403).json({ error: 'Active subscription required', redirectTo: '/payment' });
     }
@@ -38,7 +38,7 @@ router.post('/request', requireActiveSubscription, async (req, res) => {
         }
 
         // Create tracking request record
-        const result = db.tracking.create(
+        const result = await db.tracking.create(
             req.customerId,
             phoneNumber,
             countryCode || '+92'
@@ -65,9 +65,9 @@ router.post('/request', requireActiveSubscription, async (req, res) => {
 });
 
 // Get customer's tracking history
-router.get('/history', requireActiveSubscription, (req, res) => {
+router.get('/history', requireActiveSubscription, async (req, res) => {
     try {
-        const requests = db.tracking.getByCustomerId(req.customerId);
+        const requests = await db.tracking.getByCustomerId(req.customerId);
         res.json({ requests });
     } catch (error) {
         console.error('Tracking history error:', error);
@@ -142,7 +142,7 @@ router.get('/consent/:trackingId', (req, res) => {
 });
 
 // Process consent (when user shares location)
-router.post('/consent/:trackingId', (req, res) => {
+router.post('/consent/:trackingId', async (req, res) => {
     try {
         const { lat, lng } = req.body;
         const trackingId = req.params.trackingId;
@@ -151,7 +151,7 @@ router.post('/consent/:trackingId', (req, res) => {
             return res.status(400).json({ error: 'Location coordinates required' });
         }
 
-        db.tracking.updateConsent(trackingId, lat, lng);
+        await db.tracking.updateConsent(trackingId, lat, lng);
 
         res.json({
             success: true,
@@ -165,9 +165,9 @@ router.post('/consent/:trackingId', (req, res) => {
 });
 
 // Get specific tracking request status
-router.get('/status/:trackingId', requireActiveSubscription, (req, res) => {
+router.get('/status/:trackingId', requireActiveSubscription, async (req, res) => {
     try {
-        const requests = db.tracking.getByCustomerId(req.customerId);
+        const requests = await db.tracking.getByCustomerId(req.customerId);
         const request = requests.find(r => r.id === parseInt(req.params.trackingId));
 
         if (!request) {

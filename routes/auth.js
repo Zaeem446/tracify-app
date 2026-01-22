@@ -28,7 +28,7 @@ router.post('/signup', async (req, res) => {
         }
 
         // Check if customer already exists
-        const existingCustomer = db.customers.findByEmail(email);
+        const existingCustomer = await db.customers.findByEmail(email);
         if (existingCustomer) {
             return res.status(400).json({ error: 'An account with this email already exists. Please login.' });
         }
@@ -37,18 +37,18 @@ router.post('/signup', async (req, res) => {
         const password = generatePassword();
 
         // Create customer
-        const result = db.customers.create(email, password);
+        const result = await db.customers.create(email, password);
         const customerId = result.lastInsertRowid;
 
         // Store phone to track if provided
         if (phoneToTrack) {
-            db.customers.updatePhoneToTrack(customerId, `${countryCode || ''}${phoneToTrack}`);
+            await db.customers.updatePhoneToTrack(customerId, `${countryCode || ''}${phoneToTrack}`);
         }
 
         // Create session token
         const sessionToken = uuidv4();
         const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(); // 24 hours
-        db.sessions.create(customerId, sessionToken, expiresAt);
+        await db.sessions.create(customerId, sessionToken, expiresAt);
 
         // Send password via email
         await sendPasswordEmail(email, password);
@@ -76,7 +76,7 @@ router.post('/signup', async (req, res) => {
 });
 
 // Customer login
-router.post('/login', (req, res) => {
+router.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
 
@@ -84,7 +84,7 @@ router.post('/login', (req, res) => {
             return res.status(400).json({ error: 'Email and password are required' });
         }
 
-        const customer = db.customers.findByEmail(email);
+        const customer = await db.customers.findByEmail(email);
         if (!customer) {
             return res.status(401).json({ error: 'Invalid email or password' });
         }
@@ -95,12 +95,12 @@ router.post('/login', (req, res) => {
         }
 
         // Update last login
-        db.customers.updateLastLogin(customer.id);
+        await db.customers.updateLastLogin(customer.id);
 
         // Create session
         const sessionToken = uuidv4();
         const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(); // 7 days
-        db.sessions.create(customer.id, sessionToken, expiresAt);
+        await db.sessions.create(customer.id, sessionToken, expiresAt);
 
         res.cookie('session_token', sessionToken, {
             httpOnly: true,
@@ -109,7 +109,7 @@ router.post('/login', (req, res) => {
         });
 
         // Check if has active subscription
-        const subscription = db.subscriptions.findActiveByCustomerId(customer.id);
+        const subscription = await db.subscriptions.findActiveByCustomerId(customer.id);
 
         res.json({
             success: true,
@@ -125,7 +125,7 @@ router.post('/login', (req, res) => {
 });
 
 // Check session / Get current user
-router.get('/me', (req, res) => {
+router.get('/me', async (req, res) => {
     try {
         const sessionToken = req.cookies.session_token;
 
@@ -133,13 +133,13 @@ router.get('/me', (req, res) => {
             return res.status(401).json({ error: 'Not authenticated' });
         }
 
-        const session = db.sessions.findByToken(sessionToken);
+        const session = await db.sessions.findByToken(sessionToken);
         if (!session) {
             return res.status(401).json({ error: 'Session expired' });
         }
 
-        const customer = db.customers.findById(session.customer_id);
-        const subscription = db.subscriptions.findActiveByCustomerId(customer.id);
+        const customer = await db.customers.findById(session.customer_id);
+        const subscription = await db.subscriptions.findActiveByCustomerId(customer.id);
 
         res.json({
             authenticated: true,
@@ -163,11 +163,11 @@ router.get('/me', (req, res) => {
 });
 
 // Logout
-router.post('/logout', (req, res) => {
+router.post('/logout', async (req, res) => {
     const sessionToken = req.cookies.session_token;
 
     if (sessionToken) {
-        db.sessions.delete(sessionToken);
+        await db.sessions.delete(sessionToken);
     }
 
     res.clearCookie('session_token');
@@ -175,7 +175,7 @@ router.post('/logout', (req, res) => {
 });
 
 // Admin login
-router.post('/admin/login', (req, res) => {
+router.post('/admin/login', async (req, res) => {
     try {
         const { username, password } = req.body;
 
@@ -183,7 +183,7 @@ router.post('/admin/login', (req, res) => {
             return res.status(400).json({ error: 'Username and password are required' });
         }
 
-        const admin = db.admin.findByUsername(username);
+        const admin = await db.admin.findByUsername(username);
         if (!admin) {
             return res.status(401).json({ error: 'Invalid credentials' });
         }
@@ -194,7 +194,7 @@ router.post('/admin/login', (req, res) => {
         }
 
         // Update last login
-        db.admin.updateLastLogin(admin.id);
+        await db.admin.updateLastLogin(admin.id);
 
         // Create JWT token for admin
         const token = jwt.sign(

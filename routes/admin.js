@@ -23,11 +23,11 @@ function requireAdmin(req, res, next) {
 }
 
 // Dashboard stats
-router.get('/stats', requireAdmin, (req, res) => {
+router.get('/stats', requireAdmin, async (req, res) => {
     try {
-        const stats = db.admin.getDashboardStats();
-        const subscriptionStats = db.subscriptions.getStats();
-        const revenueByDay = db.payments.getRevenueByPeriod(30);
+        const stats = await db.admin.getDashboardStats();
+        const subscriptionStats = await db.subscriptions.getStats();
+        const revenueByDay = await db.payments.getRevenueByPeriod(30);
 
         res.json({
             overview: {
@@ -47,9 +47,9 @@ router.get('/stats', requireAdmin, (req, res) => {
 });
 
 // Get all customers
-router.get('/customers', requireAdmin, (req, res) => {
+router.get('/customers', requireAdmin, async (req, res) => {
     try {
-        const customers = db.customers.getAll();
+        const customers = await db.customers.getAll();
         res.json({ customers });
     } catch (error) {
         console.error('Customers fetch error:', error);
@@ -58,16 +58,16 @@ router.get('/customers', requireAdmin, (req, res) => {
 });
 
 // Get single customer details
-router.get('/customers/:id', requireAdmin, (req, res) => {
+router.get('/customers/:id', requireAdmin, async (req, res) => {
     try {
-        const customer = db.customers.findById(req.params.id);
+        const customer = await db.customers.findById(req.params.id);
         if (!customer) {
             return res.status(404).json({ error: 'Customer not found' });
         }
 
-        const subscriptions = db.subscriptions.findByCustomerId(customer.id);
-        const payments = db.payments.getByCustomerId(customer.id);
-        const trackingRequests = db.tracking.getByCustomerId(customer.id);
+        const subscriptions = await db.subscriptions.findByCustomerId(customer.id);
+        const payments = await db.payments.getByCustomerId(customer.id);
+        const trackingRequests = await db.tracking.getByCustomerId(customer.id);
 
         res.json({
             customer,
@@ -82,9 +82,9 @@ router.get('/customers/:id', requireAdmin, (req, res) => {
 });
 
 // Get all subscriptions
-router.get('/subscriptions', requireAdmin, (req, res) => {
+router.get('/subscriptions', requireAdmin, async (req, res) => {
     try {
-        const subscriptions = db.subscriptions.getAll();
+        const subscriptions = await db.subscriptions.getAll();
         res.json({ subscriptions });
     } catch (error) {
         console.error('Subscriptions fetch error:', error);
@@ -93,15 +93,15 @@ router.get('/subscriptions', requireAdmin, (req, res) => {
 });
 
 // Cancel subscription (admin) - also deletes customer account
-router.post('/subscriptions/:id/cancel', requireAdmin, (req, res) => {
+router.post('/subscriptions/:id/cancel', requireAdmin, async (req, res) => {
     try {
         // Get subscription to find customer ID
-        const subscriptions = db.subscriptions.getAll();
+        const subscriptions = await db.subscriptions.getAll();
         const subscription = subscriptions.find(s => s.id == req.params.id);
 
         if (subscription) {
             // Delete entire customer account and all related data
-            db.customers.delete(subscription.customer_id);
+            await db.customers.delete(subscription.customer_id);
             res.json({ success: true, message: 'Subscription cancelled and customer account deleted' });
         } else {
             res.status(404).json({ error: 'Subscription not found' });
@@ -113,10 +113,10 @@ router.post('/subscriptions/:id/cancel', requireAdmin, (req, res) => {
 });
 
 // Get all payments
-router.get('/payments', requireAdmin, (req, res) => {
+router.get('/payments', requireAdmin, async (req, res) => {
     try {
-        const payments = db.payments.getAll();
-        const totalRevenue = db.payments.getTotalRevenue();
+        const payments = await db.payments.getAll();
+        const totalRevenue = await db.payments.getTotalRevenue();
         res.json({ payments, totalRevenue: totalRevenue.total || 0 });
     } catch (error) {
         console.error('Payments fetch error:', error);
@@ -125,9 +125,9 @@ router.get('/payments', requireAdmin, (req, res) => {
 });
 
 // Get all tracking requests
-router.get('/tracking', requireAdmin, (req, res) => {
+router.get('/tracking', requireAdmin, async (req, res) => {
     try {
-        const requests = db.tracking.getAll();
+        const requests = await db.tracking.getAll();
         res.json({ requests });
     } catch (error) {
         console.error('Tracking requests fetch error:', error);
@@ -136,10 +136,11 @@ router.get('/tracking', requireAdmin, (req, res) => {
 });
 
 // Get recent activity
-router.get('/activity', requireAdmin, (req, res) => {
+router.get('/activity', requireAdmin, async (req, res) => {
     try {
-        const recentCustomers = db.customers.getRecentCustomers(5);
-        const recentPayments = db.payments.getAll().slice(0, 5);
+        const recentCustomers = await db.customers.getRecentCustomers(5);
+        const allPayments = await db.payments.getAll();
+        const recentPayments = allPayments.slice(0, 5);
 
         res.json({
             recentCustomers,

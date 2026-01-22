@@ -17,14 +17,14 @@ router.get('/stripe-config', (req, res) => {
 });
 
 // Middleware to check customer authentication
-function requireCustomerAuth(req, res, next) {
+async function requireCustomerAuth(req, res, next) {
     const sessionToken = req.cookies.session_token;
 
     if (!sessionToken) {
         return res.status(401).json({ error: 'Please login to continue' });
     }
 
-    const session = db.sessions.findByToken(sessionToken);
+    const session = await db.sessions.findByToken(sessionToken);
     if (!session) {
         return res.status(401).json({ error: 'Session expired. Please login again.' });
     }
@@ -121,7 +121,7 @@ router.post('/process', requireCustomerAuth, async (req, res) => {
                 console.log('Processing Stripe payment...', { customerId, amount, planType });
 
                 // Create or get Stripe customer
-                const customer = db.customers.findById(customerId);
+                const customer = await db.customers.findById(customerId);
                 console.log('Creating Stripe customer for:', customer.email);
 
                 const stripeCustomer = await stripe.customers.create({
@@ -177,11 +177,11 @@ router.post('/process', requireCustomerAuth, async (req, res) => {
         } else {
             // Development mode - simulate successful payment
             stripePaymentId = 'dev_pay_' + Date.now();
-            console.log(`\n💳 DEV MODE: Payment of Rs ${amount} processed for customer ${customerId}\n`);
+            console.log(`\n💳 DEV MODE: Payment of $${amount} processed for customer ${customerId}\n`);
         }
 
         // Create subscription record
-        const subscriptionResult = db.subscriptions.create(
+        const subscriptionResult = await db.subscriptions.create(
             customerId,
             planType,
             amount,
@@ -191,7 +191,7 @@ router.post('/process', requireCustomerAuth, async (req, res) => {
         );
 
         // Create payment record
-        db.payments.create(
+        await db.payments.create(
             customerId,
             subscriptionResult.lastInsertRowid,
             amount,
@@ -218,9 +218,9 @@ router.post('/process', requireCustomerAuth, async (req, res) => {
 });
 
 // Get customer's subscription status
-router.get('/subscription', requireCustomerAuth, (req, res) => {
+router.get('/subscription', requireCustomerAuth, async (req, res) => {
     try {
-        const subscription = db.subscriptions.findActiveByCustomerId(req.customerId);
+        const subscription = await db.subscriptions.findActiveByCustomerId(req.customerId);
 
         if (!subscription) {
             return res.json({ hasSubscription: false });
@@ -246,7 +246,7 @@ router.get('/subscription', requireCustomerAuth, (req, res) => {
 // Cancel subscription
 router.post('/cancel', requireCustomerAuth, async (req, res) => {
     try {
-        const subscription = db.subscriptions.findActiveByCustomerId(req.customerId);
+        const subscription = await db.subscriptions.findActiveByCustomerId(req.customerId);
 
         if (!subscription) {
             return res.status(404).json({ error: 'No active subscription found' });
@@ -258,7 +258,7 @@ router.post('/cancel', requireCustomerAuth, async (req, res) => {
         }
 
         // Update local record
-        db.subscriptions.cancel(subscription.id);
+        await db.subscriptions.cancel(subscription.id);
 
         res.json({
             success: true,
@@ -272,9 +272,9 @@ router.post('/cancel', requireCustomerAuth, async (req, res) => {
 });
 
 // Payment history
-router.get('/history', requireCustomerAuth, (req, res) => {
+router.get('/history', requireCustomerAuth, async (req, res) => {
     try {
-        const payments = db.payments.getByCustomerId(req.customerId);
+        const payments = await db.payments.getByCustomerId(req.customerId);
         res.json({ payments });
     } catch (error) {
         console.error('Payment history error:', error);

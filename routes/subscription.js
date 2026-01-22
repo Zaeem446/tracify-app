@@ -6,7 +6,7 @@ const router = express.Router();
 // Cancel subscription from cancel page
 // This checks if user has active subscription, if yes shows success (will be handled manually via admin/Zendesk)
 // If no account or no active subscription, shows error
-router.post('/cancel', (req, res) => {
+router.post('/cancel', async (req, res) => {
     try {
         const { email } = req.body;
 
@@ -15,7 +15,7 @@ router.post('/cancel', (req, res) => {
         }
 
         // Check if customer exists
-        const customer = db.customers.findByEmail(email);
+        const customer = await db.customers.findByEmail(email);
 
         if (!customer) {
             return res.status(404).json({
@@ -24,7 +24,7 @@ router.post('/cancel', (req, res) => {
         }
 
         // Check if customer has active subscription
-        const hasActiveSub = db.customers.hasActiveSubscription(email);
+        const hasActiveSub = await db.customers.hasActiveSubscription(email);
 
         if (!hasActiveSub) {
             return res.status(404).json({
@@ -46,7 +46,7 @@ router.post('/cancel', (req, res) => {
 });
 
 // Cancel subscription from dashboard (customer self-service) - deletes account
-router.post('/cancel-account', (req, res) => {
+router.post('/cancel-account', async (req, res) => {
     try {
         const sessionToken = req.cookies.session_token;
 
@@ -54,13 +54,13 @@ router.post('/cancel-account', (req, res) => {
             return res.status(401).json({ error: 'Not authenticated' });
         }
 
-        const session = db.sessions.findByToken(sessionToken);
+        const session = await db.sessions.findByToken(sessionToken);
         if (!session) {
             return res.status(401).json({ error: 'Session expired' });
         }
 
         // Delete the customer account completely
-        db.customers.delete(session.customer_id);
+        await db.customers.delete(session.customer_id);
 
         // Clear the session cookie
         res.clearCookie('session_token');
