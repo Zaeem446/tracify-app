@@ -650,8 +650,8 @@
                 if (!res.ok) {
                     const errorData = await res.json().catch(() => ({}));
                     console.error('Auth failed:', res.status, errorData);
-                    // Show error instead of redirecting for debugging
-                    alert('Not logged in. Status: ' + res.status + '. Please sign up first.');
+                    // Show detailed error for debugging
+                    alert('Auth failed. Status: ' + res.status + '\nError: ' + (errorData.error || 'Unknown error'));
                     window.location.href = '/';
                     return false;
                 }
