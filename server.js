@@ -140,7 +140,13 @@ app.get('/:lang/cancel', (req, res, next) => {
 // Initialize database and start server
 db.initialize();
 
-app.listen(PORT, () => {
-    console.log(`Tracify server running on http://localhost:${PORT}`);
-    console.log(`Admin panel: http://localhost:${PORT}/admin`);
-});
+// For local development
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`Tracify server running on http://localhost:${PORT}`);
+        console.log(`Admin panel: http://localhost:${PORT}/admin`);
+    });
+}
+
+// Export for Vercel serverless
+module.exports = app;
