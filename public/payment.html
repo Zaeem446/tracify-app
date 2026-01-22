@@ -376,10 +376,10 @@
                 </div>
                 <div class="card-body">
                     <div style="text-align: right; margin-bottom: 20px;">
-                        <div style="font-size: 2.2rem; font-weight: 700; color: #4CAF50;" data-price-usd="1.17">Rs 325</div>
+                        <div style="font-size: 2.2rem; font-weight: 700; color: #4CAF50;">$1.25</div>
                         <div style="font-size: 0.85rem; color: var(--text-light); margin-top: 5px;">
                             <span data-i18n="payment.trialThen">24h trial, then</span>
-                            <span data-price-usd="31.32">Rs 8,700</span>
+                            <span>$30.00</span>
                             <span data-i18n="payment.monthAfterTrial">/month after trial</span>
                         </div>
                     </div>
@@ -389,7 +389,7 @@
                             <span style="font-size: 1.3rem; font-weight: 600; color: #2E7D32;">24-Hour Trial</span>
                             <span style="background: linear-gradient(135deg, #FFD54F, #FFA726); color: #F57C00; font-weight: 600; padding: 8px 16px; border-radius: 20px; font-size: 0.85rem;">Best Value</span>
                         </div>
-                        <div style="font-size: 1.5rem; font-weight: 600; color: #4CAF50; margin-bottom: 10px;">Rs 325 <span style="font-size: 1rem; color: var(--text-light); font-weight: 400;">/ 24 hours</span></div>
+                        <div style="font-size: 1.5rem; font-weight: 600; color: #4CAF50; margin-bottom: 10px;">$1.25 <span style="font-size: 1rem; color: var(--text-light); font-weight: 400;">/ 24 hours</span></div>
                         <p style="color: var(--text); line-height: 1.6; margin: 0;">Full access to all platform features for 24 hours. Perfect for trying out Tracify's location tracking service.</p>
                     </div>
 
@@ -458,14 +458,14 @@
                         </div>
                         <div class="summary-item">
                             <span class="summary-label" data-i18n="payment.total">Total</span>
-                            <span class="summary-value" id="summaryTotal" data-price-usd="1.17">Rs 325</span>
+                            <span class="summary-value" id="summaryTotal">$1.25</span>
                         </div>
 
-                        <button type="submit" class="btn-pay" id="payBtn"><span data-i18n="payment.pay">Pay</span> <span data-price-usd="1.17">Rs 325</span></button>
+                        <button type="submit" class="btn-pay" id="payBtn"><span data-i18n="payment.pay">Pay</span> $1.25</button>
                     </form>
 
                     <div style="margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; font-size: 0.8rem; color: var(--text-light); line-height: 1.6;">
-                        <p style="margin-bottom: 10px;">You will be charged Rs 325 for a 1-day trial. At the end of 24 hours, the offer will be automatically renewed in a subscription without commitment, at the price of Rs 8,700 per month, unless canceled within the trial period. Cancel anytime online or by email. 30-day money back guarantee, no questions asked. Our goal is customer satisfaction.</p>
+                        <p style="margin-bottom: 10px;">You will be charged $1.25 for a 1-day trial. At the end of 24 hours, the offer will be automatically renewed in a subscription without commitment, at the price of $30.00 per month, unless canceled within the trial period. Cancel anytime online or by email. 30-day money back guarantee, no questions asked. Our goal is customer satisfaction.</p>
                         <p style="margin: 0; font-size: 0.75rem;">Charges may appear on your credit card statement as: "TRACIFY.COM"</p>
                     </div>
 
@@ -482,7 +482,7 @@
     </div>
 
     <script>
-        const prices = { trial: 325, monthly: 8700 };
+        const prices = { trial: 1.25, monthly: 30.00 };
         const names = { trial: '24-Hour Trial', monthly: 'Monthly Subscription' };
         let selectedPlan = 'trial';
         let stripe = null;
@@ -498,11 +498,14 @@
         // Check Stripe configuration
         async function initializeStripe() {
             try {
+                console.log('Fetching Stripe config...');
                 const res = await fetch('/api/payment/stripe-config');
                 const config = await res.json();
+                console.log('Stripe config:', config);
 
                 if (config.publishableKey && config.publishableKey.startsWith('pk_')) {
                     // Real Stripe mode
+                    console.log('Initializing Stripe with key:', config.publishableKey.substring(0, 12) + '...');
                     stripeMode = true;
                     stripe = Stripe(config.publishableKey);
                     const elements = stripe.elements();
@@ -528,8 +531,10 @@
                     document.getElementById('stripe-card-section').style.display = 'block';
                     document.getElementById('dev-card-section').style.display = 'none';
                     document.getElementById('paymentMode').innerHTML = '<div class="stripe-mode">🔒 Secure Stripe Payment</div>';
+                    console.log('Stripe card element mounted successfully');
                 } else {
-                    // Dev mode
+                    // Dev mode - no Stripe key
+                    console.log('No valid Stripe key, using dev mode');
                     stripeMode = false;
                     document.getElementById('stripe-card-section').style.display = 'none';
                     document.getElementById('dev-card-section').style.display = 'block';
@@ -539,7 +544,9 @@
                 console.error('Stripe config error:', error);
                 // Fallback to dev mode
                 stripeMode = false;
+                document.getElementById('stripe-card-section').style.display = 'none';
                 document.getElementById('dev-card-section').style.display = 'block';
+                document.getElementById('paymentMode').innerHTML = '<div class="dev-mode">⚠️ Development Mode - Any card accepted</div>';
             }
         }
 
@@ -577,8 +584,8 @@
 
         function updateSummary() {
             document.getElementById('summaryPlan').textContent = names[selectedPlan];
-            document.getElementById('summaryTotal').textContent = 'Rs ' + prices[selectedPlan].toLocaleString();
-            document.getElementById('payBtn').textContent = 'Pay Rs ' + prices[selectedPlan].toLocaleString();
+            document.getElementById('summaryTotal').textContent = '$' + prices[selectedPlan].toFixed(2);
+            document.getElementById('payBtn').textContent = 'Pay $' + prices[selectedPlan].toFixed(2);
         }
 
         // Dev mode card formatting
@@ -672,13 +679,13 @@
                     errorDiv.textContent = errorMsg;
                     errorDiv.style.display = 'block';
                     btn.disabled = false;
-                    btn.textContent = 'Pay Rs ' + prices[selectedPlan].toLocaleString();
+                    btn.textContent = 'Pay $' + prices[selectedPlan].toFixed(2);
                 }
             } catch (error) {
                 errorDiv.textContent = error.message || 'Connection error. Please try again.';
                 errorDiv.style.display = 'block';
                 btn.disabled = false;
-                btn.textContent = 'Pay Rs ' + prices[selectedPlan].toLocaleString();
+                btn.textContent = 'Pay $' + prices[selectedPlan].toFixed(2);
             }
         });
 
