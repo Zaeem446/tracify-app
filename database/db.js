@@ -2,11 +2,18 @@ const { Pool } = require('pg');
 const bcrypt = require('bcryptjs');
 
 // PostgreSQL connection pool
+console.log('Setting up PostgreSQL connection...');
+console.log('POSTGRES_URL exists:', !!process.env.POSTGRES_URL);
+
 const pool = new Pool({
     connectionString: process.env.POSTGRES_URL,
     ssl: {
         rejectUnauthorized: false
     }
+});
+
+pool.on('error', (err) => {
+    console.error('PostgreSQL pool error:', err);
 });
 
 // Initialize database tables

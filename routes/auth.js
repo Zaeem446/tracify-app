@@ -178,17 +178,24 @@ router.post('/logout', async (req, res) => {
 router.post('/admin/login', async (req, res) => {
     try {
         const { username, password } = req.body;
+        console.log('Admin login attempt for:', username);
 
         if (!username || !password) {
             return res.status(400).json({ error: 'Username and password are required' });
         }
 
+        console.log('Looking up admin user...');
         const admin = await db.admin.findByUsername(username);
+        console.log('Admin found:', admin ? 'yes' : 'no');
+
         if (!admin) {
             return res.status(401).json({ error: 'Invalid credentials' });
         }
 
+        console.log('Checking password...');
         const validPassword = bcrypt.compareSync(password, admin.password);
+        console.log('Password valid:', validPassword);
+
         if (!validPassword) {
             return res.status(401).json({ error: 'Invalid credentials' });
         }
@@ -219,8 +226,9 @@ router.post('/admin/login', async (req, res) => {
         });
 
     } catch (error) {
-        console.error('Admin login error:', error);
-        res.status(500).json({ error: 'Login failed' });
+        console.error('Admin login error:', error.message);
+        console.error('Full error:', error);
+        res.status(500).json({ error: 'Login failed: ' + error.message });
     }
 });
 
