@@ -637,22 +637,39 @@
         // Check authentication
         async function checkAuth() {
             try {
-                const res = await fetch('/api/auth/me');
+                console.log('Checking authentication...');
+                console.log('Cookies:', document.cookie);
+
+                const res = await fetch('/api/auth/me', {
+                    credentials: 'include' // Ensure cookies are sent
+                });
+
+                console.log('Auth response status:', res.status);
+
                 if (!res.ok) {
+                    const errorData = await res.json().catch(() => ({}));
+                    console.error('Auth failed:', res.status, errorData);
+                    // Show error instead of redirecting for debugging
+                    alert('Not logged in. Status: ' + res.status + '. Please sign up first.');
                     window.location.href = '/';
                     return false;
                 }
+
                 const data = await res.json();
+                console.log('Auth data:', data);
+
                 document.getElementById('userEmail').style.display = 'block';
                 document.getElementById('userEmailText').textContent = data.customer.email;
 
                 if (data.subscription) {
+                    console.log('User has subscription, redirecting to dashboard');
                     window.location.href = '/dashboard';
                     return false;
                 }
                 return true;
             } catch (error) {
                 console.error('Auth check error:', error);
+                alert('Auth error: ' + error.message);
                 window.location.href = '/';
                 return false;
             }
