@@ -18,32 +18,12 @@ async function getTransporter() {
             }
         });
         console.log('Using configured SMTP server');
-    } else {
-        // Use Ethereal Email for testing (free, no signup required)
-        console.log('Creating Ethereal test email account...');
-        testAccount = await nodemailer.createTestAccount();
-
-        transporter = nodemailer.createTransport({
-            host: 'smtp.ethereal.email',
-            port: 587,
-            secure: false,
-            auth: {
-                user: testAccount.user,
-                pass: testAccount.pass
-            }
-        });
-
-        console.log('\n========================================');
-        console.log('📧 ETHEREAL EMAIL TEST ACCOUNT CREATED');
-        console.log('========================================');
-        console.log('View sent emails at: https://ethereal.email');
-        console.log('Login with:');
-        console.log('  Email:', testAccount.user);
-        console.log('  Password:', testAccount.pass);
-        console.log('========================================\n');
+        return transporter;
     }
 
-    return transporter;
+    // In production without SMTP, return null (will log instead of sending)
+    console.log('SMTP not configured - emails will be logged only');
+    return null;
 }
 
 async function sendPasswordEmail(email, password) {
@@ -153,6 +133,16 @@ async function sendContactForm(formData) {
         'feedback': 'General Feedback',
         'other': 'Other'
     };
+
+    // If SMTP not configured, just log and return success
+    if (!transport) {
+        console.log('\n📧 CONTACT FORM RECEIVED (SMTP not configured - logged only):');
+        console.log('From:', name, `<${email}>`);
+        console.log('Subject:', subjectMap[subject] || subject);
+        console.log('Message:', message);
+        console.log('Time:', new Date().toLocaleString());
+        return { logged: true };
+    }
 
     const mailOptions = {
         from: process.env.SMTP_FROM || '"Tracify Contact Form" <noreply@tracify-geo.com>',

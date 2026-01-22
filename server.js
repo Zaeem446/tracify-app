@@ -28,6 +28,26 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Initialize database (async-safe) - MUST be before routes
+let dbInitialized = false;
+const initDb = async () => {
+    if (!dbInitialized) {
+        try {
+            await db.initialize();
+            dbInitialized = true;
+            console.log('Database initialized');
+        } catch (err) {
+            console.error('Database init error:', err);
+        }
+    }
+};
+
+// Initialize on first request (lazy loading for serverless)
+app.use(async (req, res, next) => {
+    await initDb();
+    next();
+});
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/admin', adminRoutes);
@@ -137,26 +157,6 @@ app.get('/:lang/cancel', (req, res, next) => {
     }
 });
 
-// Initialize database (async-safe)
-let dbInitialized = false;
-const initDb = async () => {
-    if (!dbInitialized) {
-        try {
-            await db.initialize();
-            dbInitialized = true;
-            console.log('Database initialized');
-        } catch (err) {
-            console.error('Database init error:', err);
-        }
-    }
-};
-
-// Initialize on first request (lazy loading for serverless)
-app.use(async (req, res, next) => {
-    await initDb();
-    next();
-});
-
 // For local development only
 if (process.env.NODE_ENV !== 'production') {
     initDb().then(() => {
@@ -169,4 +169,3 @@ if (process.env.NODE_ENV !== 'production') {
 
 // Export for Vercel serverless
 module.exports = app;
-
