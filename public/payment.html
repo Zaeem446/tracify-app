@@ -459,7 +459,7 @@
                             <span class="summary-value" id="summaryTotal">$1.25</span>
                         </div>
 
-                        <button type="submit" class="btn-pay" id="payBtn"><span data-i18n="payment.pay">Pay</span> $1.25</button>
+                        <button type="button" class="btn-pay" id="payBtn" onclick="handlePayment()"><span data-i18n="payment.pay">Pay</span> $1.25</button>
                     </form>
 
                     <div style="margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; font-size: 0.8rem; color: var(--text-light); line-height: 1.6;">
@@ -486,139 +486,22 @@
         let stripe = null;
         let cardElement = null;
         let stripeMode = false;
+        let isProcessing = false;
 
-        // Initialize
-        async function init() {
-            await checkAuth();
-            await initializeStripe();
-        }
+        // Main payment handler - called by button onclick
+        async function handlePayment() {
+            console.log('handlePayment called');
 
-        // Check Stripe configuration
-        async function initializeStripe() {
-            try {
-                console.log('Fetching Stripe config...');
-                const res = await fetch('/api/payment/stripe-config');
-                const config = await res.json();
-                console.log('Stripe config:', config);
-
-                if (config.publishableKey && config.publishableKey.startsWith('pk_')) {
-                    // Real Stripe mode
-                    console.log('Initializing Stripe with key:', config.publishableKey.substring(0, 12) + '...');
-                    stripeMode = true;
-                    stripe = Stripe(config.publishableKey);
-                    const elements = stripe.elements();
-                    cardElement = elements.create('card', {
-                        style: {
-                            base: {
-                                fontSize: '16px',
-                                color: '#333',
-                                '::placeholder': { color: '#999' }
-                            }
-                        }
-                    });
-                    cardElement.mount('#card-element');
-                    cardElement.on('change', (event) => {
-                        const displayError = document.getElementById('card-errors');
-                        if (event.error) {
-                            displayError.textContent = event.error.message;
-                        } else {
-                            displayError.textContent = '';
-                        }
-                    });
-
-                    document.getElementById('stripe-card-section').style.display = 'block';
-                    document.getElementById('dev-card-section').style.display = 'none';
-                    document.getElementById('paymentMode').innerHTML = '<div class="stripe-mode">🔒 Secure Stripe Payment</div>';
-                    console.log('Stripe card element mounted successfully');
-                } else {
-                    // Dev mode - no Stripe key
-                    console.log('No valid Stripe key, using dev mode');
-                    stripeMode = false;
-                    document.getElementById('stripe-card-section').style.display = 'none';
-                    document.getElementById('dev-card-section').style.display = 'block';
-                    document.getElementById('paymentMode').innerHTML = '<div class="dev-mode">⚠️ Development Mode - Any card accepted</div>';
-                }
-            } catch (error) {
-                console.error('Stripe config error:', error);
-                // Fallback to dev mode
-                stripeMode = false;
-                document.getElementById('stripe-card-section').style.display = 'none';
-                document.getElementById('dev-card-section').style.display = 'block';
-                document.getElementById('paymentMode').innerHTML = '<div class="dev-mode">⚠️ Development Mode - Any card accepted</div>';
+            if (isProcessing) {
+                console.log('Already processing, ignoring click');
+                return;
             }
-        }
-
-        // Check authentication
-        async function checkAuth() {
-            try {
-                const res = await fetch('/api/auth/me');
-                if (!res.ok) {
-                    window.location.href = '/';
-                    return;
-                }
-                const data = await res.json();
-                document.getElementById('userEmail').style.display = 'block';
-                document.getElementById('userEmailText').textContent = data.customer.email;
-
-                if (data.subscription) {
-                    window.location.href = '/dashboard';
-                }
-            } catch (error) {
-                window.location.href = '/';
-            }
-        }
-
-        // Plan selection
-        document.querySelectorAll('.plan-option').forEach(option => {
-            option.addEventListener('click', function() {
-                document.querySelectorAll('.plan-option').forEach(o => o.classList.remove('selected'));
-                this.classList.add('selected');
-                this.querySelector('input').checked = true;
-
-                selectedPlan = this.querySelector('input').value;
-                updateSummary();
-            });
-        });
-
-        function updateSummary() {
-            document.getElementById('summaryPlan').textContent = names[selectedPlan];
-            document.getElementById('summaryTotal').textContent = '$' + prices[selectedPlan].toFixed(2);
-            document.getElementById('payBtn').textContent = 'Pay $' + prices[selectedPlan].toFixed(2);
-        }
-
-        // Dev mode card formatting
-        if (document.getElementById('cardNumber')) {
-            document.getElementById('cardNumber').addEventListener('input', function(e) {
-                let value = e.target.value.replace(/\s/g, '').replace(/\D/g, '');
-                let formatted = value.match(/.{1,4}/g)?.join(' ') || '';
-                e.target.value = formatted;
-            });
-        }
-
-        if (document.getElementById('expiry')) {
-            document.getElementById('expiry').addEventListener('input', function(e) {
-                let value = e.target.value.replace(/\D/g, '');
-                if (value.length >= 2) {
-                    value = value.substring(0, 2) + '/' + value.substring(2);
-                }
-                e.target.value = value;
-            });
-        }
-
-        if (document.getElementById('cvv')) {
-            document.getElementById('cvv').addEventListener('input', function(e) {
-                e.target.value = e.target.value.replace(/\D/g, '');
-            });
-        }
-
-        // Form submission
-        document.getElementById('paymentForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
 
             const btn = document.getElementById('payBtn');
             const errorDiv = document.getElementById('errorMessage');
             const successDiv = document.getElementById('successMessage');
 
+            isProcessing = true;
             btn.disabled = true;
             btn.textContent = 'Processing...';
             errorDiv.style.display = 'none';
@@ -628,24 +511,33 @@
                 let paymentMethodId = null;
                 let cardLast4 = '****';
 
+                console.log('Stripe mode:', stripeMode, 'Stripe:', !!stripe, 'CardElement:', !!cardElement);
+
                 if (stripeMode && stripe && cardElement) {
                     // Real Stripe payment
+                    console.log('Creating Stripe payment method...');
                     const { error, paymentMethod } = await stripe.createPaymentMethod({
                         type: 'card',
                         card: cardElement
                     });
 
                     if (error) {
+                        console.error('Stripe error:', error);
                         throw new Error(error.message);
                     }
 
                     paymentMethodId = paymentMethod.id;
                     cardLast4 = paymentMethod.card.last4;
+                    console.log('Payment method created:', paymentMethodId);
                 } else {
                     // Dev mode
-                    const cardNumber = document.getElementById('cardNumber').value.replace(/\s/g, '');
-                    cardLast4 = cardNumber.slice(-4);
+                    const cardNumberEl = document.getElementById('cardNumber');
+                    if (cardNumberEl) {
+                        const cardNumber = cardNumberEl.value.replace(/\s/g, '');
+                        cardLast4 = cardNumber.slice(-4) || '0000';
+                    }
                     paymentMethodId = 'dev_' + Date.now();
+                    console.log('Using dev mode payment:', paymentMethodId);
                 }
 
                 console.log('Sending payment to backend...', { planType: selectedPlan, paymentMethodId });
@@ -678,17 +570,141 @@
                     errorDiv.style.display = 'block';
                     btn.disabled = false;
                     btn.textContent = 'Pay $' + prices[selectedPlan].toFixed(2);
+                    isProcessing = false;
                 }
             } catch (error) {
+                console.error('Payment error:', error);
                 errorDiv.textContent = error.message || 'Connection error. Please try again.';
                 errorDiv.style.display = 'block';
                 btn.disabled = false;
                 btn.textContent = 'Pay $' + prices[selectedPlan].toFixed(2);
+                isProcessing = false;
             }
-        });
+        }
 
-        // Initialize on load
-        init();
+        // Initialize Stripe
+        async function initializeStripe() {
+            try {
+                console.log('Fetching Stripe config...');
+                const res = await fetch('/api/payment/stripe-config');
+                const config = await res.json();
+                console.log('Stripe config:', config);
+
+                if (config.publishableKey && config.publishableKey.startsWith('pk_')) {
+                    console.log('Initializing Stripe with key:', config.publishableKey.substring(0, 12) + '...');
+                    stripeMode = true;
+                    stripe = Stripe(config.publishableKey);
+                    const elements = stripe.elements();
+                    cardElement = elements.create('card', {
+                        style: {
+                            base: {
+                                fontSize: '16px',
+                                color: '#333',
+                                '::placeholder': { color: '#999' }
+                            }
+                        }
+                    });
+                    cardElement.mount('#card-element');
+                    cardElement.on('change', (event) => {
+                        const displayError = document.getElementById('card-errors');
+                        if (event.error) {
+                            displayError.textContent = event.error.message;
+                        } else {
+                            displayError.textContent = '';
+                        }
+                    });
+
+                    document.getElementById('stripe-card-section').style.display = 'block';
+                    document.getElementById('dev-card-section').style.display = 'none';
+                    document.getElementById('paymentMode').innerHTML = '<div class="stripe-mode">🔒 Secure Stripe Payment</div>';
+                    console.log('Stripe card element mounted successfully');
+                } else {
+                    console.log('No valid Stripe key, using dev mode');
+                    stripeMode = false;
+                    document.getElementById('stripe-card-section').style.display = 'none';
+                    document.getElementById('dev-card-section').style.display = 'block';
+                    document.getElementById('paymentMode').innerHTML = '<div class="dev-mode">⚠️ Development Mode - Any card accepted</div>';
+                }
+            } catch (error) {
+                console.error('Stripe config error:', error);
+                stripeMode = false;
+                document.getElementById('stripe-card-section').style.display = 'none';
+                document.getElementById('dev-card-section').style.display = 'block';
+                document.getElementById('paymentMode').innerHTML = '<div class="dev-mode">⚠️ Development Mode - Any card accepted</div>';
+            }
+        }
+
+        // Check authentication
+        async function checkAuth() {
+            try {
+                const res = await fetch('/api/auth/me');
+                if (!res.ok) {
+                    window.location.href = '/';
+                    return false;
+                }
+                const data = await res.json();
+                document.getElementById('userEmail').style.display = 'block';
+                document.getElementById('userEmailText').textContent = data.customer.email;
+
+                if (data.subscription) {
+                    window.location.href = '/dashboard';
+                    return false;
+                }
+                return true;
+            } catch (error) {
+                console.error('Auth check error:', error);
+                window.location.href = '/';
+                return false;
+            }
+        }
+
+        function updateSummary() {
+            document.getElementById('summaryPlan').textContent = names[selectedPlan];
+            document.getElementById('summaryTotal').textContent = '$' + prices[selectedPlan].toFixed(2);
+            document.getElementById('payBtn').textContent = 'Pay $' + prices[selectedPlan].toFixed(2);
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', async function() {
+            console.log('Page loaded, initializing...');
+
+            // Check auth first
+            const isAuthed = await checkAuth();
+            if (!isAuthed) return;
+
+            // Initialize Stripe
+            await initializeStripe();
+
+            // Card input formatting for dev mode
+            const cardNumberEl = document.getElementById('cardNumber');
+            if (cardNumberEl) {
+                cardNumberEl.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\s/g, '').replace(/\D/g, '');
+                    let formatted = value.match(/.{1,4}/g)?.join(' ') || '';
+                    e.target.value = formatted;
+                });
+            }
+
+            const expiryEl = document.getElementById('expiry');
+            if (expiryEl) {
+                expiryEl.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length >= 2) {
+                        value = value.substring(0, 2) + '/' + value.substring(2);
+                    }
+                    e.target.value = value;
+                });
+            }
+
+            const cvvEl = document.getElementById('cvv');
+            if (cvvEl) {
+                cvvEl.addEventListener('input', function(e) {
+                    e.target.value = e.target.value.replace(/\D/g, '');
+                });
+            }
+
+            console.log('Initialization complete');
+        });
     </script>
     <script src="/js/i18n.js"></script>
 </body>
