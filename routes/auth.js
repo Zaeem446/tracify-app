@@ -54,11 +54,16 @@ router.post('/signup', async (req, res) => {
         await sendPasswordEmail(email, password);
 
         // Return session token for auto-login
+        const isProduction = process.env.NODE_ENV === 'production' || process.env.VERCEL;
         res.cookie('session_token', sessionToken, {
             httpOnly: true,
             maxAge: 24 * 60 * 60 * 1000, // 24 hours
-            sameSite: 'lax'
+            sameSite: 'lax',
+            secure: isProduction, // Required for HTTPS
+            path: '/'
         });
+
+        console.log('Session created for customer:', customerId, 'Token:', sessionToken.substring(0, 8) + '...');
 
         res.json({
             success: true,
@@ -102,11 +107,16 @@ router.post('/login', async (req, res) => {
         const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(); // 7 days
         await db.sessions.create(customer.id, sessionToken, expiresAt);
 
+        const isProduction = process.env.NODE_ENV === 'production' || process.env.VERCEL;
         res.cookie('session_token', sessionToken, {
             httpOnly: true,
             maxAge: 7 * 24 * 60 * 60 * 1000,
-            sameSite: 'lax'
+            sameSite: 'lax',
+            secure: isProduction,
+            path: '/'
         });
+
+        console.log('Login session created for customer:', customer.id);
 
         // Check if has active subscription
         const subscription = await db.subscriptions.findActiveByCustomerId(customer.id);
@@ -128,13 +138,18 @@ router.post('/login', async (req, res) => {
 router.get('/me', async (req, res) => {
     try {
         const sessionToken = req.cookies.session_token;
+        console.log('Auth check - session_token exists:', !!sessionToken);
 
         if (!sessionToken) {
+            console.log('No session token in cookies');
             return res.status(401).json({ error: 'Not authenticated' });
         }
 
         const session = await db.sessions.findByToken(sessionToken);
+        console.log('Session found:', !!session);
+
         if (!session) {
+            console.log('Session not found in database');
             return res.status(401).json({ error: 'Session expired' });
         }
 
