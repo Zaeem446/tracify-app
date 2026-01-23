@@ -6,8 +6,8 @@
 (function(window) {
     'use strict';
 
-    const API_KEY = 'c95abfa3eb06040eac72e3e02f6332e4eef824c4e0348dbca996d0f265ead47a';
-    const API_URL = 'https://us.freeipapi.com/api/json';
+    // Use our own server-side proxy to avoid CORS issues
+    const API_URL = '/api/geo/detect';
     const CACHE_KEY = 'tracify_geo_cache';
     const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
 
@@ -172,16 +172,11 @@
     }
 
     /**
-     * Call freeipapi.com API
+     * Call our server-side geo API proxy
      */
     async function fetchGeoData() {
         try {
-            const response = await fetch(API_URL, {
-                method: 'GET',
-                headers: {
-                    'Authorization': `Bearer ${API_KEY}`
-                }
-            });
+            const response = await fetch(API_URL);
             if (!response.ok) {
                 throw new Error(`API request failed: ${response.status}`);
             }
@@ -223,25 +218,21 @@
             return cached;
         }
 
-        // Fetch from API
+        // Fetch from API (our server-side proxy)
         detectPromise = (async () => {
             const apiData = await fetchGeoData();
 
             let result;
-            if (apiData && apiData.countryCode) {
-                // phoneCodes is an array like [61], extract first element and format
-                let phoneCode = getPhoneFromCountry(apiData.countryCode);
-                if (apiData.phoneCodes && apiData.phoneCodes.length > 0) {
-                    phoneCode = '+' + apiData.phoneCodes[0];
-                }
+            if (apiData && apiData.success && apiData.countryCode) {
+                // Server already processed the data
                 result = {
                     countryCode: apiData.countryCode,
                     countryName: apiData.countryName || '',
-                    phoneCode: phoneCode,
-                    language: getLanguageFromCountry(apiData.countryCode),
-                    timezone: apiData.timeZones ? apiData.timeZones[0] : '',
-                    city: apiData.cityName || '',
-                    source: 'api'
+                    phoneCode: apiData.phoneCode || getPhoneFromCountry(apiData.countryCode),
+                    language: apiData.language || getLanguageFromCountry(apiData.countryCode),
+                    timezone: apiData.timezone || '',
+                    city: apiData.city || '',
+                    source: apiData.source || 'api'
                 };
             } else {
                 // Fallback to timezone detection
