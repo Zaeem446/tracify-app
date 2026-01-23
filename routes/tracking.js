@@ -87,11 +87,65 @@ router.get('/history', requireActiveSubscription, async (req, res) => {
 });
 
 // Consent endpoint (called when target clicks consent link)
-// This would be a public endpoint that the SMS recipient clicks
-router.get('/consent/:trackingId', (req, res) => {
+// This is a public endpoint that the SMS recipient clicks
+router.get('/consent/:trackingId', async (req, res) => {
     try {
-        // In production, this would show a consent page
-        // For demo purposes, we'll just show the consent form
+        const trackingId = req.params.trackingId;
+
+        // Check if tracking request exists and its status
+        const trackingRequest = await db.tracking.getById(trackingId);
+
+        // If tracking request doesn't exist, show invalid link page
+        if (!trackingRequest) {
+            return res.send(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>Invalid Link - Tracify</title>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <style>
+                        body { font-family: Arial, sans-serif; padding: 20px; max-width: 500px; margin: 0 auto; }
+                        .card { background: #f5f5f5; padding: 30px; border-radius: 10px; text-align: center; }
+                        h1 { color: #f44336; }
+                    </style>
+                </head>
+                <body>
+                    <div class="card">
+                        <h1>❌ Invalid Link</h1>
+                        <p>This link is invalid or has expired.</p>
+                        <p>Please contact the person who sent you this link.</p>
+                    </div>
+                </body>
+                </html>
+            `);
+        }
+
+        // If location already shared, show expired link page
+        if (trackingRequest.consent_given === 1) {
+            return res.send(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>Link Expired - Tracify</title>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <style>
+                        body { font-family: Arial, sans-serif; padding: 20px; max-width: 500px; margin: 0 auto; }
+                        .card { background: #f5f5f5; padding: 30px; border-radius: 10px; text-align: center; }
+                        h1 { color: #ff9800; }
+                    </style>
+                </head>
+                <body>
+                    <div class="card">
+                        <h1>⏰ Link Expired</h1>
+                        <p>This location sharing link has already been used.</p>
+                        <p>The location was shared successfully.</p>
+                    </div>
+                </body>
+                </html>
+            `);
+        }
+
+        // Show consent form (link is valid and not yet used)
         res.send(`
             <!DOCTYPE html>
             <html>
@@ -121,7 +175,7 @@ router.get('/consent/:trackingId', (req, res) => {
                         if (navigator.geolocation) {
                             navigator.geolocation.getCurrentPosition(
                                 function(position) {
-                                    fetch('/api/tracking/consent/${req.params.trackingId}', {
+                                    fetch('/api/tracking/consent/${trackingId}', {
                                         method: 'POST',
                                         headers: { 'Content-Type': 'application/json' },
                                         body: JSON.stringify({
@@ -148,6 +202,7 @@ router.get('/consent/:trackingId', (req, res) => {
             </html>
         `);
     } catch (error) {
+        console.error('Consent page error:', error);
         res.status(500).send('Error loading consent page');
     }
 });
@@ -160,6 +215,18 @@ router.post('/consent/:trackingId', async (req, res) => {
 
         if (!lat || !lng) {
             return res.status(400).json({ error: 'Location coordinates required' });
+        }
+
+        // Check if tracking request exists
+        const trackingRequest = await db.tracking.getById(trackingId);
+
+        if (!trackingRequest) {
+            return res.status(404).json({ error: 'Invalid tracking request' });
+        }
+
+        // Check if location was already shared
+        if (trackingRequest.consent_given === 1) {
+            return res.status(400).json({ error: 'Location has already been shared for this request' });
         }
 
         await db.tracking.updateConsent(trackingId, lat, lng);

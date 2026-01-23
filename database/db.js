@@ -381,6 +381,14 @@ const trackingQueries = {
             [customerId]
         );
         return result.rows[0]?.created_at || null;
+    },
+
+    getById: async (id) => {
+        const result = await pool.query(
+            'SELECT * FROM tracking_requests WHERE id = $1',
+            [id]
+        );
+        return result.rows[0] || null;
     }
 };
 
