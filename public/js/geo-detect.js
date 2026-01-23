@@ -9,7 +9,7 @@
     // Use our own server-side proxy to avoid CORS issues
     const API_URL = '/api/geo/detect';
     const CACHE_KEY = 'tracify_geo_cache';
-    const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
+    const CACHE_DURATION = 60 * 60 * 1000; // 1 hour (reduced for better VPN/travel detection)
 
     // Country code to language mapping (46 supported languages)
     const COUNTRY_TO_LANGUAGE = {
@@ -300,7 +300,7 @@
     }
 
     /**
-     * Clear cache (for testing)
+     * Clear all cached geo data (call this, then switch VPN, then reload)
      */
     function clearCache() {
         localStorage.removeItem(CACHE_KEY);
@@ -308,16 +308,80 @@
         localStorage.removeItem('tracify_lang');
         cachedData = null;
         detectPromise = null;
+        console.log('Geo cache cleared. Switch VPN now, then call TracifyGeo.reload()');
+    }
+
+    /**
+     * Reload page to root for fresh geo detection
+     * Use after clearCache() and switching VPN
+     */
+    function reload() {
+        window.location.href = '/';
+    }
+
+    /**
+     * Full reset: clear cache and reload (use when NOT switching VPN)
+     */
+    function reset() {
+        clearCache();
+        reload();
+    }
+
+    /**
+     * Force fresh detection (bypasses all caches)
+     * Use this when you need to re-detect without redirecting
+     */
+    async function forceDetect() {
+        // Clear all cached data
+        localStorage.removeItem(CACHE_KEY);
+        localStorage.removeItem('tracify_country_code');
+        localStorage.removeItem('tracify_lang');
+        cachedData = null;
+        detectPromise = null;
+
+        // Fetch fresh data from API
+        const apiData = await fetchGeoData();
+
+        let result;
+        if (apiData && apiData.success && apiData.countryCode) {
+            result = {
+                countryCode: apiData.countryCode,
+                countryName: apiData.countryName || '',
+                phoneCode: apiData.phoneCode || getPhoneFromCountry(apiData.countryCode),
+                language: apiData.language || getLanguageFromCountry(apiData.countryCode),
+                timezone: apiData.timezone || '',
+                city: apiData.city || '',
+                source: apiData.source || 'api'
+            };
+        } else {
+            const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            result = {
+                countryCode: 'US',
+                countryName: 'United States',
+                phoneCode: '+1',
+                language: 'en',
+                timezone: timezone,
+                city: '',
+                source: 'fallback'
+            };
+        }
+
+        setCachedData(result);
+        cachedData = result;
+        return result;
     }
 
     // Public API
     window.TracifyGeo = {
         detect,
+        forceDetect,
         getDetectedPhoneCode,
         getDetectedLanguage,
         savePhoneCode,
         getAllPhoneCodes,
         clearCache,
+        reload,
+        reset,
         getLanguageFromCountry,
         getPhoneFromCountry
     };
