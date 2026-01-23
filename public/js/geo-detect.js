@@ -7,7 +7,7 @@
     'use strict';
 
     const API_KEY = 'c95abfa3eb06040eac72e3e02f6332e4eef824c4e0348dbca996d0f265ead47a';
-    const API_URL = `https://freeipapi.com/api/json?apikey=${API_KEY}`;
+    const API_URL = 'https://us.freeipapi.com/api/json';
     const CACHE_KEY = 'tracify_geo_cache';
     const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
 
@@ -176,9 +176,14 @@
      */
     async function fetchGeoData() {
         try {
-            const response = await fetch(API_URL);
+            const response = await fetch(API_URL, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${API_KEY}`
+                }
+            });
             if (!response.ok) {
-                throw new Error('API request failed');
+                throw new Error(`API request failed: ${response.status}`);
             }
             const data = await response.json();
             return data;
@@ -224,12 +229,17 @@
 
             let result;
             if (apiData && apiData.countryCode) {
+                // phoneCodes is an array like [61], extract first element and format
+                let phoneCode = getPhoneFromCountry(apiData.countryCode);
+                if (apiData.phoneCodes && apiData.phoneCodes.length > 0) {
+                    phoneCode = '+' + apiData.phoneCodes[0];
+                }
                 result = {
                     countryCode: apiData.countryCode,
                     countryName: apiData.countryName || '',
-                    phoneCode: apiData.phoneCode || getPhoneFromCountry(apiData.countryCode),
+                    phoneCode: phoneCode,
                     language: getLanguageFromCountry(apiData.countryCode),
-                    timezone: apiData.timeZone || '',
+                    timezone: apiData.timeZones ? apiData.timeZones[0] : '',
                     city: apiData.cityName || '',
                     source: 'api'
                 };
@@ -304,7 +314,9 @@
     function clearCache() {
         localStorage.removeItem(CACHE_KEY);
         localStorage.removeItem('tracify_country_code');
+        localStorage.removeItem('tracify_lang');
         cachedData = null;
+        detectPromise = null;
     }
 
     // Public API
