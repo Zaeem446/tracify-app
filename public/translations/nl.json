@@ -262,5 +262,155 @@
       "message": "We hebben uw opzegging bevestigd en u ontvangt geen verdere kosten van ons. Er is ook een bevestigingsmail naar uw inbox verzonden.",
       "close": "Sluiten"
     }
+  },
+  "terms": {
+    "title": "Algemene voorwaarden",
+    "lastUpdated": "Laatst bijgewerkt: januari 2026",
+    "cardTitle": "Servicevoorwaarden",
+    "cardSubtitle": "Lees deze voorwaarden zorgvuldig door voordat u onze service gebruikt.",
+    "introduction": {
+      "title": "1. Inleiding",
+      "content": "Welkom bij Tracify. Door toegang te krijgen tot of gebruik te maken van onze website op tracify-geo.com en onze telefoonlocatietrackingdiensten, gaat u akkoord met deze Algemene voorwaarden. Als u niet akkoord gaat met een deel van deze voorwaarden, mag u onze diensten niet gebruiken."
+    },
+    "serviceDescription": {
+      "title": "2. Servicebeschrijving",
+      "content1": "Tracify biedt een op toestemming gebaseerde telefoonlocatietrackingdienst. Onze service werkt door een SMS-bericht te sturen naar het telefoonnummer dat u opgeeft, met het verzoek om toestemming van de ontvanger om hun locatie te delen.",
+      "important": "Belangrijk: Locatietracking vindt alleen plaats wanneer de SMS-ontvanger uitdrukkelijk toestemming geeft om hun locatie te delen. Wij tracken geen telefoons zonder actieve toestemming van de eigenaar."
+    },
+    "billing": {
+      "title": "3. Accountregistratie en facturering",
+      "content1": "Om Tracify te gebruiken, moet u een account aanmaken en u abonneren op onze dienst. Onze prijsstructuur is als volgt:",
+      "trial": "24-uurs proefperiode: $1,25 USD",
+      "monthly": "Maandabonnement: $30,00 USD (automatisch in rekening gebracht na afloop van de proefperiode)",
+      "content2": "Door u te abonneren, machtigt u ons om uw betaalmethode op terugkerende maandelijkse basis te belasten totdat u uw abonnement opzegt. Alle betalingen worden veilig verwerkt via Stripe."
+    },
+    "userResponsibilities": {
+      "title": "4. Gebruikersverantwoordelijkheden",
+      "content": "Bij het gebruik van Tracify gaat u akkoord met:",
+      "item1": "De service alleen te gebruiken voor wettige doeleinden",
+      "item2": "Geen pogingen te doen om personen te tracken zonder legitieme reden",
+      "item3": "De service niet te gebruiken voor stalking, intimidatie of enige illegale activiteit",
+      "item4": "Nauwkeurige informatie te verstrekken bij het aanmaken van uw account",
+      "item5": "Uw accountgegevens veilig en vertrouwelijk te houden"
+    },
+    "prohibitedUses": {
+      "title": "5. Verboden gebruik",
+      "content": "Het volgende gebruik van Tracify is strikt verboden:",
+      "item1": "Stalking of intimidatie van enig individu",
+      "item2": "Tracken van minderjarigen zonder ouderlijke toestemming",
+      "item3": "Elk gebruik dat in strijd is met lokale, provinciale, nationale of internationale wetten",
+      "item4": "Pogingen om toestemmingsvereisten te omzeilen",
+      "item5": "Gebruik van de service voor commerciële surveillance"
+    },
+    "liability": {
+      "title": "6. Beperking van aansprakelijkheid",
+      "content1": "Tracify levert zijn diensten \"zoals ze zijn\" zonder enige garanties. Wij zijn niet aansprakelijk voor:",
+      "item1": "Nauwkeurigheid van verstrekte locatiegegevens",
+      "item2": "Serviceonderbrekingen of technische problemen",
+      "item3": "Misbruik van de service door gebruikers",
+      "item4": "Acties ondernomen op basis van verkregen locatie-informatie",
+      "content2": "Onze totale aansprakelijkheid zal het bedrag dat u voor de service heeft betaald in de maand voorafgaand aan een claim niet overschrijden."
+    },
+    "cancellation": {
+      "title": "7. Opzeggings- en terugbetalingsbeleid",
+      "content1": "U kunt uw abonnement op elk moment opzeggen via onze opzegpagina of door contact op te nemen met ons ondersteuningsteam. Bij opzegging:",
+      "item1": "Uw abonnement wordt onmiddellijk beëindigd",
+      "item2": "Er worden geen verdere kosten in rekening gebracht op uw account",
+      "item3": "Terugbetalingen worden over het algemeen niet verstrekt voor gedeeltelijke maanden",
+      "content2": "Voor factuurgeschillen of terugbetalingsverzoeken kunt u contact opnemen met support@tracify-geo.com."
+    },
+    "modifications": {
+      "title": "8. Wijzigingen in de voorwaarden",
+      "content": "Wij behouden ons het recht voor om deze Algemene voorwaarden op elk moment te wijzigen. Wijzigingen worden onmiddellijk van kracht na publicatie op onze website. Uw voortgezet gebruik van Tracify na wijzigingen betekent acceptatie van de gewijzigde voorwaarden."
+    },
+    "governingLaw": {
+      "title": "9. Toepasselijk recht",
+      "content": "Deze Algemene voorwaarden worden beheerst door en geïnterpreteerd in overeenstemming met de toepasselijke wetgeving. Geschillen die voortvloeien uit deze voorwaarden worden opgelost via de juiste juridische kanalen."
+    },
+    "contact": {
+      "title": "10. Contactinformatie",
+      "content": "Als u vragen heeft over deze Algemene voorwaarden, neem dan contact met ons op via:"
+    }
+  },
+  "privacy": {
+    "title": "Privacybeleid",
+    "lastUpdated": "Laatst bijgewerkt: januari 2026",
+    "cardTitle": "Uw privacy is belangrijk",
+    "cardSubtitle": "Wij zetten ons in voor de bescherming van uw persoonlijke gegevens.",
+    "introduction": {
+      "title": "1. Inleiding",
+      "content": "Dit Privacybeleid legt uit hoe Tracify (\"wij\", \"ons\" of \"onze\") uw persoonlijke gegevens verzamelt, gebruikt en beschermt wanneer u onze website op tracify-geo.com en onze telefoonlocatietrackingdiensten gebruikt. Door onze diensten te gebruiken, stemt u in met de gegevenspraktijken beschreven in dit beleid."
+    },
+    "dataCollection": {
+      "title": "2. Informatie die wij verzamelen",
+      "content": "Wij verzamelen de volgende soorten informatie:",
+      "item1": "Accountinformatie: E-mailadres, naam en wachtwoord wanneer u zich registreert",
+      "item2": "Betalingsinformatie: Creditcardgegevens die veilig worden verwerkt via Stripe",
+      "item3": "Telefoonnummers: Nummers die u indient voor locatietrackingverzoeken",
+      "item4": "Locatiegegevens: GPS-coördinaten gedeeld door instemmende ontvangers",
+      "item5": "Gebruiksgegevens: Hoe u met onze service omgaat, inclusief IP-adres en browsertype"
+    },
+    "dataUse": {
+      "title": "3. Hoe wij uw informatie gebruiken",
+      "content": "Wij gebruiken uw informatie voor de volgende doeleinden:",
+      "item1": "Om onze locatietrackingdienst te leveren en te onderhouden",
+      "item2": "Om uw betalingen te verwerken en uw abonnement te beheren",
+      "item3": "Om SMS-locatieverzoeken te sturen naar de telefoonnummers die u opgeeft",
+      "item4": "Om met u te communiceren over uw account en service-updates",
+      "item5": "Om onze diensten te verbeteren en nieuwe functies te ontwikkelen",
+      "item6": "Om te voldoen aan wettelijke verplichtingen"
+    },
+    "dataSharing": {
+      "title": "4. Gegevensdeling en derden",
+      "content1": "Wij verkopen uw persoonlijke gegevens niet. Wij kunnen gegevens delen met:",
+      "item1": "Stripe: Onze betalingsverwerker, voor het veilig afhandelen van transacties",
+      "item2": "SMS-providers: Om locatieverzoekberichten te bezorgen",
+      "item3": "Juridische autoriteiten: Wanneer wettelijk vereist of om onze rechten te beschermen",
+      "content2": "Alle externe dienstverleners zijn contractueel verplicht om uw gegevens te beschermen."
+    },
+    "dataSecurity": {
+      "title": "5. Gegevensbeveiliging",
+      "content": "Wij implementeren industriestandaard beveiligingsmaatregelen om uw informatie te beschermen:",
+      "item1": "SSL/TLS-versleuteling voor alle gegevensoverdracht",
+      "item2": "Veilige wachtwoordhashing",
+      "item3": "Regelmatige beveiligingsaudits",
+      "item4": "Beperkte toegang van medewerkers tot persoonlijke gegevens",
+      "note": "Let op: Hoewel we uitgebreide voorzorgsmaatregelen nemen, is geen internetoverdracht 100% veilig. Wij kunnen geen absolute beveiliging garanderen."
+    },
+    "userRights": {
+      "title": "6. Uw rechten",
+      "content": "U heeft de volgende rechten met betrekking tot uw persoonlijke gegevens:",
+      "item1": "Toegang: Een kopie van uw persoonlijke gegevens opvragen",
+      "item2": "Correctie: Correctie van onjuiste gegevens verzoeken",
+      "item3": "Verwijdering: Verwijdering van uw account en bijbehorende gegevens verzoeken",
+      "item4": "Overdraagbaarheid: Uw gegevens in een overdraagbaar formaat opvragen",
+      "item5": "Afmelden: Uitschrijven van marketingcommunicatie",
+      "contact": "Om deze rechten uit te oefenen, neem contact met ons op via support@tracify-geo.com."
+    },
+    "cookies": {
+      "title": "7. Cookies en tracking",
+      "content1": "Wij gebruiken cookies en vergelijkbare technologieën om:",
+      "item1": "U ingelogd te houden op uw account",
+      "item2": "Uw voorkeuren en instellingen te onthouden",
+      "item3": "Websiteverkeer en gebruikspatronen te analyseren",
+      "item4": "Onze serviceprestaties te verbeteren",
+      "content2": "U kunt cookies beheren via uw browserinstellingen. Het uitschakelen van cookies kan sommige functies van onze service beïnvloeden."
+    },
+    "dataRetention": {
+      "title": "8. Gegevensbewaring",
+      "content": "Wij bewaren uw persoonlijke gegevens zolang uw account actief is of zolang nodig om diensten te leveren. Na accountverwijdering kunnen wij bepaalde gegevens bewaren voor wettelijke naleving, geschillenbeslechting of legitieme zakelijke doeleinden tot 90 dagen."
+    },
+    "children": {
+      "title": "9. Privacy van kinderen",
+      "content": "Tracify is niet bedoeld voor gebruik door personen jonger dan 18 jaar. Wij verzamelen niet bewust persoonlijke informatie van kinderen. Als wij ontdekken dat een kind ons persoonlijke informatie heeft verstrekt, zullen wij deze onmiddellijk verwijderen."
+    },
+    "changes": {
+      "title": "10. Wijzigingen in dit beleid",
+      "content": "Wij kunnen dit Privacybeleid van tijd tot tijd bijwerken. Wij zullen u op de hoogte stellen van belangrijke wijzigingen door het nieuwe beleid op onze website te plaatsen en de datum \"Laatst bijgewerkt\" bij te werken. Uw voortgezet gebruik van onze diensten na wijzigingen betekent acceptatie."
+    },
+    "contact": {
+      "title": "11. Contact opnemen",
+      "content": "Als u vragen of zorgen heeft over dit Privacybeleid of onze gegevenspraktijken, neem dan contact met ons op:"
+    }
   }
 }

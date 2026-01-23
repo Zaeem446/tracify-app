@@ -262,5 +262,155 @@
       "message": "We've confirmed your cancellation, and you won't receive any further charges from us. A confirmation email has also been sent to your inbox.",
       "close": "Close"
     }
+  },
+  "terms": {
+    "title": "Sartlar ve Kosullar",
+    "lastUpdated": "Son Guncelleme: Ocak 2026",
+    "cardTitle": "Hizmet Sartlari",
+    "cardSubtitle": "Hizmetimizi kullanmadan once lutfen bu sartlari dikkatlice okuyun.",
+    "introduction": {
+      "title": "1. Giris",
+      "content": "Tracify'a hos geldiniz. tracify-geo.com adresindeki web sitemize ve telefon konum izleme hizmetlerimize eriserek veya kullanarak, bu Sartlar ve Kosullara bagli olmayi kabul etmis olursunuz. Bu sartlarin herhangi bir bolumune katilmiyorsaniz, hizmetlerimizi kullanamazsiniz."
+    },
+    "serviceDescription": {
+      "title": "2. Hizmet Tanimi",
+      "content1": "Tracify, onam tabanli bir telefon konum izleme hizmeti sunar. Hizmetimiz, sagladiginiz telefon numarasina bir SMS mesaji gondererek alicinin konumunu paylasma iznini talep eder.",
+      "important": "Onemli: Konum izleme yalnizca SMS alicisi konumunu paylasmayi acikca kabul ettiginde gerceklesir. Telefon sahibinin aktif onami olmadan telefonlari izlemiyoruz."
+    },
+    "billing": {
+      "title": "3. Hesap Kaydi ve Faturalama",
+      "content1": "Tracify'i kullanmak icin bir hesap olusturmali ve hizmetimize abone olmalisiniz. Fiyatlandirma yapimiz asagidaki gibidir:",
+      "trial": "24 saatlik deneme suresi: 1,25 USD",
+      "monthly": "Aylik abonelik: 30,00 USD (deneme suresi sona erdikten sonra otomatik olarak tahsil edilir)",
+      "content2": "Abone olarak, aboneliginizi iptal edene kadar odeme yonteminizi tekrarlayan aylik bazda tahsil etmemize yetki vermis olursunuz. Tum odemeler Stripe araciligiyla guvenli bir sekilde islenir."
+    },
+    "userResponsibilities": {
+      "title": "4. Kullanici Sorumluluklari",
+      "content": "Tracify'i kullanirken asagidakileri kabul etmis olursunuz:",
+      "item1": "Hizmeti yalnizca yasal amaclar icin kullanmak",
+      "item2": "Mesru bir neden olmadan bireyleri izlemeye calismamak",
+      "item3": "Hizmeti takip, taciz veya herhangi bir yasadisi faaliyet icin kullanmamak",
+      "item4": "Hesabinizi olustururken dogru bilgi vermek",
+      "item5": "Hesap kimlik bilgilerinizi guvenli ve gizli tutmak"
+    },
+    "prohibitedUses": {
+      "title": "5. Yasakli Kullanimlar",
+      "content": "Tracify'in asagidaki kullanimlari kesinlikle yasaktir:",
+      "item1": "Herhangi bir bireyi takip etmek veya taciz etmek",
+      "item2": "Ebeveyn izni olmadan kucukleri izlemek",
+      "item3": "Yerel, bolgesel, ulusal veya uluslararasi yasalari ihlal eden herhangi bir kullanim",
+      "item4": "Onay gereksinimlerini atlatmaya calismak",
+      "item5": "Hizmeti ticari gozetim icin kullanmak"
+    },
+    "liability": {
+      "title": "6. Sorumluluk Sinirlamasi",
+      "content1": "Tracify hizmetlerini herhangi bir garanti olmaksizin \"oldugu gibi\" sunar. Asagidakilerden sorumlu degiliz:",
+      "item1": "Saglanan konum verilerinin dogrulugu",
+      "item2": "Hizmet kesintileri veya teknik sorunlar",
+      "item3": "Hizmetin kullanicilar tarafindan herhangi bir kotuye kullanimi",
+      "item4": "Elde edilen konum bilgilerine dayanilarak yapilan islemler",
+      "content2": "Toplam sorumluluğumuz, herhangi bir talebin oncesindeki ayda hizmet icin odediginiz tutari asmayacaktir."
+    },
+    "cancellation": {
+      "title": "7. Iptal ve Iade Politikasi",
+      "content1": "Aboneliginizi iptal sayfamiz veya destek ekibimizle iletisime gecerek istediginiz zaman iptal edebilirsiniz. Iptal uzerine:",
+      "item1": "Aboneliginiz hemen sona erecektir",
+      "item2": "Hesabinizdan baska ucret alinmayacaktir",
+      "item3": "Kismi aylar icin genellikle iade yapilmaz",
+      "content2": "Faturalama anlaşmazliklari veya iade talepleri icin lutfen support@tracify-geo.com ile iletisime gecin."
+    },
+    "modifications": {
+      "title": "8. Sartlarda Degisiklikler",
+      "content": "Bu Sartlar ve Kosullari istedigimiz zaman degistirme hakkini sakli tutariz. Degisiklikler web sitemizde yayinlandigi anda yururluge girecektir. Degisikliklerden sonra Tracify'i kullanmaya devam etmeniz, degistirilmis sartlari kabul ettiginiz anlamina gelir."
+    },
+    "governingLaw": {
+      "title": "9. Gecerli Hukuk",
+      "content": "Bu Sartlar ve Kosullar, yururlukteki yasalara gore yorumlanacak ve bu yasalara gore yonetilecektir. Bu sartlardan kaynaklanan herhangi bir anlaşmazlik, uygun yasal kanallar araciligiyla cozulecektir."
+    },
+    "contact": {
+      "title": "10. Iletisim Bilgileri",
+      "content": "Bu Sartlar ve Kosullar hakkinda herhangi bir sorunuz varsa, lutfen bizimle iletisime gecin:"
+    }
+  },
+  "privacy": {
+    "title": "Gizlilik Politikasi",
+    "lastUpdated": "Son Guncelleme: Ocak 2026",
+    "cardTitle": "Gizliliginiz Onemlidir",
+    "cardSubtitle": "Kisisel bilgilerinizi korumaya kararliyiz.",
+    "introduction": {
+      "title": "1. Giris",
+      "content": "Bu Gizlilik Politikasi, Tracify'in (\"biz\", \"bize\" veya \"bizim\") tracify-geo.com adresindeki web sitemizi ve telefon konum izleme hizmetlerimizi kullandiginizda kisisel bilgilerinizi nasil topladigini, kullandigini ve korudugunu aciklar. Hizmetlerimizi kullanarak, bu politikada aciklanan veri uygulamalarina onay vermis olursunuz."
+    },
+    "dataCollection": {
+      "title": "2. Topladigimiz Bilgiler",
+      "content": "Asagidaki tur bilgileri topluyoruz:",
+      "item1": "Hesap Bilgileri: Kaydoldugunuzda e-posta adresi, ad ve sifre",
+      "item2": "Odeme Bilgileri: Stripe araciligiyla guvenli bir sekilde islenen kredi karti bilgileri",
+      "item3": "Telefon Numaralari: Konum izleme talepleri icin gonderdiginiz numaralar",
+      "item4": "Konum Verileri: Onay veren alicilar tarafindan paylasilan GPS koordinatlari",
+      "item5": "Kullanim Verileri: IP adresi ve tarayici turu dahil olmak uzere hizmetimizle nasil etkilestigıniz"
+    },
+    "dataUse": {
+      "title": "3. Bilgilerinizi Nasil Kullaniyoruz",
+      "content": "Bilgilerinizi asagidaki amaclar icin kullaniyoruz:",
+      "item1": "Konum izleme hizmetimizi saglamak ve surdurmek",
+      "item2": "Odemelerinizi islemek ve aboneliginizi yonetmek",
+      "item3": "Sagladiginiz telefon numaralarina SMS konum talepleri gondermek",
+      "item4": "Hesabiniz ve hizmet guncellemeleri hakkinda sizinle iletisim kurmak",
+      "item5": "Hizmetlerimizi iyilestirmek ve yeni ozellikler gelistirmek",
+      "item6": "Yasal yukumluluklere uymak"
+    },
+    "dataSharing": {
+      "title": "4. Veri Paylasimi ve Ucuncu Taraflar",
+      "content1": "Kisisel bilgilerinizi satmiyoruz. Verileri asagidakilerle paylasabiliriz:",
+      "item1": "Stripe: Islemleri guvenli bir sekilde yonetmek icin odeme islemcimiz",
+      "item2": "SMS Saglayicilari: Konum talep mesajlarini iletmek icin",
+      "item3": "Yasal Yetkililer: Yasa geregi veya haklarimizi korumak icin gerekli oldugunda",
+      "content2": "Tum ucuncu taraf saglayicilari, verilerinizi korumak icin sozlesmeyle yukumludur."
+    },
+    "dataSecurity": {
+      "title": "5. Veri Guvenligi",
+      "content": "Bilgilerinizi korumak icin endustri standardi guvenlik onlemleri uyguluyoruz:",
+      "item1": "Tum veri iletimi icin SSL/TLS sifreleme",
+      "item2": "Guvenli sifre hashleme",
+      "item3": "Duzenli guvenlik denetimleri",
+      "item4": "Kisisel verilere sinirli calisan erisimi",
+      "note": "Not: Kapsamli onlemler alsak da, hicbir internet iletimi %100 guvenli degildir. Mutlak guvenlik garanti edemeyiz."
+    },
+    "userRights": {
+      "title": "6. Haklariniz",
+      "content": "Kisisel verilerinizle ilgili asagidaki haklara sahipsiniz:",
+      "item1": "Erisim: Kisisel verilerinizin bir kopyasini talep etme",
+      "item2": "Duzeltme: Yanlis verilerin duzeltilmesini talep etme",
+      "item3": "Silme: Hesabinizin ve ilgili verilerin silinmesini talep etme",
+      "item4": "Tasinabilirlik: Verilerinizi tasinabilir bir formatta talep etme",
+      "item5": "Vazgecme: Pazarlama iletisimlerinden aboneligi iptal etme",
+      "contact": "Bu haklari kullanmak icin support@tracify-geo.com adresinden bizimle iletisime gecin."
+    },
+    "cookies": {
+      "title": "7. Cerezler ve Izleme",
+      "content1": "Cerezleri ve benzer teknolojileri asagidaki amaclar icin kullaniyoruz:",
+      "item1": "Hesabinizda oturum acik tutmak",
+      "item2": "Tercihlerinizi ve ayarlarinizi hatirlamak",
+      "item3": "Web sitesi trafigini ve kullanim kaliplarini analiz etmek",
+      "item4": "Hizmet performansimizi iyilestirmek",
+      "content2": "Cerezleri tarayici ayarlariniz araciligiyla kontrol edebilirsiniz. Cerezleri devre disi birakmak hizmetimizin bazi ozelliklerini etkileyebilir."
+    },
+    "dataRetention": {
+      "title": "8. Veri Saklama",
+      "content": "Kisisel verilerinizi hesabiniz aktif oldugu surece veya hizmet saglamak icin gerektigi surece saklariz. Hesap silindikten sonra, yasal uyum, anlaşmazlik cozumu veya mesru is amaclari icin belirli verileri 90 gune kadar saklayabiliriz."
+    },
+    "children": {
+      "title": "9. Cocuklarin Gizliligi",
+      "content": "Tracify, 18 yasin altindaki bireyler tarafindan kullanilmak uzere tasarlanmamistir. Cocuklardan bilerek kisisel bilgi toplamiyoruz. Bir cocugun bize kisisel bilgi sagladigini tespit edersek, derhal silecegiz."
+    },
+    "changes": {
+      "title": "10. Bu Politikadaki Degisiklikler",
+      "content": "Bu Gizlilik Politikasini zaman zaman guncelleyebiliriz. Onemli degisiklikleri web sitemizde yeni politikayi yayinlayarak ve \"Son Guncelleme\" tarihini guncelleyerek size bildiririz. Degisikliklerden sonra hizmetlerimizi kullanmaya devam etmeniz kabul anlamina gelir."
+    },
+    "contact": {
+      "title": "11. Bize Ulasin",
+      "content": "Bu Gizlilik Politikasi veya veri uygulamalarimiz hakkinda sorulariniz veya endiseleriniz varsa, lutfen bizimle iletisime gecin:"
+    }
   }
 }

@@ -280,5 +280,155 @@
       "description": "If you're experiencing an issue or have any questions, our support team is here for you 24/7. Just reach out and we'll get back to you quickly!",
       "contactBtn": "Contact Support"
     }
+  },
+  "terms": {
+    "title": "Villkor",
+    "lastUpdated": "Senast uppdaterad: Januari 2026",
+    "cardTitle": "Tjänstevillkor",
+    "cardSubtitle": "Vänligen läs dessa villkor noggrant innan du använder vår tjänst.",
+    "introduction": {
+      "title": "1. Introduktion",
+      "content": "Välkommen till Tracify. Genom att komma åt eller använda vår webbplats på tracify-geo.com och våra telefonspårningstjänster godkänner du att vara bunden av dessa villkor. Om du inte samtycker till någon del av dessa villkor får du inte använda våra tjänster."
+    },
+    "serviceDescription": {
+      "title": "2. Tjänstebeskrivning",
+      "content1": "Tracify tillhandahåller en samtyckesbaserad telefonspårningstjänst. Vår tjänst fungerar genom att skicka ett SMS till telefonnumret du anger och begär mottagarens tillstånd att dela sin plats.",
+      "important": "Viktigt: Platsspårning sker endast när SMS-mottagaren uttryckligen samtycker till att dela sin plats. Vi spårar inte telefoner utan ägarens aktiva samtycke."
+    },
+    "billing": {
+      "title": "3. Kontoregistrering och fakturering",
+      "content1": "För att använda Tracify måste du skapa ett konto och prenumerera på vår tjänst. Vår prisstruktur är följande:",
+      "trial": "24-timmars provperiod: 1,25 USD",
+      "monthly": "Månatlig prenumeration: 30,00 USD (debiteras automatiskt efter provperiodens slut)",
+      "content2": "Genom att prenumerera godkänner du att vi debiterar din betalningsmetod på återkommande månatlig basis tills du avbryter din prenumeration. Alla betalningar behandlas säkert via Stripe."
+    },
+    "userResponsibilities": {
+      "title": "4. Användaransvar",
+      "content": "När du använder Tracify samtycker du till att:",
+      "item1": "Endast använda tjänsten för lagliga ändamål",
+      "item2": "Inte försöka spåra individer utan legitim anledning",
+      "item3": "Inte använda tjänsten för förföljelse, trakasserier eller någon olaglig aktivitet",
+      "item4": "Ange korrekt information när du skapar ditt konto",
+      "item5": "Hålla dina kontouppgifter säkra och konfidentiella"
+    },
+    "prohibitedUses": {
+      "title": "5. Förbjuden användning",
+      "content": "Följande användning av Tracify är strängt förbjuden:",
+      "item1": "Förföljelse eller trakasserier av någon individ",
+      "item2": "Spårning av minderåriga utan föräldrasamtycke",
+      "item3": "All användning som bryter mot lokala, statliga, nationella eller internationella lagar",
+      "item4": "Försök att kringgå samtyckeskrav",
+      "item5": "Användning av tjänsten för kommersiell övervakning"
+    },
+    "liability": {
+      "title": "6. Ansvarsbegränsning",
+      "content1": "Tracify tillhandahåller sina tjänster \"i befintligt skick\" utan garantier av något slag. Vi ansvarar inte för:",
+      "item1": "Noggrannheten hos tillhandahållen platsdata",
+      "item2": "Tjänsteavbrott eller tekniska problem",
+      "item3": "Eventuellt missbruk av tjänsten av användare",
+      "item4": "Åtgärder som vidtas baserat på erhållen platsinformation",
+      "content2": "Vårt totala ansvar ska inte överstiga det belopp du betalat för tjänsten under månaden före eventuellt krav."
+    },
+    "cancellation": {
+      "title": "7. Avbokning och återbetalningspolicy",
+      "content1": "Du kan avbryta din prenumeration när som helst via vår avbokningssida eller genom att kontakta vårt supportteam. Vid avbokning:",
+      "item1": "Din prenumeration avslutas omedelbart",
+      "item2": "Inga ytterligare avgifter debiteras ditt konto",
+      "item3": "Återbetalningar ges generellt inte för delmånader",
+      "content2": "För faktureringsärenden eller återbetalningsförfrågningar, kontakta support@tracify-geo.com."
+    },
+    "modifications": {
+      "title": "8. Ändringar av villkor",
+      "content": "Vi förbehåller oss rätten att ändra dessa villkor när som helst. Ändringar träder i kraft omedelbart vid publicering på vår webbplats. Din fortsatta användning av Tracify efter ändringar utgör godkännande av de ändrade villkoren."
+    },
+    "governingLaw": {
+      "title": "9. Tillämplig lag",
+      "content": "Dessa villkor ska styras av och tolkas i enlighet med tillämplig lag. Eventuella tvister som uppstår från dessa villkor ska lösas genom lämpliga rättsliga kanaler."
+    },
+    "contact": {
+      "title": "10. Kontaktinformation",
+      "content": "Om du har några frågor om dessa villkor, vänligen kontakta oss på:"
+    }
+  },
+  "privacy": {
+    "title": "Integritetspolicy",
+    "lastUpdated": "Senast uppdaterad: Januari 2026",
+    "cardTitle": "Din integritet är viktig",
+    "cardSubtitle": "Vi är engagerade i att skydda din personliga information.",
+    "introduction": {
+      "title": "1. Introduktion",
+      "content": "Denna integritetspolicy förklarar hur Tracify (\"vi\", \"oss\" eller \"vår\") samlar in, använder och skyddar din personliga information när du använder vår webbplats på tracify-geo.com och våra telefonspårningstjänster. Genom att använda våra tjänster samtycker du till de datapraxis som beskrivs i denna policy."
+    },
+    "dataCollection": {
+      "title": "2. Information vi samlar in",
+      "content": "Vi samlar in följande typer av information:",
+      "item1": "Kontoinformation: E-postadress, namn och lösenord när du registrerar dig",
+      "item2": "Betalningsinformation: Kreditkortsuppgifter som behandlas säkert via Stripe",
+      "item3": "Telefonnummer: Nummer du skickar in för platsspårningsförfrågningar",
+      "item4": "Platsdata: GPS-koordinater som delas av samtyckande mottagare",
+      "item5": "Användningsdata: Hur du interagerar med vår tjänst, inklusive IP-adress och webbläsartyp"
+    },
+    "dataUse": {
+      "title": "3. Hur vi använder din information",
+      "content": "Vi använder din information för följande ändamål:",
+      "item1": "För att tillhandahålla och underhålla vår platsspårningstjänst",
+      "item2": "För att behandla dina betalningar och hantera din prenumeration",
+      "item3": "För att skicka SMS-platsförfrågningar till de telefonnummer du anger",
+      "item4": "För att kommunicera med dig om ditt konto och tjänstuppdateringar",
+      "item5": "För att förbättra våra tjänster och utveckla nya funktioner",
+      "item6": "För att uppfylla juridiska skyldigheter"
+    },
+    "dataSharing": {
+      "title": "4. Datadelning och tredje parter",
+      "content1": "Vi säljer inte din personliga information. Vi kan dela data med:",
+      "item1": "Stripe: Vår betalningshanterare, för att hantera transaktioner säkert",
+      "item2": "SMS-leverantörer: För att leverera platsförfrågningsmeddelanden",
+      "item3": "Juridiska myndigheter: När det krävs enligt lag eller för att skydda våra rättigheter",
+      "content2": "Alla tredjepartsleverantörer är avtalsenligt skyldiga att skydda din data."
+    },
+    "dataSecurity": {
+      "title": "5. Datasäkerhet",
+      "content": "Vi implementerar branschstandardiserade säkerhetsåtgärder för att skydda din information:",
+      "item1": "SSL/TLS-kryptering för all dataöverföring",
+      "item2": "Säker lösenordshashning",
+      "item3": "Regelbundna säkerhetsgranskningar",
+      "item4": "Begränsad medarbetaråtkomst till personuppgifter",
+      "note": "Obs: Även om vi vidtar omfattande försiktighetsåtgärder är ingen internetöverföring 100% säker. Vi kan inte garantera absolut säkerhet."
+    },
+    "userRights": {
+      "title": "6. Dina rättigheter",
+      "content": "Du har följande rättigheter gällande dina personuppgifter:",
+      "item1": "Åtkomst: Begär en kopia av dina personuppgifter",
+      "item2": "Rättelse: Begär rättelse av felaktiga uppgifter",
+      "item3": "Radering: Begär radering av ditt konto och tillhörande data",
+      "item4": "Portabilitet: Begär dina uppgifter i ett portabelt format",
+      "item5": "Avanmälan: Avprenumerera från marknadsföringskommunikation",
+      "contact": "För att utöva dessa rättigheter, kontakta oss på support@tracify-geo.com."
+    },
+    "cookies": {
+      "title": "7. Cookies och spårning",
+      "content1": "Vi använder cookies och liknande tekniker för att:",
+      "item1": "Hålla dig inloggad på ditt konto",
+      "item2": "Komma ihåg dina preferenser och inställningar",
+      "item3": "Analysera webbplatstrafik och användningsmönster",
+      "item4": "Förbättra vår tjänsts prestanda",
+      "content2": "Du kan styra cookies via dina webbläsarinställningar. Att inaktivera cookies kan påverka vissa funktioner i vår tjänst."
+    },
+    "dataRetention": {
+      "title": "8. Datalagring",
+      "content": "Vi behåller dina personuppgifter så länge ditt konto är aktivt eller så länge det behövs för att tillhandahålla tjänster. Efter kontoradering kan vi behålla viss data för juridisk efterlevnad, tvistlösning eller legitima affärsändamål i upp till 90 dagar."
+    },
+    "children": {
+      "title": "9. Barns integritet",
+      "content": "Tracify är inte avsett för användning av personer under 18 år. Vi samlar inte medvetet in personlig information från barn. Om vi upptäcker att ett barn har gett oss personlig information kommer vi att radera den omedelbart."
+    },
+    "changes": {
+      "title": "10. Ändringar i denna policy",
+      "content": "Vi kan uppdatera denna integritetspolicy från tid till annan. Vi kommer att meddela dig om väsentliga ändringar genom att publicera den nya policyn på vår webbplats och uppdatera datumet \"Senast uppdaterad\". Din fortsatta användning av våra tjänster efter ändringar utgör godkännande."
+    },
+    "contact": {
+      "title": "11. Kontakta oss",
+      "content": "Om du har frågor eller funderingar om denna integritetspolicy eller våra datapraxis, vänligen kontakta oss:"
+    }
   }
 }

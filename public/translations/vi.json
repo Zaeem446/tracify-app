@@ -280,5 +280,155 @@
       "description": "If you're experiencing an issue or have any questions, our support team is here for you 24/7. Just reach out and we'll get back to you quickly!",
       "contactBtn": "Contact Support"
     }
+  },
+  "terms": {
+    "title": "Điều khoản và Điều kiện",
+    "lastUpdated": "Cập nhật lần cuối: Tháng 1 năm 2026",
+    "cardTitle": "Điều khoản Dịch vụ",
+    "cardSubtitle": "Vui lòng đọc kỹ các điều khoản này trước khi sử dụng dịch vụ của chúng tôi.",
+    "introduction": {
+      "title": "1. Giới thiệu",
+      "content": "Chào mừng bạn đến với Tracify. Bằng cách truy cập hoặc sử dụng trang web của chúng tôi tại tracify-geo.com và các dịch vụ theo dõi vị trí điện thoại của chúng tôi, bạn đồng ý tuân theo các Điều khoản và Điều kiện này. Nếu bạn không đồng ý với bất kỳ phần nào của các điều khoản này, bạn không được sử dụng dịch vụ của chúng tôi."
+    },
+    "serviceDescription": {
+      "title": "2. Mô tả Dịch vụ",
+      "content1": "Tracify cung cấp dịch vụ theo dõi vị trí điện thoại dựa trên sự đồng ý. Dịch vụ của chúng tôi hoạt động bằng cách gửi tin nhắn SMS đến số điện thoại bạn cung cấp, yêu cầu người nhận cho phép chia sẻ vị trí của họ.",
+      "important": "Quan trọng: Việc theo dõi vị trí chỉ xảy ra khi người nhận SMS đồng ý rõ ràng chia sẻ vị trí của họ. Chúng tôi không theo dõi điện thoại mà không có sự đồng ý chủ động của chủ sở hữu."
+    },
+    "billing": {
+      "title": "3. Đăng ký Tài khoản và Thanh toán",
+      "content1": "Để sử dụng Tracify, bạn phải tạo tài khoản và đăng ký dịch vụ của chúng tôi. Cấu trúc giá của chúng tôi như sau:",
+      "trial": "Thời gian dùng thử 24 giờ: 1,25 USD",
+      "monthly": "Đăng ký hàng tháng: 30,00 USD (tự động tính phí sau khi kết thúc thời gian dùng thử)",
+      "content2": "Bằng cách đăng ký, bạn cho phép chúng tôi tính phí phương thức thanh toán của bạn định kỳ hàng tháng cho đến khi bạn hủy đăng ký. Tất cả các khoản thanh toán được xử lý an toàn thông qua Stripe."
+    },
+    "userResponsibilities": {
+      "title": "4. Trách nhiệm của Người dùng",
+      "content": "Khi sử dụng Tracify, bạn đồng ý:",
+      "item1": "Chỉ sử dụng dịch vụ cho các mục đích hợp pháp",
+      "item2": "Không cố gắng theo dõi cá nhân mà không có lý do chính đáng",
+      "item3": "Không sử dụng dịch vụ để theo dõi, quấy rối hoặc bất kỳ hoạt động bất hợp pháp nào",
+      "item4": "Cung cấp thông tin chính xác khi tạo tài khoản",
+      "item5": "Bảo mật thông tin đăng nhập tài khoản của bạn"
+    },
+    "prohibitedUses": {
+      "title": "5. Các Hành vi Bị Cấm",
+      "content": "Các hành vi sử dụng Tracify sau đây bị nghiêm cấm:",
+      "item1": "Theo dõi hoặc quấy rối bất kỳ cá nhân nào",
+      "item2": "Theo dõi trẻ vị thành niên mà không có sự đồng ý của cha mẹ",
+      "item3": "Bất kỳ việc sử dụng nào vi phạm luật địa phương, tiểu bang, quốc gia hoặc quốc tế",
+      "item4": "Cố gắng bỏ qua các yêu cầu về sự đồng ý",
+      "item5": "Sử dụng dịch vụ cho mục đích giám sát thương mại"
+    },
+    "liability": {
+      "title": "6. Giới hạn Trách nhiệm",
+      "content1": "Tracify cung cấp dịch vụ \"nguyên trạng\" mà không có bất kỳ bảo đảm nào. Chúng tôi không chịu trách nhiệm về:",
+      "item1": "Độ chính xác của dữ liệu vị trí được cung cấp",
+      "item2": "Gián đoạn dịch vụ hoặc các vấn đề kỹ thuật",
+      "item3": "Bất kỳ việc lạm dụng dịch vụ nào của người dùng",
+      "item4": "Các hành động được thực hiện dựa trên thông tin vị trí thu được",
+      "content2": "Tổng trách nhiệm của chúng tôi sẽ không vượt quá số tiền bạn đã thanh toán cho dịch vụ trong tháng trước bất kỳ khiếu nại nào."
+    },
+    "cancellation": {
+      "title": "7. Chính sách Hủy và Hoàn tiền",
+      "content1": "Bạn có thể hủy đăng ký của mình bất cứ lúc nào thông qua trang hủy của chúng tôi hoặc bằng cách liên hệ với đội ngũ hỗ trợ. Sau khi hủy:",
+      "item1": "Đăng ký của bạn sẽ kết thúc ngay lập tức",
+      "item2": "Không có khoản phí nào khác sẽ được tính vào tài khoản của bạn",
+      "item3": "Thông thường không hoàn tiền cho các tháng chưa sử dụng hết",
+      "content2": "Đối với các tranh chấp thanh toán hoặc yêu cầu hoàn tiền, vui lòng liên hệ support@tracify-geo.com."
+    },
+    "modifications": {
+      "title": "8. Sửa đổi Điều khoản",
+      "content": "Chúng tôi có quyền sửa đổi các Điều khoản và Điều kiện này bất cứ lúc nào. Các thay đổi sẽ có hiệu lực ngay khi được đăng trên trang web của chúng tôi. Việc bạn tiếp tục sử dụng Tracify sau khi có thay đổi đồng nghĩa với việc chấp nhận các điều khoản đã sửa đổi."
+    },
+    "governingLaw": {
+      "title": "9. Luật Điều chỉnh",
+      "content": "Các Điều khoản và Điều kiện này sẽ được điều chỉnh và giải thích theo luật hiện hành. Mọi tranh chấp phát sinh từ các điều khoản này sẽ được giải quyết thông qua các kênh pháp lý thích hợp."
+    },
+    "contact": {
+      "title": "10. Thông tin Liên hệ",
+      "content": "Nếu bạn có bất kỳ câu hỏi nào về các Điều khoản và Điều kiện này, vui lòng liên hệ với chúng tôi tại:"
+    }
+  },
+  "privacy": {
+    "title": "Chính sách Bảo mật",
+    "lastUpdated": "Cập nhật lần cuối: Tháng 1 năm 2026",
+    "cardTitle": "Quyền riêng tư của bạn rất quan trọng",
+    "cardSubtitle": "Chúng tôi cam kết bảo vệ thông tin cá nhân của bạn.",
+    "introduction": {
+      "title": "1. Giới thiệu",
+      "content": "Chính sách Bảo mật này giải thích cách Tracify (\"chúng tôi\", \"của chúng tôi\") thu thập, sử dụng và bảo vệ thông tin cá nhân của bạn khi bạn sử dụng trang web của chúng tôi tại tracify-geo.com và các dịch vụ theo dõi vị trí điện thoại của chúng tôi. Bằng cách sử dụng dịch vụ của chúng tôi, bạn đồng ý với các hoạt động dữ liệu được mô tả trong chính sách này."
+    },
+    "dataCollection": {
+      "title": "2. Thông tin Chúng tôi Thu thập",
+      "content": "Chúng tôi thu thập các loại thông tin sau:",
+      "item1": "Thông tin Tài khoản: Địa chỉ email, tên và mật khẩu khi bạn đăng ký",
+      "item2": "Thông tin Thanh toán: Chi tiết thẻ tín dụng được xử lý an toàn thông qua Stripe",
+      "item3": "Số Điện thoại: Các số bạn gửi để yêu cầu theo dõi vị trí",
+      "item4": "Dữ liệu Vị trí: Tọa độ GPS được chia sẻ bởi người nhận đồng ý",
+      "item5": "Dữ liệu Sử dụng: Cách bạn tương tác với dịch vụ của chúng tôi, bao gồm địa chỉ IP và loại trình duyệt"
+    },
+    "dataUse": {
+      "title": "3. Cách Chúng tôi Sử dụng Thông tin của Bạn",
+      "content": "Chúng tôi sử dụng thông tin của bạn cho các mục đích sau:",
+      "item1": "Cung cấp và duy trì dịch vụ theo dõi vị trí của chúng tôi",
+      "item2": "Xử lý thanh toán và quản lý đăng ký của bạn",
+      "item3": "Gửi yêu cầu vị trí SMS đến các số điện thoại bạn cung cấp",
+      "item4": "Liên lạc với bạn về tài khoản và cập nhật dịch vụ",
+      "item5": "Cải thiện dịch vụ và phát triển các tính năng mới",
+      "item6": "Tuân thủ các nghĩa vụ pháp lý"
+    },
+    "dataSharing": {
+      "title": "4. Chia sẻ Dữ liệu và Bên Thứ ba",
+      "content1": "Chúng tôi không bán thông tin cá nhân của bạn. Chúng tôi có thể chia sẻ dữ liệu với:",
+      "item1": "Stripe: Đơn vị xử lý thanh toán của chúng tôi, để xử lý giao dịch an toàn",
+      "item2": "Nhà cung cấp SMS: Để gửi tin nhắn yêu cầu vị trí",
+      "item3": "Cơ quan Pháp luật: Khi được yêu cầu theo luật hoặc để bảo vệ quyền của chúng tôi",
+      "content2": "Tất cả các nhà cung cấp bên thứ ba đều có nghĩa vụ theo hợp đồng để bảo vệ dữ liệu của bạn."
+    },
+    "dataSecurity": {
+      "title": "5. Bảo mật Dữ liệu",
+      "content": "Chúng tôi triển khai các biện pháp bảo mật theo tiêu chuẩn ngành để bảo vệ thông tin của bạn:",
+      "item1": "Mã hóa SSL/TLS cho tất cả việc truyền dữ liệu",
+      "item2": "Băm mật khẩu an toàn",
+      "item3": "Kiểm tra bảo mật định kỳ",
+      "item4": "Giới hạn quyền truy cập của nhân viên vào dữ liệu cá nhân",
+      "note": "Lưu ý: Mặc dù chúng tôi thực hiện các biện pháp phòng ngừa rộng rãi, không có việc truyền tải internet nào là an toàn 100%. Chúng tôi không thể đảm bảo bảo mật tuyệt đối."
+    },
+    "userRights": {
+      "title": "6. Quyền của Bạn",
+      "content": "Bạn có các quyền sau đối với dữ liệu cá nhân của mình:",
+      "item1": "Truy cập: Yêu cầu bản sao dữ liệu cá nhân của bạn",
+      "item2": "Sửa đổi: Yêu cầu sửa dữ liệu không chính xác",
+      "item3": "Xóa: Yêu cầu xóa tài khoản và dữ liệu liên quan",
+      "item4": "Di chuyển: Yêu cầu dữ liệu của bạn ở định dạng có thể di chuyển",
+      "item5": "Từ chối: Hủy đăng ký nhận thông tin tiếp thị",
+      "contact": "Để thực hiện các quyền này, liên hệ với chúng tôi tại support@tracify-geo.com."
+    },
+    "cookies": {
+      "title": "7. Cookie và Theo dõi",
+      "content1": "Chúng tôi sử dụng cookie và các công nghệ tương tự để:",
+      "item1": "Giữ bạn đăng nhập vào tài khoản của bạn",
+      "item2": "Ghi nhớ tùy chọn và cài đặt của bạn",
+      "item3": "Phân tích lưu lượng truy cập và mẫu sử dụng trang web",
+      "item4": "Cải thiện hiệu suất dịch vụ của chúng tôi",
+      "content2": "Bạn có thể kiểm soát cookie thông qua cài đặt trình duyệt của mình. Việc tắt cookie có thể ảnh hưởng đến một số tính năng của dịch vụ chúng tôi."
+    },
+    "dataRetention": {
+      "title": "8. Lưu giữ Dữ liệu",
+      "content": "Chúng tôi lưu giữ dữ liệu cá nhân của bạn miễn là tài khoản của bạn còn hoạt động hoặc khi cần thiết để cung cấp dịch vụ. Sau khi xóa tài khoản, chúng tôi có thể lưu giữ một số dữ liệu nhất định để tuân thủ pháp luật, giải quyết tranh chấp hoặc mục đích kinh doanh hợp pháp trong tối đa 90 ngày."
+    },
+    "children": {
+      "title": "9. Quyền riêng tư của Trẻ em",
+      "content": "Tracify không dành cho việc sử dụng bởi các cá nhân dưới 18 tuổi. Chúng tôi không cố ý thu thập thông tin cá nhân từ trẻ em. Nếu chúng tôi phát hiện rằng một trẻ em đã cung cấp thông tin cá nhân cho chúng tôi, chúng tôi sẽ xóa ngay lập tức."
+    },
+    "changes": {
+      "title": "10. Thay đổi Chính sách này",
+      "content": "Chúng tôi có thể cập nhật Chính sách Bảo mật này theo thời gian. Chúng tôi sẽ thông báo cho bạn về các thay đổi quan trọng bằng cách đăng chính sách mới trên trang web của chúng tôi và cập nhật ngày \"Cập nhật lần cuối\". Việc bạn tiếp tục sử dụng dịch vụ của chúng tôi sau khi có thay đổi đồng nghĩa với việc chấp nhận."
+    },
+    "contact": {
+      "title": "11. Liên hệ với Chúng tôi",
+      "content": "Nếu bạn có câu hỏi hoặc thắc mắc về Chính sách Bảo mật này hoặc các hoạt động dữ liệu của chúng tôi, vui lòng liên hệ với chúng tôi:"
+    }
   }
 }

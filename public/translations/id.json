@@ -280,5 +280,155 @@
       "description": "If you're experiencing an issue or have any questions, our support team is here for you 24/7. Just reach out and we'll get back to you quickly!",
       "contactBtn": "Contact Support"
     }
+  },
+  "terms": {
+    "title": "Syarat dan Ketentuan",
+    "lastUpdated": "Terakhir Diperbarui: Januari 2026",
+    "cardTitle": "Ketentuan Layanan",
+    "cardSubtitle": "Harap baca syarat ini dengan saksama sebelum menggunakan layanan kami.",
+    "introduction": {
+      "title": "1. Pendahuluan",
+      "content": "Selamat datang di Tracify. Dengan mengakses atau menggunakan situs web kami di tracify-geo.com dan layanan pelacakan lokasi telepon kami, Anda setuju untuk terikat oleh Syarat dan Ketentuan ini. Jika Anda tidak setuju dengan bagian mana pun dari syarat ini, Anda tidak boleh menggunakan layanan kami."
+    },
+    "serviceDescription": {
+      "title": "2. Deskripsi Layanan",
+      "content1": "Tracify menyediakan layanan pelacakan lokasi telepon berbasis persetujuan. Layanan kami bekerja dengan mengirim pesan SMS ke nomor telepon yang Anda berikan, meminta izin penerima untuk membagikan lokasi mereka.",
+      "important": "Penting: Pelacakan lokasi hanya terjadi ketika penerima SMS secara eksplisit menyetujui untuk membagikan lokasi mereka. Kami tidak melacak telepon tanpa persetujuan aktif dari pemiliknya."
+    },
+    "billing": {
+      "title": "3. Pendaftaran Akun dan Penagihan",
+      "content1": "Untuk menggunakan Tracify, Anda harus membuat akun dan berlangganan layanan kami. Struktur harga kami adalah sebagai berikut:",
+      "trial": "Periode uji coba 24 jam: $1,25 USD",
+      "monthly": "Langganan bulanan: $30,00 USD (ditagih otomatis setelah periode uji coba berakhir)",
+      "content2": "Dengan berlangganan, Anda mengizinkan kami untuk menagih metode pembayaran Anda secara berulang setiap bulan hingga Anda membatalkan langganan. Semua pembayaran diproses dengan aman melalui Stripe."
+    },
+    "userResponsibilities": {
+      "title": "4. Tanggung Jawab Pengguna",
+      "content": "Saat menggunakan Tracify, Anda setuju untuk:",
+      "item1": "Menggunakan layanan hanya untuk tujuan yang sah",
+      "item2": "Tidak mencoba melacak individu tanpa alasan yang sah",
+      "item3": "Tidak menggunakan layanan untuk menguntit, melecehkan, atau aktivitas ilegal apa pun",
+      "item4": "Memberikan informasi yang akurat saat membuat akun Anda",
+      "item5": "Menjaga kredensial akun Anda tetap aman dan rahasia"
+    },
+    "prohibitedUses": {
+      "title": "5. Penggunaan yang Dilarang",
+      "content": "Penggunaan Tracify berikut ini sangat dilarang:",
+      "item1": "Menguntit atau melecehkan individu mana pun",
+      "item2": "Melacak anak di bawah umur tanpa persetujuan orang tua",
+      "item3": "Penggunaan apa pun yang melanggar hukum lokal, negara bagian, nasional, atau internasional",
+      "item4": "Mencoba melewati persyaratan persetujuan",
+      "item5": "Menggunakan layanan untuk pengawasan komersial"
+    },
+    "liability": {
+      "title": "6. Batasan Tanggung Jawab",
+      "content1": "Tracify menyediakan layanannya \"sebagaimana adanya\" tanpa jaminan apa pun. Kami tidak bertanggung jawab atas:",
+      "item1": "Akurasi data lokasi yang disediakan",
+      "item2": "Gangguan layanan atau masalah teknis",
+      "item3": "Penyalahgunaan layanan oleh pengguna",
+      "item4": "Tindakan yang diambil berdasarkan informasi lokasi yang diperoleh",
+      "content2": "Total tanggung jawab kami tidak akan melebihi jumlah yang Anda bayarkan untuk layanan pada bulan sebelum klaim apa pun."
+    },
+    "cancellation": {
+      "title": "7. Kebijakan Pembatalan dan Pengembalian Dana",
+      "content1": "Anda dapat membatalkan langganan kapan saja melalui halaman pembatalan kami atau dengan menghubungi tim dukungan kami. Setelah pembatalan:",
+      "item1": "Langganan Anda akan segera berakhir",
+      "item2": "Tidak ada tagihan lebih lanjut yang akan dikenakan ke akun Anda",
+      "item3": "Pengembalian dana umumnya tidak disediakan untuk bulan parsial",
+      "content2": "Untuk sengketa penagihan atau permintaan pengembalian dana, silakan hubungi support@tracify-geo.com."
+    },
+    "modifications": {
+      "title": "8. Modifikasi Syarat",
+      "content": "Kami berhak untuk memodifikasi Syarat dan Ketentuan ini kapan saja. Perubahan akan berlaku segera setelah diposting di situs web kami. Penggunaan Tracify yang berkelanjutan setelah perubahan merupakan penerimaan terhadap syarat yang dimodifikasi."
+    },
+    "governingLaw": {
+      "title": "9. Hukum yang Mengatur",
+      "content": "Syarat dan Ketentuan ini akan diatur oleh dan ditafsirkan sesuai dengan hukum yang berlaku. Setiap sengketa yang timbul dari syarat ini akan diselesaikan melalui jalur hukum yang sesuai."
+    },
+    "contact": {
+      "title": "10. Informasi Kontak",
+      "content": "Jika Anda memiliki pertanyaan tentang Syarat dan Ketentuan ini, silakan hubungi kami di:"
+    }
+  },
+  "privacy": {
+    "title": "Kebijakan Privasi",
+    "lastUpdated": "Terakhir Diperbarui: Januari 2026",
+    "cardTitle": "Privasi Anda Penting",
+    "cardSubtitle": "Kami berkomitmen untuk melindungi informasi pribadi Anda.",
+    "introduction": {
+      "title": "1. Pendahuluan",
+      "content": "Kebijakan Privasi ini menjelaskan bagaimana Tracify (\"kami\", \"kita\", atau \"milik kami\") mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda ketika Anda menggunakan situs web kami di tracify-geo.com dan layanan pelacakan lokasi telepon kami. Dengan menggunakan layanan kami, Anda menyetujui praktik data yang dijelaskan dalam kebijakan ini."
+    },
+    "dataCollection": {
+      "title": "2. Informasi yang Kami Kumpulkan",
+      "content": "Kami mengumpulkan jenis informasi berikut:",
+      "item1": "Informasi Akun: Alamat email, nama, dan kata sandi saat Anda mendaftar",
+      "item2": "Informasi Pembayaran: Detail kartu kredit yang diproses dengan aman melalui Stripe",
+      "item3": "Nomor Telepon: Nomor yang Anda kirimkan untuk permintaan pelacakan lokasi",
+      "item4": "Data Lokasi: Koordinat GPS yang dibagikan oleh penerima yang menyetujui",
+      "item5": "Data Penggunaan: Bagaimana Anda berinteraksi dengan layanan kami, termasuk alamat IP dan jenis browser"
+    },
+    "dataUse": {
+      "title": "3. Bagaimana Kami Menggunakan Informasi Anda",
+      "content": "Kami menggunakan informasi Anda untuk tujuan berikut:",
+      "item1": "Untuk menyediakan dan memelihara layanan pelacakan lokasi kami",
+      "item2": "Untuk memproses pembayaran Anda dan mengelola langganan Anda",
+      "item3": "Untuk mengirim permintaan lokasi SMS ke nomor telepon yang Anda berikan",
+      "item4": "Untuk berkomunikasi dengan Anda tentang akun dan pembaruan layanan Anda",
+      "item5": "Untuk meningkatkan layanan kami dan mengembangkan fitur baru",
+      "item6": "Untuk mematuhi kewajiban hukum"
+    },
+    "dataSharing": {
+      "title": "4. Berbagi Data dan Pihak Ketiga",
+      "content1": "Kami tidak menjual informasi pribadi Anda. Kami dapat membagikan data dengan:",
+      "item1": "Stripe: Pemroses pembayaran kami, untuk menangani transaksi dengan aman",
+      "item2": "Penyedia SMS: Untuk mengirimkan pesan permintaan lokasi",
+      "item3": "Otoritas Hukum: Ketika diwajibkan oleh hukum atau untuk melindungi hak kami",
+      "content2": "Semua penyedia pihak ketiga secara kontraktual berkewajiban untuk melindungi data Anda."
+    },
+    "dataSecurity": {
+      "title": "5. Keamanan Data",
+      "content": "Kami menerapkan langkah-langkah keamanan standar industri untuk melindungi informasi Anda:",
+      "item1": "Enkripsi SSL/TLS untuk semua transmisi data",
+      "item2": "Hashing kata sandi yang aman",
+      "item3": "Audit keamanan berkala",
+      "item4": "Akses karyawan terbatas ke data pribadi",
+      "note": "Catatan: Meskipun kami mengambil tindakan pencegahan yang ekstensif, tidak ada transmisi internet yang 100% aman. Kami tidak dapat menjamin keamanan absolut."
+    },
+    "userRights": {
+      "title": "6. Hak Anda",
+      "content": "Anda memiliki hak berikut mengenai data pribadi Anda:",
+      "item1": "Akses: Meminta salinan data pribadi Anda",
+      "item2": "Koreksi: Meminta koreksi data yang tidak akurat",
+      "item3": "Penghapusan: Meminta penghapusan akun dan data terkait Anda",
+      "item4": "Portabilitas: Meminta data Anda dalam format portabel",
+      "item5": "Berhenti Berlangganan: Berhenti berlangganan dari komunikasi pemasaran",
+      "contact": "Untuk menggunakan hak-hak ini, hubungi kami di support@tracify-geo.com."
+    },
+    "cookies": {
+      "title": "7. Cookie dan Pelacakan",
+      "content1": "Kami menggunakan cookie dan teknologi serupa untuk:",
+      "item1": "Menjaga Anda tetap masuk ke akun Anda",
+      "item2": "Mengingat preferensi dan pengaturan Anda",
+      "item3": "Menganalisis lalu lintas dan pola penggunaan situs web",
+      "item4": "Meningkatkan kinerja layanan kami",
+      "content2": "Anda dapat mengontrol cookie melalui pengaturan browser Anda. Menonaktifkan cookie dapat memengaruhi beberapa fitur layanan kami."
+    },
+    "dataRetention": {
+      "title": "8. Penyimpanan Data",
+      "content": "Kami menyimpan data pribadi Anda selama akun Anda aktif atau diperlukan untuk menyediakan layanan. Setelah penghapusan akun, kami dapat menyimpan data tertentu untuk kepatuhan hukum, penyelesaian sengketa, atau tujuan bisnis yang sah hingga 90 hari."
+    },
+    "children": {
+      "title": "9. Privasi Anak-anak",
+      "content": "Tracify tidak ditujukan untuk digunakan oleh individu di bawah usia 18 tahun. Kami tidak dengan sengaja mengumpulkan informasi pribadi dari anak-anak. Jika kami menemukan bahwa seorang anak telah memberikan informasi pribadi kepada kami, kami akan segera menghapusnya."
+    },
+    "changes": {
+      "title": "10. Perubahan Kebijakan Ini",
+      "content": "Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Kami akan memberi tahu Anda tentang perubahan signifikan dengan memposting kebijakan baru di situs web kami dan memperbarui tanggal \"Terakhir Diperbarui\". Penggunaan layanan kami yang berkelanjutan setelah perubahan merupakan penerimaan."
+    },
+    "contact": {
+      "title": "11. Hubungi Kami",
+      "content": "Jika Anda memiliki pertanyaan atau kekhawatiran tentang Kebijakan Privasi ini atau praktik data kami, silakan hubungi kami:"
+    }
   }
 }

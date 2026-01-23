@@ -262,5 +262,155 @@
       "message": "Oleme sinu tühistamise kinnitanud ja sinult ei võeta enam tasusid. Kinnituskiri on samuti saadetud sinu postkasti.",
       "close": "Sulge"
     }
+  },
+  "terms": {
+    "title": "Tingimused",
+    "lastUpdated": "Viimati uuendatud: jaanuar 2026",
+    "cardTitle": "Kasutustingimused",
+    "cardSubtitle": "Palun loe need tingimused hoolikalt enne meie teenuse kasutamist.",
+    "introduction": {
+      "title": "1. Sissejuhatus",
+      "content": "Tere tulemast Tracifysse. Külastades või kasutades meie veebisaiti tracify-geo.com ja meie telefoni asukoha jälgimise teenuseid, nõustud järgima neid tingimusi. Kui sa ei nõustu mõne tingimuse osaga, ei tohi sa meie teenuseid kasutada."
+    },
+    "serviceDescription": {
+      "title": "2. Teenuse kirjeldus",
+      "content1": "Tracify pakub nõusolekupõhist telefoni asukoha jälgimise teenust. Meie teenus töötab nii, et saadame SMS-sõnumi sinu antud telefoninumbrile, taotledes saaja luba oma asukoha jagamiseks.",
+      "important": "Oluline: Asukoha jälgimine toimub ainult siis, kui SMS-i saaja annab selgesõnalise nõusoleku oma asukoha jagamiseks. Me ei jälgi telefone ilma omaniku aktiivse nõusolekuta."
+    },
+    "billing": {
+      "title": "3. Konto registreerimine ja arveldamine",
+      "content1": "Tracify kasutamiseks pead looma konto ja tellima meie teenuse. Meie hinnastruktuur on järgmine:",
+      "trial": "24-tunnine prooviperiood: 1,25 USD",
+      "monthly": "Kuutellimus: 30,00 USD (võetakse automaatselt pärast prooviperioodi lõppu)",
+      "content2": "Tellimusega annad meile loa võtta makset sinu maksevahendilt korduvalt igakuiselt, kuni tühistad tellimuse. Kõik maksed töödeldakse turvaliselt Stripe'i kaudu."
+    },
+    "userResponsibilities": {
+      "title": "4. Kasutaja kohustused",
+      "content": "Tracify kasutamisel nõustud:",
+      "item1": "Kasutama teenust ainult seaduslikel eesmärkidel",
+      "item2": "Mitte üritama jälgida isikuid ilma õigustatud põhjuseta",
+      "item3": "Mitte kasutama teenust jälitamiseks, ahistamiseks ega muuks ebaseaduslikuks tegevuseks",
+      "item4": "Esitama konto loomisel täpset teavet",
+      "item5": "Hoidma oma konto andmed turvaliselt ja konfidentsiaalselt"
+    },
+    "prohibitedUses": {
+      "title": "5. Keelatud kasutusviisid",
+      "content": "Tracify järgmised kasutusviisid on rangelt keelatud:",
+      "item1": "Isiku jälitamine või ahistamine",
+      "item2": "Alaealiste jälgimine ilma vanema nõusolekuta",
+      "item3": "Igasugune kasutus, mis rikub kohalikke, riiklikke või rahvusvahelisi seadusi",
+      "item4": "Nõusoleku nõuetest kõrvalehoidmise katse",
+      "item5": "Teenuse kasutamine kaubanduslikuks jälgimiseks"
+    },
+    "liability": {
+      "title": "6. Vastutuse piiramine",
+      "content1": "Tracify pakub oma teenuseid \"nagu on\" ilma igasuguste garantiideta. Me ei vastuta:",
+      "item1": "Pakutud asukohaandmete täpsuse eest",
+      "item2": "Teenuse katkestuste või tehniliste probleemide eest",
+      "item3": "Teenuse väärkasutuse eest kasutajate poolt",
+      "item4": "Saadud asukohateabe põhjal tehtud toimingute eest",
+      "content2": "Meie koguvastutus ei ületa summat, mille maksid teenuse eest nõudele eelnenud kuul."
+    },
+    "cancellation": {
+      "title": "7. Tühistamis- ja tagastuspoliitika",
+      "content1": "Võid tellimuse igal ajal tühistada meie tühistamislehe kaudu või võttes ühendust meie tugimeeskonnaga. Tühistamisel:",
+      "item1": "Sinu tellimus lõpeb kohe",
+      "item2": "Sinu kontolt ei võeta enam tasusid",
+      "item3": "Osaliste kuude eest tagastusi üldiselt ei tehta",
+      "content2": "Arveldusvaidluste või tagastustaotluste korral võta ühendust aadressil support@tracify-geo.com."
+    },
+    "modifications": {
+      "title": "8. Tingimuste muutmine",
+      "content": "Jätame endale õiguse neid tingimusi igal ajal muuta. Muudatused jõustuvad kohe pärast meie veebisaidile postitamist. Tracify jätkuv kasutamine pärast muudatusi tähendab muudetud tingimustega nõustumist."
+    },
+    "governingLaw": {
+      "title": "9. Kohaldatav õigus",
+      "content": "Neid tingimusi reguleerivad ja tõlgendatakse vastavalt kehtivatele seadustele. Kõik nendest tingimustest tulenevad vaidlused lahendatakse asjakohaste õiguslike kanalite kaudu."
+    },
+    "contact": {
+      "title": "10. Kontaktandmed",
+      "content": "Kui sul on küsimusi nende tingimuste kohta, võta meiega ühendust:"
+    }
+  },
+  "privacy": {
+    "title": "Privaatsuspoliitika",
+    "lastUpdated": "Viimati uuendatud: jaanuar 2026",
+    "cardTitle": "Sinu privaatsus on oluline",
+    "cardSubtitle": "Oleme pühendunud sinu isikuandmete kaitsele.",
+    "introduction": {
+      "title": "1. Sissejuhatus",
+      "content": "See privaatsuspoliitika selgitab, kuidas Tracify (\"meie\") kogub, kasutab ja kaitseb sinu isikuandmeid, kui kasutad meie veebisaiti tracify-geo.com ja meie telefoni asukoha jälgimise teenuseid. Meie teenuseid kasutades nõustud selles poliitikas kirjeldatud andmetöötlustavadega."
+    },
+    "dataCollection": {
+      "title": "2. Kogutav teave",
+      "content": "Kogume järgmist tüüpi teavet:",
+      "item1": "Konto teave: e-posti aadress, nimi ja parool registreerumisel",
+      "item2": "Makseteave: krediitkaardi andmed, mida töödeldakse turvaliselt Stripe'i kaudu",
+      "item3": "Telefoninumbrid: numbrid, mida esitad asukoha jälgimise taotlusteks",
+      "item4": "Asukohaandmed: nõusoleku andnud saajate jagatud GPS-koordinaadid",
+      "item5": "Kasutusandmed: kuidas meie teenusega suhtled, sealhulgas IP-aadress ja brauseri tüüp"
+    },
+    "dataUse": {
+      "title": "3. Kuidas me sinu teavet kasutame",
+      "content": "Kasutame sinu teavet järgmistel eesmärkidel:",
+      "item1": "Meie asukoha jälgimise teenuse pakkumiseks ja hooldamiseks",
+      "item2": "Sinu maksete töötlemiseks ja tellimuse haldamiseks",
+      "item3": "SMS-i asukoha taotluste saatmiseks sinu antud telefoninumbritele",
+      "item4": "Sinuga suhtlemiseks konto ja teenuse uuenduste osas",
+      "item5": "Meie teenuste täiustamiseks ja uute funktsioonide arendamiseks",
+      "item6": "Juriidiliste kohustuste täitmiseks"
+    },
+    "dataSharing": {
+      "title": "4. Andmete jagamine ja kolmandad osapooled",
+      "content1": "Me ei müü sinu isikuandmeid. Võime jagada andmeid:",
+      "item1": "Stripe: meie maksete töötleja, tehingute turvaliseks käsitlemiseks",
+      "item2": "SMS-i pakkujad: asukoha taotluse sõnumite edastamiseks",
+      "item3": "Õigusasutused: kui seadus nõuab või meie õiguste kaitseks",
+      "content2": "Kõik kolmandatest osapooltest teenusepakkujad on lepinguliselt kohustatud sinu andmeid kaitsma."
+    },
+    "dataSecurity": {
+      "title": "5. Andmete turvalisus",
+      "content": "Rakendame tööstusstandarditele vastavaid turvameetmeid sinu teabe kaitsmiseks:",
+      "item1": "SSL/TLS krüpteering kogu andmeedastuse jaoks",
+      "item2": "Turvaline paroolide räsimine",
+      "item3": "Regulaarsed turvaauditid",
+      "item4": "Töötajate piiratud juurdepääs isikuandmetele",
+      "note": "Märkus: kuigi rakendame ulatuslikke ettevaatusabinõusid, pole ükski internetiedastus 100% turvaline. Me ei saa tagada absoluutset turvalisust."
+    },
+    "userRights": {
+      "title": "6. Sinu õigused",
+      "content": "Sul on järgmised õigused seoses oma isikuandmetega:",
+      "item1": "Juurdepääs: taotle koopiat oma isikuandmetest",
+      "item2": "Parandamine: taotle ebatäpsete andmete parandamist",
+      "item3": "Kustutamine: taotle oma konto ja seotud andmete kustutamist",
+      "item4": "Ülekantavus: taotle oma andmeid portatiivsesformaadis",
+      "item5": "Keeldumine: loobu turundussõnumitest",
+      "contact": "Nende õiguste kasutamiseks võta meiega ühendust aadressil support@tracify-geo.com."
+    },
+    "cookies": {
+      "title": "7. Küpsised ja jälgimine",
+      "content1": "Kasutame küpsiseid ja sarnaseid tehnoloogiaid, et:",
+      "item1": "Hoida sind oma kontole sisselogituna",
+      "item2": "Meeles pidada sinu eelistusi ja seadeid",
+      "item3": "Analüüsida veebisaidi liiklust ja kasutusmustried",
+      "item4": "Parandada meie teenuse jõudlust",
+      "content2": "Saad küpsiseid juhtida oma brauseri seadete kaudu. Küpsiste keelamine võib mõjutada meie teenuse mõningaid funktsioone."
+    },
+    "dataRetention": {
+      "title": "8. Andmete säilitamine",
+      "content": "Säilitame sinu isikuandmeid seni, kuni sinu konto on aktiivne või kui see on vajalik teenuste osutamiseks. Pärast konto kustutamist võime säilitada teatud andmeid juriidiliseks vastavuseks, vaidluste lahendamiseks või õigustatud ärieesmärkidel kuni 90 päeva."
+    },
+    "children": {
+      "title": "9. Laste privaatsus",
+      "content": "Tracify ei ole mõeldud alla 18-aastastele isikutele. Me ei kogu teadlikult isikuandmeid lastelt. Kui avastame, et laps on meile isikuandmeid esitanud, kustutame need viivitamatult."
+    },
+    "changes": {
+      "title": "10. Muudatused selles poliitikas",
+      "content": "Võime seda privaatsuspoliitikat aeg-ajalt uuendada. Teavitame sind olulistest muudatustest, postitades uue poliitika meie veebisaidile ja uuendades \"Viimati uuendatud\" kuupäeva. Meie teenuste jätkuv kasutamine pärast muudatusi tähendab nõustumist."
+    },
+    "contact": {
+      "title": "11. Võta meiega ühendust",
+      "content": "Kui sul on küsimusi või muresid selle privaatsuspoliitika või meie andmetöötlustavade kohta, võta meiega ühendust:"
+    }
   }
 }

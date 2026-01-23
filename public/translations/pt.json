@@ -262,5 +262,155 @@
       "message": "Confirmámos o seu cancelamento e não receberá mais cobranças da nossa parte. Um email de confirmação também foi enviado para a sua caixa de entrada.",
       "close": "Fechar"
     }
+  },
+  "terms": {
+    "title": "Termos e Condições",
+    "lastUpdated": "Última atualização: Janeiro 2026",
+    "cardTitle": "Termos de Serviço",
+    "cardSubtitle": "Por favor, leia estes termos atentamente antes de utilizar o nosso serviço.",
+    "introduction": {
+      "title": "1. Introdução",
+      "content": "Bem-vindo ao Tracify. Ao aceder ou utilizar o nosso website em tracify-geo.com e os nossos serviços de rastreamento de localização de telefones, concorda em ficar vinculado a estes Termos e Condições. Se não concordar com qualquer parte destes termos, não poderá utilizar os nossos serviços."
+    },
+    "serviceDescription": {
+      "title": "2. Descrição do Serviço",
+      "content1": "O Tracify fornece um serviço de rastreamento de localização de telefones baseado em consentimento. O nosso serviço funciona enviando uma mensagem SMS para o número de telefone que fornecer, solicitando a permissão do destinatário para partilhar a sua localização.",
+      "important": "Importante: O rastreamento de localização só ocorre quando o destinatário do SMS consente explicitamente em partilhar a sua localização. Não rastreamos telefones sem o consentimento ativo do proprietário."
+    },
+    "billing": {
+      "title": "3. Registo de Conta e Faturação",
+      "content1": "Para utilizar o Tracify, deve criar uma conta e subscrever o nosso serviço. A nossa estrutura de preços é a seguinte:",
+      "trial": "Período de teste de 24 horas: $1,25 USD",
+      "monthly": "Subscrição mensal: $30,00 USD (cobrada automaticamente após o término do período de teste)",
+      "content2": "Ao subscrever, autoriza-nos a cobrar o seu método de pagamento de forma recorrente mensalmente até cancelar a sua subscrição. Todos os pagamentos são processados de forma segura através do Stripe."
+    },
+    "userResponsibilities": {
+      "title": "4. Responsabilidades do Utilizador",
+      "content": "Ao utilizar o Tracify, concorda em:",
+      "item1": "Utilizar o serviço apenas para fins legais",
+      "item2": "Não tentar rastrear indivíduos sem razão legítima",
+      "item3": "Não utilizar o serviço para perseguição, assédio ou qualquer atividade ilegal",
+      "item4": "Fornecer informações precisas ao criar a sua conta",
+      "item5": "Manter as credenciais da sua conta seguras e confidenciais"
+    },
+    "prohibitedUses": {
+      "title": "5. Utilizações Proibidas",
+      "content": "As seguintes utilizações do Tracify são estritamente proibidas:",
+      "item1": "Perseguir ou assediar qualquer indivíduo",
+      "item2": "Rastrear menores sem consentimento parental",
+      "item3": "Qualquer uso que viole leis locais, estaduais, nacionais ou internacionais",
+      "item4": "Tentar contornar os requisitos de consentimento",
+      "item5": "Utilizar o serviço para vigilância comercial"
+    },
+    "liability": {
+      "title": "6. Limitação de Responsabilidade",
+      "content1": "O Tracify fornece os seus serviços \"tal como estão\" sem garantias de qualquer tipo. Não somos responsáveis por:",
+      "item1": "Precisão dos dados de localização fornecidos",
+      "item2": "Interrupções de serviço ou problemas técnicos",
+      "item3": "Qualquer uso indevido do serviço pelos utilizadores",
+      "item4": "Ações tomadas com base em informações de localização obtidas",
+      "content2": "A nossa responsabilidade total não excederá o valor que pagou pelo serviço no mês anterior a qualquer reclamação."
+    },
+    "cancellation": {
+      "title": "7. Política de Cancelamento e Reembolso",
+      "content1": "Pode cancelar a sua subscrição a qualquer momento através da nossa página de cancelamento ou contactando a nossa equipa de suporte. Após o cancelamento:",
+      "item1": "A sua subscrição terminará imediatamente",
+      "item2": "Não serão feitas mais cobranças à sua conta",
+      "item3": "Geralmente não são fornecidos reembolsos por meses parciais",
+      "content2": "Para disputas de faturação ou pedidos de reembolso, por favor contacte support@tracify-geo.com."
+    },
+    "modifications": {
+      "title": "8. Modificações aos Termos",
+      "content": "Reservamo-nos o direito de modificar estes Termos e Condições a qualquer momento. As alterações entrarão em vigor imediatamente após a publicação no nosso website. O uso continuado do Tracify após as alterações constitui aceitação dos termos modificados."
+    },
+    "governingLaw": {
+      "title": "9. Lei Aplicável",
+      "content": "Estes Termos e Condições serão regidos e interpretados de acordo com as leis aplicáveis. Quaisquer disputas decorrentes destes termos serão resolvidas através dos canais legais apropriados."
+    },
+    "contact": {
+      "title": "10. Informações de Contacto",
+      "content": "Se tiver alguma dúvida sobre estes Termos e Condições, por favor contacte-nos em:"
+    }
+  },
+  "privacy": {
+    "title": "Política de Privacidade",
+    "lastUpdated": "Última atualização: Janeiro 2026",
+    "cardTitle": "A Sua Privacidade é Importante",
+    "cardSubtitle": "Estamos comprometidos em proteger as suas informações pessoais.",
+    "introduction": {
+      "title": "1. Introdução",
+      "content": "Esta Política de Privacidade explica como o Tracify (\"nós\", \"nos\" ou \"nosso\") recolhe, utiliza e protege as suas informações pessoais quando utiliza o nosso website em tracify-geo.com e os nossos serviços de rastreamento de localização de telefones. Ao utilizar os nossos serviços, consente com as práticas de dados descritas nesta política."
+    },
+    "dataCollection": {
+      "title": "2. Informações que Recolhemos",
+      "content": "Recolhemos os seguintes tipos de informações:",
+      "item1": "Informações da Conta: Endereço de email, nome e palavra-passe quando se regista",
+      "item2": "Informações de Pagamento: Dados do cartão de crédito processados de forma segura através do Stripe",
+      "item3": "Números de Telefone: Números que submete para pedidos de rastreamento de localização",
+      "item4": "Dados de Localização: Coordenadas GPS partilhadas por destinatários que consentiram",
+      "item5": "Dados de Utilização: Como interage com o nosso serviço, incluindo endereço IP e tipo de navegador"
+    },
+    "dataUse": {
+      "title": "3. Como Utilizamos as Suas Informações",
+      "content": "Utilizamos as suas informações para os seguintes fins:",
+      "item1": "Para fornecer e manter o nosso serviço de rastreamento de localização",
+      "item2": "Para processar os seus pagamentos e gerir a sua subscrição",
+      "item3": "Para enviar pedidos de localização por SMS para os números de telefone que fornecer",
+      "item4": "Para comunicar consigo sobre a sua conta e atualizações do serviço",
+      "item5": "Para melhorar os nossos serviços e desenvolver novas funcionalidades",
+      "item6": "Para cumprir obrigações legais"
+    },
+    "dataSharing": {
+      "title": "4. Partilha de Dados e Terceiros",
+      "content1": "Não vendemos as suas informações pessoais. Podemos partilhar dados com:",
+      "item1": "Stripe: O nosso processador de pagamentos, para processar transações de forma segura",
+      "item2": "Fornecedores de SMS: Para entregar mensagens de pedido de localização",
+      "item3": "Autoridades Legais: Quando exigido por lei ou para proteger os nossos direitos",
+      "content2": "Todos os fornecedores terceiros estão contratualmente obrigados a proteger os seus dados."
+    },
+    "dataSecurity": {
+      "title": "5. Segurança de Dados",
+      "content": "Implementamos medidas de segurança padrão da indústria para proteger as suas informações:",
+      "item1": "Encriptação SSL/TLS para toda a transmissão de dados",
+      "item2": "Hash seguro de palavras-passe",
+      "item3": "Auditorias de segurança regulares",
+      "item4": "Acesso limitado de funcionários a dados pessoais",
+      "note": "Nota: Embora tomemos precauções extensivas, nenhuma transmissão pela Internet é 100% segura. Não podemos garantir segurança absoluta."
+    },
+    "userRights": {
+      "title": "6. Os Seus Direitos",
+      "content": "Tem os seguintes direitos relativamente aos seus dados pessoais:",
+      "item1": "Acesso: Solicitar uma cópia dos seus dados pessoais",
+      "item2": "Correção: Solicitar correção de dados imprecisos",
+      "item3": "Eliminação: Solicitar eliminação da sua conta e dados associados",
+      "item4": "Portabilidade: Solicitar os seus dados num formato portátil",
+      "item5": "Opt-out: Cancelar a subscrição de comunicações de marketing",
+      "contact": "Para exercer estes direitos, contacte-nos em support@tracify-geo.com."
+    },
+    "cookies": {
+      "title": "7. Cookies e Rastreamento",
+      "content1": "Utilizamos cookies e tecnologias semelhantes para:",
+      "item1": "Mantê-lo autenticado na sua conta",
+      "item2": "Lembrar as suas preferências e definições",
+      "item3": "Analisar o tráfego e padrões de utilização do website",
+      "item4": "Melhorar o desempenho do nosso serviço",
+      "content2": "Pode controlar os cookies através das definições do seu navegador. Desativar os cookies pode afetar algumas funcionalidades do nosso serviço."
+    },
+    "dataRetention": {
+      "title": "8. Retenção de Dados",
+      "content": "Retemos os seus dados pessoais enquanto a sua conta estiver ativa ou conforme necessário para fornecer serviços. Após a eliminação da conta, podemos reter certos dados para conformidade legal, resolução de disputas ou fins comerciais legítimos por até 90 dias."
+    },
+    "children": {
+      "title": "9. Privacidade de Menores",
+      "content": "O Tracify não se destina a ser utilizado por indivíduos menores de 18 anos. Não recolhemos intencionalmente informações pessoais de menores. Se descobrirmos que um menor nos forneceu informações pessoais, eliminaremos prontamente."
+    },
+    "changes": {
+      "title": "10. Alterações a Esta Política",
+      "content": "Podemos atualizar esta Política de Privacidade periodicamente. Notificá-lo-emos de alterações significativas publicando a nova política no nosso website e atualizando a data de \"Última atualização\". O uso continuado dos nossos serviços após as alterações constitui aceitação."
+    },
+    "contact": {
+      "title": "11. Contacte-nos",
+      "content": "Se tiver dúvidas ou preocupações sobre esta Política de Privacidade ou as nossas práticas de dados, por favor contacte-nos:"
+    }
   }
 }

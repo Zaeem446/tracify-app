@@ -262,5 +262,155 @@
       "message": "Megerősítettük a lemondását, és nem kap több díjszámlázást tőlünk. Egy megerősítő e-mailt is küldtünk a postaládájába.",
       "close": "Bezárás"
     }
+  },
+  "terms": {
+    "title": "Általános Szerződési Feltételek",
+    "lastUpdated": "Utoljára frissítve: 2026. január",
+    "cardTitle": "Szolgáltatási feltételek",
+    "cardSubtitle": "Kérjük, olvassa el figyelmesen ezeket a feltételeket a szolgáltatásunk használata előtt.",
+    "introduction": {
+      "title": "1. Bevezetés",
+      "content": "Üdvözöljük a Tracifynál. A tracify-geo.com weboldalunk és telefonhelyzet-nyomkövető szolgáltatásaink elérésével vagy használatával Ön elfogadja, hogy ezek az Általános Szerződési Feltételek kötelező érvényűek. Ha nem ért egyet ezen feltételek bármely részével, nem használhatja szolgáltatásainkat."
+    },
+    "serviceDescription": {
+      "title": "2. Szolgáltatás leírása",
+      "content1": "A Tracify hozzájáruláson alapuló telefonhelyzet-nyomkövető szolgáltatást nyújt. Szolgáltatásunk úgy működik, hogy SMS-üzenetet küld az Ön által megadott telefonszámra, kérve a címzett engedélyét a helyzete megosztásához.",
+      "important": "Fontos: A helyzetkövetés csak akkor történik, ha az SMS címzettje kifejezetten hozzájárul a helyzete megosztásához. Nem követünk nyomon telefonokat a tulajdonos aktív hozzájárulása nélkül."
+    },
+    "billing": {
+      "title": "3. Fiókregisztráció és számlázás",
+      "content1": "A Tracify használatához fiókot kell létrehoznia és elő kell fizetnie szolgáltatásunkra. Árstruktúránk a következő:",
+      "trial": "24 órás próbaidőszak: 1,25 USD",
+      "monthly": "Havi előfizetés: 30,00 USD (automatikusan felszámítva a próbaidőszak lejárta után)",
+      "content2": "Az előfizetéssel felhatalmaz minket, hogy ismétlődően, havonta terheljük meg fizetési módját, amíg le nem mondja előfizetését. Minden fizetés biztonságosan a Stripe-on keresztül kerül feldolgozásra."
+    },
+    "userResponsibilities": {
+      "title": "4. Felhasználói felelősségek",
+      "content": "A Tracify használatával Ön vállalja, hogy:",
+      "item1": "A szolgáltatást csak jogszerű célokra használja",
+      "item2": "Nem kísérli meg személyek nyomon követését jogos ok nélkül",
+      "item3": "Nem használja a szolgáltatást zaklatásra, üldözésre vagy bármilyen illegális tevékenységre",
+      "item4": "Pontos információkat ad meg fiókja létrehozásakor",
+      "item5": "Fiókja hitelesítő adatait bizalmasan és biztonságosan kezeli"
+    },
+    "prohibitedUses": {
+      "title": "5. Tiltott felhasználások",
+      "content": "A Tracify következő használatai szigorúan tilosak:",
+      "item1": "Bármely személy zaklatása vagy üldözése",
+      "item2": "Kiskorúak nyomon követése szülői hozzájárulás nélkül",
+      "item3": "Bármilyen használat, amely sérti a helyi, állami, nemzeti vagy nemzetközi törvényeket",
+      "item4": "A hozzájárulási követelmények megkerülésének kísérlete",
+      "item5": "A szolgáltatás kereskedelmi megfigyelésre történő használata"
+    },
+    "liability": {
+      "title": "6. Felelősségkorlátozás",
+      "content1": "A Tracify szolgáltatásait \"ahogy van\" alapon nyújtja, bármilyen garancia nélkül. Nem vállalunk felelősséget a következőkért:",
+      "item1": "A megadott helyadatok pontossága",
+      "item2": "Szolgáltatási megszakítások vagy technikai problémák",
+      "item3": "A szolgáltatás felhasználók általi helytelen használata",
+      "item4": "A megszerzett helyadatok alapján tett intézkedések",
+      "content2": "Teljes felelősségünk nem haladhatja meg a követelést megelőző hónapban a szolgáltatásért fizetett összeget."
+    },
+    "cancellation": {
+      "title": "7. Lemondási és visszatérítési szabályzat",
+      "content1": "Előfizetését bármikor lemondhatja a lemondási oldalunkon vagy az ügyfélszolgálatunkkal való kapcsolatfelvétel útján. Lemondáskor:",
+      "item1": "Előfizetése azonnal véget ér",
+      "item2": "Nem történik további terhelés a fiókján",
+      "item3": "Általában nem biztosítunk visszatérítést részleges hónapokra",
+      "content2": "Számlázási viták vagy visszatérítési kérelmek esetén kérjük, lépjen kapcsolatba a support@tracify-geo.com címen."
+    },
+    "modifications": {
+      "title": "8. Feltételek módosítása",
+      "content": "Fenntartjuk a jogot, hogy ezeket az Általános Szerződési Feltételeket bármikor módosítsuk. A változások azonnal hatályba lépnek a weboldalunkon történő közzététel után. A Tracify további használata a változások után a módosított feltételek elfogadását jelenti."
+    },
+    "governingLaw": {
+      "title": "9. Irányadó jog",
+      "content": "Ezeket az Általános Szerződési Feltételeket az alkalmazandó jogszabályok szerint kell értelmezni és alkalmazni. Az ezen feltételekből eredő viták a megfelelő jogi csatornákon keresztül kerülnek rendezésre."
+    },
+    "contact": {
+      "title": "10. Kapcsolatfelvételi információk",
+      "content": "Ha bármilyen kérdése van ezekkel az Általános Szerződési Feltételekkel kapcsolatban, kérjük, lépjen kapcsolatba velünk:"
+    }
+  },
+  "privacy": {
+    "title": "Adatvédelmi Szabályzat",
+    "lastUpdated": "Utoljára frissítve: 2026. január",
+    "cardTitle": "Az Ön adatvédelme fontos",
+    "cardSubtitle": "Elkötelezettek vagyunk személyes adatainak védelme mellett.",
+    "introduction": {
+      "title": "1. Bevezetés",
+      "content": "Ez az Adatvédelmi Szabályzat elmagyarázza, hogyan gyűjti, használja és védi a Tracify (\"mi\", \"minket\" vagy \"miénk\") az Ön személyes adatait, amikor a tracify-geo.com weboldalunkat és telefonhelyzet-nyomkövető szolgáltatásainkat használja. Szolgáltatásaink használatával Ön hozzájárul a jelen szabályzatban leírt adatkezelési gyakorlatokhoz."
+    },
+    "dataCollection": {
+      "title": "2. Általunk gyűjtött információk",
+      "content": "A következő típusú információkat gyűjtjük:",
+      "item1": "Fiókinformációk: E-mail cím, név és jelszó regisztrációkor",
+      "item2": "Fizetési információk: Bankkártya adatok, amelyeket biztonságosan a Stripe-on keresztül dolgozunk fel",
+      "item3": "Telefonszámok: Az Ön által helyzetkéréshez megadott számok",
+      "item4": "Helyadatok: A hozzájáruló címzettek által megosztott GPS koordináták",
+      "item5": "Használati adatok: Hogyan használja szolgáltatásunkat, beleértve az IP-címet és a böngésző típusát"
+    },
+    "dataUse": {
+      "title": "3. Hogyan használjuk az Ön adatait",
+      "content": "Az Ön adatait a következő célokra használjuk:",
+      "item1": "Helyzetkövetési szolgáltatásunk biztosítása és fenntartása",
+      "item2": "Fizetéseinek feldolgozása és előfizetésének kezelése",
+      "item3": "SMS helyzetkérések küldése az Ön által megadott telefonszámokra",
+      "item4": "Kommunikáció Önnel fiókjáról és szolgáltatási frissítésekről",
+      "item5": "Szolgáltatásaink fejlesztése és új funkciók kidolgozása",
+      "item6": "Jogi kötelezettségeknek való megfelelés"
+    },
+    "dataSharing": {
+      "title": "4. Adatmegosztás és harmadik felek",
+      "content1": "Nem értékesítjük személyes adatait. Adatokat megoszthatunk a következőkkel:",
+      "item1": "Stripe: Fizetésfeldolgozónk, a tranzakciók biztonságos kezeléséhez",
+      "item2": "SMS szolgáltatók: A helyzetkérő üzenetek kézbesítéséhez",
+      "item3": "Jogi hatóságok: Amikor a törvény megköveteli, vagy jogaink védelme érdekében",
+      "content2": "Minden harmadik fél szolgáltató szerződésileg köteles az Ön adatainak védelmére."
+    },
+    "dataSecurity": {
+      "title": "5. Adatbiztonság",
+      "content": "Iparági szabványú biztonsági intézkedéseket alkalmazunk az Ön adatainak védelmére:",
+      "item1": "SSL/TLS titkosítás minden adatátvitelhez",
+      "item2": "Biztonságos jelszó-hashelés",
+      "item3": "Rendszeres biztonsági auditok",
+      "item4": "Korlátozott alkalmazotti hozzáférés a személyes adatokhoz",
+      "note": "Megjegyzés: Bár széleskörű óvintézkedéseket teszünk, egyetlen internetes átvitel sem 100%-ban biztonságos. Nem tudjuk garantálni az abszolút biztonságot."
+    },
+    "userRights": {
+      "title": "6. Az Ön jogai",
+      "content": "Az alábbi jogokkal rendelkezik személyes adataival kapcsolatban:",
+      "item1": "Hozzáférés: Személyes adatainak másolatának kérése",
+      "item2": "Helyesbítés: Pontatlan adatok helyesbítésének kérése",
+      "item3": "Törlés: Fiókja és a hozzá tartozó adatok törlésének kérése",
+      "item4": "Hordozhatóság: Adatainak kérése hordozható formátumban",
+      "item5": "Leiratkozás: Leiratkozás a marketing kommunikációról",
+      "contact": "Ezen jogok gyakorlásához lépjen kapcsolatba velünk a support@tracify-geo.com címen."
+    },
+    "cookies": {
+      "title": "7. Cookie-k és nyomkövetés",
+      "content1": "Cookie-kat és hasonló technológiákat használunk a következőkre:",
+      "item1": "Bejelentkezve tartás a fiókjában",
+      "item2": "Beállításainak és preferenciáinak megjegyzése",
+      "item3": "Weboldal forgalom és használati minták elemzése",
+      "item4": "Szolgáltatásunk teljesítményének javítása",
+      "content2": "A cookie-kat a böngésző beállításaiban szabályozhatja. A cookie-k letiltása befolyásolhatja szolgáltatásunk egyes funkcióit."
+    },
+    "dataRetention": {
+      "title": "8. Adatmegőrzés",
+      "content": "Személyes adatait addig őrizzük meg, amíg fiókja aktív, vagy amíg szükséges a szolgáltatások nyújtásához. A fiók törlése után bizonyos adatokat jogi megfelelés, vitarendezés vagy jogos üzleti célok érdekében legfeljebb 90 napig megőrizhetünk."
+    },
+    "children": {
+      "title": "9. Gyermekek adatvédelme",
+      "content": "A Tracify nem 18 év alatti személyek használatára készült. Tudatosan nem gyűjtünk személyes adatokat gyermekektől. Ha felfedezzük, hogy egy gyermek személyes adatokat adott meg nekünk, azokat azonnal töröljük."
+    },
+    "changes": {
+      "title": "10. A szabályzat változásai",
+      "content": "Időről időre frissíthetjük ezt az Adatvédelmi Szabályzatot. Jelentős változásokról értesítjük Önt az új szabályzat weboldalunkon történő közzétételével és az \"Utoljára frissítve\" dátum frissítésével. Szolgáltatásaink további használata a változások után az elfogadást jelenti."
+    },
+    "contact": {
+      "title": "11. Kapcsolat",
+      "content": "Ha kérdése vagy aggálya van ezzel az Adatvédelmi Szabályzattal vagy adatkezelési gyakorlatainkkal kapcsolatban, kérjük, lépjen kapcsolatba velünk:"
+    }
   }
 }

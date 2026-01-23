@@ -262,5 +262,155 @@
       "message": "Mēs esam apstiprinājuši jūsu atcelšanu, un jūs vairs nesaņemsiet maksājumus no mums. Apstiprinājuma e-pasts arī tika nosūtīts uz jūsu iesūtni.",
       "close": "Aizvērt"
     }
+  },
+  "terms": {
+    "title": "Noteikumi un nosacījumi",
+    "lastUpdated": "Pēdējoreiz atjaunināts: 2026. gada janvāris",
+    "cardTitle": "Pakalpojuma noteikumi",
+    "cardSubtitle": "Lūdzu, uzmanīgi izlasiet šos noteikumus pirms mūsu pakalpojuma izmantošanas.",
+    "introduction": {
+      "title": "1. Ievads",
+      "content": "Laipni lūdzam Tracify. Piekļūstot vai izmantojot mūsu vietni tracify-geo.com un mūsu tālruņa atrašanās vietas izsekošanas pakalpojumus, jūs piekrītat ievērot šos Noteikumus un nosacījumus. Ja jūs nepiekrītat kādai no šo noteikumu daļām, jūs nedrīkstat izmantot mūsu pakalpojumus."
+    },
+    "serviceDescription": {
+      "title": "2. Pakalpojuma apraksts",
+      "content1": "Tracify nodrošina uz piekrišanu balstītu tālruņa atrašanās vietas izsekošanas pakalpojumu. Mūsu pakalpojums darbojas, nosūtot SMS ziņojumu uz jūsu norādīto tālruņa numuru, pieprasot saņēmēja atļauju kopīgot savu atrašanās vietu.",
+      "important": "Svarīgi: Atrašanās vietas izsekošana notiek tikai tad, kad SMS saņēmējs skaidri piekrīt kopīgot savu atrašanās vietu. Mēs neizsekojam tālruņus bez īpašnieka aktīvas piekrišanas."
+    },
+    "billing": {
+      "title": "3. Konta reģistrācija un norēķini",
+      "content1": "Lai izmantotu Tracify, jums jāizveido konts un jāabonē mūsu pakalpojums. Mūsu cenu struktūra ir šāda:",
+      "trial": "24 stundu izmēģinājuma periods: 1,25 USD",
+      "monthly": "Mēneša abonements: 30,00 USD (tiek automātiski iekasēts pēc izmēģinājuma perioda beigām)",
+      "content2": "Abonējot jūs pilnvarojat mūs iekasēt maksu no jūsu maksājuma veida periodiski katru mēnesi, līdz jūs atceļat abonementu. Visi maksājumi tiek droši apstrādāti caur Stripe."
+    },
+    "userResponsibilities": {
+      "title": "4. Lietotāja pienākumi",
+      "content": "Izmantojot Tracify, jūs piekrītat:",
+      "item1": "Izmantot pakalpojumu tikai likumīgiem mērķiem",
+      "item2": "Nemēģināt izsekot personas bez leģitīma iemesla",
+      "item3": "Neizmantot pakalpojumu vajāšanai, uzmākšanai vai jebkādai nelikumīgai darbībai",
+      "item4": "Sniegt precīzu informāciju, veidojot savu kontu",
+      "item5": "Uzturēt savus konta akreditācijas datus drošus un konfidenciālus"
+    },
+    "prohibitedUses": {
+      "title": "5. Aizliegtie lietojumi",
+      "content": "Šādi Tracify lietojumi ir stingri aizliegti:",
+      "item1": "Jebkuras personas vajāšana vai uzmākšanās",
+      "item2": "Nepilngadīgo izsekošana bez vecāku piekrišanas",
+      "item3": "Jebkāds lietojums, kas pārkāpj vietējos, valsts vai starptautiskos likumus",
+      "item4": "Mēģinājumi apiet piekrišanas prasības",
+      "item5": "Pakalpojuma izmantošana komerciālai novērošanai"
+    },
+    "liability": {
+      "title": "6. Atbildības ierobežojums",
+      "content1": "Tracify nodrošina savus pakalpojumus \"tādus, kādi tie ir\" bez jebkādām garantijām. Mēs neesam atbildīgi par:",
+      "item1": "Sniegto atrašanās vietas datu precizitāti",
+      "item2": "Pakalpojuma pārtraukumiem vai tehniskām problēmām",
+      "item3": "Jebkādu pakalpojuma ļaunprātīgu izmantošanu no lietotāju puses",
+      "item4": "Darbībām, kas veiktas, pamatojoties uz iegūto atrašanās vietas informāciju",
+      "content2": "Mūsu kopējā atbildība nepārsniegs summu, ko jūs samaksājāt par pakalpojumu mēnesī pirms jebkuras prasības."
+    },
+    "cancellation": {
+      "title": "7. Atcelšanas un atmaksas politika",
+      "content1": "Jūs varat atcelt savu abonementu jebkurā laikā caur mūsu atcelšanas lapu vai sazinoties ar mūsu atbalsta komandu. Pēc atcelšanas:",
+      "item1": "Jūsu abonements beigsies nekavējoties",
+      "item2": "No jūsu konta netiks veikti turpmāki maksājumi",
+      "item3": "Atmaksas par daļējiem mēnešiem parasti netiek nodrošinātas",
+      "content2": "Lai risinātu norēķinu strīdus vai atmaksas pieprasījumus, lūdzu, sazinieties ar support@tracify-geo.com."
+    },
+    "modifications": {
+      "title": "8. Noteikumu izmaiņas",
+      "content": "Mēs paturam tiesības jebkurā laikā modificēt šos Noteikumus un nosacījumus. Izmaiņas stāsies spēkā nekavējoties pēc publicēšanas mūsu vietnē. Jūsu turpmāka Tracify izmantošana pēc izmaiņām nozīmē jūsu piekrišanu modificētajiem noteikumiem."
+    },
+    "governingLaw": {
+      "title": "9. Piemērojamie tiesību akti",
+      "content": "Šie Noteikumi un nosacījumi tiek regulēti un interpretēti saskaņā ar piemērojamiem likumiem. Jebkuri strīdi, kas izriet no šiem noteikumiem, tiks risināti atbilstošos tiesiskajos kanālos."
+    },
+    "contact": {
+      "title": "10. Kontaktinformācija",
+      "content": "Ja jums ir jautājumi par šiem Noteikumiem un nosacījumiem, lūdzu, sazinieties ar mums:"
+    }
+  },
+  "privacy": {
+    "title": "Privātuma politika",
+    "lastUpdated": "Pēdējoreiz atjaunināts: 2026. gada janvāris",
+    "cardTitle": "Jūsu privātums ir svarīgs",
+    "cardSubtitle": "Mēs esam apņēmušies aizsargāt jūsu personisko informāciju.",
+    "introduction": {
+      "title": "1. Ievads",
+      "content": "Šī Privātuma politika izskaidro, kā Tracify (\"mēs\", \"mūs\" vai \"mūsu\") vāc, izmanto un aizsargā jūsu personisko informāciju, kad izmantojat mūsu vietni tracify-geo.com un mūsu tālruņa atrašanās vietas izsekošanas pakalpojumus. Izmantojot mūsu pakalpojumus, jūs piekrītat šajā politikā aprakstītajām datu praksēm."
+    },
+    "dataCollection": {
+      "title": "2. Informācija, ko mēs vācam",
+      "content": "Mēs vācam šādus informācijas veidus:",
+      "item1": "Konta informācija: E-pasta adrese, vārds un parole, kad reģistrējaties",
+      "item2": "Maksājumu informācija: Kredītkartes dati, kas droši apstrādāti caur Stripe",
+      "item3": "Tālruņa numuri: Numuri, kurus iesniedzat atrašanās vietas izsekošanas pieprasījumiem",
+      "item4": "Atrašanās vietas dati: GPS koordinātas, ko kopīgo piekritušie saņēmēji",
+      "item5": "Lietošanas dati: Kā jūs mijiedarbojaties ar mūsu pakalpojumu, ieskaitot IP adresi un pārlūka veidu"
+    },
+    "dataUse": {
+      "title": "3. Kā mēs izmantojam jūsu informāciju",
+      "content": "Mēs izmantojam jūsu informāciju šādiem mērķiem:",
+      "item1": "Lai nodrošinātu un uzturētu mūsu atrašanās vietas izsekošanas pakalpojumu",
+      "item2": "Lai apstrādātu jūsu maksājumus un pārvaldītu jūsu abonementu",
+      "item3": "Lai nosūtītu SMS atrašanās vietas pieprasījumus uz jūsu norādītajiem tālruņa numuriem",
+      "item4": "Lai sazinātos ar jums par jūsu kontu un pakalpojuma atjauninājumiem",
+      "item5": "Lai uzlabotu mūsu pakalpojumus un izstrādātu jaunas funkcijas",
+      "item6": "Lai izpildītu juridiskās saistības"
+    },
+    "dataSharing": {
+      "title": "4. Datu kopīgošana un trešās puses",
+      "content1": "Mēs nepārdodam jūsu personisko informāciju. Mēs varam kopīgot datus ar:",
+      "item1": "Stripe: Mūsu maksājumu apstrādātāju, lai droši apstrādātu darījumus",
+      "item2": "SMS pakalpojumu sniedzējiem: Lai piegādātu atrašanās vietas pieprasījuma ziņojumus",
+      "item3": "Tiesībsargājošām iestādēm: Kad to pieprasa likums vai lai aizsargātu mūsu tiesības",
+      "content2": "Visi trešo pušu pakalpojumu sniedzēji ir līgumiski saistīti aizsargāt jūsu datus."
+    },
+    "dataSecurity": {
+      "title": "5. Datu drošība",
+      "content": "Mēs ieviešam nozares standarta drošības pasākumus, lai aizsargātu jūsu informāciju:",
+      "item1": "SSL/TLS šifrēšana visai datu pārsūtīšanai",
+      "item2": "Droša paroļu jaukšana",
+      "item3": "Regulāras drošības pārbaudes",
+      "item4": "Ierobežota darbinieku piekļuve personiskajiem datiem",
+      "note": "Piezīme: Lai gan mēs veicam plašus piesardzības pasākumus, neviena interneta pārsūtīšana nav 100% droša. Mēs nevaram garantēt absolūtu drošību."
+    },
+    "userRights": {
+      "title": "6. Jūsu tiesības",
+      "content": "Jums ir šādas tiesības attiecībā uz jūsu personiskajiem datiem:",
+      "item1": "Piekļuve: Pieprasīt savu personisko datu kopiju",
+      "item2": "Labošana: Pieprasīt neprecīzu datu labošanu",
+      "item3": "Dzēšana: Pieprasīt sava konta un saistīto datu dzēšanu",
+      "item4": "Pārnesamība: Pieprasīt savus datus pārnēsājamā formātā",
+      "item5": "Atteikšanās: Atteikties no mārketinga saziņas",
+      "contact": "Lai izmantotu šīs tiesības, sazinieties ar mums pa support@tracify-geo.com."
+    },
+    "cookies": {
+      "title": "7. Sīkdatnes un izsekošana",
+      "content1": "Mēs izmantojam sīkdatnes un līdzīgas tehnoloģijas, lai:",
+      "item1": "Uzturētu jūs pierakstītu savā kontā",
+      "item2": "Atcerētos jūsu preferences un iestatījumus",
+      "item3": "Analizētu vietnes apmeklējumu un lietošanas modeļus",
+      "item4": "Uzlabotu mūsu pakalpojuma veiktspēju",
+      "content2": "Jūs varat kontrolēt sīkdatnes caur sava pārlūka iestatījumiem. Sīkdatņu atspējošana var ietekmēt dažas mūsu pakalpojuma funkcijas."
+    },
+    "dataRetention": {
+      "title": "8. Datu saglabāšana",
+      "content": "Mēs saglabājam jūsu personiskos datus tik ilgi, kamēr jūsu konts ir aktīvs vai kamēr tas nepieciešams pakalpojumu sniegšanai. Pēc konta dzēšanas mēs varam saglabāt noteiktus datus juridiskās atbilstības, strīdu risināšanas vai leģitīmu biznesa mērķu dēļ līdz 90 dienām."
+    },
+    "children": {
+      "title": "9. Bērnu privātums",
+      "content": "Tracify nav paredzēts lietošanai personām, kas jaunākas par 18 gadiem. Mēs apzināti nevācam personisko informāciju no bērniem. Ja mēs atklājam, ka bērns mums ir sniedzis personisko informāciju, mēs to nekavējoties izdzēsīsim."
+    },
+    "changes": {
+      "title": "10. Izmaiņas šajā politikā",
+      "content": "Mēs varam laiku pa laikam atjaunināt šo Privātuma politiku. Mēs jūs informēsim par būtiskām izmaiņām, publicējot jauno politiku mūsu vietnē un atjauninot datumu \"Pēdējoreiz atjaunināts\". Jūsu turpmāka mūsu pakalpojumu izmantošana pēc izmaiņām nozīmē piekrišanu."
+    },
+    "contact": {
+      "title": "11. Sazinieties ar mums",
+      "content": "Ja jums ir jautājumi vai bažas par šo Privātuma politiku vai mūsu datu praksēm, lūdzu, sazinieties ar mums:"
+    }
   }
 }

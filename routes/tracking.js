@@ -37,6 +37,18 @@ router.post('/request', requireActiveSubscription, async (req, res) => {
             return res.status(400).json({ error: 'Phone number is required' });
         }
 
+        // Rate limit check: 1 SMS per 3 hours
+        const lastRequestTime = await db.tracking.getLastRequestTime(req.customerId);
+        if (lastRequestTime) {
+            const hoursSinceLastRequest = (Date.now() - new Date(lastRequestTime).getTime()) / (1000 * 60 * 60);
+            if (hoursSinceLastRequest < 3) {
+                const minutesRemaining = Math.ceil((3 - hoursSinceLastRequest) * 60);
+                return res.status(429).json({
+                    error: `Due to security and privacy reasons, you can only send a message once every 3 hours. Please wait ${minutesRemaining} minutes.`
+                });
+            }
+        }
+
         // Create tracking request record
         const result = await db.tracking.create(
             req.customerId,
@@ -47,9 +59,8 @@ router.post('/request', requireActiveSubscription, async (req, res) => {
         const trackingId = result.lastInsertRowid;
         const fullPhone = `${countryCode || '+92'}${phoneNumber}`;
 
-        // In production, this would send a real SMS
-        // For now, it logs to console
-        await sendTrackingConsentRequest(fullPhone, req.customerEmail, customMessage);
+        // Send SMS via Twilio (falls back to console logging if not configured)
+        await sendTrackingConsentRequest(fullPhone, req.customerEmail, customMessage, trackingId);
 
         res.json({
             success: true,

@@ -262,5 +262,155 @@
       "message": "We've confirmed your cancellation, and you won't receive any further charges from us. A confirmation email has also been sent to your inbox.",
       "close": "Close"
     }
+  },
+  "terms": {
+    "title": "Allgemeine Geschäftsbedingungen",
+    "lastUpdated": "Zuletzt aktualisiert: Januar 2026",
+    "cardTitle": "Nutzungsbedingungen",
+    "cardSubtitle": "Bitte lesen Sie diese Bedingungen sorgfältig, bevor Sie unseren Dienst nutzen.",
+    "introduction": {
+      "title": "1. Einführung",
+      "content": "Willkommen bei Tracify. Durch den Zugriff auf unsere Website tracify-geo.com und die Nutzung unserer Telefon-Standortverfolgungsdienste stimmen Sie diesen Allgemeinen Geschäftsbedingungen zu. Wenn Sie mit einem Teil dieser Bedingungen nicht einverstanden sind, dürfen Sie unsere Dienste nicht nutzen."
+    },
+    "serviceDescription": {
+      "title": "2. Servicebeschreibung",
+      "content1": "Tracify bietet einen auf Zustimmung basierenden Telefon-Standortverfolgungsdienst. Unser Dienst funktioniert durch das Senden einer SMS-Nachricht an die von Ihnen angegebene Telefonnummer, um die Erlaubnis des Empfängers zur Standortfreigabe anzufordern.",
+      "important": "Wichtig: Die Standortverfolgung erfolgt nur, wenn der SMS-Empfänger ausdrücklich der Freigabe seines Standorts zustimmt. Wir verfolgen keine Telefone ohne aktive Zustimmung des Besitzers."
+    },
+    "billing": {
+      "title": "3. Kontoregistrierung und Abrechnung",
+      "content1": "Um Tracify zu nutzen, müssen Sie ein Konto erstellen und unseren Dienst abonnieren. Unsere Preisstruktur ist wie folgt:",
+      "trial": "24-Stunden-Testphase: 1,25 USD",
+      "monthly": "Monatsabonnement: 30,00 USD (automatisch nach Ablauf der Testphase belastet)",
+      "content2": "Mit dem Abonnement ermächtigen Sie uns, Ihre Zahlungsmethode monatlich wiederkehrend zu belasten, bis Sie Ihr Abonnement kündigen. Alle Zahlungen werden sicher über Stripe verarbeitet."
+    },
+    "userResponsibilities": {
+      "title": "4. Nutzerpflichten",
+      "content": "Bei der Nutzung von Tracify stimmen Sie zu:",
+      "item1": "Den Dienst nur für rechtmäßige Zwecke zu nutzen",
+      "item2": "Nicht zu versuchen, Personen ohne legitimen Grund zu verfolgen",
+      "item3": "Den Dienst nicht für Stalking, Belästigung oder illegale Aktivitäten zu nutzen",
+      "item4": "Bei der Kontoerstellung genaue Informationen anzugeben",
+      "item5": "Ihre Kontodaten sicher und vertraulich zu halten"
+    },
+    "prohibitedUses": {
+      "title": "5. Verbotene Nutzungen",
+      "content": "Die folgenden Nutzungen von Tracify sind streng verboten:",
+      "item1": "Stalking oder Belästigung von Personen",
+      "item2": "Verfolgung von Minderjährigen ohne elterliche Zustimmung",
+      "item3": "Jede Nutzung, die lokale, staatliche, nationale oder internationale Gesetze verletzt",
+      "item4": "Versuche, Zustimmungsanforderungen zu umgehen",
+      "item5": "Nutzung des Dienstes für kommerzielle Überwachung"
+    },
+    "liability": {
+      "title": "6. Haftungsbeschränkung",
+      "content1": "Tracify stellt seine Dienste \"wie besehen\" ohne jegliche Garantien zur Verfügung. Wir haften nicht für:",
+      "item1": "Genauigkeit der bereitgestellten Standortdaten",
+      "item2": "Serviceunterbrechungen oder technische Probleme",
+      "item3": "Missbrauch des Dienstes durch Nutzer",
+      "item4": "Handlungen, die auf Grundlage erhaltener Standortinformationen vorgenommen werden",
+      "content2": "Unsere Gesamthaftung übersteigt nicht den Betrag, den Sie für den Dienst im Monat vor einem Anspruch gezahlt haben."
+    },
+    "cancellation": {
+      "title": "7. Kündigungs- und Erstattungsrichtlinie",
+      "content1": "Sie können Ihr Abonnement jederzeit über unsere Kündigungsseite oder durch Kontaktaufnahme mit unserem Support-Team kündigen. Bei Kündigung:",
+      "item1": "Endet Ihr Abonnement sofort",
+      "item2": "Werden keine weiteren Gebühren von Ihrem Konto abgebucht",
+      "item3": "Werden Erstattungen für angebrochene Monate in der Regel nicht gewährt",
+      "content2": "Bei Abrechnungsstreitigkeiten oder Erstattungsanfragen wenden Sie sich bitte an support@tracify-geo.com."
+    },
+    "modifications": {
+      "title": "8. Änderungen der Bedingungen",
+      "content": "Wir behalten uns das Recht vor, diese Allgemeinen Geschäftsbedingungen jederzeit zu ändern. Änderungen werden sofort nach Veröffentlichung auf unserer Website wirksam. Ihre fortgesetzte Nutzung von Tracify nach Änderungen gilt als Akzeptanz der geänderten Bedingungen."
+    },
+    "governingLaw": {
+      "title": "9. Anwendbares Recht",
+      "content": "Diese Allgemeinen Geschäftsbedingungen unterliegen dem anwendbaren Recht und werden entsprechend ausgelegt. Streitigkeiten aus diesen Bedingungen werden durch entsprechende rechtliche Verfahren gelöst."
+    },
+    "contact": {
+      "title": "10. Kontaktinformationen",
+      "content": "Wenn Sie Fragen zu diesen Allgemeinen Geschäftsbedingungen haben, kontaktieren Sie uns bitte unter:"
+    }
+  },
+  "privacy": {
+    "title": "Datenschutzrichtlinie",
+    "lastUpdated": "Zuletzt aktualisiert: Januar 2026",
+    "cardTitle": "Ihre Privatsphäre ist wichtig",
+    "cardSubtitle": "Wir sind dem Schutz Ihrer persönlichen Daten verpflichtet.",
+    "introduction": {
+      "title": "1. Einführung",
+      "content": "Diese Datenschutzrichtlinie erklärt, wie Tracify (\"wir\", \"uns\" oder \"unser\") Ihre persönlichen Daten sammelt, verwendet und schützt, wenn Sie unsere Website tracify-geo.com und unsere Telefon-Standortverfolgungsdienste nutzen. Durch die Nutzung unserer Dienste stimmen Sie den in dieser Richtlinie beschriebenen Datenpraktiken zu."
+    },
+    "dataCollection": {
+      "title": "2. Von uns gesammelte Informationen",
+      "content": "Wir sammeln die folgenden Arten von Informationen:",
+      "item1": "Kontoinformationen: E-Mail-Adresse, Name und Passwort bei der Registrierung",
+      "item2": "Zahlungsinformationen: Kreditkartendaten, die sicher über Stripe verarbeitet werden",
+      "item3": "Telefonnummern: Nummern, die Sie für Standortverfolgungsanfragen einreichen",
+      "item4": "Standortdaten: GPS-Koordinaten, die von zustimmenden Empfängern geteilt werden",
+      "item5": "Nutzungsdaten: Wie Sie mit unserem Dienst interagieren, einschließlich IP-Adresse und Browsertyp"
+    },
+    "dataUse": {
+      "title": "3. Wie wir Ihre Informationen verwenden",
+      "content": "Wir verwenden Ihre Informationen für folgende Zwecke:",
+      "item1": "Zur Bereitstellung und Wartung unseres Standortverfolgungsdienstes",
+      "item2": "Zur Verarbeitung Ihrer Zahlungen und Verwaltung Ihres Abonnements",
+      "item3": "Zum Senden von SMS-Standortanfragen an die von Ihnen angegebenen Telefonnummern",
+      "item4": "Zur Kommunikation mit Ihnen über Ihr Konto und Service-Updates",
+      "item5": "Zur Verbesserung unserer Dienste und Entwicklung neuer Funktionen",
+      "item6": "Zur Einhaltung gesetzlicher Verpflichtungen"
+    },
+    "dataSharing": {
+      "title": "4. Datenweitergabe und Dritte",
+      "content1": "Wir verkaufen Ihre persönlichen Daten nicht. Wir können Daten teilen mit:",
+      "item1": "Stripe: Unser Zahlungsabwickler für sichere Transaktionsabwicklung",
+      "item2": "SMS-Anbieter: Zur Zustellung von Standortanfragenachrichten",
+      "item3": "Behörden: Wenn gesetzlich vorgeschrieben oder zum Schutz unserer Rechte",
+      "content2": "Alle Drittanbieter sind vertraglich zum Schutz Ihrer Daten verpflichtet."
+    },
+    "dataSecurity": {
+      "title": "5. Datensicherheit",
+      "content": "Wir implementieren branchenübliche Sicherheitsmaßnahmen zum Schutz Ihrer Daten:",
+      "item1": "SSL/TLS-Verschlüsselung für alle Datenübertragungen",
+      "item2": "Sichere Passwort-Hashung",
+      "item3": "Regelmäßige Sicherheitsaudits",
+      "item4": "Eingeschränkter Mitarbeiterzugang zu persönlichen Daten",
+      "note": "Hinweis: Obwohl wir umfangreiche Vorkehrungen treffen, ist keine Internetübertragung zu 100% sicher. Wir können absolute Sicherheit nicht garantieren."
+    },
+    "userRights": {
+      "title": "6. Ihre Rechte",
+      "content": "Sie haben folgende Rechte bezüglich Ihrer persönlichen Daten:",
+      "item1": "Zugang: Anfordern einer Kopie Ihrer persönlichen Daten",
+      "item2": "Korrektur: Anfordern der Korrektur ungenauer Daten",
+      "item3": "Löschung: Anfordern der Löschung Ihres Kontos und zugehöriger Daten",
+      "item4": "Portabilität: Anfordern Ihrer Daten in einem portablen Format",
+      "item5": "Abmeldung: Abmeldung von Marketing-Kommunikation",
+      "contact": "Um diese Rechte auszuüben, kontaktieren Sie uns unter support@tracify-geo.com."
+    },
+    "cookies": {
+      "title": "7. Cookies und Tracking",
+      "content1": "Wir verwenden Cookies und ähnliche Technologien, um:",
+      "item1": "Sie in Ihrem Konto eingeloggt zu halten",
+      "item2": "Ihre Präferenzen und Einstellungen zu speichern",
+      "item3": "Website-Traffic und Nutzungsmuster zu analysieren",
+      "item4": "Die Leistung unseres Dienstes zu verbessern",
+      "content2": "Sie können Cookies über Ihre Browsereinstellungen steuern. Das Deaktivieren von Cookies kann einige Funktionen unseres Dienstes beeinträchtigen."
+    },
+    "dataRetention": {
+      "title": "8. Datenspeicherung",
+      "content": "Wir speichern Ihre persönlichen Daten, solange Ihr Konto aktiv ist oder zur Bereitstellung von Diensten erforderlich. Nach Kontolöschung können wir bestimmte Daten für rechtliche Compliance, Streitbeilegung oder legitime Geschäftszwecke bis zu 90 Tage aufbewahren."
+    },
+    "children": {
+      "title": "9. Datenschutz für Kinder",
+      "content": "Tracify ist nicht für die Nutzung durch Personen unter 18 Jahren bestimmt. Wir sammeln wissentlich keine persönlichen Daten von Kindern. Wenn wir feststellen, dass ein Kind uns persönliche Daten zur Verfügung gestellt hat, werden wir diese umgehend löschen."
+    },
+    "changes": {
+      "title": "10. Änderungen dieser Richtlinie",
+      "content": "Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Wir werden Sie über wesentliche Änderungen informieren, indem wir die neue Richtlinie auf unserer Website veröffentlichen und das Datum \"Zuletzt aktualisiert\" aktualisieren. Ihre fortgesetzte Nutzung unserer Dienste nach Änderungen gilt als Akzeptanz."
+    },
+    "contact": {
+      "title": "11. Kontakt",
+      "content": "Wenn Sie Fragen oder Bedenken zu dieser Datenschutzrichtlinie oder unseren Datenpraktiken haben, kontaktieren Sie uns bitte:"
+    }
   }
 }

@@ -262,5 +262,155 @@
       "message": "Potrdili smo vaše preklicanje in od nas ne boste več prejeli nobenih stroškov. Potrditvena e-pošta je bila prav tako poslana v vašo e-poštno predal.",
       "close": "Zapri"
     }
+  },
+  "terms": {
+    "title": "Pogoji uporabe",
+    "lastUpdated": "Nazadnje posodobljeno: januar 2026",
+    "cardTitle": "Pogoji storitve",
+    "cardSubtitle": "Pred uporabo naše storitve pozorno preberite te pogoje.",
+    "introduction": {
+      "title": "1. Uvod",
+      "content": "Dobrodošli v Tracify. Z dostopom do naše spletne strani tracify-geo.com ali njeno uporabo ter uporabo naših storitev sledenja lokacije telefona se strinjate, da vas zavezujejo ti pogoji uporabe. Če se ne strinjate s katerim koli delom teh pogojev, naših storitev ne smete uporabljati."
+    },
+    "serviceDescription": {
+      "title": "2. Opis storitve",
+      "content1": "Tracify zagotavlja storitev sledenja lokacije telefona, ki temelji na soglasju. Naša storitev deluje tako, da pošlje SMS sporočilo na telefonsko številko, ki jo navedete, in zaprosi prejemnika za dovoljenje za deljenje lokacije.",
+      "important": "Pomembno: Sledenje lokacije poteka samo, ko prejemnik SMS izrecno soglaša z deljenjem svoje lokacije. Telefonov ne sledimo brez aktivnega soglasja lastnika."
+    },
+    "billing": {
+      "title": "3. Registracija računa in obračunavanje",
+      "content1": "Za uporabo Tracify morate ustvariti račun in se naročiti na našo storitev. Naša cenovna struktura je naslednja:",
+      "trial": "24-urno preizkusno obdobje: 1,25 USD",
+      "monthly": "Mesečna naročnina: 30,00 USD (samodejno zaračunano po koncu preizkusnega obdobja)",
+      "content2": "Z naročnino nas pooblaščate, da mesečno zaračunavamo vaše plačilno sredstvo, dokler naročnine ne prekličete. Vsa plačila so varno obdelana prek Stripe."
+    },
+    "userResponsibilities": {
+      "title": "4. Odgovornosti uporabnika",
+      "content": "Pri uporabi Tracify se strinjate, da boste:",
+      "item1": "Storitev uporabljali samo za zakonite namene",
+      "item2": "Ne poskušali slediti posameznikom brez legitimnega razloga",
+      "item3": "Storitve ne uporabljali za zalezovanje, nadlegovanje ali katero koli nezakonito dejavnost",
+      "item4": "Pri ustvarjanju računa navedli točne podatke",
+      "item5": "Svoje poverilnice za račun hranili varne in zaupne"
+    },
+    "prohibitedUses": {
+      "title": "5. Prepovedane uporabe",
+      "content": "Naslednje uporabe Tracify so strogo prepovedane:",
+      "item1": "Zalezovanje ali nadlegovanje katerega koli posameznika",
+      "item2": "Sledenje mladoletnikom brez soglasja staršev",
+      "item3": "Kakršna koli uporaba, ki krši lokalne, državne, nacionalne ali mednarodne zakone",
+      "item4": "Poskusi zaobiti zahteve za soglasje",
+      "item5": "Uporaba storitve za komercialni nadzor"
+    },
+    "liability": {
+      "title": "6. Omejitev odgovornosti",
+      "content1": "Tracify zagotavlja svoje storitve \"takšne, kot so\", brez kakršnih koli jamstev. Nismo odgovorni za:",
+      "item1": "Točnost zagotovljenih podatkov o lokaciji",
+      "item2": "Prekinitve storitve ali tehnične težave",
+      "item3": "Kakršno koli zlorabo storitve s strani uporabnikov",
+      "item4": "Dejanja, sprejeta na podlagi pridobljenih informacij o lokaciji",
+      "content2": "Naša celotna odgovornost ne sme presegati zneska, ki ste ga plačali za storitev v mesecu pred kakršnim koli zahtevkom."
+    },
+    "cancellation": {
+      "title": "7. Politika preklica in vračila",
+      "content1": "Naročnino lahko kadar koli prekličete prek naše strani za preklic ali tako, da se obrnete na našo ekipo za podporo. Ob preklicu:",
+      "item1": "Vaša naročnina se bo takoj končala",
+      "item2": "Na vaš račun ne bodo izvedena nadaljnja bremena",
+      "item3": "Vračila za delne mesece praviloma niso zagotovljena",
+      "content2": "Za spore v zvezi z obračunavanjem ali zahtevke za vračilo se obrnite na support@tracify-geo.com."
+    },
+    "modifications": {
+      "title": "8. Spremembe pogojev",
+      "content": "Pridržujemo si pravico do spremembe teh pogojev uporabe kadar koli. Spremembe začnejo veljati takoj po objavi na našem spletnem mestu. Vaša nadaljnja uporaba Tracify po spremembah pomeni sprejetje spremenjenih pogojev."
+    },
+    "governingLaw": {
+      "title": "9. Veljavno pravo",
+      "content": "Ti pogoji uporabe se urejajo in razlagajo v skladu z veljavno zakonodajo. Kakršni koli spori, ki izhajajo iz teh pogojev, se rešujejo po ustreznih pravnih poteh."
+    },
+    "contact": {
+      "title": "10. Kontaktni podatki",
+      "content": "Če imate kakršna koli vprašanja o teh pogojih uporabe, nas kontaktirajte na:"
+    }
+  },
+  "privacy": {
+    "title": "Pravilnik o zasebnosti",
+    "lastUpdated": "Nazadnje posodobljeno: januar 2026",
+    "cardTitle": "Vaša zasebnost je pomembna",
+    "cardSubtitle": "Zavezani smo k zaščiti vaših osebnih podatkov.",
+    "introduction": {
+      "title": "1. Uvod",
+      "content": "Ta pravilnik o zasebnosti pojasnjuje, kako Tracify (\"mi\", \"nas\" ali \"naš\") zbira, uporablja in varuje vaše osebne podatke, ko uporabljate našo spletno stran tracify-geo.com in naše storitve sledenja lokacije telefona. Z uporabo naših storitev soglašate s podatkovnimi praksami, opisanimi v tem pravilniku."
+    },
+    "dataCollection": {
+      "title": "2. Podatki, ki jih zbiramo",
+      "content": "Zbiramo naslednje vrste podatkov:",
+      "item1": "Podatki o računu: E-poštni naslov, ime in geslo ob registraciji",
+      "item2": "Plačilni podatki: Podatki o kreditni kartici, varno obdelani prek Stripe",
+      "item3": "Telefonske številke: Številke, ki jih pošljete za zahteve za sledenje lokacije",
+      "item4": "Podatki o lokaciji: GPS koordinate, ki jih delijo soglasni prejemniki",
+      "item5": "Podatki o uporabi: Kako komunicirate z našo storitvijo, vključno z naslovom IP in vrsto brskalnika"
+    },
+    "dataUse": {
+      "title": "3. Kako uporabljamo vaše podatke",
+      "content": "Vaše podatke uporabljamo za naslednje namene:",
+      "item1": "Za zagotavljanje in vzdrževanje naše storitve sledenja lokacije",
+      "item2": "Za obdelavo vaših plačil in upravljanje vaše naročnine",
+      "item3": "Za pošiljanje SMS zahtev za lokacijo na telefonske številke, ki jih navedete",
+      "item4": "Za komunikacijo z vami o vašem računu in posodobitvah storitve",
+      "item5": "Za izboljšanje naših storitev in razvoj novih funkcij",
+      "item6": "Za izpolnjevanje zakonskih obveznosti"
+    },
+    "dataSharing": {
+      "title": "4. Deljenje podatkov in tretje osebe",
+      "content1": "Vaših osebnih podatkov ne prodajamo. Podatke lahko delimo z:",
+      "item1": "Stripe: Naš obdelovalec plačil za varno obdelavo transakcij",
+      "item2": "Ponudniki SMS: Za dostavo sporočil z zahtevami za lokacijo",
+      "item3": "Pravni organi: Ko to zahteva zakon ali za zaščito naših pravic",
+      "content2": "Vsi zunanji ponudniki so pogodbeno zavezani k zaščiti vaših podatkov."
+    },
+    "dataSecurity": {
+      "title": "5. Varnost podatkov",
+      "content": "Izvajamo varnostne ukrepe po industrijskih standardih za zaščito vaših podatkov:",
+      "item1": "SSL/TLS šifriranje za vse prenose podatkov",
+      "item2": "Varno zgoščevanje gesel",
+      "item3": "Redne varnostne revizije",
+      "item4": "Omejen dostop zaposlenih do osebnih podatkov",
+      "note": "Opomba: Čeprav sprejemamo obsežne previdnostne ukrepe, noben internetni prenos ni 100% varen. Ne moremo zagotoviti absolutne varnosti."
+    },
+    "userRights": {
+      "title": "6. Vaše pravice",
+      "content": "Glede vaših osebnih podatkov imate naslednje pravice:",
+      "item1": "Dostop: Zahtevajte kopijo svojih osebnih podatkov",
+      "item2": "Popravek: Zahtevajte popravek netočnih podatkov",
+      "item3": "Izbris: Zahtevajte izbris svojega računa in povezanih podatkov",
+      "item4": "Prenosljivost: Zahtevajte svoje podatke v prenosni obliki",
+      "item5": "Odjava: Odjavite se od marketinških sporočil",
+      "contact": "Za uveljavljanje teh pravic nas kontaktirajte na support@tracify-geo.com."
+    },
+    "cookies": {
+      "title": "7. Piškotki in sledenje",
+      "content1": "Uporabljamo piškotke in podobne tehnologije za:",
+      "item1": "Ohranjanje vaše prijave v račun",
+      "item2": "Pomnjenje vaših nastavitev in preferenc",
+      "item3": "Analizo prometa in vzorcev uporabe spletnega mesta",
+      "item4": "Izboljšanje delovanja naše storitve",
+      "content2": "Piškotke lahko nadzorujete prek nastavitev brskalnika. Onemogočanje piškotkov lahko vpliva na nekatere funkcije naše storitve."
+    },
+    "dataRetention": {
+      "title": "8. Hramba podatkov",
+      "content": "Vaše osebne podatke hranimo, dokler je vaš račun aktiven ali kolikor je potrebno za zagotavljanje storitev. Po izbrisu računa lahko nekatere podatke hranimo za zakonsko skladnost, reševanje sporov ali legitimne poslovne namene do 90 dni."
+    },
+    "children": {
+      "title": "9. Zasebnost otrok",
+      "content": "Tracify ni namenjen uporabi s strani posameznikov, mlajših od 18 let. Zavestno ne zbiramo osebnih podatkov otrok. Če odkrijemo, da nam je otrok posredoval osebne podatke, jih bomo nemudoma izbrisali."
+    },
+    "changes": {
+      "title": "10. Spremembe tega pravilnika",
+      "content": "Ta pravilnik o zasebnosti lahko občasno posodobimo. O pomembnih spremembah vas bomo obvestili z objavo novega pravilnika na našem spletnem mestu in posodobitvijo datuma \"Nazadnje posodobljeno\". Vaša nadaljnja uporaba naših storitev po spremembah pomeni sprejetje."
+    },
+    "contact": {
+      "title": "11. Kontaktirajte nas",
+      "content": "Če imate vprašanja ali pomisleke glede tega pravilnika o zasebnosti ali naših podatkovnih praks, nas kontaktirajte:"
+    }
   }
 }

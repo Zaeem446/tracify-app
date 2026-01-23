@@ -262,5 +262,155 @@
       "message": "Potvrdili jsme vaše zrušení a již vám nebude účtováno. Potvrzovací e-mail byl také odeslán do vaší schránky.",
       "close": "Zavřít"
     }
+  },
+  "terms": {
+    "title": "Obchodní podmínky",
+    "lastUpdated": "Poslední aktualizace: leden 2026",
+    "cardTitle": "Podmínky služby",
+    "cardSubtitle": "Před použitím naší služby si prosím pečlivě přečtěte tyto podmínky.",
+    "introduction": {
+      "title": "1. Úvod",
+      "content": "Vítejte v Tracify. Přístupem na naše webové stránky tracify-geo.com nebo jejich používáním a našich služeb sledování polohy telefonu souhlasíte s těmito obchodními podmínkami. Pokud nesouhlasíte s jakoukoli částí těchto podmínek, nesmíte naše služby používat."
+    },
+    "serviceDescription": {
+      "title": "2. Popis služby",
+      "content1": "Tracify poskytuje službu sledování polohy telefonu založenou na souhlasu. Naše služba funguje tak, že odešle SMS zprávu na vámi zadané telefonní číslo a požádá příjemce o povolení ke sdílení jeho polohy.",
+      "important": "Důležité: Sledování polohy probíhá pouze tehdy, když příjemce SMS výslovně souhlasí se sdílením své polohy. Telefony nesledujeme bez aktivního souhlasu jejich majitele."
+    },
+    "billing": {
+      "title": "3. Registrace účtu a fakturace",
+      "content1": "Pro používání Tracify musíte vytvořit účet a přihlásit se k odběru naší služby. Naše cenová struktura je následující:",
+      "trial": "24hodinové zkušební období: 1,25 USD",
+      "monthly": "Měsíční předplatné: 30,00 USD (automaticky účtováno po skončení zkušebního období)",
+      "content2": "Přihlášením k odběru nás opravňujete k opakovanému měsíčnímu účtování vaší platební metody, dokud předplatné nezrušíte. Všechny platby jsou bezpečně zpracovávány prostřednictvím Stripe."
+    },
+    "userResponsibilities": {
+      "title": "4. Odpovědnosti uživatele",
+      "content": "Při používání Tracify souhlasíte s tím, že budete:",
+      "item1": "Používat službu pouze pro zákonné účely",
+      "item2": "Nepokoušet se sledovat osoby bez legitimního důvodu",
+      "item3": "Nepoužívat službu ke stalkingu, obtěžování nebo jakékoli nezákonné činnosti",
+      "item4": "Poskytovat přesné informace při vytváření účtu",
+      "item5": "Udržovat své přihlašovací údaje v bezpečí a důvěrnosti"
+    },
+    "prohibitedUses": {
+      "title": "5. Zakázané použití",
+      "content": "Následující použití Tracify je přísně zakázáno:",
+      "item1": "Stalking nebo obtěžování jakékoli osoby",
+      "item2": "Sledování nezletilých bez souhlasu rodičů",
+      "item3": "Jakékoli použití porušující místní, státní, národní nebo mezinárodní zákony",
+      "item4": "Pokus o obcházení požadavků na souhlas",
+      "item5": "Používání služby pro komerční sledování"
+    },
+    "liability": {
+      "title": "6. Omezení odpovědnosti",
+      "content1": "Tracify poskytuje své služby 'jak jsou' bez jakýchkoli záruk. Neneseme odpovědnost za:",
+      "item1": "Přesnost poskytnutých údajů o poloze",
+      "item2": "Přerušení služby nebo technické problémy",
+      "item3": "Jakékoli zneužití služby uživateli",
+      "item4": "Kroky podniknuté na základě získaných informací o poloze",
+      "content2": "Naše celková odpovědnost nepřesáhne částku, kterou jste zaplatili za službu v měsíci předcházejícím jakémukoli nároku."
+    },
+    "cancellation": {
+      "title": "7. Zásady zrušení a vrácení peněz",
+      "content1": "Předplatné můžete kdykoli zrušit prostřednictvím naší stránky pro zrušení nebo kontaktováním našeho týmu podpory. Po zrušení:",
+      "item1": "Vaše předplatné okamžitě skončí",
+      "item2": "Z vašeho účtu nebudou strženy žádné další poplatky",
+      "item3": "Vrácení peněz za neúplné měsíce se obecně neposkytuje",
+      "content2": "V případě sporů ohledně fakturace nebo žádostí o vrácení peněz prosím kontaktujte support@tracify-geo.com."
+    },
+    "modifications": {
+      "title": "8. Změny podmínek",
+      "content": "Vyhrazujeme si právo tyto obchodní podmínky kdykoli změnit. Změny nabývají účinnosti okamžitě po zveřejnění na našich webových stránkách. Vaše další používání Tracify po změnách představuje souhlas s upravenými podmínkami."
+    },
+    "governingLaw": {
+      "title": "9. Rozhodné právo",
+      "content": "Tyto obchodní podmínky se řídí a vykládají v souladu s platnými zákony. Veškeré spory vyplývající z těchto podmínek budou řešeny prostřednictvím příslušných právních kanálů."
+    },
+    "contact": {
+      "title": "10. Kontaktní informace",
+      "content": "Máte-li jakékoli dotazy ohledně těchto obchodních podmínek, kontaktujte nás prosím na:"
+    }
+  },
+  "privacy": {
+    "title": "Zásady ochrany osobních údajů",
+    "lastUpdated": "Poslední aktualizace: leden 2026",
+    "cardTitle": "Vaše soukromí je pro nás důležité",
+    "cardSubtitle": "Jsme odhodláni chránit vaše osobní údaje.",
+    "introduction": {
+      "title": "1. Úvod",
+      "content": "Tyto zásady ochrany osobních údajů vysvětlují, jak Tracify ('my', 'nás' nebo 'naše') shromažďuje, používá a chrání vaše osobní údaje při používání našich webových stránek tracify-geo.com a našich služeb sledování polohy telefonu. Používáním našich služeb souhlasíte s postupy zpracování údajů popsanými v těchto zásadách."
+    },
+    "dataCollection": {
+      "title": "2. Informace, které shromažďujeme",
+      "content": "Shromažďujeme následující typy informací:",
+      "item1": "Informace o účtu: E-mailová adresa, jméno a heslo při registraci",
+      "item2": "Platební informace: Údaje o platební kartě bezpečně zpracovávané prostřednictvím Stripe",
+      "item3": "Telefonní čísla: Čísla, která zadáváte pro žádosti o sledování polohy",
+      "item4": "Údaje o poloze: GPS souřadnice sdílené souhlasícími příjemci",
+      "item5": "Údaje o používání: Jak interagujete s naší službou, včetně IP adresy a typu prohlížeče"
+    },
+    "dataUse": {
+      "title": "3. Jak používáme vaše informace",
+      "content": "Vaše informace používáme pro následující účely:",
+      "item1": "Poskytování a udržování naší služby sledování polohy",
+      "item2": "Zpracování vašich plateb a správa vašeho předplatného",
+      "item3": "Odesílání SMS žádostí o polohu na vámi zadaná telefonní čísla",
+      "item4": "Komunikace s vámi ohledně vašeho účtu a aktualizací služby",
+      "item5": "Zlepšování našich služeb a vývoj nových funkcí",
+      "item6": "Plnění právních povinností"
+    },
+    "dataSharing": {
+      "title": "4. Sdílení údajů a třetí strany",
+      "content1": "Vaše osobní údaje neprodáváme. Údaje můžeme sdílet s:",
+      "item1": "Stripe: Náš platební procesor pro bezpečné zpracování transakcí",
+      "item2": "Poskytovatelé SMS: Pro doručování zpráv s žádostí o polohu",
+      "item3": "Právní orgány: Když to vyžaduje zákon nebo k ochraně našich práv",
+      "content2": "Všichni poskytovatelé třetích stran jsou smluvně zavázáni chránit vaše údaje."
+    },
+    "dataSecurity": {
+      "title": "5. Zabezpečení údajů",
+      "content": "Implementujeme standardní bezpečnostní opatření k ochraně vašich informací:",
+      "item1": "SSL/TLS šifrování pro veškerý přenos dat",
+      "item2": "Bezpečné hashování hesel",
+      "item3": "Pravidelné bezpečnostní audity",
+      "item4": "Omezený přístup zaměstnanců k osobním údajům",
+      "note": "Poznámka: I přes rozsáhlá opatření není žádný přenos přes internet 100% bezpečný. Nemůžeme zaručit absolutní bezpečnost."
+    },
+    "userRights": {
+      "title": "6. Vaše práva",
+      "content": "Máte následující práva týkající se vašich osobních údajů:",
+      "item1": "Přístup: Požádat o kopii vašich osobních údajů",
+      "item2": "Oprava: Požádat o opravu nepřesných údajů",
+      "item3": "Výmaz: Požádat o smazání vašeho účtu a souvisejících údajů",
+      "item4": "Přenositelnost: Požádat o vaše údaje v přenositelném formátu",
+      "item5": "Odhlášení: Odhlásit se z marketingových sdělení",
+      "contact": "Pro uplatnění těchto práv nás kontaktujte na support@tracify-geo.com."
+    },
+    "cookies": {
+      "title": "7. Soubory cookie a sledování",
+      "content1": "Používáme soubory cookie a podobné technologie k:",
+      "item1": "Udržení vašeho přihlášení k účtu",
+      "item2": "Zapamatování vašich preferencí a nastavení",
+      "item3": "Analýze návštěvnosti webu a vzorců používání",
+      "item4": "Zlepšování výkonu naší služby",
+      "content2": "Soubory cookie můžete ovládat prostřednictvím nastavení prohlížeče. Zakázání souborů cookie může ovlivnit některé funkce naší služby."
+    },
+    "dataRetention": {
+      "title": "8. Uchovávání údajů",
+      "content": "Vaše osobní údaje uchováváme po dobu, kdy je váš účet aktivní nebo dokud je to potřeba k poskytování služeb. Po smazání účtu můžeme některé údaje uchovávat pro účely právního souladu, řešení sporů nebo legitimních obchodních účelů po dobu až 90 dnů."
+    },
+    "children": {
+      "title": "9. Ochrana soukromí dětí",
+      "content": "Tracify není určen pro osoby mladší 18 let. Vědomě neshromažďujeme osobní údaje od dětí. Pokud zjistíme, že nám dítě poskytlo osobní údaje, okamžitě je smažeme."
+    },
+    "changes": {
+      "title": "10. Změny těchto zásad",
+      "content": "Tyto zásady ochrany osobních údajů můžeme čas od času aktualizovat. O významných změnách vás budeme informovat zveřejněním nových zásad na našich webových stránkách a aktualizací data 'Poslední aktualizace'. Vaše další používání našich služeb po změnách představuje souhlas."
+    },
+    "contact": {
+      "title": "11. Kontaktujte nás",
+      "content": "Máte-li dotazy nebo obavy ohledně těchto zásad ochrany osobních údajů nebo našich postupů zpracování údajů, kontaktujte nás prosím:"
+    }
   }
 }

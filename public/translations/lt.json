@@ -262,5 +262,155 @@
       "message": "Patvirtinome jūsų atšaukimą ir daugiau negausite mokėjimų iš mūsų. Patvirtinimo laiškas taip pat buvo išsiųstas į jūsų pašto dėžutę.",
       "close": "Uždaryti"
     }
+  },
+  "terms": {
+    "title": "Naudojimo sąlygos",
+    "lastUpdated": "Paskutinis atnaujinimas: 2026 m. sausis",
+    "cardTitle": "Paslaugų teikimo sąlygos",
+    "cardSubtitle": "Prašome atidžiai perskaityti šias sąlygas prieš naudojantis mūsų paslauga.",
+    "introduction": {
+      "title": "1. Įvadas",
+      "content": "Sveiki atvykę į Tracify. Naudodamiesi mūsų svetaine tracify-geo.com ir mūsų telefono vietos sekimo paslaugomis, jūs sutinkate laikytis šių Naudojimo sąlygų. Jei nesutinkate su kuria nors šių sąlygų dalimi, negalite naudotis mūsų paslaugomis."
+    },
+    "serviceDescription": {
+      "title": "2. Paslaugos aprašymas",
+      "content1": "Tracify teikia sutikimu pagrįstą telefono vietos sekimo paslaugą. Mūsų paslauga veikia siunčiant SMS žinutę į jūsų nurodytą telefono numerį, prašant gavėjo leidimo dalintis savo buvimo vieta.",
+      "important": "Svarbu: Vietos sekimas vyksta tik tada, kai SMS gavėjas aiškiai sutinka dalintis savo buvimo vieta. Mes nesekame telefonų be savininko aktyvaus sutikimo."
+    },
+    "billing": {
+      "title": "3. Paskyros registracija ir atsiskaitymas",
+      "content1": "Norint naudotis Tracify, turite sukurti paskyrą ir užsiprenumeruoti mūsų paslaugą. Mūsų kainodara yra tokia:",
+      "trial": "24 valandų bandomasis laikotarpis: 1,25 USD",
+      "monthly": "Mėnesinė prenumerata: 30,00 USD (automatiškai nuskaitoma pasibaigus bandomajam laikotarpiui)",
+      "content2": "Prenumeruodami jūs įgaliojate mus reguliariai kas mėnesį nuskaityti mokėjimą iš jūsų mokėjimo priemonės, kol atšauksite prenumeratą. Visi mokėjimai saugiai apdorojami per Stripe."
+    },
+    "userResponsibilities": {
+      "title": "4. Naudotojo pareigos",
+      "content": "Naudodamiesi Tracify, jūs sutinkate:",
+      "item1": "Naudoti paslaugą tik teisėtais tikslais",
+      "item2": "Nesekti asmenų be teisėtos priežasties",
+      "item3": "Nenaudoti paslaugos persekiojimui, priekabiavimui ar bet kokiai neteisėtai veiklai",
+      "item4": "Pateikti tikslią informaciją kuriant paskyrą",
+      "item5": "Saugoti savo paskyros prisijungimo duomenis konfidencialius"
+    },
+    "prohibitedUses": {
+      "title": "5. Draudžiamas naudojimas",
+      "content": "Šie Tracify naudojimo būdai yra griežtai draudžiami:",
+      "item1": "Bet kurio asmens persekiojimas ar priekabiavimas",
+      "item2": "Nepilnamečių sekimas be tėvų sutikimo",
+      "item3": "Bet koks naudojimas, pažeidžiantis vietinius, valstybinius, nacionalinius ar tarptautinius įstatymus",
+      "item4": "Bandymas apeiti sutikimo reikalavimus",
+      "item5": "Paslaugos naudojimas komerciniam stebėjimui"
+    },
+    "liability": {
+      "title": "6. Atsakomybės apribojimas",
+      "content1": "Tracify teikia savo paslaugas 'tokias, kokios yra' be jokių garantijų. Mes nesame atsakingi už:",
+      "item1": "Pateiktų vietos duomenų tikslumą",
+      "item2": "Paslaugos pertrūkius ar techninius nesklandumus",
+      "item3": "Bet kokį netinkamą paslaugos naudojimą naudotojų",
+      "item4": "Veiksmus, atliktus remiantis gauta vietos informacija",
+      "content2": "Mūsų bendra atsakomybė neviršys sumos, kurią sumokėjote už paslaugą mėnesį prieš bet kokį ieškinį."
+    },
+    "cancellation": {
+      "title": "7. Atšaukimo ir grąžinimo politika",
+      "content1": "Galite atšaukti prenumeratą bet kada per mūsų atšaukimo puslapį arba susisiekę su mūsų palaikymo komanda. Atšaukus:",
+      "item1": "Jūsų prenumerata baigsis iš karto",
+      "item2": "Daugiau mokėjimų iš jūsų paskyros nebus nuskaitoma",
+      "item3": "Grąžinimai už dalinius mėnesius paprastai neteikiami",
+      "content2": "Dėl atsiskaitymo ginčų ar grąžinimo užklausų susisiekite support@tracify-geo.com."
+    },
+    "modifications": {
+      "title": "8. Sąlygų pakeitimai",
+      "content": "Pasiliekame teisę bet kada keisti šias Naudojimo sąlygas. Pakeitimai įsigalios iš karto po jų paskelbimo mūsų svetainėje. Jūsų tolesnis Tracify naudojimas po pakeitimų reiškia pakeistų sąlygų priėmimą."
+    },
+    "governingLaw": {
+      "title": "9. Taikoma teisė",
+      "content": "Šios Naudojimo sąlygos bus reglamentuojamos ir aiškinamos pagal taikomus įstatymus. Bet kokie ginčai, kylantys iš šių sąlygų, bus sprendžiami tinkamais teisiniais kanalais."
+    },
+    "contact": {
+      "title": "10. Kontaktinė informacija",
+      "content": "Jei turite klausimų apie šias Naudojimo sąlygas, susisiekite su mumis:"
+    }
+  },
+  "privacy": {
+    "title": "Privatumo politika",
+    "lastUpdated": "Paskutinis atnaujinimas: 2026 m. sausis",
+    "cardTitle": "Jūsų privatumas svarbus",
+    "cardSubtitle": "Esame įsipareigoję saugoti jūsų asmeninę informaciją.",
+    "introduction": {
+      "title": "1. Įvadas",
+      "content": "Ši Privatumo politika paaiškina, kaip Tracify ('mes', 'mus' arba 'mūsų') renka, naudoja ir saugo jūsų asmeninę informaciją, kai naudojatės mūsų svetaine tracify-geo.com ir mūsų telefono vietos sekimo paslaugomis. Naudodamiesi mūsų paslaugomis, jūs sutinkate su šioje politikoje aprašytomis duomenų tvarkymo praktikomis."
+    },
+    "dataCollection": {
+      "title": "2. Kokią informaciją renkame",
+      "content": "Renkame šių tipų informaciją:",
+      "item1": "Paskyros informacija: El. pašto adresas, vardas ir slaptažodis registracijos metu",
+      "item2": "Mokėjimo informacija: Kredito kortelės duomenys, saugiai apdorojami per Stripe",
+      "item3": "Telefono numeriai: Numeriai, kuriuos pateikiate vietos sekimo užklausoms",
+      "item4": "Vietos duomenys: GPS koordinatės, kuriomis dalijasi sutinkantys gavėjai",
+      "item5": "Naudojimo duomenys: Kaip sąveikaujate su mūsų paslauga, įskaitant IP adresą ir naršyklės tipą"
+    },
+    "dataUse": {
+      "title": "3. Kaip naudojame jūsų informaciją",
+      "content": "Naudojame jūsų informaciją šiais tikslais:",
+      "item1": "Teikti ir palaikyti mūsų vietos sekimo paslaugą",
+      "item2": "Apdoroti jūsų mokėjimus ir valdyti prenumeratą",
+      "item3": "Siųsti SMS vietos užklausas į jūsų nurodytus telefono numerius",
+      "item4": "Bendrauti su jumis apie jūsų paskyrą ir paslaugų atnaujinimus",
+      "item5": "Tobulinti mūsų paslaugas ir kurti naujas funkcijas",
+      "item6": "Laikytis teisinių įsipareigojimų"
+    },
+    "dataSharing": {
+      "title": "4. Duomenų dalijimasis ir trečiosios šalys",
+      "content1": "Mes neparduodame jūsų asmeninės informacijos. Galime dalintis duomenimis su:",
+      "item1": "Stripe: Mūsų mokėjimų tvarkytojas, saugiam operacijų apdorojimui",
+      "item2": "SMS tiekėjai: Vietos užklausų žinučių pristatymui",
+      "item3": "Teisėsaugos institucijos: Kai to reikalauja įstatymas arba siekiant apsaugoti mūsų teises",
+      "content2": "Visi trečiųjų šalių tiekėjai yra sutartiniais įsipareigojimais įpareigoti saugoti jūsų duomenis."
+    },
+    "dataSecurity": {
+      "title": "5. Duomenų saugumas",
+      "content": "Taikome pramonės standartų atitinkančias saugumo priemones jūsų informacijai apsaugoti:",
+      "item1": "SSL/TLS šifravimas visam duomenų perdavimui",
+      "item2": "Saugus slaptažodžių maišymas",
+      "item3": "Reguliarūs saugumo auditai",
+      "item4": "Ribotas darbuotojų priėjimas prie asmeninių duomenų",
+      "note": "Pastaba: Nors imamės plačių atsargumo priemonių, joks interneto perdavimas nėra 100% saugus. Negalime garantuoti absoliutaus saugumo."
+    },
+    "userRights": {
+      "title": "6. Jūsų teisės",
+      "content": "Turite šias teises dėl savo asmeninių duomenų:",
+      "item1": "Prieiga: Prašyti savo asmeninių duomenų kopijos",
+      "item2": "Taisymas: Prašyti ištaisyti netikslius duomenis",
+      "item3": "Ištrynimas: Prašyti ištrinti jūsų paskyrą ir susijusius duomenis",
+      "item4": "Perkeliamumas: Prašyti jūsų duomenų perkeliamu formatu",
+      "item5": "Atsisakymas: Atsisakyti rinkodaros pranešimų",
+      "contact": "Norėdami pasinaudoti šiomis teisėmis, susisiekite su mumis support@tracify-geo.com."
+    },
+    "cookies": {
+      "title": "7. Slapukai ir sekimas",
+      "content1": "Naudojame slapukus ir panašias technologijas:",
+      "item1": "Išlaikyti jus prisijungusius prie paskyros",
+      "item2": "Prisiminti jūsų nuostatas ir nustatymus",
+      "item3": "Analizuoti svetainės srautą ir naudojimo modelius",
+      "item4": "Gerinti mūsų paslaugos veikimą",
+      "content2": "Galite valdyti slapukus per savo naršyklės nustatymus. Slapukų išjungimas gali paveikti kai kurias mūsų paslaugos funkcijas."
+    },
+    "dataRetention": {
+      "title": "8. Duomenų saugojimas",
+      "content": "Saugome jūsų asmeninius duomenis tol, kol jūsų paskyra aktyvi arba kol reikia teikti paslaugas. Po paskyros ištrynimo tam tikrus duomenis galime saugoti teisinio atitikimo, ginčų sprendimo ar teisėtų verslo tikslų iki 90 dienų."
+    },
+    "children": {
+      "title": "9. Vaikų privatumas",
+      "content": "Tracify nėra skirta asmenims iki 18 metų. Mes sąmoningai nerenkame asmeninės informacijos iš vaikų. Jei sužinosime, kad vaikas mums pateikė asmeninę informaciją, nedelsdami ją ištrinsime."
+    },
+    "changes": {
+      "title": "10. Šios politikos pakeitimai",
+      "content": "Galime retkarčiais atnaujinti šią Privatumo politiką. Apie reikšmingus pakeitimus informuosime paskelbdami naują politiką mūsų svetainėje ir atnaujindami 'Paskutinis atnaujinimas' datą. Jūsų tolesnis mūsų paslaugų naudojimas po pakeitimų reiškia sutikimą."
+    },
+    "contact": {
+      "title": "11. Susisiekite su mumis",
+      "content": "Jei turite klausimų ar rūpesčių dėl šios Privatumo politikos ar mūsų duomenų tvarkymo praktikų, susisiekite su mumis:"
+    }
   }
 }

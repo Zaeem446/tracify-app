@@ -829,7 +829,15 @@
                             <td>${t.customer_email}</td>
                             <td>${t.country_code || ''}${t.phone_number}</td>
                             <td><span class="badge ${t.consent_given ? 'badge-success' : 'badge-warning'}">${t.consent_given ? 'Yes' : 'Pending'}</span></td>
-                            <td>${t.consent_given ? `${t.location_lat}, ${t.location_lng}` : '-'}</td>
+                            <td>${t.consent_given ? `
+                                <a href="https://www.google.com/maps?q=${t.location_lat},${t.location_lng}"
+                                   target="_blank"
+                                   style="color: var(--primary); text-decoration: none; font-weight: 500;">
+                                    View on Map
+                                </a>
+                                <br>
+                                <small style="color: var(--text-muted);">${parseFloat(t.location_lat).toFixed(6)}, ${parseFloat(t.location_lng).toFixed(6)}</small>
+                            ` : '-'}</td>
                             <td>${new Date(t.created_at).toLocaleString()}</td>
                         </tr>
                     `).join('');

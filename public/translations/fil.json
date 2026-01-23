@@ -262,5 +262,155 @@
       "message": "Nakumpirma na namin ang iyong pagkansela, at hindi ka na makakatanggap ng mga karagdagang singil mula sa amin. Isang confirmation email din ay ipinadala sa iyong inbox.",
       "close": "Isara"
     }
+  },
+  "terms": {
+    "title": "Mga Tuntunin at Kundisyon",
+    "lastUpdated": "Huling Na-update: Enero 2026",
+    "cardTitle": "Mga Tuntunin ng Serbisyo",
+    "cardSubtitle": "Pakibasa nang mabuti ang mga tuntuning ito bago gamitin ang aming serbisyo.",
+    "introduction": {
+      "title": "1. Panimula",
+      "content": "Maligayang pagdating sa Tracify. Sa pag-access o paggamit ng aming website sa tracify-geo.com at ng aming mga serbisyo sa pagsubaybay ng lokasyon ng telepono, sumasang-ayon ka na sumunod sa mga Tuntunin at Kundisyong ito. Kung hindi ka sumasang-ayon sa anumang bahagi ng mga tuntuning ito, hindi mo maaaring gamitin ang aming mga serbisyo."
+    },
+    "serviceDescription": {
+      "title": "2. Paglalarawan ng Serbisyo",
+      "content1": "Nagbibigay ang Tracify ng serbisyo sa pagsubaybay ng lokasyon ng telepono na nakabatay sa pahintulot. Gumagana ang aming serbisyo sa pamamagitan ng pagpapadala ng SMS mensahe sa numero ng telepono na iyong ibinigay, na humihiling ng pahintulot ng tatanggap na ibahagi ang kanilang lokasyon.",
+      "important": "Mahalaga: Ang pagsubaybay ng lokasyon ay nangyayari lamang kapag tahasang pumayag ang tatanggap ng SMS na ibahagi ang kanilang lokasyon. Hindi kami nagsusubaybay ng mga telepono nang walang aktibong pahintulot ng may-ari."
+    },
+    "billing": {
+      "title": "3. Pagpaparehistro ng Account at Pagsingil",
+      "content1": "Upang magamit ang Tracify, kailangan mong lumikha ng account at mag-subscribe sa aming serbisyo. Ang aming istruktura ng presyo ay ang mga sumusunod:",
+      "trial": "24 na oras na panahon ng pagsubok: $1.25 USD",
+      "monthly": "Buwanang subscription: $30.00 USD (awtomatikong sinisingil pagkatapos ng panahon ng pagsubok)",
+      "content2": "Sa pag-subscribe, pinapahintulutan mo kaming singilin ang iyong paraan ng pagbabayad sa paulit-ulit na buwanang batayan hanggang kanselahin mo ang iyong subscription. Lahat ng pagbabayad ay ligtas na pinoproseso sa pamamagitan ng Stripe."
+    },
+    "userResponsibilities": {
+      "title": "4. Mga Responsibilidad ng Gumagamit",
+      "content": "Sa paggamit ng Tracify, sumasang-ayon ka na:",
+      "item1": "Gamitin ang serbisyo para lamang sa mga lehitimong layunin",
+      "item2": "Huwag subukang subaybayan ang mga indibidwal nang walang lehitimong dahilan",
+      "item3": "Huwag gamitin ang serbisyo para sa stalking, harassment, o anumang ilegal na aktibidad",
+      "item4": "Magbigay ng tumpak na impormasyon kapag gumagawa ng iyong account",
+      "item5": "Panatilihing ligtas at kumpidensyal ang iyong mga kredensyal ng account"
+    },
+    "prohibitedUses": {
+      "title": "5. Mga Ipinagbabawal na Paggamit",
+      "content": "Ang mga sumusunod na paggamit ng Tracify ay mahigpit na ipinagbabawal:",
+      "item1": "Pag-stalk o pangha-harass sa sinumang indibidwal",
+      "item2": "Pagsubaybay sa mga menor de edad nang walang pahintulot ng magulang",
+      "item3": "Anumang paggamit na lumalabag sa lokal, pang-estado, pambansa, o internasyonal na batas",
+      "item4": "Pagtatangkang lampasan ang mga kinakailangan ng pahintulot",
+      "item5": "Paggamit ng serbisyo para sa komersyal na pagmamanman"
+    },
+    "liability": {
+      "title": "6. Limitasyon ng Pananagutan",
+      "content1": "Ibinibigay ng Tracify ang mga serbisyo nito \"kung ano ang kalagayan\" nang walang anumang uri ng warranty. Hindi kami mananagot para sa:",
+      "item1": "Katumpakan ng ibinigay na data ng lokasyon",
+      "item2": "Mga pagkaantala ng serbisyo o mga teknikal na isyu",
+      "item3": "Anumang maling paggamit ng serbisyo ng mga gumagamit",
+      "item4": "Mga aksyon na ginawa batay sa nakuhang impormasyon ng lokasyon",
+      "content2": "Ang aming kabuuang pananagutan ay hindi lalampas sa halagang binayaran mo para sa serbisyo sa buwang nauna sa anumang reklamo."
+    },
+    "cancellation": {
+      "title": "7. Patakaran sa Pagkansela at Refund",
+      "content1": "Maaari mong kanselahin ang iyong subscription anumang oras sa pamamagitan ng aming pahina ng pagkansela o sa pakikipag-ugnayan sa aming support team. Sa pagkansela:",
+      "item1": "Matatapos agad ang iyong subscription",
+      "item2": "Wala nang karagdagang singil na gagawin sa iyong account",
+      "item3": "Karaniwang hindi nagbibigay ng refund para sa hindi kumpletong buwan",
+      "content2": "Para sa mga hindi pagkakasundo sa pagsingil o kahilingan sa refund, mangyaring makipag-ugnayan sa support@tracify-geo.com."
+    },
+    "modifications": {
+      "title": "8. Mga Pagbabago sa mga Tuntunin",
+      "content": "Inilalaan namin ang karapatan na baguhin ang mga Tuntunin at Kundisyong ito anumang oras. Ang mga pagbabago ay magkakabisa kaagad pagkatapos i-post sa aming website. Ang patuloy mong paggamit ng Tracify pagkatapos ng mga pagbabago ay nangangahulugan ng pagtanggap sa mga nabagong tuntunin."
+    },
+    "governingLaw": {
+      "title": "9. Namamahalang Batas",
+      "content": "Ang mga Tuntunin at Kundisyong ito ay pamamahalaan at bibigyang-kahulugan alinsunod sa naaangkop na mga batas. Ang anumang mga hindi pagkakasundo na nagmumula sa mga tuntuning ito ay lulutasin sa pamamagitan ng naaangkop na legal na paraan."
+    },
+    "contact": {
+      "title": "10. Impormasyon sa Pakikipag-ugnayan",
+      "content": "Kung mayroon kang anumang mga katanungan tungkol sa mga Tuntunin at Kundisyong ito, mangyaring makipag-ugnayan sa amin sa:"
+    }
+  },
+  "privacy": {
+    "title": "Patakaran sa Privacy",
+    "lastUpdated": "Huling Na-update: Enero 2026",
+    "cardTitle": "Mahalaga ang Iyong Privacy",
+    "cardSubtitle": "Nakatuon kami sa pagprotekta ng iyong personal na impormasyon.",
+    "introduction": {
+      "title": "1. Panimula",
+      "content": "Ipinapaliwanag ng Patakaran sa Privacy na ito kung paano kinokolekta, ginagamit, at pinoprotektahan ng Tracify (\"kami\", \"amin\", o \"namin\") ang iyong personal na impormasyon kapag ginagamit mo ang aming website sa tracify-geo.com at ang aming mga serbisyo sa pagsubaybay ng lokasyon ng telepono. Sa paggamit ng aming mga serbisyo, sumasang-ayon ka sa mga kasanayan sa data na inilarawan sa patakarang ito."
+    },
+    "dataCollection": {
+      "title": "2. Impormasyong Kinokolekta Namin",
+      "content": "Kinokolekta namin ang mga sumusunod na uri ng impormasyon:",
+      "item1": "Impormasyon ng Account: Email address, pangalan, at password kapag nagparehistro ka",
+      "item2": "Impormasyon sa Pagbabayad: Mga detalye ng credit card na ligtas na pinoproseso sa pamamagitan ng Stripe",
+      "item3": "Mga Numero ng Telepono: Mga numero na iyong isinumite para sa mga kahilingan sa pagsubaybay ng lokasyon",
+      "item4": "Data ng Lokasyon: Mga GPS coordinates na ibinahagi ng mga sumasang-ayong tatanggap",
+      "item5": "Data ng Paggamit: Kung paano ka nakikipag-ugnayan sa aming serbisyo, kabilang ang IP address at uri ng browser"
+    },
+    "dataUse": {
+      "title": "3. Paano Namin Ginagamit ang Iyong Impormasyon",
+      "content": "Ginagamit namin ang iyong impormasyon para sa mga sumusunod na layunin:",
+      "item1": "Upang ibigay at panatilihin ang aming serbisyo sa pagsubaybay ng lokasyon",
+      "item2": "Upang iproseso ang iyong mga pagbabayad at pamahalaan ang iyong subscription",
+      "item3": "Upang magpadala ng mga SMS kahilingan sa lokasyon sa mga numero ng telepono na iyong ibinibigay",
+      "item4": "Upang makipag-ugnayan sa iyo tungkol sa iyong account at mga update sa serbisyo",
+      "item5": "Upang pagbutihin ang aming mga serbisyo at bumuo ng mga bagong feature",
+      "item6": "Upang sumunod sa mga legal na obligasyon"
+    },
+    "dataSharing": {
+      "title": "4. Pagbabahagi ng Data at mga Third Party",
+      "content1": "Hindi namin ibinebenta ang iyong personal na impormasyon. Maaari naming ibahagi ang data sa:",
+      "item1": "Stripe: Ang aming payment processor, para sa ligtas na paghawak ng mga transaksyon",
+      "item2": "Mga SMS Provider: Upang maipadala ang mga mensahe ng kahilingan sa lokasyon",
+      "item3": "Mga Legal na Awtoridad: Kapag kinakailangan ng batas o upang protektahan ang aming mga karapatan",
+      "content2": "Lahat ng mga third-party provider ay may kontraktwal na obligasyon na protektahan ang iyong data."
+    },
+    "dataSecurity": {
+      "title": "5. Seguridad ng Data",
+      "content": "Nagpapatupad kami ng mga industry-standard na hakbang sa seguridad upang protektahan ang iyong impormasyon:",
+      "item1": "SSL/TLS encryption para sa lahat ng pagpapadala ng data",
+      "item2": "Ligtas na pag-hash ng password",
+      "item3": "Regular na mga security audit",
+      "item4": "Limitadong access ng empleyado sa personal na data",
+      "note": "Tandaan: Habang gumagawa kami ng malawak na mga pag-iingat, walang pagpapadala sa internet na 100% ligtas. Hindi namin maaaring garantiyahan ang ganap na seguridad."
+    },
+    "userRights": {
+      "title": "6. Ang Iyong mga Karapatan",
+      "content": "Mayroon kang mga sumusunod na karapatan tungkol sa iyong personal na data:",
+      "item1": "Access: Humiling ng kopya ng iyong personal na data",
+      "item2": "Pagwawasto: Humiling ng pagwawasto ng hindi tumpak na data",
+      "item3": "Pagtanggal: Humiling ng pagtanggal ng iyong account at nauugnay na data",
+      "item4": "Portability: Humiling ng iyong data sa portable na format",
+      "item5": "Pag-opt out: Mag-unsubscribe mula sa mga marketing communication",
+      "contact": "Upang gamitin ang mga karapatang ito, makipag-ugnayan sa amin sa support@tracify-geo.com."
+    },
+    "cookies": {
+      "title": "7. Mga Cookies at Pagsubaybay",
+      "content1": "Gumagamit kami ng mga cookies at katulad na teknolohiya upang:",
+      "item1": "Panatilihin kang naka-log in sa iyong account",
+      "item2": "Tandaan ang iyong mga kagustuhan at setting",
+      "item3": "Suriin ang trapiko at mga pattern ng paggamit ng website",
+      "item4": "Pagbutihin ang performance ng aming serbisyo",
+      "content2": "Maaari mong kontrolin ang mga cookies sa pamamagitan ng mga setting ng iyong browser. Ang pag-disable ng mga cookies ay maaaring makaapekto sa ilang feature ng aming serbisyo."
+    },
+    "dataRetention": {
+      "title": "8. Pagpapanatili ng Data",
+      "content": "Pinapanatili namin ang iyong personal na data hangga't aktibo ang iyong account o kung kinakailangan para magbigay ng mga serbisyo. Pagkatapos ng pagtanggal ng account, maaari naming panatilihin ang ilang data para sa legal na pagsunod, resolusyon ng mga hindi pagkakasundo, o mga lehitimong layuning pang-negosyo ng hanggang 90 araw."
+    },
+    "children": {
+      "title": "9. Privacy ng mga Bata",
+      "content": "Ang Tracify ay hindi inilaan para gamitin ng mga indibidwal na wala pang 18 taong gulang. Hindi kami sadyang nangongolekta ng personal na impormasyon mula sa mga bata. Kung matuklasan naming nagbigay ang isang bata ng personal na impormasyon sa amin, agad naming tatanggalin ito."
+    },
+    "changes": {
+      "title": "10. Mga Pagbabago sa Patakarang Ito",
+      "content": "Maaari naming i-update ang Patakaran sa Privacy na ito paminsan-minsan. Aabisuhan ka namin tungkol sa mga makabuluhang pagbabago sa pamamagitan ng pag-post ng bagong patakaran sa aming website at pag-update ng petsa ng \"Huling Na-update\". Ang patuloy mong paggamit ng aming mga serbisyo pagkatapos ng mga pagbabago ay nangangahulugan ng pagtanggap."
+    },
+    "contact": {
+      "title": "11. Makipag-ugnayan sa Amin",
+      "content": "Kung mayroon kang mga katanungan o alalahanin tungkol sa Patakaran sa Privacy na ito o sa aming mga kasanayan sa data, mangyaring makipag-ugnayan sa amin:"
+    }
   }
 }

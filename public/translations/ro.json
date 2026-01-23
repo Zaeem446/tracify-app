@@ -262,5 +262,155 @@
       "message": "Am confirmat anularea ta și nu vei primi alte taxe de la noi. Un e-mail de confirmare a fost trimis și în inbox-ul tău.",
       "close": "Închide"
     }
+  },
+  "terms": {
+    "title": "Termeni si conditii",
+    "lastUpdated": "Ultima actualizare: Ianuarie 2026",
+    "cardTitle": "Termeni de utilizare",
+    "cardSubtitle": "Va rugam sa cititi cu atentie acesti termeni inainte de a utiliza serviciul nostru.",
+    "introduction": {
+      "title": "1. Introducere",
+      "content": "Bine ati venit la Tracify. Prin accesarea sau utilizarea site-ului nostru web la tracify-geo.com si a serviciilor noastre de urmarire a locatiei telefonului, sunteti de acord sa respectati acesti Termeni si Conditii. Daca nu sunteti de acord cu vreo parte a acestor termeni, nu puteti utiliza serviciile noastre."
+    },
+    "serviceDescription": {
+      "title": "2. Descrierea serviciului",
+      "content1": "Tracify ofera un serviciu de urmarire a locatiei telefonului bazat pe consimtamant. Serviciul nostru functioneaza prin trimiterea unui mesaj SMS catre numarul de telefon pe care il furnizati, solicitand permisiunea destinatarului de a-si partaja locatia.",
+      "important": "Important: Urmarirea locatiei are loc doar cand destinatarul SMS-ului consimte in mod explicit sa-si partajeze locatia. Nu urmarim telefoanele fara consimtamantul activ al proprietarului."
+    },
+    "billing": {
+      "title": "3. Inregistrarea contului si facturarea",
+      "content1": "Pentru a utiliza Tracify, trebuie sa creati un cont si sa va abonati la serviciul nostru. Structura noastra de preturi este urmatoarea:",
+      "trial": "Perioada de proba de 24 de ore: 1,25 USD",
+      "monthly": "Abonament lunar: 30,00 USD (facturat automat dupa incheierea perioadei de proba)",
+      "content2": "Prin abonare, ne autorizati sa va taxam metoda de plata pe baza lunara recurenta pana cand anulati abonamentul. Toate platile sunt procesate in siguranta prin Stripe."
+    },
+    "userResponsibilities": {
+      "title": "4. Responsabilitatile utilizatorului",
+      "content": "Cand utilizati Tracify, sunteti de acord sa:",
+      "item1": "Utilizati serviciul doar in scopuri legale",
+      "item2": "Nu incercati sa urmariti persoane fara un motiv legitim",
+      "item3": "Nu utilizati serviciul pentru urmarire, hartuire sau orice activitate ilegala",
+      "item4": "Furnizati informatii corecte la crearea contului",
+      "item5": "Pastrati acreditarile contului in siguranta si confidentiale"
+    },
+    "prohibitedUses": {
+      "title": "5. Utilizari interzise",
+      "content": "Urmatoarele utilizari ale Tracify sunt strict interzise:",
+      "item1": "Urmarirea sau hartuirea oricarei persoane",
+      "item2": "Urmarirea minorilor fara acordul parental",
+      "item3": "Orice utilizare care incalca legile locale, de stat, nationale sau internationale",
+      "item4": "Incercarea de a ocoli cerintele de consimtamant",
+      "item5": "Utilizarea serviciului pentru supraveghere comerciala"
+    },
+    "liability": {
+      "title": "6. Limitarea raspunderii",
+      "content1": "Tracify ofera serviciile sale 'ca atare' fara garantii de niciun fel. Nu suntem raspunzatori pentru:",
+      "item1": "Acuratetea datelor de locatie furnizate",
+      "item2": "Intreruperi ale serviciului sau probleme tehnice",
+      "item3": "Orice utilizare gresita a serviciului de catre utilizatori",
+      "item4": "Actiuni intreprinse pe baza informatiilor de locatie obtinute",
+      "content2": "Raspunderea noastra totala nu va depasi suma pe care ati platit-o pentru serviciu in luna anterioara oricarei reclamatii."
+    },
+    "cancellation": {
+      "title": "7. Politica de anulare si rambursare",
+      "content1": "Puteti anula abonamentul oricand prin pagina noastra de anulare sau contactand echipa noastra de suport. La anulare:",
+      "item1": "Abonamentul dumneavoastra se va incheia imediat",
+      "item2": "Nu vor mai fi efectuate taxari suplimentare in contul dumneavoastra",
+      "item3": "Rambursarile nu sunt in general oferite pentru lunile partiale",
+      "content2": "Pentru dispute de facturare sau cereri de rambursare, va rugam sa contactati support@tracify-geo.com."
+    },
+    "modifications": {
+      "title": "8. Modificari ale termenilor",
+      "content": "Ne rezervam dreptul de a modifica acesti Termeni si Conditii in orice moment. Modificarile vor fi efective imediat dupa publicarea pe site-ul nostru. Utilizarea continua a Tracify dupa modificari constituie acceptarea termenilor modificati."
+    },
+    "governingLaw": {
+      "title": "9. Legea aplicabila",
+      "content": "Acesti Termeni si Conditii vor fi guvernati si interpretati in conformitate cu legile aplicabile. Orice disputa care decurge din acesti termeni va fi rezolvata prin canalele legale corespunzatoare."
+    },
+    "contact": {
+      "title": "10. Informatii de contact",
+      "content": "Daca aveti intrebari despre acesti Termeni si Conditii, va rugam sa ne contactati la:"
+    }
+  },
+  "privacy": {
+    "title": "Politica de confidentialitate",
+    "lastUpdated": "Ultima actualizare: Ianuarie 2026",
+    "cardTitle": "Confidentialitatea dumneavoastra conteaza",
+    "cardSubtitle": "Ne angajam sa va protejam informatiile personale.",
+    "introduction": {
+      "title": "1. Introducere",
+      "content": "Aceasta Politica de confidentialitate explica modul in care Tracify ('noi', 'noua' sau 'al nostru') colecteaza, utilizeaza si protejeaza informatiile dumneavoastra personale cand utilizati site-ul nostru web la tracify-geo.com si serviciile noastre de urmarire a locatiei telefonului. Prin utilizarea serviciilor noastre, consimtiti la practicile de date descrise in aceasta politica."
+    },
+    "dataCollection": {
+      "title": "2. Informatiile pe care le colectam",
+      "content": "Colectam urmatoarele tipuri de informatii:",
+      "item1": "Informatii despre cont: Adresa de e-mail, numele si parola la inregistrare",
+      "item2": "Informatii de plata: Detaliile cardului de credit procesate in siguranta prin Stripe",
+      "item3": "Numere de telefon: Numerele pe care le trimiteti pentru solicitarile de urmarire a locatiei",
+      "item4": "Date de locatie: Coordonatele GPS partajate de destinatarii care au consimtit",
+      "item5": "Date de utilizare: Modul in care interactionati cu serviciul nostru, inclusiv adresa IP si tipul de browser"
+    },
+    "dataUse": {
+      "title": "3. Cum utilizam informatiile dumneavoastra",
+      "content": "Utilizam informatiile dumneavoastra in urmatoarele scopuri:",
+      "item1": "Pentru a furniza si mentine serviciul nostru de urmarire a locatiei",
+      "item2": "Pentru a procesa platile si a gestiona abonamentul dumneavoastra",
+      "item3": "Pentru a trimite solicitari de locatie prin SMS la numerele de telefon pe care le furnizati",
+      "item4": "Pentru a comunica cu dumneavoastra despre contul si actualizarile serviciului",
+      "item5": "Pentru a imbunatati serviciile noastre si a dezvolta noi functii",
+      "item6": "Pentru a ne conforma obligatiilor legale"
+    },
+    "dataSharing": {
+      "title": "4. Partajarea datelor si terti",
+      "content1": "Nu vindem informatiile dumneavoastra personale. Putem partaja date cu:",
+      "item1": "Stripe: Procesatorul nostru de plati, pentru gestionarea tranzactiilor in siguranta",
+      "item2": "Furnizori de SMS: Pentru a livra mesajele de solicitare a locatiei",
+      "item3": "Autoritati legale: Cand este cerut de lege sau pentru a ne proteja drepturile",
+      "content2": "Toti furnizorii terti sunt obligati prin contract sa va protejeze datele."
+    },
+    "dataSecurity": {
+      "title": "5. Securitatea datelor",
+      "content": "Implementam masuri de securitate standard din industrie pentru a va proteja informatiile:",
+      "item1": "Criptare SSL/TLS pentru toata transmisia de date",
+      "item2": "Hashing securizat al parolelor",
+      "item3": "Audituri de securitate regulate",
+      "item4": "Acces limitat al angajatilor la datele personale",
+      "note": "Nota: Desi luam precautii extinse, nicio transmisie pe internet nu este 100% sigura. Nu putem garanta securitate absoluta."
+    },
+    "userRights": {
+      "title": "6. Drepturile dumneavoastra",
+      "content": "Aveti urmatoarele drepturi privind datele dumneavoastra personale:",
+      "item1": "Acces: Solicitati o copie a datelor dumneavoastra personale",
+      "item2": "Corectare: Solicitati corectarea datelor inexacte",
+      "item3": "Stergere: Solicitati stergerea contului si a datelor asociate",
+      "item4": "Portabilitate: Solicitati datele dumneavoastra intr-un format portabil",
+      "item5": "Renuntare: Dezabonati-va de la comunicarile de marketing",
+      "contact": "Pentru a exercita aceste drepturi, contactati-ne la support@tracify-geo.com."
+    },
+    "cookies": {
+      "title": "7. Cookie-uri si urmarire",
+      "content1": "Utilizam cookie-uri si tehnologii similare pentru:",
+      "item1": "A va mentine autentificat in contul dumneavoastra",
+      "item2": "A va retine preferintele si setarile",
+      "item3": "A analiza traficul si tiparele de utilizare ale site-ului",
+      "item4": "A imbunatati performanta serviciului nostru",
+      "content2": "Puteti controla cookie-urile prin setarile browserului. Dezactivarea cookie-urilor poate afecta unele functii ale serviciului nostru."
+    },
+    "dataRetention": {
+      "title": "8. Pastrarea datelor",
+      "content": "Pastram datele dumneavoastra personale cat timp contul este activ sau cat este necesar pentru a furniza servicii. Dupa stergerea contului, putem pastra anumite date pentru conformitate legala, rezolvarea disputelor sau scopuri de afaceri legitime pentru pana la 90 de zile."
+    },
+    "children": {
+      "title": "9. Confidentialitatea copiilor",
+      "content": "Tracify nu este destinat utilizarii de catre persoane sub 18 ani. Nu colectam cu buna stiinta informatii personale de la copii. Daca descoperim ca un copil ne-a furnizat informatii personale, le vom sterge prompt."
+    },
+    "changes": {
+      "title": "10. Modificari ale acestei politici",
+      "content": "Putem actualiza aceasta Politica de confidentialitate din cand in cand. Va vom notifica despre modificarile semnificative prin publicarea noii politici pe site-ul nostru si actualizarea datei 'Ultima actualizare'. Utilizarea continua a serviciilor noastre dupa modificari constituie acceptare."
+    },
+    "contact": {
+      "title": "11. Contactati-ne",
+      "content": "Daca aveti intrebari sau preocupari despre aceasta Politica de confidentialitate sau practicile noastre de date, va rugam sa ne contactati:"
+    }
   }
 }

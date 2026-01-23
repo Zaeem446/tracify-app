@@ -262,5 +262,155 @@
       "message": "Siqinisekisile ukukhansela kwakho, futhi ngeke uthhole ezinye izimali ezivela kithi. I-imeyli yokuqinisekisa nayo ithunyelwe kubhokisi lakho lokungenayo.",
       "close": "Vala"
     }
+  },
+  "terms": {
+    "title": "Imibandela Nemibandela",
+    "lastUpdated": "Kubuyekezwe Ekugcineni: Januwari 2026",
+    "cardTitle": "Imibandela Yesevisi",
+    "cardSubtitle": "Sicela ufunde le mibandela ngokucophelela ngaphambi kokusebenzisa isevisi yethu.",
+    "introduction": {
+      "title": "1. Isingeniso",
+      "content": "Siyakwamukela ku-Tracify. Ngokufinyelela noma ukusebenzisa iwebhusayithi yethu ku-tracify-geo.com kanye namasevisi ethu okulandelela indawo yocingo, uyavuma ukuboshwa yile Mibandela Nemibandela. Uma ungavumelani nanoma yiyiphi ingxenye yale mibandela, awukwazi ukusebenzisa amasevisi ethu."
+    },
+    "serviceDescription": {
+      "title": "2. Incazelo Yesevisi",
+      "content1": "I-Tracify ihlinzeka ngesevisi yokulandelela indawo yocingo esekelwe emvumweni. Isevisi yethu isebenza ngokuthumela umlayezo we-SMS enombolweni yocingo oyinikezayo, ucela imvumo yomamukeli yokwabelana ngendawo yakhe.",
+      "important": "Okubalulekile: Ukulandelela indawo kwenzeka kuphela lapho umamukeli we-SMS evuma ngokusobala ukwabelana ngendawo yakhe. Asilandeleli ocingo ngaphandle kwemvumo esebenzayo yomnikazi."
+    },
+    "billing": {
+      "title": "3. Ukubhalisa I-akhawunti Nokubilwa",
+      "content1": "Ukuze usebenzise i-Tracify, kumele udale i-akhawunti futhi ubhalisele isevisi yethu. Isakhiwo sethu samanani simi kanje:",
+      "trial": "Isikhathi sokuhlola samahora angu-24: $1.25 USD",
+      "monthly": "Ukubhaliselwa kwenyanga: $30.00 USD (kukhokhelwa ngokuzenzakalelayo ngemva kokuphela kwesikhathi sokuhlola)",
+      "content2": "Ngokubhalisela, ugunyaza ukuthi sikhokhise indlela yakho yokukhokha njalo ngenyanga kuze kube uyakhansela ukubhaliselwa kwakho. Zonke izinkokhelo zisetshenzwa ngokuphepha nge-Stripe."
+    },
+    "userResponsibilities": {
+      "title": "4. Imithwalo Yomsebenzisi",
+      "content": "Lapho usebenzisa i-Tracify, uyavuma ukuthi:",
+      "item1": "Usebenzise isevisi kuphela ngezinhloso ezisemthethweni",
+      "item2": "Ungazami ukulandelela abantu ngaphandle kwesizathu esisemthethweni",
+      "item3": "Ungasebenzisi isevisi ukusola, ukuhlukumeza, noma noma yimuphi umsebenzi ongekho emthethweni",
+      "item4": "Unikeze ulwazi oluyiqiniso lapho udala i-akhawunti yakho",
+      "item5": "Ugcine imininingwane ye-akhawunti yakho iphephile neyimfihlo"
+    },
+    "prohibitedUses": {
+      "title": "5. Ukusetshenziswa Okungavunyelwe",
+      "content": "Ukusetshenziswa okulandelayo kwe-Tracify akuvunyelwe ngokuphelele:",
+      "item1": "Ukusola noma ukuhlukumeza noma yimuphi umuntu",
+      "item2": "Ukulandelela izingane ngaphandle kwemvumo yomzali",
+      "item3": "Noma yikuphi ukusetshenziswa okwephula imithetho yendawo, yesifundazwe, yesizwe, noma yamazwe ngamazwe",
+      "item4": "Ukuzama ukudlula izidingo zemvumo",
+      "item5": "Ukusebenzisa isevisi ukuhlola kwezohwebo"
+    },
+    "liability": {
+      "title": "6. Ukuncishiswa Komthwalo",
+      "content1": "I-Tracify ihlinzeka ngamasevisi ayo \"njengoba enjalo\" ngaphandle kweziqinisekiso zanoma yiluphi uhlobo. Asizithwali umthwalo ngalokhu:",
+      "item1": "Ukunemba kwedatha yendawo ehlinzekiwe",
+      "item2": "Ukuphazamiseka kwesevisi noma izinkinga zezobuchwepheshe",
+      "item3": "Noma yikuphi ukusetshenziswa kabi kwesevisi ngabasebenzisi",
+      "item4": "Izenzo ezithathwe ngokusekelwe olwazini lwendawo olutholakele",
+      "content2": "Isamba somthwalo wethu ngeke sedlule inani olikhokhe ngesevisi ngenyanga edlule noma yisiphi isicelo."
+    },
+    "cancellation": {
+      "title": "7. Inqubomgomo Yokukhansela Nokubuyiselwa Kwemali",
+      "content1": "Ungakhansela ukubhaliselwa kwakho noma nini ngekhasi lethu lokukhansela noma ngokuxhumana nethimba lethu lokusekela. Lapho kukhansela:",
+      "item1": "Ukubhaliselwa kwakho kuzophela ngokushesha",
+      "item2": "Akukho ezinye izimali ezizokwenziwa ku-akhawunti yakho",
+      "item3": "Ukubuyiselwa kwemali ngokuvamile akuhlinzekwa ngezinyanga ezingaphelele",
+      "content2": "Ngezimpikiswano zokubilwa noma izicelo zokubuyiselwa kwemali, sicela uxhumane ne-support@tracify-geo.com."
+    },
+    "modifications": {
+      "title": "8. Ukuguqulwa Kwemibandela",
+      "content": "Sigodla ilungelo lokushintsha le Mibandela Nemibandela nganoma yisiphi isikhathi. Izinguquko zizosebenza ngokushesha lapho zifakwa kuwebhusayithi yethu. Ukuqhubeka kwakho ukusebenzisa i-Tracify ngemva kwezinguquko kusho ukwamukela imibandela eguquliwe."
+    },
+    "governingLaw": {
+      "title": "9. Umthetho Olawulayo",
+      "content": "Le Mibandela Nemibandela izolawulwa futhi ichazwe ngokuvumelana nemithetho esebenzayo. Noma yiziphi izimpikiswano ezivela kule mibandela zizoxazululwa ngemigudu efanele yezomthetho."
+    },
+    "contact": {
+      "title": "10. Ulwazi Lokuxhumana",
+      "content": "Uma unemibuzo mayelana nale Mibandela Nemibandela, sicela uxhumane nathi ku:"
+    }
+  },
+  "privacy": {
+    "title": "Inqubomgomo Yobumfihlo",
+    "lastUpdated": "Kubuyekezwe Ekugcineni: Januwari 2026",
+    "cardTitle": "Ubumfihlo Bakho Bubalulekile",
+    "cardSubtitle": "Sizibophezele ekuvikeleni ulwazi lwakho lomuntu siqu.",
+    "introduction": {
+      "title": "1. Isingeniso",
+      "content": "Le Nqubomgomo Yobumfihlo ichaza ukuthi i-Tracify (\"thina\", \"kithi\", noma \"okwethu\") iqoqa, isebenzisa, futhi ivikela kanjani ulwazi lwakho lomuntu siqu lapho usebenzisa iwebhusayithi yethu ku-tracify-geo.com kanye namasevisi ethu okulandelela indawo yocingo. Ngokusebenzisa amasevisi ethu, uyavuma izindlela zedatha ezichazwe kule nqubomgomo."
+    },
+    "dataCollection": {
+      "title": "2. Ulwazi Esiliqoqayo",
+      "content": "Siqoqa izinhlobo ezilandelayo zolwazi:",
+      "item1": "Ulwazi Lwe-akhawunti: Ikheli le-imeyli, igama, nephasiwedi lapho ubhalisa",
+      "item2": "Ulwazi Lwenkokhelo: Imininingwane yekhadi lesikweletu esetshenzwa ngokuphepha nge-Stripe",
+      "item3": "Izinombolo Zocingo: Izinombolo ozithumela ngezicelo zokulandelela indawo",
+      "item4": "Idatha Yendawo: Izixhumanisi ze-GPS ezabelanwa abamukeli abavumayo",
+      "item5": "Idatha Yokusetshenziswa: Indlela osebenzisana ngayo nesevisi yethu, kuhlanganise ikheli le-IP nohlobo lwebhrawuza"
+    },
+    "dataUse": {
+      "title": "3. Indlela Esisebenzisa Ngayo Ulwazi Lwakho",
+      "content": "Sisebenzisa ulwazi lwakho ngalezi zinhloso ezilandelayo:",
+      "item1": "Ukuhlinzeka nokugcina isevisi yethu yokulandelela indawo",
+      "item2": "Ukusetshenzwa kwezinkokhelo zakho nokuphatha ukubhaliselwa kwakho",
+      "item3": "Ukuthumela izicelo zendawo ze-SMS ezinombolweni zocingo ozinikeza",
+      "item4": "Ukuxhumana nawe mayelana ne-akhawunti yakho nezibuyekezo zesevisi",
+      "item5": "Ukuthuthukisa amasevisi ethu nokuthuthukisa izici ezintsha",
+      "item6": "Ukuthobela izibopho zomthetho"
+    },
+    "dataSharing": {
+      "title": "4. Ukwabelana Ngedatha Nezinkampani Zangaphandle",
+      "content1": "Asithengisi ulwazi lwakho lomuntu siqu. Singabelana ngedatha nalaba:",
+      "item1": "I-Stripe: Umsetshenzisi wethu wenkokhelo, ukuphatha izinkokhelo ngokuphepha",
+      "item2": "Abahlinzeki be-SMS: Ukuletha imilayezo yezicelo zendawo",
+      "item3": "Iziphathimandla Zomthetho: Lapho kudingwa umthetho noma ukuvikela amalungelo ethu",
+      "content2": "Bonke abahlinzeki bangaphandle baboshwe yisivumelwano ukuvikela idatha yakho."
+    },
+    "dataSecurity": {
+      "title": "5. Ukuphepha Kwedatha",
+      "content": "Sisebenzisa izinyathelo zokuphepha ezivamile embonini ukuvikela ulwazi lwakho:",
+      "item1": "Ukubethela kwe-SSL/TLS kukho konke ukudluliswa kwedatha",
+      "item2": "Ukushintsha kwephasiwedi okuphephile",
+      "item3": "Ukuhlolwa kokuphepha okuvamile",
+      "item4": "Ukufinyelela kwabasebenzi okulinganiselwe kudatha yomuntu siqu",
+      "note": "Qaphela: Nakuba sithatha izinyathelo eziningi, akukho ukudluliswa kwe-inthanethi okuphephile ngokuphelele. Asikwazi ukuqinisekisa ukuphepha okuphelele."
+    },
+    "userRights": {
+      "title": "6. Amalungelo Akho",
+      "content": "Unamalungelo alandelayo mayelana nedatha yakho yomuntu siqu:",
+      "item1": "Ukufinyelela: Cela ikhophi yedatha yakho yomuntu siqu",
+      "item2": "Ukulungiswa: Cela ukulungiswa kwedatha engalungile",
+      "item3": "Ukusulwa: Cela ukususwa kwe-akhawunti yakho nedatha ehlobene",
+      "item4": "Ukuthwala: Cela idatha yakho ngefomethi ethwalekayo",
+      "item5": "Ukukhetha Ukuphuma: Susa ukubhaliselwa ezaziso zokukhangisa",
+      "contact": "Ukusebenzisa la malungelo, xhumana nathi ku-support@tracify-geo.com."
+    },
+    "cookies": {
+      "title": "7. Amakhukhi Nokulandelela",
+      "content1": "Sisebenzisa amakhukhi nobuchwepheshe obufanayo ukuze:",
+      "item1": "Sikugcine ungenile ku-akhawunti yakho",
+      "item2": "Sikhumbule izilungiselelo nezinketho zakho",
+      "item3": "Sihlaziye ithrafikhi yewebhusayithi nezindlela zokusebenzisa",
+      "item4": "Sithuthukise ukusebenza kwesevisi yethu",
+      "content2": "Ungalawula amakhukhi ngezilungiselelo zebhrawuza yakho. Ukuvimbela amakhukhi kungathinta ezinye izici zesevisi yethu."
+    },
+    "dataRetention": {
+      "title": "8. Ukugcinwa Kwedatha",
+      "content": "Sigcina idatha yakho yomuntu siqu uma nje i-akhawunti yakho isasebenza noma njengoba kudingeka ukuhlinzeka ngamasevisi. Ngemva kokususwa kwe-akhawunti, singagcina idatha ethile ukuthobela umthetho, ukuxazulula izimpikiswano, noma izinhloso zebhizinisi ezisemthethweni kuze kube yizinsuku ezingu-90."
+    },
+    "children": {
+      "title": "9. Ubumfihlo Bezingane",
+      "content": "I-Tracify ayenzelwe ukusetshenziswa abantu abangaphansi kweminyaka eyi-18 ubudala. Asiqoqi ulwazi lomuntu siqu ezinganeni ngamabomu. Uma sithola ukuthi ingane isinikeze ulwazi lomuntu siqu, sizolisusa ngokushesha."
+    },
+    "changes": {
+      "title": "10. Izinguquko Kule Nqubomgomo",
+      "content": "Singabuyekeza le Nqubomgomo Yobumfihlo ngezikhathi ezithile. Sizokwazisa ngezinguquko ezibalulekile ngokufaka inqubomgomo entsha kuwebhusayithi yethu nokubuyekeza usuku lwe-\"Kubuyekezwe Ekugcineni\". Ukuqhubeka kwakho ukusebenzisa amasevisi ethu ngemva kwezinguquko kusho ukwamukela."
+    },
+    "contact": {
+      "title": "11. Xhumana Nathi",
+      "content": "Uma unemibuzo noma ukukhathazeka ngale Nqubomgomo Yobumfihlo noma izindlela zethu zedatha, sicela uxhumane nathi:"
+    }
   }
 }

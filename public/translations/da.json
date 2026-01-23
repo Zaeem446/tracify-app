@@ -262,5 +262,155 @@
       "message": "Vi har bekræftet din annullering, og du vil ikke modtage flere opkrævninger fra os. En bekræftelsesmail er også sendt til din indbakke.",
       "close": "Luk"
     }
+  },
+  "terms": {
+    "title": "Vilkår og betingelser",
+    "lastUpdated": "Sidst opdateret: Januar 2026",
+    "cardTitle": "Servicevilkår",
+    "cardSubtitle": "Læs venligst disse vilkår omhyggeligt, før du bruger vores service.",
+    "introduction": {
+      "title": "1. Introduktion",
+      "content": "Velkommen til Tracify. Ved at tilgå eller bruge vores hjemmeside på tracify-geo.com og vores telefonlokaliseringstjenester accepterer du at være bundet af disse vilkår og betingelser. Hvis du ikke er enig i nogen del af disse vilkår, må du ikke bruge vores tjenester."
+    },
+    "serviceDescription": {
+      "title": "2. Servicebeskrivelse",
+      "content1": "Tracify leverer en samtykkebaseret telefonlokaliseringstjeneste. Vores service fungerer ved at sende en SMS-besked til det telefonnummer, du angiver, med anmodning om modtagerens tilladelse til at dele deres placering.",
+      "important": "Vigtigt: Lokalisering sker kun, når SMS-modtageren udtrykkeligt giver samtykke til at dele deres placering. Vi sporer ikke telefoner uden ejerens aktive samtykke."
+    },
+    "billing": {
+      "title": "3. Kontoregistrering og fakturering",
+      "content1": "For at bruge Tracify skal du oprette en konto og abonnere på vores service. Vores prisstruktur er som følger:",
+      "trial": "24-timers prøveperiode: $1,25 USD",
+      "monthly": "Månedligt abonnement: $30,00 USD (opkræves automatisk efter prøveperiodens udløb)",
+      "content2": "Ved at abonnere giver du os tilladelse til at opkræve din betalingsmetode på en tilbagevendende månedlig basis, indtil du opsiger dit abonnement. Alle betalinger behandles sikkert via Stripe."
+    },
+    "userResponsibilities": {
+      "title": "4. Brugeransvar",
+      "content": "Når du bruger Tracify, accepterer du at:",
+      "item1": "Kun bruge tjenesten til lovlige formål",
+      "item2": "Ikke forsøge at spore personer uden legitim grund",
+      "item3": "Ikke bruge tjenesten til stalking, chikane eller nogen ulovlig aktivitet",
+      "item4": "Angive korrekte oplysninger ved oprettelse af din konto",
+      "item5": "Holde dine kontooplysninger sikre og fortrolige"
+    },
+    "prohibitedUses": {
+      "title": "5. Forbudt brug",
+      "content": "Følgende anvendelser af Tracify er strengt forbudt:",
+      "item1": "Stalking eller chikane af nogen person",
+      "item2": "Sporing af mindreårige uden forælders samtykke",
+      "item3": "Enhver brug, der overtræder lokale, statslige, nationale eller internationale love",
+      "item4": "Forsøg på at omgå samtykkekrav",
+      "item5": "Brug af tjenesten til kommerciel overvågning"
+    },
+    "liability": {
+      "title": "6. Ansvarsbegrænsning",
+      "content1": "Tracify leverer sine tjenester \"som de er\" uden garantier af nogen art. Vi er ikke ansvarlige for:",
+      "item1": "Nøjagtighed af leverede placeringsdata",
+      "item2": "Serviceafbrydelser eller tekniske problemer",
+      "item3": "Misbrug af tjenesten fra brugernes side",
+      "item4": "Handlinger foretaget baseret på opnåede placeringsoplysninger",
+      "content2": "Vores samlede ansvar må ikke overstige det beløb, du har betalt for tjenesten i måneden før et eventuelt krav."
+    },
+    "cancellation": {
+      "title": "7. Opsigelse og refusionspolitik",
+      "content1": "Du kan opsige dit abonnement når som helst via vores opsigelsesside eller ved at kontakte vores supportteam. Ved opsigelse:",
+      "item1": "Dit abonnement ophører med det samme",
+      "item2": "Der vil ikke blive foretaget yderligere opkrævninger på din konto",
+      "item3": "Refusioner gives generelt ikke for delvise måneder",
+      "content2": "For faktureringsforespørgsler eller refusionsanmodninger, kontakt venligst support@tracify-geo.com."
+    },
+    "modifications": {
+      "title": "8. Ændringer af vilkår",
+      "content": "Vi forbeholder os retten til at ændre disse vilkår og betingelser når som helst. Ændringer træder i kraft umiddelbart efter offentliggørelse på vores hjemmeside. Din fortsatte brug af Tracify efter ændringer udgør accept af de ændrede vilkår."
+    },
+    "governingLaw": {
+      "title": "9. Gældende lovgivning",
+      "content": "Disse vilkår og betingelser skal være underlagt og fortolkes i overensstemmelse med gældende lovgivning. Eventuelle tvister, der opstår som følge af disse vilkår, skal løses gennem passende juridiske kanaler."
+    },
+    "contact": {
+      "title": "10. Kontaktoplysninger",
+      "content": "Hvis du har spørgsmål om disse vilkår og betingelser, bedes du kontakte os på:"
+    }
+  },
+  "privacy": {
+    "title": "Privatlivspolitik",
+    "lastUpdated": "Sidst opdateret: Januar 2026",
+    "cardTitle": "Dit privatliv betyder noget",
+    "cardSubtitle": "Vi er forpligtet til at beskytte dine personlige oplysninger.",
+    "introduction": {
+      "title": "1. Introduktion",
+      "content": "Denne privatlivspolitik forklarer, hvordan Tracify (\"vi\", \"os\" eller \"vores\") indsamler, bruger og beskytter dine personlige oplysninger, når du bruger vores hjemmeside på tracify-geo.com og vores telefonlokaliseringstjenester. Ved at bruge vores tjenester giver du samtykke til de datapraksisser, der er beskrevet i denne politik."
+    },
+    "dataCollection": {
+      "title": "2. Oplysninger vi indsamler",
+      "content": "Vi indsamler følgende typer oplysninger:",
+      "item1": "Kontooplysninger: E-mailadresse, navn og adgangskode, når du registrerer dig",
+      "item2": "Betalingsoplysninger: Kreditkortoplysninger behandles sikkert via Stripe",
+      "item3": "Telefonnumre: Numre du indsender til lokaliseringsanmodninger",
+      "item4": "Placeringsdata: GPS-koordinater delt af samtykkende modtagere",
+      "item5": "Brugsdata: Hvordan du interagerer med vores service, herunder IP-adresse og browsertype"
+    },
+    "dataUse": {
+      "title": "3. Hvordan vi bruger dine oplysninger",
+      "content": "Vi bruger dine oplysninger til følgende formål:",
+      "item1": "At levere og vedligeholde vores lokaliseringstjeneste",
+      "item2": "At behandle dine betalinger og administrere dit abonnement",
+      "item3": "At sende SMS-lokaliseringsanmodninger til de telefonnumre, du angiver",
+      "item4": "At kommunikere med dig om din konto og serviceopdateringer",
+      "item5": "At forbedre vores tjenester og udvikle nye funktioner",
+      "item6": "At overholde juridiske forpligtelser"
+    },
+    "dataSharing": {
+      "title": "4. Datadeling og tredjeparter",
+      "content1": "Vi sælger ikke dine personlige oplysninger. Vi kan dele data med:",
+      "item1": "Stripe: Vores betalingsbehandler, til sikker håndtering af transaktioner",
+      "item2": "SMS-udbydere: Til levering af lokaliseringsanmodningsbeskeder",
+      "item3": "Juridiske myndigheder: Når det kræves ved lov eller for at beskytte vores rettigheder",
+      "content2": "Alle tredjepartsudbydere er kontraktligt forpligtet til at beskytte dine data."
+    },
+    "dataSecurity": {
+      "title": "5. Datasikkerhed",
+      "content": "Vi implementerer branchestandardsikkerhedsforanstaltninger for at beskytte dine oplysninger:",
+      "item1": "SSL/TLS-kryptering for al dataoverførsel",
+      "item2": "Sikker adgangskode-hashing",
+      "item3": "Regelmæssige sikkerhedsrevisioner",
+      "item4": "Begrænset medarbejderadgang til personlige data",
+      "note": "Bemærk: Selvom vi tager omfattende forholdsregler, er ingen internetoverførsel 100% sikker. Vi kan ikke garantere absolut sikkerhed."
+    },
+    "userRights": {
+      "title": "6. Dine rettigheder",
+      "content": "Du har følgende rettigheder vedrørende dine personlige data:",
+      "item1": "Adgang: Anmod om en kopi af dine personlige data",
+      "item2": "Rettelse: Anmod om rettelse af unøjagtige data",
+      "item3": "Sletning: Anmod om sletning af din konto og tilknyttede data",
+      "item4": "Portabilitet: Anmod om dine data i et portabelt format",
+      "item5": "Framelding: Afmeld markedsføringskommunikation",
+      "contact": "For at udøve disse rettigheder, kontakt os på support@tracify-geo.com."
+    },
+    "cookies": {
+      "title": "7. Cookies og sporing",
+      "content1": "Vi bruger cookies og lignende teknologier til at:",
+      "item1": "Holde dig logget ind på din konto",
+      "item2": "Huske dine præferencer og indstillinger",
+      "item3": "Analysere hjemmesidetrafik og brugsmønstre",
+      "item4": "Forbedre vores serviceydelse",
+      "content2": "Du kan kontrollere cookies gennem dine browserindstillinger. Deaktivering af cookies kan påvirke nogle funktioner i vores service."
+    },
+    "dataRetention": {
+      "title": "8. Dataopbevaring",
+      "content": "Vi opbevarer dine personlige data, så længe din konto er aktiv, eller som nødvendigt for at levere tjenester. Efter kontosletning kan vi opbevare visse data til juridisk overholdelse, tvistløsning eller legitime forretningsformål i op til 90 dage."
+    },
+    "children": {
+      "title": "9. Børns privatliv",
+      "content": "Tracify er ikke beregnet til brug af personer under 18 år. Vi indsamler ikke bevidst personlige oplysninger fra børn. Hvis vi opdager, at et barn har givet os personlige oplysninger, vil vi straks slette dem."
+    },
+    "changes": {
+      "title": "10. Ændringer af denne politik",
+      "content": "Vi kan opdatere denne privatlivspolitik fra tid til anden. Vi vil underrette dig om væsentlige ændringer ved at offentliggøre den nye politik på vores hjemmeside og opdatere datoen \"Sidst opdateret\". Din fortsatte brug af vores tjenester efter ændringer udgør accept."
+    },
+    "contact": {
+      "title": "11. Kontakt os",
+      "content": "Hvis du har spørgsmål eller bekymringer vedrørende denne privatlivspolitik eller vores datapraksisser, bedes du kontakte os:"
+    }
   }
 }

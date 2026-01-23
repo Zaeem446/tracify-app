@@ -265,5 +265,155 @@
       "message": "We've confirmed your cancellation, and you won't receive any further charges from us. A confirmation email has also been sent to your inbox.",
       "close": "Close"
     }
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "lastUpdated": "Last Updated: January 2026",
+    "cardTitle": "Terms of Service",
+    "cardSubtitle": "Please read these terms carefully before using our service.",
+    "introduction": {
+      "title": "1. Introduction",
+      "content": "Welcome to Tracify. By accessing or using our website at tracify-geo.com and our phone location tracking services, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you may not use our services."
+    },
+    "serviceDescription": {
+      "title": "2. Service Description",
+      "content1": "Tracify provides a consent-based phone location tracking service. Our service works by sending an SMS message to the phone number you provide, requesting the recipient's permission to share their location.",
+      "important": "Important: Location tracking only occurs when the SMS recipient explicitly consents to share their location. We do not track phones without the owner's active consent."
+    },
+    "billing": {
+      "title": "3. Account Registration and Billing",
+      "content1": "To use Tracify, you must create an account and subscribe to our service. Our pricing structure is as follows:",
+      "trial": "24-hour trial period: $1.25 USD",
+      "monthly": "Monthly subscription: $30.00 USD (automatically charged after the trial period ends)",
+      "content2": "By subscribing, you authorize us to charge your payment method on a recurring monthly basis until you cancel your subscription. All payments are processed securely through Stripe."
+    },
+    "userResponsibilities": {
+      "title": "4. User Responsibilities",
+      "content": "When using Tracify, you agree to:",
+      "item1": "Use the service only for lawful purposes",
+      "item2": "Not attempt to track individuals without legitimate reason",
+      "item3": "Not use the service for stalking, harassment, or any illegal activity",
+      "item4": "Provide accurate information when creating your account",
+      "item5": "Keep your account credentials secure and confidential"
+    },
+    "prohibitedUses": {
+      "title": "5. Prohibited Uses",
+      "content": "The following uses of Tracify are strictly prohibited:",
+      "item1": "Stalking or harassing any individual",
+      "item2": "Tracking minors without parental consent",
+      "item3": "Any use that violates local, state, national, or international laws",
+      "item4": "Attempting to bypass consent requirements",
+      "item5": "Using the service for commercial surveillance"
+    },
+    "liability": {
+      "title": "6. Limitation of Liability",
+      "content1": "Tracify provides its services \"as is\" without warranties of any kind. We are not liable for:",
+      "item1": "Accuracy of location data provided",
+      "item2": "Service interruptions or technical issues",
+      "item3": "Any misuse of the service by users",
+      "item4": "Actions taken based on location information obtained",
+      "content2": "Our total liability shall not exceed the amount you paid for the service in the month preceding any claim."
+    },
+    "cancellation": {
+      "title": "7. Cancellation and Refund Policy",
+      "content1": "You may cancel your subscription at any time through our cancellation page or by contacting our support team. Upon cancellation:",
+      "item1": "Your subscription will end immediately",
+      "item2": "No further charges will be made to your account",
+      "item3": "Refunds are generally not provided for partial months",
+      "content2": "For billing disputes or refund requests, please contact support@tracify-geo.com."
+    },
+    "modifications": {
+      "title": "8. Modifications to Terms",
+      "content": "We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting to our website. Your continued use of Tracify after changes constitutes acceptance of the modified terms."
+    },
+    "governingLaw": {
+      "title": "9. Governing Law",
+      "content": "These Terms and Conditions shall be governed by and construed in accordance with applicable laws. Any disputes arising from these terms shall be resolved through appropriate legal channels."
+    },
+    "contact": {
+      "title": "10. Contact Information",
+      "content": "If you have any questions about these Terms and Conditions, please contact us at:"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated: January 2026",
+    "cardTitle": "Your Privacy Matters",
+    "cardSubtitle": "We are committed to protecting your personal information.",
+    "introduction": {
+      "title": "1. Introduction",
+      "content": "This Privacy Policy explains how Tracify (\"we\", \"us\", or \"our\") collects, uses, and protects your personal information when you use our website at tracify-geo.com and our phone location tracking services. By using our services, you consent to the data practices described in this policy."
+    },
+    "dataCollection": {
+      "title": "2. Information We Collect",
+      "content": "We collect the following types of information:",
+      "item1": "Account Information: Email address, name, and password when you register",
+      "item2": "Payment Information: Credit card details processed securely through Stripe",
+      "item3": "Phone Numbers: Numbers you submit for location tracking requests",
+      "item4": "Location Data: GPS coordinates shared by consenting recipients",
+      "item5": "Usage Data: How you interact with our service, including IP address and browser type"
+    },
+    "dataUse": {
+      "title": "3. How We Use Your Information",
+      "content": "We use your information for the following purposes:",
+      "item1": "To provide and maintain our location tracking service",
+      "item2": "To process your payments and manage your subscription",
+      "item3": "To send SMS location requests to the phone numbers you provide",
+      "item4": "To communicate with you about your account and service updates",
+      "item5": "To improve our services and develop new features",
+      "item6": "To comply with legal obligations"
+    },
+    "dataSharing": {
+      "title": "4. Data Sharing and Third Parties",
+      "content1": "We do not sell your personal information. We may share data with:",
+      "item1": "Stripe: Our payment processor, for handling transactions securely",
+      "item2": "SMS Providers: To deliver location request messages",
+      "item3": "Legal Authorities: When required by law or to protect our rights",
+      "content2": "All third-party providers are contractually obligated to protect your data."
+    },
+    "dataSecurity": {
+      "title": "5. Data Security",
+      "content": "We implement industry-standard security measures to protect your information:",
+      "item1": "SSL/TLS encryption for all data transmission",
+      "item2": "Secure password hashing",
+      "item3": "Regular security audits",
+      "item4": "Limited employee access to personal data",
+      "note": "Note: While we take extensive precautions, no internet transmission is 100% secure. We cannot guarantee absolute security."
+    },
+    "userRights": {
+      "title": "6. Your Rights",
+      "content": "You have the following rights regarding your personal data:",
+      "item1": "Access: Request a copy of your personal data",
+      "item2": "Correction: Request correction of inaccurate data",
+      "item3": "Deletion: Request deletion of your account and associated data",
+      "item4": "Portability: Request your data in a portable format",
+      "item5": "Opt-out: Unsubscribe from marketing communications",
+      "contact": "To exercise these rights, contact us at support@tracify-geo.com."
+    },
+    "cookies": {
+      "title": "7. Cookies and Tracking",
+      "content1": "We use cookies and similar technologies to:",
+      "item1": "Keep you logged into your account",
+      "item2": "Remember your preferences and settings",
+      "item3": "Analyze website traffic and usage patterns",
+      "item4": "Improve our service performance",
+      "content2": "You can control cookies through your browser settings. Disabling cookies may affect some features of our service."
+    },
+    "dataRetention": {
+      "title": "8. Data Retention",
+      "content": "We retain your personal data for as long as your account is active or as needed to provide services. After account deletion, we may retain certain data for legal compliance, dispute resolution, or legitimate business purposes for up to 90 days."
+    },
+    "children": {
+      "title": "9. Children's Privacy",
+      "content": "Tracify is not intended for use by individuals under 18 years of age. We do not knowingly collect personal information from children. If we discover that a child has provided us with personal information, we will delete it promptly."
+    },
+    "changes": {
+      "title": "10. Changes to This Policy",
+      "content": "We may update this Privacy Policy from time to time. We will notify you of significant changes by posting the new policy on our website and updating the \"Last Updated\" date. Your continued use of our services after changes constitutes acceptance."
+    },
+    "contact": {
+      "title": "11. Contact Us",
+      "content": "If you have questions or concerns about this Privacy Policy or our data practices, please contact us:"
+    }
   }
 }

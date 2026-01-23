@@ -262,5 +262,155 @@
       "message": "Olemme vahvistaneet peruutuksesi, etkä saa meiltä enää veloituksia. Vahvistussähköposti on myös lähetetty postilaatikkoosi.",
       "close": "Sulje"
     }
+  },
+  "terms": {
+    "title": "Käyttöehdot",
+    "lastUpdated": "Viimeksi päivitetty: Tammikuu 2026",
+    "cardTitle": "Palveluehdot",
+    "cardSubtitle": "Lue nämä ehdot huolellisesti ennen palvelumme käyttöä.",
+    "introduction": {
+      "title": "1. Johdanto",
+      "content": "Tervetuloa Tracifyyn. Käyttämällä verkkosivustoamme osoitteessa tracify-geo.com ja puhelimen sijaintiseurantapalveluitamme hyväksyt nämä käyttöehdot. Jos et hyväksy mitään osaa näistä ehdoista, et voi käyttää palveluitamme."
+    },
+    "serviceDescription": {
+      "title": "2. Palvelun kuvaus",
+      "content1": "Tracify tarjoaa suostumukseen perustuvan puhelimen sijaintiseurantapalvelun. Palvelumme toimii lähettämällä tekstiviestin antamaasi puhelinnumeroon, pyytäen vastaanottajan lupaa sijaintinsa jakamiseen.",
+      "important": "Tärkeää: Sijainnin seuranta tapahtuu vain, kun tekstiviestin vastaanottaja nimenomaisesti suostuu jakamaan sijaintinsa. Emme seuraa puhelimia ilman omistajan aktiivista suostumusta."
+    },
+    "billing": {
+      "title": "3. Tilin rekisteröinti ja laskutus",
+      "content1": "Käyttääksesi Tracifya sinun on luotava tili ja tilattava palvelumme. Hinnoittelurakenne on seuraava:",
+      "trial": "24 tunnin kokeilujakso: 1,25 USD",
+      "monthly": "Kuukausitilaus: 30,00 USD (veloitetaan automaattisesti kokeilujakson päätyttyä)",
+      "content2": "Tilaamalla valtuutat meidät veloittamaan maksutapaasi toistuvasti kuukausittain, kunnes peruutat tilauksesi. Kaikki maksut käsitellään turvallisesti Stripen kautta."
+    },
+    "userResponsibilities": {
+      "title": "4. Käyttäjän vastuut",
+      "content": "Käyttäessäsi Tracifya sitoudut:",
+      "item1": "Käyttämään palvelua vain laillisiin tarkoituksiin",
+      "item2": "Olemaan yrittämättä seurata henkilöitä ilman perusteltua syytä",
+      "item3": "Olemaan käyttämättä palvelua vainoamiseen, häirintään tai mihinkään laittomaan toimintaan",
+      "item4": "Antamaan tarkat tiedot tiliä luodessasi",
+      "item5": "Pitämään tilisi tunnistetiedot turvassa ja luottamuksellisina"
+    },
+    "prohibitedUses": {
+      "title": "5. Kielletyt käyttötavat",
+      "content": "Seuraavat Tracifyn käyttötavat ovat ehdottomasti kiellettyjä:",
+      "item1": "Kenenkään vainoaminen tai häiritseminen",
+      "item2": "Alaikäisten seuraaminen ilman vanhemman suostumusta",
+      "item3": "Mikä tahansa käyttö, joka rikkoo paikallisia, kansallisia tai kansainvälisiä lakeja",
+      "item4": "Suostumusvaatimusten kiertämisen yrittäminen",
+      "item5": "Palvelun käyttäminen kaupalliseen valvontaan"
+    },
+    "liability": {
+      "title": "6. Vastuunrajoitus",
+      "content1": "Tracify tarjoaa palvelunsa \"sellaisena kuin se on\" ilman minkäänlaisia takuita. Emme ole vastuussa:",
+      "item1": "Sijaintitietojen tarkkuudesta",
+      "item2": "Palvelukatkoksista tai teknisistä ongelmista",
+      "item3": "Käyttäjien palvelun väärinkäytöstä",
+      "item4": "Sijaintitietojen perusteella tehdyistä toimista",
+      "content2": "Kokonaisvastuumme ei ylitä summaa, jonka olet maksanut palvelusta vaatimusta edeltävänä kuukautena."
+    },
+    "cancellation": {
+      "title": "7. Peruutus- ja palautuskäytäntö",
+      "content1": "Voit peruuttaa tilauksesi milloin tahansa peruutussivumme kautta tai ottamalla yhteyttä tukitiimiimme. Peruutuksen yhteydessä:",
+      "item1": "Tilauksesi päättyy välittömästi",
+      "item2": "Tililtäsi ei veloiteta enää",
+      "item3": "Hyvityksiä ei yleensä anneta kesken jääneistä kuukausista",
+      "content2": "Laskutuskiistoissa tai hyvityspyynnöissä ota yhteyttä osoitteeseen support@tracify-geo.com."
+    },
+    "modifications": {
+      "title": "8. Ehtojen muutokset",
+      "content": "Pidätämme oikeuden muuttaa näitä käyttöehtoja milloin tahansa. Muutokset tulevat voimaan välittömästi, kun ne julkaistaan verkkosivustollamme. Tracifyn jatkuva käyttö muutosten jälkeen merkitsee muutettujen ehtojen hyväksymistä."
+    },
+    "governingLaw": {
+      "title": "9. Sovellettava laki",
+      "content": "Näitä käyttöehtoja sovelletaan ja tulkitaan sovellettavien lakien mukaisesti. Näistä ehdoista johtuvat riidat ratkaistaan asianmukaisin oikeudellisin keinoin."
+    },
+    "contact": {
+      "title": "10. Yhteystiedot",
+      "content": "Jos sinulla on kysyttävää näistä käyttöehdoista, ota meihin yhteyttä:"
+    }
+  },
+  "privacy": {
+    "title": "Tietosuojakäytäntö",
+    "lastUpdated": "Viimeksi päivitetty: Tammikuu 2026",
+    "cardTitle": "Yksityisyytesi on tärkeää",
+    "cardSubtitle": "Olemme sitoutuneet suojaamaan henkilötietojasi.",
+    "introduction": {
+      "title": "1. Johdanto",
+      "content": "Tämä tietosuojakäytäntö selittää, miten Tracify (\"me\" tai \"meidän\") kerää, käyttää ja suojaa henkilötietojasi, kun käytät verkkosivustoamme osoitteessa tracify-geo.com ja puhelimen sijaintiseurantapalveluitamme. Käyttämällä palveluitamme hyväksyt tässä käytännössä kuvatut tietokäytännöt."
+    },
+    "dataCollection": {
+      "title": "2. Keräämämme tiedot",
+      "content": "Keräämme seuraavan tyyppisiä tietoja:",
+      "item1": "Tilitiedot: Sähköpostiosoite, nimi ja salasana rekisteröityessäsi",
+      "item2": "Maksutiedot: Luottokorttitiedot käsitellään turvallisesti Stripen kautta",
+      "item3": "Puhelinnumerot: Numerot, jotka lähetät sijaintiseurantapyyntöjä varten",
+      "item4": "Sijaintitiedot: GPS-koordinaatit, jotka suostuvat vastaanottajat jakavat",
+      "item5": "Käyttötiedot: Miten käytät palveluamme, mukaan lukien IP-osoite ja selaimen tyyppi"
+    },
+    "dataUse": {
+      "title": "3. Miten käytämme tietojasi",
+      "content": "Käytämme tietojasi seuraaviin tarkoituksiin:",
+      "item1": "Sijaintiseurantapalvelumme tarjoamiseen ja ylläpitämiseen",
+      "item2": "Maksujesi käsittelyyn ja tilauksesi hallintaan",
+      "item3": "Tekstiviestisijaintipyyntöjen lähettämiseen antamiisi puhelinnumeroihin",
+      "item4": "Yhteydenpitoon tilistäsi ja palvelupäivityksistä",
+      "item5": "Palveluidemme parantamiseen ja uusien ominaisuuksien kehittämiseen",
+      "item6": "Lakisääteisten velvoitteiden noudattamiseen"
+    },
+    "dataSharing": {
+      "title": "4. Tietojen jakaminen ja kolmannet osapuolet",
+      "content1": "Emme myy henkilötietojasi. Voimme jakaa tietoja seuraavien kanssa:",
+      "item1": "Stripe: Maksunkäsittelijämme, turvallisten maksutapahtumien hoitamiseen",
+      "item2": "Tekstiviestipalveluntarjoajat: Sijaintipyyntöviestien toimittamiseen",
+      "item3": "Viranomaiset: Kun laki sitä vaatii tai oikeuksiemme suojaamiseksi",
+      "content2": "Kaikki kolmannen osapuolen palveluntarjoajat ovat sopimuksellisesti velvollisia suojaamaan tietojasi."
+    },
+    "dataSecurity": {
+      "title": "5. Tietoturva",
+      "content": "Käytämme alan standardien mukaisia turvatoimia tietojesi suojaamiseksi:",
+      "item1": "SSL/TLS-salaus kaikelle tiedonsiirrolle",
+      "item2": "Turvallinen salasanojen hajautus",
+      "item3": "Säännölliset tietoturvatarkastukset",
+      "item4": "Rajoitettu työntekijöiden pääsy henkilötietoihin",
+      "note": "Huomautus: Vaikka ryhdymme laajoihin varotoimiin, mikään internetin kautta tapahtuva tiedonsiirto ei ole 100% turvallinen. Emme voi taata ehdotonta turvallisuutta."
+    },
+    "userRights": {
+      "title": "6. Oikeutesi",
+      "content": "Sinulla on seuraavat oikeudet henkilötietojesi suhteen:",
+      "item1": "Pääsy: Pyydä kopio henkilötiedoistasi",
+      "item2": "Oikaisu: Pyydä virheellisten tietojen korjaamista",
+      "item3": "Poisto: Pyydä tilisi ja siihen liittyvien tietojen poistamista",
+      "item4": "Siirrettävyys: Pyydä tietojasi siirrettävässä muodossa",
+      "item5": "Kieltäytyminen: Peruuta markkinointiviestien tilaus",
+      "contact": "Käyttääksesi näitä oikeuksia, ota meihin yhteyttä osoitteessa support@tracify-geo.com."
+    },
+    "cookies": {
+      "title": "7. Evästeet ja seuranta",
+      "content1": "Käytämme evästeitä ja vastaavia teknologioita:",
+      "item1": "Pitääksemme sinut kirjautuneena tilillesi",
+      "item2": "Muistaaksemme asetuksesi ja valintasi",
+      "item3": "Analysoidaksemme verkkosivuston liikennettä ja käyttötapoja",
+      "item4": "Parantaaksemme palvelumme suorituskykyä",
+      "content2": "Voit hallita evästeitä selaimen asetuksista. Evästeiden poistaminen käytöstä voi vaikuttaa joihinkin palvelumme ominaisuuksiin."
+    },
+    "dataRetention": {
+      "title": "8. Tietojen säilytys",
+      "content": "Säilytämme henkilötietojasi niin kauan kuin tilisi on aktiivinen tai palvelujen tarjoaminen sitä edellyttää. Tilin poistamisen jälkeen saatamme säilyttää tiettyjä tietoja lakisääteisten velvoitteiden, riitojen ratkaisun tai perusteltujen liiketoiminnallisten tarkoitusten vuoksi enintään 90 päivää."
+    },
+    "children": {
+      "title": "9. Lasten yksityisyys",
+      "content": "Tracify ei ole tarkoitettu alle 18-vuotiaiden käyttöön. Emme tietoisesti kerää henkilötietoja lapsilta. Jos havaitsemme, että lapsi on antanut meille henkilötietoja, poistamme ne viipymättä."
+    },
+    "changes": {
+      "title": "10. Muutokset tähän käytäntöön",
+      "content": "Saatamme päivittää tätä tietosuojakäytäntöä ajoittain. Ilmoitamme merkittävistä muutoksista julkaisemalla uuden käytännön verkkosivustollamme ja päivittämällä \"Viimeksi päivitetty\" -päivämäärän. Palveluidemme jatkuva käyttö muutosten jälkeen merkitsee hyväksymistä."
+    },
+    "contact": {
+      "title": "11. Ota yhteyttä",
+      "content": "Jos sinulla on kysyttävää tai huolenaiheita tästä tietosuojakäytännöstä tai tietokäytännöistämme, ota meihin yhteyttä:"
+    }
   }
 }

@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+const { sendSMS } = require('./sms');
 
 let transporter = null;
 let testAccount = null;
@@ -111,15 +112,22 @@ If you didn't create this account, please ignore this email.
     return info;
 }
 
-async function sendTrackingConsentRequest(recipientPhone, senderEmail, customMessage) {
-    // In a real implementation, this would send an SMS via Twilio or similar
+async function sendTrackingConsentRequest(recipientPhone, senderEmail, customMessage, trackingId) {
+    const appUrl = process.env.APP_URL || 'http://localhost:3000';
+    const consentLink = `${appUrl}/api/tracking/consent/${trackingId}`;
+
+    // Build SMS message with tracking link
+    const smsMessage = `${customMessage || 'Someone wants to know your location.'}\n\nClick here to respond: ${consentLink}`;
+
     console.log('\n========== SMS TRACKING REQUEST ==========');
     console.log('To Phone:', recipientPhone);
     console.log('Requested by:', senderEmail);
-    console.log('Message:', customMessage || 'Someone wants to know your location. Click the link to share.');
+    console.log('Link:', consentLink);
     console.log('==========================================\n');
 
-    return { success: true, messageId: 'sms-' + Date.now() };
+    // Send actual SMS via Twilio
+    const result = await sendSMS(recipientPhone, smsMessage);
+    return result;
 }
 
 async function sendContactForm(formData) {

@@ -370,6 +370,17 @@ const trackingQueries = {
              WHERE id = $3`,
             [lat, lng, id]
         );
+    },
+
+    getLastRequestTime: async (customerId) => {
+        const result = await pool.query(
+            `SELECT created_at FROM tracking_requests
+             WHERE customer_id = $1
+             ORDER BY created_at DESC
+             LIMIT 1`,
+            [customerId]
+        );
+        return result.rows[0]?.created_at || null;
     }
 };
 

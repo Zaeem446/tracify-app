@@ -262,5 +262,155 @@
       "message": "Ýatyrylyşyňyzy tassykladyk we bizden başga töleg almaýarsyňyz. Tassyklama e-poçtasy hem size iberildi.",
       "close": "Ýapmak"
     }
+  },
+  "terms": {
+    "title": "Şertler we düzgünler",
+    "lastUpdated": "Soňky täzeleniş: Ýanwar 2026",
+    "cardTitle": "Hyzmat şertleri",
+    "cardSubtitle": "Hyzmatymyzy ulanmazdan ozal bu şertleri ünsli okaň.",
+    "introduction": {
+      "title": "1. Giriş",
+      "content": "Tracify-a hoş geldiňiz. tracify-geo.com web sahypamyza we telefon ýerini yzarlama hyzmatlarymyza gireniňizde ýa-da ulananyňyzda, bu Şertler we Düzgünler bilen baglanyşykly bolmaga razylyk berýärsiňiz. Bu şertleriň islendik bölegine garşy bolsaňyz, hyzmatlarymyzy ulanyp bilmersiňiz."
+    },
+    "serviceDescription": {
+      "title": "2. Hyzmat beýany",
+      "content1": "Tracify razyçylyga esaslanýan telefon ýerini yzarlama hyzmatyny hödürleýär. Hyzmatymyz siz berýän telefon belgisine SMS iberýär we alyjydan ýerini paýlaşmaga rugsat soraýar.",
+      "important": "Möhüm: Ýer yzarlamagy diňe SMS alyjysy öz ýerini paýlaşmaga açyk razyçylyk berýände amala aşyrylýar. Biz eýesiniň işjeň razylygy bolmazdan telefonlary yzarlamaýarys."
+    },
+    "billing": {
+      "title": "3. Hasaba alynmak we hasaplaşyk",
+      "content1": "Tracify ulanmak üçin hasap döretmeli we hyzmatymyza abuna bolmaly. Biziň baha gurluşymyz şeýledir:",
+      "trial": "24 sagatlaýyn synag döwri: 1.25 ABŞ dollary",
+      "monthly": "Aýlyk abuna: 30.00 ABŞ dollary (synag döwri gutarandan soň awtomatiki tölenýär)",
+      "content2": "Abuna bolmak bilen, abunany ýatyrýançaňyz aýlyk esasda töleg usulyndan pul almaga bize ygtyýar berýärsiňiz. Ähli tölegler Stripe arkaly howpsuz usulda işlenýär."
+    },
+    "userResponsibilities": {
+      "title": "4. Ulanyjynyň jogapkärçilikleri",
+      "content": "Tracify ulananyňyzda razylyk berýärsiňiz:",
+      "item1": "Hyzmatы diňe kanuny maksatlar üçin ulanmak",
+      "item2": "Kanuny sebäp bolmasa adamlary yzarlamaga synanyşmazlyk",
+      "item3": "Hyzmatы yzarlamak, azar bermek ýa-da islendik bikanun işler üçin ulanmazlyk",
+      "item4": "Hasabyňyzy döredeniňizde dogry maglumat bermek",
+      "item5": "Hasap maglumatlaryňyzy howpsuz we gizlin saklamak"
+    },
+    "prohibitedUses": {
+      "title": "5. Gadagan ulanylýan ýagdaýlar",
+      "content": "Tracify-niň aşakdaky ulanylyşlary berk gadagandyr:",
+      "item1": "Islendik adamy yzarlamak ýa-da azar bermek",
+      "item2": "Ene-ata razylygy bolmazdan kämillik ýaşyna ýetmedikleri yzarlamak",
+      "item3": "Ýerli, döwlet, milli ýa-da halkara kanunlaryny bozýan islendik ulanylyş",
+      "item4": "Razyçylyk talaplaryny aýlanyp geçmäge synanyşmak",
+      "item5": "Hyzmatы söwda gözegçiligi üçin ulanmak"
+    },
+    "liability": {
+      "title": "6. Jogapkärçiligiň çäklendirmesi",
+      "content1": "Tracify hyzmatlaryny hiç hili kepilliksiz \"bolşy ýaly\" hödürleýär. Biz şular üçin jogapkär däl:",
+      "item1": "Berilýän ýer maglumatlarynyň takyklygy",
+      "item2": "Hyzmatyň kesilmegi ýa-da tehniki meseleler",
+      "item3": "Ulanyjylar tarapyndan hyzmaty nädogry ulanmak",
+      "item4": "Alnan ýer maglumatlaryna esaslanan hereketler",
+      "content2": "Biziň umumy jogapkärçiligimiz islendik talap edilmezden ozalky aýda hyzmat üçin tölän puluňyzdan geçmez."
+    },
+    "cancellation": {
+      "title": "7. Ýatyryş we yzyna gaýtarmak syýasaty",
+      "content1": "Abunany islendik wagty ýatyryş sahypamyz arkaly ýa-da goldaw toparymyz bilen habarlaşyp ýatyryp bilersiňiz. Ýatyrylanda:",
+      "item1": "Abunanyňyz derrew gutarýar",
+      "item2": "Hasabyňyzdan başga töleg alynmaýar",
+      "item3": "Bölekleýin aýlar üçin yzyna gaýtarmak adatça berilmeýär",
+      "content2": "Hasaplaşyk jedelleri ýa-da yzyna gaýtarmak haýyşlary üçin support@tracify-geo.com bilen habarlaşyň."
+    },
+    "modifications": {
+      "title": "8. Şertleriň üýtgedilmegi",
+      "content": "Bu Şertleri we Düzgünleri islendik wagty üýtgetmek hukugymyzy saklaýarys. Üýtgeşmeler web sahypamyzda ýerleşdirilenden dessine güýje girer. Üýtgeşmelerden soň Tracify-ni ulanmagyňyzy dowam etdirmek üýtgedilen şertleri kabul etmegiňizi aňladýar."
+    },
+    "governingLaw": {
+      "title": "9. Dolandyryjy kanun",
+      "content": "Bu Şertler we Düzgünler degişli kanunlara laýyklykda dolandyrylýar we düşündirilýär. Bu şertlerden gelip çykýan islendik jedeller degişli hukuk kanallary arkaly çözülýär."
+    },
+    "contact": {
+      "title": "10. Habarlaşma maglumatlary",
+      "content": "Bu Şertler we Düzgünler barada soragyňyz bar bolsa, biziň bilen habarlaşyň:"
+    }
+  },
+  "privacy": {
+    "title": "Gizlinlik syýasaty",
+    "lastUpdated": "Soňky täzeleniş: Ýanwar 2026",
+    "cardTitle": "Siziň gizlinligiňiz möhümdir",
+    "cardSubtitle": "Şahsy maglumatlaryňyzy goramaga borçlanýarys.",
+    "introduction": {
+      "title": "1. Giriş",
+      "content": "Bu Gizlinlik Syýasaty Tracify-niň (\"biz\", \"biziň\") tracify-geo.com web sahypamyzy we telefon ýerini yzarlama hyzmatlarymyzy ulananyňyzda şahsy maglumatlaryňyzy nädip ýygnaýandygyny, ulanýandygyny we goraýandygyny düşündirýär. Hyzmatlarymyzy ulanmak bilen, bu syýasatda beýan edilen maglumat amallaryna razylyk berýärsiňiz."
+    },
+    "dataCollection": {
+      "title": "2. Ýygnaýan maglumatlarymyz",
+      "content": "Aşakdaky görnüşli maglumatlary ýygnaýarys:",
+      "item1": "Hasap maglumatlary: Hasaba alynanyňyzda e-poçta salgysy, at we parol",
+      "item2": "Töleg maglumatlary: Stripe arkaly howpsuz işlenýän kredit karty jikme-jiklikleri",
+      "item3": "Telefon belgileri: Ýer yzarlama soraglary üçin iberýän belgileriňiz",
+      "item4": "Ýer maglumatlary: Razyçylyk berýän alyjylar tarapyndan paýlaşylýan GPS koordinatalary",
+      "item5": "Ulanylyş maglumatlary: Hyzmatymyz bilen nähili aragatnaşyk saklaýandygyňyz, şol sanda IP salgysy we brauzer görnüşi"
+    },
+    "dataUse": {
+      "title": "3. Maglumatlaryňyzy nähili ulanýarys",
+      "content": "Maglumatlaryňyzy aşakdaky maksatlar üçin ulanýarys:",
+      "item1": "Ýer yzarlama hyzmatymyzy bermek we saklamak",
+      "item2": "Tölegleriňizi işlemek we abunany dolandyrmak",
+      "item3": "Siz berýän telefon belgilerine SMS ýer soraglaryny ibermek",
+      "item4": "Hasabyňyz we hyzmat täzelenmeleri barada siziň bilen habarlaşmak",
+      "item5": "Hyzmatlarymyzy gowulandyrmak we täze aýratynlyklary ösdürmek",
+      "item6": "Kanuny borçnamalary ýerine ýetirmek"
+    },
+    "dataSharing": {
+      "title": "4. Maglumatlary paýlaşmak we üçünji taraplar",
+      "content1": "Şahsy maglumatlaryňyzy satmaýarys. Maglumatlary aşakdakylar bilen paýlaşyp bileris:",
+      "item1": "Stripe: Töleg işleyijimiz, amallary howpsuz dolandyrmak üçin",
+      "item2": "SMS üpjünçiler: Ýer sorag habarlaryny eltip bermek üçin",
+      "item3": "Hukuk häkimiýetleri: Kanun tarapyndan talap edilende ýa-da hukuklarymyzy goramak üçin",
+      "content2": "Ähli üçünji tarap üpjünçiler maglumatlaryňyzy goramaga şertnama arkaly borçlanandyrlar."
+    },
+    "dataSecurity": {
+      "title": "5. Maglumatlaryň howpsuzlygy",
+      "content": "Maglumatlaryňyzy goramak üçin pudak standart howpsuzlyk çärelerini amala aşyrýarys:",
+      "item1": "Ähli maglumat geçirişi üçin SSL/TLS şifrlemek",
+      "item2": "Howpsuz parol haşlama",
+      "item3": "Yzygiderli howpsuzlyk barlaglary",
+      "item4": "Şahsy maglumatlara işgärleriň çäklendirilen girmegi",
+      "note": "Bellik: Giň çäreleri görsek-de, hiç bir internet geçirişi 100% howpsuz däl. Doly howpsuzlygy kepillendirip bilmeýäris."
+    },
+    "userRights": {
+      "title": "6. Siziň hukuklaryňyz",
+      "content": "Şahsy maglumatlaryňyz barada aşakdaky hukuklaryňyz bar:",
+      "item1": "Giriş: Şahsy maglumatlaryňyzyň nusgasyny soramak",
+      "item2": "Düzediş: Nädogry maglumatlary düzeltmek",
+      "item3": "Pozmak: Hasabyňyzy we baglanyşykly maglumatlary pozmak",
+      "item4": "Geçiriş: Maglumatlaryňyzy göçme formatda soramak",
+      "item5": "Ýüz öwürmek: Marketing habarnamalaryndan ýüz öwürmek",
+      "contact": "Bu hukuklary ulanmak üçin support@tracify-geo.com bilen habarlaşyň."
+    },
+    "cookies": {
+      "title": "7. Kukiler we yzarlama",
+      "content1": "Kukileri we şuňa meňzeş tehnologiýalary aşakdakylar üçin ulanýarys:",
+      "item1": "Hasabyňyza giren ýagdaýyňyzda saklamak",
+      "item2": "Ileri tutmalaryňyzy we sazlamalaryňyzy ýatda saklamak",
+      "item3": "Web sahypa traffigini we ulanylyş usullaryny seljermek",
+      "item4": "Hyzmat öndürijiligini gowulandyrmak",
+      "content2": "Brauzer sazlamalaryňyz arkaly kukileri dolandyryp bilersiňiz. Kukileri öçürmek hyzmatyň käbir aýratynlyklaryna täsir edip biler."
+    },
+    "dataRetention": {
+      "title": "8. Maglumatlaryň saklanmagy",
+      "content": "Hasabyňyz işjeň bolýança ýa-da hyzmat bermek üçin zerur bolýança şahsy maglumatlaryňyzy saklaýarys. Hasap pozulandan soň, kanuny laýyklyk, jedeliň çözülmegi ýa-da kanuny iş maksatlary üçin käbir maglumatlary 90 güne çenli saklap bileris."
+    },
+    "children": {
+      "title": "9. Çagalaryň gizlinligi",
+      "content": "Tracify 18 ýaşdan kiçi adamlar tarapyndan ulanylmaga niýetlenilen däl. Çagalardan şahsy maglumat bilgeşleýin ýygnamaýarys. Bir çaganyň bize şahsy maglumat berendigini bilsek, derrew pozarys."
+    },
+    "changes": {
+      "title": "10. Bu syýasatdaky üýtgeşmeler",
+      "content": "Bu Gizlinlik Syýasatyny wagtal-wagtal täzeläp bileris. Täze syýasaty web sahypamyzda ýerleşdirmek we \"Soňky täzeleniş\" senesini täzelemek arkaly möhüm üýtgeşmeler barada size habar bereris. Üýtgeşmelerden soň hyzmatlarymyzy ulanmagyňyzy dowam etdirmek kabul etmegiňizi aňladýar."
+    },
+    "contact": {
+      "title": "11. Biziň bilen habarlaşyň",
+      "content": "Bu Gizlinlik Syýasaty ýa-da maglumat amallarymyz barada soragyňyz ýa-da aladaňyz bar bolsa, biziň bilen habarlaşyň:"
+    }
   }
 }
