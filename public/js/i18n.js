@@ -316,8 +316,40 @@
      * Detect the best language for the user
      */
     function detectLanguage() {
-        // Priority: URL > Browser > Timezone > English
-        return getLangFromURL() || getLangFromBrowser() || getLangFromTimezone() || 'en';
+        // Priority: URL > Saved preference > Browser > Timezone > English
+        const urlLang = getLangFromURL();
+        if (urlLang) return urlLang;
+
+        const savedLang = localStorage.getItem('tracify_lang');
+        if (savedLang && SUPPORTED_LANGUAGES[savedLang]) return savedLang;
+
+        return getLangFromBrowser() || getLangFromTimezone() || 'en';
+    }
+
+    /**
+     * Detect language using IP geolocation (async)
+     */
+    async function detectLanguageAsync() {
+        // Priority: URL > Saved preference > IP Geo > Browser > Timezone > English
+        const urlLang = getLangFromURL();
+        if (urlLang) return urlLang;
+
+        const savedLang = localStorage.getItem('tracify_lang');
+        if (savedLang && SUPPORTED_LANGUAGES[savedLang]) return savedLang;
+
+        // Try IP geolocation if available
+        if (window.TracifyGeo) {
+            try {
+                const geoLang = await window.TracifyGeo.getDetectedLanguage();
+                if (geoLang && SUPPORTED_LANGUAGES[geoLang]) {
+                    return geoLang;
+                }
+            } catch (e) {
+                console.warn('Geo language detection failed:', e);
+            }
+        }
+
+        return getLangFromBrowser() || getLangFromTimezone() || 'en';
     }
 
     /**
@@ -826,17 +858,39 @@
      * Initialize i18n system
      */
     async function init() {
-        // Detect language
-        const detectedLang = detectLanguage();
-        currentLang = detectedLang;
+        // First check URL and saved preference (sync)
+        let detectedLang = detectLanguage();
 
         // Check if we need to redirect to language URL
         const urlLang = getLangFromURL();
         if (!urlLang && window.location.pathname === '/') {
+            // Try async geo detection for better accuracy on first visit
+            if (window.TracifyGeo && !localStorage.getItem('tracify_lang')) {
+                try {
+                    const geoLang = await detectLanguageAsync();
+                    if (geoLang) detectedLang = geoLang;
+                } catch (e) {
+                    console.warn('Async language detection failed:', e);
+                }
+            }
             // Redirect to detected language URL
             window.location.replace(`/${detectedLang}`);
             return;
         }
+
+        // For pages with URL lang, use async detection to potentially update
+        if (!localStorage.getItem('tracify_lang') && window.TracifyGeo) {
+            try {
+                const geoLang = await detectLanguageAsync();
+                if (geoLang && SUPPORTED_LANGUAGES[geoLang] && geoLang !== detectedLang) {
+                    detectedLang = geoLang;
+                }
+            } catch (e) {
+                // Ignore errors, use sync detection
+            }
+        }
+
+        currentLang = detectedLang;
 
         // Load translations
         await loadTranslations(currentLang);

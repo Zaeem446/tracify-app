@@ -1171,34 +1171,44 @@
         // Auto-refresh history every 30 seconds
         setInterval(loadHistory, 30000);
 
-        // Auto-detect country code
-        function initCountryCode() {
+        // Auto-detect country code using geo-detect
+        async function initCountryCode() {
             const countryCodeSelect = document.getElementById('countryCode');
-            if (window.TracifyI18n && window.TracifyI18n.getDetectedCountryCode) {
-                const detectedCode = window.TracifyI18n.getDetectedCountryCode();
-                if (detectedCode) {
-                    // Check if the option exists
-                    const option = countryCodeSelect.querySelector(`option[value="${detectedCode}"]`);
-                    if (option) {
+            if (window.TracifyGeo && window.TracifyGeo.getDetectedPhoneCode) {
+                try {
+                    const detectedCode = await window.TracifyGeo.getDetectedPhoneCode();
+                    if (detectedCode) {
+                        // Check if the option exists
+                        let option = countryCodeSelect.querySelector(`option[value="${detectedCode}"]`);
+                        if (!option) {
+                            // Add the detected country code if not in dropdown
+                            option = document.createElement('option');
+                            option.value = detectedCode;
+                            option.textContent = `🌍 ${detectedCode}`;
+                            countryCodeSelect.insertBefore(option, countryCodeSelect.firstChild);
+                        }
                         countryCodeSelect.value = detectedCode;
                     }
+                } catch (e) {
+                    console.warn('Country code detection failed:', e);
                 }
             }
         }
 
         // Save country code preference when changed
         document.getElementById('countryCode').addEventListener('change', function() {
-            if (window.TracifyI18n && window.TracifyI18n.saveCountryCode) {
-                window.TracifyI18n.saveCountryCode(this.value);
+            if (window.TracifyGeo && window.TracifyGeo.savePhoneCode) {
+                window.TracifyGeo.savePhoneCode(this.value);
             }
         });
 
-        // Initialize country code after i18n loads
+        // Initialize country code after geo-detect loads
         setTimeout(initCountryCode, 200);
 
         // Initialize
         checkAuth();
     </script>
+    <script src="/js/geo-detect.js"></script>
     <script src="/js/i18n.js"></script>
 </body>
 </html>
