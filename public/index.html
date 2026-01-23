@@ -600,7 +600,33 @@
         }
 
         countryCodeInput.addEventListener('input', updateFlag);
-        countryCodeInput.addEventListener('change', updateFlag);
+        countryCodeInput.addEventListener('change', function() {
+            updateFlag();
+            // Save user preference when they change country code
+            if (window.TracifyI18n && window.TracifyI18n.saveCountryCode) {
+                window.TracifyI18n.saveCountryCode(countryCodeInput.value.trim());
+            }
+        });
+
+        // Auto-detect country code on page load
+        function initCountryCode() {
+            if (window.TracifyI18n && window.TracifyI18n.getDetectedCountryCode) {
+                const detectedCode = window.TracifyI18n.getDetectedCountryCode();
+                if (detectedCode && countryFlags[detectedCode]) {
+                    countryCodeInput.value = detectedCode;
+                    updateFlag();
+                }
+            }
+        }
+
+        // Initialize after i18n is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(initCountryCode, 100); // Small delay to ensure i18n is loaded
+            });
+        } else {
+            setTimeout(initCountryCode, 100);
+        }
     </script>
     <style>
         .country-code-wrapper {

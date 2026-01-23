@@ -125,6 +125,111 @@
         'Pacific/Auckland': 'en'
     };
 
+    // Timezone to country calling code mapping
+    const TIMEZONE_COUNTRY_CODE = {
+        // North America
+        'America/New_York': '+1',
+        'America/Chicago': '+1',
+        'America/Los_Angeles': '+1',
+        'America/Denver': '+1',
+        'America/Toronto': '+1',
+        'America/Vancouver': '+1',
+        // UK & Ireland
+        'Europe/London': '+44',
+        'Europe/Dublin': '+353',
+        // Western Europe
+        'Europe/Paris': '+33',
+        'Europe/Berlin': '+49',
+        'Europe/Vienna': '+43',
+        'Europe/Zurich': '+41',
+        'Europe/Amsterdam': '+31',
+        'Europe/Brussels': '+32',
+        'Europe/Luxembourg': '+352',
+        // Southern Europe
+        'Europe/Madrid': '+34',
+        'Europe/Rome': '+39',
+        'Europe/Lisbon': '+351',
+        'Europe/Athens': '+30',
+        // Northern Europe
+        'Europe/Stockholm': '+46',
+        'Europe/Oslo': '+47',
+        'Europe/Copenhagen': '+45',
+        'Europe/Helsinki': '+358',
+        // Eastern Europe
+        'Europe/Warsaw': '+48',
+        'Europe/Prague': '+420',
+        'Europe/Budapest': '+36',
+        'Europe/Bucharest': '+40',
+        'Europe/Sofia': '+359',
+        'Europe/Kiev': '+380',
+        'Europe/Moscow': '+7',
+        'Europe/Tallinn': '+372',
+        'Europe/Riga': '+371',
+        'Europe/Vilnius': '+370',
+        'Europe/Bratislava': '+421',
+        'Europe/Ljubljana': '+386',
+        'Europe/Zagreb': '+385',
+        'Europe/Belgrade': '+381',
+        'Europe/Sarajevo': '+387',
+        // Turkey
+        'Europe/Istanbul': '+90',
+        // Middle East
+        'Asia/Dubai': '+971',
+        'Asia/Riyadh': '+966',
+        'Asia/Jerusalem': '+972',
+        'Asia/Kuwait': '+965',
+        'Asia/Qatar': '+974',
+        'Asia/Bahrain': '+973',
+        'Asia/Muscat': '+968',
+        // South Asia
+        'Asia/Karachi': '+92',
+        'Asia/Kolkata': '+91',
+        'Asia/Dhaka': '+880',
+        'Asia/Colombo': '+94',
+        'Asia/Kathmandu': '+977',
+        // Southeast Asia
+        'Asia/Bangkok': '+66',
+        'Asia/Ho_Chi_Minh': '+84',
+        'Asia/Jakarta': '+62',
+        'Asia/Kuala_Lumpur': '+60',
+        'Asia/Singapore': '+65',
+        'Asia/Manila': '+63',
+        'Asia/Yangon': '+95',
+        'Asia/Phnom_Penh': '+855',
+        // East Asia
+        'Asia/Tokyo': '+81',
+        'Asia/Seoul': '+82',
+        'Asia/Shanghai': '+86',
+        'Asia/Chongqing': '+86',
+        'Asia/Hong_Kong': '+852',
+        'Asia/Taipei': '+886',
+        // Central Asia
+        'Asia/Ashgabat': '+993',
+        'Asia/Tashkent': '+998',
+        'Asia/Almaty': '+7',
+        // Oceania
+        'Australia/Sydney': '+61',
+        'Australia/Melbourne': '+61',
+        'Australia/Perth': '+61',
+        'Pacific/Auckland': '+64',
+        // Africa
+        'Africa/Johannesburg': '+27',
+        'Africa/Cairo': '+20',
+        'Africa/Lagos': '+234',
+        'Africa/Nairobi': '+254',
+        'Africa/Casablanca': '+212',
+        'Africa/Algiers': '+213',
+        'Africa/Tunis': '+216',
+        // Latin America
+        'America/Mexico_City': '+52',
+        'America/Sao_Paulo': '+55',
+        'America/Argentina/Buenos_Aires': '+54',
+        'America/Santiago': '+56',
+        'America/Bogota': '+57',
+        'America/Lima': '+51',
+        'America/Caracas': '+58'
+    };
+
     let currentLang = 'en';
     let translations = {};
 
@@ -173,6 +278,38 @@
         } catch (e) {
             return null;
         }
+    }
+
+    /**
+     * Get country calling code from timezone
+     */
+    function getCountryCodeFromTimezone() {
+        try {
+            const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            return TIMEZONE_COUNTRY_CODE[timezone] || '+1'; // Default to US
+        } catch (e) {
+            return '+1';
+        }
+    }
+
+    /**
+     * Get detected country code (checks localStorage first, then timezone)
+     */
+    function getDetectedCountryCode() {
+        // Check if user has saved preference
+        const saved = localStorage.getItem('tracify_country_code');
+        if (saved) {
+            return saved;
+        }
+        // Auto-detect from timezone
+        return getCountryCodeFromTimezone();
+    }
+
+    /**
+     * Save country code preference
+     */
+    function saveCountryCode(code) {
+        localStorage.setItem('tracify_country_code', code);
     }
 
     /**
@@ -724,7 +861,9 @@
         changeLanguage,
         getCurrentLang: () => currentLang,
         getSupportedLanguages: () => SUPPORTED_LANGUAGES,
-        translatePage
+        translatePage,
+        getDetectedCountryCode,
+        saveCountryCode
     };
 
     // Auto-initialize when DOM is ready

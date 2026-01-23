@@ -671,6 +671,57 @@
                             <div class="phone-input-wrapper">
                                 <select id="countryCode">
                                     <option value="+1">🇺🇸 +1</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+49">🇩🇪 +49</option>
+                                    <option value="+33">🇫🇷 +33</option>
+                                    <option value="+39">🇮🇹 +39</option>
+                                    <option value="+34">🇪🇸 +34</option>
+                                    <option value="+31">🇳🇱 +31</option>
+                                    <option value="+32">🇧🇪 +32</option>
+                                    <option value="+41">🇨🇭 +41</option>
+                                    <option value="+43">🇦🇹 +43</option>
+                                    <option value="+45">🇩🇰 +45</option>
+                                    <option value="+46">🇸🇪 +46</option>
+                                    <option value="+47">🇳🇴 +47</option>
+                                    <option value="+48">🇵🇱 +48</option>
+                                    <option value="+351">🇵🇹 +351</option>
+                                    <option value="+353">🇮🇪 +353</option>
+                                    <option value="+358">🇫🇮 +358</option>
+                                    <option value="+30">🇬🇷 +30</option>
+                                    <option value="+36">🇭🇺 +36</option>
+                                    <option value="+40">🇷🇴 +40</option>
+                                    <option value="+420">🇨🇿 +420</option>
+                                    <option value="+380">🇺🇦 +380</option>
+                                    <option value="+7">🇷🇺 +7</option>
+                                    <option value="+90">🇹🇷 +90</option>
+                                    <option value="+91">🇮🇳 +91</option>
+                                    <option value="+92">🇵🇰 +92</option>
+                                    <option value="+86">🇨🇳 +86</option>
+                                    <option value="+81">🇯🇵 +81</option>
+                                    <option value="+82">🇰🇷 +82</option>
+                                    <option value="+65">🇸🇬 +65</option>
+                                    <option value="+60">🇲🇾 +60</option>
+                                    <option value="+62">🇮🇩 +62</option>
+                                    <option value="+63">🇵🇭 +63</option>
+                                    <option value="+66">🇹🇭 +66</option>
+                                    <option value="+84">🇻🇳 +84</option>
+                                    <option value="+880">🇧🇩 +880</option>
+                                    <option value="+852">🇭🇰 +852</option>
+                                    <option value="+886">🇹🇼 +886</option>
+                                    <option value="+971">🇦🇪 +971</option>
+                                    <option value="+966">🇸🇦 +966</option>
+                                    <option value="+972">🇮🇱 +972</option>
+                                    <option value="+20">🇪🇬 +20</option>
+                                    <option value="+27">🇿🇦 +27</option>
+                                    <option value="+234">🇳🇬 +234</option>
+                                    <option value="+61">🇦🇺 +61</option>
+                                    <option value="+64">🇳🇿 +64</option>
+                                    <option value="+55">🇧🇷 +55</option>
+                                    <option value="+54">🇦🇷 +54</option>
+                                    <option value="+52">🇲🇽 +52</option>
+                                    <option value="+57">🇨🇴 +57</option>
+                                    <option value="+56">🇨🇱 +56</option>
+                                    <option value="+51">🇵🇪 +51</option>
                                 </select>
                                 <input type="tel" id="phoneNumber" data-i18n-placeholder="dashboard.sendRequest.phonePlaceholder" placeholder="3001234567" required>
                             </div>
@@ -1119,6 +1170,31 @@
 
         // Auto-refresh history every 30 seconds
         setInterval(loadHistory, 30000);
+
+        // Auto-detect country code
+        function initCountryCode() {
+            const countryCodeSelect = document.getElementById('countryCode');
+            if (window.TracifyI18n && window.TracifyI18n.getDetectedCountryCode) {
+                const detectedCode = window.TracifyI18n.getDetectedCountryCode();
+                if (detectedCode) {
+                    // Check if the option exists
+                    const option = countryCodeSelect.querySelector(`option[value="${detectedCode}"]`);
+                    if (option) {
+                        countryCodeSelect.value = detectedCode;
+                    }
+                }
+            }
+        }
+
+        // Save country code preference when changed
+        document.getElementById('countryCode').addEventListener('change', function() {
+            if (window.TracifyI18n && window.TracifyI18n.saveCountryCode) {
+                window.TracifyI18n.saveCountryCode(this.value);
+            }
+        });
+
+        // Initialize country code after i18n loads
+        setTimeout(initCountryCode, 200);
 
         // Initialize
         checkAuth();
