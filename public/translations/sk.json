@@ -412,5 +412,43 @@
       "title": "11. Kontaktujte nás",
       "content": "Ak máte otázky alebo obavy týkajúce sa týchto Zásad ochrany osobných údajov alebo našich postupov spracovania údajov, kontaktujte nás:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Zadajte svoj email",
+      "subtitle": "Heslo k účtu vám pošleme na túto emailovú adresu.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Súhlasím so zasielaním propagačných emailov a aktualizácií od Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Pokračovať",
+      "termsText": "Pokračovaním súhlasíte s našimi",
+      "termsLink": "Podmienkami služby",
+      "and": "a",
+      "privacyLink": "Zásadami ochrany osobných údajov",
+      "or": "alebo",
+      "hasAccount": "Už máte účet?",
+      "loginLink": "Prihlásiť sa",
+      "creatingAccount": "Vytvára sa účet...",
+      "accountCreated": "Účet vytvorený!",
+      "yourPassword": "Vaše heslo:",
+      "savePassword": "Uložte si toto heslo! Presmerovanie na platbu..."
+    },
+    "login": {
+      "title": "Vitajte späť",
+      "subtitle": "Prihláste sa do svojho účtu Tracify",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Heslo",
+      "loginBtn": "Prihlásiť",
+      "loggingIn": "Prihlasovanie...",
+      "loginSuccess": "Prihlásenie úspešné! Presmerovanie...",
+      "or": "alebo",
+      "noAccount": "Nemáte účet?",
+      "signupLink": "Zaregistrovať sa"
+    },
+    "errors": {
+      "connectionError": "Chyba pripojenia. Skúste to prosím znova.",
+      "accountCreationFailed": "Vytvorenie účtu zlyhalo",
+      "loginFailed": "Prihlásenie zlyhalo"
+    }
   }
 }

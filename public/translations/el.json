@@ -237,48 +237,48 @@
     "optional": "Προαιρετικό"
   },
   "contact": {
-    "title": "Contact Us",
-    "subtitle": "Our support team is here 24/7 to help you right away.",
-    "cardTitle": "We're Here to Help",
-    "cardSubtitle": "Our support team is here 24/7 to help you right away.",
+    "title": "Επικοινωνία",
+    "subtitle": "Η ομάδα υποστήριξής μας είναι εδώ 24/7 για να σας βοηθήσει.",
+    "cardTitle": "Είμαστε εδώ για εσάς",
+    "cardSubtitle": "Η ομάδα υποστήριξής μας είναι εδώ 24/7 για να σας βοηθήσει.",
     "form": {
-      "name": "Name",
-      "namePlaceholder": "Your name",
+      "name": "Όνομα",
+      "namePlaceholder": "Το όνομά σας",
       "email": "Email",
-      "emailPlaceholder": "your.email@example.com",
-      "subject": "Subject",
-      "selectSubject": "Select a subject",
-      "technical": "Technical Support",
-      "billing": "Billing Question",
-      "feature": "Feature Request",
-      "feedback": "General Feedback",
-      "other": "Other",
-      "message": "Message",
-      "messagePlaceholder": "Tell us how we can help...",
-      "notRobot": "I'm not a robot",
-      "send": "Send Message"
+      "emailPlaceholder": "to.email@sas.com",
+      "subject": "Θέμα",
+      "selectSubject": "Επιλέξτε θέμα",
+      "technical": "Τεχνική Υποστήριξη",
+      "billing": "Ερώτηση Χρέωσης",
+      "feature": "Αίτημα Λειτουργίας",
+      "feedback": "Γενικά Σχόλια",
+      "other": "Άλλο",
+      "message": "Μήνυμα",
+      "messagePlaceholder": "Πείτε μας πώς μπορούμε να βοηθήσουμε...",
+      "notRobot": "Δεν είμαι ρομπότ",
+      "send": "Αποστολή Μηνύματος"
     },
     "footer": {
-      "home": "Home"
+      "home": "Αρχική"
     }
   },
   "cancel": {
-    "title": "Cancel Your Subscription",
-    "subtitle": "Enter your email to cancel your subscription. This will turn off auto-renewal and prevent any future charges.",
+    "title": "Ακύρωση Συνδρομής",
+    "subtitle": "Εισάγετε το email σας για να ακυρώσετε τη συνδρομή σας.",
     "form": {
-      "emailLabel": "Email Address",
+      "emailLabel": "Διεύθυνση Email",
       "emailPlaceholder": "hello@email.com",
-      "submitBtn": "Cancel Subscription",
-      "helpText": "If you don't remember which email you used, check your inbox for a welcome email from Tracify. If you still can't find it,",
-      "contactSupport": "contact support"
+      "submitBtn": "Ακύρωση Συνδρομής",
+      "helpText": "Αν δεν θυμάστε ποιο email χρησιμοποιήσατε, ελέγξτε τα εισερχόμενά σας για ένα email καλωσορίσματος από το Tracify.",
+      "contactSupport": "επικοινωνήστε με την υποστήριξη"
     },
     "whyCharged": {
-      "title": "Why was I charged?"
+      "title": "Γιατί χρεώθηκα;"
     },
     "needHelp": {
-      "title": "Need help?",
-      "description": "If you're experiencing an issue or have any questions, our support team is here for you 24/7. Just reach out and we'll get back to you quickly!",
-      "contactBtn": "Contact Support"
+      "title": "Χρειάζεστε βοήθεια;",
+      "description": "Αν αντιμετωπίζετε πρόβλημα, η ομάδα υποστήριξής μας είναι εδώ 24/7.",
+      "contactBtn": "Επικοινωνία με Υποστήριξη"
     }
   },
   "terms": {
@@ -429,6 +429,44 @@
     "contact": {
       "title": "11. Επικοινωνήστε Μαζί Μας",
       "content": "Εάν έχετε ερωτήσεις ή ανησυχίες σχετικά με αυτή την Πολιτική Απορρήτου ή τις πρακτικές δεδομένων μας, παρακαλούμε επικοινωνήστε μαζί μας:"
+    }
+  },
+  "modal": {
+    "signup": {
+      "title": "Εισάγετε το email σας",
+      "subtitle": "Θα στείλουμε τον κωδικό του λογαριασμού σας σε αυτή τη διεύθυνση email.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Συμφωνώ να λαμβάνω προωθητικά email και ενημερώσεις από το Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Συνέχεια",
+      "termsText": "Συνεχίζοντας, συμφωνείτε με τους",
+      "termsLink": "Όρους Χρήσης",
+      "and": "και",
+      "privacyLink": "Πολιτική Απορρήτου",
+      "or": "ή",
+      "hasAccount": "Έχετε ήδη λογαριασμό;",
+      "loginLink": "Σύνδεση",
+      "creatingAccount": "Δημιουργία λογαριασμού...",
+      "accountCreated": "Ο λογαριασμός δημιουργήθηκε!",
+      "yourPassword": "Ο κωδικός σας:",
+      "savePassword": "Αποθηκεύστε αυτόν τον κωδικό! Ανακατεύθυνση στην πληρωμή..."
+    },
+    "login": {
+      "title": "Καλώς ήρθατε πίσω",
+      "subtitle": "Συνδεθείτε στον λογαριασμό σας Tracify",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Κωδικός",
+      "loginBtn": "Σύνδεση",
+      "loggingIn": "Σύνδεση...",
+      "loginSuccess": "Επιτυχής σύνδεση! Ανακατεύθυνση...",
+      "or": "ή",
+      "noAccount": "Δεν έχετε λογαριασμό;",
+      "signupLink": "Εγγραφή"
+    },
+    "errors": {
+      "connectionError": "Σφάλμα σύνδεσης. Παρακαλώ δοκιμάστε ξανά.",
+      "accountCreationFailed": "Η δημιουργία λογαριασμού απέτυχε",
+      "loginFailed": "Η σύνδεση απέτυχε"
     }
   }
 }

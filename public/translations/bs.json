@@ -412,5 +412,43 @@
       "title": "11. Kontaktirajte nas",
       "content": "Ako imate pitanja ili nedoumice u vezi s ovom Politikom privatnosti ili našim praksama rukovanja podacima, kontaktirajte nas:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Unesite vašu email adresu",
+      "subtitle": "Poslat ćemo lozinku vašeg računa na ovu email adresu.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Slažem se da primam promotivne emailove i ažuriranja od Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Nastavi",
+      "termsText": "Nastavljanjem se slažete s našim",
+      "termsLink": "Uvjetima korištenja",
+      "and": "i",
+      "privacyLink": "Politikom privatnosti",
+      "or": "ili",
+      "hasAccount": "Već imate račun?",
+      "loginLink": "Prijavite se",
+      "creatingAccount": "Kreiranje računa...",
+      "accountCreated": "Račun kreiran!",
+      "yourPassword": "Vaša lozinka:",
+      "savePassword": "Sačuvajte ovu lozinku! Preusmjeravanje na plaćanje..."
+    },
+    "login": {
+      "title": "Dobrodošli nazad",
+      "subtitle": "Prijavite se na svoj Tracify račun",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Lozinka",
+      "loginBtn": "Prijava",
+      "loggingIn": "Prijavljivanje...",
+      "loginSuccess": "Prijava uspješna! Preusmjeravanje...",
+      "or": "ili",
+      "noAccount": "Nemate račun?",
+      "signupLink": "Registrujte se"
+    },
+    "errors": {
+      "connectionError": "Greška u povezivanju. Molimo pokušajte ponovo.",
+      "accountCreationFailed": "Kreiranje računa nije uspjelo",
+      "loginFailed": "Prijava nije uspjela"
+    }
   }
 }

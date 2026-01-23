@@ -412,5 +412,43 @@
       "title": "11. צור קשר",
       "content": "אם יש לך שאלות או חששות לגבי מדיניות פרטיות זו או פרקטיקות הנתונים שלנו, אנא צור איתנו קשר:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "הזן את האימייל שלך",
+      "subtitle": "נשלח את סיסמת החשבון שלך לכתובת אימייל זו.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "אני מסכים לקבל אימיילים שיווקיים ועדכונים מ-Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "המשך",
+      "termsText": "בהמשך, אתה מסכים ל",
+      "termsLink": "תנאי השירות",
+      "and": "ו",
+      "privacyLink": "מדיניות הפרטיות",
+      "or": "או",
+      "hasAccount": "כבר יש לך חשבון?",
+      "loginLink": "התחבר",
+      "creatingAccount": "יוצר חשבון...",
+      "accountCreated": "החשבון נוצר!",
+      "yourPassword": "הסיסמה שלך:",
+      "savePassword": "שמור את הסיסמה הזו! מעביר לתשלום..."
+    },
+    "login": {
+      "title": "ברוך שובך",
+      "subtitle": "התחבר לחשבון Tracify שלך",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "סיסמה",
+      "loginBtn": "התחבר",
+      "loggingIn": "מתחבר...",
+      "loginSuccess": "ההתחברות הצליחה! מעביר...",
+      "or": "או",
+      "noAccount": "אין לך חשבון?",
+      "signupLink": "הרשם"
+    },
+    "errors": {
+      "connectionError": "שגיאת חיבור. אנא נסה שוב.",
+      "accountCreationFailed": "יצירת חשבון נכשלה",
+      "loginFailed": "ההתחברות נכשלה"
+    }
   }
 }

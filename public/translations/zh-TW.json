@@ -237,48 +237,48 @@
     "optional": "可選"
   },
   "contact": {
-    "title": "Contact Us",
-    "subtitle": "Our support team is here 24/7 to help you right away.",
-    "cardTitle": "We're Here to Help",
-    "cardSubtitle": "Our support team is here 24/7 to help you right away.",
+    "title": "聯繫我們",
+    "subtitle": "我們的支援團隊全天候為您服務。",
+    "cardTitle": "我們隨時為您服務",
+    "cardSubtitle": "我們的支援團隊全天候為您服務。",
     "form": {
-      "name": "Name",
-      "namePlaceholder": "Your name",
-      "email": "Email",
-      "emailPlaceholder": "your.email@example.com",
-      "subject": "Subject",
-      "selectSubject": "Select a subject",
-      "technical": "Technical Support",
-      "billing": "Billing Question",
-      "feature": "Feature Request",
-      "feedback": "General Feedback",
-      "other": "Other",
-      "message": "Message",
-      "messagePlaceholder": "Tell us how we can help...",
-      "notRobot": "I'm not a robot",
-      "send": "Send Message"
+      "name": "姓名",
+      "namePlaceholder": "您的姓名",
+      "email": "電子郵件",
+      "emailPlaceholder": "您的郵件@範例.com",
+      "subject": "主題",
+      "selectSubject": "選擇主題",
+      "technical": "技術支援",
+      "billing": "帳單問題",
+      "feature": "功能請求",
+      "feedback": "一般反饋",
+      "other": "其他",
+      "message": "訊息",
+      "messagePlaceholder": "告訴我們如何幫助您...",
+      "notRobot": "我不是機器人",
+      "send": "發送訊息"
     },
     "footer": {
-      "home": "Home"
+      "home": "首頁"
     }
   },
   "cancel": {
-    "title": "Cancel Your Subscription",
-    "subtitle": "Enter your email to cancel your subscription. This will turn off auto-renewal and prevent any future charges.",
+    "title": "取消訂閱",
+    "subtitle": "輸入您的電子郵件以取消訂閱。",
     "form": {
-      "emailLabel": "Email Address",
-      "emailPlaceholder": "hello@email.com",
-      "submitBtn": "Cancel Subscription",
-      "helpText": "If you don't remember which email you used, check your inbox for a welcome email from Tracify. If you still can't find it,",
-      "contactSupport": "contact support"
+      "emailLabel": "電子郵件地址",
+      "emailPlaceholder": "你好@email.com",
+      "submitBtn": "取消訂閱",
+      "helpText": "如果您不記得使用了哪個電子郵件，請檢查收件箱中來自 Tracify 的歡迎郵件。",
+      "contactSupport": "聯繫客服"
     },
     "whyCharged": {
-      "title": "Why was I charged?"
+      "title": "為什麼我被收費？"
     },
     "needHelp": {
-      "title": "Need help?",
-      "description": "If you're experiencing an issue or have any questions, our support team is here for you 24/7. Just reach out and we'll get back to you quickly!",
-      "contactBtn": "Contact Support"
+      "title": "需要幫助？",
+      "description": "如果您遇到問題，我們的支援團隊全天候為您服務。",
+      "contactBtn": "聯繫客服"
     }
   },
   "terms": {
@@ -429,6 +429,44 @@
     "contact": {
       "title": "11. 聯繫我們",
       "content": "如果您對本隱私政策或我們的資料處理方式有任何問題或疑慮，請透過以下方式聯繫我們："
+    }
+  },
+  "modal": {
+    "signup": {
+      "title": "輸入您的電子郵件",
+      "subtitle": "我們將把您的帳戶密碼發送到此電子郵件地址。",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "我同意接收Tracify的促銷郵件和更新",
+      "agreeRequired": "*",
+      "continueBtn": "繼續",
+      "termsText": "繼續即表示您同意我們的",
+      "termsLink": "服務條款",
+      "and": "和",
+      "privacyLink": "隱私政策",
+      "or": "或",
+      "hasAccount": "已有帳戶？",
+      "loginLink": "登入",
+      "creatingAccount": "正在創建帳戶...",
+      "accountCreated": "帳戶已創建！",
+      "yourPassword": "您的密碼：",
+      "savePassword": "請保存此密碼！正在跳轉到付款頁面..."
+    },
+    "login": {
+      "title": "歡迎回來",
+      "subtitle": "登入您的Tracify帳戶",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "密碼",
+      "loginBtn": "登入",
+      "loggingIn": "正在登入...",
+      "loginSuccess": "登入成功！正在跳轉...",
+      "or": "或",
+      "noAccount": "沒有帳戶？",
+      "signupLink": "註冊"
+    },
+    "errors": {
+      "connectionError": "連接錯誤，請重試。",
+      "accountCreationFailed": "創建帳戶失敗",
+      "loginFailed": "登入失敗"
     }
   }
 }

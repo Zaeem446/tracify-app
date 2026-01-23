@@ -92,175 +92,175 @@
     "terms": "Sartlar ve Kosullar"
   },
   "contact": {
-    "title": "Contact Us",
-    "subtitle": "Our support team is here 24/7 to help you right away.",
-    "cardTitle": "We're Here to Help",
-    "cardSubtitle": "Our support team is here 24/7 to help you right away.",
+    "title": "Bize Ulaşın",
+    "subtitle": "Destek ekibimiz size yardımcı olmak için 7/24 burada.",
+    "cardTitle": "Size Yardımcı Olmak İçin Buradayız",
+    "cardSubtitle": "Destek ekibimiz size yardımcı olmak için 7/24 burada.",
     "form": {
-      "name": "Name",
-      "namePlaceholder": "Your name",
-      "email": "Email",
-      "emailPlaceholder": "your.email@example.com",
-      "subject": "Subject",
-      "selectSubject": "Select a subject",
-      "technical": "Technical Support",
-      "billing": "Billing Question",
-      "feature": "Feature Request",
-      "feedback": "General Feedback",
-      "other": "Other",
-      "message": "Message",
-      "messagePlaceholder": "Tell us how we can help...",
-      "notRobot": "I'm not a robot",
-      "send": "Send Message"
+      "name": "Ad",
+      "namePlaceholder": "Adınız",
+      "email": "E-posta",
+      "emailPlaceholder": "email@ornek.com",
+      "subject": "Konu",
+      "selectSubject": "Bir konu seçin",
+      "technical": "Teknik Destek",
+      "billing": "Fatura Sorusu",
+      "feature": "Özellik Talebi",
+      "feedback": "Genel Geri Bildirim",
+      "other": "Diğer",
+      "message": "Mesaj",
+      "messagePlaceholder": "Size nasıl yardımcı olabileceğimizi anlatın...",
+      "notRobot": "Robot değilim",
+      "send": "Mesaj Gönder"
     },
     "footer": {
-      "home": "Home"
+      "home": "Ana Sayfa"
     }
   },
   "cancel": {
-    "title": "Cancel Your Subscription",
-    "subtitle": "Enter your email to cancel your subscription. This will turn off auto-renewal and prevent any future charges.",
+    "title": "Aboneliğinizi İptal Edin",
+    "subtitle": "Aboneliğinizi iptal etmek için e-postanızı girin. Bu, otomatik yenilemeyi kapatacaktır.",
     "form": {
-      "emailLabel": "Email Address",
-      "emailPlaceholder": "hello@email.com",
-      "submitBtn": "Cancel Subscription",
-      "helpText": "If you don't remember which email you used, check your inbox for a welcome email from Tracify. If you still can't find it,",
-      "contactSupport": "contact support"
+      "emailLabel": "E-posta Adresi",
+      "emailPlaceholder": "merhaba@email.com",
+      "submitBtn": "Aboneliği İptal Et",
+      "helpText": "Hangi e-postayı kullandığınızı hatırlamıyorsanız, gelen kutunuzu Tracify'dan gelen hoş geldiniz e-postası için kontrol edin.",
+      "contactSupport": "destek ile iletişime geçin"
     },
     "whyCharged": {
-      "title": "Why was I charged?"
+      "title": "Neden ücret alındı?"
     },
     "needHelp": {
-      "title": "Need help?",
-      "description": "If you're experiencing an issue or have any questions, our support team is here for you 24/7. Just reach out and we'll get back to you quickly!",
-      "contactBtn": "Contact Support"
+      "title": "Yardıma mı ihtiyacınız var?",
+      "description": "Bir sorun yaşıyorsanız, destek ekibimiz 7/24 burada.",
+      "contactBtn": "Destek ile İletişime Geçin"
     }
   },
   "dashboard": {
     "nav": {
-      "dashboard": "Dashboard",
-      "account": "Account",
-      "contact": "Contact",
-      "settings": "Settings",
-      "logout": "Logout"
+      "dashboard": "Kontrol Paneli",
+      "account": "Hesap",
+      "contact": "İletişim",
+      "settings": "Ayarlar",
+      "logout": "Çıkış Yap"
     },
-    "title": "Track a Phone Location",
-    "subtitle": "Send a location request with consent-based tracking",
+    "title": "Telefon Konumunu İzle",
+    "subtitle": "Onay tabanlı izleme ile konum isteği gönderin",
     "sendRequest": {
-      "title": "Send Location Request",
-      "phoneNumber": "Phone Number",
+      "title": "Konum İsteği Gönder",
+      "phoneNumber": "Telefon Numarası",
       "phonePlaceholder": "3001234567",
-      "message": "Message",
-      "send": "Send",
-      "previewMessage": "Preview Message",
-      "rateLimit": "Due to security and privacy reasons, you can only send a message once every 3 hours."
+      "message": "Mesaj",
+      "send": "Gönder",
+      "previewMessage": "Mesaj Önizleme",
+      "rateLimit": "Güvenlik ve gizlilik nedeniyle, her 3 saatte bir yalnızca bir mesaj gönderebilirsiniz."
     },
     "recentRequests": {
-      "title": "Recent Requests",
-      "noRequests": "No tracking requests yet"
+      "title": "Son İstekler",
+      "noRequests": "Henüz izleme isteği yok"
     },
     "trackingActivity": {
-      "title": "Recent Tracking Activity"
+      "title": "Son İzleme Aktivitesi"
     },
     "disclaimer": {
-      "title": "Important Disclaimer",
-      "point1": "Tracify requires explicit consent from the phone owner before sharing their location",
-      "point2": "This service is intended for legitimate purposes only (finding lost devices, family safety)",
-      "point3": "Unauthorized tracking or stalking is illegal and strictly prohibited",
-      "point4": "Location accuracy depends on device settings and network conditions",
-      "point5": "We are not responsible for misuse of this service",
-      "needHelp": "Need help?",
-      "contactSupport": "Contact our support team"
+      "title": "Önemli Uyarı",
+      "point1": "Tracify, konumlarını paylaşmadan önce telefon sahibinin açık onayını gerektirir",
+      "point2": "Bu hizmet yalnızca meşru amaçlar için tasarlanmıştır (kayıp cihazları bulma, aile güvenliği)",
+      "point3": "İzinsiz izleme veya taciz yasa dışıdır ve kesinlikle yasaktır",
+      "point4": "Konum doğruluğu cihaz ayarlarına ve ağ koşullarına bağlıdır",
+      "point5": "Bu hizmetin kötüye kullanımından sorumlu değiliz",
+      "needHelp": "Yardıma mı ihtiyacınız var?",
+      "contactSupport": "Destek ekibimizle iletişime geçin"
     },
     "subscription": {
-      "currentPlan": "Current Plan",
-      "loading": "Loading...",
-      "manage": "Manage Subscription"
+      "currentPlan": "Mevcut Plan",
+      "loading": "Yükleniyor...",
+      "manage": "Aboneliği Yönet"
     },
     "messageModal": {
-      "title": "Message Settings",
-      "description": "We've selected the messages with the highest location-sharing rates. Select one from the list below.",
-      "language": "Message Language",
-      "selectTemplate": "Select a message template",
-      "template1": "I'm the owner of this phone, and it's currently lost. If you've found it, please let me know.",
-      "template2": "If this phone isn't yours, could you let me know?",
-      "template3": "No rush, but check this out when you have a sec:",
-      "apply": "Apply"
+      "title": "Mesaj Ayarları",
+      "description": "En yüksek konum paylaşım oranlarına sahip mesajları seçtik. Aşağıdaki listeden birini seçin.",
+      "language": "Mesaj Dili",
+      "selectTemplate": "Bir mesaj şablonu seçin",
+      "template1": "Bu telefonun sahibiyim ve şu anda kayıp. Eğer bulduysan, lütfen bana haber ver.",
+      "template2": "Bu telefon senin değilse, bana haber verebilir misin?",
+      "template3": "Acele yok, ama müsait olduğunda buna bir göz atar mısın:",
+      "apply": "Uygula"
     },
     "trustpilot": {
-      "title": "Help Us Improve!",
-      "subtitle": "Share your experience before using Tracify",
-      "message": "We value your feedback! Please take a moment to rate your experience on Trustpilot.",
-      "helpText": "Your review helps us maintain quality service",
-      "leaveReview": "Leave a Review on Trustpilot",
-      "skip": "Skip for Now"
+      "title": "Gelişmemize Yardım Edin!",
+      "subtitle": "Tracify'ı kullanmadan önce deneyiminizi paylaşın",
+      "message": "Geri bildiriminize değer veriyoruz! Lütfen Trustpilot'ta deneyiminizi değerlendirmek için bir dakikanızı ayırın.",
+      "helpText": "Yorumunuz kaliteli hizmet sunmamıza yardımcı olur",
+      "leaveReview": "Trustpilot'ta Yorum Bırak",
+      "skip": "Şimdilik Atla"
     },
     "locationModal": {
-      "title": "Location Received",
-      "coordinates": "Coordinates",
-      "openMap": "Open in Google Maps",
-      "close": "Close"
+      "title": "Konum Alındı",
+      "coordinates": "Koordinatlar",
+      "openMap": "Google Haritalar'da Aç",
+      "close": "Kapat"
     }
   },
   "payment": {
-    "completeSubscription": "Complete Your Subscription",
-    "subtitle": "Start tracking phone locations with consent",
-    "title": "Payment",
-    "trialThen": "24h trial, then",
-    "monthAfterTrial": "/month after trial",
-    "whatsIncluded": "What's included:",
-    "unlimitedRequests": "✓ Unlimited location requests",
-    "realtimeTracking": "✓ Real-time tracking",
-    "smsNotifications": "✓ SMS notifications",
-    "247support": "✓ 24/7 support",
-    "paymentDetails": "Payment Details",
+    "completeSubscription": "Aboneliğinizi Tamamlayın",
+    "subtitle": "Onay ile telefon konumlarını izlemeye başlayın",
+    "title": "Ödeme",
+    "trialThen": "24 saat deneme, sonra",
+    "monthAfterTrial": "/ay deneme sonrası",
+    "whatsIncluded": "Dahil olanlar:",
+    "unlimitedRequests": "✓ Sınırsız konum isteği",
+    "realtimeTracking": "✓ Gerçek zamanlı izleme",
+    "smsNotifications": "✓ SMS bildirimleri",
+    "247support": "✓ 7/24 destek",
+    "paymentDetails": "Ödeme Detayları",
     "plan": "Plan",
-    "24hourTrial": "24-Hour Trial",
-    "total": "Total",
-    "pay": "Pay",
-    "securePayment": "Secure payment with SSL encryption"
+    "24hourTrial": "24 Saatlik Deneme",
+    "total": "Toplam",
+    "pay": "Öde",
+    "securePayment": "SSL şifreleme ile güvenli ödeme"
   },
   "account": {
     "nav": {
-      "dashboard": "Dashboard",
-      "account": "Account",
-      "contact": "Contact",
-      "logout": "Logout"
+      "dashboard": "Kontrol Paneli",
+      "account": "Hesap",
+      "contact": "İletişim",
+      "logout": "Çıkış Yap"
     },
-    "title": "Account Settings",
-    "subtitle": "Manage your account and subscription",
+    "title": "Hesap Ayarları",
+    "subtitle": "Hesabınızı ve aboneliğinizi yönetin",
     "accountInfo": {
-      "title": "Account Information",
-      "email": "Email Address",
-      "memberSince": "Member Since",
-      "loading": "Loading..."
+      "title": "Hesap Bilgileri",
+      "email": "E-posta Adresi",
+      "memberSince": "Üyelik Tarihi",
+      "loading": "Yükleniyor..."
     },
     "subscription": {
-      "title": "Subscription",
+      "title": "Abonelik",
       "plan": "Plan",
-      "nextPayment": "Next Payment",
-      "status": "Status",
-      "active": "Active",
-      "loading": "Loading...",
-      "cancelButton": "Cancel Subscription"
+      "nextPayment": "Sonraki Ödeme",
+      "status": "Durum",
+      "active": "Aktif",
+      "loading": "Yükleniyor...",
+      "cancelButton": "Aboneliği İptal Et"
     },
     "paymentHistory": {
-      "title": "Payment History",
-      "noHistory": "No payment history available"
+      "title": "Ödeme Geçmişi",
+      "noHistory": "Ödeme geçmişi mevcut değil"
     },
     "cancelModal": {
-      "title": "Are You Sure?",
-      "description": "Cancelling your subscription means:",
-      "point1": "You'll lose access to premium features",
-      "point2": "Your subscription will end immediately",
-      "point3": "You won't be charged again",
-      "confirm": "Cancel Subscription",
-      "goBack": "Go Back"
+      "title": "Emin Misiniz?",
+      "description": "Aboneliğinizi iptal etmek şu anlama gelir:",
+      "point1": "Premium özelliklere erişiminizi kaybedeceksiniz",
+      "point2": "Aboneliğiniz hemen sona erecek",
+      "point3": "Tekrar ücretlendirilmeyeceksiniz",
+      "confirm": "Aboneliği İptal Et",
+      "goBack": "Geri Dön"
     },
     "successModal": {
-      "title": "Subscription Cancelled",
-      "message": "We've confirmed your cancellation, and you won't receive any further charges from us. A confirmation email has also been sent to your inbox.",
-      "close": "Close"
+      "title": "Abonelik İptal Edildi",
+      "message": "İptalinizi onayladık ve bizden başka ücret almayacaksınız. Gelen kutunuza da bir onay e-postası gönderildi.",
+      "close": "Kapat"
     }
   },
   "terms": {
@@ -411,6 +411,44 @@
     "contact": {
       "title": "11. Bize Ulasin",
       "content": "Bu Gizlilik Politikasi veya veri uygulamalarimiz hakkinda sorulariniz veya endiseleriniz varsa, lutfen bizimle iletisime gecin:"
+    }
+  },
+  "modal": {
+    "signup": {
+      "title": "E-postanızı girin",
+      "subtitle": "Hesap şifrenizi bu e-posta adresine göndereceğiz.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Tracify'dan promosyon e-postaları ve güncellemeler almayı kabul ediyorum",
+      "agreeRequired": "*",
+      "continueBtn": "Devam",
+      "termsText": "Devam ederek,",
+      "termsLink": "Hizmet Şartları",
+      "and": "ve",
+      "privacyLink": "Gizlilik Politikası",
+      "or": "veya",
+      "hasAccount": "Zaten hesabınız var mı?",
+      "loginLink": "Giriş yap",
+      "creatingAccount": "Hesap oluşturuluyor...",
+      "accountCreated": "Hesap oluşturuldu!",
+      "yourPassword": "Şifreniz:",
+      "savePassword": "Bu şifreyi kaydedin! Ödeme sayfasına yönlendiriliyorsunuz..."
+    },
+    "login": {
+      "title": "Tekrar hoş geldiniz",
+      "subtitle": "Tracify hesabınıza giriş yapın",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Şifre",
+      "loginBtn": "Giriş Yap",
+      "loggingIn": "Giriş yapılıyor...",
+      "loginSuccess": "Giriş başarılı! Yönlendiriliyorsunuz...",
+      "or": "veya",
+      "noAccount": "Hesabınız yok mu?",
+      "signupLink": "Kaydol"
+    },
+    "errors": {
+      "connectionError": "Bağlantı hatası. Lütfen tekrar deneyin.",
+      "accountCreationFailed": "Hesap oluşturulamadı",
+      "loginFailed": "Giriş başarısız"
     }
   }
 }

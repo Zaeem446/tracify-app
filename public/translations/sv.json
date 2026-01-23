@@ -237,48 +237,48 @@
     "optional": "Valfri"
   },
   "contact": {
-    "title": "Contact Us",
-    "subtitle": "Our support team is here 24/7 to help you right away.",
-    "cardTitle": "We're Here to Help",
-    "cardSubtitle": "Our support team is here 24/7 to help you right away.",
+    "title": "Kontakta oss",
+    "subtitle": "Vårt supportteam finns här dygnet runt för att hjälpa dig.",
+    "cardTitle": "Vi finns här för dig",
+    "cardSubtitle": "Vårt supportteam finns här dygnet runt för att hjälpa dig.",
     "form": {
-      "name": "Name",
-      "namePlaceholder": "Your name",
-      "email": "Email",
-      "emailPlaceholder": "your.email@example.com",
-      "subject": "Subject",
-      "selectSubject": "Select a subject",
-      "technical": "Technical Support",
-      "billing": "Billing Question",
-      "feature": "Feature Request",
-      "feedback": "General Feedback",
-      "other": "Other",
-      "message": "Message",
-      "messagePlaceholder": "Tell us how we can help...",
-      "notRobot": "I'm not a robot",
-      "send": "Send Message"
+      "name": "Namn",
+      "namePlaceholder": "Ditt namn",
+      "email": "E-post",
+      "emailPlaceholder": "din.email@exempel.com",
+      "subject": "Ämne",
+      "selectSubject": "Välj ett ämne",
+      "technical": "Teknisk support",
+      "billing": "Faktureringsfråga",
+      "feature": "Funktionsförfrågan",
+      "feedback": "Allmän feedback",
+      "other": "Övrigt",
+      "message": "Meddelande",
+      "messagePlaceholder": "Berätta hur vi kan hjälpa...",
+      "notRobot": "Jag är inte en robot",
+      "send": "Skicka meddelande"
     },
     "footer": {
-      "home": "Home"
+      "home": "Hem"
     }
   },
   "cancel": {
-    "title": "Cancel Your Subscription",
-    "subtitle": "Enter your email to cancel your subscription. This will turn off auto-renewal and prevent any future charges.",
+    "title": "Avsluta din prenumeration",
+    "subtitle": "Ange din e-post för att avsluta din prenumeration.",
     "form": {
-      "emailLabel": "Email Address",
-      "emailPlaceholder": "hello@email.com",
-      "submitBtn": "Cancel Subscription",
-      "helpText": "If you don't remember which email you used, check your inbox for a welcome email from Tracify. If you still can't find it,",
-      "contactSupport": "contact support"
+      "emailLabel": "E-postadress",
+      "emailPlaceholder": "hej@email.com",
+      "submitBtn": "Avsluta prenumeration",
+      "helpText": "Om du inte kommer ihåg vilken e-post du använde, kontrollera din inkorg efter ett välkomstmail från Tracify.",
+      "contactSupport": "kontakta support"
     },
     "whyCharged": {
-      "title": "Why was I charged?"
+      "title": "Varför debiterades jag?"
     },
     "needHelp": {
-      "title": "Need help?",
-      "description": "If you're experiencing an issue or have any questions, our support team is here for you 24/7. Just reach out and we'll get back to you quickly!",
-      "contactBtn": "Contact Support"
+      "title": "Behöver du hjälp?",
+      "description": "Om du har problem finns vårt supportteam här dygnet runt.",
+      "contactBtn": "Kontakta support"
     }
   },
   "terms": {
@@ -429,6 +429,44 @@
     "contact": {
       "title": "11. Kontakta oss",
       "content": "Om du har frågor eller funderingar om denna integritetspolicy eller våra datapraxis, vänligen kontakta oss:"
+    }
+  },
+  "modal": {
+    "signup": {
+      "title": "Ange din e-post",
+      "subtitle": "Vi skickar ditt kontolösenord till denna e-postadress.",
+      "emailPlaceholder": "din@email.com",
+      "agreeText": "Jag godkänner att ta emot kampanjmejl och uppdateringar från Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Fortsätt",
+      "termsText": "Genom att fortsätta godkänner du våra",
+      "termsLink": "Användarvillkor",
+      "and": "och",
+      "privacyLink": "Integritetspolicy",
+      "or": "eller",
+      "hasAccount": "Har du redan ett konto?",
+      "loginLink": "Logga in",
+      "creatingAccount": "Skapar konto...",
+      "accountCreated": "Konto skapat!",
+      "yourPassword": "Ditt lösenord:",
+      "savePassword": "Spara detta lösenord! Omdirigerar till betalning..."
+    },
+    "login": {
+      "title": "Välkommen tillbaka",
+      "subtitle": "Logga in på ditt Tracify-konto",
+      "emailPlaceholder": "din@email.com",
+      "passwordPlaceholder": "Lösenord",
+      "loginBtn": "Logga in",
+      "loggingIn": "Loggar in...",
+      "loginSuccess": "Inloggning lyckades! Omdirigerar...",
+      "or": "eller",
+      "noAccount": "Inget konto?",
+      "signupLink": "Registrera dig"
+    },
+    "errors": {
+      "connectionError": "Anslutningsfel. Försök igen.",
+      "accountCreationFailed": "Det gick inte att skapa kontot",
+      "loginFailed": "Inloggningen misslyckades"
     }
   }
 }

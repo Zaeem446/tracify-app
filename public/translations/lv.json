@@ -412,5 +412,43 @@
       "title": "11. Sazinieties ar mums",
       "content": "Ja jums ir jautājumi vai bažas par šo Privātuma politiku vai mūsu datu praksēm, lūdzu, sazinieties ar mums:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Ievadiet savu e-pastu",
+      "subtitle": "Mēs nosūtīsim jūsu konta paroli uz šo e-pasta adresi.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Es piekrītu saņemt reklāmas e-pastus un jaunumus no Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Turpināt",
+      "termsText": "Turpinot, jūs piekrītat mūsu",
+      "termsLink": "Pakalpojumu noteikumiem",
+      "and": "un",
+      "privacyLink": "Privātuma politikai",
+      "or": "vai",
+      "hasAccount": "Jau ir konts?",
+      "loginLink": "Pieteikties",
+      "creatingAccount": "Konta izveide...",
+      "accountCreated": "Konts izveidots!",
+      "yourPassword": "Jūsu parole:",
+      "savePassword": "Saglabājiet šo paroli! Novirzīšana uz maksājumu..."
+    },
+    "login": {
+      "title": "Laipni lūdzam atpakaļ",
+      "subtitle": "Piesakieties savā Tracify kontā",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Parole",
+      "loginBtn": "Pieteikties",
+      "loggingIn": "Notiek pieteikšanās...",
+      "loginSuccess": "Pieteikšanās veiksmīga! Novirzīšana...",
+      "or": "vai",
+      "noAccount": "Nav konta?",
+      "signupLink": "Reģistrēties"
+    },
+    "errors": {
+      "connectionError": "Savienojuma kļūda. Lūdzu, mēģiniet vēlreiz.",
+      "accountCreationFailed": "Konta izveide neizdevās",
+      "loginFailed": "Pieteikšanās neizdevās"
+    }
   }
 }

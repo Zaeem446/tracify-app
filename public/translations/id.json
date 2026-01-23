@@ -237,48 +237,48 @@
     "optional": "Opsional"
   },
   "contact": {
-    "title": "Contact Us",
-    "subtitle": "Our support team is here 24/7 to help you right away.",
-    "cardTitle": "We're Here to Help",
-    "cardSubtitle": "Our support team is here 24/7 to help you right away.",
+    "title": "Hubungi Kami",
+    "subtitle": "Tim dukungan kami siap 24/7 untuk membantu Anda.",
+    "cardTitle": "Kami Siap Membantu",
+    "cardSubtitle": "Tim dukungan kami siap 24/7 untuk membantu Anda.",
     "form": {
-      "name": "Name",
-      "namePlaceholder": "Your name",
+      "name": "Nama",
+      "namePlaceholder": "Nama Anda",
       "email": "Email",
-      "emailPlaceholder": "your.email@example.com",
-      "subject": "Subject",
-      "selectSubject": "Select a subject",
-      "technical": "Technical Support",
-      "billing": "Billing Question",
-      "feature": "Feature Request",
-      "feedback": "General Feedback",
-      "other": "Other",
-      "message": "Message",
-      "messagePlaceholder": "Tell us how we can help...",
-      "notRobot": "I'm not a robot",
-      "send": "Send Message"
+      "emailPlaceholder": "email.anda@contoh.com",
+      "subject": "Subjek",
+      "selectSubject": "Pilih subjek",
+      "technical": "Dukungan Teknis",
+      "billing": "Pertanyaan Tagihan",
+      "feature": "Permintaan Fitur",
+      "feedback": "Umpan Balik Umum",
+      "other": "Lainnya",
+      "message": "Pesan",
+      "messagePlaceholder": "Ceritakan bagaimana kami dapat membantu...",
+      "notRobot": "Saya bukan robot",
+      "send": "Kirim Pesan"
     },
     "footer": {
-      "home": "Home"
+      "home": "Beranda"
     }
   },
   "cancel": {
-    "title": "Cancel Your Subscription",
-    "subtitle": "Enter your email to cancel your subscription. This will turn off auto-renewal and prevent any future charges.",
+    "title": "Batalkan Langganan Anda",
+    "subtitle": "Masukkan email Anda untuk membatalkan langganan.",
     "form": {
-      "emailLabel": "Email Address",
-      "emailPlaceholder": "hello@email.com",
-      "submitBtn": "Cancel Subscription",
-      "helpText": "If you don't remember which email you used, check your inbox for a welcome email from Tracify. If you still can't find it,",
-      "contactSupport": "contact support"
+      "emailLabel": "Alamat Email",
+      "emailPlaceholder": "halo@email.com",
+      "submitBtn": "Batalkan Langganan",
+      "helpText": "Jika Anda tidak ingat email mana yang digunakan, periksa kotak masuk Anda untuk email selamat datang dari Tracify.",
+      "contactSupport": "hubungi dukungan"
     },
     "whyCharged": {
-      "title": "Why was I charged?"
+      "title": "Mengapa saya ditagih?"
     },
     "needHelp": {
-      "title": "Need help?",
-      "description": "If you're experiencing an issue or have any questions, our support team is here for you 24/7. Just reach out and we'll get back to you quickly!",
-      "contactBtn": "Contact Support"
+      "title": "Butuh bantuan?",
+      "description": "Jika Anda mengalami masalah, tim dukungan kami siap 24/7.",
+      "contactBtn": "Hubungi Dukungan"
     }
   },
   "terms": {
@@ -429,6 +429,44 @@
     "contact": {
       "title": "11. Hubungi Kami",
       "content": "Jika Anda memiliki pertanyaan atau kekhawatiran tentang Kebijakan Privasi ini atau praktik data kami, silakan hubungi kami:"
+    }
+  },
+  "modal": {
+    "signup": {
+      "title": "Masukkan email Anda",
+      "subtitle": "Kami akan mengirimkan kata sandi akun Anda ke alamat email ini.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Saya setuju untuk menerima email promosi dan pembaruan dari Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Lanjutkan",
+      "termsText": "Dengan melanjutkan, Anda menyetujui",
+      "termsLink": "Ketentuan Layanan",
+      "and": "dan",
+      "privacyLink": "Kebijakan Privasi",
+      "or": "atau",
+      "hasAccount": "Sudah punya akun?",
+      "loginLink": "Masuk",
+      "creatingAccount": "Membuat akun...",
+      "accountCreated": "Akun dibuat!",
+      "yourPassword": "Kata sandi Anda:",
+      "savePassword": "Simpan kata sandi ini! Mengalihkan ke pembayaran..."
+    },
+    "login": {
+      "title": "Selamat datang kembali",
+      "subtitle": "Masuk ke akun Tracify Anda",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Kata sandi",
+      "loginBtn": "Masuk",
+      "loggingIn": "Sedang masuk...",
+      "loginSuccess": "Berhasil masuk! Mengalihkan...",
+      "or": "atau",
+      "noAccount": "Belum punya akun?",
+      "signupLink": "Daftar"
+    },
+    "errors": {
+      "connectionError": "Kesalahan koneksi. Silakan coba lagi.",
+      "accountCreationFailed": "Gagal membuat akun",
+      "loginFailed": "Gagal masuk"
     }
   }
 }

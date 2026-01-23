@@ -412,5 +412,43 @@
       "title": "11. 联系我们",
       "content": "如果您对本隐私政策或我们的数据处理方式有疑问或顾虑，请通过以下方式联系我们："
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "输入您的电子邮件",
+      "subtitle": "我们将把您的账户密码发送到此电子邮件地址。",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "我同意接收Tracify的促销邮件和更新",
+      "agreeRequired": "*",
+      "continueBtn": "继续",
+      "termsText": "继续即表示您同意我们的",
+      "termsLink": "服务条款",
+      "and": "和",
+      "privacyLink": "隐私政策",
+      "or": "或",
+      "hasAccount": "已有账户？",
+      "loginLink": "登录",
+      "creatingAccount": "正在创建账户...",
+      "accountCreated": "账户已创建！",
+      "yourPassword": "您的密码：",
+      "savePassword": "请保存此密码！正在跳转到支付页面..."
+    },
+    "login": {
+      "title": "欢迎回来",
+      "subtitle": "登录您的Tracify账户",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "密码",
+      "loginBtn": "登录",
+      "loggingIn": "正在登录...",
+      "loginSuccess": "登录成功！正在跳转...",
+      "or": "或",
+      "noAccount": "没有账户？",
+      "signupLink": "注册"
+    },
+    "errors": {
+      "connectionError": "连接错误，请重试。",
+      "accountCreationFailed": "创建账户失败",
+      "loginFailed": "登录失败"
+    }
   }
 }

@@ -412,5 +412,43 @@
       "title": "11. 聯絡我們",
       "content": "如果您對本私隱政策或我們的數據慣例有任何疑問或顧慮，請透過以下方式聯絡我們："
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "輸入您的電郵",
+      "subtitle": "我們會將帳戶密碼發送到此電郵地址。",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "我同意接收Tracify的推廣電郵及更新",
+      "agreeRequired": "*",
+      "continueBtn": "繼續",
+      "termsText": "繼續即表示您同意我們的",
+      "termsLink": "服務條款",
+      "and": "及",
+      "privacyLink": "私隱政策",
+      "or": "或",
+      "hasAccount": "已有帳戶？",
+      "loginLink": "登入",
+      "creatingAccount": "正在建立帳戶...",
+      "accountCreated": "帳戶已建立！",
+      "yourPassword": "您的密碼：",
+      "savePassword": "請保存此密碼！正在跳轉到付款頁面..."
+    },
+    "login": {
+      "title": "歡迎返嚟",
+      "subtitle": "登入您的Tracify帳戶",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "密碼",
+      "loginBtn": "登入",
+      "loggingIn": "正在登入...",
+      "loginSuccess": "登入成功！正在跳轉...",
+      "or": "或",
+      "noAccount": "冇帳戶？",
+      "signupLink": "註冊"
+    },
+    "errors": {
+      "connectionError": "連接錯誤，請重試。",
+      "accountCreationFailed": "建立帳戶失敗",
+      "loginFailed": "登入失敗"
+    }
   }
 }

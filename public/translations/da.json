@@ -412,5 +412,43 @@
       "title": "11. Kontakt os",
       "content": "Hvis du har spørgsmål eller bekymringer vedrørende denne privatlivspolitik eller vores datapraksisser, bedes du kontakte os:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Indtast din e-mail",
+      "subtitle": "Vi sender din kontoadgangskode til denne e-mailadresse.",
+      "emailPlaceholder": "din@email.com",
+      "agreeText": "Jeg accepterer at modtage kampagne-e-mails og opdateringer fra Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Fortsæt",
+      "termsText": "Ved at fortsætte accepterer du vores",
+      "termsLink": "Servicevilkår",
+      "and": "og",
+      "privacyLink": "Privatlivspolitik",
+      "or": "eller",
+      "hasAccount": "Har du allerede en konto?",
+      "loginLink": "Log ind",
+      "creatingAccount": "Opretter konto...",
+      "accountCreated": "Konto oprettet!",
+      "yourPassword": "Din adgangskode:",
+      "savePassword": "Gem denne adgangskode! Omdirigerer til betaling..."
+    },
+    "login": {
+      "title": "Velkommen tilbage",
+      "subtitle": "Log ind på din Tracify-konto",
+      "emailPlaceholder": "din@email.com",
+      "passwordPlaceholder": "Adgangskode",
+      "loginBtn": "Log ind",
+      "loggingIn": "Logger ind...",
+      "loginSuccess": "Login lykkedes! Omdirigerer...",
+      "or": "eller",
+      "noAccount": "Ingen konto?",
+      "signupLink": "Tilmeld dig"
+    },
+    "errors": {
+      "connectionError": "Forbindelsesfejl. Prøv igen.",
+      "accountCreationFailed": "Kunne ikke oprette konto",
+      "loginFailed": "Login mislykkedes"
+    }
   }
 }

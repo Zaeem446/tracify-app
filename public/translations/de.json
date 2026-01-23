@@ -92,175 +92,175 @@
     "terms": "Allgemeine Geschaftsbedingungen"
   },
   "contact": {
-    "title": "Contact Us",
-    "subtitle": "Our support team is here 24/7 to help you right away.",
-    "cardTitle": "We're Here to Help",
-    "cardSubtitle": "Our support team is here 24/7 to help you right away.",
+    "title": "Kontakt",
+    "subtitle": "Unser Support-Team ist 24/7 für Sie da.",
+    "cardTitle": "Wir sind für Sie da",
+    "cardSubtitle": "Unser Support-Team ist 24/7 für Sie da.",
     "form": {
       "name": "Name",
-      "namePlaceholder": "Your name",
-      "email": "Email",
-      "emailPlaceholder": "your.email@example.com",
-      "subject": "Subject",
-      "selectSubject": "Select a subject",
-      "technical": "Technical Support",
-      "billing": "Billing Question",
-      "feature": "Feature Request",
-      "feedback": "General Feedback",
-      "other": "Other",
-      "message": "Message",
-      "messagePlaceholder": "Tell us how we can help...",
-      "notRobot": "I'm not a robot",
-      "send": "Send Message"
+      "namePlaceholder": "Ihr Name",
+      "email": "E-Mail",
+      "emailPlaceholder": "ihre.email@beispiel.com",
+      "subject": "Betreff",
+      "selectSubject": "Betreff auswählen",
+      "technical": "Technischer Support",
+      "billing": "Rechnungsfrage",
+      "feature": "Funktionsanfrage",
+      "feedback": "Allgemeines Feedback",
+      "other": "Sonstiges",
+      "message": "Nachricht",
+      "messagePlaceholder": "Teilen Sie uns mit, wie wir helfen können...",
+      "notRobot": "Ich bin kein Roboter",
+      "send": "Nachricht senden"
     },
     "footer": {
-      "home": "Home"
+      "home": "Startseite"
     }
   },
   "cancel": {
-    "title": "Cancel Your Subscription",
-    "subtitle": "Enter your email to cancel your subscription. This will turn off auto-renewal and prevent any future charges.",
+    "title": "Abonnement kündigen",
+    "subtitle": "Geben Sie Ihre E-Mail ein, um Ihr Abonnement zu kündigen. Dies deaktiviert die automatische Verlängerung.",
     "form": {
-      "emailLabel": "Email Address",
-      "emailPlaceholder": "hello@email.com",
-      "submitBtn": "Cancel Subscription",
-      "helpText": "If you don't remember which email you used, check your inbox for a welcome email from Tracify. If you still can't find it,",
-      "contactSupport": "contact support"
+      "emailLabel": "E-Mail-Adresse",
+      "emailPlaceholder": "hallo@email.com",
+      "submitBtn": "Abonnement kündigen",
+      "helpText": "Falls Sie sich nicht erinnern, welche E-Mail Sie verwendet haben, überprüfen Sie Ihren Posteingang nach einer Willkommens-E-Mail von Tracify.",
+      "contactSupport": "Support kontaktieren"
     },
     "whyCharged": {
-      "title": "Why was I charged?"
+      "title": "Warum wurde ich belastet?"
     },
     "needHelp": {
-      "title": "Need help?",
-      "description": "If you're experiencing an issue or have any questions, our support team is here for you 24/7. Just reach out and we'll get back to you quickly!",
-      "contactBtn": "Contact Support"
+      "title": "Brauchen Sie Hilfe?",
+      "description": "Bei Problemen oder Fragen ist unser Support-Team 24/7 für Sie da.",
+      "contactBtn": "Support kontaktieren"
     }
   },
   "dashboard": {
     "nav": {
-      "dashboard": "Dashboard",
-      "account": "Account",
-      "contact": "Contact",
-      "settings": "Settings",
-      "logout": "Logout"
+      "dashboard": "Übersicht",
+      "account": "Konto",
+      "contact": "Kontakt",
+      "settings": "Einstellungen",
+      "logout": "Abmelden"
     },
-    "title": "Track a Phone Location",
-    "subtitle": "Send a location request with consent-based tracking",
+    "title": "Telefonstandort verfolgen",
+    "subtitle": "Senden Sie eine Standortanfrage mit zustimmungsbasierter Verfolgung",
     "sendRequest": {
-      "title": "Send Location Request",
-      "phoneNumber": "Phone Number",
+      "title": "Standortanfrage senden",
+      "phoneNumber": "Telefonnummer",
       "phonePlaceholder": "3001234567",
-      "message": "Message",
-      "send": "Send",
-      "previewMessage": "Preview Message",
-      "rateLimit": "Due to security and privacy reasons, you can only send a message once every 3 hours."
+      "message": "Nachricht",
+      "send": "Senden",
+      "previewMessage": "Nachricht Vorschau",
+      "rateLimit": "Aus Sicherheits- und Datenschutzgründen können Sie nur alle 3 Stunden eine Nachricht senden."
     },
     "recentRequests": {
-      "title": "Recent Requests",
-      "noRequests": "No tracking requests yet"
+      "title": "Letzte Anfragen",
+      "noRequests": "Noch keine Tracking-Anfragen"
     },
     "trackingActivity": {
-      "title": "Recent Tracking Activity"
+      "title": "Letzte Tracking-Aktivität"
     },
     "disclaimer": {
-      "title": "Important Disclaimer",
-      "point1": "Tracify requires explicit consent from the phone owner before sharing their location",
-      "point2": "This service is intended for legitimate purposes only (finding lost devices, family safety)",
-      "point3": "Unauthorized tracking or stalking is illegal and strictly prohibited",
-      "point4": "Location accuracy depends on device settings and network conditions",
-      "point5": "We are not responsible for misuse of this service",
-      "needHelp": "Need help?",
-      "contactSupport": "Contact our support team"
+      "title": "Wichtiger Hinweis",
+      "point1": "Tracify erfordert die ausdrückliche Zustimmung des Telefonbesitzers, bevor der Standort geteilt wird",
+      "point2": "Dieser Dienst ist nur für legitime Zwecke gedacht (verlorene Geräte finden, Familiensicherheit)",
+      "point3": "Unbefugte Verfolgung oder Stalking ist illegal und streng verboten",
+      "point4": "Die Standortgenauigkeit hängt von Geräteeinstellungen und Netzwerkbedingungen ab",
+      "point5": "Wir sind nicht verantwortlich für den Missbrauch dieses Dienstes",
+      "needHelp": "Brauchen Sie Hilfe?",
+      "contactSupport": "Kontaktieren Sie unser Support-Team"
     },
     "subscription": {
-      "currentPlan": "Current Plan",
-      "loading": "Loading...",
-      "manage": "Manage Subscription"
+      "currentPlan": "Aktueller Plan",
+      "loading": "Lädt...",
+      "manage": "Abonnement verwalten"
     },
     "messageModal": {
-      "title": "Message Settings",
-      "description": "We've selected the messages with the highest location-sharing rates. Select one from the list below.",
-      "language": "Message Language",
-      "selectTemplate": "Select a message template",
-      "template1": "I'm the owner of this phone, and it's currently lost. If you've found it, please let me know.",
-      "template2": "If this phone isn't yours, could you let me know?",
-      "template3": "No rush, but check this out when you have a sec:",
-      "apply": "Apply"
+      "title": "Nachrichteneinstellungen",
+      "description": "Wir haben die Nachrichten mit den höchsten Standort-Freigaberaten ausgewählt. Wählen Sie eine aus der Liste unten.",
+      "language": "Nachrichtensprache",
+      "selectTemplate": "Wählen Sie eine Nachrichtenvorlage",
+      "template1": "Ich bin der Besitzer dieses Telefons und es ist gerade verloren. Wenn Sie es gefunden haben, lassen Sie es mich bitte wissen.",
+      "template2": "Wenn dieses Telefon nicht Ihnen gehört, könnten Sie mir Bescheid geben?",
+      "template3": "Keine Eile, aber schau dir das an, wenn du Zeit hast:",
+      "apply": "Anwenden"
     },
     "trustpilot": {
-      "title": "Help Us Improve!",
-      "subtitle": "Share your experience before using Tracify",
-      "message": "We value your feedback! Please take a moment to rate your experience on Trustpilot.",
-      "helpText": "Your review helps us maintain quality service",
-      "leaveReview": "Leave a Review on Trustpilot",
-      "skip": "Skip for Now"
+      "title": "Helfen Sie uns zu verbessern!",
+      "subtitle": "Teilen Sie Ihre Erfahrung vor der Nutzung von Tracify",
+      "message": "Wir schätzen Ihr Feedback! Bitte nehmen Sie sich einen Moment Zeit, um Ihre Erfahrung auf Trustpilot zu bewerten.",
+      "helpText": "Ihre Bewertung hilft uns, qualitativ hochwertigen Service zu bieten",
+      "leaveReview": "Bewertung auf Trustpilot hinterlassen",
+      "skip": "Vorerst überspringen"
     },
     "locationModal": {
-      "title": "Location Received",
-      "coordinates": "Coordinates",
-      "openMap": "Open in Google Maps",
-      "close": "Close"
+      "title": "Standort empfangen",
+      "coordinates": "Koordinaten",
+      "openMap": "In Google Maps öffnen",
+      "close": "Schließen"
     }
   },
   "payment": {
-    "completeSubscription": "Complete Your Subscription",
-    "subtitle": "Start tracking phone locations with consent",
-    "title": "Payment",
-    "trialThen": "24h trial, then",
-    "monthAfterTrial": "/month after trial",
-    "whatsIncluded": "What's included:",
-    "unlimitedRequests": "✓ Unlimited location requests",
-    "realtimeTracking": "✓ Real-time tracking",
-    "smsNotifications": "✓ SMS notifications",
-    "247support": "✓ 24/7 support",
-    "paymentDetails": "Payment Details",
+    "completeSubscription": "Abonnement abschließen",
+    "subtitle": "Beginnen Sie mit der Verfolgung von Telefonstandorten mit Zustimmung",
+    "title": "Zahlung",
+    "trialThen": "24h Testversion, dann",
+    "monthAfterTrial": "/Monat nach Testversion",
+    "whatsIncluded": "Was enthalten ist:",
+    "unlimitedRequests": "✓ Unbegrenzte Standortanfragen",
+    "realtimeTracking": "✓ Echtzeit-Tracking",
+    "smsNotifications": "✓ SMS-Benachrichtigungen",
+    "247support": "✓ 24/7 Support",
+    "paymentDetails": "Zahlungsdetails",
     "plan": "Plan",
-    "24hourTrial": "24-Hour Trial",
-    "total": "Total",
-    "pay": "Pay",
-    "securePayment": "Secure payment with SSL encryption"
+    "24hourTrial": "24-Stunden-Testversion",
+    "total": "Gesamt",
+    "pay": "Bezahlen",
+    "securePayment": "Sichere Zahlung mit SSL-Verschlüsselung"
   },
   "account": {
     "nav": {
-      "dashboard": "Dashboard",
-      "account": "Account",
-      "contact": "Contact",
-      "logout": "Logout"
+      "dashboard": "Übersicht",
+      "account": "Konto",
+      "contact": "Kontakt",
+      "logout": "Abmelden"
     },
-    "title": "Account Settings",
-    "subtitle": "Manage your account and subscription",
+    "title": "Kontoeinstellungen",
+    "subtitle": "Verwalten Sie Ihr Konto und Abonnement",
     "accountInfo": {
-      "title": "Account Information",
-      "email": "Email Address",
-      "memberSince": "Member Since",
-      "loading": "Loading..."
+      "title": "Kontoinformationen",
+      "email": "E-Mail-Adresse",
+      "memberSince": "Mitglied seit",
+      "loading": "Lädt..."
     },
     "subscription": {
-      "title": "Subscription",
+      "title": "Abonnement",
       "plan": "Plan",
-      "nextPayment": "Next Payment",
+      "nextPayment": "Nächste Zahlung",
       "status": "Status",
-      "active": "Active",
-      "loading": "Loading...",
-      "cancelButton": "Cancel Subscription"
+      "active": "Aktiv",
+      "loading": "Lädt...",
+      "cancelButton": "Abonnement kündigen"
     },
     "paymentHistory": {
-      "title": "Payment History",
-      "noHistory": "No payment history available"
+      "title": "Zahlungsverlauf",
+      "noHistory": "Kein Zahlungsverlauf verfügbar"
     },
     "cancelModal": {
-      "title": "Are You Sure?",
-      "description": "Cancelling your subscription means:",
-      "point1": "You'll lose access to premium features",
-      "point2": "Your subscription will end immediately",
-      "point3": "You won't be charged again",
-      "confirm": "Cancel Subscription",
-      "goBack": "Go Back"
+      "title": "Sind Sie sicher?",
+      "description": "Die Kündigung Ihres Abonnements bedeutet:",
+      "point1": "Sie verlieren den Zugang zu Premium-Funktionen",
+      "point2": "Ihr Abonnement endet sofort",
+      "point3": "Sie werden nicht erneut belastet",
+      "confirm": "Abonnement kündigen",
+      "goBack": "Zurück"
     },
     "successModal": {
-      "title": "Subscription Cancelled",
-      "message": "We've confirmed your cancellation, and you won't receive any further charges from us. A confirmation email has also been sent to your inbox.",
-      "close": "Close"
+      "title": "Abonnement gekündigt",
+      "message": "Wir haben Ihre Kündigung bestätigt und Sie erhalten keine weiteren Gebühren von uns. Eine Bestätigungs-E-Mail wurde ebenfalls an Ihren Posteingang gesendet.",
+      "close": "Schließen"
     }
   },
   "terms": {
@@ -411,6 +411,44 @@
     "contact": {
       "title": "11. Kontakt",
       "content": "Wenn Sie Fragen oder Bedenken zu dieser Datenschutzrichtlinie oder unseren Datenpraktiken haben, kontaktieren Sie uns bitte:"
+    }
+  },
+  "modal": {
+    "signup": {
+      "title": "E-Mail eingeben",
+      "subtitle": "Wir senden Ihr Kontopasswort an diese E-Mail-Adresse.",
+      "emailPlaceholder": "ihre@email.com",
+      "agreeText": "Ich stimme dem Erhalt von Werbe-E-Mails und Updates von Tracify zu",
+      "agreeRequired": "*",
+      "continueBtn": "Fortfahren",
+      "termsText": "Mit dem Fortfahren akzeptieren Sie unsere",
+      "termsLink": "Nutzungsbedingungen",
+      "and": "und",
+      "privacyLink": "Datenschutzrichtlinie",
+      "or": "oder",
+      "hasAccount": "Bereits ein Konto?",
+      "loginLink": "Anmelden",
+      "creatingAccount": "Konto wird erstellt...",
+      "accountCreated": "Konto erstellt!",
+      "yourPassword": "Ihr Passwort:",
+      "savePassword": "Speichern Sie dieses Passwort! Weiterleitung zur Zahlung..."
+    },
+    "login": {
+      "title": "Willkommen zurück",
+      "subtitle": "Melden Sie sich bei Ihrem Tracify-Konto an",
+      "emailPlaceholder": "ihre@email.com",
+      "passwordPlaceholder": "Passwort",
+      "loginBtn": "Anmelden",
+      "loggingIn": "Anmeldung läuft...",
+      "loginSuccess": "Anmeldung erfolgreich! Weiterleitung...",
+      "or": "oder",
+      "noAccount": "Kein Konto?",
+      "signupLink": "Registrieren"
+    },
+    "errors": {
+      "connectionError": "Verbindungsfehler. Bitte versuchen Sie es erneut.",
+      "accountCreationFailed": "Kontoerstellung fehlgeschlagen",
+      "loginFailed": "Anmeldung fehlgeschlagen"
     }
   }
 }

@@ -412,5 +412,43 @@
       "title": "11. Hubungi Kami",
       "content": "Jika anda mempunyai soalan atau kebimbangan tentang Dasar Privasi ini atau amalan data kami, sila hubungi kami:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Masukkan e-mel anda",
+      "subtitle": "Kami akan menghantar kata laluan akaun anda ke alamat e-mel ini.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Saya bersetuju untuk menerima e-mel promosi dan kemas kini daripada Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Teruskan",
+      "termsText": "Dengan meneruskan, anda bersetuju dengan",
+      "termsLink": "Syarat Perkhidmatan",
+      "and": "dan",
+      "privacyLink": "Dasar Privasi",
+      "or": "atau",
+      "hasAccount": "Sudah mempunyai akaun?",
+      "loginLink": "Log masuk",
+      "creatingAccount": "Mencipta akaun...",
+      "accountCreated": "Akaun dicipta!",
+      "yourPassword": "Kata laluan anda:",
+      "savePassword": "Simpan kata laluan ini! Mengalihkan ke pembayaran..."
+    },
+    "login": {
+      "title": "Selamat kembali",
+      "subtitle": "Log masuk ke akaun Tracify anda",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Kata laluan",
+      "loginBtn": "Log masuk",
+      "loggingIn": "Sedang log masuk...",
+      "loginSuccess": "Log masuk berjaya! Mengalihkan...",
+      "or": "atau",
+      "noAccount": "Tiada akaun?",
+      "signupLink": "Daftar"
+    },
+    "errors": {
+      "connectionError": "Ralat sambungan. Sila cuba lagi.",
+      "accountCreationFailed": "Gagal mencipta akaun",
+      "loginFailed": "Gagal log masuk"
+    }
   }
 }

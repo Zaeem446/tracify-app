@@ -237,48 +237,48 @@
     "optional": "ไม่บังคับ"
   },
   "contact": {
-    "title": "Contact Us",
-    "subtitle": "Our support team is here 24/7 to help you right away.",
-    "cardTitle": "We're Here to Help",
-    "cardSubtitle": "Our support team is here 24/7 to help you right away.",
+    "title": "ติดต่อเรา",
+    "subtitle": "ทีมสนับสนุนของเราพร้อมให้บริการตลอด 24 ชั่วโมง",
+    "cardTitle": "เราพร้อมช่วยเหลือคุณ",
+    "cardSubtitle": "ทีมสนับสนุนของเราพร้อมให้บริการตลอด 24 ชั่วโมง",
     "form": {
-      "name": "Name",
-      "namePlaceholder": "Your name",
-      "email": "Email",
-      "emailPlaceholder": "your.email@example.com",
-      "subject": "Subject",
-      "selectSubject": "Select a subject",
-      "technical": "Technical Support",
-      "billing": "Billing Question",
-      "feature": "Feature Request",
-      "feedback": "General Feedback",
-      "other": "Other",
-      "message": "Message",
-      "messagePlaceholder": "Tell us how we can help...",
-      "notRobot": "I'm not a robot",
-      "send": "Send Message"
+      "name": "ชื่อ",
+      "namePlaceholder": "ชื่อของคุณ",
+      "email": "อีเมล",
+      "emailPlaceholder": "อีเมล@ตัวอย่าง.com",
+      "subject": "หัวข้อ",
+      "selectSubject": "เลือกหัวข้อ",
+      "technical": "การสนับสนุนทางเทคนิค",
+      "billing": "คำถามเกี่ยวกับการเรียกเก็บเงิน",
+      "feature": "คำขอฟีเจอร์",
+      "feedback": "ข้อเสนอแนะทั่วไป",
+      "other": "อื่นๆ",
+      "message": "ข้อความ",
+      "messagePlaceholder": "บอกเราว่าเราจะช่วยได้อย่างไร...",
+      "notRobot": "ฉันไม่ใช่หุ่นยนต์",
+      "send": "ส่งข้อความ"
     },
     "footer": {
-      "home": "Home"
+      "home": "หน้าแรก"
     }
   },
   "cancel": {
-    "title": "Cancel Your Subscription",
-    "subtitle": "Enter your email to cancel your subscription. This will turn off auto-renewal and prevent any future charges.",
+    "title": "ยกเลิกการสมัครสมาชิก",
+    "subtitle": "กรอกอีเมลของคุณเพื่อยกเลิกการสมัครสมาชิก",
     "form": {
-      "emailLabel": "Email Address",
-      "emailPlaceholder": "hello@email.com",
-      "submitBtn": "Cancel Subscription",
-      "helpText": "If you don't remember which email you used, check your inbox for a welcome email from Tracify. If you still can't find it,",
-      "contactSupport": "contact support"
+      "emailLabel": "ที่อยู่อีเมล",
+      "emailPlaceholder": "สวัสดี@email.com",
+      "submitBtn": "ยกเลิกการสมัครสมาชิก",
+      "helpText": "หากคุณจำไม่ได้ว่าใช้อีเมลใด ให้ตรวจสอบกล่องจดหมายเข้าสำหรับอีเมลต้อนรับจาก Tracify",
+      "contactSupport": "ติดต่อฝ่ายสนับสนุน"
     },
     "whyCharged": {
-      "title": "Why was I charged?"
+      "title": "ทำไมฉันถูกเรียกเก็บเงิน?"
     },
     "needHelp": {
-      "title": "Need help?",
-      "description": "If you're experiencing an issue or have any questions, our support team is here for you 24/7. Just reach out and we'll get back to you quickly!",
-      "contactBtn": "Contact Support"
+      "title": "ต้องการความช่วยเหลือ?",
+      "description": "หากคุณประสบปัญหา ทีมสนับสนุนของเราพร้อมให้บริการตลอด 24 ชั่วโมง",
+      "contactBtn": "ติดต่อฝ่ายสนับสนุน"
     }
   },
   "terms": {
@@ -429,6 +429,44 @@
     "contact": {
       "title": "11. ติดต่อเรา",
       "content": "หากคุณมีคำถามหรือข้อกังวลเกี่ยวกับนโยบายความเป็นส่วนตัวนี้หรือแนวทางปฏิบัติด้านข้อมูลของเรา โปรดติดต่อเรา:"
+    }
+  },
+  "modal": {
+    "signup": {
+      "title": "กรอกอีเมลของคุณ",
+      "subtitle": "เราจะส่งรหัสผ่านบัญชีของคุณไปยังอีเมลนี้",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "ฉันยินยอมรับอีเมลโปรโมชั่นและอัปเดตจาก Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "ดำเนินการต่อ",
+      "termsText": "เมื่อดำเนินการต่อ คุณยอมรับ",
+      "termsLink": "ข้อกำหนดการให้บริการ",
+      "and": "และ",
+      "privacyLink": "นโยบายความเป็นส่วนตัว",
+      "or": "หรือ",
+      "hasAccount": "มีบัญชีอยู่แล้ว?",
+      "loginLink": "เข้าสู่ระบบ",
+      "creatingAccount": "กำลังสร้างบัญชี...",
+      "accountCreated": "สร้างบัญชีแล้ว!",
+      "yourPassword": "รหัสผ่านของคุณ:",
+      "savePassword": "บันทึกรหัสผ่านนี้! กำลังเปลี่ยนเส้นทางไปยังการชำระเงิน..."
+    },
+    "login": {
+      "title": "ยินดีต้อนรับกลับ",
+      "subtitle": "เข้าสู่ระบบบัญชี Tracify ของคุณ",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "รหัสผ่าน",
+      "loginBtn": "เข้าสู่ระบบ",
+      "loggingIn": "กำลังเข้าสู่ระบบ...",
+      "loginSuccess": "เข้าสู่ระบบสำเร็จ! กำลังเปลี่ยนเส้นทาง...",
+      "or": "หรือ",
+      "noAccount": "ยังไม่มีบัญชี?",
+      "signupLink": "สมัครสมาชิก"
+    },
+    "errors": {
+      "connectionError": "เกิดข้อผิดพลาดในการเชื่อมต่อ กรุณาลองใหม่อีกครั้ง",
+      "accountCreationFailed": "สร้างบัญชีไม่สำเร็จ",
+      "loginFailed": "เข้าสู่ระบบไม่สำเร็จ"
     }
   }
 }

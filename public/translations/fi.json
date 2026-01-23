@@ -412,5 +412,43 @@
       "title": "11. Ota yhteyttä",
       "content": "Jos sinulla on kysyttävää tai huolenaiheita tästä tietosuojakäytännöstä tai tietokäytännöistämme, ota meihin yhteyttä:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Syötä sähköpostiosoitteesi",
+      "subtitle": "Lähetämme tilisi salasanan tähän sähköpostiosoitteeseen.",
+      "emailPlaceholder": "sinun@email.com",
+      "agreeText": "Hyväksyn vastaanottavani Tracifyn mainosviestejä ja päivityksiä",
+      "agreeRequired": "*",
+      "continueBtn": "Jatka",
+      "termsText": "Jatkamalla hyväksyt",
+      "termsLink": "Käyttöehdot",
+      "and": "ja",
+      "privacyLink": "Tietosuojakäytännön",
+      "or": "tai",
+      "hasAccount": "Onko sinulla jo tili?",
+      "loginLink": "Kirjaudu sisään",
+      "creatingAccount": "Luodaan tiliä...",
+      "accountCreated": "Tili luotu!",
+      "yourPassword": "Salasanasi:",
+      "savePassword": "Tallenna tämä salasana! Ohjataan maksuun..."
+    },
+    "login": {
+      "title": "Tervetuloa takaisin",
+      "subtitle": "Kirjaudu Tracify-tilillesi",
+      "emailPlaceholder": "sinun@email.com",
+      "passwordPlaceholder": "Salasana",
+      "loginBtn": "Kirjaudu",
+      "loggingIn": "Kirjaudutaan...",
+      "loginSuccess": "Kirjautuminen onnistui! Ohjataan...",
+      "or": "tai",
+      "noAccount": "Ei tiliä?",
+      "signupLink": "Rekisteröidy"
+    },
+    "errors": {
+      "connectionError": "Yhteysvirhe. Yritä uudelleen.",
+      "accountCreationFailed": "Tilin luominen epäonnistui",
+      "loginFailed": "Kirjautuminen epäonnistui"
+    }
   }
 }

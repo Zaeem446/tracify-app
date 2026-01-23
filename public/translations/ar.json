@@ -412,5 +412,43 @@
       "title": "11. اتصل بنا",
       "content": "إذا كانت لديك أسئلة أو مخاوف بشأن سياسة الخصوصية هذه أو ممارسات البيانات لدينا، يرجى الاتصال بنا:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "أدخل بريدك الإلكتروني",
+      "subtitle": "سنرسل كلمة مرور حسابك إلى هذا البريد الإلكتروني.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "أوافق على تلقي رسائل البريد الإلكتروني الترويجية والتحديثات من Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "متابعة",
+      "termsText": "بالمتابعة، أنت توافق على",
+      "termsLink": "شروط الخدمة",
+      "and": "و",
+      "privacyLink": "سياسة الخصوصية",
+      "or": "أو",
+      "hasAccount": "لديك حساب بالفعل؟",
+      "loginLink": "تسجيل الدخول",
+      "creatingAccount": "جاري إنشاء الحساب...",
+      "accountCreated": "تم إنشاء الحساب!",
+      "yourPassword": "كلمة المرور الخاصة بك:",
+      "savePassword": "احفظ كلمة المرور هذه! جاري التحويل إلى الدفع..."
+    },
+    "login": {
+      "title": "مرحباً بعودتك",
+      "subtitle": "سجل الدخول إلى حسابك في Tracify",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "كلمة المرور",
+      "loginBtn": "تسجيل الدخول",
+      "loggingIn": "جاري تسجيل الدخول...",
+      "loginSuccess": "تم تسجيل الدخول بنجاح! جاري التحويل...",
+      "or": "أو",
+      "noAccount": "ليس لديك حساب؟",
+      "signupLink": "إنشاء حساب"
+    },
+    "errors": {
+      "connectionError": "خطأ في الاتصال. يرجى المحاولة مرة أخرى.",
+      "accountCreationFailed": "فشل إنشاء الحساب",
+      "loginFailed": "فشل تسجيل الدخول"
+    }
   }
 }

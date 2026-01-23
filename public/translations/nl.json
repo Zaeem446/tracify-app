@@ -412,5 +412,43 @@
       "title": "11. Contact opnemen",
       "content": "Als u vragen of zorgen heeft over dit Privacybeleid of onze gegevenspraktijken, neem dan contact met ons op:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Voer uw e-mail in",
+      "subtitle": "We sturen uw accountwachtwoord naar dit e-mailadres.",
+      "emailPlaceholder": "uw@email.com",
+      "agreeText": "Ik ga akkoord met het ontvangen van promotionele e-mails en updates van Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Doorgaan",
+      "termsText": "Door door te gaan, gaat u akkoord met onze",
+      "termsLink": "Servicevoorwaarden",
+      "and": "en",
+      "privacyLink": "Privacybeleid",
+      "or": "of",
+      "hasAccount": "Heeft u al een account?",
+      "loginLink": "Inloggen",
+      "creatingAccount": "Account aanmaken...",
+      "accountCreated": "Account aangemaakt!",
+      "yourPassword": "Uw wachtwoord:",
+      "savePassword": "Bewaar dit wachtwoord! Doorsturen naar betaling..."
+    },
+    "login": {
+      "title": "Welkom terug",
+      "subtitle": "Log in op uw Tracify-account",
+      "emailPlaceholder": "uw@email.com",
+      "passwordPlaceholder": "Wachtwoord",
+      "loginBtn": "Inloggen",
+      "loggingIn": "Inloggen...",
+      "loginSuccess": "Succesvol ingelogd! Doorsturen...",
+      "or": "of",
+      "noAccount": "Geen account?",
+      "signupLink": "Aanmelden"
+    },
+    "errors": {
+      "connectionError": "Verbindingsfout. Probeer het opnieuw.",
+      "accountCreationFailed": "Account aanmaken mislukt",
+      "loginFailed": "Inloggen mislukt"
+    }
   }
 }

@@ -412,5 +412,43 @@
       "title": "11. Susisiekite su mumis",
       "content": "Jei turite klausimų ar rūpesčių dėl šios Privatumo politikos ar mūsų duomenų tvarkymo praktikų, susisiekite su mumis:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Įveskite savo el. paštą",
+      "subtitle": "Atsiųsime jūsų paskyros slaptažodį šiuo el. pašto adresu.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Sutinku gauti reklaminius el. laiškus ir naujienas iš Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Tęsti",
+      "termsText": "Tęsdami sutinkate su mūsų",
+      "termsLink": "Paslaugų teikimo sąlygomis",
+      "and": "ir",
+      "privacyLink": "Privatumo politika",
+      "or": "arba",
+      "hasAccount": "Jau turite paskyrą?",
+      "loginLink": "Prisijungti",
+      "creatingAccount": "Kuriama paskyra...",
+      "accountCreated": "Paskyra sukurta!",
+      "yourPassword": "Jūsų slaptažodis:",
+      "savePassword": "Išsaugokite šį slaptažodį! Nukreipiama į mokėjimą..."
+    },
+    "login": {
+      "title": "Sveiki sugrįžę",
+      "subtitle": "Prisijunkite prie savo Tracify paskyros",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Slaptažodis",
+      "loginBtn": "Prisijungti",
+      "loggingIn": "Jungiamasi...",
+      "loginSuccess": "Prisijungimas sėkmingas! Nukreipiama...",
+      "or": "arba",
+      "noAccount": "Neturite paskyros?",
+      "signupLink": "Registruotis"
+    },
+    "errors": {
+      "connectionError": "Ryšio klaida. Bandykite dar kartą.",
+      "accountCreationFailed": "Nepavyko sukurti paskyros",
+      "loginFailed": "Prisijungimas nepavyko"
+    }
   }
 }

@@ -412,5 +412,43 @@
       "title": "11. 문의하기",
       "content": "본 개인정보 처리방침 또는 저희의 데이터 관행에 대해 질문이나 우려 사항이 있으시면 문의해 주세요:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "이메일을 입력하세요",
+      "subtitle": "계정 비밀번호를 이 이메일 주소로 보내드립니다.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Tracify의 프로모션 이메일 및 업데이트 수신에 동의합니다",
+      "agreeRequired": "*",
+      "continueBtn": "계속",
+      "termsText": "계속하시면 당사의",
+      "termsLink": "서비스 약관",
+      "and": "및",
+      "privacyLink": "개인정보 보호정책",
+      "or": "또는",
+      "hasAccount": "이미 계정이 있으신가요?",
+      "loginLink": "로그인",
+      "creatingAccount": "계정 생성 중...",
+      "accountCreated": "계정이 생성되었습니다!",
+      "yourPassword": "비밀번호:",
+      "savePassword": "이 비밀번호를 저장하세요! 결제 페이지로 이동합니다..."
+    },
+    "login": {
+      "title": "다시 오신 것을 환영합니다",
+      "subtitle": "Tracify 계정에 로그인",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "비밀번호",
+      "loginBtn": "로그인",
+      "loggingIn": "로그인 중...",
+      "loginSuccess": "로그인 성공! 리디렉션 중...",
+      "or": "또는",
+      "noAccount": "계정이 없으신가요?",
+      "signupLink": "가입하기"
+    },
+    "errors": {
+      "connectionError": "연결 오류. 다시 시도해주세요.",
+      "accountCreationFailed": "계정 생성 실패",
+      "loginFailed": "로그인 실패"
+    }
   }
 }

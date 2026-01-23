@@ -412,5 +412,43 @@
       "title": "11. हमसे संपर्क करें",
       "content": "यदि आपके पास इस गोपनीयता नीति या हमारी डेटा प्रथाओं के बारे में प्रश्न या चिंताएं हैं, तो कृपया हमसे संपर्क करें:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "अपना ईमेल दर्ज करें",
+      "subtitle": "हम आपके खाते का पासवर्ड इस ईमेल पते पर भेजेंगे।",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "मैं Tracify से प्रचार ईमेल और अपडेट प्राप्त करने के लिए सहमत हूं",
+      "agreeRequired": "*",
+      "continueBtn": "जारी रखें",
+      "termsText": "जारी रखकर, आप हमारी",
+      "termsLink": "सेवा की शर्तें",
+      "and": "और",
+      "privacyLink": "गोपनीयता नीति",
+      "or": "या",
+      "hasAccount": "पहले से खाता है?",
+      "loginLink": "लॉग इन करें",
+      "creatingAccount": "खाता बनाया जा रहा है...",
+      "accountCreated": "खाता बन गया!",
+      "yourPassword": "आपका पासवर्ड:",
+      "savePassword": "इस पासवर्ड को सहेजें! भुगतान पर रीडायरेक्ट हो रहा है..."
+    },
+    "login": {
+      "title": "वापस स्वागत है",
+      "subtitle": "अपने Tracify खाते में लॉग इन करें",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "पासवर्ड",
+      "loginBtn": "लॉग इन करें",
+      "loggingIn": "लॉग इन हो रहा है...",
+      "loginSuccess": "लॉगिन सफल! रीडायरेक्ट हो रहा है...",
+      "or": "या",
+      "noAccount": "खाता नहीं है?",
+      "signupLink": "साइन अप करें"
+    },
+    "errors": {
+      "connectionError": "कनेक्शन त्रुटि। कृपया पुनः प्रयास करें।",
+      "accountCreationFailed": "खाता बनाने में विफल",
+      "loginFailed": "लॉगिन विफल"
+    }
   }
 }

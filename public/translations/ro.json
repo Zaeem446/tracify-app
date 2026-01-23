@@ -412,5 +412,43 @@
       "title": "11. Contactati-ne",
       "content": "Daca aveti intrebari sau preocupari despre aceasta Politica de confidentialitate sau practicile noastre de date, va rugam sa ne contactati:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Introduceți email-ul dvs.",
+      "subtitle": "Vom trimite parola contului dvs. la această adresă de email.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Sunt de acord să primesc email-uri promoționale și actualizări de la Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Continuă",
+      "termsText": "Continuând, sunteți de acord cu",
+      "termsLink": "Termenii și Condițiile",
+      "and": "și",
+      "privacyLink": "Politica de Confidențialitate",
+      "or": "sau",
+      "hasAccount": "Aveți deja un cont?",
+      "loginLink": "Conectați-vă",
+      "creatingAccount": "Se creează contul...",
+      "accountCreated": "Cont creat!",
+      "yourPassword": "Parola dvs.:",
+      "savePassword": "Salvați această parolă! Redirecționare către plată..."
+    },
+    "login": {
+      "title": "Bine ați revenit",
+      "subtitle": "Conectați-vă la contul Tracify",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Parolă",
+      "loginBtn": "Conectare",
+      "loggingIn": "Se conectează...",
+      "loginSuccess": "Conectare reușită! Redirecționare...",
+      "or": "sau",
+      "noAccount": "Nu aveți cont?",
+      "signupLink": "Înregistrați-vă"
+    },
+    "errors": {
+      "connectionError": "Eroare de conexiune. Vă rugăm să încercați din nou.",
+      "accountCreationFailed": "Crearea contului a eșuat",
+      "loginFailed": "Conectarea a eșuat"
+    }
   }
 }

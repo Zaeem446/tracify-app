@@ -412,5 +412,43 @@
       "title": "11. Kapcsolat",
       "content": "Ha kérdése vagy aggálya van ezzel az Adatvédelmi Szabályzattal vagy adatkezelési gyakorlatainkkal kapcsolatban, kérjük, lépjen kapcsolatba velünk:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Adja meg email címét",
+      "subtitle": "A fiók jelszavát erre az email címre küldjük.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Hozzájárulok, hogy promóciós emaileket és frissítéseket kapjak a Tracify-tól",
+      "agreeRequired": "*",
+      "continueBtn": "Folytatás",
+      "termsText": "A folytatással elfogadja a",
+      "termsLink": "Szolgáltatási feltételeket",
+      "and": "és",
+      "privacyLink": "Adatvédelmi irányelveket",
+      "or": "vagy",
+      "hasAccount": "Már van fiókja?",
+      "loginLink": "Bejelentkezés",
+      "creatingAccount": "Fiók létrehozása...",
+      "accountCreated": "Fiók létrehozva!",
+      "yourPassword": "Az Ön jelszava:",
+      "savePassword": "Mentse el ezt a jelszót! Átirányítás a fizetéshez..."
+    },
+    "login": {
+      "title": "Üdvözöljük újra",
+      "subtitle": "Jelentkezzen be Tracify fiókjába",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Jelszó",
+      "loginBtn": "Bejelentkezés",
+      "loggingIn": "Bejelentkezés...",
+      "loginSuccess": "Sikeres bejelentkezés! Átirányítás...",
+      "or": "vagy",
+      "noAccount": "Nincs fiókja?",
+      "signupLink": "Regisztráció"
+    },
+    "errors": {
+      "connectionError": "Kapcsolati hiba. Kérjük, próbálja újra.",
+      "accountCreationFailed": "Fiók létrehozása sikertelen",
+      "loginFailed": "Bejelentkezés sikertelen"
+    }
   }
 }

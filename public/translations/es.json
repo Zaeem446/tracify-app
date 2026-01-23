@@ -412,5 +412,43 @@
       "title": "11. Contáctenos",
       "content": "Si tiene preguntas o inquietudes sobre esta Política de Privacidad o nuestras prácticas de datos, contáctenos:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Ingresa tu correo electrónico",
+      "subtitle": "Enviaremos la contraseña de tu cuenta a esta dirección de correo.",
+      "emailPlaceholder": "tu@email.com",
+      "agreeText": "Acepto recibir correos promocionales y actualizaciones de Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Continuar",
+      "termsText": "Al continuar, aceptas nuestros",
+      "termsLink": "Términos de servicio",
+      "and": "y",
+      "privacyLink": "Política de privacidad",
+      "or": "o",
+      "hasAccount": "¿Ya tienes una cuenta?",
+      "loginLink": "Iniciar sesión",
+      "creatingAccount": "Creando cuenta...",
+      "accountCreated": "¡Cuenta creada!",
+      "yourPassword": "Tu contraseña:",
+      "savePassword": "¡Guarda esta contraseña! Redirigiendo al pago..."
+    },
+    "login": {
+      "title": "Bienvenido de nuevo",
+      "subtitle": "Inicia sesión en tu cuenta de Tracify",
+      "emailPlaceholder": "tu@email.com",
+      "passwordPlaceholder": "Contraseña",
+      "loginBtn": "Iniciar sesión",
+      "loggingIn": "Iniciando sesión...",
+      "loginSuccess": "¡Inicio de sesión exitoso! Redirigiendo...",
+      "or": "o",
+      "noAccount": "¿No tienes una cuenta?",
+      "signupLink": "Regístrate"
+    },
+    "errors": {
+      "connectionError": "Error de conexión. Por favor, inténtalo de nuevo.",
+      "accountCreationFailed": "Error al crear la cuenta",
+      "loginFailed": "Error de inicio de sesión"
+    }
   }
 }

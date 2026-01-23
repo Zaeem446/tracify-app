@@ -412,5 +412,43 @@
       "title": "11. Kontaktujte nás",
       "content": "Máte-li dotazy nebo obavy ohledně těchto zásad ochrany osobních údajů nebo našich postupů zpracování údajů, kontaktujte nás prosím:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Zadejte svůj email",
+      "subtitle": "Heslo k účtu vám zašleme na tuto emailovou adresu.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Souhlasím se zasíláním propagačních emailů a aktualizací od Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Pokračovat",
+      "termsText": "Pokračováním souhlasíte s našimi",
+      "termsLink": "Podmínkami služby",
+      "and": "a",
+      "privacyLink": "Zásadami ochrany osobních údajů",
+      "or": "nebo",
+      "hasAccount": "Již máte účet?",
+      "loginLink": "Přihlásit se",
+      "creatingAccount": "Vytváření účtu...",
+      "accountCreated": "Účet vytvořen!",
+      "yourPassword": "Vaše heslo:",
+      "savePassword": "Uložte si toto heslo! Přesměrování na platbu..."
+    },
+    "login": {
+      "title": "Vítejte zpět",
+      "subtitle": "Přihlaste se ke svému účtu Tracify",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Heslo",
+      "loginBtn": "Přihlásit",
+      "loggingIn": "Přihlašování...",
+      "loginSuccess": "Přihlášení úspěšné! Přesměrování...",
+      "or": "nebo",
+      "noAccount": "Nemáte účet?",
+      "signupLink": "Zaregistrovat se"
+    },
+    "errors": {
+      "connectionError": "Chyba připojení. Zkuste to prosím znovu.",
+      "accountCreationFailed": "Vytvoření účtu selhalo",
+      "loginFailed": "Přihlášení selhalo"
+    }
   }
 }

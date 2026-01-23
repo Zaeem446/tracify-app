@@ -412,5 +412,43 @@
       "title": "11. Võta meiega ühendust",
       "content": "Kui sul on küsimusi või muresid selle privaatsuspoliitika või meie andmetöötlustavade kohta, võta meiega ühendust:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Sisestage oma e-post",
+      "subtitle": "Saadame teie konto parooli sellele e-posti aadressile.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Nõustun saama Tracify reklaamkirju ja uudiseid",
+      "agreeRequired": "*",
+      "continueBtn": "Jätka",
+      "termsText": "Jätkates nõustute meie",
+      "termsLink": "Teenuse tingimustega",
+      "and": "ja",
+      "privacyLink": "Privaatsuspoliitikaga",
+      "or": "või",
+      "hasAccount": "Kas teil on juba konto?",
+      "loginLink": "Logi sisse",
+      "creatingAccount": "Konto loomine...",
+      "accountCreated": "Konto loodud!",
+      "yourPassword": "Teie parool:",
+      "savePassword": "Salvestage see parool! Suunamine maksele..."
+    },
+    "login": {
+      "title": "Tere tulemast tagasi",
+      "subtitle": "Logige sisse oma Tracify kontole",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Parool",
+      "loginBtn": "Logi sisse",
+      "loggingIn": "Sisselogimine...",
+      "loginSuccess": "Sisselogimine õnnestus! Suunamine...",
+      "or": "või",
+      "noAccount": "Pole kontot?",
+      "signupLink": "Registreeru"
+    },
+    "errors": {
+      "connectionError": "Ühenduse viga. Palun proovige uuesti.",
+      "accountCreationFailed": "Konto loomine ebaõnnestus",
+      "loginFailed": "Sisselogimine ebaõnnestus"
+    }
   }
 }

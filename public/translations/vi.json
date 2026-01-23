@@ -237,48 +237,48 @@
     "optional": "Tùy chọn"
   },
   "contact": {
-    "title": "Contact Us",
-    "subtitle": "Our support team is here 24/7 to help you right away.",
-    "cardTitle": "We're Here to Help",
-    "cardSubtitle": "Our support team is here 24/7 to help you right away.",
+    "title": "Liên hệ với chúng tôi",
+    "subtitle": "Đội ngũ hỗ trợ của chúng tôi luôn sẵn sàng 24/7 để giúp bạn.",
+    "cardTitle": "Chúng tôi ở đây để giúp bạn",
+    "cardSubtitle": "Đội ngũ hỗ trợ của chúng tôi luôn sẵn sàng 24/7 để giúp bạn.",
     "form": {
-      "name": "Name",
-      "namePlaceholder": "Your name",
+      "name": "Tên",
+      "namePlaceholder": "Tên của bạn",
       "email": "Email",
-      "emailPlaceholder": "your.email@example.com",
-      "subject": "Subject",
-      "selectSubject": "Select a subject",
-      "technical": "Technical Support",
-      "billing": "Billing Question",
-      "feature": "Feature Request",
-      "feedback": "General Feedback",
-      "other": "Other",
-      "message": "Message",
-      "messagePlaceholder": "Tell us how we can help...",
-      "notRobot": "I'm not a robot",
-      "send": "Send Message"
+      "emailPlaceholder": "email.cua.ban@vidu.com",
+      "subject": "Chủ đề",
+      "selectSubject": "Chọn chủ đề",
+      "technical": "Hỗ trợ kỹ thuật",
+      "billing": "Câu hỏi về thanh toán",
+      "feature": "Yêu cầu tính năng",
+      "feedback": "Phản hồi chung",
+      "other": "Khác",
+      "message": "Tin nhắn",
+      "messagePlaceholder": "Cho chúng tôi biết chúng tôi có thể giúp gì...",
+      "notRobot": "Tôi không phải robot",
+      "send": "Gửi tin nhắn"
     },
     "footer": {
-      "home": "Home"
+      "home": "Trang chủ"
     }
   },
   "cancel": {
-    "title": "Cancel Your Subscription",
-    "subtitle": "Enter your email to cancel your subscription. This will turn off auto-renewal and prevent any future charges.",
+    "title": "Hủy đăng ký của bạn",
+    "subtitle": "Nhập email của bạn để hủy đăng ký.",
     "form": {
-      "emailLabel": "Email Address",
-      "emailPlaceholder": "hello@email.com",
-      "submitBtn": "Cancel Subscription",
-      "helpText": "If you don't remember which email you used, check your inbox for a welcome email from Tracify. If you still can't find it,",
-      "contactSupport": "contact support"
+      "emailLabel": "Địa chỉ Email",
+      "emailPlaceholder": "xin.chao@email.com",
+      "submitBtn": "Hủy đăng ký",
+      "helpText": "Nếu bạn không nhớ đã sử dụng email nào, hãy kiểm tra hộp thư đến để tìm email chào mừng từ Tracify.",
+      "contactSupport": "liên hệ hỗ trợ"
     },
     "whyCharged": {
-      "title": "Why was I charged?"
+      "title": "Tại sao tôi bị tính phí?"
     },
     "needHelp": {
-      "title": "Need help?",
-      "description": "If you're experiencing an issue or have any questions, our support team is here for you 24/7. Just reach out and we'll get back to you quickly!",
-      "contactBtn": "Contact Support"
+      "title": "Cần trợ giúp?",
+      "description": "Nếu bạn gặp sự cố, đội ngũ hỗ trợ của chúng tôi luôn sẵn sàng 24/7.",
+      "contactBtn": "Liên hệ hỗ trợ"
     }
   },
   "terms": {
@@ -429,6 +429,44 @@
     "contact": {
       "title": "11. Liên hệ với Chúng tôi",
       "content": "Nếu bạn có câu hỏi hoặc thắc mắc về Chính sách Bảo mật này hoặc các hoạt động dữ liệu của chúng tôi, vui lòng liên hệ với chúng tôi:"
+    }
+  },
+  "modal": {
+    "signup": {
+      "title": "Nhập email của bạn",
+      "subtitle": "Chúng tôi sẽ gửi mật khẩu tài khoản đến địa chỉ email này.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Tôi đồng ý nhận email khuyến mãi và cập nhật từ Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Tiếp tục",
+      "termsText": "Bằng cách tiếp tục, bạn đồng ý với",
+      "termsLink": "Điều khoản Dịch vụ",
+      "and": "và",
+      "privacyLink": "Chính sách Bảo mật",
+      "or": "hoặc",
+      "hasAccount": "Đã có tài khoản?",
+      "loginLink": "Đăng nhập",
+      "creatingAccount": "Đang tạo tài khoản...",
+      "accountCreated": "Tài khoản đã được tạo!",
+      "yourPassword": "Mật khẩu của bạn:",
+      "savePassword": "Lưu mật khẩu này! Đang chuyển hướng đến thanh toán..."
+    },
+    "login": {
+      "title": "Chào mừng trở lại",
+      "subtitle": "Đăng nhập vào tài khoản Tracify của bạn",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Mật khẩu",
+      "loginBtn": "Đăng nhập",
+      "loggingIn": "Đang đăng nhập...",
+      "loginSuccess": "Đăng nhập thành công! Đang chuyển hướng...",
+      "or": "hoặc",
+      "noAccount": "Chưa có tài khoản?",
+      "signupLink": "Đăng ký"
+    },
+    "errors": {
+      "connectionError": "Lỗi kết nối. Vui lòng thử lại.",
+      "accountCreationFailed": "Không thể tạo tài khoản",
+      "loginFailed": "Đăng nhập thất bại"
     }
   }
 }

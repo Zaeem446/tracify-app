@@ -1,5 +1,85 @@
 // Tracify - Main JavaScript
 
+// Helper function to get current language for redirects
+function getCurrentLanguage() {
+    // Try i18n first
+    if (window.TracifyI18n && window.TracifyI18n.getCurrentLang) {
+        return window.TracifyI18n.getCurrentLang();
+    }
+    // Fallback: extract from URL
+    const match = window.location.pathname.match(/^\/([a-z]{2,3}(?:_[A-Z]{2})?(?:-[A-Z]{2})?)\//);
+    if (match) {
+        return match[1];
+    }
+    // Check localStorage
+    const saved = localStorage.getItem('tracify_lang');
+    if (saved) {
+        return saved;
+    }
+    return 'en';
+}
+
+// Helper function to build language-prefixed URL
+function getLocalizedUrl(path) {
+    const lang = getCurrentLanguage();
+    // Remove leading slash if present
+    const cleanPath = path.startsWith('/') ? path.substring(1) : path;
+    return `/${lang}/${cleanPath}`;
+}
+
+// Helper function to get translation (with fallback to key)
+function t(key) {
+    if (window.TracifyI18n && window.TracifyI18n.t) {
+        return window.TracifyI18n.t(key);
+    }
+    // Fallback: return the last part of the key as readable text
+    const parts = key.split('.');
+    return parts[parts.length - 1];
+}
+
+// Function to update modal translations after i18n loads
+function updateModalTranslations() {
+    const emailModal = document.getElementById('emailModal');
+    if (emailModal) {
+        const h2 = emailModal.querySelector('h2');
+        const subtitle = emailModal.querySelector('.email-modal-content > p');
+        const emailInput = emailModal.querySelector('#emailInput');
+        const agreeLabel = emailModal.querySelector('label[for="emailSubscription"]');
+        const continueBtn = emailModal.querySelector('#continueBtn');
+        const termsP = emailModal.querySelector('.modal-terms');
+        const dividerSpan = emailModal.querySelector('.modal-divider span');
+        const loginLinkP = emailModal.querySelector('.login-link');
+
+        if (h2) h2.textContent = t('modal.signup.title');
+        if (subtitle) subtitle.textContent = t('modal.signup.subtitle');
+        if (emailInput) emailInput.placeholder = t('modal.signup.emailPlaceholder');
+        if (agreeLabel) agreeLabel.innerHTML = `${t('modal.signup.agreeText')} <span style="color: #f44336;">${t('modal.signup.agreeRequired')}</span>`;
+        if (continueBtn && !continueBtn.disabled) continueBtn.textContent = t('modal.signup.continueBtn');
+        if (termsP) termsP.innerHTML = `${t('modal.signup.termsText')} <a href="${getLocalizedUrl('terms')}">${t('modal.signup.termsLink')}</a> ${t('modal.signup.and')} <a href="${getLocalizedUrl('privacy')}">${t('modal.signup.privacyLink')}</a>.`;
+        if (dividerSpan) dividerSpan.textContent = t('modal.signup.or');
+        if (loginLinkP) loginLinkP.innerHTML = `${t('modal.signup.hasAccount')} <a href="#" onclick="showLoginModal(); return false;">${t('modal.signup.loginLink')}</a>`;
+    }
+
+    const loginModal = document.getElementById('loginModal');
+    if (loginModal) {
+        const h2 = loginModal.querySelector('h2');
+        const subtitle = loginModal.querySelector('.email-modal-content > p');
+        const emailInput = loginModal.querySelector('#loginEmail');
+        const passwordInput = loginModal.querySelector('#loginPassword');
+        const loginBtn = loginModal.querySelector('#loginBtn');
+        const dividerSpan = loginModal.querySelector('.modal-divider span');
+        const signupLinkP = loginModal.querySelector('.login-link');
+
+        if (h2) h2.textContent = t('modal.login.title');
+        if (subtitle) subtitle.textContent = t('modal.login.subtitle');
+        if (emailInput) emailInput.placeholder = t('modal.login.emailPlaceholder');
+        if (passwordInput) passwordInput.placeholder = t('modal.login.passwordPlaceholder');
+        if (loginBtn && !loginBtn.disabled) loginBtn.textContent = t('modal.login.loginBtn');
+        if (dividerSpan) dividerSpan.textContent = t('modal.login.or');
+        if (signupLinkP) signupLinkP.innerHTML = `${t('modal.login.noAccount')} <a href="#" onclick="closeLoginModal(); showEmailModal(); return false;">${t('modal.login.signupLink')}</a>`;
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 
     // Check if user is already logged in
@@ -84,29 +164,29 @@ document.addEventListener('DOMContentLoaded', function() {
                         <polyline points="22,6 12,13 2,6"/>
                     </svg>
                 </div>
-                <h2>Enter Your Email</h2>
-                <p>We'll send your account password to this email address.</p>
+                <h2 data-i18n="modal.signup.title">${t('modal.signup.title')}</h2>
+                <p data-i18n="modal.signup.subtitle">${t('modal.signup.subtitle')}</p>
 
                 <div id="modalMessage"></div>
 
                 <form id="emailForm">
-                    <input type="email" id="emailInput" placeholder="your@email.com" required>
+                    <input type="email" id="emailInput" data-i18n-placeholder="modal.signup.emailPlaceholder" placeholder="${t('modal.signup.emailPlaceholder')}" required>
 
                     <div style="margin: 15px 0; display: flex; align-items: start; gap: 10px;">
                         <input type="checkbox" id="emailSubscription" required style="width: 18px; height: 18px; margin-top: 2px; cursor: pointer;">
-                        <label for="emailSubscription" style="font-size: 0.9rem; color: #333; cursor: pointer; line-height: 1.4;">
-                            I agree to receive promotional emails and updates from Tracify <span style="color: #f44336;">*</span>
+                        <label for="emailSubscription" style="font-size: 0.9rem; color: #333; cursor: pointer; line-height: 1.4;" data-i18n="modal.signup.agreeText">
+                            ${t('modal.signup.agreeText')} <span style="color: #f44336;">${t('modal.signup.agreeRequired')}</span>
                         </label>
                     </div>
 
-                    <button type="submit" id="continueBtn">Continue</button>
+                    <button type="submit" id="continueBtn" data-i18n="modal.signup.continueBtn">${t('modal.signup.continueBtn')}</button>
                 </form>
 
-                <p class="modal-terms">By continuing, you agree to our <a href="#terms">Terms of Service</a> and <a href="#privacy">Privacy Policy</a>.</p>
+                <p class="modal-terms">${t('modal.signup.termsText')} <a href="${getLocalizedUrl('terms')}">${t('modal.signup.termsLink')}</a> ${t('modal.signup.and')} <a href="${getLocalizedUrl('privacy')}">${t('modal.signup.privacyLink')}</a>.</p>
 
-                <div class="modal-divider"><span>or</span></div>
+                <div class="modal-divider"><span data-i18n="modal.signup.or">${t('modal.signup.or')}</span></div>
 
-                <p class="login-link">Already have an account? <a href="#" onclick="showLoginModal(); return false;">Log in</a></p>
+                <p class="login-link">${t('modal.signup.hasAccount')} <a href="#" onclick="showLoginModal(); return false;">${t('modal.signup.loginLink')}</a></p>
             </div>
         `;
         document.body.appendChild(modal);
@@ -279,7 +359,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const msgDiv = document.getElementById('modalMessage');
 
             btn.disabled = true;
-            btn.textContent = 'Creating account...';
+            btn.textContent = t('modal.signup.creatingAccount');
             msgDiv.innerHTML = '';
 
             try {
@@ -300,23 +380,23 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Show password for testing and redirect
                     msgDiv.innerHTML = `
                         <div class="msg-success">
-                            <strong>Account created!</strong><br>
-                            Your password: <code style="background:#fff;padding:2px 8px;border-radius:4px;font-weight:bold;">${data.password}</code><br>
-                            <small>Save this password! Redirecting to payment...</small>
+                            <strong>${t('modal.signup.accountCreated')}</strong><br>
+                            ${t('modal.signup.yourPassword')} <code style="background:#fff;padding:2px 8px;border-radius:4px;font-weight:bold;">${data.password}</code><br>
+                            <small>${t('modal.signup.savePassword')}</small>
                         </div>
                     `;
                     setTimeout(() => {
-                        window.location.href = data.redirectTo || '/payment';
+                        window.location.href = getLocalizedUrl('payment');
                     }, 3000);
                 } else {
-                    msgDiv.innerHTML = `<div class="msg-error">${data.error || 'Failed to create account'}</div>`;
+                    msgDiv.innerHTML = `<div class="msg-error">${data.error || t('modal.errors.accountCreationFailed')}</div>`;
                     btn.disabled = false;
-                    btn.textContent = 'Continue';
+                    btn.textContent = t('modal.signup.continueBtn');
                 }
             } catch (error) {
-                msgDiv.innerHTML = '<div class="msg-error">Connection error. Please try again.</div>';
+                msgDiv.innerHTML = `<div class="msg-error">${t('modal.errors.connectionError')}</div>`;
                 btn.disabled = false;
-                btn.textContent = 'Continue';
+                btn.textContent = t('modal.signup.continueBtn');
             }
         });
     }
@@ -336,20 +416,20 @@ document.addEventListener('DOMContentLoaded', function() {
                         <line x1="15" y1="12" x2="3" y2="12"/>
                     </svg>
                 </div>
-                <h2>Welcome Back</h2>
-                <p>Log in to your Tracify account</p>
+                <h2 data-i18n="modal.login.title">${t('modal.login.title')}</h2>
+                <p data-i18n="modal.login.subtitle">${t('modal.login.subtitle')}</p>
 
                 <div id="loginModalMessage"></div>
 
                 <form id="loginForm">
-                    <input type="email" id="loginEmail" placeholder="your@email.com" required>
-                    <input type="password" id="loginPassword" placeholder="Password" required>
-                    <button type="submit" id="loginBtn">Log In</button>
+                    <input type="email" id="loginEmail" data-i18n-placeholder="modal.login.emailPlaceholder" placeholder="${t('modal.login.emailPlaceholder')}" required>
+                    <input type="password" id="loginPassword" data-i18n-placeholder="modal.login.passwordPlaceholder" placeholder="${t('modal.login.passwordPlaceholder')}" required>
+                    <button type="submit" id="loginBtn" data-i18n="modal.login.loginBtn">${t('modal.login.loginBtn')}</button>
                 </form>
 
-                <div class="modal-divider"><span>or</span></div>
+                <div class="modal-divider"><span data-i18n="modal.login.or">${t('modal.login.or')}</span></div>
 
-                <p class="login-link">Don't have an account? <a href="#" onclick="closeLoginModal(); showEmailModal(); return false;">Sign up</a></p>
+                <p class="login-link">${t('modal.login.noAccount')} <a href="#" onclick="closeLoginModal(); showEmailModal(); return false;">${t('modal.login.signupLink')}</a></p>
             </div>
         `;
         document.body.appendChild(modal);
@@ -364,7 +444,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const msgDiv = document.getElementById('loginModalMessage');
 
             btn.disabled = true;
-            btn.textContent = 'Logging in...';
+            btn.textContent = t('modal.login.loggingIn');
             msgDiv.innerHTML = '';
 
             try {
@@ -378,19 +458,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 const data = await res.json();
 
                 if (res.ok && data.success) {
-                    msgDiv.innerHTML = '<div class="msg-success">Login successful! Redirecting...</div>';
+                    msgDiv.innerHTML = `<div class="msg-success">${t('modal.login.loginSuccess')}</div>`;
                     setTimeout(() => {
-                        window.location.href = data.redirectTo || '/dashboard';
+                        window.location.href = getLocalizedUrl('dashboard');
                     }, 1000);
                 } else {
-                    msgDiv.innerHTML = `<div class="msg-error">${data.error || 'Login failed'}</div>`;
+                    msgDiv.innerHTML = `<div class="msg-error">${data.error || t('modal.errors.loginFailed')}</div>`;
                     btn.disabled = false;
-                    btn.textContent = 'Log In';
+                    btn.textContent = t('modal.login.loginBtn');
                 }
             } catch (error) {
-                msgDiv.innerHTML = '<div class="msg-error">Connection error. Please try again.</div>';
+                msgDiv.innerHTML = `<div class="msg-error">${t('modal.errors.connectionError')}</div>`;
                 btn.disabled = false;
-                btn.textContent = 'Log In';
+                btn.textContent = t('modal.login.loginBtn');
             }
         });
     }
@@ -399,8 +479,17 @@ document.addEventListener('DOMContentLoaded', function() {
     createEmailModal();
     createLoginModal();
 
+    // Update translations after a short delay (allow i18n to load)
+    setTimeout(updateModalTranslations, 500);
+
+    // Also update when i18n is ready (if it loads later)
+    if (window.TracifyI18n) {
+        updateModalTranslations();
+    }
+
     // Show/hide modal functions
     window.showEmailModal = function() {
+        updateModalTranslations(); // Ensure fresh translations
         document.getElementById('emailModal').classList.add('active');
     };
 
@@ -408,10 +497,17 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('emailModal').classList.remove('active');
         document.getElementById('emailInput').value = '';
         document.getElementById('modalMessage').innerHTML = '';
+        // Reset button text
+        const btn = document.getElementById('continueBtn');
+        if (btn) {
+            btn.disabled = false;
+            btn.textContent = t('modal.signup.continueBtn');
+        }
     };
 
     window.showLoginModal = function() {
         closeEmailModal();
+        updateModalTranslations(); // Ensure fresh translations
         document.getElementById('loginModal').classList.add('active');
     };
 
@@ -420,6 +516,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('loginEmail').value = '';
         document.getElementById('loginPassword').value = '';
         document.getElementById('loginModalMessage').innerHTML = '';
+        // Reset button text
+        const btn = document.getElementById('loginBtn');
+        if (btn) {
+            btn.disabled = false;
+            btn.textContent = t('modal.login.loginBtn');
+        }
     };
 
     // Check existing session - don't change login button, keep it as Login

@@ -412,5 +412,43 @@
       "title": "11. Kontaktirajte nas",
       "content": "Ako imate pitanja ili nedoumice u vezi sa ovom Politikom privatnosti ili našim praksama sa podacima, molimo kontaktirajte nas:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Унесите свој имејл",
+      "subtitle": "Послаћемо лозинку вашег налога на ову имејл адресу.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Слажем се да примам промотивне имејлове и ажурирања од Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Настави",
+      "termsText": "Настављањем се слажете са нашим",
+      "termsLink": "Условима коришћења",
+      "and": "и",
+      "privacyLink": "Политиком приватности",
+      "or": "или",
+      "hasAccount": "Већ имате налог?",
+      "loginLink": "Пријавите се",
+      "creatingAccount": "Креирање налога...",
+      "accountCreated": "Налог креиран!",
+      "yourPassword": "Ваша лозинка:",
+      "savePassword": "Сачувајте ову лозинку! Преусмеравање на плаћање..."
+    },
+    "login": {
+      "title": "Добродошли назад",
+      "subtitle": "Пријавите се на свој Tracify налог",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Лозинка",
+      "loginBtn": "Пријава",
+      "loggingIn": "Пријављивање...",
+      "loginSuccess": "Пријава успешна! Преусмеравање...",
+      "or": "или",
+      "noAccount": "Немате налог?",
+      "signupLink": "Региструјте се"
+    },
+    "errors": {
+      "connectionError": "Грешка у повезивању. Молимо покушајте поново.",
+      "accountCreationFailed": "Креирање налога није успело",
+      "loginFailed": "Пријава није успела"
+    }
   }
 }

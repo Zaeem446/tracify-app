@@ -412,5 +412,43 @@
       "title": "11. Makipag-ugnayan sa Amin",
       "content": "Kung mayroon kang mga katanungan o alalahanin tungkol sa Patakaran sa Privacy na ito o sa aming mga kasanayan sa data, mangyaring makipag-ugnayan sa amin:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Ilagay ang iyong email",
+      "subtitle": "Ipapadala namin ang password ng iyong account sa email address na ito.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Sumasang-ayon akong tumanggap ng mga promotional na email at update mula sa Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Magpatuloy",
+      "termsText": "Sa pagpapatuloy, sumasang-ayon ka sa aming",
+      "termsLink": "Mga Tuntunin ng Serbisyo",
+      "and": "at",
+      "privacyLink": "Patakaran sa Privacy",
+      "or": "o",
+      "hasAccount": "May account ka na?",
+      "loginLink": "Mag-log in",
+      "creatingAccount": "Gumagawa ng account...",
+      "accountCreated": "Nagawa na ang account!",
+      "yourPassword": "Ang iyong password:",
+      "savePassword": "I-save ang password na ito! Nire-redirect sa pagbabayad..."
+    },
+    "login": {
+      "title": "Maligayang pagbabalik",
+      "subtitle": "Mag-log in sa iyong Tracify account",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Password",
+      "loginBtn": "Mag-log in",
+      "loggingIn": "Nagla-log in...",
+      "loginSuccess": "Matagumpay na naka-log in! Nire-redirect...",
+      "or": "o",
+      "noAccount": "Wala pang account?",
+      "signupLink": "Mag-sign up"
+    },
+    "errors": {
+      "connectionError": "Error sa koneksyon. Pakisubukang muli.",
+      "accountCreationFailed": "Hindi nagawa ang account",
+      "loginFailed": "Hindi makapag-log in"
+    }
   }
 }

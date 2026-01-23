@@ -412,5 +412,43 @@
       "title": "11. Biziň bilen habarlaşyň",
       "content": "Bu Gizlinlik Syýasaty ýa-da maglumat amallarymyz barada soragyňyz ýa-da aladaňyz bar bolsa, biziň bilen habarlaşyň:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "E-poçtaňyzy giriziň",
+      "subtitle": "Hasabyňyzyň parolyny bu e-poçta salgysyna ibereris.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Tracify-dan mahabat e-poçtalaryny we täzelikleri almaga razylaşýaryn",
+      "agreeRequired": "*",
+      "continueBtn": "Dowam et",
+      "termsText": "Dowam etmek bilen, biziň",
+      "termsLink": "Hyzmat şertleri",
+      "and": "we",
+      "privacyLink": "Gizlinlik syýasaty",
+      "or": "ýa-da",
+      "hasAccount": "Eýýäm hasabyňyz barmy?",
+      "loginLink": "Giriň",
+      "creatingAccount": "Hasap döredilýär...",
+      "accountCreated": "Hasap döredildi!",
+      "yourPassword": "Siziň parolyňyz:",
+      "savePassword": "Bu paroly ýatda saklaň! Töleg sahypasyna geçirilýär..."
+    },
+    "login": {
+      "title": "Hoş geldiňiz",
+      "subtitle": "Tracify hasabyňyza giriň",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Parol",
+      "loginBtn": "Giriş",
+      "loggingIn": "Girilýär...",
+      "loginSuccess": "Giriş üstünlikli! Geçirilýär...",
+      "or": "ýa-da",
+      "noAccount": "Hasabyňyz ýokmy?",
+      "signupLink": "Hasap açyň"
+    },
+    "errors": {
+      "connectionError": "Baglanyşyk ýalňyşlygy. Täzeden synanyşyň.",
+      "accountCreationFailed": "Hasap döredilmedi",
+      "loginFailed": "Giriş şowsuz"
+    }
   }
 }

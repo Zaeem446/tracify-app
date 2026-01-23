@@ -412,5 +412,43 @@
       "title": "11. Contattaci",
       "content": "Se hai domande o dubbi su questa Informativa sulla Privacy o sulle nostre pratiche sui dati, contattaci:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Inserisci la tua email",
+      "subtitle": "Invieremo la password del tuo account a questo indirizzo email.",
+      "emailPlaceholder": "tua@email.com",
+      "agreeText": "Accetto di ricevere email promozionali e aggiornamenti da Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Continua",
+      "termsText": "Continuando, accetti i nostri",
+      "termsLink": "Termini di servizio",
+      "and": "e",
+      "privacyLink": "Informativa sulla privacy",
+      "or": "o",
+      "hasAccount": "Hai già un account?",
+      "loginLink": "Accedi",
+      "creatingAccount": "Creazione account...",
+      "accountCreated": "Account creato!",
+      "yourPassword": "La tua password:",
+      "savePassword": "Salva questa password! Reindirizzamento al pagamento..."
+    },
+    "login": {
+      "title": "Bentornato",
+      "subtitle": "Accedi al tuo account Tracify",
+      "emailPlaceholder": "tua@email.com",
+      "passwordPlaceholder": "Password",
+      "loginBtn": "Accedi",
+      "loggingIn": "Accesso in corso...",
+      "loginSuccess": "Accesso riuscito! Reindirizzamento...",
+      "or": "o",
+      "noAccount": "Non hai un account?",
+      "signupLink": "Registrati"
+    },
+    "errors": {
+      "connectionError": "Errore di connessione. Riprova.",
+      "accountCreationFailed": "Creazione account fallita",
+      "loginFailed": "Accesso fallito"
+    }
   }
 }

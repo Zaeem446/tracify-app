@@ -412,5 +412,43 @@
       "title": "11. お問い合わせ",
       "content": "このプライバシーポリシーまたは当社のデータ慣行についてご質問やご懸念がある場合は、以下までお問い合わせください："
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "メールアドレスを入力",
+      "subtitle": "アカウントのパスワードをこのメールアドレスに送信します。",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Tracifyからのプロモーションメールとアップデートの受信に同意します",
+      "agreeRequired": "*",
+      "continueBtn": "続ける",
+      "termsText": "続行することで、当社の",
+      "termsLink": "利用規約",
+      "and": "および",
+      "privacyLink": "プライバシーポリシー",
+      "or": "または",
+      "hasAccount": "すでにアカウントをお持ちですか？",
+      "loginLink": "ログイン",
+      "creatingAccount": "アカウント作成中...",
+      "accountCreated": "アカウントが作成されました！",
+      "yourPassword": "パスワード：",
+      "savePassword": "このパスワードを保存してください！支払いページにリダイレクトします..."
+    },
+    "login": {
+      "title": "おかえりなさい",
+      "subtitle": "Tracifyアカウントにログイン",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "パスワード",
+      "loginBtn": "ログイン",
+      "loggingIn": "ログイン中...",
+      "loginSuccess": "ログイン成功！リダイレクト中...",
+      "or": "または",
+      "noAccount": "アカウントをお持ちでないですか？",
+      "signupLink": "新規登録"
+    },
+    "errors": {
+      "connectionError": "接続エラー。もう一度お試しください。",
+      "accountCreationFailed": "アカウントの作成に失敗しました",
+      "loginFailed": "ログインに失敗しました"
+    }
   }
 }

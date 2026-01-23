@@ -412,5 +412,43 @@
       "title": "11. Kontakt z nami",
       "content": "Jeśli masz pytania lub wątpliwości dotyczące niniejszej Polityki prywatności lub naszych praktyk dotyczących danych, skontaktuj się z nami:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Wprowadź swój e-mail",
+      "subtitle": "Wyślemy hasło do Twojego konta na ten adres e-mail.",
+      "emailPlaceholder": "twoj@email.com",
+      "agreeText": "Zgadzam się na otrzymywanie e-maili promocyjnych i aktualizacji od Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Kontynuuj",
+      "termsText": "Kontynuując, zgadzasz się z naszymi",
+      "termsLink": "Warunkami korzystania",
+      "and": "i",
+      "privacyLink": "Polityką prywatności",
+      "or": "lub",
+      "hasAccount": "Masz już konto?",
+      "loginLink": "Zaloguj się",
+      "creatingAccount": "Tworzenie konta...",
+      "accountCreated": "Konto utworzone!",
+      "yourPassword": "Twoje hasło:",
+      "savePassword": "Zapisz to hasło! Przekierowanie do płatności..."
+    },
+    "login": {
+      "title": "Witaj ponownie",
+      "subtitle": "Zaloguj się do swojego konta Tracify",
+      "emailPlaceholder": "twoj@email.com",
+      "passwordPlaceholder": "Hasło",
+      "loginBtn": "Zaloguj się",
+      "loggingIn": "Logowanie...",
+      "loginSuccess": "Logowanie pomyślne! Przekierowanie...",
+      "or": "lub",
+      "noAccount": "Nie masz konta?",
+      "signupLink": "Zarejestruj się"
+    },
+    "errors": {
+      "connectionError": "Błąd połączenia. Spróbuj ponownie.",
+      "accountCreationFailed": "Nie udało się utworzyć konta",
+      "loginFailed": "Logowanie nie powiodło się"
+    }
   }
 }

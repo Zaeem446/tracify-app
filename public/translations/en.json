@@ -415,5 +415,43 @@
       "title": "11. Contact Us",
       "content": "If you have questions or concerns about this Privacy Policy or our data practices, please contact us:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Enter Your Email",
+      "subtitle": "We'll send your account password to this email address.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "I agree to receive promotional emails and updates from Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Continue",
+      "termsText": "By continuing, you agree to our",
+      "termsLink": "Terms of Service",
+      "and": "and",
+      "privacyLink": "Privacy Policy",
+      "or": "or",
+      "hasAccount": "Already have an account?",
+      "loginLink": "Log in",
+      "creatingAccount": "Creating account...",
+      "accountCreated": "Account created!",
+      "yourPassword": "Your password:",
+      "savePassword": "Save this password! Redirecting to payment..."
+    },
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Log in to your Tracify account",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Password",
+      "loginBtn": "Log In",
+      "loggingIn": "Logging in...",
+      "loginSuccess": "Login successful! Redirecting...",
+      "or": "or",
+      "noAccount": "Don't have an account?",
+      "signupLink": "Sign up"
+    },
+    "errors": {
+      "connectionError": "Connection error. Please try again.",
+      "accountCreationFailed": "Failed to create account",
+      "loginFailed": "Login failed"
+    }
   }
 }

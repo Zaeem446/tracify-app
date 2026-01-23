@@ -412,5 +412,43 @@
       "title": "11. Nous Contacter",
       "content": "Si vous avez des questions ou des préoccupations concernant cette Politique de Confidentialité ou nos pratiques en matière de données, veuillez nous contacter :"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Entrez votre e-mail",
+      "subtitle": "Nous enverrons le mot de passe de votre compte à cette adresse e-mail.",
+      "emailPlaceholder": "votre@email.com",
+      "agreeText": "J'accepte de recevoir des e-mails promotionnels et des mises à jour de Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Continuer",
+      "termsText": "En continuant, vous acceptez nos",
+      "termsLink": "Conditions d'utilisation",
+      "and": "et",
+      "privacyLink": "Politique de confidentialité",
+      "or": "ou",
+      "hasAccount": "Vous avez déjà un compte?",
+      "loginLink": "Connexion",
+      "creatingAccount": "Création du compte...",
+      "accountCreated": "Compte créé!",
+      "yourPassword": "Votre mot de passe:",
+      "savePassword": "Enregistrez ce mot de passe! Redirection vers le paiement..."
+    },
+    "login": {
+      "title": "Bon retour",
+      "subtitle": "Connectez-vous à votre compte Tracify",
+      "emailPlaceholder": "votre@email.com",
+      "passwordPlaceholder": "Mot de passe",
+      "loginBtn": "Connexion",
+      "loggingIn": "Connexion en cours...",
+      "loginSuccess": "Connexion réussie! Redirection...",
+      "or": "ou",
+      "noAccount": "Vous n'avez pas de compte?",
+      "signupLink": "S'inscrire"
+    },
+    "errors": {
+      "connectionError": "Erreur de connexion. Veuillez réessayer.",
+      "accountCreationFailed": "Échec de la création du compte",
+      "loginFailed": "Échec de la connexion"
+    }
   }
 }

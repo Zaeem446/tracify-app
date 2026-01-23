@@ -412,5 +412,43 @@
       "title": "11. Xhumana Nathi",
       "content": "Uma unemibuzo noma ukukhathazeka ngale Nqubomgomo Yobumfihlo noma izindlela zethu zedatha, sicela uxhumane nathi:"
     }
+  },
+  "modal": {
+    "signup": {
+      "title": "Faka i-imeyili yakho",
+      "subtitle": "Sizothumela iphasiwedi ye-akhawunti yakho kule kheli le-imeyili.",
+      "emailPlaceholder": "your@email.com",
+      "agreeText": "Ngiyavuma ukuthola ama-imeyili okukhangisa nezibuyekezo ezivela ku-Tracify",
+      "agreeRequired": "*",
+      "continueBtn": "Qhubeka",
+      "termsText": "Ngokuqhubeka, uyavuma",
+      "termsLink": "Imigomo Yenkonzo",
+      "and": "kanye",
+      "privacyLink": "Inqubomgomo Yobumfihlo",
+      "or": "noma",
+      "hasAccount": "Usunayo i-akhawunti?",
+      "loginLink": "Ngena ngemvume",
+      "creatingAccount": "Kwenziwa i-akhawunti...",
+      "accountCreated": "I-akhawunti yenziwe!",
+      "yourPassword": "Iphasiwedi yakho:",
+      "savePassword": "Londoloza le phasiwedi! Kuyiswa ekukhokheni..."
+    },
+    "login": {
+      "title": "Siyakwamukela futhi",
+      "subtitle": "Ngena ngemvume ku-akhawunti yakho ye-Tracify",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "Iphasiwedi",
+      "loginBtn": "Ngena ngemvume",
+      "loggingIn": "Kuyangena...",
+      "loginSuccess": "Ukungena kuphumelele! Kuyiswa...",
+      "or": "noma",
+      "noAccount": "Awunayo i-akhawunti?",
+      "signupLink": "Bhalisa"
+    },
+    "errors": {
+      "connectionError": "Iphutha lokuxhumana. Sicela uzame futhi.",
+      "accountCreationFailed": "Ukwenza i-akhawunti kuhlulekile",
+      "loginFailed": "Ukungena kuhlulekile"
+    }
   }
 }
