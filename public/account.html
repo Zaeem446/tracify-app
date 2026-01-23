@@ -632,11 +632,10 @@
 
                 document.getElementById('userAvatar').textContent = customerData.customer.email[0].toUpperCase();
                 document.getElementById('accountEmail').textContent = customerData.customer.email;
-                document.getElementById('memberSince').textContent = new Date(customerData.customer.created_at).toLocaleDateString('en-US', {
-                    month: 'long',
-                    day: 'numeric',
-                    year: 'numeric'
-                });
+                const createdDate = customerData.customer.created_at ? new Date(customerData.customer.created_at) : null;
+                document.getElementById('memberSince').textContent = createdDate && !isNaN(createdDate)
+                    ? createdDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+                    : 'N/A';
 
                 if (customerData.subscription) {
                     const planType = customerData.subscription.planType === 'trial' ? '24-Hour Trial' : 'Monthly Plan';
@@ -644,12 +643,13 @@
                         '<span class="badge badge-trial">Trial</span>' : '';
 
                     document.getElementById('subPlan').innerHTML = planType + ' ' + planBadge;
+                    // Next payment is always $30 (monthly rate after trial or renewal)
                     document.getElementById('subNextPayment').textContent =
                         new Date(customerData.subscription.expiresAt).toLocaleDateString('en-US', {
                             month: 'short',
                             day: 'numeric',
                             year: 'numeric'
-                        }) + ' for Rs ' + (customerData.subscription.planType === 'trial' ? '325' : '8,700');
+                        }) + ' for $30';
                 } else {
                     document.getElementById('subscriptionCard').innerHTML = `
                         <div class="card-header">
@@ -698,7 +698,7 @@
                             </div>
                         </div>
                         <div style="text-align: right;">
-                            <div style="font-weight: 600; color: var(--text);">Rs ${p.amount.toLocaleString()}</div>
+                            <div style="font-weight: 600; color: var(--text);">$${p.amount.toLocaleString()}</div>
                             <span class="badge badge-active" style="margin-top: 4px;">Completed</span>
                         </div>
                     </div>
