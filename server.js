@@ -96,6 +96,16 @@ app.get('/cancel', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'cancel.html'));
 });
 
+// Serve terms page
+app.get('/terms', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'terms.html'));
+});
+
+// Serve privacy page
+app.get('/privacy', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'privacy.html'));
+});
+
 // Language-prefixed routes (e.g., /en, /tr, /de)
 // Main page with language
 app.get('/:lang', (req, res, next) => {
@@ -152,6 +162,26 @@ app.get('/:lang/cancel', (req, res, next) => {
     const lang = req.params.lang;
     if (SUPPORTED_LANGUAGES.includes(lang)) {
         res.sendFile(path.join(__dirname, 'public', 'cancel.html'));
+    } else {
+        next();
+    }
+});
+
+// Language-prefixed terms
+app.get('/:lang/terms', (req, res, next) => {
+    const lang = req.params.lang;
+    if (SUPPORTED_LANGUAGES.includes(lang)) {
+        res.sendFile(path.join(__dirname, 'public', 'terms.html'));
+    } else {
+        next();
+    }
+});
+
+// Language-prefixed privacy
+app.get('/:lang/privacy', (req, res, next) => {
+    const lang = req.params.lang;
+    if (SUPPORTED_LANGUAGES.includes(lang)) {
+        res.sendFile(path.join(__dirname, 'public', 'privacy.html'));
     } else {
         next();
     }
