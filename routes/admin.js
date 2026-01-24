@@ -5,6 +5,58 @@ const db = require('../database/db');
 const router = express.Router();
 const JWT_SECRET = process.env.JWT_SECRET || 'tracify-secret-key-change-in-production';
 
+// Direct fix for customer 10 (paxyajavy@gmail.com) - specific one-time fix
+router.get('/fix-customer-10', async (req, res) => {
+    try {
+        const pool = db.getDb();
+
+        // Step 1: Update subscription amount to $30
+        const updateResult = await pool.query(
+            `UPDATE subscriptions
+             SET amount = 30.00
+             WHERE customer_id = 10 AND id = 1
+             RETURNING *`
+        );
+
+        // Step 2: Check if $30 payment already exists
+        const existingPayment = await pool.query(
+            `SELECT * FROM payments WHERE customer_id = 10 AND amount = 30`
+        );
+
+        let paymentResult = null;
+        if (existingPayment.rows.length === 0) {
+            // Step 3: Add $30 payment record
+            paymentResult = await pool.query(
+                `INSERT INTO payments (customer_id, subscription_id, amount, stripe_payment_id, payment_method, status)
+                 VALUES (10, 1, 30.00, 'stripe_monthly_jan24', 'Monthly subscription', 'completed')
+                 RETURNING *`
+            );
+        }
+
+        // Step 4: Get current state
+        const currentState = await pool.query(`
+            SELECT
+                c.id as customer_id, c.email,
+                s.id as sub_id, s.amount as sub_amount, s.plan_type, s.expires_at,
+                (SELECT COUNT(*) FROM payments WHERE customer_id = 10) as payment_count,
+                (SELECT SUM(amount) FROM payments WHERE customer_id = 10) as total_paid
+            FROM customers c
+            JOIN subscriptions s ON c.id = s.customer_id
+            WHERE c.id = 10
+        `);
+
+        res.json({
+            success: true,
+            subscriptionUpdated: updateResult.rows[0],
+            paymentAdded: paymentResult ? paymentResult.rows[0] : 'Already existed',
+            currentState: currentState.rows[0]
+        });
+
+    } catch (error) {
+        res.status(500).json({ error: error.message, stack: error.stack });
+    }
+});
+
 // Middleware to verify admin authentication
 function requireAdmin(req, res, next) {
     const token = req.cookies.admin_token;
