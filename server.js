@@ -49,6 +49,12 @@ app.use(async (req, res, next) => {
     next();
 });
 
+// Version check endpoint (to verify deployments)
+const DEPLOY_VERSION = '2026-01-24-v3';
+app.get('/api/version', (req, res) => {
+    res.json({ version: DEPLOY_VERSION, timestamp: new Date().toISOString() });
+});
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/admin', adminRoutes);
