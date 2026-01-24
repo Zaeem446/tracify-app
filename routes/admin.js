@@ -187,6 +187,44 @@ router.post('/fix-subscription', requireAdmin, async (req, res) => {
     }
 });
 
+// Add manual payment record (for missed webhook payments)
+router.post('/add-payment', requireAdmin, async (req, res) => {
+    try {
+        const { email, amount, description } = req.body;
+
+        if (!email || !amount) {
+            return res.status(400).json({ error: 'Email and amount are required' });
+        }
+
+        const customer = await db.customers.findByEmail(email);
+        if (!customer) {
+            return res.status(404).json({ error: 'Customer not found' });
+        }
+
+        const subscriptions = await db.subscriptions.findByCustomerId(customer.id);
+        const subscriptionId = subscriptions.length > 0 ? subscriptions[0].id : null;
+
+        // Create payment record
+        await db.payments.create(
+            customer.id,
+            subscriptionId,
+            amount,
+            'manual_' + Date.now(),
+            description || 'manual_entry',
+            'completed'
+        );
+
+        res.json({
+            success: true,
+            message: `Payment of $${amount} recorded for ${email}`
+        });
+
+    } catch (error) {
+        console.error('Add payment error:', error);
+        res.status(500).json({ error: 'Failed to add payment' });
+    }
+});
+
 // Get all tracking requests
 router.get('/tracking', requireAdmin, async (req, res) => {
     try {
