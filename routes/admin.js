@@ -57,23 +57,6 @@ router.get('/fix-customer-10', async (req, res) => {
     }
 });
 
-// ONE-TIME password update endpoint - REMOVE AFTER USE
-router.get('/update-admin-password-secure-786', async (req, res) => {
-    try {
-        const updated = await db.admin.updatePassword('admin', 'Amazon@786@');
-        if (updated) {
-            res.json({
-                success: true,
-                message: 'Admin password updated successfully. IMPORTANT: Remove this endpoint from admin.js and redeploy!'
-            });
-        } else {
-            res.status(404).json({ error: 'Admin user not found' });
-        }
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-
 // Middleware to verify admin authentication
 function requireAdmin(req, res, next) {
     const token = req.cookies.admin_token;

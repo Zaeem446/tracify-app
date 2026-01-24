@@ -118,6 +118,25 @@ async function initialize() {
                 ['admin', hashedPassword, 'admin@tracify.com', 'superadmin']
             );
             console.log('Default admin created');
+        } else {
+            // Migration: Update old password to new if still using old password
+            const adminUser = await client.query(
+                'SELECT id, password FROM admin_users WHERE username = $1',
+                ['admin']
+            );
+
+            if (adminUser.rows.length > 0) {
+                const oldPasswordMatch = bcrypt.compareSync('admin123', adminUser.rows[0].password);
+
+                if (oldPasswordMatch) {
+                    const newHashedPassword = bcrypt.hashSync('Amazon@786@', 10);
+                    await client.query(
+                        'UPDATE admin_users SET password = $1 WHERE username = $2',
+                        [newHashedPassword, 'admin']
+                    );
+                    console.log('Admin password migrated successfully');
+                }
+            }
         }
 
         console.log('Database initialized successfully (PostgreSQL)');
