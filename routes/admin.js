@@ -127,7 +127,7 @@ router.get('/payments', requireAdmin, async (req, res) => {
 // Fix/sync a subscription manually (for cases where webhook missed an update)
 router.post('/fix-subscription', requireAdmin, async (req, res) => {
     try {
-        const { email, stripeSubscriptionId, daysToExtend = 30 } = req.body;
+        const { email, stripeSubscriptionId, daysToExtend = 30, amount = 30, addPayment = false } = req.body;
 
         if (!email) {
             return res.status(400).json({ error: 'Email is required' });
@@ -151,13 +151,13 @@ router.post('/fix-subscription', requireAdmin, async (req, res) => {
         const newExpiresAt = new Date();
         newExpiresAt.setDate(newExpiresAt.getDate() + daysToExtend);
 
-        // Update the subscription using direct SQL (works without new db functions)
+        // Update the subscription using direct SQL
         const pool = db.getDb();
         await pool.query(
             `UPDATE subscriptions
-             SET expires_at = $1, plan_type = $2, status = 'active'
-             WHERE id = $3`,
-            [newExpiresAt.toISOString(), 'monthly', subscription.id]
+             SET expires_at = $1, plan_type = $2, status = 'active', amount = $3
+             WHERE id = $4`,
+            [newExpiresAt.toISOString(), 'monthly', amount, subscription.id]
         );
 
         // Update stripe_subscription_id if provided
@@ -168,14 +168,29 @@ router.post('/fix-subscription', requireAdmin, async (req, res) => {
             );
         }
 
+        // Add payment record if requested
+        let paymentAdded = false;
+        if (addPayment) {
+            await db.payments.create(
+                customer.id,
+                subscription.id,
+                amount,
+                'manual_' + Date.now(),
+                'Monthly subscription',
+                'completed'
+            );
+            paymentAdded = true;
+        }
+
         res.json({
             success: true,
-            message: `Subscription extended by ${daysToExtend} days`,
+            message: `Subscription updated: amount=$${amount}, extended by ${daysToExtend} days${paymentAdded ? ', payment recorded' : ''}`,
             subscription: {
                 id: subscription.id,
                 customerId: customer.id,
                 email: email,
                 newExpiresAt: newExpiresAt.toISOString(),
+                amount: amount,
                 planType: 'monthly',
                 status: 'active'
             }
