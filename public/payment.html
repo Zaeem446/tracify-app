@@ -587,6 +587,16 @@
                     successDiv.textContent = 'Payment successful! Redirecting to dashboard...';
                     successDiv.style.display = 'block';
                     console.log('Payment successful, redirecting...');
+
+                    // Google Ads conversion tracking
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'conversion', {
+                            'send_to': 'AW-17900279436/E_qQCK-5sesbEIytwtdC',
+                            'value': 1.25,
+                            'currency': 'USD'
+                        });
+                    }
+
                     setTimeout(() => {
                         window.location.href = data.redirectTo || '/dashboard';
                     }, 1500);
