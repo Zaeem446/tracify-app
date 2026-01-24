@@ -124,6 +124,68 @@ router.get('/payments', requireAdmin, async (req, res) => {
     }
 });
 
+// Fix/sync a subscription manually (for cases where webhook missed an update)
+router.post('/fix-subscription', requireAdmin, async (req, res) => {
+    try {
+        const { email, stripeSubscriptionId, daysToExtend = 30 } = req.body;
+
+        if (!email) {
+            return res.status(400).json({ error: 'Email is required' });
+        }
+
+        // Find customer by email
+        const customer = await db.customers.findByEmail(email);
+        if (!customer) {
+            return res.status(404).json({ error: 'Customer not found' });
+        }
+
+        // Find their subscription
+        const subscriptions = await db.subscriptions.findByCustomerId(customer.id);
+        if (!subscriptions || subscriptions.length === 0) {
+            return res.status(404).json({ error: 'No subscription found for this customer' });
+        }
+
+        const subscription = subscriptions[0]; // Get the most recent one
+
+        // Calculate new expiry date
+        const newExpiresAt = new Date();
+        newExpiresAt.setDate(newExpiresAt.getDate() + daysToExtend);
+
+        // Update the subscription
+        await db.subscriptions.extendSubscription(
+            subscription.id,
+            newExpiresAt.toISOString(),
+            'monthly'
+        );
+
+        // Update stripe_subscription_id if provided
+        if (stripeSubscriptionId) {
+            const pool = db.getDb();
+            await pool.query(
+                'UPDATE subscriptions SET stripe_subscription_id = $1 WHERE id = $2',
+                [stripeSubscriptionId, subscription.id]
+            );
+        }
+
+        res.json({
+            success: true,
+            message: `Subscription extended by ${daysToExtend} days`,
+            subscription: {
+                id: subscription.id,
+                customerId: customer.id,
+                email: email,
+                newExpiresAt: newExpiresAt.toISOString(),
+                planType: 'monthly',
+                status: 'active'
+            }
+        });
+
+    } catch (error) {
+        console.error('Fix subscription error:', error);
+        res.status(500).json({ error: 'Failed to fix subscription' });
+    }
+});
+
 // Get all tracking requests
 router.get('/tracking', requireAdmin, async (req, res) => {
     try {
