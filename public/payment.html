@@ -15,6 +15,20 @@
         .lang-selector { appearance: none; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 8px 30px 8px 12px; color: var(--text); font-size: 0.9rem; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
         .lang-selector option { background: #fff; color: #333; }
         [dir="rtl"] body { direction: rtl; text-align: right; }
+
+        /* Mobile responsive language selector */
+        @media (max-width: 768px) {
+            .lang-selector-wrapper {
+                position: relative;
+                top: auto;
+                right: auto;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            .lang-selector {
+                padding: 10px 35px 10px 15px;
+            }
+        }
     </style>
     <style>
         * {
@@ -348,6 +362,13 @@
     </style>
 </head>
 <body>
+    <!-- Language Selector -->
+    <div class="lang-selector-wrapper">
+        <select class="lang-selector" id="paymentLangSelector" aria-label="Select Language">
+            <option value="en">English</option>
+        </select>
+    </div>
+
     <div class="container">
         <div class="header">
             <a href="/" class="logo">
@@ -722,6 +743,44 @@
             }
 
             console.log('Initialization complete');
+
+            // Populate language selector
+            const languages = [
+                { code: 'en', name: 'English' },
+                { code: 'es', name: 'Español' },
+                { code: 'fr', name: 'Français' },
+                { code: 'de', name: 'Deutsch' },
+                { code: 'it', name: 'Italiano' },
+                { code: 'pt', name: 'Português' },
+                { code: 'nl', name: 'Nederlands' },
+                { code: 'pl', name: 'Polski' },
+                { code: 'ru', name: 'Русский' },
+                { code: 'tr', name: 'Türkçe' },
+                { code: 'ar', name: 'العربية' },
+                { code: 'zh', name: '中文' },
+                { code: 'ja', name: '日本語' },
+                { code: 'ko', name: '한국어' },
+                { code: 'hi', name: 'हिंदी' }
+            ];
+
+            const paymentLangSelector = document.getElementById('paymentLangSelector');
+            if (paymentLangSelector) {
+                // Get current language from URL or localStorage
+                const pathMatch = window.location.pathname.match(/^\/([a-z]{2,3}(?:_[A-Z]{2})?)\//);
+                const currentLang = pathMatch ? pathMatch[1] : (localStorage.getItem('tracify_lang') || 'en');
+
+                paymentLangSelector.innerHTML = languages.map(lang =>
+                    `<option value="${lang.code}" ${lang.code === currentLang ? 'selected' : ''}>${lang.name}</option>`
+                ).join('');
+
+                paymentLangSelector.addEventListener('change', function() {
+                    const newLang = this.value;
+                    localStorage.setItem('tracify_lang', newLang);
+                    // Redirect to language URL
+                    const path = window.location.pathname.replace(/^\/[a-z]{2,3}(?:_[A-Z]{2})?\/?/, '/');
+                    window.location.href = '/' + newLang + (path === '/' ? '/payment' : path);
+                });
+            }
         });
     </script>
     <script src="/js/i18n.js"></script>

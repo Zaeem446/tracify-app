@@ -49,9 +49,12 @@
                     <li><a href="/cancel" data-i18n="nav.cancel">Cancel Subscription</a></li>
                 </ul>
                 <div class="nav-right">
+                    <select class="nav-lang-selector" id="desktopLangSelector" aria-label="Select Language">
+                        <option value="en">English</option>
+                    </select>
                     <a href="#login" class="btn btn-login" data-i18n="nav.login">Login</a>
                 </div>
-                <button class="mobile-menu-btn">
+                <button class="mobile-menu-btn" aria-label="Open Menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -59,6 +62,27 @@
             </nav>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span data-i18n="nav.menu">Menu</span>
+            <button class="mobile-menu-close" aria-label="Close Menu">&times;</button>
+        </div>
+        <div class="mobile-menu-content">
+            <a href="#faq" data-i18n="nav.faq">F.A.Q</a>
+            <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+            <a href="/contact" data-i18n="nav.contact">Contact Us</a>
+            <a href="/cancel" data-i18n="nav.cancel">Cancel Subscription</a>
+            <a href="#login" class="btn btn-login" data-i18n="nav.login">Login</a>
+            <select class="mobile-lang-selector" id="mobileLangSelector" aria-label="Select Language">
+                <option value="en">English</option>
+            </select>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">

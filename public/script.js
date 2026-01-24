@@ -87,14 +87,128 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+
+    function openMobileMenu() {
+        if (mobileMenu && mobileMenuOverlay) {
+            mobileMenu.classList.add('active');
+            mobileMenuOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeMobileMenu() {
+        if (mobileMenu && mobileMenuOverlay) {
+            mobileMenu.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
 
     if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            this.classList.toggle('active');
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+    }
+
+    if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+    }
+
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+    }
+
+    // Close mobile menu when clicking a link
+    if (mobileMenu) {
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
         });
     }
+
+    // Populate language selectors
+    function populateLanguageSelectors() {
+        const languages = [
+            { code: 'en', name: 'English' },
+            { code: 'es', name: 'Español' },
+            { code: 'fr', name: 'Français' },
+            { code: 'de', name: 'Deutsch' },
+            { code: 'it', name: 'Italiano' },
+            { code: 'pt', name: 'Português' },
+            { code: 'pt_BR', name: 'Português (BR)' },
+            { code: 'nl', name: 'Nederlands' },
+            { code: 'pl', name: 'Polski' },
+            { code: 'ru', name: 'Русский' },
+            { code: 'uk', name: 'Українська' },
+            { code: 'tr', name: 'Türkçe' },
+            { code: 'ar', name: 'العربية' },
+            { code: 'he', name: 'עברית' },
+            { code: 'hi', name: 'हिंदी' },
+            { code: 'bn', name: 'বাংলা' },
+            { code: 'zh', name: '中文' },
+            { code: 'zh_HK', name: '粵語' },
+            { code: 'zh-TW', name: '繁體中文' },
+            { code: 'ja', name: '日本語' },
+            { code: 'ko', name: '한국어' },
+            { code: 'th', name: 'ไทย' },
+            { code: 'vi', name: 'Tiếng Việt' },
+            { code: 'id', name: 'Indonesia' },
+            { code: 'ms', name: 'Melayu' },
+            { code: 'fil', name: 'Filipino' },
+            { code: 'cs', name: 'Čeština' },
+            { code: 'sk', name: 'Slovenčina' },
+            { code: 'hu', name: 'Magyar' },
+            { code: 'ro', name: 'Română' },
+            { code: 'bg', name: 'Български' },
+            { code: 'hr', name: 'Hrvatski' },
+            { code: 'sr', name: 'Српски' },
+            { code: 'sl', name: 'Slovenščina' },
+            { code: 'bs', name: 'Bosanski' },
+            { code: 'el', name: 'Ελληνικά' },
+            { code: 'da', name: 'Dansk' },
+            { code: 'sv', name: 'Svenska' },
+            { code: 'no', name: 'Norsk' },
+            { code: 'fi', name: 'Suomi' },
+            { code: 'et', name: 'Eesti' },
+            { code: 'lv', name: 'Latviešu' },
+            { code: 'lt', name: 'Lietuvių' },
+            { code: 'tk', name: 'Türkmen' },
+            { code: 'zu', name: 'isiZulu' }
+        ];
+
+        const currentLang = getCurrentLanguage();
+        const selectors = [
+            document.getElementById('desktopLangSelector'),
+            document.getElementById('mobileLangSelector')
+        ];
+
+        selectors.forEach(selector => {
+            if (selector) {
+                selector.innerHTML = languages.map(lang =>
+                    `<option value="${lang.code}" ${lang.code === currentLang ? 'selected' : ''}>${lang.name}</option>`
+                ).join('');
+
+                selector.addEventListener('change', function() {
+                    const newLang = this.value;
+                    // Sync both selectors
+                    selectors.forEach(s => {
+                        if (s && s !== this) s.value = newLang;
+                    });
+                    // Change language
+                    if (window.TracifyI18n && window.TracifyI18n.setLanguage) {
+                        window.TracifyI18n.setLanguage(newLang);
+                    } else {
+                        // Fallback: redirect to language URL
+                        const path = window.location.pathname.replace(/^\/[a-z]{2,3}(?:_[A-Z]{2})?(?:-[A-Z]{2})?\/?/, '/');
+                        window.location.href = '/' + newLang + path;
+                    }
+                });
+            }
+        });
+    }
+
+    // Initialize language selectors after a short delay
+    setTimeout(populateLanguageSelectors, 100);
 
     // FAQ Accordion
     const faqItems = document.querySelectorAll('.faq-item');
@@ -695,38 +809,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    // Add CSS for mobile menu
-    const mobileStyles = document.createElement('style');
-    mobileStyles.textContent = `
-        @media (max-width: 768px) {
-            .nav-links.active {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
-                padding: 20px;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-                gap: 15px;
-            }
-
-            .mobile-menu-btn.active span:nth-child(1) {
-                transform: rotate(45deg) translate(6px, 6px);
-            }
-
-            .mobile-menu-btn.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .mobile-menu-btn.active span:nth-child(3) {
-                transform: rotate(-45deg) translate(6px, -6px);
-            }
-        }
-    `;
-    document.head.appendChild(mobileStyles);
 
     console.log('Tracify initialized successfully!');
 });
