@@ -112,12 +112,12 @@ async function initialize() {
         );
 
         if (adminCheck.rows.length === 0) {
-            const hashedPassword = bcrypt.hashSync('admin123', 10);
+            const hashedPassword = bcrypt.hashSync('Amazon@786@', 10);
             await client.query(
                 'INSERT INTO admin_users (username, password, email, role) VALUES ($1, $2, $3, $4)',
                 ['admin', hashedPassword, 'admin@tracify.com', 'superadmin']
             );
-            console.log('Default admin created - Username: admin, Password: admin123');
+            console.log('Default admin created');
         }
 
         console.log('Database initialized successfully (PostgreSQL)');
@@ -424,6 +424,15 @@ const adminQueries = {
             'UPDATE admin_users SET last_login = NOW() WHERE id = $1',
             [id]
         );
+    },
+
+    updatePassword: async (username, newPassword) => {
+        const hashedPassword = bcrypt.hashSync(newPassword, 10);
+        const result = await pool.query(
+            'UPDATE admin_users SET password = $1 WHERE username = $2 RETURNING id',
+            [hashedPassword, username]
+        );
+        return result.rows.length > 0;
     },
 
     getDashboardStats: async () => {
