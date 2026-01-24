@@ -151,16 +151,17 @@ router.post('/fix-subscription', requireAdmin, async (req, res) => {
         const newExpiresAt = new Date();
         newExpiresAt.setDate(newExpiresAt.getDate() + daysToExtend);
 
-        // Update the subscription
-        await db.subscriptions.extendSubscription(
-            subscription.id,
-            newExpiresAt.toISOString(),
-            'monthly'
+        // Update the subscription using direct SQL (works without new db functions)
+        const pool = db.getDb();
+        await pool.query(
+            `UPDATE subscriptions
+             SET expires_at = $1, plan_type = $2, status = 'active'
+             WHERE id = $3`,
+            [newExpiresAt.toISOString(), 'monthly', subscription.id]
         );
 
         // Update stripe_subscription_id if provided
         if (stripeSubscriptionId) {
-            const pool = db.getDb();
             await pool.query(
                 'UPDATE subscriptions SET stripe_subscription_id = $1 WHERE id = $2',
                 [stripeSubscriptionId, subscription.id]
@@ -211,6 +212,77 @@ router.get('/activity', requireAdmin, async (req, res) => {
     } catch (error) {
         console.error('Activity fetch error:', error);
         res.status(500).json({ error: 'Failed to fetch activity' });
+    }
+});
+
+// Diagnostic endpoint - shows ALL data for a customer (for debugging)
+router.get('/diagnose/:email', requireAdmin, async (req, res) => {
+    try {
+        const email = decodeURIComponent(req.params.email);
+        const pool = db.getDb();
+
+        // Get customer
+        const customer = await db.customers.findByEmail(email);
+        if (!customer) {
+            return res.status(404).json({ error: 'Customer not found', email });
+        }
+
+        // Get ALL subscriptions (not just active)
+        const allSubs = await pool.query(
+            'SELECT * FROM subscriptions WHERE customer_id = $1 ORDER BY started_at DESC',
+            [customer.id]
+        );
+
+        // Check active subscription using same query as auth
+        const activeSub = await pool.query(
+            `SELECT * FROM subscriptions
+             WHERE customer_id = $1 AND status = 'active' AND expires_at > NOW()
+             ORDER BY started_at DESC LIMIT 1`,
+            [customer.id]
+        );
+
+        // Get payments
+        const payments = await db.payments.getByCustomerId(customer.id);
+
+        // Get tracking requests
+        const tracking = await db.tracking.getByCustomerId(customer.id);
+
+        // Get sessions
+        const sessions = await pool.query(
+            'SELECT id, created_at, expires_at FROM sessions WHERE customer_id = $1',
+            [customer.id]
+        );
+
+        // Get current time from DB
+        const serverTime = await pool.query('SELECT NOW() as now');
+
+        res.json({
+            serverTime: serverTime.rows[0].now,
+            customer: {
+                id: customer.id,
+                email: customer.email,
+                created_at: customer.created_at,
+                last_login: customer.last_login
+            },
+            allSubscriptions: allSubs.rows.map(s => ({
+                id: s.id,
+                plan_type: s.plan_type,
+                amount: s.amount,
+                status: s.status,
+                started_at: s.started_at,
+                expires_at: s.expires_at,
+                stripe_subscription_id: s.stripe_subscription_id,
+                isExpired: new Date(s.expires_at) < new Date()
+            })),
+            activeSubscriptionFound: activeSub.rows.length > 0,
+            activeSubscription: activeSub.rows[0] || null,
+            payments: payments,
+            trackingRequests: tracking.length,
+            sessions: sessions.rows
+        });
+    } catch (error) {
+        console.error('Diagnose error:', error);
+        res.status(500).json({ error: error.message });
     }
 });
 
