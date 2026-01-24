@@ -327,7 +327,7 @@ router.get('/history', requireCustomerAuth, async (req, res) => {
 });
 
 // Stripe webhook (for production use)
-router.post('/webhook', express.raw({ type: 'application/json' }), (req, res) => {
+router.post('/webhook', express.raw({ type: 'application/json' }), async (req, res) => {
     if (!stripe) {
         return res.status(400).json({ error: 'Stripe not configured' });
     }
@@ -344,16 +344,129 @@ router.post('/webhook', express.raw({ type: 'application/json' }), (req, res) =>
         return res.status(400).send(`Webhook Error: ${err.message}`);
     }
 
-    // Handle the event
-    switch (event.type) {
-        case 'payment_intent.succeeded':
-            console.log('Payment succeeded:', event.data.object.id);
-            break;
-        case 'payment_intent.payment_failed':
-            console.log('Payment failed:', event.data.object.id);
-            break;
-        default:
-            console.log(`Unhandled event type ${event.type}`);
+    console.log(`📩 Webhook received: ${event.type}`);
+
+    try {
+        switch (event.type) {
+            case 'invoice.payment_succeeded': {
+                const invoice = event.data.object;
+                const stripeSubscriptionId = invoice.subscription;
+                const amountPaid = invoice.amount_paid / 100; // Convert cents to dollars
+
+                console.log(`💰 Invoice payment succeeded: $${amountPaid} for subscription ${stripeSubscriptionId}`);
+
+                // Skip if this is the initial trial payment (amount is $1.25 or less)
+                if (amountPaid <= 1.50) {
+                    console.log('   Skipping trial payment - already recorded during signup');
+                    break;
+                }
+
+                // Find subscription in our database
+                const subscription = await db.subscriptions.findByStripeSubscriptionId(stripeSubscriptionId);
+
+                if (subscription) {
+                    // Extend subscription by 30 days from now
+                    const newExpiresAt = new Date();
+                    newExpiresAt.setDate(newExpiresAt.getDate() + 30);
+
+                    await db.subscriptions.extendSubscription(
+                        subscription.id,
+                        newExpiresAt.toISOString(),
+                        'monthly'
+                    );
+
+                    console.log(`✅ Subscription ${subscription.id} extended to ${newExpiresAt.toISOString()}`);
+
+                    // Record the payment
+                    await db.payments.create(
+                        subscription.customer_id,
+                        subscription.id,
+                        amountPaid,
+                        invoice.payment_intent || invoice.id,
+                        'card',
+                        'completed'
+                    );
+
+                    console.log(`✅ Payment of $${amountPaid} recorded for customer ${subscription.customer_id}`);
+                } else {
+                    console.log(`⚠️ No subscription found for Stripe ID: ${stripeSubscriptionId}`);
+                }
+                break;
+            }
+
+            case 'invoice.payment_failed': {
+                const invoice = event.data.object;
+                const stripeSubscriptionId = invoice.subscription;
+
+                console.log(`❌ Invoice payment failed for subscription ${stripeSubscriptionId}`);
+
+                const subscription = await db.subscriptions.findByStripeSubscriptionId(stripeSubscriptionId);
+
+                if (subscription) {
+                    // Mark subscription as expired due to payment failure
+                    await db.subscriptions.updateStatus(subscription.id, 'expired');
+                    console.log(`⚠️ Subscription ${subscription.id} marked as expired due to payment failure`);
+                }
+                break;
+            }
+
+            case 'customer.subscription.updated': {
+                const stripeSubscription = event.data.object;
+                const stripeSubscriptionId = stripeSubscription.id;
+                const status = stripeSubscription.status;
+
+                console.log(`🔄 Subscription ${stripeSubscriptionId} updated to status: ${status}`);
+
+                const subscription = await db.subscriptions.findByStripeSubscriptionId(stripeSubscriptionId);
+
+                if (subscription) {
+                    // Map Stripe status to our status
+                    let ourStatus = 'active';
+                    if (status === 'canceled' || status === 'unpaid') {
+                        ourStatus = 'cancelled';
+                    } else if (status === 'past_due') {
+                        ourStatus = 'expired';
+                    }
+
+                    if (ourStatus !== 'active') {
+                        await db.subscriptions.updateStatus(subscription.id, ourStatus);
+                        console.log(`✅ Subscription ${subscription.id} status updated to ${ourStatus}`);
+                    }
+                }
+                break;
+            }
+
+            case 'customer.subscription.deleted': {
+                const stripeSubscription = event.data.object;
+                const stripeSubscriptionId = stripeSubscription.id;
+
+                console.log(`🗑️ Subscription ${stripeSubscriptionId} deleted/cancelled`);
+
+                const subscription = await db.subscriptions.findByStripeSubscriptionId(stripeSubscriptionId);
+
+                if (subscription) {
+                    await db.subscriptions.cancel(subscription.id);
+                    console.log(`✅ Subscription ${subscription.id} marked as cancelled`);
+                }
+                break;
+            }
+
+            case 'charge.succeeded': {
+                console.log(`💳 Charge succeeded: ${event.data.object.id}`);
+                break;
+            }
+
+            case 'charge.failed': {
+                console.log(`❌ Charge failed: ${event.data.object.id}`);
+                break;
+            }
+
+            default:
+                console.log(`ℹ️ Unhandled event type: ${event.type}`);
+        }
+    } catch (error) {
+        console.error('❌ Webhook processing error:', error);
+        // Still return 200 to acknowledge receipt
     }
 
     res.json({ received: true });

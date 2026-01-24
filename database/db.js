@@ -284,6 +284,23 @@ const subscriptionQueries = {
             'UPDATE subscriptions SET status = $1 WHERE id = $2',
             [status, id]
         );
+    },
+
+    findByStripeSubscriptionId: async (stripeSubscriptionId) => {
+        const result = await pool.query(
+            'SELECT * FROM subscriptions WHERE stripe_subscription_id = $1',
+            [stripeSubscriptionId]
+        );
+        return result.rows[0] || null;
+    },
+
+    extendSubscription: async (id, newExpiresAt, planType = 'monthly') => {
+        await pool.query(
+            `UPDATE subscriptions
+             SET expires_at = $1, plan_type = $2, status = 'active'
+             WHERE id = $3`,
+            [newExpiresAt, planType, id]
+        );
     }
 };
 
