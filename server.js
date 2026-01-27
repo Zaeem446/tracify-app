@@ -24,7 +24,14 @@ const SUPPORTED_LANGUAGES = [
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(express.json());
+// Skip JSON parsing for Stripe webhook (needs raw body for signature verification)
+app.use((req, res, next) => {
+    if (req.originalUrl === '/api/payment/webhook') {
+        next(); // Skip JSON parsing - webhook route uses express.raw()
+    } else {
+        express.json()(req, res, next);
+    }
+});
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
