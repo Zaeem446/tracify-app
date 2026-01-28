@@ -5,32 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel - Tracify</title>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17900279436"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17900279436');
-    </script>
-
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1276797364499186');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1276797364499186&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+    <script src="/api/pixels/active"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -484,6 +459,15 @@
                 </svg>
                 <span>Tracking Requests</span>
             </a>
+
+            <div class="nav-section">Settings</div>
+            <a class="nav-item" data-page="pixels">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"/>
+                    <polyline points="8 6 2 12 8 18"/>
+                </svg>
+                <span>Pixels & Tags</span>
+            </a>
         </nav>
     </aside>
 
@@ -661,6 +645,65 @@
                             </tr>
                         </thead>
                         <tbody id="payments-table">
+                            <tr><td colspan="6" class="loading">Loading...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pixels & Tags Page -->
+        <section class="page-section" id="pixels-page">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Add New Pixel / Tag</h2>
+                </div>
+                <div class="card-body" style="padding: 25px;">
+                    <form id="addPixelForm" onsubmit="addPixel(event)" style="display:grid;gap:15px;max-width:600px;">
+                        <div>
+                            <label style="display:block;font-weight:600;margin-bottom:5px;color:var(--text);">Tag Type</label>
+                            <select id="pixelType" onchange="onPixelTypeChange()" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:6px;font-size:0.95rem;">
+                                <option value="google_tag">Google Tag</option>
+                                <option value="meta_pixel">Meta Pixel</option>
+                                <option value="custom_script">Custom Script</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display:block;font-weight:600;margin-bottom:5px;color:var(--text);">Name</label>
+                            <input type="text" id="pixelName" required style="width:100%;padding:10px;border:1px solid var(--border);border-radius:6px;font-size:0.95rem;" placeholder="e.g., Main Google Ads Tag">
+                        </div>
+                        <div id="pixelIdField">
+                            <label style="display:block;font-weight:600;margin-bottom:5px;color:var(--text);" id="pixelIdLabel">Google Tag ID</label>
+                            <input type="text" id="pixelId" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:6px;font-size:0.95rem;" placeholder="e.g., AW-17900279436">
+                            <small id="pixelIdHelper" style="color:var(--text-muted);margin-top:4px;display:block;">Enter only the Tag ID (starts with AW-, G-, GT-, etc.). Do not paste the full script code.</small>
+                        </div>
+                        <div id="customCodeField" style="display:none;">
+                            <label style="display:block;font-weight:600;margin-bottom:5px;color:var(--text);">Custom Code</label>
+                            <textarea id="customCode" rows="6" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:6px;font-size:0.95rem;font-family:monospace;" placeholder="Paste your tracking code here (without <script> tags)"></textarea>
+                            <small style="color:var(--warning);margin-top:4px;display:block;">Warning: Custom code runs on every page. Ensure it is from a trusted source. Do not include &lt;script&gt; or &lt;/script&gt; tags.</small>
+                        </div>
+                        <button type="submit" style="padding:12px 24px;background:var(--primary);color:white;border:none;border-radius:6px;font-weight:600;cursor:pointer;font-size:0.95rem;justify-self:start;">Add Tag</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Active Pixels & Tags</h2>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>ID / Code</th>
+                                <th>Status</th>
+                                <th>Created</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pixels-table">
                             <tr><td colspan="6" class="loading">Loading...</td></tr>
                         </tbody>
                     </table>
@@ -947,6 +990,7 @@
                     case 'subscriptions': loadSubscriptions(); break;
                     case 'payments': loadPayments(); break;
                     case 'tracking': loadTracking(); break;
+                    case 'pixels': loadPixels(); break;
                 }
             });
         });
@@ -955,6 +999,126 @@
         async function logout() {
             await fetch('/api/auth/admin/logout', { method: 'POST' });
             window.location.href = '/admin/login';
+        }
+
+        // Pixels & Tags functions
+        async function loadPixels() {
+            try {
+                const res = await fetch('/api/admin/pixels');
+                const data = await res.json();
+
+                const tbody = document.getElementById('pixels-table');
+                if (data.pixels.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">No pixels or tags configured</td></tr>';
+                } else {
+                    tbody.innerHTML = data.pixels.map(p => {
+                        const typeBadge = p.tag_type === 'google_tag' ? 'badge-info' :
+                                          p.tag_type === 'meta_pixel' ? 'badge-info' : 'badge-warning';
+                        const typeLabel = p.tag_type === 'google_tag' ? 'Google Tag' :
+                                          p.tag_type === 'meta_pixel' ? 'Meta Pixel' : 'Custom Script';
+                        const idDisplay = p.pixel_id || (p.custom_code ? p.custom_code.substring(0, 50) + '...' : '-');
+                        const statusBadge = p.is_active ? 'badge-success' : 'badge-danger';
+                        const statusLabel = p.is_active ? 'Active' : 'Disabled';
+                        const toggleLabel = p.is_active ? 'Disable' : 'Enable';
+                        return `<tr>
+                            <td>${p.name}</td>
+                            <td><span class="badge ${typeBadge}">${typeLabel}</span></td>
+                            <td style="font-family:monospace;font-size:0.85rem;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${idDisplay}</td>
+                            <td><span class="badge ${statusBadge}">${statusLabel}</span></td>
+                            <td>${new Date(p.created_at).toLocaleDateString()}</td>
+                            <td style="display:flex;gap:8px;">
+                                <button onclick="togglePixel(${p.id})" style="padding:5px 10px;font-size:12px;background:${p.is_active ? 'var(--warning)' : 'var(--success)'};color:white;border:none;border-radius:4px;cursor:pointer;">${toggleLabel}</button>
+                                <button onclick="deletePixel(${p.id})" style="padding:5px 10px;font-size:12px;background:var(--danger);color:white;border:none;border-radius:4px;cursor:pointer;">Delete</button>
+                            </td>
+                        </tr>`;
+                    }).join('');
+                }
+            } catch (error) {
+                console.error('Failed to load pixels:', error);
+            }
+        }
+
+        async function addPixel(e) {
+            e.preventDefault();
+            const tagType = document.getElementById('pixelType').value;
+            const name = document.getElementById('pixelName').value.trim();
+            const pixelId = document.getElementById('pixelId').value.trim();
+            const customCode = document.getElementById('customCode').value.trim();
+
+            const body = { name, tag_type: tagType };
+            if (tagType === 'custom_script') {
+                body.custom_code = customCode;
+            } else {
+                body.pixel_id = pixelId;
+            }
+
+            try {
+                const res = await fetch('/api/admin/pixels', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body)
+                });
+                const data = await res.json();
+                if (!res.ok) {
+                    alert(data.error || 'Failed to add tag');
+                    return;
+                }
+                document.getElementById('addPixelForm').reset();
+                onPixelTypeChange();
+                loadPixels();
+            } catch (error) {
+                console.error('Failed to add pixel:', error);
+                alert('Failed to add tag');
+            }
+        }
+
+        async function togglePixel(id) {
+            try {
+                await fetch(`/api/admin/pixels/${id}/toggle`, { method: 'PATCH' });
+                loadPixels();
+            } catch (error) {
+                console.error('Failed to toggle pixel:', error);
+            }
+        }
+
+        async function deletePixel(id) {
+            if (!confirm('Are you sure you want to delete this tag?')) return;
+            try {
+                await fetch(`/api/admin/pixels/${id}`, { method: 'DELETE' });
+                loadPixels();
+            } catch (error) {
+                console.error('Failed to delete pixel:', error);
+            }
+        }
+
+        function onPixelTypeChange() {
+            const type = document.getElementById('pixelType').value;
+            const idField = document.getElementById('pixelIdField');
+            const codeField = document.getElementById('customCodeField');
+            const nameInput = document.getElementById('pixelName');
+            const idLabel = document.getElementById('pixelIdLabel');
+            const idInput = document.getElementById('pixelId');
+            const idHelper = document.getElementById('pixelIdHelper');
+
+            if (type === 'custom_script') {
+                idField.style.display = 'none';
+                codeField.style.display = 'block';
+                nameInput.placeholder = 'e.g., TikTok Pixel';
+            } else if (type === 'meta_pixel') {
+                idField.style.display = 'block';
+                codeField.style.display = 'none';
+                idLabel.textContent = 'Meta Pixel ID';
+                idInput.placeholder = 'e.g., 1276797364499186';
+                idHelper.textContent = 'Enter only the numeric Pixel ID. You can find it in your Meta Events Manager. Do not paste the full script/noscript code.';
+                nameInput.placeholder = 'e.g., Facebook Ads Pixel';
+            } else {
+                idField.style.display = 'block';
+                codeField.style.display = 'none';
+                idLabel.textContent = 'Google Tag ID';
+                idInput.placeholder = 'e.g., AW-17900279436';
+                idHelper.textContent = 'Enter only the Tag ID (starts with AW-, G-, GT-, etc.). Do not paste the full script code.';
+                nameInput.placeholder = 'e.g., Main Google Ads Tag';
+            }
         }
 
         // Initialize

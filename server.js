@@ -10,6 +10,7 @@ const trackingRoutes = require('./routes/tracking');
 const contactRoutes = require('./routes/contact');
 const subscriptionRoutes = require('./routes/subscription');
 const geoRoutes = require('./routes/geo');
+const pixelsRoutes = require('./routes/pixels');
 
 const app = express();
 
@@ -70,6 +71,7 @@ app.use('/api/tracking', trackingRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/subscription', subscriptionRoutes);
 app.use('/api/geo', geoRoutes);
+app.use('/api/pixels', pixelsRoutes);
 
 // Serve main page
 app.get('/', (req, res) => {

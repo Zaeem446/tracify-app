@@ -103,6 +103,17 @@ async function initialize() {
                 created_at TIMESTAMP DEFAULT NOW(),
                 expires_at TIMESTAMP NOT NULL
             );
+
+            CREATE TABLE IF NOT EXISTS pixels_tags (
+                id SERIAL PRIMARY KEY,
+                name VARCHAR(255) NOT NULL,
+                tag_type VARCHAR(50) NOT NULL,
+                pixel_id VARCHAR(255),
+                custom_code TEXT,
+                is_active INTEGER DEFAULT 1,
+                created_at TIMESTAMP DEFAULT NOW(),
+                updated_at TIMESTAMP DEFAULT NOW()
+            );
         `);
 
         // Create default admin if not exists
@@ -137,6 +148,20 @@ async function initialize() {
                     console.log('Admin password migrated successfully');
                 }
             }
+        }
+
+        // Seed default pixels/tags if table is empty
+        const pixelCheck = await client.query('SELECT COUNT(*) as count FROM pixels_tags');
+        if (parseInt(pixelCheck.rows[0].count) === 0) {
+            await client.query(
+                `INSERT INTO pixels_tags (name, tag_type, pixel_id) VALUES ($1, $2, $3)`,
+                ['Tracify Google Ads', 'google_tag', 'AW-17900279436']
+            );
+            await client.query(
+                `INSERT INTO pixels_tags (name, tag_type, pixel_id) VALUES ($1, $2, $3)`,
+                ['Tracify Meta Pixel', 'meta_pixel', '1276797364499186']
+            );
+            console.log('Default pixels/tags seeded');
         }
 
         console.log('Database initialized successfully (PostgreSQL)');
@@ -502,6 +527,57 @@ const sessionQueries = {
     }
 };
 
+// Pixels & Tags functions
+const pixelsQueries = {
+    getAll: async () => {
+        const result = await pool.query(
+            'SELECT * FROM pixels_tags ORDER BY created_at DESC'
+        );
+        return result.rows;
+    },
+
+    getActive: async () => {
+        const result = await pool.query(
+            'SELECT * FROM pixels_tags WHERE is_active = 1 ORDER BY created_at ASC'
+        );
+        return result.rows;
+    },
+
+    create: async (name, tagType, pixelId, customCode) => {
+        const result = await pool.query(
+            `INSERT INTO pixels_tags (name, tag_type, pixel_id, custom_code)
+             VALUES ($1, $2, $3, $4) RETURNING *`,
+            [name, tagType, pixelId || null, customCode || null]
+        );
+        return result.rows[0];
+    },
+
+    toggle: async (id) => {
+        const result = await pool.query(
+            `UPDATE pixels_tags SET is_active = CASE WHEN is_active = 1 THEN 0 ELSE 1 END, updated_at = NOW()
+             WHERE id = $1 RETURNING *`,
+            [id]
+        );
+        return result.rows[0] || null;
+    },
+
+    delete: async (id) => {
+        const result = await pool.query(
+            'DELETE FROM pixels_tags WHERE id = $1 RETURNING id',
+            [id]
+        );
+        return result.rowCount > 0;
+    },
+
+    findByTypeAndPixelId: async (tagType, pixelId) => {
+        const result = await pool.query(
+            'SELECT * FROM pixels_tags WHERE tag_type = $1 AND pixel_id = $2',
+            [tagType, pixelId]
+        );
+        return result.rows[0] || null;
+    }
+};
+
 module.exports = {
     initialize,
     getDb: () => pool,
@@ -510,5 +586,6 @@ module.exports = {
     payments: paymentQueries,
     tracking: trackingQueries,
     admin: adminQueries,
-    sessions: sessionQueries
+    sessions: sessionQueries,
+    pixels: pixelsQueries
 };

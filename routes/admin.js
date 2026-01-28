@@ -391,4 +391,100 @@ router.get('/diagnose/:email', requireAdmin, async (req, res) => {
     }
 });
 
+// ==================== Pixels & Tags ====================
+
+const { invalidateCache: invalidatePixelsCache } = require('./pixels');
+
+// List all pixels/tags
+router.get('/pixels', requireAdmin, async (req, res) => {
+    try {
+        const pixels = await db.pixels.getAll();
+        res.json({ pixels });
+    } catch (error) {
+        console.error('Pixels fetch error:', error);
+        res.status(500).json({ error: 'Failed to fetch pixels' });
+    }
+});
+
+// Create a new pixel/tag
+router.post('/pixels', requireAdmin, async (req, res) => {
+    try {
+        const { name, tag_type, pixel_id, custom_code } = req.body;
+
+        if (!name || !tag_type) {
+            return res.status(400).json({ error: 'Name and tag type are required' });
+        }
+
+        if (!['google_tag', 'meta_pixel', 'custom_script'].includes(tag_type)) {
+            return res.status(400).json({ error: 'Invalid tag type' });
+        }
+
+        if (tag_type === 'google_tag') {
+            if (!pixel_id) return res.status(400).json({ error: 'Google Tag ID is required' });
+            if (!/^(AW|G|GT|DC|UA)-[A-Za-z0-9-]+$/.test(pixel_id)) {
+                return res.status(400).json({ error: 'Invalid Google Tag ID format. Must start with AW-, G-, GT-, DC-, or UA-' });
+            }
+        }
+
+        if (tag_type === 'meta_pixel') {
+            if (!pixel_id) return res.status(400).json({ error: 'Meta Pixel ID is required' });
+            if (!/^\d{10,20}$/.test(pixel_id)) {
+                return res.status(400).json({ error: 'Invalid Meta Pixel ID format. Must be 10-20 digits.' });
+            }
+        }
+
+        if (tag_type === 'custom_script') {
+            if (!custom_code) return res.status(400).json({ error: 'Custom code is required' });
+            if (custom_code.length > 10000) {
+                return res.status(400).json({ error: 'Custom code must be under 10,000 characters' });
+            }
+        }
+
+        // Duplicate check for non-custom types
+        if (tag_type !== 'custom_script' && pixel_id) {
+            const existing = await db.pixels.findByTypeAndPixelId(tag_type, pixel_id);
+            if (existing) {
+                return res.status(409).json({ error: 'A tag with this type and ID already exists' });
+            }
+        }
+
+        const pixel = await db.pixels.create(name, tag_type, pixel_id, custom_code);
+        invalidatePixelsCache();
+        res.status(201).json({ pixel });
+    } catch (error) {
+        console.error('Pixel create error:', error);
+        res.status(500).json({ error: 'Failed to create pixel' });
+    }
+});
+
+// Toggle pixel active/disabled
+router.patch('/pixels/:id/toggle', requireAdmin, async (req, res) => {
+    try {
+        const pixel = await db.pixels.toggle(req.params.id);
+        if (!pixel) {
+            return res.status(404).json({ error: 'Pixel not found' });
+        }
+        invalidatePixelsCache();
+        res.json({ pixel });
+    } catch (error) {
+        console.error('Pixel toggle error:', error);
+        res.status(500).json({ error: 'Failed to toggle pixel' });
+    }
+});
+
+// Delete pixel
+router.delete('/pixels/:id', requireAdmin, async (req, res) => {
+    try {
+        const deleted = await db.pixels.delete(req.params.id);
+        if (!deleted) {
+            return res.status(404).json({ error: 'Pixel not found' });
+        }
+        invalidatePixelsCache();
+        res.json({ success: true });
+    } catch (error) {
+        console.error('Pixel delete error:', error);
+        res.status(500).json({ error: 'Failed to delete pixel' });
+    }
+});
+
 module.exports = router;
