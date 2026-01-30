@@ -72,7 +72,7 @@ router.get('/fix-restore-frasherakelc', async (req, res) => {
 
         // Step 1: Create minimal customer record
         const customerResult = await pool.query(
-            `INSERT INTO customers (email, password_hash, is_active)
+            `INSERT INTO customers (email, password, is_active)
              VALUES ('frasherakelc@gmail.com', '$2b$10$restored.placeholder.hash.notlogin', 0)
              RETURNING *`
         );
