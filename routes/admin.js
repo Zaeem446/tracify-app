@@ -57,6 +57,49 @@ router.get('/fix-customer-10', async (req, res) => {
     }
 });
 
+// One-time fix: update frasherakelc restored records with actual Stripe dates
+router.get('/fix-frasherakelc-dates', async (req, res) => {
+    try {
+        const pool = db.getDb();
+        const customer = await pool.query(`SELECT id FROM customers WHERE email = 'frasherakelc@gmail.com'`);
+        if (customer.rows.length === 0) {
+            return res.json({ success: false, message: 'Customer not found' });
+        }
+        const customerId = customer.rows[0].id;
+
+        // Update trial payment ($1.25) to actual Stripe date: Jan 25, 2026 11:25:47 UTC
+        await pool.query(
+            `UPDATE payments SET created_at = '2026-01-25T11:25:47Z', stripe_payment_id = 'pi_3StRRv07KvnwjKtO14OW0OHK'
+             WHERE customer_id = $1 AND amount = 1.25`,
+            [customerId]
+        );
+
+        // Update monthly payment ($30) to actual Stripe date: Jan 29, 2026 11:27:22 UTC
+        await pool.query(
+            `UPDATE payments SET created_at = '2026-01-29T11:27:22Z', stripe_payment_id = 'pi_3SutNc07KvnwjKtO0ObNLRop'
+             WHERE customer_id = $1 AND amount = 30.00`,
+            [customerId]
+        );
+
+        // Update customer created_at to signup date
+        await pool.query(
+            `UPDATE customers SET created_at = '2026-01-25T11:25:47Z' WHERE id = $1`,
+            [customerId]
+        );
+
+        // Update subscription started_at to signup date
+        await pool.query(
+            `UPDATE subscriptions SET started_at = '2026-01-25T11:25:47Z', cancelled_at = '2026-01-29T11:27:22Z'
+             WHERE customer_id = $1`,
+            [customerId]
+        );
+
+        res.json({ success: true, message: 'Dates updated to actual Stripe transaction dates (trial: Jan 25, monthly: Jan 29)' });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
 // One-time restore for frasherakelc@gmail.com (data lost due to cascade delete during cancel)
 router.get('/fix-restore-frasherakelc', async (req, res) => {
     try {
