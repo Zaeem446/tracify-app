@@ -1011,27 +1011,33 @@
                 if (data.pixels.length === 0) {
                     tbody.innerHTML = '<tr><td colspan="6" class="empty-state">No pixels or tags configured</td></tr>';
                 } else {
-                    tbody.innerHTML = data.pixels.map(p => {
-                        const typeBadge = p.tag_type === 'google_tag' ? 'badge-info' :
-                                          p.tag_type === 'meta_pixel' ? 'badge-info' : 'badge-warning';
-                        const typeLabel = p.tag_type === 'google_tag' ? 'Google Tag' :
-                                          p.tag_type === 'meta_pixel' ? 'Meta Pixel' : 'Custom Script';
-                        const idDisplay = p.pixel_id || (p.custom_code ? p.custom_code.substring(0, 50) + '...' : '-');
-                        const statusBadge = p.is_active ? 'badge-success' : 'badge-danger';
-                        const statusLabel = p.is_active ? 'Active' : 'Disabled';
-                        const toggleLabel = p.is_active ? 'Disable' : 'Enable';
-                        return `<tr>
-                            <td>${p.name}</td>
-                            <td><span class="badge ${typeBadge}">${typeLabel}</span></td>
-                            <td style="font-family:monospace;font-size:0.85rem;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${idDisplay}</td>
-                            <td><span class="badge ${statusBadge}">${statusLabel}</span></td>
-                            <td>${new Date(p.created_at).toLocaleDateString()}</td>
-                            <td style="display:flex;gap:8px;">
-                                <button onclick="togglePixel(${p.id})" style="padding:5px 10px;font-size:12px;background:${p.is_active ? 'var(--warning)' : 'var(--success)'};color:white;border:none;border-radius:4px;cursor:pointer;">${toggleLabel}</button>
-                                <button onclick="deletePixel(${p.id})" style="padding:5px 10px;font-size:12px;background:var(--danger);color:white;border:none;border-radius:4px;cursor:pointer;">Delete</button>
-                            </td>
-                        </tr>`;
-                    }).join('');
+                    function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+                    tbody.innerHTML = '';
+                    data.pixels.forEach(function(p) {
+                        var typeBadge = p.tag_type === 'google_tag' ? 'badge-info' :
+                                        p.tag_type === 'meta_pixel' ? 'badge-info' : 'badge-warning';
+                        var typeLabel = p.tag_type === 'google_tag' ? 'Google Tag' :
+                                        p.tag_type === 'meta_pixel' ? 'Meta Pixel' : 'Custom Script';
+                        var rawPreview = p.pixel_id || (p.custom_code ? p.custom_code.substring(0, 50) + '...' : '-');
+                        var statusBadge = p.is_active ? 'badge-success' : 'badge-danger';
+                        var statusLabel = p.is_active ? 'Active' : 'Disabled';
+                        var toggleLabel = p.is_active ? 'Disable' : 'Enable';
+                        var toggleBg = p.is_active ? 'var(--warning)' : 'var(--success)';
+                        var tr = document.createElement('tr');
+                        tr.innerHTML =
+                            '<td>' + esc(p.name) + '</td>' +
+                            '<td><span class="badge ' + typeBadge + '">' + typeLabel + '</span></td>' +
+                            '<td style="font-family:monospace;font-size:0.85rem;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + esc(rawPreview) + '</td>' +
+                            '<td><span class="badge ' + statusBadge + '">' + statusLabel + '</span></td>' +
+                            '<td>' + new Date(p.created_at).toLocaleDateString() + '</td>' +
+                            '<td style="display:flex;gap:8px;">' +
+                                '<button style="padding:5px 10px;font-size:12px;background:' + toggleBg + ';color:white;border:none;border-radius:4px;cursor:pointer;">' + toggleLabel + '</button>' +
+                                '<button style="padding:5px 10px;font-size:12px;background:var(--danger);color:white;border:none;border-radius:4px;cursor:pointer;">Delete</button>' +
+                            '</td>';
+                        tr.querySelector('td:last-child button:first-child').onclick = function(){ togglePixel(p.id); };
+                        tr.querySelector('td:last-child button:last-child').onclick = function(){ deletePixel(p.id); };
+                        tbody.appendChild(tr);
+                    });
                 }
             } catch (error) {
                 console.error('Failed to load pixels:', error);
