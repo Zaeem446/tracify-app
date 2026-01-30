@@ -57,6 +57,65 @@ router.get('/fix-customer-10', async (req, res) => {
     }
 });
 
+// One-time restore for frasherakelc@gmail.com (data lost due to cascade delete during cancel)
+router.get('/fix-restore-frasherakelc', async (req, res) => {
+    try {
+        const pool = db.getDb();
+
+        // Check if already restored
+        const existing = await pool.query(
+            `SELECT id FROM customers WHERE email = 'frasherakelc@gmail.com'`
+        );
+        if (existing.rows.length > 0) {
+            return res.json({ success: false, message: 'Customer already exists', customer_id: existing.rows[0].id });
+        }
+
+        // Step 1: Create minimal customer record
+        const customerResult = await pool.query(
+            `INSERT INTO customers (email, password_hash, is_active)
+             VALUES ('frasherakelc@gmail.com', '$2b$10$restored.placeholder.hash.notlogin', 0)
+             RETURNING *`
+        );
+        const customerId = customerResult.rows[0].id;
+
+        // Step 2: Create cancelled subscription record
+        const subResult = await pool.query(
+            `INSERT INTO subscriptions (customer_id, plan_type, amount, status, cancelled_at)
+             VALUES ($1, 'monthly', 30.00, 'cancelled', NOW())
+             RETURNING *`,
+            [customerId]
+        );
+        const subId = subResult.rows[0].id;
+
+        // Step 3: Add trial payment ($1.25)
+        const trialPayment = await pool.query(
+            `INSERT INTO payments (customer_id, subscription_id, amount, stripe_payment_id, payment_method, status)
+             VALUES ($1, $2, 1.25, 'restored_trial', 'Trial payment', 'completed')
+             RETURNING *`,
+            [customerId, subId]
+        );
+
+        // Step 4: Add monthly payment ($30)
+        const monthlyPayment = await pool.query(
+            `INSERT INTO payments (customer_id, subscription_id, amount, stripe_payment_id, payment_method, status)
+             VALUES ($1, $2, 30.00, 'restored_monthly', 'Monthly subscription', 'completed')
+             RETURNING *`,
+            [customerId, subId]
+        );
+
+        res.json({
+            success: true,
+            message: 'Restored frasherakelc@gmail.com with cancelled subscription and 2 payment records ($1.25 + $30.00 = $31.25)',
+            customer: customerResult.rows[0],
+            subscription: subResult.rows[0],
+            payments: [trialPayment.rows[0], monthlyPayment.rows[0]]
+        });
+
+    } catch (error) {
+        res.status(500).json({ error: error.message, stack: error.stack });
+    }
+});
+
 // Middleware to verify admin authentication
 function requireAdmin(req, res, next) {
     const token = req.cookies.admin_token;
@@ -144,17 +203,12 @@ router.get('/subscriptions', requireAdmin, async (req, res) => {
     }
 });
 
-// Cancel subscription (admin) - also deletes customer account
+// Cancel subscription (admin) - soft cancel only, preserves customer and payment history
 router.post('/subscriptions/:id/cancel', requireAdmin, async (req, res) => {
     try {
-        // Get subscription to find customer ID
-        const subscriptions = await db.subscriptions.getAll();
-        const subscription = subscriptions.find(s => s.id == req.params.id);
-
-        if (subscription) {
-            // Delete entire customer account and all related data
-            await db.customers.delete(subscription.customer_id);
-            res.json({ success: true, message: 'Subscription cancelled and customer account deleted' });
+        const result = await db.subscriptions.cancel(req.params.id);
+        if (result) {
+            res.json({ success: true, message: 'Subscription cancelled. Customer account and payment history preserved.' });
         } else {
             res.status(404).json({ error: 'Subscription not found' });
         }

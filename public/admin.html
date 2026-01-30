@@ -401,6 +401,36 @@
             flex: 1;
             color: var(--text);
         }
+
+        .search-input {
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-family: 'Inter', sans-serif;
+            outline: none;
+            width: 200px;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(76,175,80,0.15);
+        }
+
+        .sort-select {
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-family: 'Inter', sans-serif;
+            outline: none;
+            background: white;
+            cursor: pointer;
+        }
+
+        .sort-select:focus {
+            border-color: var(--primary);
+        }
     </style>
 </head>
 <body>
@@ -575,6 +605,15 @@
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title">All Customers</h2>
+                    <div style="display:flex;gap:10px;align-items:center;">
+                        <input type="text" placeholder="Search..." class="search-input" id="search-customers" oninput="renderCustomers()">
+                        <select class="sort-select" id="sort-customers" onchange="renderCustomers()">
+                            <option value="newest">Newest first</option>
+                            <option value="oldest">Oldest first</option>
+                            <option value="email-az">Email A-Z</option>
+                            <option value="email-za">Email Z-A</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="card-body">
                     <table>
@@ -602,6 +641,15 @@
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title">All Subscriptions</h2>
+                    <div style="display:flex;gap:10px;align-items:center;">
+                        <input type="text" placeholder="Search..." class="search-input" id="search-subscriptions" oninput="renderSubscriptions()">
+                        <select class="sort-select" id="sort-subscriptions" onchange="renderSubscriptions()">
+                            <option value="newest">Newest first</option>
+                            <option value="oldest">Oldest first</option>
+                            <option value="amount-high">Amount High-Low</option>
+                            <option value="amount-low">Amount Low-High</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="card-body">
                     <table>
@@ -630,7 +678,16 @@
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title">Payment History</h2>
-                    <div class="stat-value" id="total-revenue-display">Total: Rs 0</div>
+                    <div style="display:flex;gap:10px;align-items:center;">
+                        <div class="stat-value" id="total-revenue-display" style="font-size:1rem;margin-right:10px;">Total: Rs 0</div>
+                        <input type="text" placeholder="Search..." class="search-input" id="search-payments" oninput="renderPayments()">
+                        <select class="sort-select" id="sort-payments" onchange="renderPayments()">
+                            <option value="newest">Newest first</option>
+                            <option value="oldest">Oldest first</option>
+                            <option value="amount-high">Amount High-Low</option>
+                            <option value="amount-low">Amount Low-High</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="card-body">
                     <table>
@@ -690,6 +747,15 @@
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title">Active Pixels & Tags</h2>
+                    <div style="display:flex;gap:10px;align-items:center;">
+                        <input type="text" placeholder="Search..." class="search-input" id="search-pixels" oninput="renderPixels()">
+                        <select class="sort-select" id="sort-pixels" onchange="renderPixels()">
+                            <option value="newest">Newest first</option>
+                            <option value="oldest">Oldest first</option>
+                            <option value="type">Type</option>
+                            <option value="status">Status</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="card-body">
                     <table>
@@ -716,6 +782,13 @@
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title">Tracking Requests</h2>
+                    <div style="display:flex;gap:10px;align-items:center;">
+                        <input type="text" placeholder="Search..." class="search-input" id="search-tracking" oninput="renderTracking()">
+                        <select class="sort-select" id="sort-tracking" onchange="renderTracking()">
+                            <option value="newest">Newest first</option>
+                            <option value="oldest">Oldest first</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="card-body">
                     <table>
@@ -751,6 +824,13 @@
     </div>
 
     <script>
+        // Data caches for search/sort
+        let allCustomers = [];
+        let allSubscriptions = [];
+        let allPayments = [];
+        let allTracking = [];
+        let allPixelsData = [];
+
         // Check admin auth on load
         async function checkAuth() {
             try {
@@ -801,120 +881,182 @@
             }
         }
 
-        // Load customers
+        // ===== Customers =====
         async function loadCustomers() {
             try {
                 const res = await fetch('/api/admin/customers');
                 const data = await res.json();
-
-                const tbody = document.getElementById('customers-table');
-                if (data.customers.length === 0) {
-                    tbody.innerHTML = '<tr><td colspan="7" class="empty-state">No customers yet</td></tr>';
-                } else {
-                    tbody.innerHTML = data.customers.map(c => `
-                        <tr onclick="showCustomerDetail(${c.id})" style="cursor:pointer">
-                            <td>#${c.id}</td>
-                            <td>${c.email}</td>
-                            <td>${c.phone_to_track || '-'}</td>
-                            <td>${c.plan_type || 'None'}</td>
-                            <td>${c.subscription_started ? new Date(c.subscription_started).toLocaleString() : '-'}</td>
-                            <td>${c.subscription_expires ? new Date(c.subscription_expires).toLocaleString() : '-'}</td>
-                            <td><span class="badge ${c.subscription_status === 'active' ? 'badge-success' : 'badge-warning'}">${c.subscription_status || 'Inactive'}</span></td>
-                        </tr>
-                    `).join('');
-                }
+                allCustomers = data.customers;
+                renderCustomers();
             } catch (error) {
                 console.error('Failed to load customers:', error);
             }
         }
 
-        // Load subscriptions
+        function renderCustomers() {
+            const search = (document.getElementById('search-customers').value || '').toLowerCase();
+            const sort = document.getElementById('sort-customers').value;
+            let items = allCustomers.filter(c =>
+                (c.email || '').toLowerCase().includes(search) ||
+                (c.phone_to_track || '').toLowerCase().includes(search) ||
+                (c.plan_type || '').toLowerCase().includes(search)
+            );
+            items = sortByOption(items, sort, 'created_at', 'email');
+            const tbody = document.getElementById('customers-table');
+            if (items.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="7" class="empty-state">No customers found</td></tr>';
+            } else {
+                tbody.innerHTML = items.map(c => `
+                    <tr onclick="showCustomerDetail(${c.id})" style="cursor:pointer">
+                        <td>#${c.id}</td>
+                        <td>${c.email}</td>
+                        <td>${c.phone_to_track || '-'}</td>
+                        <td>${c.plan_type || 'None'}</td>
+                        <td>${c.subscription_started ? new Date(c.subscription_started).toLocaleString() : '-'}</td>
+                        <td>${c.subscription_expires ? new Date(c.subscription_expires).toLocaleString() : '-'}</td>
+                        <td><span class="badge ${c.subscription_status === 'active' ? 'badge-success' : 'badge-warning'}">${c.subscription_status || 'Inactive'}</span></td>
+                    </tr>
+                `).join('');
+            }
+        }
+
+        // ===== Subscriptions =====
         async function loadSubscriptions() {
             try {
                 const res = await fetch('/api/admin/subscriptions');
                 const data = await res.json();
-
-                const tbody = document.getElementById('subscriptions-table');
-                if (data.subscriptions.length === 0) {
-                    tbody.innerHTML = '<tr><td colspan="8" class="empty-state">No subscriptions yet</td></tr>';
-                } else {
-                    tbody.innerHTML = data.subscriptions.map(s => `
-                        <tr>
-                            <td>#${s.id}</td>
-                            <td>${s.customer_email}</td>
-                            <td><span class="badge badge-info">${s.plan_type}</span></td>
-                            <td>Rs ${s.amount.toLocaleString()}</td>
-                            <td>${new Date(s.started_at).toLocaleString()}</td>
-                            <td>${new Date(s.expires_at).toLocaleString()}</td>
-                            <td><span class="badge ${s.status === 'active' ? 'badge-success' : s.status === 'cancelled' ? 'badge-danger' : 'badge-warning'}">${s.status}</span></td>
-                            <td>${s.status === 'active' ? `<button onclick="cancelSubscription(${s.id})" class="btn-logout" style="padding:5px 10px;font-size:12px">Cancel</button>` : '-'}</td>
-                        </tr>
-                    `).join('');
-                }
+                allSubscriptions = data.subscriptions;
+                renderSubscriptions();
             } catch (error) {
                 console.error('Failed to load subscriptions:', error);
             }
         }
 
-        // Load payments
+        function renderSubscriptions() {
+            const search = (document.getElementById('search-subscriptions').value || '').toLowerCase();
+            const sort = document.getElementById('sort-subscriptions').value;
+            let items = allSubscriptions.filter(s =>
+                (s.customer_email || '').toLowerCase().includes(search) ||
+                (s.plan_type || '').toLowerCase().includes(search) ||
+                (s.status || '').toLowerCase().includes(search)
+            );
+            items = sortByOption(items, sort, 'started_at', 'customer_email', 'amount');
+            const tbody = document.getElementById('subscriptions-table');
+            if (items.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" class="empty-state">No subscriptions found</td></tr>';
+            } else {
+                tbody.innerHTML = items.map(s => `
+                    <tr>
+                        <td>#${s.id}</td>
+                        <td>${s.customer_email}</td>
+                        <td><span class="badge badge-info">${s.plan_type}</span></td>
+                        <td>Rs ${s.amount.toLocaleString()}</td>
+                        <td>${new Date(s.started_at).toLocaleString()}</td>
+                        <td>${new Date(s.expires_at).toLocaleString()}</td>
+                        <td><span class="badge ${s.status === 'active' ? 'badge-success' : s.status === 'cancelled' ? 'badge-danger' : 'badge-warning'}">${s.status}</span></td>
+                        <td>${s.status === 'active' ? `<button onclick="cancelSubscription(${s.id})" class="btn-logout" style="padding:5px 10px;font-size:12px">Cancel</button>` : '-'}</td>
+                    </tr>
+                `).join('');
+            }
+        }
+
+        // ===== Payments =====
         async function loadPayments() {
             try {
                 const res = await fetch('/api/admin/payments');
                 const data = await res.json();
-
+                allPayments = data.payments;
                 document.getElementById('total-revenue-display').textContent = 'Total: Rs ' + (data.totalRevenue || 0).toLocaleString();
-
-                const tbody = document.getElementById('payments-table');
-                if (data.payments.length === 0) {
-                    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">No payments yet</td></tr>';
-                } else {
-                    tbody.innerHTML = data.payments.map(p => `
-                        <tr>
-                            <td>#${p.id}</td>
-                            <td>${p.customer_email}</td>
-                            <td>Rs ${p.amount.toLocaleString()}</td>
-                            <td>${p.payment_method || 'Card'}</td>
-                            <td><span class="badge ${p.status === 'completed' ? 'badge-success' : 'badge-warning'}">${p.status}</span></td>
-                            <td>${new Date(p.created_at).toLocaleString()}</td>
-                        </tr>
-                    `).join('');
-                }
+                renderPayments();
             } catch (error) {
                 console.error('Failed to load payments:', error);
             }
         }
 
-        // Load tracking requests
+        function renderPayments() {
+            const search = (document.getElementById('search-payments').value || '').toLowerCase();
+            const sort = document.getElementById('sort-payments').value;
+            let items = allPayments.filter(p =>
+                (p.customer_email || '').toLowerCase().includes(search) ||
+                (p.payment_method || '').toLowerCase().includes(search) ||
+                (p.status || '').toLowerCase().includes(search)
+            );
+            items = sortByOption(items, sort, 'created_at', 'customer_email', 'amount');
+            const tbody = document.getElementById('payments-table');
+            if (items.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" class="empty-state">No payments found</td></tr>';
+            } else {
+                tbody.innerHTML = items.map(p => `
+                    <tr>
+                        <td>#${p.id}</td>
+                        <td>${p.customer_email}</td>
+                        <td>Rs ${p.amount.toLocaleString()}</td>
+                        <td>${p.payment_method || 'Card'}</td>
+                        <td><span class="badge ${p.status === 'completed' ? 'badge-success' : 'badge-warning'}">${p.status}</span></td>
+                        <td>${new Date(p.created_at).toLocaleString()}</td>
+                    </tr>
+                `).join('');
+            }
+        }
+
+        // ===== Tracking =====
         async function loadTracking() {
             try {
                 const res = await fetch('/api/admin/tracking');
                 const data = await res.json();
-
-                const tbody = document.getElementById('tracking-table');
-                if (data.requests.length === 0) {
-                    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">No tracking requests yet</td></tr>';
-                } else {
-                    tbody.innerHTML = data.requests.map(t => `
-                        <tr>
-                            <td>#${t.id}</td>
-                            <td>${t.customer_email}</td>
-                            <td>${t.country_code || ''}${t.phone_number}</td>
-                            <td><span class="badge ${t.consent_given ? 'badge-success' : 'badge-warning'}">${t.consent_given ? 'Yes' : 'Pending'}</span></td>
-                            <td>${t.consent_given ? `
-                                <a href="https://www.google.com/maps?q=${t.location_lat},${t.location_lng}"
-                                   target="_blank"
-                                   style="color: var(--primary); text-decoration: none; font-weight: 500;">
-                                    View on Map
-                                </a>
-                                <br>
-                                <small style="color: var(--text-muted);">${parseFloat(t.location_lat).toFixed(6)}, ${parseFloat(t.location_lng).toFixed(6)}</small>
-                            ` : '-'}</td>
-                            <td>${new Date(t.created_at).toLocaleString()}</td>
-                        </tr>
-                    `).join('');
-                }
+                allTracking = data.requests;
+                renderTracking();
             } catch (error) {
                 console.error('Failed to load tracking:', error);
+            }
+        }
+
+        function renderTracking() {
+            const search = (document.getElementById('search-tracking').value || '').toLowerCase();
+            const sort = document.getElementById('sort-tracking').value;
+            let items = allTracking.filter(t =>
+                (t.customer_email || '').toLowerCase().includes(search) ||
+                (t.phone_number || '').toLowerCase().includes(search)
+            );
+            items = sortByOption(items, sort, 'created_at');
+            const tbody = document.getElementById('tracking-table');
+            if (items.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" class="empty-state">No tracking requests found</td></tr>';
+            } else {
+                tbody.innerHTML = items.map(t => `
+                    <tr>
+                        <td>#${t.id}</td>
+                        <td>${t.customer_email}</td>
+                        <td>${t.country_code || ''}${t.phone_number}</td>
+                        <td><span class="badge ${t.consent_given ? 'badge-success' : 'badge-warning'}">${t.consent_given ? 'Yes' : 'Pending'}</span></td>
+                        <td>${t.consent_given ? `
+                            <a href="https://www.google.com/maps?q=${t.location_lat},${t.location_lng}"
+                               target="_blank"
+                               style="color: var(--primary); text-decoration: none; font-weight: 500;">
+                                View on Map
+                            </a>
+                            <br>
+                            <small style="color: var(--text-muted);">${parseFloat(t.location_lat).toFixed(6)}, ${parseFloat(t.location_lng).toFixed(6)}</small>
+                        ` : '-'}</td>
+                        <td>${new Date(t.created_at).toLocaleString()}</td>
+                    </tr>
+                `).join('');
+            }
+        }
+
+        // ===== Sort helper =====
+        function sortByOption(arr, option, dateField, emailField, amountField) {
+            const sorted = [...arr];
+            switch(option) {
+                case 'newest': return sorted.sort((a, b) => new Date(b[dateField]) - new Date(a[dateField]));
+                case 'oldest': return sorted.sort((a, b) => new Date(a[dateField]) - new Date(b[dateField]));
+                case 'email-az': return emailField ? sorted.sort((a, b) => (a[emailField] || '').localeCompare(b[emailField] || '')) : sorted;
+                case 'email-za': return emailField ? sorted.sort((a, b) => (b[emailField] || '').localeCompare(a[emailField] || '')) : sorted;
+                case 'amount-high': return amountField ? sorted.sort((a, b) => (b[amountField] || 0) - (a[amountField] || 0)) : sorted;
+                case 'amount-low': return amountField ? sorted.sort((a, b) => (a[amountField] || 0) - (b[amountField] || 0)) : sorted;
+                case 'type': return sorted.sort((a, b) => (a.tag_type || '').localeCompare(b.tag_type || ''));
+                case 'status': return sorted.sort((a, b) => (b.is_active ? 1 : 0) - (a.is_active ? 1 : 0));
+                default: return sorted;
             }
         }
 
@@ -959,7 +1101,7 @@
 
         // Cancel subscription
         async function cancelSubscription(id) {
-            if (!confirm('Are you sure you want to cancel this subscription?')) return;
+            if (!confirm('Are you sure you want to cancel this subscription? The customer account and payment history will be preserved.')) return;
 
             try {
                 await fetch(`/api/admin/subscriptions/${id}/cancel`, { method: 'POST' });
@@ -1006,41 +1148,54 @@
             try {
                 const res = await fetch('/api/admin/pixels');
                 const data = await res.json();
-
-                const tbody = document.getElementById('pixels-table');
-                if (data.pixels.length === 0) {
-                    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">No pixels or tags configured</td></tr>';
-                } else {
-                    function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
-                    tbody.innerHTML = '';
-                    data.pixels.forEach(function(p) {
-                        var typeBadge = p.tag_type === 'google_tag' ? 'badge-info' :
-                                        p.tag_type === 'meta_pixel' ? 'badge-info' : 'badge-warning';
-                        var typeLabel = p.tag_type === 'google_tag' ? 'Google Tag' :
-                                        p.tag_type === 'meta_pixel' ? 'Meta Pixel' : 'Custom Script';
-                        var rawPreview = p.pixel_id || (p.custom_code ? p.custom_code.substring(0, 50) + '...' : '-');
-                        var statusBadge = p.is_active ? 'badge-success' : 'badge-danger';
-                        var statusLabel = p.is_active ? 'Active' : 'Disabled';
-                        var toggleLabel = p.is_active ? 'Disable' : 'Enable';
-                        var toggleBg = p.is_active ? 'var(--warning)' : 'var(--success)';
-                        var tr = document.createElement('tr');
-                        tr.innerHTML =
-                            '<td>' + esc(p.name) + '</td>' +
-                            '<td><span class="badge ' + typeBadge + '">' + typeLabel + '</span></td>' +
-                            '<td style="font-family:monospace;font-size:0.85rem;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + esc(rawPreview) + '</td>' +
-                            '<td><span class="badge ' + statusBadge + '">' + statusLabel + '</span></td>' +
-                            '<td>' + new Date(p.created_at).toLocaleDateString() + '</td>' +
-                            '<td style="display:flex;gap:8px;">' +
-                                '<button style="padding:5px 10px;font-size:12px;background:' + toggleBg + ';color:white;border:none;border-radius:4px;cursor:pointer;">' + toggleLabel + '</button>' +
-                                '<button style="padding:5px 10px;font-size:12px;background:var(--danger);color:white;border:none;border-radius:4px;cursor:pointer;">Delete</button>' +
-                            '</td>';
-                        tr.querySelector('td:last-child button:first-child').onclick = function(){ togglePixel(p.id); };
-                        tr.querySelector('td:last-child button:last-child').onclick = function(){ deletePixel(p.id); };
-                        tbody.appendChild(tr);
-                    });
-                }
+                allPixelsData = data.pixels;
+                renderPixels();
             } catch (error) {
                 console.error('Failed to load pixels:', error);
+            }
+        }
+
+        function renderPixels() {
+            const search = (document.getElementById('search-pixels').value || '').toLowerCase();
+            const sort = document.getElementById('sort-pixels').value;
+            let items = allPixelsData.filter(p =>
+                (p.name || '').toLowerCase().includes(search) ||
+                (p.tag_type || '').toLowerCase().includes(search) ||
+                (p.pixel_id || '').toLowerCase().includes(search)
+            );
+            items = sortByOption(items, sort, 'created_at');
+
+            const tbody = document.getElementById('pixels-table');
+            if (items.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" class="empty-state">No pixels or tags found</td></tr>';
+            } else {
+                function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+                tbody.innerHTML = '';
+                items.forEach(function(p) {
+                    var typeBadge = p.tag_type === 'google_tag' ? 'badge-info' :
+                                    p.tag_type === 'meta_pixel' ? 'badge-info' : 'badge-warning';
+                    var typeLabel = p.tag_type === 'google_tag' ? 'Google Tag' :
+                                    p.tag_type === 'meta_pixel' ? 'Meta Pixel' : 'Custom Script';
+                    var rawPreview = p.pixel_id || (p.custom_code ? p.custom_code.substring(0, 50) + '...' : '-');
+                    var statusBadge = p.is_active ? 'badge-success' : 'badge-danger';
+                    var statusLabel = p.is_active ? 'Active' : 'Disabled';
+                    var toggleLabel = p.is_active ? 'Disable' : 'Enable';
+                    var toggleBg = p.is_active ? 'var(--warning)' : 'var(--success)';
+                    var tr = document.createElement('tr');
+                    tr.innerHTML =
+                        '<td>' + esc(p.name) + '</td>' +
+                        '<td><span class="badge ' + typeBadge + '">' + typeLabel + '</span></td>' +
+                        '<td style="font-family:monospace;font-size:0.85rem;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + esc(rawPreview) + '</td>' +
+                        '<td><span class="badge ' + statusBadge + '">' + statusLabel + '</span></td>' +
+                        '<td>' + new Date(p.created_at).toLocaleDateString() + '</td>' +
+                        '<td style="display:flex;gap:8px;">' +
+                            '<button style="padding:5px 10px;font-size:12px;background:' + toggleBg + ';color:white;border:none;border-radius:4px;cursor:pointer;">' + toggleLabel + '</button>' +
+                            '<button style="padding:5px 10px;font-size:12px;background:var(--danger);color:white;border:none;border-radius:4px;cursor:pointer;">Delete</button>' +
+                        '</td>';
+                    tr.querySelector('td:last-child button:first-child').onclick = function(){ togglePixel(p.id); };
+                    tr.querySelector('td:last-child button:last-child').onclick = function(){ deletePixel(p.id); };
+                    tbody.appendChild(tr);
+                });
             }
         }
 
