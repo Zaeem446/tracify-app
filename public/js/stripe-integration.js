@@ -6,7 +6,7 @@
 
 // Stripe Configuration
 const STRIPE_CONFIG = {
-    publishableKey: 'pk_live_51P2OqF07KvnwjKtODEfJYExgUsRvenURodzJdEi7V8O1r0kSP2BcbpLPmINwLhHlRgPDR82QchgCmhrDME0UkhLm00tPturCQz', // LIVE KEY - Real payments!
+    publishableKey: 'pk_live_51T2LP7RevHepjMisKvokLqqfGpqv7LSm2t1TZqxxN4pJ4RJiGRhtFpFh80OnvJ8xHtNm6aCkwjW1XrfiMGI5xmaU00cZAhX9iA', // LIVE KEY - Real payments!
     successUrl: window.location.origin + '/dashboard.html?session_id={CHECKOUT_SESSION_ID}',
     cancelUrl: window.location.origin + '/payment.html?cancelled=true'
 };
