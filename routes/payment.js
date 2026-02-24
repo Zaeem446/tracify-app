@@ -185,6 +185,11 @@ router.post('/process', requireCustomerAuth, async (req, res) => {
                     items: [{ price: MONTHLY_PRICE_ID }],
                     trial_end: trialEnd,
                     default_payment_method: paymentMethodId,
+                    collection_method: 'charge_automatically',
+                    payment_settings: {
+                        payment_method_types: ['card'],
+                        save_default_payment_method: 'on_subscription'
+                    },
                     metadata: {
                         tracifyCustomerId: String(customerId),
                         trialPaymentId: stripePaymentId
