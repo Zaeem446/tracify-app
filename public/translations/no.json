@@ -280,7 +280,7 @@
     "billing": {
       "title": "3. Kontoregistrering og fakturering",
       "content1": "For å bruke Tracify må du opprette en konto og abonnere på tjenesten vår. Prisstrukturen vår er som følger:",
-      "trial": "24-timers prøveperiode: $1.25 USD",
+      "trial": "24-timers prøveperiode: $0.50 USD",
       "monthly": "Månedsabonnement: $30.00 USD (belastes automatisk etter at prøveperioden er over)",
       "content2": "Ved å abonnere autoriserer du oss til å belaste betalingsmetoden din på en gjentakende månedlig basis til du avbryter abonnementet. Alle betalinger behandles sikkert gjennom Stripe."
     },

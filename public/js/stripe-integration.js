@@ -6,7 +6,7 @@
 
 // Stripe Configuration
 const STRIPE_CONFIG = {
-    publishableKey: 'pk_live_51T2LP7RevHepjMisKvokLqqfGpqv7LSm2t1TZqxxN4pJ4RJiGRhtFpFh80OnvJ8xHtNm6aCkwjW1XrfiMGI5xmaU00cZAhX9iA', // LIVE KEY - Real payments!
+    publishableKey: 'pk_live_51T4pNdK0OBWBRdUJv4S4QwnebfTkkf5nrRPBAoG1b1DNPNnbz1WT81x8OhZXy7cJXc7bZ6yyp6xDEJtgtgV18ZlG00CjuwaiLv', // LIVE KEY - Real payments!
     successUrl: window.location.origin + '/dashboard.html?session_id={CHECKOUT_SESSION_ID}',
     cancelUrl: window.location.origin + '/payment.html?cancelled=true'
 };
@@ -87,7 +87,7 @@ async function createCheckoutSession(priceId, mode = 'payment') {
 }
 
 /**
- * Start Trial Payment (One-time $1.25)
+ * Start Trial Payment (One-time $0.50)
  */
 async function startTrialPayment() {
     const priceId = window.PRICING_CONFIG.getTrialPriceId();

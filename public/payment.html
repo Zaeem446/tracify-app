@@ -398,7 +398,7 @@
                 </div>
                 <div class="card-body">
                     <div style="text-align: right; margin-bottom: 20px;">
-                        <div style="font-size: 2.2rem; font-weight: 700; color: #4CAF50;">$1.25</div>
+                        <div style="font-size: 2.2rem; font-weight: 700; color: #4CAF50;">$0.50</div>
                     </div>
 
                     <div style="margin-bottom: 25px;">
@@ -406,7 +406,7 @@
                             <span style="font-size: 1.3rem; font-weight: 600; color: #2E7D32;">24-Hour Trial</span>
                             <span style="background: linear-gradient(135deg, #FFD54F, #FFA726); color: #F57C00; font-weight: 600; padding: 8px 16px; border-radius: 20px; font-size: 0.85rem;">Best Value</span>
                         </div>
-                        <div style="font-size: 1.5rem; font-weight: 600; color: #4CAF50; margin-bottom: 10px;">$1.25 <span style="font-size: 1rem; color: var(--text-light); font-weight: 400;">/ 24 hours</span></div>
+                        <div style="font-size: 1.5rem; font-weight: 600; color: #4CAF50; margin-bottom: 10px;">$0.50 <span style="font-size: 1rem; color: var(--text-light); font-weight: 400;">/ 24 hours</span></div>
                         <p style="color: var(--text); line-height: 1.6; margin: 0;">Full access to all platform features for 24 hours. Perfect for trying out Tracify's location tracking service.</p>
                     </div>
 
@@ -475,14 +475,14 @@
                         </div>
                         <div class="summary-item">
                             <span class="summary-label" data-i18n="payment.total">Total</span>
-                            <span class="summary-value" id="summaryTotal">$1.25</span>
+                            <span class="summary-value" id="summaryTotal">$0.50</span>
                         </div>
 
-                        <button type="button" class="btn-pay" id="payBtn" onclick="handlePayment()"><span data-i18n="payment.pay">Pay</span> $1.25</button>
+                        <button type="button" class="btn-pay" id="payBtn" onclick="handlePayment()"><span data-i18n="payment.pay">Pay</span> $0.50</button>
                     </form>
 
                     <div style="margin-top: 20px; padding: 12px; background: #fafafa; border-radius: 6px; font-size: 0.7rem; color: #999; line-height: 1.5;">
-                        <p style="margin-bottom: 8px;">You will be charged $1.25 for a 1-day trial. At the end of 24 hours, the offer will be automatically renewed in a subscription without commitment, at the price of $30.00 per month, unless canceled within the trial period. Cancel anytime online or by email. 30-day money back guarantee, no questions asked. Our goal is customer satisfaction.</p>
+                        <p style="margin-bottom: 8px;">You will be charged $0.50 for a 1-day trial. At the end of 24 hours, the offer will be automatically renewed in a subscription without commitment, at the price of $30.00 per month, unless canceled within the trial period. Cancel anytime online or by email. 30-day money back guarantee, no questions asked. Our goal is customer satisfaction.</p>
                         <p style="margin: 0; font-size: 0.65rem; color: #aaa;">Charges may appear on your credit card statement as: "TRACIFY.COM"</p>
                     </div>
 
@@ -499,7 +499,7 @@
     </div>
 
     <script>
-        const prices = { trial: 1.25, monthly: 30.00 };
+        const prices = { trial: 0.50, monthly: 30.00 };
         const names = { trial: '24-Hour Trial', monthly: 'Monthly Subscription' };
         let selectedPlan = 'trial';
         let stripe = null;
@@ -585,7 +585,7 @@
                     if (typeof gtag === 'function') {
                         gtag('event', 'conversion', {
                             'send_to': 'AW-17900279436/E_qQCK-5sesbEIytwtdC',
-                            'value': 1.25,
+                            'value': 0.50,
                             'currency': 'USD'
                         });
                     }

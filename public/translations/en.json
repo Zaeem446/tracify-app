@@ -283,7 +283,7 @@
     "billing": {
       "title": "3. Account Registration and Billing",
       "content1": "To use Tracify, you must create an account and subscribe to our service. Our pricing structure is as follows:",
-      "trial": "24-hour trial period: $1.25 USD",
+      "trial": "24-hour trial period: $0.50 USD",
       "monthly": "Monthly subscription: $30.00 USD (automatically charged after the trial period ends)",
       "content2": "By subscribing, you authorize us to charge your payment method on a recurring monthly basis until you cancel your subscription. All payments are processed securely through Stripe."
     },

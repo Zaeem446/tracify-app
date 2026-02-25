@@ -8,11 +8,11 @@
 const PRICING_CONFIG = {
     // Prices
     trial: {
-        amount: 1.25,
+        amount: 0.50,
         currency: 'USD',
         symbol: '$',
         duration: '24 hours',
-        stripePriceId: 'price_1T33nyRevHepjMisQtntoxnl', // $1.25 Trial
+        stripePriceId: 'price_1T4pcOK0OBWBRdUJCIzolG2C', // $0.50 Trial
         name: '24-Hour Trial',
         description: 'Full access for 24 hours'
     },
@@ -21,7 +21,7 @@ const PRICING_CONFIG = {
         currency: 'USD',
         symbol: '$',
         duration: 'per month',
-        stripePriceId: 'price_1T33q3RevHepjMisaypfhlkG', // $30 Monthly
+        stripePriceId: 'price_1T4pcsK0OBWBRdUJ62ClpdMe', // $30 Monthly
         name: 'Monthly Subscription',
         description: 'Unlimited tracking'
     },

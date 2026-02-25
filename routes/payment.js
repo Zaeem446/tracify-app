@@ -40,7 +40,7 @@ router.get('/plans', (req, res) => {
         trial: {
             id: 'trial',
             name: 'Trial Period',
-            amount: 1.25,
+            amount: 0.50,
             currency: 'USD',
             duration: '24 hours',
             description: 'Full access to all platform services for 24 hours'
@@ -60,7 +60,7 @@ router.get('/plans', (req, res) => {
 router.post('/create-intent', requireCustomerAuth, async (req, res) => {
     try {
         const { planType } = req.body;
-        const amounts = { trial: 1.25, monthly: 30.00 };
+        const amounts = { trial: 0.50, monthly: 30.00 };
         const amount = amounts[planType] || amounts.trial;
 
         if (stripe) {
@@ -95,16 +95,16 @@ router.post('/create-intent', requireCustomerAuth, async (req, res) => {
 });
 
 // Stripe Price ID for monthly subscription
-const MONTHLY_PRICE_ID = 'price_1T33q3RevHepjMisaypfhlkG';
-const TRIAL_AMOUNT = 125; // $1.25 in cents
+const MONTHLY_PRICE_ID = 'price_1T4pcsK0OBWBRdUJ62ClpdMe';
+const TRIAL_AMOUNT = 50; // $0.50 in cents
 
-// Process payment - charges $1.25 trial, then sets up $30/month recurring
+// Process payment - charges $0.50 trial, then sets up $30/month recurring
 router.post('/process', requireCustomerAuth, async (req, res) => {
     try {
         const { planType, paymentMethodId, cardLast4 } = req.body;
         const customerId = req.customerId;
 
-        const amounts = { trial: 1.25, monthly: 30.00 };
+        const amounts = { trial: 0.50, monthly: 30.00 };
         const amount = amounts[planType] || amounts.trial;
 
         // Calculate expiry based on plan type
@@ -151,8 +151,8 @@ router.post('/process', requireCustomerAuth, async (req, res) => {
                 });
                 console.log('Payment method attached and set as default');
 
-                // Step 1: Charge $1.25 trial fee immediately
-                console.log('Charging $1.25 trial fee...');
+                // Step 1: Charge $0.50 trial fee immediately
+                console.log('Charging $0.50 trial fee...');
                 const paymentIntent = await stripe.paymentIntents.create({
                     amount: TRIAL_AMOUNT,
                     currency: 'usd',
@@ -360,8 +360,8 @@ router.post('/webhook', express.raw({ type: 'application/json' }), async (req, r
 
                 console.log(`💰 Invoice payment succeeded: $${amountPaid} for subscription ${stripeSubscriptionId}`);
 
-                // Skip if this is the initial trial payment (amount is $1.25 or less)
-                if (amountPaid <= 1.50) {
+                // Skip if this is the initial trial payment (amount is $0.50 or less)
+                if (amountPaid <= 0.75) {
                     console.log('   Skipping trial payment - already recorded during signup');
                     break;
                 }
