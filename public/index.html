@@ -604,7 +604,7 @@
             '+34': '🇪🇸', '+31': '🇳🇱', '+32': '🇧🇪', '+41': '🇨🇭', '+43': '🇦🇹',
             '+45': '🇩🇰', '+46': '🇸🇪', '+47': '🇳🇴', '+48': '🇵🇱', '+351': '🇵🇹',
             '+353': '🇮🇪', '+358': '🇫🇮', '+30': '🇬🇷', '+36': '🇭🇺', '+40': '🇷🇴',
-            '+420': '🇨🇿', '+380': '🇺🇦', '+7': '🇷🇺', '+90': '🇹🇷',
+            '+420': '🇨🇿', '+380': '🇺🇦', '+90': '🇹🇷',
             '+91': '🇮🇳', '+92': '🇵🇰', '+86': '🇨🇳', '+81': '🇯🇵', '+82': '🇰🇷',
             '+65': '🇸🇬', '+60': '🇲🇾', '+62': '🇮🇩', '+63': '🇵🇭', '+66': '🇹🇭',
             '+84': '🇻🇳', '+880': '🇧🇩', '+94': '🇱🇰', '+852': '🇭🇰', '+886': '🇹🇼',
@@ -618,14 +618,43 @@
             '+977': '🇳🇵', '+95': '🇲🇲', '+855': '🇰🇭', '+856': '🇱🇦', '+93': '🇦🇫', '+994': '🇦🇿', '+995': '🇬🇪', '+998': '🇺🇿'
         };
 
+        // Restricted area codes (sanctioned regions)
+        const restrictedCodes = ['+53', '+98', '+850', '+963', '+7'];
+
         // Update flag when country code changes
         const countryCodeInput = document.getElementById('countryCode');
         const countryFlagSpan = document.getElementById('countryFlag');
+        const locateBtn = document.getElementById('locateBtn');
+        const phoneInput = document.getElementById('phoneNumber');
+
+        // Create restricted warning element
+        const restrictedWarning = document.createElement('p');
+        restrictedWarning.className = 'restricted-warning';
+        restrictedWarning.style.cssText = 'display:none; color:#c62828; background:#ffebee; padding:10px 14px; border-radius:8px; font-size:0.85rem; margin-top:10px; text-align:center; font-weight:500;';
+        restrictedWarning.textContent = 'This area code belongs to a restricted region. Service is not available in Cuba, Iran, North Korea, Syria, and Russia.';
+        document.querySelector('.phone-input-wrapper').insertAdjacentElement('afterend', restrictedWarning);
+
+        function checkRestricted(code) {
+            const isRestricted = restrictedCodes.includes(code);
+            if (isRestricted) {
+                countryFlagSpan.textContent = '🚫';
+                locateBtn.disabled = true;
+                phoneInput.disabled = true;
+                restrictedWarning.style.display = 'block';
+            } else {
+                locateBtn.disabled = false;
+                phoneInput.disabled = false;
+                restrictedWarning.style.display = 'none';
+            }
+            return isRestricted;
+        }
 
         function updateFlag() {
             const code = countryCodeInput.value.trim();
-            const flag = countryFlags[code] || '🌍';
-            countryFlagSpan.textContent = flag;
+            if (!checkRestricted(code)) {
+                const flag = countryFlags[code] || '🌍';
+                countryFlagSpan.textContent = flag;
+            }
         }
 
         countryCodeInput.addEventListener('input', updateFlag);

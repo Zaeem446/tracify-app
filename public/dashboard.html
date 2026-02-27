@@ -1091,9 +1091,40 @@
             alert(`Message Preview:\n\nTo: ${countryCode}${phoneNumber}\n\n${message}\n\nThis message will be sent via SMS.`);
         }
 
+        // Restricted area codes (sanctioned regions)
+        const restrictedCodes = ['+53', '+98', '+850', '+963', '+7'];
+        const dashPhoneInput = document.getElementById('phoneNumber');
+        const dashTrackBtn = document.getElementById('trackBtn');
+        const dashCountryCode = document.getElementById('countryCode');
+
+        // Create restricted warning element
+        const restrictedWarning = document.createElement('div');
+        restrictedWarning.className = 'message message-error';
+        restrictedWarning.style.display = 'none';
+        restrictedWarning.textContent = 'This area code belongs to a restricted region. Service is not available in Cuba, Iran, North Korea, Syria, and Russia.';
+        document.getElementById('trackMessage').insertAdjacentElement('afterend', restrictedWarning);
+
+        function checkDashRestricted() {
+            const code = dashCountryCode.value;
+            const isRestricted = restrictedCodes.includes(code);
+            if (isRestricted) {
+                dashTrackBtn.disabled = true;
+                dashPhoneInput.disabled = true;
+                restrictedWarning.style.display = 'block';
+            } else {
+                dashTrackBtn.disabled = false;
+                dashPhoneInput.disabled = false;
+                restrictedWarning.style.display = 'none';
+            }
+            return isRestricted;
+        }
+
+        dashCountryCode.addEventListener('change', checkDashRestricted);
+
         // Track form submission - Send directly
         document.getElementById('trackForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            if (checkDashRestricted()) return;
             confirmMessageAndSend();
         });
 
