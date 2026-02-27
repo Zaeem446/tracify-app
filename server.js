@@ -35,6 +35,17 @@ app.use((req, res, next) => {
 });
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+
+// Geo-blocking: restrict access from sanctioned countries
+const BLOCKED_COUNTRIES = ['CU', 'IR', 'KP', 'SY', 'RU'];
+app.use((req, res, next) => {
+    const country = req.headers['x-vercel-ip-country'];
+    if (country && BLOCKED_COUNTRIES.includes(country)) {
+        return res.status(403).sendFile(path.join(__dirname, 'public', 'blocked.html'));
+    }
+    next();
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Initialize database (async-safe) - MUST be before routes

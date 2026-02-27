@@ -1,16 +1,5 @@
 {
   "rewrites": [
-    {
-      "source": "/((?!blocked\\.html$).*)",
-      "has": [
-        {
-          "type": "header",
-          "key": "x-vercel-ip-country",
-          "value": "CU|IR|KP|SY|RU"
-        }
-      ],
-      "destination": "/blocked.html"
-    },
     { "source": "/(.*)", "destination": "/api" }
   ],
   "functions": {
