@@ -95,7 +95,7 @@ router.post('/create-intent', requireCustomerAuth, async (req, res) => {
 });
 
 // Stripe Price ID for monthly subscription
-const MONTHLY_PRICE_ID = 'price_1T4pcsK0OBWBRdUJ62ClpdMe';
+const MONTHLY_PRICE_ID = 'price_1TIADCIggzd46qoMesRQlnq7';
 const TRIAL_AMOUNT = 50; // $0.50 in cents
 
 // Process payment - charges $0.50 trial, then sets up $30/month recurring
