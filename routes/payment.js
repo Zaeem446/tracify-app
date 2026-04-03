@@ -456,6 +456,22 @@ router.post('/webhook', express.raw({ type: 'application/json' }), async (req, r
                 break;
             }
 
+            case 'invoice.created': {
+                // Immediately finalize draft invoices so Stripe charges right away
+                // Without this, Stripe waits ~1 hour (or longer) before finalizing
+                const newInvoice = event.data.object;
+                if (newInvoice.status === 'draft' && newInvoice.subscription) {
+                    console.log(`📄 Draft invoice created for subscription ${newInvoice.subscription}, finalizing immediately...`);
+                    try {
+                        await stripe.invoices.finalizeInvoice(newInvoice.id);
+                        console.log(`✅ Invoice ${newInvoice.id} finalized immediately — charge will happen now`);
+                    } catch (finalizeErr) {
+                        console.error(`⚠️ Could not finalize invoice ${newInvoice.id}:`, finalizeErr.message);
+                    }
+                }
+                break;
+            }
+
             case 'charge.succeeded': {
                 console.log(`💳 Charge succeeded: ${event.data.object.id}`);
                 break;
