@@ -70,12 +70,11 @@ async function createCheckoutSessionForCustomer(customerId, customerEmail) {
     }
 
     const appUrl = process.env.APP_URL || 'http://localhost:3000';
-    const trialEnd = Math.floor(Date.now() / 1000) + (24 * 60 * 60); // 24 hours from now
 
     const session = await stripe.checkout.sessions.create({
         mode: 'subscription',
         line_items: [
-            // One-time $0.50 trial fee
+            // One-time $0.50 trial fee (charged immediately on first invoice)
             {
                 price_data: {
                     currency: 'usd',
@@ -87,14 +86,14 @@ async function createCheckoutSessionForCustomer(customerId, customerEmail) {
                 },
                 quantity: 1,
             },
-            // Recurring $30/month subscription
+            // Recurring $30/month subscription (starts after trial)
             {
                 price: MONTHLY_PRICE_ID,
                 quantity: 1,
             },
         ],
         subscription_data: {
-            trial_end: trialEnd,
+            trial_period_days: 1, // 1-day trial, $30 charges after 24h
             metadata: {
                 tracifyCustomerId: String(customerId),
             },
