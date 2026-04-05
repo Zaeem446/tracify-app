@@ -109,6 +109,11 @@ app.get('/payment', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'payment.html'));
 });
 
+// Serve payment success page
+app.get('/payment-success', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'payment-success.html'));
+});
+
 // Serve account settings page
 app.get('/account', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'account.html'));
@@ -160,6 +165,16 @@ app.get('/:lang/payment', (req, res, next) => {
     const lang = req.params.lang;
     if (SUPPORTED_LANGUAGES.includes(lang)) {
         res.sendFile(path.join(__dirname, 'public', 'payment.html'));
+    } else {
+        next();
+    }
+});
+
+// Language-prefixed payment success
+app.get('/:lang/payment-success', (req, res, next) => {
+    const lang = req.params.lang;
+    if (SUPPORTED_LANGUAGES.includes(lang)) {
+        res.sendFile(path.join(__dirname, 'public', 'payment-success.html'));
     } else {
         next();
     }

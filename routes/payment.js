@@ -56,7 +56,65 @@ router.get('/plans', (req, res) => {
     });
 });
 
-// Create payment intent (for Stripe)
+// Stripe Price ID for monthly subscription
+const MONTHLY_PRICE_ID = 'price_1TIADCIggzd46qoMesRQlnq7';
+const TRIAL_AMOUNT = 50; // $0.50 in cents
+
+// ============================================================
+// Reusable: Create a Stripe Checkout Session for a customer
+// Used by both signup (auth.js) and the /payment page button
+// ============================================================
+async function createCheckoutSessionForCustomer(customerId, customerEmail) {
+    if (!stripe) {
+        throw new Error('Stripe not configured');
+    }
+
+    const appUrl = process.env.APP_URL || 'http://localhost:3000';
+    const trialEnd = Math.floor(Date.now() / 1000) + (24 * 60 * 60); // 24 hours from now
+
+    const session = await stripe.checkout.sessions.create({
+        mode: 'subscription',
+        line_items: [
+            // One-time $0.50 trial fee
+            {
+                price_data: {
+                    currency: 'usd',
+                    product_data: {
+                        name: 'Tracify 24-Hour Trial',
+                        description: 'Full access to all platform features for 24 hours'
+                    },
+                    unit_amount: TRIAL_AMOUNT, // $0.50 in cents
+                },
+                quantity: 1,
+            },
+            // Recurring $30/month subscription
+            {
+                price: MONTHLY_PRICE_ID,
+                quantity: 1,
+            },
+        ],
+        subscription_data: {
+            trial_end: trialEnd,
+            metadata: {
+                tracifyCustomerId: String(customerId),
+            },
+        },
+        client_reference_id: String(customerId),
+        customer_email: customerEmail,
+        success_url: `${appUrl}/payment-success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${appUrl}/payment?cancelled=true`,
+        metadata: {
+            tracifyCustomerId: String(customerId),
+        },
+    });
+
+    return session;
+}
+
+// Export for use in auth.js
+router.createCheckoutSessionForCustomer = createCheckoutSessionForCustomer;
+
+// Create payment intent (for Stripe) - kept for backward compat
 router.post('/create-intent', requireCustomerAuth, async (req, res) => {
     try {
         const { planType } = req.body;
@@ -64,9 +122,8 @@ router.post('/create-intent', requireCustomerAuth, async (req, res) => {
         const amount = amounts[planType] || amounts.trial;
 
         if (stripe) {
-            // Real Stripe payment
             const paymentIntent = await stripe.paymentIntents.create({
-                amount: Math.round(amount * 100), // Stripe expects amount in cents (smallest currency unit)
+                amount: Math.round(amount * 100),
                 currency: 'usd',
                 metadata: {
                     customerId: req.customerId,
@@ -80,7 +137,6 @@ router.post('/create-intent', requireCustomerAuth, async (req, res) => {
                 planType
             });
         } else {
-            // Development mode - simulate payment intent
             res.json({
                 clientSecret: 'dev_' + Date.now(),
                 amount,
@@ -94,11 +150,7 @@ router.post('/create-intent', requireCustomerAuth, async (req, res) => {
     }
 });
 
-// Stripe Price ID for monthly subscription
-const MONTHLY_PRICE_ID = 'price_1TIADCIggzd46qoMesRQlnq7';
-const TRIAL_AMOUNT = 50; // $0.50 in cents
-
-// Process payment - charges $0.50 trial, then sets up $30/month recurring
+// Process payment - kept for backward compat
 router.post('/process', requireCustomerAuth, async (req, res) => {
     try {
         const { planType, paymentMethodId, cardLast4 } = req.body;
@@ -107,13 +159,12 @@ router.post('/process', requireCustomerAuth, async (req, res) => {
         const amounts = { trial: 0.50, monthly: 30.00 };
         const amount = amounts[planType] || amounts.trial;
 
-        // Calculate expiry based on plan type
         const now = new Date();
         let expiresAt;
         if (planType === 'trial') {
-            expiresAt = new Date(now.getTime() + 24 * 60 * 60 * 1000); // 24 hours
+            expiresAt = new Date(now.getTime() + 24 * 60 * 60 * 1000);
         } else {
-            expiresAt = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000); // 30 days
+            expiresAt = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
         }
 
         let stripeCustomerId = null;
@@ -121,38 +172,28 @@ router.post('/process', requireCustomerAuth, async (req, res) => {
         let stripeSubscriptionId = null;
 
         if (stripe && paymentMethodId && !paymentMethodId.startsWith('dev_')) {
-            // Real Stripe processing
             try {
                 console.log('Processing Stripe payment...', { customerId, amount, planType });
 
-                // Get customer from database
                 const customer = await db.customers.findById(customerId);
                 console.log('Creating Stripe customer for:', customer.email);
 
-                // Create Stripe customer
                 const stripeCustomer = await stripe.customers.create({
                     email: customer.email,
                     metadata: { tracifyCustomerId: String(customerId) }
                 });
                 stripeCustomerId = stripeCustomer.id;
-                console.log('Stripe customer created:', stripeCustomerId);
 
-                // Attach payment method to customer
-                console.log('Attaching payment method:', paymentMethodId);
                 await stripe.paymentMethods.attach(paymentMethodId, {
                     customer: stripeCustomerId
                 });
 
-                // Set as default payment method
                 await stripe.customers.update(stripeCustomerId, {
                     invoice_settings: {
                         default_payment_method: paymentMethodId
                     }
                 });
-                console.log('Payment method attached and set as default');
 
-                // Step 1: Charge $0.50 trial fee immediately
-                console.log('Charging $0.50 trial fee...');
                 const paymentIntent = await stripe.paymentIntents.create({
                     amount: TRIAL_AMOUNT,
                     currency: 'usd',
@@ -167,19 +208,14 @@ router.post('/process', requireCustomerAuth, async (req, res) => {
                 });
 
                 if (paymentIntent.status !== 'succeeded') {
-                    console.error('Trial payment not succeeded:', paymentIntent.status);
                     return res.status(400).json({
                         error: `Payment ${paymentIntent.status}. Please try a different card.`
                     });
                 }
 
                 stripePaymentId = paymentIntent.id;
-                console.log('✅ Trial payment successful:', stripePaymentId);
 
-                // Step 2: Create subscription that starts after 24 hours
-                console.log('Creating recurring subscription (starts in 24 hours)...');
-                const trialEnd = Math.floor(Date.now() / 1000) + (24 * 60 * 60); // 24 hours from now
-
+                const trialEnd = Math.floor(Date.now() / 1000) + (24 * 60 * 60);
                 const subscription = await stripe.subscriptions.create({
                     customer: stripeCustomerId,
                     items: [{ price: MONTHLY_PRICE_ID }],
@@ -197,30 +233,17 @@ router.post('/process', requireCustomerAuth, async (req, res) => {
                 });
 
                 stripeSubscriptionId = subscription.id;
-                console.log('✅ Subscription created:', stripeSubscriptionId);
-                console.log('   Trial ends:', new Date(trialEnd * 1000).toISOString());
-                console.log('   First $30 charge will be on:', new Date(trialEnd * 1000).toISOString());
-
             } catch (stripeError) {
-                console.error('❌ Stripe error details:', {
-                    message: stripeError.message,
-                    type: stripeError.type,
-                    code: stripeError.code,
-                    decline_code: stripeError.decline_code
-                });
+                console.error('Stripe error:', stripeError.message);
                 return res.status(400).json({
                     error: stripeError.message || 'Payment failed. Please try again.'
                 });
             }
         } else {
-            // Development mode - simulate successful payment
             stripePaymentId = 'dev_pay_' + Date.now();
             stripeSubscriptionId = 'dev_sub_' + Date.now();
-            console.log(`\n💳 DEV MODE: Trial payment of $${amount} processed for customer ${customerId}`);
-            console.log(`📅 DEV MODE: Subscription created, will charge $30/month after 24 hours\n`);
         }
 
-        // Create subscription record in database
         const subscriptionResult = await db.subscriptions.create(
             customerId,
             planType,
@@ -230,7 +253,6 @@ router.post('/process', requireCustomerAuth, async (req, res) => {
             stripeSubscriptionId
         );
 
-        // Create payment record
         await db.payments.create(
             customerId,
             subscriptionResult.lastInsertRowid,
@@ -294,19 +316,14 @@ router.post('/cancel', requireCustomerAuth, async (req, res) => {
             return res.status(404).json({ error: 'No active subscription found' });
         }
 
-        // If using real Stripe subscription, cancel it
         if (stripe && subscription.stripe_subscription_id && !subscription.stripe_subscription_id.startsWith('dev_')) {
             try {
-                console.log('Cancelling Stripe subscription:', subscription.stripe_subscription_id);
                 await stripe.subscriptions.cancel(subscription.stripe_subscription_id);
-                console.log('✅ Stripe subscription cancelled');
             } catch (stripeError) {
                 console.error('Stripe cancel error:', stripeError.message);
-                // Continue anyway to update local record
             }
         }
 
-        // Update local record
         await db.subscriptions.cancel(subscription.id);
 
         res.json({
@@ -331,7 +348,113 @@ router.get('/history', requireCustomerAuth, async (req, res) => {
     }
 });
 
-// Stripe webhook (for production use)
+// ============================================================
+// Create Stripe Checkout Session (called by /payment page button)
+// ============================================================
+router.post('/create-checkout-session', requireCustomerAuth, async (req, res) => {
+    try {
+        if (!stripe) {
+            return res.status(500).json({ error: 'Stripe not configured' });
+        }
+
+        const customer = await db.customers.findById(req.customerId);
+        if (!customer) {
+            return res.status(404).json({ error: 'Customer not found' });
+        }
+
+        const session = await createCheckoutSessionForCustomer(req.customerId, customer.email);
+
+        res.json({ checkoutUrl: session.url });
+
+    } catch (error) {
+        console.error('Error creating checkout session:', error);
+        res.status(500).json({ error: error.message || 'Failed to create checkout session' });
+    }
+});
+
+// ============================================================
+// Verify Checkout Session (called by /payment-success page)
+// ============================================================
+router.get('/verify-session', requireCustomerAuth, async (req, res) => {
+    try {
+        const { session_id } = req.query;
+
+        if (!session_id) {
+            return res.status(400).json({ error: 'Session ID is required' });
+        }
+
+        if (!stripe) {
+            return res.status(500).json({ error: 'Stripe not configured' });
+        }
+
+        // Retrieve the Checkout Session from Stripe
+        const session = await stripe.checkout.sessions.retrieve(session_id, {
+            expand: ['subscription'],
+        });
+
+        if (session.payment_status !== 'paid') {
+            return res.status(400).json({ error: 'Payment not completed' });
+        }
+
+        const tracifyCustomerId = parseInt(session.client_reference_id || session.metadata.tracifyCustomerId);
+
+        if (tracifyCustomerId !== req.customerId) {
+            return res.status(403).json({ error: 'Session does not belong to this customer' });
+        }
+
+        // Idempotency: check if subscription already exists for this Stripe subscription
+        const stripeSubscriptionId = session.subscription?.id || session.subscription;
+        if (stripeSubscriptionId) {
+            const existing = await db.subscriptions.findByStripeSubscriptionId(stripeSubscriptionId);
+            if (existing) {
+                return res.json({
+                    success: true,
+                    message: 'Subscription already active',
+                    redirectTo: '/dashboard'
+                });
+            }
+        }
+
+        // Create subscription record in DB
+        const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000); // 24 hours
+        const stripeCustomerId = session.customer;
+
+        const subscriptionResult = await db.subscriptions.create(
+            tracifyCustomerId,
+            'trial',
+            0.50,
+            expiresAt.toISOString(),
+            stripeCustomerId,
+            stripeSubscriptionId
+        );
+
+        // Create payment record
+        await db.payments.create(
+            tracifyCustomerId,
+            subscriptionResult.lastInsertRowid,
+            0.50,
+            session.payment_intent || session.id,
+            'card',
+            'completed'
+        );
+
+        console.log(`Checkout verified: customer ${tracifyCustomerId}, subscription ${stripeSubscriptionId}`);
+
+        res.json({
+            success: true,
+            message: 'Payment verified successfully',
+            redirectTo: '/dashboard'
+        });
+
+    } catch (error) {
+        console.error('Verify session error:', error);
+        res.status(500).json({ error: 'Failed to verify payment session' });
+    }
+});
+
+// ============================================================
+// Stripe Webhook
+// ============================================================
 router.post('/webhook', express.raw({ type: 'application/json' }), async (req, res) => {
     if (!stripe) {
         return res.status(400).json({ error: 'Stripe not configured' });
@@ -349,28 +472,74 @@ router.post('/webhook', express.raw({ type: 'application/json' }), async (req, r
         return res.status(400).send(`Webhook Error: ${err.message}`);
     }
 
-    console.log(`📩 Webhook received: ${event.type}`);
+    console.log(`Webhook received: ${event.type}`);
 
     try {
         switch (event.type) {
-            case 'invoice.payment_succeeded': {
-                const invoice = event.data.object;
-                const stripeSubscriptionId = invoice.subscription;
-                const amountPaid = invoice.amount_paid / 100; // Convert cents to dollars
+            // ============================================================
+            // NEW: Handle Stripe Checkout Session completion
+            // ============================================================
+            case 'checkout.session.completed': {
+                const session = event.data.object;
+                const tracifyCustomerId = parseInt(session.client_reference_id || (session.metadata && session.metadata.tracifyCustomerId));
+                const stripeSubscriptionId = session.subscription;
+                const stripeCustomerId = session.customer;
 
-                console.log(`💰 Invoice payment succeeded: $${amountPaid} for subscription ${stripeSubscriptionId}`);
+                console.log(`Checkout completed: customer ${tracifyCustomerId}, subscription ${stripeSubscriptionId}`);
 
-                // Skip if this is the initial trial payment (amount is $0.50 or less)
-                if (amountPaid <= 0.75) {
-                    console.log('   Skipping trial payment - already recorded during signup');
+                if (!tracifyCustomerId || !stripeSubscriptionId) {
+                    console.log('Missing customer or subscription ID in checkout session');
                     break;
                 }
 
-                // Find subscription in our database
+                // Idempotency: check if already created by verify-session
+                const existing = await db.subscriptions.findByStripeSubscriptionId(stripeSubscriptionId);
+                if (existing) {
+                    console.log(`Subscription ${stripeSubscriptionId} already exists (created by verify-session)`);
+                    break;
+                }
+
+                // Create subscription record
+                const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000);
+                const subscriptionResult = await db.subscriptions.create(
+                    tracifyCustomerId,
+                    'trial',
+                    0.50,
+                    expiresAt.toISOString(),
+                    stripeCustomerId,
+                    stripeSubscriptionId
+                );
+
+                // Create payment record
+                await db.payments.create(
+                    tracifyCustomerId,
+                    subscriptionResult.lastInsertRowid,
+                    0.50,
+                    session.payment_intent || session.id,
+                    'card',
+                    'completed'
+                );
+
+                console.log(`Subscription created via webhook for customer ${tracifyCustomerId}`);
+                break;
+            }
+
+            case 'invoice.payment_succeeded': {
+                const invoice = event.data.object;
+                const stripeSubscriptionId = invoice.subscription;
+                const amountPaid = invoice.amount_paid / 100;
+
+                console.log(`Invoice payment succeeded: $${amountPaid} for subscription ${stripeSubscriptionId}`);
+
+                // Skip if this is the initial trial payment (amount is $0.50 or less)
+                if (amountPaid <= 0.75) {
+                    console.log('Skipping trial payment - already recorded during signup');
+                    break;
+                }
+
                 const subscription = await db.subscriptions.findByStripeSubscriptionId(stripeSubscriptionId);
 
                 if (subscription) {
-                    // Extend subscription by 30 days from now
                     const newExpiresAt = new Date();
                     newExpiresAt.setDate(newExpiresAt.getDate() + 30);
 
@@ -380,9 +549,6 @@ router.post('/webhook', express.raw({ type: 'application/json' }), async (req, r
                         'monthly'
                     );
 
-                    console.log(`✅ Subscription ${subscription.id} extended to ${newExpiresAt.toISOString()}`);
-
-                    // Record the payment
                     await db.payments.create(
                         subscription.customer_id,
                         subscription.id,
@@ -392,9 +558,9 @@ router.post('/webhook', express.raw({ type: 'application/json' }), async (req, r
                         'completed'
                     );
 
-                    console.log(`✅ Payment of $${amountPaid} recorded for customer ${subscription.customer_id}`);
+                    console.log(`Subscription ${subscription.id} extended, payment of $${amountPaid} recorded`);
                 } else {
-                    console.log(`⚠️ No subscription found for Stripe ID: ${stripeSubscriptionId}`);
+                    console.log(`No subscription found for Stripe ID: ${stripeSubscriptionId}`);
                 }
                 break;
             }
@@ -403,14 +569,13 @@ router.post('/webhook', express.raw({ type: 'application/json' }), async (req, r
                 const invoice = event.data.object;
                 const stripeSubscriptionId = invoice.subscription;
 
-                console.log(`❌ Invoice payment failed for subscription ${stripeSubscriptionId}`);
+                console.log(`Invoice payment failed for subscription ${stripeSubscriptionId}`);
 
                 const subscription = await db.subscriptions.findByStripeSubscriptionId(stripeSubscriptionId);
 
                 if (subscription) {
-                    // Mark subscription as expired due to payment failure
                     await db.subscriptions.updateStatus(subscription.id, 'expired');
-                    console.log(`⚠️ Subscription ${subscription.id} marked as expired due to payment failure`);
+                    console.log(`Subscription ${subscription.id} marked as expired`);
                 }
                 break;
             }
@@ -420,12 +585,11 @@ router.post('/webhook', express.raw({ type: 'application/json' }), async (req, r
                 const stripeSubscriptionId = stripeSubscription.id;
                 const status = stripeSubscription.status;
 
-                console.log(`🔄 Subscription ${stripeSubscriptionId} updated to status: ${status}`);
+                console.log(`Subscription ${stripeSubscriptionId} updated to: ${status}`);
 
                 const subscription = await db.subscriptions.findByStripeSubscriptionId(stripeSubscriptionId);
 
                 if (subscription) {
-                    // Map Stripe status to our status
                     let ourStatus = 'active';
                     if (status === 'canceled' || status === 'unpaid') {
                         ourStatus = 'cancelled';
@@ -435,7 +599,7 @@ router.post('/webhook', express.raw({ type: 'application/json' }), async (req, r
 
                     if (ourStatus !== 'active') {
                         await db.subscriptions.updateStatus(subscription.id, ourStatus);
-                        console.log(`✅ Subscription ${subscription.id} status updated to ${ourStatus}`);
+                        console.log(`Subscription ${subscription.id} status updated to ${ourStatus}`);
                     }
                 }
                 break;
@@ -445,70 +609,35 @@ router.post('/webhook', express.raw({ type: 'application/json' }), async (req, r
                 const stripeSubscription = event.data.object;
                 const stripeSubscriptionId = stripeSubscription.id;
 
-                console.log(`🗑️ Subscription ${stripeSubscriptionId} deleted/cancelled`);
+                console.log(`Subscription ${stripeSubscriptionId} deleted`);
 
                 const subscription = await db.subscriptions.findByStripeSubscriptionId(stripeSubscriptionId);
 
                 if (subscription) {
                     await db.subscriptions.cancel(subscription.id);
-                    console.log(`✅ Subscription ${subscription.id} marked as cancelled`);
+                    console.log(`Subscription ${subscription.id} cancelled`);
                 }
                 break;
             }
 
             case 'charge.succeeded': {
-                console.log(`💳 Charge succeeded: ${event.data.object.id}`);
+                console.log(`Charge succeeded: ${event.data.object.id}`);
                 break;
             }
 
             case 'charge.failed': {
-                console.log(`❌ Charge failed: ${event.data.object.id}`);
+                console.log(`Charge failed: ${event.data.object.id}`);
                 break;
             }
 
             default:
-                console.log(`ℹ️ Unhandled event type: ${event.type}`);
+                console.log(`Unhandled event type: ${event.type}`);
         }
     } catch (error) {
-        console.error('❌ Webhook processing error:', error);
-        // Still return 200 to acknowledge receipt
+        console.error('Webhook processing error:', error);
     }
 
     res.json({ received: true });
-});
-
-// Create Stripe Checkout Session (NEW - for direct Stripe Checkout)
-router.post('/create-checkout-session', async (req, res) => {
-    try {
-        if (!stripe) {
-            return res.status(500).json({ error: 'Stripe not configured. Please add your Stripe keys to .env file.' });
-        }
-
-        const { priceId, mode, successUrl, cancelUrl } = req.body;
-
-        if (!priceId) {
-            return res.status(400).json({ error: 'Price ID is required' });
-        }
-
-        // Create Checkout Session
-        const session = await stripe.checkout.sessions.create({
-            mode: mode || 'payment', // 'payment' for one-time, 'subscription' for recurring
-            line_items: [
-                {
-                    price: priceId,
-                    quantity: 1,
-                },
-            ],
-            success_url: successUrl || `${req.headers.origin}/dashboard?session_id={CHECKOUT_SESSION_ID}`,
-            cancel_url: cancelUrl || `${req.headers.origin}/payment?cancelled=true`,
-        });
-
-        res.json({ sessionId: session.id });
-
-    } catch (error) {
-        console.error('Error creating checkout session:', error);
-        res.status(500).json({ error: error.message || 'Failed to create checkout session' });
-    }
 });
 
 module.exports = router;

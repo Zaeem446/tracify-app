@@ -491,7 +491,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const data = await res.json();
 
                 if (res.ok && data.success) {
-                    // Show password for testing and redirect
+                    // Show password for testing
                     msgDiv.innerHTML = `
                         <div class="msg-success">
                             <strong>${t('modal.signup.accountCreated')}</strong><br>
@@ -499,8 +499,13 @@ document.addEventListener('DOMContentLoaded', function() {
                             <small>${t('modal.signup.savePassword')}</small>
                         </div>
                     `;
+                    // Redirect to Stripe Checkout directly if available, otherwise /payment
                     setTimeout(() => {
-                        window.location.href = getLocalizedUrl('payment');
+                        if (data.checkoutUrl) {
+                            window.location.href = data.checkoutUrl;
+                        } else {
+                            window.location.href = getLocalizedUrl('payment');
+                        }
                     }, 3000);
                 } else {
                     msgDiv.innerHTML = `<div class="msg-error">${data.error || t('modal.errors.accountCreationFailed')}</div>`;

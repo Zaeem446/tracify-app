@@ -8,6 +8,16 @@ const { sendPasswordEmail } = require('../utils/email');
 const router = express.Router();
 const JWT_SECRET = process.env.JWT_SECRET || 'tracify-secret-key-change-in-production';
 
+// Lazy-load payment routes to get createCheckoutSessionForCustomer
+let _createCheckoutSession = null;
+function getCreateCheckoutSession() {
+    if (!_createCheckoutSession) {
+        const paymentRoutes = require('./payment');
+        _createCheckoutSession = paymentRoutes.createCheckoutSessionForCustomer;
+    }
+    return _createCheckoutSession;
+}
+
 // Generate random password
 function generatePassword(length = 8) {
     const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789';
@@ -65,13 +75,27 @@ router.post('/signup', async (req, res) => {
 
         console.log('Session created for customer:', customerId, 'Token:', sessionToken.substring(0, 8) + '...');
 
+        // Try to create Stripe Checkout Session for direct redirect
+        let checkoutUrl = null;
+        try {
+            const createCheckoutSession = getCreateCheckoutSession();
+            if (createCheckoutSession) {
+                const session = await createCheckoutSession(customerId, email);
+                checkoutUrl = session.url;
+                console.log('Checkout session created during signup:', session.id);
+            }
+        } catch (checkoutError) {
+            console.error('Checkout session creation failed (will fallback to /payment):', checkoutError.message);
+        }
+
         res.json({
             success: true,
             message: 'Account created! Password sent to your email.',
             customerId,
             email,
             password, // Include password for testing (remove in production)
-            redirectTo: '/payment'
+            checkoutUrl, // Stripe Checkout URL for direct redirect
+            redirectTo: '/payment' // Fallback if checkoutUrl is null
         });
 
     } catch (error) {
