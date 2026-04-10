@@ -280,7 +280,7 @@
     "billing": {
       "title": "3. Pagpaparehistro ng Account at Pagsingil",
       "content1": "Upang magamit ang Tracify, kailangan mong lumikha ng account at mag-subscribe sa aming serbisyo. Ang aming istruktura ng presyo ay ang mga sumusunod:",
-      "trial": "24 na oras na panahon ng pagsubok: $0.50 USD",
+      "trial": "24 na oras na panahon ng pagsubok: $2.00 USD",
       "monthly": "Buwanang subscription: $30.00 USD (awtomatikong sinisingil pagkatapos ng panahon ng pagsubok)",
       "content2": "Sa pag-subscribe, pinapahintulutan mo kaming singilin ang iyong paraan ng pagbabayad sa paulit-ulit na buwanang batayan hanggang kanselahin mo ang iyong subscription. Lahat ng pagbabayad ay ligtas na pinoproseso sa pamamagitan ng Stripe."
     },

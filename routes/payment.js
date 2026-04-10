@@ -40,7 +40,7 @@ router.get('/plans', (req, res) => {
         trial: {
             id: 'trial',
             name: 'Trial Period',
-            amount: 0.50,
+            amount: 2.00,
             currency: 'USD',
             duration: '24 hours',
             description: 'Full access to all platform services for 24 hours'
@@ -58,7 +58,7 @@ router.get('/plans', (req, res) => {
 
 // Stripe Price ID for monthly subscription
 const MONTHLY_PRICE_ID = 'price_1TIADCIggzd46qoMesRQlnq7';
-const TRIAL_AMOUNT = 50; // $0.50 in cents
+const TRIAL_AMOUNT = 200; // $2.00 in cents
 
 // ============================================================
 // Reusable: Create a Stripe Checkout Session for a customer
@@ -74,7 +74,7 @@ async function createCheckoutSessionForCustomer(customerId, customerEmail) {
     const session = await stripe.checkout.sessions.create({
         mode: 'subscription',
         line_items: [
-            // One-time $0.50 trial fee (charged immediately on first invoice)
+            // One-time $2.00 trial fee (charged immediately on first invoice)
             {
                 price_data: {
                     currency: 'usd',
@@ -82,7 +82,7 @@ async function createCheckoutSessionForCustomer(customerId, customerEmail) {
                         name: 'Tracify 24-Hour Trial',
                         description: 'Full access to all platform features for 24 hours'
                     },
-                    unit_amount: TRIAL_AMOUNT, // $0.50 in cents
+                    unit_amount: TRIAL_AMOUNT, // $2.00 in cents
                 },
                 quantity: 1,
             },
@@ -117,7 +117,7 @@ router.createCheckoutSessionForCustomer = createCheckoutSessionForCustomer;
 router.post('/create-intent', requireCustomerAuth, async (req, res) => {
     try {
         const { planType } = req.body;
-        const amounts = { trial: 0.50, monthly: 30.00 };
+        const amounts = { trial: 2.00, monthly: 30.00 };
         const amount = amounts[planType] || amounts.trial;
 
         if (stripe) {
@@ -155,7 +155,7 @@ router.post('/process', requireCustomerAuth, async (req, res) => {
         const { planType, paymentMethodId, cardLast4 } = req.body;
         const customerId = req.customerId;
 
-        const amounts = { trial: 0.50, monthly: 30.00 };
+        const amounts = { trial: 2.00, monthly: 30.00 };
         const amount = amounts[planType] || amounts.trial;
 
         const now = new Date();
@@ -421,7 +421,7 @@ router.get('/verify-session', requireCustomerAuth, async (req, res) => {
         const subscriptionResult = await db.subscriptions.create(
             tracifyCustomerId,
             'trial',
-            0.50,
+            2.00,
             expiresAt.toISOString(),
             stripeCustomerId,
             stripeSubscriptionId
@@ -431,7 +431,7 @@ router.get('/verify-session', requireCustomerAuth, async (req, res) => {
         await db.payments.create(
             tracifyCustomerId,
             subscriptionResult.lastInsertRowid,
-            0.50,
+            2.00,
             session.payment_intent || session.id,
             'card',
             'completed'
@@ -503,7 +503,7 @@ router.post('/webhook', express.raw({ type: 'application/json' }), async (req, r
                 const subscriptionResult = await db.subscriptions.create(
                     tracifyCustomerId,
                     'trial',
-                    0.50,
+                    2.00,
                     expiresAt.toISOString(),
                     stripeCustomerId,
                     stripeSubscriptionId
@@ -513,7 +513,7 @@ router.post('/webhook', express.raw({ type: 'application/json' }), async (req, r
                 await db.payments.create(
                     tracifyCustomerId,
                     subscriptionResult.lastInsertRowid,
-                    0.50,
+                    2.00,
                     session.payment_intent || session.id,
                     'card',
                     'completed'
@@ -530,8 +530,8 @@ router.post('/webhook', express.raw({ type: 'application/json' }), async (req, r
 
                 console.log(`Invoice payment succeeded: $${amountPaid} for subscription ${stripeSubscriptionId}`);
 
-                // Skip if this is the initial trial payment (amount is $0.50 or less)
-                if (amountPaid <= 0.75) {
+                // Skip if this is the initial trial payment (amount is $2.00 or less)
+                if (amountPaid <= 2.50) {
                     console.log('Skipping trial payment - already recorded during signup');
                     break;
                 }

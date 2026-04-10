@@ -8,11 +8,11 @@
 const PRICING_CONFIG = {
     // Prices
     trial: {
-        amount: 0.50,
+        amount: 2.00,
         currency: 'USD',
         symbol: '$',
         duration: '24 hours',
-        stripePriceId: 'price_1TIACqIggzd46qoM02MRB9xS', // $0.50 Trial
+        stripePriceId: 'price_1TIACqIggzd46qoM02MRB9xS', // $2.00 Trial
         name: '24-Hour Trial',
         description: 'Full access for 24 hours'
     },
