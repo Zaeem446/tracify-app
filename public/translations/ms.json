@@ -280,7 +280,7 @@
     "billing": {
       "title": "3. Pendaftaran Akaun dan Pengebilan",
       "content1": "Untuk menggunakan Tracify, anda mesti membuat akaun dan melanggan perkhidmatan kami. Struktur harga kami adalah seperti berikut:",
-      "trial": "Tempoh percubaan 24 jam: $2.00 USD",
+      "trial": "Tempoh percubaan 24 jam: $0.50 USD",
       "monthly": "Langganan bulanan: $30.00 USD (dicaj secara automatik selepas tempoh percubaan tamat)",
       "content2": "Dengan melanggan, anda memberi kuasa kepada kami untuk mengenakan caj pada kaedah pembayaran anda secara berulang setiap bulan sehingga anda membatalkan langganan. Semua pembayaran diproses dengan selamat melalui Stripe."
     },

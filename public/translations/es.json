@@ -280,7 +280,7 @@
     "billing": {
       "title": "3. Registro de Cuenta y Facturación",
       "content1": "Para usar Tracify, debe crear una cuenta y suscribirse a nuestro servicio. Nuestra estructura de precios es la siguiente:",
-      "trial": "Período de prueba de 24 horas: $2.00 USD",
+      "trial": "Período de prueba de 24 horas: $0.50 USD",
       "monthly": "Suscripción mensual: $30.00 USD (se cobra automáticamente después del período de prueba)",
       "content2": "Al suscribirse, nos autoriza a cobrar su método de pago de forma recurrente mensualmente hasta que cancele su suscripción. Todos los pagos se procesan de forma segura a través de Stripe."
     },

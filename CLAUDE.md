@@ -41,7 +41,7 @@ Tracify is a phone tracking SaaS application with subscription billing.
 - `admin_users` - Admin accounts
 
 ## Subscription Flow
-1. Customer pays $2.00 trial (24 hours)
+1. Customer pays $0.50 trial (24 hours)
 2. After trial, charged $30/month via Stripe subscription
 3. Webhooks update subscription status in DB
 

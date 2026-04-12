@@ -280,7 +280,7 @@
     "billing": {
       "title": "3. Ukubhalisa I-akhawunti Nokubilwa",
       "content1": "Ukuze usebenzise i-Tracify, kumele udale i-akhawunti futhi ubhalisele isevisi yethu. Isakhiwo sethu samanani simi kanje:",
-      "trial": "Isikhathi sokuhlola samahora angu-24: $2.00 USD",
+      "trial": "Isikhathi sokuhlola samahora angu-24: $0.50 USD",
       "monthly": "Ukubhaliselwa kwenyanga: $30.00 USD (kukhokhelwa ngokuzenzakalelayo ngemva kokuphela kwesikhathi sokuhlola)",
       "content2": "Ngokubhalisela, ugunyaza ukuthi sikhokhise indlela yakho yokukhokha njalo ngenyanga kuze kube uyakhansela ukubhaliselwa kwakho. Zonke izinkokhelo zisetshenzwa ngokuphepha nge-Stripe."
     },
