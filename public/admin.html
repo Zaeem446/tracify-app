@@ -431,6 +431,42 @@
         .sort-select:focus {
             border-color: var(--primary);
         }
+
+        /* ===== MOBILE RESPONSIVE ADDITIONS — do not modify desktop rules above ===== */
+        @media (max-width: 768px) {
+            .main { padding: 15px; }
+            .header { flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+            .header h1 { font-size: 1.4rem; }
+            .header-actions { width: 100%; justify-content: space-between; flex-wrap: wrap; }
+            .admin-info { padding: 6px 12px; }
+            .search-input { width: 100%; max-width: 100%; box-sizing: border-box; }
+            .sort-select { width: 100%; box-sizing: border-box; }
+            .card-header { flex-wrap: wrap; gap: 10px; }
+            .card-header > div { flex-wrap: wrap; gap: 10px; width: 100%; }
+            /* Horizontal scroll for tables — wrapper already exists */
+            .card-body { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+            table { min-width: 600px; }
+            th, td { padding: 12px 15px; }
+            /* Touch target minimums */
+            .btn-logout, .sort-select, .search-input,
+            input[type="text"], input[type="email"], input[type="password"],
+            select, textarea { min-height: 44px; }
+            /* Inline table action buttons */
+            table button { min-height: 36px; padding: 8px 12px; font-size: 13px; }
+            .stat-card { padding: 20px; }
+            .stat-value { font-size: 1.6rem; }
+            .stats-grid { gap: 15px; }
+        }
+
+        @media (max-width: 480px) {
+            .detail-row { flex-direction: column; align-items: flex-start; padding: 10px 0; gap: 4px; }
+            .detail-label { width: 100%; margin-bottom: 2px; font-size: 0.85rem; }
+            .detail-value { width: 100%; word-break: break-word; }
+            .modal-content { width: 95%; max-width: 95vw; max-height: 90vh; }
+            .stat-value { font-size: 1.4rem; }
+            .admin-info span { display: none; }
+            th, td { padding: 10px 12px; font-size: 0.85rem; }
+        }
     </style>
 </head>
 <body>
