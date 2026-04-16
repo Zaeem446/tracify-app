@@ -1,0 +1,47 @@
+{
+  "lang": "fil",
+  "pages": {
+    "home": {
+      "title": "Hanapin ang Anumang Telepono — I-track ang Sinuman, Kahit Saan, Kaagad | Tracify",
+      "description": "I-track ang sinuman kahit saan at hanapin ang kanilang lokasyon kaagad sa pamamagitan ng numero ng telepono. Real-time na phone tracker batay sa pahintulot. iOS + Android, walang app na kailangan. $0.50 na trial.",
+      "ogTitle": "Hanapin ang Anumang Telepono — I-track ang Sinuman, Kahit Saan, Kaagad | Tracify",
+      "ogDesc": "I-track ang sinuman kahit saan at hanapin ang kanilang lokasyon kaagad sa pamamagitan ng numero ng telepono. Real-time na phone tracker batay sa pahintulot. iOS + Android, walang app na kailangan. $0.50 na trial.",
+      "h1": "Hanapin ang anumang telepono, kahit saan"
+    },
+    "howItWorks": {
+      "title": "Paano gumagana ang Tracify — 3 hakbang",
+      "description": "Alamin kung paano hinahanap ng Tracify ang anumang telepono sa tatlong hakbang na batay sa pahintulot: ilagay ang numero ng telepono, magpadala ng custom na SMS, tumanggap ng real-time na GPS coordinates sa iyong dashboard.",
+      "ogTitle": "Paano gumagana ang Tracify — 3 hakbang",
+      "ogDesc": "Alamin kung paano hinahanap ng Tracify ang telepono sa tatlong hakbang: ilagay ang numero, magpadala ng SMS, matanggap ang GPS coordinates.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify FAQ — Mga tanong tungkol sa phone tracker",
+      "description": "Mga sagot sa madalas itanong tungkol sa serbisyo ng phone tracking ng Tracify: paano gumagana, legalidad, privacy, mga device na sinusuportahan, presyo, at consent-based na pagsubaybay.",
+      "ogTitle": "Tracify FAQ — Mga tanong tungkol sa phone tracker",
+      "ogDesc": "Mga sagot sa madalas itanong tungkol sa Tracify: paano gumagana, legalidad, privacy, mga device na sinusuportahan, presyo.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Makipag-ugnayan sa Tracify support — 24/7",
+      "description": "Kailangan ng tulong sa pagsubaybay ng numero ng telepono? Ang support team ng Tracify ay online 24/7. Magpadala ng mensahe para sa mabilis na sagot tungkol sa subscription, tracking, billing, o privacy.",
+      "ogTitle": "Makipag-ugnayan sa Tracify support — 24/7",
+      "ogDesc": "Kailangan ng tulong? Ang Tracify team ay available 24/7.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Patakaran sa privacy | Tracify",
+      "description": "Privacy policy ng Tracify: anong data ang kinokolekta namin, paano ginagamit, paano ini-encrypt ang iyong data, at paano kami sumusunod sa GDPR, CCPA at PECR. Privacy ng consent-based phone tracker.",
+      "ogTitle": "Patakaran sa privacy | Tracify",
+      "ogDesc": "Kung paano pinoprotektahan ng Tracify ang iyong data.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Mga tuntunin at kundisyon | Tracify",
+      "description": "Mga tuntunin ng serbisyo ng consent-based phone tracking platform ng Tracify: paggamit ng account, subscription, pagkansela, pinapayagang paggamit, at mga legal na responsibilidad.",
+      "ogTitle": "Mga tuntunin at kundisyon | Tracify",
+      "ogDesc": "Mga tuntunin sa paggamit ng Tracify.",
+      "h1": ""
+    }
+  }
+}

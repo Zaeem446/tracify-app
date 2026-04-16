@@ -1,0 +1,47 @@
+{
+  "lang": "zu",
+  "pages": {
+    "home": {
+      "title": "Thola Noma Yiluphi Ucingo — Landelela Noma Ubani, Noma Kuphi, Ngokushesha | Tracify",
+      "description": "Landelela noma ubani noma kuphi bese uthola indawo yabo ngokushesha ngenombolo yocingo. Umlandeleli wocingo wesikhathi sangempela osekelwe emvume. i-iOS + i-Android, ngaphandle kokufaka uhlelo lokusebenza. $0.50 kuhlolwa.",
+      "ogTitle": "Thola Noma Yiluphi Ucingo — Landelela Noma Ubani, Noma Kuphi, Ngokushesha | Tracify",
+      "ogDesc": "Landelela noma ubani noma kuphi bese uthola indawo yabo ngokushesha ngenombolo yocingo. Umlandeleli wocingo wesikhathi sangempela osekelwe emvume. i-iOS + i-Android, ngaphandle kokufaka uhlelo lokusebenza. $0.50 kuhlolwa.",
+      "h1": "Thola noma yiluphi ucingo, noma kuphi"
+    },
+    "howItWorks": {
+      "title": "Indlela Tracify esebenza ngayo — Izinyathelo ezi-3",
+      "description": "Funda indlela Tracify ekuthola ngayo noma yiluphi ucingo ngezinyathelo ezintathu ezisekelwe emvumeni: faka inombolo, thumela i-SMS ekhethekile, bese uthola ama-koordineyithi e-GPS esikhathini sangempela kudeshibhodi yakho.",
+      "ogTitle": "Indlela Tracify esebenza ngayo — Izinyathelo ezi-3",
+      "ogDesc": "Funda indlela Tracify ekuthola ngayo noma yiluphi ucingo ngezinyathelo ezintathu ezisekelwe emvumeni: faka inombolo, thumela i-SMS ekhethekile, bese uthola ama-koordineyithi e-GPS esikhathini sangempela kudeshibhodi yakho.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Imibuzo evame ukubuzwa ye-Tracify",
+      "description": "Izimpendulo zemibuzo evame ukubuzwa mayelana nesevisi yokulandelela ucingo ye-Tracify: isebenza kanjani, ukusemthethweni, ubumfihlo, amadivayisi asekelwayo, amanani nokulandelela okusekelwe emvumeni.",
+      "ogTitle": "Imibuzo evame ukubuzwa ye-Tracify",
+      "ogDesc": "Izimpendulo zemibuzo evame ukubuzwa mayelana nesevisi yokulandelela ucingo ye-Tracify: isebenza kanjani, ukusemthethweni, ubumfihlo, amadivayisi asekelwayo, amanani nokulandelela okusekelwe emvumeni.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Xhumana neTracify — 24/7",
+      "description": "Udinga usizo lokulandelela inombolo yocingo? Ithimba lokusekela le-Tracify liku-inthanethi 24/7. Sithumelele umlayezo — thola izimpendulo ezisheshayo mayelana nokubhalisa, ukulandelela, ukukhokha, noma ubumfihlo.",
+      "ogTitle": "Xhumana neTracify — 24/7",
+      "ogDesc": "Udinga usizo lokulandelela inombolo yocingo? Ithimba lokusekela le-Tracify liku-inthanethi 24/7. Sithumelele umlayezo — thola izimpendulo ezisheshayo mayelana nokubhalisa, ukulandelela, ukukhokha, noma ubumfihlo.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Inqubomgomo Yobumfihlo | Tracify",
+      "description": "Inqubomgomo yobumfihlo ye-Tracify: sikuqoqa ini, sisebenzisa kanjani, idatha yakho ibethelwe kanjani, futhi sihlala kanjani sihambisana ne-GDPR, CCPA ne-PECR. Ubumfihlo bomlandeleli wocingo osekelwe emvumeni.",
+      "ogTitle": "Inqubomgomo Yobumfihlo | Tracify",
+      "ogDesc": "Inqubomgomo yobumfihlo ye-Tracify: sikuqoqa ini, sisebenzisa kanjani, idatha yakho ibethelwe kanjani, futhi sihlala kanjani sihambisana ne-GDPR, CCPA ne-PECR. Ubumfihlo bomlandeleli wocingo osekelwe emvumeni.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Imigomo Nemibandela | Tracify",
+      "description": "Imigomo yesevisi ye-Tracify yokusebenzisa inkundla yethu yokulandelela ucingo esekelwe emvumeni: ukusetshenziswa kwe-akhawunti, ukubhalisa, ukukhansela, ukusetshenziswa okuvumelekile, nezibopho zomthetho.",
+      "ogTitle": "Imigomo Nemibandela | Tracify",
+      "ogDesc": "Imigomo yesevisi ye-Tracify yokusebenzisa inkundla yethu yokulandelela ucingo esekelwe emvumeni: ukusetshenziswa kwe-akhawunti, ukubhalisa, ukukhansela, ukusetshenziswa okuvumelekile, nezibopho zomthetho.",
+      "h1": ""
+    }
+  }
+}

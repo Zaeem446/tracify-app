@@ -1,0 +1,47 @@
+{
+  "lang": "ms",
+  "pages": {
+    "home": {
+      "title": "Cari Mana-mana Telefon — Jejak Sesiapa, Di Mana-mana, Segera | Tracify",
+      "description": "Jejak sesiapa di mana-mana dan cari lokasi mereka segera melalui nombor telefon. Penjejak telefon masa nyata berasaskan persetujuan. iOS + Android, tanpa pasang aplikasi. Percubaan $0.50.",
+      "ogTitle": "Cari Mana-mana Telefon — Jejak Sesiapa, Di Mana-mana, Segera | Tracify",
+      "ogDesc": "Jejak sesiapa di mana-mana dan cari lokasi mereka segera melalui nombor telefon. Penjejak telefon masa nyata berasaskan persetujuan. iOS + Android, tanpa pasang aplikasi. Percubaan $0.50.",
+      "h1": "Cari mana-mana telefon, di mana-mana"
+    },
+    "howItWorks": {
+      "title": "Cara Tracify berfungsi — Jejak dalam 3 langkah",
+      "description": "Ketahui bagaimana Tracify mencari mana-mana telefon dalam tiga langkah berasaskan persetujuan: masukkan nombor telefon, hantar SMS tersuai, terima koordinat GPS masa nyata di papan pemuka anda.",
+      "ogTitle": "Cara Tracify berfungsi — Jejak dalam 3 langkah",
+      "ogDesc": "Ketahui bagaimana Tracify mencari telefon dalam tiga langkah: masukkan nombor, hantar SMS, terima koordinat GPS.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify FAQ — Soalan penjejak telefon",
+      "description": "Jawapan kepada soalan lazim tentang perkhidmatan penjejakan telefon Tracify: cara ia berfungsi, kesahihan undang-undang, privasi, peranti yang disokong, harga dan penjejakan berasaskan persetujuan.",
+      "ogTitle": "Tracify FAQ — Soalan penjejak telefon",
+      "ogDesc": "Jawapan kepada soalan lazim tentang Tracify: cara ia berfungsi, kesahihan, privasi, peranti yang disokong, harga.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Hubungi sokongan Tracify — 24/7",
+      "description": "Perlukan bantuan menjejak nombor telefon? Pasukan sokongan Tracify dalam talian 24/7. Hantar mesej kepada kami untuk mendapatkan jawapan pantas tentang langganan, penjejakan, bil atau privasi.",
+      "ogTitle": "Hubungi sokongan Tracify — 24/7",
+      "ogDesc": "Perlukan bantuan? Pasukan Tracify tersedia 24/7.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Dasar privasi | Tracify",
+      "description": "Dasar privasi Tracify: data yang kami kumpul, cara penggunaan, cara data anda disulitkan, dan cara kami mematuhi GDPR, CCPA dan PECR. Privasi penjejak telefon berasaskan persetujuan.",
+      "ogTitle": "Dasar privasi | Tracify",
+      "ogDesc": "Bagaimana Tracify melindungi data anda.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Terma dan syarat | Tracify",
+      "description": "Terma perkhidmatan platform penjejakan telefon berasaskan persetujuan Tracify: penggunaan akaun, langganan, pembatalan, penggunaan yang dibenarkan dan tanggungjawab undang-undang.",
+      "ogTitle": "Terma dan syarat | Tracify",
+      "ogDesc": "Terma penggunaan perkhidmatan Tracify.",
+      "h1": ""
+    }
+  }
+}

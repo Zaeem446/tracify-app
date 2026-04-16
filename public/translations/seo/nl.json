@@ -1,0 +1,47 @@
+{
+  "lang": "nl",
+  "pages": {
+    "home": {
+      "title": "Zoek elke telefoon — Volg iedereen, overal, direct | Tracify",
+      "description": "Volg iedereen overal en vind zijn locatie direct via telefoonnummer. Realtime telefoontracker op basis van toestemming. iOS + Android, geen app-installatie. Proef van $0,50.",
+      "ogTitle": "Zoek elke telefoon — Volg iedereen, overal, direct | Tracify",
+      "ogDesc": "Volg iedereen overal en vind zijn locatie direct via telefoonnummer. Realtime telefoontracker op basis van toestemming. iOS + Android, geen app-installatie. Proef van $0,50.",
+      "h1": "Vind elke telefoon, overal"
+    },
+    "howItWorks": {
+      "title": "Hoe Tracify werkt — In 3 stappen traceren",
+      "description": "Zo lokaliseert Tracify elke telefoon in drie stappen: nummer invoeren, SMS versturen, GPS-coördinaten ontvangen.",
+      "ogTitle": "Hoe Tracify werkt — In 3 stappen traceren",
+      "ogDesc": "Zo lokaliseert Tracify elke telefoon in drie stappen: nummer invoeren, SMS versturen, GPS-coördinaten ontvangen.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify FAQ — Telefoon Tracker vragen",
+      "description": "Antwoorden op veelgestelde vragen over Tracify: hoe het werkt, wettigheid, privacy en prijzen.",
+      "ogTitle": "Tracify FAQ — Telefoon Tracker vragen",
+      "ogDesc": "Antwoorden op veelgestelde vragen over Tracify: hoe het werkt, wettigheid, privacy en prijzen.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Neem contact op met Tracify — 24/7 hulp",
+      "description": "Hulp nodig bij het traceren van een telefoonnummer? Het Tracify-supportteam is 24/7 online. Stuur ons een bericht — snelle antwoorden over abonnementen, tracking, facturering en privacy.",
+      "ogTitle": "Neem contact op met Tracify — 24/7 hulp",
+      "ogDesc": "Hulp nodig bij het traceren van een telefoonnummer? Het Tracify-supportteam is 24/7 online. Stuur ons een bericht — snelle antwoorden over abonnementen, tracking, facturering en privacy.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Privacybeleid | Tracify",
+      "description": "Tracify's privacybeleid: welke gegevens we verzamelen, hoe we ze gebruiken, hoe uw data wordt versleuteld en hoe we voldoen aan GDPR, CCPA en PECR. Privacy voor toestemmingsgebaseerde telefoontracker.",
+      "ogTitle": "Privacybeleid | Tracify",
+      "ogDesc": "Tracify's privacybeleid: welke gegevens we verzamelen, hoe we ze gebruiken, hoe uw data wordt versleuteld en hoe we voldoen aan GDPR, CCPA en PECR. Privacy voor toestemmingsgebaseerde telefoontracker.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Algemene voorwaarden | Tracify",
+      "description": "Tracify's algemene voorwaarden voor ons toestemmingsgebaseerd telefonisch trackingplatform: accountgebruik, abonnementen, opzeggingen, toegestaan gebruik en juridische verantwoordelijkheden.",
+      "ogTitle": "Algemene voorwaarden | Tracify",
+      "ogDesc": "Tracify's algemene voorwaarden voor ons toestemmingsgebaseerd telefonisch trackingplatform: accountgebruik, abonnementen, opzeggingen, toegestaan gebruik en juridische verantwoordelijkheden.",
+      "h1": ""
+    }
+  }
+}

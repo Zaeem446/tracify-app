@@ -1,0 +1,47 @@
+{
+  "lang": "sl",
+  "pages": {
+    "home": {
+      "title": "Poiščite kateri koli telefon — Sledite komur koli, kjer koli, takoj | Tracify",
+      "description": "Sledite komur koli kjer koli in takoj poiščite njegovo lokacijo po telefonski številki. Sledenje telefona v realnem času na podlagi soglasja. iOS + Android, brez namestitve aplikacije. $0,50 preizkus.",
+      "ogTitle": "Poiščite kateri koli telefon — Sledite komur koli, kjer koli, takoj | Tracify",
+      "ogDesc": "Sledite komur koli kjer koli in takoj poiščite njegovo lokacijo po telefonski številki. Sledenje telefona v realnem času na podlagi soglasja. iOS + Android, brez namestitve aplikacije. $0,50 preizkus.",
+      "h1": "Poiščite kateri koli telefon, kjer koli"
+    },
+    "howItWorks": {
+      "title": "Kako Tracify deluje — 3 koraki",
+      "description": "Spoznajte, kako Tracify najde kateri koli telefon v treh korakih na podlagi soglasja: vnesite številko, pošljite prilagojeno SMS sporočilo, prejmite GPS koordinate v realnem času na vaši nadzorni plošči.",
+      "ogTitle": "Kako Tracify deluje — 3 koraki",
+      "ogDesc": "Spoznajte, kako Tracify najde kateri koli telefon v treh korakih na podlagi soglasja: vnesite številko, pošljite prilagojeno SMS sporočilo, prejmite GPS koordinate v realnem času na vaši nadzorni plošči.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify FAQ — Sledenje telefonu",
+      "description": "Odgovori na pogosta vprašanja o storitvi sledenja telefonov Tracify: kako deluje, zakonitost, zasebnost, podprte naprave, cene in sledenje na podlagi soglasja.",
+      "ogTitle": "Tracify FAQ — Sledenje telefonu",
+      "ogDesc": "Odgovori na pogosta vprašanja o storitvi sledenja telefonov Tracify: kako deluje, zakonitost, zasebnost, podprte naprave, cene in sledenje na podlagi soglasja.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Kontaktirajte Tracify — 24/7",
+      "description": "Potrebujete pomoč pri sledenju telefonske številke? Ekipa za podporo Tracify je na voljo 24/7. Pišite nam — hitro odgovorimo na vprašanja o naročninah, sledenju, obračunavanju ali zasebnosti.",
+      "ogTitle": "Kontaktirajte Tracify — 24/7",
+      "ogDesc": "Potrebujete pomoč pri sledenju telefonske številke? Ekipa za podporo Tracify je na voljo 24/7. Pišite nam — hitro odgovorimo na vprašanja o naročninah, sledenju, obračunavanju ali zasebnosti.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Politika zasebnosti | Tracify",
+      "description": "Politika zasebnosti Tracify: katere podatke zbiramo, kako jih uporabljamo, kako šifriramo vaše informacije in kako upoštevamo GDPR, CCPA in PECR. Zasebnost sledilnika na podlagi soglasja.",
+      "ogTitle": "Politika zasebnosti | Tracify",
+      "ogDesc": "Politika zasebnosti Tracify: katere podatke zbiramo, kako jih uporabljamo, kako šifriramo vaše informacije in kako upoštevamo GDPR, CCPA in PECR. Zasebnost sledilnika na podlagi soglasja.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Pogoji uporabe | Tracify",
+      "description": "Pogoji uporabe platforme Tracify za sledenje telefonov na podlagi soglasja: uporaba računa, naročnine, preklic, dovoljena uporaba in pravna odgovornost.",
+      "ogTitle": "Pogoji uporabe | Tracify",
+      "ogDesc": "Pogoji uporabe platforme Tracify za sledenje telefonov na podlagi soglasja: uporaba računa, naročnine, preklic, dovoljena uporaba in pravna odgovornost.",
+      "h1": ""
+    }
+  }
+}

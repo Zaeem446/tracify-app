@@ -1,0 +1,104 @@
+{
+  "lang": "en",
+  "pages": {
+    "home": {
+      "title": "Locate Any Phone — Track Anyone, Anywhere Instantly | Tracify",
+      "description": "Track anyone anywhere and find their location instantly by phone number. Consent-based real-time phone tracker. iOS + Android, no app install. $0.50 trial.",
+      "keywords": "locate any phone by number, find location by phone number, phone number tracker, track phone by number, phone tracker, locate a phone number, track anyone anywhere, find location instantly, locate phone instantly, track anyone's phone, find someone's location, real-time phone tracker, instant phone location, track phone in real time, locate anyone by phone number, track someone by phone number, track cell phone by number, no installation phone tracker, online phone tracker, anonymous phone tracker, consent-based phone tracker, legal phone tracker, how to locate a cell phone number, how to find location by phone number, how to track phone by number",
+      "ogTitle": "Locate Any Phone Instantly — Track Anyone, Anywhere | Tracify",
+      "ogDesc": "Real-time consent-based phone tracker. Track anyone anywhere by number. iOS + Android. No install. 60-second location. $0.50 trial.",
+      "h1": "Locate Any Phone, Anywhere",
+      "image": "https://tracify-geo.com/og/home.png"
+    },
+    "howItWorks": {
+      "title": "How Tracify Works — 3 Steps to Track a Phone Number",
+      "description": "Learn how Tracify locates any phone in three consent-based steps: enter the number, send a custom SMS, receive real-time GPS coordinates in your dashboard.",
+      "keywords": "how to track a phone number, phone tracking how it works, how does phone tracker work, track cell phone by number",
+      "ogTitle": "How Tracify Works — Track a Phone Number in 3 Steps",
+      "ogDesc": "Enter the number. Send a consent SMS. Get precise GPS location. Here's exactly how Tracify works.",
+      "h1": "How Tracify Works",
+      "image": "https://tracify-geo.com/og/how-it-works.png"
+    },
+    "faq": {
+      "title": "Tracify FAQ — Phone Tracker Questions Answered",
+      "description": "Answers to common questions about Tracify's phone tracking service: how it works, legality, privacy, supported devices, pricing, and consent-based tracking.",
+      "keywords": "tracify faq, phone tracker faq, is phone tracking legal, how does tracify work, phone tracker questions",
+      "ogTitle": "Tracify FAQ — Everything About Phone Tracking",
+      "ogDesc": "How does it work? Is it legal? Which phones? All questions answered.",
+      "h1": "Frequently Asked Questions",
+      "image": "https://tracify-geo.com/og/faq.png"
+    },
+    "contact": {
+      "title": "Contact Tracify Support — 24/7 Help with Phone Tracking",
+      "description": "Need help tracking a phone number? Tracify's support team is online 24/7. Send us a message — get quick answers about subscriptions, tracking, billing, or privacy.",
+      "keywords": "tracify support, phone tracker support, contact tracify, tracify help, tracify customer service, phone tracking help",
+      "ogTitle": "Contact Tracify Support — 24/7",
+      "ogDesc": "Our team is ready to help. Reach out any time.",
+      "h1": "Contact Us",
+      "image": "https://tracify-geo.com/og/contact.png"
+    },
+    "privacy": {
+      "title": "Privacy Policy — How Tracify Protects Your Data | GDPR & CCPA Compliant",
+      "description": "Tracify's privacy policy: what we collect, how we use it, how your data is encrypted, and how we stay GDPR, CCPA and PECR compliant. Consent-based phone tracker privacy.",
+      "keywords": "tracify privacy policy, phone tracker privacy, tracify data protection, gdpr phone tracker, ccpa phone tracker, consent-based phone tracker privacy",
+      "ogTitle": "Privacy Policy | Tracify",
+      "ogDesc": "How Tracify handles and protects your personal data. GDPR & CCPA compliant.",
+      "h1": "Privacy Policy",
+      "image": "https://tracify-geo.com/og/privacy.png"
+    },
+    "terms": {
+      "title": "Terms of Service — Tracify Phone Tracker Usage & Policies",
+      "description": "Tracify's terms of service for using our consent-based phone tracking platform: account use, subscriptions, cancellations, permitted use, and legal responsibilities.",
+      "keywords": "tracify terms, tracify terms of service, phone tracker terms of service, tracify terms and conditions, phone tracking legal terms",
+      "ogTitle": "Terms of Service | Tracify",
+      "ogDesc": "The terms that govern your use of Tracify's phone tracker.",
+      "h1": "Terms and Conditions",
+      "image": "https://tracify-geo.com/og/terms.png"
+    },
+    "blog": {
+      "title": "Tracify Blog — Phone Tracking Guides, Tips & Comparisons",
+      "description": "Expert guides on how to track a phone number, find a lost phone, phone tracker comparisons, legality, and best practices for consent-based tracking.",
+      "keywords": "phone tracking blog, how to track phone, phone tracker tips, find lost phone",
+      "ogTitle": "Tracify Blog — Phone Tracking Guides",
+      "ogDesc": "Guides, tips, and comparisons for phone tracking by number.",
+      "h1": "Tracify Blog",
+      "image": "https://tracify-geo.com/og/blog.png"
+    },
+    "blogPost_howToTrack": {
+      "title": "How to Track a Phone Number in 2026 — Complete Guide",
+      "description": "Step-by-step guide on how to track a phone number legally using consent-based SMS tracking. Works on iOS, Android, and every mobile carrier worldwide.",
+      "keywords": "how to track a phone number, track phone by number, phone location tracker, find phone number location",
+      "ogTitle": "How to Track a Phone Number — 2026 Guide",
+      "ogDesc": "A complete, legal, step-by-step guide to tracking any phone number using consent-based SMS.",
+      "h1": "How to Track a Phone Number in 2026",
+      "image": "https://tracify-geo.com/og/blog-how-to.png"
+    },
+    "blogPost_comparison": {
+      "title": "Best Phone Tracker Apps Compared — Tracify vs. Competitors",
+      "description": "An in-depth comparison of the top phone tracker apps of 2026. Features, pricing, accuracy, and privacy side-by-side. See why Tracify ranks #1.",
+      "keywords": "best phone tracker app, phone tracker comparison, tracify review, top phone trackers 2026",
+      "ogTitle": "Best Phone Tracker Apps — 2026 Comparison",
+      "ogDesc": "We compared the top phone tracker apps on features, pricing, accuracy, and privacy.",
+      "h1": "Best Phone Tracker Apps of 2026",
+      "image": "https://tracify-geo.com/og/blog-comparison.png"
+    },
+    "blogPost_legality": {
+      "title": "Is Tracking a Phone Number Legal? — What You Need to Know",
+      "description": "A plain-English explainer on when tracking a phone number is legal. Consent, privacy laws, GDPR, CCPA, and how Tracify keeps you compliant.",
+      "keywords": "is phone tracking legal, phone tracker legality, is it legal to track a phone, phone tracking consent",
+      "ogTitle": "Is Tracking a Phone Number Legal?",
+      "ogDesc": "Consent, privacy laws, and how to track phones legally — explained.",
+      "h1": "Is Tracking a Phone Number Legal?",
+      "image": "https://tracify-geo.com/og/blog-legality.png"
+    },
+    "blogPost_findLost": {
+      "title": "Find My Lost Phone by Number — Step-by-Step Guide",
+      "description": "Lost your phone? Learn how to find a lost phone by its number using consent-based tracking, device services, and Tracify's global carrier support.",
+      "keywords": "find lost phone by number, locate lost phone, find my phone, lost phone tracker, recover lost phone",
+      "ogTitle": "Find Your Lost Phone by Number",
+      "ogDesc": "A practical guide to finding a lost phone using its number.",
+      "h1": "How to Find a Lost Phone by Number",
+      "image": "https://tracify-geo.com/og/blog-find-lost.png"
+    }
+  }
+}

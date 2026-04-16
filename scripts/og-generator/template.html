@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1200px;
+    height: 630px;
+    min-height: 630px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(76,175,80,0.35) 0%, transparent 45%),
+      radial-gradient(circle at 85% 80%, rgba(33,150,243,0.28) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(76,175,80,0.12) 0%, transparent 60%),
+      linear-gradient(135deg, #0a1929 0%, #0f1e2e 50%, #0a1f17 100%);
+  }
+  body {
+    position: relative;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #fff;
+  }
+
+  .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+  }
+
+  /* Grid overlay */
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(76,175,80,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(76,175,80,0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 100%);
+  }
+
+  /* Orbit rings */
+  .orbit {
+    position: absolute;
+    right: -180px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    border: 2px solid rgba(76,175,80,0.15);
+  }
+  .orbit-2 {
+    width: 540px;
+    height: 540px;
+    right: -100px;
+    border: 2px dashed rgba(76,175,80,0.18);
+  }
+  .orbit-3 {
+    width: 380px;
+    height: 380px;
+    right: -20px;
+    border: 2px solid rgba(76,175,80,0.22);
+  }
+
+  .pin {
+    position: absolute;
+    right: 160px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120px;
+    height: 120px;
+    filter: drop-shadow(0 20px 40px rgba(76,175,80,0.6));
+  }
+  .pin-glow {
+    position: absolute;
+    inset: -30px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(76,175,80,0.6) 0%, transparent 70%);
+  }
+  .pin-inner { position: relative; width: 100px; height: 100px; }
+
+  .brand {
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #fff;
+    z-index: 3;
+  }
+  .brand-mark {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #4CAF50 0%, #2e7d32 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(76,175,80,0.4);
+  }
+
+  .content {
+    position: absolute;
+    top: 210px;
+    left: 80px;
+    right: 400px;
+    z-index: 3;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #4CAF50;
+    padding: 7px 14px;
+    background: rgba(76,175,80,0.12);
+    border: 1px solid rgba(76,175,80,0.3);
+    border-radius: 100px;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin-bottom: 18px;
+    color: #fff;
+  }
+  h1 em {
+    font-style: normal;
+    background: linear-gradient(135deg, #81C784 0%, #4CAF50 50%, #2e7d32 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .desc {
+    font-size: 20px;
+    line-height: 1.4;
+    color: rgba(255,255,255,0.72);
+    font-weight: 400;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 48px;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 3;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    padding: 8px 14px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 100px;
+    backdrop-filter: blur(10px);
+    white-space: nowrap;
+  }
+  .badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4CAF50;
+    box-shadow: 0 0 12px #4CAF50;
+  }
+  .url {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.01em;
+    margin-left: auto;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grid"></div>
+  <div class="orbit"></div>
+  <div class="orbit orbit-2"></div>
+  <div class="orbit orbit-3"></div>
+
+  <div class="pin">
+    <div class="pin-glow"></div>
+    <div class="pin-inner">
+      <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="pinGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#81C784"/>
+            <stop offset="100%" stop-color="#2e7d32"/>
+          </linearGradient>
+        </defs>
+        <path d="M50 5 C25 5 10 25 10 45 C10 75 50 115 50 115 C50 115 90 75 90 45 C90 25 75 5 50 5 Z" fill="url(#pinGrad)" stroke="#fff" stroke-width="3"/>
+        <circle cx="50" cy="45" r="15" fill="#fff"/>
+        <circle cx="50" cy="45" r="7" fill="#2e7d32"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="brand">
+    <div class="brand-mark">
+      <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="16" stroke="#fff" stroke-width="3"/>
+        <circle cx="20" cy="20" r="6" fill="#fff"/>
+      </svg>
+    </div>
+    <span>Tracify</span>
+  </div>
+
+  <div class="content">
+    <span class="eyebrow" id="eyebrow">Phone Tracker</span>
+    <h1 id="headline">Locate Any Phone, <em>Anywhere</em></h1>
+    <p class="desc" id="desc">Real-time consent-based phone tracker. Works on every iPhone and Android — no install.</p>
+  </div>
+
+  <div class="footer">
+    <span class="badge"><span class="badge-dot"></span><span id="badge">Consent-based</span></span>
+    <span class="badge">iOS + Android</span>
+    <span class="badge">Global</span>
+    <span class="url">tracify-geo.com</span>
+  </div>
+</div>
+
+<script>
+  const p = new URLSearchParams(location.search);
+  const e = p.get('e'); const h = p.get('h'); const d = p.get('d'); const b = p.get('b');
+  if (e) document.getElementById('eyebrow').textContent = decodeURIComponent(e);
+  if (h) document.getElementById('headline').innerHTML = decodeURIComponent(h);
+  if (d) document.getElementById('desc').textContent = decodeURIComponent(d);
+  if (b) document.getElementById('badge').textContent = decodeURIComponent(b);
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "lang": "hu",
+  "pages": {
+    "home": {
+      "title": "Találj meg bármelyik telefont — Kövess bárkit, bárhol, azonnal | Tracify",
+      "description": "Kövess bárkit bárhol, és találd meg a helyét azonnal telefonszám alapján. Beleegyezés alapú valós idejű telefon nyomkövető. iOS + Android, alkalmazás telepítés nélkül. $0,50 próba.",
+      "ogTitle": "Találj meg bármelyik telefont — Kövess bárkit, bárhol, azonnal | Tracify",
+      "ogDesc": "Kövess bárkit bárhol, és találd meg a helyét azonnal telefonszám alapján. Beleegyezés alapú valós idejű telefon nyomkövető. iOS + Android, alkalmazás telepítés nélkül. $0,50 próba.",
+      "h1": "Találj meg bármelyik telefont, bárhol"
+    },
+    "howItWorks": {
+      "title": "Hogyan működik a Tracify — 3 lépés",
+      "description": "Ismerd meg, hogyan találja meg a Tracify bármely telefont három beleegyezés alapú lépésben: add meg a számot, küldj egyedi SMS-t, és fogadd a valós idejű GPS koordinátákat a vezérlőpultodon.",
+      "ogTitle": "Hogyan működik a Tracify — 3 lépés",
+      "ogDesc": "Ismerd meg, hogyan találja meg a Tracify bármely telefont három beleegyezés alapú lépésben: add meg a számot, küldj egyedi SMS-t, és fogadd a valós idejű GPS koordinátákat a vezérlőpultodon.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify GYIK — Telefon nyomkövető",
+      "description": "Válaszok a Tracify telefon nyomkövető szolgáltatásával kapcsolatos gyakori kérdésekre: hogyan működik, jogszerűség, adatvédelem, támogatott eszközök, árazás és beleegyezés alapú követés.",
+      "ogTitle": "Tracify GYIK — Telefon nyomkövető",
+      "ogDesc": "Válaszok a Tracify telefon nyomkövető szolgáltatásával kapcsolatos gyakori kérdésekre: hogyan működik, jogszerűség, adatvédelem, támogatott eszközök, árazás és beleegyezés alapú követés.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Tracify ügyfélszolgálat — 24/7",
+      "description": "Segítségre van szükséged telefonszám nyomkövetésében? A Tracify ügyfélszolgálati csapata 24/7 elérhető. Küldj üzenetet — gyors válaszokat kaphatsz előfizetésekről, nyomkövetésről, számlázásról és adatvédelemről.",
+      "ogTitle": "Tracify ügyfélszolgálat — 24/7",
+      "ogDesc": "Segítségre van szükséged telefonszám nyomkövetésében? A Tracify ügyfélszolgálati csapata 24/7 elérhető. Küldj üzenetet — gyors válaszokat kaphatsz előfizetésekről, nyomkövetésről, számlázásról és adatvédelemről.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Adatvédelmi szabályzat | Tracify",
+      "description": "Tracify adatvédelmi szabályzat: mit gyűjtünk, hogyan használjuk, hogyan titkosítjuk az adataidat, és hogyan felelünk meg a GDPR, CCPA és PECR előírásainak. Beleegyezés alapú telefon nyomkövető adatvédelem.",
+      "ogTitle": "Adatvédelmi szabályzat | Tracify",
+      "ogDesc": "Tracify adatvédelmi szabályzat: mit gyűjtünk, hogyan használjuk, hogyan titkosítjuk az adataidat, és hogyan felelünk meg a GDPR, CCPA és PECR előírásainak. Beleegyezés alapú telefon nyomkövető adatvédelem.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Felhasználási feltételek | Tracify",
+      "description": "A Tracify szolgáltatási feltételei a beleegyezés alapú telefon nyomkövető platformunk használatához: fiókhasználat, előfizetések, lemondások, megengedett használat és jogi felelősségek.",
+      "ogTitle": "Felhasználási feltételek | Tracify",
+      "ogDesc": "A Tracify szolgáltatási feltételei a beleegyezés alapú telefon nyomkövető platformunk használatához: fiókhasználat, előfizetések, lemondások, megengedett használat és jogi felelősségek.",
+      "h1": ""
+    }
+  }
+}

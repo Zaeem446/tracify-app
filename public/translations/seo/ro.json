@@ -1,0 +1,47 @@
+{
+  "lang": "ro",
+  "pages": {
+    "home": {
+      "title": "Găsește orice telefon — Urmărește pe oricine, oriunde, instant | Tracify",
+      "description": "Urmărește pe oricine oriunde și găsește-i locația instant prin numărul de telefon. Urmăritor de telefon în timp real bazat pe consimțământ. iOS + Android, fără instalare aplicație. Probă $0,50.",
+      "ogTitle": "Găsește orice telefon — Urmărește pe oricine, oriunde, instant | Tracify",
+      "ogDesc": "Urmărește pe oricine oriunde și găsește-i locația instant prin numărul de telefon. Urmăritor de telefon în timp real bazat pe consimțământ. iOS + Android, fără instalare aplicație. Probă $0,50.",
+      "h1": "Găsește orice telefon, oriunde"
+    },
+    "howItWorks": {
+      "title": "Cum funcționează Tracify — 3 pași",
+      "description": "Află cum localizează Tracify un telefon în trei pași: introdu numărul, trimite SMS, primește coordonate GPS.",
+      "ogTitle": "Cum funcționează Tracify — 3 pași",
+      "ogDesc": "Află cum localizează Tracify un telefon în trei pași: introdu numărul, trimite SMS, primește coordonate GPS.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Întrebări frecvente Tracify",
+      "description": "Răspunsuri la întrebări frecvente despre Tracify: cum funcționează, legalitate, confidențialitate, dispozitive compatibile, prețuri și urmărire cu consimțământ.",
+      "ogTitle": "Întrebări frecvente Tracify",
+      "ogDesc": "Răspunsuri la întrebări frecvente despre Tracify: cum funcționează, legalitate, confidențialitate, dispozitive compatibile, prețuri și urmărire cu consimțământ.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Contactează Tracify — 24/7",
+      "description": "Ai nevoie de ajutor pentru a localiza un număr? Echipa de suport Tracify e online 24/7. Răspunsuri rapide despre abonamente, urmărire, facturare și confidențialitate",
+      "ogTitle": "Contactează Tracify — 24/7",
+      "ogDesc": "Ai nevoie de ajutor pentru a localiza un număr? Echipa de suport Tracify e online 24/7. Răspunsuri rapide despre abonamente, urmărire, facturare și confidențialitate",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Politica de confidențialitate | Tracify",
+      "description": "Politica de confidențialitate Tracify: date colectate, utilizare, criptare și conformitate GDPR, CCPA și PECR. Urmăritor de telefon bazat pe consimțământ.",
+      "ogTitle": "Politica de confidențialitate | Tracify",
+      "ogDesc": "Politica de confidențialitate Tracify: date colectate, utilizare, criptare și conformitate GDPR, CCPA și PECR. Urmăritor de telefon bazat pe consimțământ.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Termeni și condiții | Tracify",
+      "description": "Termenii de utilizare Tracify: utilizarea contului, abonamente, anulări, utilizare permisă și responsabilități legale. Platformă de urmărire bazată pe consimțământ.",
+      "ogTitle": "Termeni și condiții | Tracify",
+      "ogDesc": "Termenii de utilizare Tracify: utilizarea contului, abonamente, anulări, utilizare permisă și responsabilități legale. Platformă de urmărire bazată pe consimțământ.",
+      "h1": ""
+    }
+  }
+}

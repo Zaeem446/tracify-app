@@ -1,0 +1,47 @@
+{
+  "lang": "id",
+  "pages": {
+    "home": {
+      "title": "Temukan telepon apa pun — Lacak siapa pun, di mana pun, seketika | Tracify",
+      "description": "Lacak siapa pun di mana pun dan temukan lokasi mereka seketika via nomor telepon. Pelacak telepon real-time berbasis persetujuan. iOS + Android, tanpa instal aplikasi. Uji coba $0,50.",
+      "ogTitle": "Temukan telepon apa pun — Lacak siapa pun, di mana pun, seketika | Tracify",
+      "ogDesc": "Lacak siapa pun di mana pun dan temukan lokasi mereka seketika via nomor telepon. Pelacak telepon real-time berbasis persetujuan. iOS + Android, tanpa instal aplikasi. Uji coba $0,50.",
+      "h1": "Temukan telepon apa pun, di mana pun"
+    },
+    "howItWorks": {
+      "title": "Cara kerja Tracify — Lacak dalam 3 langkah",
+      "description": "Pelajari bagaimana Tracify melacak telepon apa pun dalam tiga langkah berbasis persetujuan: masukkan nomor telepon, kirim SMS kustom, terima koordinat GPS real-time di dasbor Anda.",
+      "ogTitle": "Cara kerja Tracify — Lacak dalam 3 langkah",
+      "ogDesc": "Pelajari bagaimana Tracify melacak telepon dalam tiga langkah: masukkan nomor, kirim SMS, terima koordinat GPS.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify FAQ — Pertanyaan pelacak telepon",
+      "description": "Jawaban atas pertanyaan umum tentang layanan pelacakan telepon Tracify: cara kerja, legalitas, privasi, perangkat yang didukung, harga, dan pelacakan berbasis persetujuan.",
+      "ogTitle": "Tracify FAQ — Pertanyaan pelacak telepon",
+      "ogDesc": "Jawaban pertanyaan umum tentang Tracify: cara kerja, legalitas, privasi, perangkat yang didukung, harga.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Hubungi dukungan Tracify — 24/7",
+      "description": "Butuh bantuan melacak nomor telepon? Tim dukungan Tracify online 24/7. Kirim pesan kepada kami untuk mendapatkan jawaban cepat tentang langganan, pelacakan, tagihan, atau privasi.",
+      "ogTitle": "Hubungi dukungan Tracify — 24/7",
+      "ogDesc": "Butuh bantuan? Tim Tracify tersedia 24/7.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Kebijakan privasi | Tracify",
+      "description": "Kebijakan privasi Tracify: data yang kami kumpulkan, cara penggunaannya, cara data Anda dienkripsi, dan cara kami mematuhi GDPR, CCPA, dan PECR. Privasi pelacak telepon berbasis persetujuan.",
+      "ogTitle": "Kebijakan privasi | Tracify",
+      "ogDesc": "Bagaimana Tracify melindungi data Anda.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Syarat dan ketentuan | Tracify",
+      "description": "Syarat layanan platform pelacakan telepon berbasis persetujuan Tracify: penggunaan akun, langganan, pembatalan, penggunaan yang diizinkan, dan tanggung jawab hukum.",
+      "ogTitle": "Syarat dan ketentuan | Tracify",
+      "ogDesc": "Syarat penggunaan layanan Tracify.",
+      "h1": ""
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "lang": "it",
+  "pages": {
+    "home": {
+      "title": "Localizza qualsiasi telefono — Traccia chiunque, ovunque, all'istante | Tracify",
+      "description": "Traccia chiunque ovunque e trova la sua posizione all'istante tramite numero di telefono. Tracker del telefono in tempo reale basato sul consenso. iOS + Android, senza installare app. Prova da $0,50.",
+      "ogTitle": "Localizza qualsiasi telefono — Traccia chiunque, ovunque, all'istante | Tracify",
+      "ogDesc": "Traccia chiunque ovunque e trova la sua posizione all'istante tramite numero di telefono. Tracker del telefono in tempo reale basato sul consenso. iOS + Android, senza installare app. Prova da $0,50.",
+      "h1": "Localizza qualsiasi telefono, ovunque"
+    },
+    "howItWorks": {
+      "title": "Come funziona Tracify — Traccia in 3 passi",
+      "description": "Scopri come Tracify localizza un telefono in tre passi: inserisci il numero, invia un SMS, ricevi le coordinate GPS.",
+      "ogTitle": "Come funziona Tracify — Traccia in 3 passi",
+      "ogDesc": "Scopri come Tracify localizza un telefono in tre passi: inserisci il numero, invia un SMS, ricevi le coordinate GPS.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "FAQ Tracify — Domande sul tracker telefonico",
+      "description": "Risposte alle domande frequenti su Tracify: funzionamento, legalità, privacy, dispositivi supportati e prezzi.",
+      "ogTitle": "FAQ Tracify — Domande sul tracker telefonico",
+      "ogDesc": "Risposte alle domande frequenti su Tracify: funzionamento, legalità, privacy, dispositivi supportati e prezzi.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Contatta il supporto Tracify — 24/7",
+      "description": "Hai bisogno di aiuto per localizzare un numero? Il team di supporto Tracify è online 24/7. Risposte rapide su abbonamenti, tracciamento, fatturazione o privacy.",
+      "ogTitle": "Contatta il supporto Tracify — 24/7",
+      "ogDesc": "Hai bisogno di aiuto per localizzare un numero? Il team di supporto Tracify è online 24/7. Risposte rapide su abbonamenti, tracciamento, fatturazione o privacy.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Informativa sulla privacy | Tracify",
+      "description": "Informativa sulla privacy di Tracify: dati raccolti, utilizzo, crittografia e conformità GDPR, CCPA e PECR. Privacy del tracker telefonico basato sul consenso.",
+      "ogTitle": "Informativa sulla privacy | Tracify",
+      "ogDesc": "Informativa sulla privacy di Tracify: dati raccolti, utilizzo, crittografia e conformità GDPR, CCPA e PECR. Privacy del tracker telefonico basato sul consenso.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Termini e condizioni | Tracify",
+      "description": "Termini di servizio Tracify: uso dell'account, abbonamenti, cancellazioni, uso consentito e responsabilità legali. Piattaforma di tracciamento basata sul consenso.",
+      "ogTitle": "Termini e condizioni | Tracify",
+      "ogDesc": "Termini di servizio Tracify: uso dell'account, abbonamenti, cancellazioni, uso consentito e responsabilità legali. Piattaforma di tracciamento basata sul consenso.",
+      "h1": ""
+    }
+  }
+}

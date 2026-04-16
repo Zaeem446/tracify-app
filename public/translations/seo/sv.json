@@ -1,0 +1,47 @@
+{
+  "lang": "sv",
+  "pages": {
+    "home": {
+      "title": "Hitta vilken telefon som helst — Spåra vem som helst, var som helst, direkt | Tracify",
+      "description": "Spåra vem som helst var som helst och hitta deras plats direkt via telefonnummer. Samtyckesbaserad realtids telefonspårare. iOS + Android, utan app-installation. $0,50 prov.",
+      "ogTitle": "Hitta vilken telefon som helst — Spåra vem som helst, var som helst, direkt | Tracify",
+      "ogDesc": "Spåra vem som helst var som helst och hitta deras plats direkt via telefonnummer. Samtyckesbaserad realtids telefonspårare. iOS + Android, utan app-installation. $0,50 prov.",
+      "h1": "Hitta vilken telefon som helst, var som helst"
+    },
+    "howItWorks": {
+      "title": "Så fungerar Tracify — 3 steg",
+      "description": "Se hur Tracify hittar telefonen i tre steg: ange nummer, skicka SMS, få GPS-koordinater.",
+      "ogTitle": "Så fungerar Tracify — 3 steg",
+      "ogDesc": "Se hur Tracify hittar telefonen i tre steg: ange nummer, skicka SMS, få GPS-koordinater.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify FAQ — Telefonspårning",
+      "description": "Svar på vanliga frågor om Tracifys telefonspårning: hur det fungerar, laglighet, integritet, enheter som stöds, priser och samtyckesbaserad spårning.",
+      "ogTitle": "Tracify FAQ — Telefonspårning",
+      "ogDesc": "Svar på vanliga frågor om Tracifys telefonspårning: hur det fungerar, laglighet, integritet, enheter som stöds, priser och samtyckesbaserad spårning.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Kontakta Tracify — 24/7",
+      "description": "Behöver du hjälp med att spåra ett telefonnummer? Tracifys supportteam finns tillgängligt dygnet runt. Skicka ett meddelande — få snabba svar om prenumerationer, spårning, fakturering eller integritet.",
+      "ogTitle": "Kontakta Tracify — 24/7",
+      "ogDesc": "Behöver du hjälp med att spåra ett telefonnummer? Tracifys supportteam finns tillgängligt dygnet runt. Skicka ett meddelande — få snabba svar om prenumerationer, spårning, fakturering eller integritet.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Integritetspolicy | Tracify",
+      "description": "Tracifys integritetspolicy: vad vi samlar in, hur vi använder det, hur dina data krypteras och hur vi efterlever GDPR, CCPA och PECR. Integritetsskydd för samtyckesbaserad telefonspårning.",
+      "ogTitle": "Integritetspolicy | Tracify",
+      "ogDesc": "Tracifys integritetspolicy: vad vi samlar in, hur vi använder det, hur dina data krypteras och hur vi efterlever GDPR, CCPA och PECR. Integritetsskydd för samtyckesbaserad telefonspårning.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Användarvillkor | Tracify",
+      "description": "Tracifys användarvillkor för vår samtyckesbaserade telefonspårningsplattform: kontoanvändning, prenumerationer, uppsägningar, tillåten användning och juridiskt ansvar.",
+      "ogTitle": "Användarvillkor | Tracify",
+      "ogDesc": "Tracifys användarvillkor för vår samtyckesbaserade telefonspårningsplattform: kontoanvändning, prenumerationer, uppsägningar, tillåten användning och juridiskt ansvar.",
+      "h1": ""
+    }
+  }
+}

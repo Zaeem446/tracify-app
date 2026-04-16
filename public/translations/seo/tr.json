@@ -1,0 +1,47 @@
+{
+  "lang": "tr",
+  "pages": {
+    "home": {
+      "title": "Her Telefonu Bul — Herkesi, Her Yerde, Anında Takip Et | Tracify",
+      "description": "Herhangi birini her yerde takip edin ve telefon numarasından konumunu anında bulun. Onaya dayalı gerçek zamanlı telefon takip. iOS + Android, uygulama yüklemeden. $0,50 deneme.",
+      "ogTitle": "Her Telefonu Bul — Herkesi, Her Yerde, Anında Takip Et | Tracify",
+      "ogDesc": "Herhangi birini her yerde takip edin ve telefon numarasından konumunu anında bulun. Onaya dayalı gerçek zamanlı telefon takip. iOS + Android, uygulama yüklemeden. $0,50 deneme.",
+      "h1": "Herhangi bir telefonu, her yerde bulun"
+    },
+    "howItWorks": {
+      "title": "Tracify nasıl çalışır — 3 adımda takip",
+      "description": "Tracify'ın herhangi bir telefonu onaya dayalı üç adımda nasıl bulduğunu öğrenin: numarayı girin, özel bir SMS gönderin, gerçek zamanlı GPS koordinatlarını kontrol panelinizde alın.",
+      "ogTitle": "Tracify nasıl çalışır — 3 adımda takip",
+      "ogDesc": "Tracify'ın herhangi bir telefonu onaya dayalı üç adımda nasıl bulduğunu öğrenin: numarayı girin, özel bir SMS gönderin, gerçek zamanlı GPS koordinatlarını kontrol panelinizde alın.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify SSS — Telefon Takip Soruları",
+      "description": "Tracify'ın telefon takip hizmeti hakkında sık sorulan soruların yanıtları: nasıl çalışır, yasallık, gizlilik, desteklenen cihazlar, fiyatlandırma ve onaya dayalı takip.",
+      "ogTitle": "Tracify SSS — Telefon Takip Soruları",
+      "ogDesc": "Tracify'ın telefon takip hizmeti hakkında sık sorulan soruların yanıtları: nasıl çalışır, yasallık, gizlilik, desteklenen cihazlar, fiyatlandırma ve onaya dayalı takip.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Tracify destek ile iletişim — 7/24",
+      "description": "Telefon numarası takibinde yardıma mı ihtiyacınız var? Tracify destek ekibi 7/24 çevrimiçi. Bize mesaj gönderin — abonelikler, takip, faturalandırma veya gizlilik hakkında hızlı yanıtlar alın.",
+      "ogTitle": "Tracify destek ile iletişim — 7/24",
+      "ogDesc": "Telefon numarası takibinde yardıma mı ihtiyacınız var? Tracify destek ekibi 7/24 çevrimiçi. Bize mesaj gönderin — abonelikler, takip, faturalandırma veya gizlilik hakkında hızlı yanıtlar alın.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Gizlilik Politikası | Tracify",
+      "description": "Tracify gizlilik politikası: ne topladığımız, nasıl kullandığımız, verilerinizin nasıl şifrelendiği ve GDPR, CCPA ve PECR uyumluluğumuzu nasıl sürdürdüğümüz. Onaya dayalı telefon takip gizliliği.",
+      "ogTitle": "Gizlilik Politikası | Tracify",
+      "ogDesc": "Tracify gizlilik politikası: ne topladığımız, nasıl kullandığımız, verilerinizin nasıl şifrelendiği ve GDPR, CCPA ve PECR uyumluluğumuzu nasıl sürdürdüğümüz. Onaya dayalı telefon takip gizliliği.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Şartlar ve Koşullar | Tracify",
+      "description": "Tracify'ın onaya dayalı telefon takip platformunu kullanma hizmet koşulları: hesap kullanımı, abonelikler, iptaller, izin verilen kullanım ve yasal sorumluluklar.",
+      "ogTitle": "Şartlar ve Koşullar | Tracify",
+      "ogDesc": "Tracify'ın onaya dayalı telefon takip platformunu kullanma hizmet koşulları: hesap kullanımı, abonelikler, iptaller, izin verilen kullanım ve yasal sorumluluklar.",
+      "h1": ""
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "lang": "fr",
+  "pages": {
+    "home": {
+      "title": "Localiser n'importe quel téléphone — Suivre n'importe qui, n'importe où, instantanément | Tracify",
+      "description": "Suivez n'importe qui n'importe où et trouvez sa localisation instantanément par numéro de téléphone. Traceur de téléphone en temps réel basé sur le consentement. iOS + Android, sans installation d'app. Essai $0,50.",
+      "ogTitle": "Localiser n'importe quel téléphone — Suivre n'importe qui, n'importe où, instantanément | Tracify",
+      "ogDesc": "Suivez n'importe qui n'importe où et trouvez sa localisation instantanément par numéro de téléphone. Traceur de téléphone en temps réel basé sur le consentement. iOS + Android, sans installation d'app. Essai $0,50.",
+      "h1": "Localisez n'importe quel téléphone, partout"
+    },
+    "howItWorks": {
+      "title": "Comment Tracify fonctionne — Localiser un numéro en 3 étapes",
+      "description": "Découvrez comment Tracify localise un téléphone en trois étapes : entrez le numéro, envoyez un SMS, recevez les coordonnées GPS.",
+      "ogTitle": "Comment Tracify fonctionne — Localiser un numéro en 3 étapes",
+      "ogDesc": "Découvrez comment Tracify localise un téléphone en trois étapes : entrez le numéro, envoyez un SMS, recevez les coordonnées GPS.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "FAQ Tracify — Questions sur le traceur de téléphone",
+      "description": "Réponses aux questions fréquentes sur Tracify : fonctionnement, légalité, confidentialité, appareils pris en charge, tarifs.",
+      "ogTitle": "FAQ Tracify — Questions sur le traceur de téléphone",
+      "ogDesc": "Réponses aux questions fréquentes sur Tracify : fonctionnement, légalité, confidentialité, appareils pris en charge, tarifs.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Contacter le support Tracify — Aide 24/7",
+      "description": "Besoin d'aide pour localiser un numéro ? L'équipe Tracify est en ligne 24/7. Réponses rapides sur les abonnements, le suivi, la facturation ou la confidentialité.",
+      "ogTitle": "Contacter le support Tracify — Aide 24/7",
+      "ogDesc": "Besoin d'aide pour localiser un numéro ? L'équipe Tracify est en ligne 24/7. Réponses rapides sur les abonnements, le suivi, la facturation ou la confidentialité.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Politique de confidentialité | Tracify",
+      "description": "Politique de confidentialité Tracify : données collectées, utilisation, chiffrement et conformité GDPR, CCPA et PECR. Traceur de téléphone basé sur le consentement.",
+      "ogTitle": "Politique de confidentialité | Tracify",
+      "ogDesc": "Politique de confidentialité Tracify : données collectées, utilisation, chiffrement et conformité GDPR, CCPA et PECR. Traceur de téléphone basé sur le consentement.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Conditions générales | Tracify",
+      "description": "Conditions d'utilisation Tracify : compte, abonnements, annulations, usage autorisé et responsabilités légales. Plateforme de localisation basée sur le consentement.",
+      "ogTitle": "Conditions générales | Tracify",
+      "ogDesc": "Conditions d'utilisation Tracify : compte, abonnements, annulations, usage autorisé et responsabilités légales. Plateforme de localisation basée sur le consentement.",
+      "h1": ""
+    }
+  }
+}

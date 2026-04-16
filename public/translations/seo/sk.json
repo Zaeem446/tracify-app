@@ -1,0 +1,47 @@
+{
+  "lang": "sk",
+  "pages": {
+    "home": {
+      "title": "Nájdite akýkoľvek telefón — Sledujte kohokoľvek, kdekoľvek, okamžite | Tracify",
+      "description": "Sledujte kohokoľvek kdekoľvek a nájdite jeho polohu okamžite podľa telefónneho čísla. Sledovanie telefónu v reálnom čase na základe súhlasu. iOS + Android, bez inštalácie aplikácie. $0,50 skúška.",
+      "ogTitle": "Nájdite akýkoľvek telefón — Sledujte kohokoľvek, kdekoľvek, okamžite | Tracify",
+      "ogDesc": "Sledujte kohokoľvek kdekoľvek a nájdite jeho polohu okamžite podľa telefónneho čísla. Sledovanie telefónu v reálnom čase na základe súhlasu. iOS + Android, bez inštalácie aplikácie. $0,50 skúška.",
+      "h1": "Nájdite akýkoľvek telefón, kdekoľvek"
+    },
+    "howItWorks": {
+      "title": "Ako funguje Tracify — 3 kroky",
+      "description": "Zistite, ako Tracify nájde akýkoľvek telefón v troch krokoch na základe súhlasu: zadajte číslo, pošlite prispôsobenú SMS, dostanete GPS súradnice v reálnom čase na vašom paneli.",
+      "ogTitle": "Ako funguje Tracify — 3 kroky",
+      "ogDesc": "Zistite, ako Tracify nájde akýkoľvek telefón v troch krokoch na základe súhlasu: zadajte číslo, pošlite prispôsobenú SMS, dostanete GPS súradnice v reálnom čase na vašom paneli.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify FAQ — Sledovanie telefónu",
+      "description": "Odpovede na časté otázky o službe sledovania telefónov Tracify: ako to funguje, zákonnosť, súkromie, podporované zariadenia, ceny a sledovanie na základe súhlasu.",
+      "ogTitle": "Tracify FAQ — Sledovanie telefónu",
+      "ogDesc": "Odpovede na časté otázky o službe sledovania telefónov Tracify: ako to funguje, zákonnosť, súkromie, podporované zariadenia, ceny a sledovanie na základe súhlasu.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Kontakt s Tracify — 24/7",
+      "description": "Potrebujete pomoc so sledovaním telefónneho čísla? Tím podpory Tracify je online 24/7. Napíšte nám — rýchlo odpovieme na otázky o predplatnom, sledovaní, fakturácii alebo ochrane súkromia.",
+      "ogTitle": "Kontakt s Tracify — 24/7",
+      "ogDesc": "Potrebujete pomoc so sledovaním telefónneho čísla? Tím podpory Tracify je online 24/7. Napíšte nám — rýchlo odpovieme na otázky o predplatnom, sledovaní, fakturácii alebo ochrane súkromia.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Zásady ochrany osobných údajov | Tracify",
+      "description": "Zásady ochrany osobných údajov Tracify: aké údaje zhromažďujeme, ako ich používame, ako šifrujeme vaše dáta a ako dodržiavame GDPR, CCPA a PECR. Súkromie trackeru na základe súhlasu.",
+      "ogTitle": "Zásady ochrany osobných údajov | Tracify",
+      "ogDesc": "Zásady ochrany osobných údajov Tracify: aké údaje zhromažďujeme, ako ich používame, ako šifrujeme vaše dáta a ako dodržiavame GDPR, CCPA a PECR. Súkromie trackeru na základe súhlasu.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Obchodné podmienky | Tracify",
+      "description": "Obchodné podmienky platformy Tracify na sledovanie telefónov na základe súhlasu: používanie účtu, predplatné, zrušenie, povolené použitie a právna zodpovednosť.",
+      "ogTitle": "Obchodné podmienky | Tracify",
+      "ogDesc": "Obchodné podmienky platformy Tracify na sledovanie telefónov na základe súhlasu: používanie účtu, predplatné, zrušenie, povolené použitie a právna zodpovednosť.",
+      "h1": ""
+    }
+  }
+}

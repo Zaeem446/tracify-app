@@ -1,0 +1,47 @@
+{
+  "lang": "zh_HK",
+  "pages": {
+    "home": {
+      "title": "定位任何手機 — 隨時隨地即時追蹤任何人 | Tracify",
+      "description": "透過手機號碼隨時隨地追蹤任何人,即時取得其位置。基於同意嘅即時手機追蹤。iOS + Android,無需安裝應用程式。$0.50試用。",
+      "ogTitle": "定位任何手機 — 隨時隨地即時追蹤任何人 | Tracify",
+      "ogDesc": "透過手機號碼隨時隨地追蹤任何人,即時取得其位置。基於同意嘅即時手機追蹤。iOS + Android,無需安裝應用程式。$0.50試用。",
+      "h1": "隨時隨地定位任何手機"
+    },
+    "howItWorks": {
+      "title": "Tracify點運作 — 3步追蹤手機",
+      "description": "了解Tracify點樣透過三個基於同意嘅步驟定位任何手機：輸入手機號碼、發送自訂SMS短訊、喺儀表板接收即時GPS座標位置資訊。",
+      "ogTitle": "Tracify點運作 — 3步追蹤手機",
+      "ogDesc": "了解Tracify如何透過三個步驟定位手機：輸入號碼、發送短訊、接收GPS座標。",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify常見問題 — 手機追蹤",
+      "description": "關於Tracify手機追蹤服務嘅常見問題解答：運作原理、合法性、私隱保護、支援裝置類型、訂閱價格同埋基於同意嘅追蹤機制詳解。",
+      "ogTitle": "Tracify常見問題 — 手機追蹤",
+      "ogDesc": "關於Tracify嘅常見問題：運作原理、合法性、私隱、支援裝置、價格。",
+      "h1": ""
+    },
+    "contact": {
+      "title": "聯絡Tracify — 24/7",
+      "description": "需要幫助追蹤手機號碼？Tracify支援團隊全天候24/7在線。發送訊息即可獲取關於訂閱、追蹤、賬單或私隱問題嘅快速解答。",
+      "ogTitle": "聯絡Tracify — 24/7",
+      "ogDesc": "需要幫助追蹤手機號碼？Tracify支援團隊全天候24/7在線。發送訊息即可獲取關於訂閱、追蹤、賬單或私隱問題嘅快速解答。",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "私隱政策 | Tracify",
+      "description": "Tracify私隱政策：我哋收集邊啲資料、點樣使用、您嘅資料點樣加密，以及我哋點樣遵守GDPR、CCPA同PECR法規。基於同意嘅手機追蹤私隱保護。",
+      "ogTitle": "私隱政策 | Tracify",
+      "ogDesc": "Tracify私隱政策：我哋收集邊啲資料、點樣使用、您嘅資料點樣加密，以及我哋點樣遵守GDPR、CCPA同PECR法規。",
+      "h1": ""
+    },
+    "terms": {
+      "title": "條款及細則 | Tracify",
+      "description": "Tracify基於同意嘅手機追蹤平台服務條款：賬戶使用、訂閱管理、取消政策、允許用途及法律責任等詳細說明。",
+      "ogTitle": "條款及細則 | Tracify",
+      "ogDesc": "Tracify基於同意嘅手機追蹤平台服務條款：賬戶使用、訂閱管理、取消政策、允許用途及法律責任等詳細說明。",
+      "h1": ""
+    }
+  }
+}

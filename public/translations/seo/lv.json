@@ -1,0 +1,47 @@
+{
+  "lang": "lv",
+  "pages": {
+    "home": {
+      "title": "Atrodiet jebkuru telefonu — Izsekojiet ikvienam, jebkur, uzreiz | Tracify",
+      "description": "Izsekojiet ikvienam jebkur un atrodiet viņa atrašanās vietu uzreiz pēc telefona numura. Uz piekrišanas balstīts reāllaika telefona izsekotājs. iOS + Android, bez lietotnes uzstādīšanas. $0,50 izmēģinājums.",
+      "ogTitle": "Atrodiet jebkuru telefonu — Izsekojiet ikvienam, jebkur, uzreiz | Tracify",
+      "ogDesc": "Izsekojiet ikvienam jebkur un atrodiet viņa atrašanās vietu uzreiz pēc telefona numura. Uz piekrišanas balstīts reāllaika telefona izsekotājs. iOS + Android, bez lietotnes uzstādīšanas. $0,50 izmēģinājums.",
+      "h1": "Atrodiet jebkuru telefonu, jebkur"
+    },
+    "howItWorks": {
+      "title": "Kā darbojas Tracify — 3 soļi",
+      "description": "Uzziniet, kā Tracify atrod jebkuru telefonu trīs uz piekrišanu balstītos soļos: ievadiet numuru, nosūtiet pielāgotu SMS, saņemiet reāllaika GPS koordinātes savā vadības panelī.",
+      "ogTitle": "Kā darbojas Tracify — 3 soļi",
+      "ogDesc": "Uzziniet, kā Tracify atrod jebkuru telefonu trīs uz piekrišanu balstītos soļos: ievadiet numuru, nosūtiet pielāgotu SMS, saņemiet reāllaika GPS koordinātes savā vadības panelī.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify BUJ — Telefonu izsekošana",
+      "description": "Atbildes uz biežāk uzdotajiem jautājumiem par Tracify telefona izsekošanas pakalpojumu: kā tas darbojas, likumība, konfidencialitāte, atbalstītās ierīces, cenas un uz piekrišanu balstīta izsekošana.",
+      "ogTitle": "Tracify BUJ — Telefonu izsekošana",
+      "ogDesc": "Atbildes uz biežāk uzdotajiem jautājumiem par Tracify telefona izsekošanas pakalpojumu: kā tas darbojas, likumība, konfidencialitāte, atbalstītās ierīces, cenas un uz piekrišanu balstīta izsekošana.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Sazinieties ar Tracify — 24/7",
+      "description": "Vajadzīga palīdzība ar telefona numura izsekošanu? Tracify atbalsta komanda ir pieejama 24/7. Sūtiet mums ziņu — saņemiet ātras atbildes par abonementiem, izsekošanu, norēķiniem vai konfidencialitāti.",
+      "ogTitle": "Sazinieties ar Tracify — 24/7",
+      "ogDesc": "Vajadzīga palīdzība ar telefona numura izsekošanu? Tracify atbalsta komanda ir pieejama 24/7. Sūtiet mums ziņu — saņemiet ātras atbildes par abonementiem, izsekošanu, norēķiniem vai konfidencialitāti.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Privātuma politika | Tracify",
+      "description": "Tracify privātuma politika: ko mēs apkopojam, kā to izmantojam, kā jūsu dati tiek šifrēti un kā mēs nodrošinām atbilstību GDPR, CCPA un PECR prasībām. Uz piekrišanu balstīta telefona izsekotāja privātums.",
+      "ogTitle": "Privātuma politika | Tracify",
+      "ogDesc": "Tracify privātuma politika: ko mēs apkopojam, kā to izmantojam, kā jūsu dati tiek šifrēti un kā mēs nodrošinām atbilstību GDPR, CCPA un PECR prasībām. Uz piekrišanu balstīta telefona izsekotāja privātums.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Noteikumi un nosacījumi | Tracify",
+      "description": "Tracify pakalpojuma sniegšanas noteikumi mūsu uz piekrišanu balstītās telefona izsekošanas platformas lietošanai: konta izmantošana, abonementi, atcelšana, atļautā izmantošana un juridiskā atbildība.",
+      "ogTitle": "Noteikumi un nosacījumi | Tracify",
+      "ogDesc": "Tracify pakalpojuma sniegšanas noteikumi mūsu uz piekrišanu balstītās telefona izsekošanas platformas lietošanai: konta izmantošana, abonementi, atcelšana, atļautā izmantošana un juridiskā atbildība.",
+      "h1": ""
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "lang": "de",
+  "pages": {
+    "home": {
+      "title": "Jedes Handy orten — Jeden überall sofort verfolgen | Tracify",
+      "description": "Verfolgen Sie jeden überall und finden Sie sofort seinen Standort per Telefonnummer. Einverständnisbasierter Echtzeit-Handy-Tracker. iOS + Android, keine App-Installation. 24-Stunden-Test für $0,50.",
+      "ogTitle": "Jedes Handy orten — Jeden überall sofort verfolgen | Tracify",
+      "ogDesc": "Verfolgen Sie jeden überall und finden Sie sofort seinen Standort per Telefonnummer. Einverständnisbasierter Echtzeit-Handy-Tracker. iOS + Android, keine App-Installation. 24-Stunden-Test für $0,50.",
+      "h1": "Jedes Handy, überall orten"
+    },
+    "howItWorks": {
+      "title": "So funktioniert Tracify — Telefonnummer in 3 Schritten orten",
+      "description": "Erfahren Sie, wie Tracify jedes Handy in drei Schritten ortet: Nummer eingeben, SMS senden, GPS-Position empfangen.",
+      "ogTitle": "So funktioniert Tracify — Telefonnummer in 3 Schritten orten",
+      "ogDesc": "Erfahren Sie, wie Tracify jedes Handy in drei Schritten ortet: Nummer eingeben, SMS senden, GPS-Position empfangen.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify FAQ — Antworten zum Handy-Tracker",
+      "description": "Antworten auf häufige Fragen zu Tracify: Funktionsweise, Legalität, Datenschutz, unterstützte Geräte, Preise und zustimmungsbasiertes Tracking.",
+      "ogTitle": "Tracify FAQ — Antworten zum Handy-Tracker",
+      "ogDesc": "Antworten auf häufige Fragen zu Tracify: Funktionsweise, Legalität, Datenschutz, unterstützte Geräte, Preise und zustimmungsbasiertes Tracking.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Tracify Support kontaktieren — 24/7 Hilfe",
+      "description": "Brauchen Sie Hilfe beim Orten einer Telefonnummer? Das Tracify-Supportteam ist rund um die Uhr erreichbar. Schreiben Sie uns — schnelle Antworten zu Abos, Tracking, Abrechnung und Datenschutz.",
+      "ogTitle": "Tracify Support kontaktieren — 24/7 Hilfe",
+      "ogDesc": "Brauchen Sie Hilfe beim Orten einer Telefonnummer? Das Tracify-Supportteam ist rund um die Uhr erreichbar. Schreiben Sie uns — schnelle Antworten zu Abos, Tracking, Abrechnung und Datenschutz.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung | Tracify",
+      "description": "Tracifys Datenschutzerklärung: welche Daten wir erheben, wie wir sie verwenden, wie Ihre Daten verschlüsselt werden und wie wir GDPR-, CCPA- und PECR-konform bleiben. Datenschutz für zustimmungsbasiertes Tracking.",
+      "ogTitle": "Datenschutzerklärung | Tracify",
+      "ogDesc": "Tracifys Datenschutzerklärung: welche Daten wir erheben, wie wir sie verwenden, wie Ihre Daten verschlüsselt werden und wie wir GDPR-, CCPA- und PECR-konform bleiben. Datenschutz für zustimmungsbasiertes Tracking.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "AGB | Tracify",
+      "description": "Tracifys Nutzungsbedingungen für unsere zustimmungsbasierte Handy-Ortungsplattform: Kontoverwendung, Abonnements, Kündigungen, erlaubte Nutzung und rechtliche Verantwortlichkeiten.",
+      "ogTitle": "AGB | Tracify",
+      "ogDesc": "Tracifys Nutzungsbedingungen für unsere zustimmungsbasierte Handy-Ortungsplattform: Kontoverwendung, Abonnements, Kündigungen, erlaubte Nutzung und rechtliche Verantwortlichkeiten.",
+      "h1": ""
+    }
+  }
+}

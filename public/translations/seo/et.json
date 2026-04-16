@@ -1,0 +1,47 @@
+{
+  "lang": "et",
+  "pages": {
+    "home": {
+      "title": "Leia iga telefon — Jälgi kedagi, kõikjal, kohe | Tracify",
+      "description": "Jälgi kedagi kõikjal ja leia tema asukoht kohe telefoninumbri järgi. Nõusolekupõhine reaalajas telefoni jälgija. iOS + Android, ilma rakenduse paigaldamiseta. $0,50 prooviperiood.",
+      "ogTitle": "Leia iga telefon — Jälgi kedagi, kõikjal, kohe | Tracify",
+      "ogDesc": "Jälgi kedagi kõikjal ja leia tema asukoht kohe telefoninumbri järgi. Nõusolekupõhine reaalajas telefoni jälgija. iOS + Android, ilma rakenduse paigaldamiseta. $0,50 prooviperiood.",
+      "h1": "Leia iga telefon, kõikjal"
+    },
+    "howItWorks": {
+      "title": "Kuidas Tracify töötab — 3 sammu",
+      "description": "Uuri, kuidas Tracify leiab telefoni kolmes sammus: sisesta number, saada SMS, saa GPS-koordinaadid.",
+      "ogTitle": "Kuidas Tracify töötab — 3 sammu",
+      "ogDesc": "Uuri, kuidas Tracify leiab telefoni kolmes sammus: sisesta number, saada SMS, saa GPS-koordinaadid.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify KKK — Telefoni jälgija",
+      "description": "Vastused sagedastele küsimustele Tracify kohta: toimimine, seaduslikkus, privaatsus, toetatud seadmed, hinnad.",
+      "ogTitle": "Tracify KKK — Telefoni jälgija",
+      "ogDesc": "Vastused sagedastele küsimustele Tracify kohta: toimimine, seaduslikkus, privaatsus, toetatud seadmed, hinnad.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Võta Tracifyga ühendust — 24/7",
+      "description": "Vajad abi telefoninumbri jälgimisel? Tracify tugimeeskond on kättesaadav ööpäevaringselt. Saada meile sõnum — kiired vastused tellimuste, jälgimise, arvelduse ja privaatsuse kohta.",
+      "ogTitle": "Võta Tracifyga ühendust — 24/7",
+      "ogDesc": "Vajad abi telefoninumbri jälgimisel? Tracify tugimeeskond on kättesaadav ööpäevaringselt. Saada meile sõnum — kiired vastused tellimuste, jälgimise, arvelduse ja privaatsuse kohta.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Privaatsuspoliitika | Tracify",
+      "description": "Tracify privaatsuspoliitika: milliseid andmeid kogume, kuidas neid kasutame, kuidas sinu andmeid krüpteeritakse ja kuidas järgime GDPR, CCPA ja PECR nõudeid. Nõusolekupõhise jälgija privaatsus.",
+      "ogTitle": "Privaatsuspoliitika | Tracify",
+      "ogDesc": "Tracify privaatsuspoliitika: milliseid andmeid kogume, kuidas neid kasutame, kuidas sinu andmeid krüpteeritakse ja kuidas järgime GDPR, CCPA ja PECR nõudeid. Nõusolekupõhise jälgija privaatsus.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Kasutustingimused | Tracify",
+      "description": "Tracify teenustingimused meie nõusolekupõhise telefoni jälgimisplatvormi kasutamiseks: konto kasutamine, tellimused, tühistamised, lubatud kasutus ja õiguslikud kohustused.",
+      "ogTitle": "Kasutustingimused | Tracify",
+      "ogDesc": "Tracify teenustingimused meie nõusolekupõhise telefoni jälgimisplatvormi kasutamiseks: konto kasutamine, tellimused, tühistamised, lubatud kasutus ja õiguslikud kohustused.",
+      "h1": ""
+    }
+  }
+}

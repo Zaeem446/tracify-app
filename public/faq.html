@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--SEO_HEAD-->
+
+    <script src="/api/pixels/active"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        [dir="rtl"] body { direction: rtl; text-align: right; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #4CAF50; --primary-dark: #388E3C; --primary-light: #81C784; --text: #333; --text-light: #666; }
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%); min-height: 100vh; padding: 20px; }
+        .header { text-align: center; padding: 30px 20px; }
+        .logo { display: inline-flex; align-items: center; gap: 10px; font-size: 1.8rem; font-weight: 700; color: white; text-decoration: none; margin-bottom: 20px; }
+        .header-title { font-size: 2.5rem; color: white; margin-bottom: 10px; font-weight: 700; }
+        .header-subtitle { color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; max-width: 680px; margin: 0 auto; line-height: 1.6; }
+        .content-container { max-width: 860px; margin: 0 auto; }
+        .content-card { background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); overflow: hidden; }
+        .card-body { padding: 40px 32px; }
+        .faq-item { border-bottom: 1px solid #eee; padding: 20px 0; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { font-size: 1.15rem; color: var(--primary-dark); margin-bottom: 10px; font-weight: 600; }
+        .faq-a { color: var(--text); line-height: 1.75; font-size: 1rem; }
+        .section-title { font-size: 1.3rem; color: var(--primary-dark); margin: 24px 0 8px; padding-bottom: 8px; border-bottom: 2px solid var(--primary-light); }
+        .cta-btn { display: inline-block; background: var(--primary); color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: 600; margin-top: 20px; }
+        .cta-btn:hover { background: var(--primary-dark); }
+        .footer { text-align: center; padding: 30px 20px; color: white; }
+        .footer-links { display: flex; justify-content: center; gap: 28px; margin-bottom: 20px; flex-wrap: wrap; }
+        .footer-link { color: white; text-decoration: none; font-weight: 500; }
+        .footer-link:hover { opacity: 0.8; }
+        @media (max-width: 600px) { .header-title { font-size: 1.9rem; } .card-body { padding: 26px 20px; } }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/" class="logo">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="20" r="18" stroke="white" stroke-width="3"/>
+                <circle cx="20" cy="20" r="8" fill="white"/>
+                <path d="M20 2V10M20 30V38M2 20H10M30 20H38" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span>Tracify</span>
+        </a>
+        <h1 class="header-title" data-i18n="faqPage.h1">Frequently Asked Questions</h1>
+        <p class="header-subtitle" data-i18n="faqPage.subtitle">Everything you need to know about tracking a phone by number with Tracify — how it works, whether it's legal, what devices we support, and how our pricing works.</p>
+    </div>
+
+    <div class="content-container">
+        <div class="content-card">
+            <div class="card-body">
+
+                <h2 class="section-title" data-i18n="faqPage.secAbout">About Tracify</h2>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q1">What is Tracify?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a1">Tracify is a <strong>phone tracker by number</strong> — a web-based service that locates any mobile phone worldwide using only its phone number. It works by sending a consent-based SMS to the target phone. Once the recipient agrees to share their location, you receive the precise GPS coordinates in your Tracify dashboard.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q2">Is it legal to use Tracify?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a2">Yes. Tracify is completely legal because every tracking request requires explicit consent from the person being tracked. The recipient must actively agree to share their location by responding to the SMS. We comply with GDPR, CCPA, and other global privacy regulations.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q3">Which carriers and networks does Tracify support?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a3">Tracify supports every major mobile carrier worldwide. Whether the target phone uses GSM, CDMA, LTE, 4G, or 5G, our service can deliver a location request to any valid phone number in any country.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q4">Do I need to know the phone model?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a4">No. All you need is the phone number. You don't need to know the make, model, operating system, or carrier. Tracify handles all the technical details automatically.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q5">Does Tracify support iOS and Android?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a5">Yes. Tracify works with both iOS (iPhone) and Android devices. Our SMS-based consent system works with any smartphone that can receive text messages and has location services enabled.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q6">How fast does Tracify return a location?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a6">As soon as the SMS recipient taps the consent link, you'll see the GPS coordinates almost instantly in your dashboard. Total time depends on how quickly the recipient responds to the request.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q7">Do I need physical access to the target phone?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a7">Never. Tracify is 100% remote. There's nothing to install on your device or the target's device. You just enter the phone number, we send the SMS, and the recipient chooses whether to share their location.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q8">Can I track a phone number's location without installing an app?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a8">Yes. Tracify is a <strong>no-installation phone tracker</strong>. You don't install anything on your device or the target's device. Everything happens through a standard SMS link and a web dashboard, so you can <strong>find a location by phone number</strong> from any browser on iOS, Android, Windows, or Mac.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q9">How do I locate a phone by number anonymously?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a9">Tracify lets you set a custom sender name on every request, so the recipient never sees "Tracify" — they only see the name and message you choose. Combined with our encrypted dashboard, this makes Tracify an effectively <strong>anonymous phone tracker</strong>: the recipient chooses to share their location, but they never learn which service processed the request.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q10">Can I track a phone that is turned off?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a10">No. A phone must be switched on and connected to a mobile network to receive the consent SMS. If the device is off, airplane mode, or out of signal, the request waits in the carrier queue and delivers as soon as the phone reconnects. You'll be notified in your dashboard the moment the location is shared.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q11">How accurate is phone tracking by number?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a11">Once the recipient approves the request, Tracify returns the same <strong>real-time GPS coordinates</strong> the phone uses for Google Maps or Apple Maps — typically accurate to within 5-15 meters outdoors. Indoor accuracy depends on Wi-Fi and cell-tower triangulation, usually within 20-50 meters.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q12">Can I track a phone by IMEI number?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a12">Tracify uses the <strong>phone number</strong>, not the IMEI. IMEI tracking generally requires carrier or law-enforcement cooperation and is not available to consumers. Our consent-based SMS system is designed to be the fastest, safest legal way for an individual to <strong>locate a phone by number</strong>.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q13">Can I track someone without their knowledge?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a13">No. Tracify is a consent-based service and will always notify the recipient that their location is being requested. The recipient must actively tap a link to share their location. This is what keeps Tracify legal and ethical.</p>
+                </div>
+
+                <h2 class="section-title" data-i18n="faqPage.secPayments">Payments &amp; Billing</h2>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q14">How much does Tracify cost?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a14">Tracify offers a 24-hour full-access trial for just $0.50. After the trial, your subscription automatically renews at $30 per month. You can cancel at any time from your account page or by contacting our support team.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q15">Which payment methods do you accept?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a15">We accept every major credit and debit card (Visa, Mastercard, American Express, Discover) and common digital wallets through our payment processor, Stripe. Payments are processed securely and we never store raw card data on our servers.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q16">How do I cancel my subscription?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a16">Cancellation is one click. Visit the <a href="/cancel">Cancel Subscription</a> page, confirm your email, and your billing will stop immediately at the end of the current period. No retention forms, no phone calls.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q17">Do you offer refunds?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a17">If Tracify doesn't work for you during the trial, you can cancel immediately and you won't be charged the monthly fee. For monthly subscribers, contact support within 7 days of a charge to discuss a refund.</p>
+                </div>
+
+                <h2 class="section-title" data-i18n="faqPage.secPrivacy">Privacy &amp; Security</h2>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q18">What data does Tracify collect about me?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a18">Only what's required to run your account: email, country, billing records, and the phone numbers you submit for tracking. We don't sell data and we don't run third-party ad trackers on our service. See our <a href="/privacy">Privacy Policy</a> for full details.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q19">Is my data encrypted?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a19">Yes. All traffic between your browser and Tracify is encrypted with TLS. Data at rest is encrypted and stored with a tier-1 cloud provider. Payment details never touch our servers — they're handled directly by Stripe.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q20">Will the person I'm tracking know who sent the SMS?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a20">You can set the sender name on each request. The recipient sees that name and your custom message. Tracify itself remains confidential from the recipient — they only see what you choose to show them.</p>
+                </div>
+
+                <h2 class="section-title" data-i18n="faqPage.secTrouble">Troubleshooting</h2>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q21">What if the recipient ignores the SMS?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a21">If the recipient doesn't tap the consent link, no location is shared. You can re-send the request or customise a new message. Tracking only ever happens after active consent.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q22">My dashboard says the request failed. What happened?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a22">Failed requests usually mean the number is invalid, the phone is off, or the carrier blocked the international SMS. Check the number format (include country code) and try again. If the issue persists, contact support.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-q" data-i18n="faqPage.q23">Can I still use Tracify if the target phone is abroad?</h3>
+                    <p class="faq-a" data-i18n="faqPage.a23">Yes. Tracify works in every country where mobile networks exist. International phone numbers work exactly like domestic ones — as long as you include the correct country code.</p>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <p style="color: var(--text); font-size: 1rem;" data-i18n="faqPage.ctaText">Still have questions?</p>
+                    <a href="/contact" class="cta-btn" data-i18n="faqPage.ctaBtn">Contact our support team</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-links">
+            <a href="/" class="footer-link" data-i18n="footer.navHome">Home</a>
+            <a href="/how-it-works" class="footer-link" data-i18n="footer.navHowItWorks">How It Works</a>
+            <a href="/blog" class="footer-link" data-i18n="footer.navBlog">Blog</a>
+            <a href="/contact" class="footer-link" data-i18n="footer.navContact">Contact</a>
+            <a href="/privacy" class="footer-link" data-i18n="footer.navPrivacy">Privacy</a>
+            <a href="/terms" class="footer-link" data-i18n="footer.navTerms">Terms</a>
+        </div>
+        <p style="font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-bottom: 10px;" data-i18n="footer.operatedBy">Tracify is a service operated by Finalecom Solution LLC.</p>
+        <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem;" data-i18n="footer.copyright">&copy; Tracify - 2026</p>
+    </div>
+
+    <script src="/js/i18n.js"></script>
+</body>
+</html>

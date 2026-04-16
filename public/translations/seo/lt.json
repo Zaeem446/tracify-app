@@ -1,0 +1,47 @@
+{
+  "lang": "lt",
+  "pages": {
+    "home": {
+      "title": "Raskite bet kurį telefoną — Sekite bet ką, bet kur, akimirksniu | Tracify",
+      "description": "Sekite bet ką bet kur ir akimirksniu raskite jo vietą pagal telefono numerį. Sutikimu pagrįstas realaus laiko telefono sekiklis. iOS + Android, be programėlės diegimo. $0,50 bandymas.",
+      "ogTitle": "Raskite bet kurį telefoną — Sekite bet ką, bet kur, akimirksniu | Tracify",
+      "ogDesc": "Sekite bet ką bet kur ir akimirksniu raskite jo vietą pagal telefono numerį. Sutikimu pagrįstas realaus laiko telefono sekiklis. iOS + Android, be programėlės diegimo. $0,50 bandymas.",
+      "h1": "Raskite bet kurį telefoną, bet kur"
+    },
+    "howItWorks": {
+      "title": "Kaip veikia Tracify — 3 žingsniai",
+      "description": "Sužinokite, kaip Tracify randa bet kurį telefoną trimis sutikimu pagrįstais žingsniais: įveskite numerį, išsiųskite individualų SMS, gaukite GPS koordinates realiuoju laiku savo valdymo skydelyje.",
+      "ogTitle": "Kaip veikia Tracify — 3 žingsniai",
+      "ogDesc": "Sužinokite, kaip Tracify randa bet kurį telefoną trimis sutikimu pagrįstais žingsniais: įveskite numerį, išsiųskite individualų SMS, gaukite GPS koordinates realiuoju laiku savo valdymo skydelyje.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify DUK — Telefono sekiklis",
+      "description": "Atsakymai į dažniausius klausimus apie Tracify telefono sekimo paslaugą: kaip tai veikia, teisėtumas, privatumas, palaikomi įrenginiai, kainos ir sutikimu pagrįstas sekimas.",
+      "ogTitle": "Tracify DUK — Telefono sekiklis",
+      "ogDesc": "Atsakymai į dažniausius klausimus apie Tracify telefono sekimo paslaugą: kaip tai veikia, teisėtumas, privatumas, palaikomi įrenginiai, kainos ir sutikimu pagrįstas sekimas.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Susisiekite su Tracify — 24/7",
+      "description": "Reikia pagalbos sekant telefono numerį? Tracify palaikymo komanda dirba 24/7. Parašykite mums — gaukite greitus atsakymus apie prenumeratas, sekimą, atsiskaitymą ar privatumą.",
+      "ogTitle": "Susisiekite su Tracify — 24/7",
+      "ogDesc": "Reikia pagalbos sekant telefono numerį? Tracify palaikymo komanda dirba 24/7. Parašykite mums — gaukite greitus atsakymus apie prenumeratas, sekimą, atsiskaitymą ar privatumą.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Privatumo politika | Tracify",
+      "description": "Tracify privatumo politika: ką renkame, kaip naudojame, kaip šifruojami jūsų duomenys ir kaip laikomės GDPR, CCPA ir PECR reikalavimų. Sutikimu pagrįsto telefono sekiklio privatumas.",
+      "ogTitle": "Privatumo politika | Tracify",
+      "ogDesc": "Tracify privatumo politika: ką renkame, kaip naudojame, kaip šifruojami jūsų duomenys ir kaip laikomės GDPR, CCPA ir PECR reikalavimų. Sutikimu pagrįsto telefono sekiklio privatumas.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Taisyklės ir sąlygos | Tracify",
+      "description": "Tracify paslaugų teikimo sąlygos naudojant mūsų sutikimu pagrįstą telefono sekimo platformą: paskyros naudojimas, prenumeratos, atšaukimai, leistinas naudojimas ir teisinė atsakomybė.",
+      "ogTitle": "Taisyklės ir sąlygos | Tracify",
+      "ogDesc": "Tracify paslaugų teikimo sąlygos naudojant mūsų sutikimu pagrįstą telefono sekimo platformą: paskyros naudojimas, prenumeratos, atšaukimai, leistinas naudojimas ir teisinė atsakomybė.",
+      "h1": ""
+    }
+  }
+}

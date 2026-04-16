@@ -1,0 +1,47 @@
+{
+  "lang": "no",
+  "pages": {
+    "home": {
+      "title": "Finn enhver telefon — Spor hvem som helst, hvor som helst, umiddelbart | Tracify",
+      "description": "Spor hvem som helst hvor som helst og finn deres plassering umiddelbart via telefonnummer. Samtykkebasert sanntids telefonsporer. iOS + Android, uten app-installasjon. $0,50 prøveversjon.",
+      "ogTitle": "Finn enhver telefon — Spor hvem som helst, hvor som helst, umiddelbart | Tracify",
+      "ogDesc": "Spor hvem som helst hvor som helst og finn deres plassering umiddelbart via telefonnummer. Samtykkebasert sanntids telefonsporer. iOS + Android, uten app-installasjon. $0,50 prøveversjon.",
+      "h1": "Finn enhver telefon, hvor som helst"
+    },
+    "howItWorks": {
+      "title": "Slik fungerer Tracify — 3 trinn",
+      "description": "Slik finner Tracify telefonen i tre trinn: oppgi nummer, send SMS, motta GPS-koordinater.",
+      "ogTitle": "Slik fungerer Tracify — 3 trinn",
+      "ogDesc": "Slik finner Tracify telefonen i tre trinn: oppgi nummer, send SMS, motta GPS-koordinater.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify FAQ — Telefonsporing",
+      "description": "Svar på vanlige spørsmål om Tracifys telefonsporing: hvordan det fungerer, lovlighet, personvern, støttede enheter, priser og samtykkebasert sporing.",
+      "ogTitle": "Tracify FAQ — Telefonsporing",
+      "ogDesc": "Svar på vanlige spørsmål om Tracifys telefonsporing: hvordan det fungerer, lovlighet, personvern, støttede enheter, priser og samtykkebasert sporing.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Kontakt Tracify — 24/7",
+      "description": "Trenger du hjelp med å spore et telefonnummer? Tracifys supportteam er tilgjengelig 24/7. Send oss en melding — få raske svar om abonnementer, sporing, fakturering eller personvern.",
+      "ogTitle": "Kontakt Tracify — 24/7",
+      "ogDesc": "Trenger du hjelp med å spore et telefonnummer? Tracifys supportteam er tilgjengelig 24/7. Send oss en melding — få raske svar om abonnementer, sporing, fakturering eller personvern.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Personvernerklæring | Tracify",
+      "description": "Tracifys personvernerklæring: hva vi samler inn, hvordan vi bruker det, hvordan dataene dine krypteres, og hvordan vi overholder GDPR, CCPA og PECR. Personvern for samtykkebasert telefonsporing.",
+      "ogTitle": "Personvernerklæring | Tracify",
+      "ogDesc": "Tracifys personvernerklæring: hva vi samler inn, hvordan vi bruker det, hvordan dataene dine krypteres, og hvordan vi overholder GDPR, CCPA og PECR. Personvern for samtykkebasert telefonsporing.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Vilkår og betingelser | Tracify",
+      "description": "Tracifys vilkår for bruk av vår samtykkebaserte telefonporingsplattform: kontobruk, abonnementer, oppsigelser, tillatt bruk og juridiske ansvarsforhold.",
+      "ogTitle": "Vilkår og betingelser | Tracify",
+      "ogDesc": "Tracifys vilkår for bruk av vår samtykkebaserte telefonporingsplattform: kontobruk, abonnementer, oppsigelser, tillatt bruk og juridiske ansvarsforhold.",
+      "h1": ""
+    }
+  }
+}

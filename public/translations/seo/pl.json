@@ -1,0 +1,47 @@
+{
+  "lang": "pl",
+  "pages": {
+    "home": {
+      "title": "Zlokalizuj dowolny telefon — Śledź każdego, wszędzie, natychmiast | Tracify",
+      "description": "Śledź każdego wszędzie i znajdź jego lokalizację natychmiast po numerze telefonu. Lokalizator telefonu w czasie rzeczywistym oparty na zgodzie. iOS + Android, bez instalacji aplikacji. Próba $0,50.",
+      "ogTitle": "Zlokalizuj dowolny telefon — Śledź każdego, wszędzie, natychmiast | Tracify",
+      "ogDesc": "Śledź każdego wszędzie i znajdź jego lokalizację natychmiast po numerze telefonu. Lokalizator telefonu w czasie rzeczywistym oparty na zgodzie. iOS + Android, bez instalacji aplikacji. Próba $0,50.",
+      "h1": "Znajdź każdy telefon, wszędzie"
+    },
+    "howItWorks": {
+      "title": "Jak działa Tracify — 3 kroki do lokalizacji telefonu",
+      "description": "Dowiedz się, jak Tracify lokalizuje dowolny telefon w trzech krokach opartych na zgodzie: wpisz numer, wyślij spersonalizowany SMS, odbierz współrzędne GPS w czasie rzeczywistym na swoim panelu.",
+      "ogTitle": "Jak działa Tracify — 3 kroki do lokalizacji telefonu",
+      "ogDesc": "Dowiedz się, jak Tracify lokalizuje dowolny telefon w trzech krokach opartych na zgodzie: wpisz numer, wyślij spersonalizowany SMS, odbierz współrzędne GPS w czasie rzeczywistym na swoim panelu.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify FAQ — Pytania o lokalizator telefonu",
+      "description": "Odpowiedzi na najczęstsze pytania o usłudze lokalizacji telefonów Tracify: jak działa, legalność, prywatność, obsługiwane urządzenia, cennik i śledzenie oparte na zgodzie.",
+      "ogTitle": "Tracify FAQ — Pytania o lokalizator telefonu",
+      "ogDesc": "Odpowiedzi na najczęstsze pytania o usłudze lokalizacji telefonów Tracify: jak działa, legalność, prywatność, obsługiwane urządzenia, cennik i śledzenie oparte na zgodzie.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Kontakt z Tracify — Pomoc 24/7",
+      "description": "Potrzebujesz pomocy ze śledzeniem numeru telefonu? Zespół wsparcia Tracify jest dostępny całą dobę. Napisz do nas — szybko odpowiemy na pytania o subskrypcjach, śledzeniu, płatnościach i prywatności.",
+      "ogTitle": "Kontakt z Tracify — Pomoc 24/7",
+      "ogDesc": "Potrzebujesz pomocy ze śledzeniem numeru telefonu? Zespół wsparcia Tracify jest dostępny całą dobę. Napisz do nas — szybko odpowiemy na pytania o subskrypcjach, śledzeniu, płatnościach i prywatności.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Polityka prywatności | Tracify",
+      "description": "Polityka prywatności Tracify: jakie dane zbieramy, jak je wykorzystujemy, jak szyfrujemy Twoje informacje i jak spełniamy wymogi GDPR, CCPA i PECR. Prywatność lokalizatora opartego na zgodzie.",
+      "ogTitle": "Polityka prywatności | Tracify",
+      "ogDesc": "Polityka prywatności Tracify: jakie dane zbieramy, jak je wykorzystujemy, jak szyfrujemy Twoje informacje i jak spełniamy wymogi GDPR, CCPA i PECR. Prywatność lokalizatora opartego na zgodzie.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Regulamin | Tracify",
+      "description": "Regulamin korzystania z platformy Tracify do śledzenia telefonów opartego na zgodzie: konto użytkownika, subskrypcje, anulowanie, dozwolone użytkowanie i odpowiedzialność prawna.",
+      "ogTitle": "Regulamin | Tracify",
+      "ogDesc": "Regulamin korzystania z platformy Tracify do śledzenia telefonów opartego na zgodzie: konto użytkownika, subskrypcje, anulowanie, dozwolone użytkowanie i odpowiedzialność prawna.",
+      "h1": ""
+    }
+  }
+}

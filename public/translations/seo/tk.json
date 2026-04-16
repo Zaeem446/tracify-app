@@ -1,0 +1,47 @@
+{
+  "lang": "tk",
+  "pages": {
+    "home": {
+      "title": "Islendik telefony tapyň — Islendik ýerde, islendik adamy derrew yzarlaň | Tracify",
+      "description": "Islendik ýerde islendik adamy yzarlaň we telefon belgisi boýunça ýerleşýän ýerini derrew tapyň. Ylalaşyga esaslanýan hakyky wagtda telefon yzarlaýjy. iOS + Android, programma oturtmazdan. $0,50 synag.",
+      "ogTitle": "Islendik telefony tapyň — Islendik ýerde, islendik adamy derrew yzarlaň | Tracify",
+      "ogDesc": "Islendik ýerde islendik adamy yzarlaň we telefon belgisi boýunça ýerleşýän ýerini derrew tapyň. Ylalaşyga esaslanýan hakyky wagtda telefon yzarlaýjy. iOS + Android, programma oturtmazdan. $0,50 synag.",
+      "h1": "Islendik telefony, islendik ýerde tapyň"
+    },
+    "howItWorks": {
+      "title": "Tracify nähili işleýär — 3 ädim",
+      "description": "Tracify islendik telefony ylalaşyga esaslanýan üç ädimde nädip tapýandygyny öwreniň: belgini giriziň, ýörite SMS iberiň, dolandyryş panelinde hakyky wagtda GPS koordinatalaryny alyň.",
+      "ogTitle": "Tracify nähili işleýär — 3 ädim",
+      "ogDesc": "Tracify islendik telefony ylalaşyga esaslanýan üç ädimde nädip tapýandygyny öwreniň: belgini giriziň, ýörite SMS iberiň, dolandyryş panelinde hakyky wagtda GPS koordinatalaryny alyň.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify FAQ — Telefon yzarlama",
+      "description": "Tracify telefon yzarlama hyzmaty barada ýygy-ýygydan berilýän soraglara jogaplar: nähili işleýär, kanunylygy, gizlinlik, goldanylýan enjamlar, bahalar we ylalaşyga esaslanýan yzarlama.",
+      "ogTitle": "Tracify FAQ — Telefon yzarlama",
+      "ogDesc": "Tracify telefon yzarlama hyzmaty barada ýygy-ýygydan berilýän soraglara jogaplar: nähili işleýär, kanunylygy, gizlinlik, goldanylýan enjamlar, bahalar we ylalaşyga esaslanýan yzarlama.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Tracify bilen habarlaşmak — 24/7",
+      "description": "Telefon belgisini yzarlamakda kömek gerekmi? Tracify goldaw topary 24/7 onlaýn. Bize habar iberiň — abunalar, yzarlama, hasaplaşyk ýa-da gizlinlik barada çalt jogap alyň.",
+      "ogTitle": "Tracify bilen habarlaşmak — 24/7",
+      "ogDesc": "Telefon belgisini yzarlamakda kömek gerekmi? Tracify goldaw topary 24/7 onlaýn. Bize habar iberiň — abunalar, yzarlama, hasaplaşyk ýa-da gizlinlik barada çalt jogap alyň.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Gizlinlik syýasaty | Tracify",
+      "description": "Tracify gizlinlik syýasaty: näme ýygnaýarys, nädip ulanýarys, maglumatlaryňyz nädip şifrlenen we GDPR, CCPA hem PECR talaplaryna nädip laýyk gelýäris. Ylalaşyga esaslanýan telefon yzarlaýjynyň gizlinligi.",
+      "ogTitle": "Gizlinlik syýasaty | Tracify",
+      "ogDesc": "Tracify gizlinlik syýasaty: näme ýygnaýarys, nädip ulanýarys, maglumatlaryňyz nädip şifrlenen we GDPR, CCPA hem PECR talaplaryna nädip laýyk gelýäris. Ylalaşyga esaslanýan telefon yzarlaýjynyň gizlinligi.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Şertler we düzgünler | Tracify",
+      "description": "Tracify-niň ylalaşyga esaslanýan telefon yzarlama platformasyny ulanmak üçin hyzmat şertleri: hasap ulanyşy, abunalar, ýatyrma, rugsat berlen ulanyş we kanuny jogapkärçilik.",
+      "ogTitle": "Şertler we düzgünler | Tracify",
+      "ogDesc": "Tracify-niň ylalaşyga esaslanýan telefon yzarlama platformasyny ulanmak üçin hyzmat şertleri: hasap ulanyşy, abunalar, ýatyrma, rugsat berlen ulanyş we kanuny jogapkärçilik.",
+      "h1": ""
+    }
+  }
+}

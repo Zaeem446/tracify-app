@@ -1,0 +1,47 @@
+{
+  "lang": "sr",
+  "pages": {
+    "home": {
+      "title": "Pronađite bilo koji telefon — Pratite bilo koga, bilo gde, odmah | Tracify",
+      "description": "Pratite bilo koga bilo gde i pronađite njegovu lokaciju odmah preko telefonskog broja. Praćenje telefona u realnom vremenu na osnovu saglasnosti. iOS + Android, bez instaliranja aplikacije. $0,50 probni period.",
+      "ogTitle": "Pronađite bilo koji telefon — Pratite bilo koga, bilo gde, odmah | Tracify",
+      "ogDesc": "Pratite bilo koga bilo gde i pronađite njegovu lokaciju odmah preko telefonskog broja. Praćenje telefona u realnom vremenu na osnovu saglasnosti. iOS + Android, bez instaliranja aplikacije. $0,50 probni period.",
+      "h1": "Pronađite bilo koji telefon, bilo gde"
+    },
+    "howItWorks": {
+      "title": "Kako Tracify radi — 3 koraka",
+      "description": "Saznajte kako Tracify pronalazi bilo koji telefon u tri koraka zasnovana na saglasnosti: unesite broj, pošaljite prilagođeni SMS, primite GPS koordinate u realnom vremenu na vašoj kontrolnoj tabli.",
+      "ogTitle": "Kako Tracify radi — 3 koraka",
+      "ogDesc": "Saznajte kako Tracify pronalazi bilo koji telefon u tri koraka zasnovana na saglasnosti: unesite broj, pošaljite prilagođeni SMS, primite GPS koordinate u realnom vremenu na vašoj kontrolnoj tabli.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify FAQ — Praćenje telefona",
+      "description": "Odgovori na često postavljana pitanja o usluzi praćenja telefona Tracify: kako funkcioniše, zakonitost, privatnost, podržani uređaji, cene i praćenje zasnovano na saglasnosti.",
+      "ogTitle": "Tracify FAQ — Praćenje telefona",
+      "ogDesc": "Odgovori na često postavljana pitanja o usluzi praćenja telefona Tracify: kako funkcioniše, zakonitost, privatnost, podržani uređaji, cene i praćenje zasnovano na saglasnosti.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Kontaktirajte Tracify — 24/7",
+      "description": "Treba vam pomoć sa praćenjem telefonskog broja? Tim za podršku Tracify je online 24/7. Pošaljite nam poruku — dobijte brze odgovore o pretplatama, praćenju, naplati ili privatnosti.",
+      "ogTitle": "Kontaktirajte Tracify — 24/7",
+      "ogDesc": "Treba vam pomoć sa praćenjem telefonskog broja? Tim za podršku Tracify je online 24/7. Pošaljite nam poruku — dobijte brze odgovore o pretplatama, praćenju, naplati ili privatnosti.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Politika privatnosti | Tracify",
+      "description": "Politika privatnosti Tracify: koje podatke prikupljamo, kako ih koristimo, kako šifrujemo vaše informacije i kako poštujemo GDPR, CCPA i PECR. Privatnost trakera zasnovanog na saglasnosti.",
+      "ogTitle": "Politika privatnosti | Tracify",
+      "ogDesc": "Politika privatnosti Tracify: koje podatke prikupljamo, kako ih koristimo, kako šifrujemo vaše informacije i kako poštujemo GDPR, CCPA i PECR. Privatnost trakera zasnovanog na saglasnosti.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Uslovi korišćenja | Tracify",
+      "description": "Uslovi korišćenja platforme Tracify za praćenje telefona zasnovano na saglasnosti: korišćenje naloga, pretplate, otkazivanje, dozvoljeno korišćenje i pravna odgovornost.",
+      "ogTitle": "Uslovi korišćenja | Tracify",
+      "ogDesc": "Uslovi korišćenja platforme Tracify za praćenje telefona zasnovano na saglasnosti: korišćenje naloga, pretplate, otkazivanje, dozvoljeno korišćenje i pravna odgovornost.",
+      "h1": ""
+    }
+  }
+}

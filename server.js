@@ -11,6 +11,7 @@ const contactRoutes = require('./routes/contact');
 const subscriptionRoutes = require('./routes/subscription');
 const geoRoutes = require('./routes/geo');
 const pixelsRoutes = require('./routes/pixels');
+const seo = require('./utils/seo');
 
 const app = express();
 
@@ -46,7 +47,9 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(express.static(path.join(__dirname, 'public')));
+// index: false so our SEO-injecting route handlers run for `/`, `/en`, etc.,
+// instead of express.static serving raw index.html without meta injection.
+app.use(express.static(path.join(__dirname, 'public'), { index: false }));
 
 // Initialize database (async-safe) - MUST be before routes
 let dbInitialized = false;
@@ -84,150 +87,242 @@ app.use('/api/subscription', subscriptionRoutes);
 app.use('/api/geo', geoRoutes);
 app.use('/api/pixels', pixelsRoutes);
 
-// Serve main page
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// ============================================================
+// SEO: robots.txt + sitemap.xml (MUST be before /:lang catch-all)
+// ============================================================
+app.get('/robots.txt', (req, res) => {
+    res.set('Content-Type', 'text/plain; charset=utf-8');
+    res.set('Cache-Control', 'public, max-age=3600');
+    res.send(seo.ROBOTS_TXT);
 });
 
-// Serve admin panel
-app.get('/admin', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'admin.html'));
+app.get('/sitemap.xml', (req, res) => {
+    res.set('Content-Type', 'application/xml; charset=utf-8');
+    res.set('Cache-Control', 'public, max-age=3600');
+    res.send(seo.buildSitemap());
 });
 
-// Serve admin login
-app.get('/admin/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'admin-login.html'));
-});
+// ============================================================
+// Helpers: pick lang (from param or default 'en')
+// ============================================================
+function langOrEn(req) {
+    const l = req.params && req.params.lang;
+    return SUPPORTED_LANGUAGES.includes(l) ? l : 'en';
+}
 
-// Serve customer dashboard
-app.get('/dashboard', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'dashboard.html'));
-});
+// ============================================================
+// FAQPage JSON-LD built from existing i18n keys (English only;
+// other languages inherit via default breadcrumb + org schemas).
+// ============================================================
+let _faqSchemaCache = null;
+function faqSchemaForLang(lang) {
+    if (lang !== 'en' || _faqSchemaCache) return _faqSchemaCache;
+    try {
+        const enPath = path.join(__dirname, 'public', 'translations', 'en.json');
+        const tr = JSON.parse(require('fs').readFileSync(enPath, 'utf8'));
+        const schemas = require('./utils/seo-schemas');
+        const qas = [];
+        if (tr.faq) {
+            for (let i = 1; i <= 9; i++) {
+                const q = tr.faq[`q${i}`];
+                const a = tr.faq[`a${i}`];
+                if (q && a) qas.push({ q, a });
+            }
+        }
+        if (qas.length > 0) _faqSchemaCache = schemas.faqPage(qas);
+    } catch (e) {
+        console.warn('[seo] FAQ schema build failed:', e.message);
+    }
+    return _faqSchemaCache;
+}
 
-// Serve payment page
-app.get('/payment', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'payment.html'));
-});
+// ============================================================
+// Indexable HTML pages — SEO-rendered
+// ============================================================
 
-// Serve payment success page
-app.get('/payment-success', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'payment-success.html'));
-});
-
-// Serve account settings page
-app.get('/account', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'account.html'));
-});
-
-// Serve contact page
-app.get('/contact', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'contact.html'));
-});
-
-// Serve cancel subscription page
-app.get('/cancel', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'cancel.html'));
-});
-
-// Serve terms page
-app.get('/terms', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'terms.html'));
-});
-
-// Serve privacy page
-app.get('/privacy', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'privacy.html'));
-});
-
-// Language-prefixed routes (e.g., /en, /tr, /de)
-// Main page with language
+// Home
+function serveHome(req, res) {
+    return seo.renderLocalizedPage(res, {
+        templateFile: 'index.html',
+        pageKey: 'home',
+        pagePath: '/',
+        lang: langOrEn(req),
+        extraSchemas: [faqSchemaForLang(langOrEn(req))].filter(Boolean)
+    });
+}
+app.get('/', serveHome);
 app.get('/:lang', (req, res, next) => {
-    const lang = req.params.lang;
-    if (SUPPORTED_LANGUAGES.includes(lang)) {
-        res.sendFile(path.join(__dirname, 'public', 'index.html'));
-    } else {
-        next(); // Not a language code, continue to next route
-    }
+    if (SUPPORTED_LANGUAGES.includes(req.params.lang)) return serveHome(req, res);
+    next();
 });
 
-// Language-prefixed dashboard
-app.get('/:lang/dashboard', (req, res, next) => {
-    const lang = req.params.lang;
-    if (SUPPORTED_LANGUAGES.includes(lang)) {
-        res.sendFile(path.join(__dirname, 'public', 'dashboard.html'));
-    } else {
-        next();
-    }
-});
-
-// Language-prefixed payment
-app.get('/:lang/payment', (req, res, next) => {
-    const lang = req.params.lang;
-    if (SUPPORTED_LANGUAGES.includes(lang)) {
-        res.sendFile(path.join(__dirname, 'public', 'payment.html'));
-    } else {
-        next();
-    }
-});
-
-// Language-prefixed payment success
-app.get('/:lang/payment-success', (req, res, next) => {
-    const lang = req.params.lang;
-    if (SUPPORTED_LANGUAGES.includes(lang)) {
-        res.sendFile(path.join(__dirname, 'public', 'payment-success.html'));
-    } else {
-        next();
-    }
-});
-
-// Language-prefixed account
-app.get('/:lang/account', (req, res, next) => {
-    const lang = req.params.lang;
-    if (SUPPORTED_LANGUAGES.includes(lang)) {
-        res.sendFile(path.join(__dirname, 'public', 'account.html'));
-    } else {
-        next();
-    }
-});
-
-// Language-prefixed contact
+// Contact
+function serveContact(req, res) {
+    return seo.renderLocalizedPage(res, {
+        templateFile: 'contact.html',
+        pageKey: 'contact',
+        pagePath: '/contact',
+        lang: langOrEn(req)
+    });
+}
+app.get('/contact', serveContact);
 app.get('/:lang/contact', (req, res, next) => {
-    const lang = req.params.lang;
-    if (SUPPORTED_LANGUAGES.includes(lang)) {
-        res.sendFile(path.join(__dirname, 'public', 'contact.html'));
-    } else {
-        next();
-    }
+    if (SUPPORTED_LANGUAGES.includes(req.params.lang)) return serveContact(req, res);
+    next();
 });
 
-// Language-prefixed cancel
-app.get('/:lang/cancel', (req, res, next) => {
-    const lang = req.params.lang;
-    if (SUPPORTED_LANGUAGES.includes(lang)) {
-        res.sendFile(path.join(__dirname, 'public', 'cancel.html'));
-    } else {
-        next();
-    }
-});
-
-// Language-prefixed terms
-app.get('/:lang/terms', (req, res, next) => {
-    const lang = req.params.lang;
-    if (SUPPORTED_LANGUAGES.includes(lang)) {
-        res.sendFile(path.join(__dirname, 'public', 'terms.html'));
-    } else {
-        next();
-    }
-});
-
-// Language-prefixed privacy
+// Privacy
+function servePrivacy(req, res) {
+    return seo.renderLocalizedPage(res, {
+        templateFile: 'privacy.html',
+        pageKey: 'privacy',
+        pagePath: '/privacy',
+        lang: langOrEn(req)
+    });
+}
+app.get('/privacy', servePrivacy);
 app.get('/:lang/privacy', (req, res, next) => {
-    const lang = req.params.lang;
-    if (SUPPORTED_LANGUAGES.includes(lang)) {
-        res.sendFile(path.join(__dirname, 'public', 'privacy.html'));
-    } else {
-        next();
-    }
+    if (SUPPORTED_LANGUAGES.includes(req.params.lang)) return servePrivacy(req, res);
+    next();
+});
+
+// Terms
+function serveTerms(req, res) {
+    return seo.renderLocalizedPage(res, {
+        templateFile: 'terms.html',
+        pageKey: 'terms',
+        pagePath: '/terms',
+        lang: langOrEn(req)
+    });
+}
+app.get('/terms', serveTerms);
+app.get('/:lang/terms', (req, res, next) => {
+    if (SUPPORTED_LANGUAGES.includes(req.params.lang)) return serveTerms(req, res);
+    next();
+});
+
+// How It Works
+function serveHowItWorks(req, res) {
+    const lang = langOrEn(req);
+    const schemas = require('./utils/seo-schemas');
+    return seo.renderLocalizedPage(res, {
+        templateFile: 'how-it-works.html',
+        pageKey: 'howItWorks',
+        pagePath: '/how-it-works',
+        lang,
+        extraSchemas: [schemas.howTo({
+            name: 'How to Track a Phone Number with Tracify',
+            description: 'Locate any phone in three consent-based steps using Tracify.',
+            steps: [
+                { name: 'Enter the phone number', text: 'Type the phone number you want to locate and customize the SMS message.', url: `${seo.SITE}/how-it-works#step-1` },
+                { name: 'Send the consent SMS',  text: 'Tracify sends your custom SMS asking the recipient to share their location.', url: `${seo.SITE}/how-it-works#step-2` },
+                { name: 'Receive the GPS location', text: 'As soon as the recipient consents, you see the exact location in your dashboard.', url: `${seo.SITE}/how-it-works#step-3` }
+            ]
+        })]
+    });
+}
+app.get('/how-it-works', serveHowItWorks);
+app.get('/:lang/how-it-works', (req, res, next) => {
+    if (SUPPORTED_LANGUAGES.includes(req.params.lang)) return serveHowItWorks(req, res);
+    next();
+});
+
+// FAQ
+function serveFaq(req, res) {
+    const lang = langOrEn(req);
+    return seo.renderLocalizedPage(res, {
+        templateFile: 'faq.html',
+        pageKey: 'faq',
+        pagePath: '/faq',
+        lang,
+        extraSchemas: [faqSchemaForLang('en')].filter(Boolean)
+    });
+}
+app.get('/faq', serveFaq);
+app.get('/:lang/faq', (req, res, next) => {
+    if (SUPPORTED_LANGUAGES.includes(req.params.lang)) return serveFaq(req, res);
+    next();
+});
+
+// Blog index
+app.get('/blog', (req, res) => {
+    return seo.renderLocalizedPage(res, {
+        templateFile: 'blog/index.html',
+        pageKey: 'blog',
+        pagePath: '/blog',
+        lang: 'en'
+    });
+});
+
+// Blog posts
+const BLOG_POSTS = {
+    'how-to-track-a-phone-number':      'blogPost_howToTrack',
+    'phone-tracker-apps-comparison':    'blogPost_comparison',
+    'is-tracking-a-phone-number-legal': 'blogPost_legality',
+    'find-lost-phone-by-number':        'blogPost_findLost'
+};
+
+app.get('/blog/:slug', (req, res, next) => {
+    const slug = req.params.slug;
+    const pageKey = BLOG_POSTS[slug];
+    if (!pageKey) return next();
+    const schemas = require('./utils/seo-schemas');
+    return seo.renderLocalizedPage(res, {
+        templateFile: `blog/${slug}.html`,
+        pageKey,
+        pagePath: `/blog/${slug}`,
+        lang: 'en',
+        extraSchemas: [schemas.article({
+            headline: (seo.getPageSeo('en', pageKey).title || ''),
+            description: seo.getPageSeo('en', pageKey).description || '',
+            url: `${seo.SITE}/blog/${slug}`,
+            datePublished: '2026-01-01',
+            dateModified: '2026-01-01',
+            image: seo.getPageSeo('en', pageKey).image
+        })]
+    });
+});
+
+// ============================================================
+// Noindex pages (auth / tool / flow pages) — serve with
+// robots meta injected, no body changes, no SEO marker required.
+// ============================================================
+app.get('/admin', (req, res) => seo.renderNoindexPage(res, 'admin.html'));
+app.get('/admin/login', (req, res) => seo.renderNoindexPage(res, 'admin-login.html'));
+
+function serveDashboard(req, res) { return seo.renderNoindexPage(res, 'dashboard.html'); }
+app.get('/dashboard', serveDashboard);
+app.get('/:lang/dashboard', (req, res, next) => {
+    if (SUPPORTED_LANGUAGES.includes(req.params.lang)) return serveDashboard(req, res);
+    next();
+});
+
+function servePayment(req, res) { return seo.renderNoindexPage(res, 'payment.html'); }
+app.get('/payment', servePayment);
+app.get('/:lang/payment', (req, res, next) => {
+    if (SUPPORTED_LANGUAGES.includes(req.params.lang)) return servePayment(req, res);
+    next();
+});
+
+function servePaymentSuccess(req, res) { return seo.renderNoindexPage(res, 'payment-success.html'); }
+app.get('/payment-success', servePaymentSuccess);
+app.get('/:lang/payment-success', (req, res, next) => {
+    if (SUPPORTED_LANGUAGES.includes(req.params.lang)) return servePaymentSuccess(req, res);
+    next();
+});
+
+function serveAccount(req, res) { return seo.renderNoindexPage(res, 'account.html'); }
+app.get('/account', serveAccount);
+app.get('/:lang/account', (req, res, next) => {
+    if (SUPPORTED_LANGUAGES.includes(req.params.lang)) return serveAccount(req, res);
+    next();
+});
+
+function serveCancel(req, res) { return seo.renderNoindexPage(res, 'cancel.html'); }
+app.get('/cancel', serveCancel);
+app.get('/:lang/cancel', (req, res, next) => {
+    if (SUPPORTED_LANGUAGES.includes(req.params.lang)) return serveCancel(req, res);
+    next();
 });
 
 // For local development only

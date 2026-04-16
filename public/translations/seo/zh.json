@@ -1,0 +1,47 @@
+{
+  "lang": "zh",
+  "pages": {
+    "home": {
+      "title": "定位任何手机 — 随时随地即刻追踪任何人 | Tracify",
+      "description": "通过手机号码随时随地追踪任何人,即刻获取其位置。基于同意的实时手机追踪。iOS + Android,无需安装应用。$0.50试用。",
+      "ogTitle": "定位任何手机 — 随时随地即刻追踪任何人 | Tracify",
+      "ogDesc": "通过手机号码随时随地追踪任何人,即刻获取其位置。基于同意的实时手机追踪。iOS + Android,无需安装应用。$0.50试用。",
+      "h1": "随时随地定位任何手机"
+    },
+    "howItWorks": {
+      "title": "Tracify如何工作 — 3步追踪手机",
+      "description": "了解Tracify如何通过三个基于同意的步骤定位任何手机：输入手机号码、发送自定义SMS短信、在仪表板中接收实时GPS坐标位置信息。",
+      "ogTitle": "Tracify如何工作 — 3步追踪手机",
+      "ogDesc": "了解Tracify如何通过三个步骤定位任何手机：输入号码、发送短信、接收GPS坐标。",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify常见问题 — 手机追踪",
+      "description": "关于Tracify手机追踪服务的常见问题解答：工作原理、合法性、隐私保护、支持的设备类型、订阅价格以及基于同意的追踪机制详解。",
+      "ogTitle": "Tracify常见问题 — 手机追踪",
+      "ogDesc": "关于Tracify的常见问题：工作原理、合法性、隐私、支持设备、价格。",
+      "h1": ""
+    },
+    "contact": {
+      "title": "联系Tracify支持 — 24/7",
+      "description": "需要帮助追踪手机号码？Tracify支持团队全天候24/7在线。发送消息即可获取关于订阅、追踪、账单或隐私问题的快速解答。",
+      "ogTitle": "联系Tracify支持 — 24/7",
+      "ogDesc": "需要帮助追踪手机号码？Tracify支持团队全天候24/7在线。发送消息即可获取关于订阅、追踪、账单或隐私问题的快速解答。",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "隐私政策 | Tracify",
+      "description": "Tracify隐私政策：我们收集哪些数据、如何使用、您的数据如何加密，以及我们如何遵守GDPR、CCPA和PECR法规。基于同意的手机追踪隐私保护。",
+      "ogTitle": "隐私政策 | Tracify",
+      "ogDesc": "Tracify隐私政策：我们收集哪些数据、如何使用、您的数据如何加密，以及我们如何遵守GDPR、CCPA和PECR法规。",
+      "h1": ""
+    },
+    "terms": {
+      "title": "条款和条件 | Tracify",
+      "description": "Tracify基于同意的手机追踪平台服务条款：账户使用、订阅管理、取消政策、允许用途及法律责任等详细说明。",
+      "ogTitle": "条款和条件 | Tracify",
+      "ogDesc": "Tracify基于同意的手机追踪平台服务条款：账户使用、订阅管理、取消政策、允许用途及法律责任详细说明。",
+      "h1": ""
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "lang": "fi",
+  "pages": {
+    "home": {
+      "title": "Paikanna mikä tahansa puhelin — Seuraa ketä tahansa, missä tahansa, heti | Tracify",
+      "description": "Seuraa ketä tahansa missä tahansa ja löydä hänen sijaintinsa heti puhelinnumeron avulla. Suostumukseen perustuva reaaliaikainen puhelimen paikannin. iOS + Android, ilman sovellusasennusta. $0,50 kokeilu.",
+      "ogTitle": "Paikanna mikä tahansa puhelin — Seuraa ketä tahansa, missä tahansa, heti | Tracify",
+      "ogDesc": "Seuraa ketä tahansa missä tahansa ja löydä hänen sijaintinsa heti puhelinnumeron avulla. Suostumukseen perustuva reaaliaikainen puhelimen paikannin. iOS + Android, ilman sovellusasennusta. $0,50 kokeilu.",
+      "h1": "Paikanna mikä tahansa puhelin, missä tahansa"
+    },
+    "howItWorks": {
+      "title": "Miten Tracify toimii — 3 vaihetta",
+      "description": "Tutustu, kuinka Tracify paikantaa puhelimen kolmessa vaiheessa: syötä numero, lähetä tekstiviesti, vastaanota GPS-koordinaatit.",
+      "ogTitle": "Miten Tracify toimii — 3 vaihetta",
+      "ogDesc": "Tutustu, kuinka Tracify paikantaa puhelimen kolmessa vaiheessa: syötä numero, lähetä tekstiviesti, vastaanota GPS-koordinaatit.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify UKK — Puhelimen paikannus",
+      "description": "Vastauksia usein kysyttyihin kysymyksiin: toiminta, laillisuus, yksityisyys, tuetut laitteet, hinnat.",
+      "ogTitle": "Tracify UKK — Puhelimen paikannus",
+      "ogDesc": "Vastauksia usein kysyttyihin kysymyksiin: toiminta, laillisuus, yksityisyys, tuetut laitteet, hinnat.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Ota yhteyttä Tracifyyn — 24/7",
+      "description": "Tarvitsetko apua puhelinnumeron paikantamisessa? Tracifyn tukitiimi on paikalla 24/7. Lähetä meille viesti — saat nopeat vastaukset tilauksista, seurannasta, laskutuksesta ja yksityisyydestä.",
+      "ogTitle": "Ota yhteyttä Tracifyyn — 24/7",
+      "ogDesc": "Tarvitsetko apua puhelinnumeron paikantamisessa? Tracifyn tukitiimi on paikalla 24/7. Lähetä meille viesti — saat nopeat vastaukset tilauksista, seurannasta, laskutuksesta ja yksityisyydestä.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Tietosuojaseloste | Tracify",
+      "description": "Tracifyn tietosuojaseloste: mitä tietoja keräämme, miten niitä käytämme, miten tietosi salataan ja miten noudatamme GDPR-, CCPA- ja PECR-säädöksiä. Suostumuspohjaisen puhelinseurannan tietosuoja.",
+      "ogTitle": "Tietosuojaseloste | Tracify",
+      "ogDesc": "Tracifyn tietosuojaseloste: mitä tietoja keräämme, miten niitä käytämme, miten tietosi salataan ja miten noudatamme GDPR-, CCPA- ja PECR-säädöksiä. Suostumuspohjaisen puhelinseurannan tietosuoja.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Käyttöehdot | Tracify",
+      "description": "Tracifyn käyttöehdot suostumukseen perustuvalle puhelimen paikannusalustalle: tilin käyttö, tilaukset, peruutukset, sallittu käyttö ja oikeudelliset vastuut.",
+      "ogTitle": "Käyttöehdot | Tracify",
+      "ogDesc": "Tracifyn käyttöehdot suostumukseen perustuvalle puhelimen paikannusalustalle: tilin käyttö, tilaukset, peruutukset, sallittu käyttö ja oikeudelliset vastuut.",
+      "h1": ""
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "lang": "ko",
+  "pages": {
+    "home": {
+      "title": "어떤 휴대폰이든 찾기 — 누구나 어디서든 즉시 추적 | Tracify",
+      "description": "전화번호로 누구나 어디서든 추적하고 즉시 위치 확인. 동의 기반 실시간 휴대폰 추적기. iOS + Android, 앱 설치 불필요. $0.50 체험.",
+      "ogTitle": "어떤 휴대폰이든 찾기 — 누구나 어디서든 즉시 추적 | Tracify",
+      "ogDesc": "전화번호로 누구나 어디서든 추적하고 즉시 위치 확인. 동의 기반 실시간 휴대폰 추적기. iOS + Android, 앱 설치 불필요. $0.50 체험.",
+      "h1": "어떤 휴대폰이든, 어디서든 찾기"
+    },
+    "howItWorks": {
+      "title": "Tracify 작동 방식 — 3단계로 휴대폰 위치 찾기",
+      "description": "Tracify가 동의 기반 3단계로 휴대폰을 찾는 방법: 번호 입력, 맞춤 SMS 전송, 대시보드에서 실시간 GPS 좌표 수신.",
+      "ogTitle": "Tracify 작동 방식 — 3단계로 휴대폰 위치 찾기",
+      "ogDesc": "Tracify가 휴대폰을 찾는 3단계: 번호 입력, SMS 전송, GPS 좌표 수신.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify FAQ — 휴대폰 추적 질문",
+      "description": "Tracify 휴대폰 추적 서비스에 대한 자주 묻는 질문: 작동 방식, 합법성, 개인정보 보호, 지원 기기, 요금제, 동의 기반 추적 안내.",
+      "ogTitle": "Tracify FAQ — 휴대폰 추적 질문",
+      "ogDesc": "Tracify에 대한 자주 묻는 질문: 작동 방식, 합법성, 개인정보 보호, 지원 기기, 가격.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Tracify 지원팀 문의 — 24/7",
+      "description": "휴대폰 번호 추적에 도움이 필요하신가요? Tracify 지원팀이 24시간 연중무휴 대기 중입니다. 구독, 추적, 결제, 개인정보에 관한 빠른 답변을 받으세요.",
+      "ogTitle": "Tracify 지원팀 문의 — 24/7",
+      "ogDesc": "도움이 필요하신가요? Tracify 팀이 24시간 대기합니다.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "개인정보 처리방침 | Tracify",
+      "description": "Tracify 개인정보 처리방침: 수집 데이터, 사용 방법, 데이터 암호화 방식, GDPR·CCPA·PECR 준수 방법. 동의 기반 휴대폰 추적기 개인정보 보호.",
+      "ogTitle": "개인정보 처리방침 | Tracify",
+      "ogDesc": "Tracify 개인정보 처리방침: 수집하는 데이터, 사용 방법, 암호화 방식, GDPR·CCPA 준수. 동의 기반 휴대폰 추적기 개인정보 보호 안내.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "이용 약관 | Tracify",
+      "description": "Tracify 동의 기반 휴대폰 추적 플랫폼 이용약관: 계정 사용, 구독, 취소, 허용 용도 및 법적 책임에 대한 상세 안내.",
+      "ogTitle": "이용 약관 | Tracify",
+      "ogDesc": "Tracify 동의 기반 휴대폰 추적 플랫폼의 이용약관: 계정 사용, 구독, 취소, 허용 용도 및 법적 책임에 대한 안내.",
+      "h1": ""
+    }
+  }
+}

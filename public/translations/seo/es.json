@@ -1,0 +1,47 @@
+{
+  "lang": "es",
+  "pages": {
+    "home": {
+      "title": "Localiza cualquier teléfono — Rastrea a cualquiera, en cualquier lugar, al instante | Tracify",
+      "description": "Rastrea a cualquiera en cualquier lugar y encuentra su ubicación al instante por número de teléfono. Rastreador de teléfono en tiempo real basado en consentimiento. iOS + Android, sin instalar app. Prueba de $0,50.",
+      "ogTitle": "Localiza cualquier teléfono — Rastrea a cualquiera, en cualquier lugar, al instante | Tracify",
+      "ogDesc": "Rastrea a cualquiera en cualquier lugar y encuentra su ubicación al instante por número de teléfono. Rastreador de teléfono en tiempo real basado en consentimiento. iOS + Android, sin instalar app. Prueba de $0,50.",
+      "h1": "Localiza cualquier teléfono, en cualquier lugar"
+    },
+    "howItWorks": {
+      "title": "Cómo funciona Tracify — Rastrea en 3 pasos",
+      "description": "Descubre cómo Tracify localiza cualquier teléfono en tres pasos: introduce el número, envía un SMS personalizado y recibe las coordenadas GPS.",
+      "ogTitle": "Cómo funciona Tracify — Rastrea en 3 pasos",
+      "ogDesc": "Descubre cómo Tracify localiza cualquier teléfono en tres pasos: introduce el número, envía un SMS personalizado y recibe las coordenadas GPS.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Preguntas frecuentes de Tracify — Rastreador de teléfono",
+      "description": "Respuestas a preguntas comunes sobre Tracify: cómo funciona, legalidad, privacidad, dispositivos compatibles y precios.",
+      "ogTitle": "Preguntas frecuentes de Tracify — Rastreador de teléfono",
+      "ogDesc": "Respuestas a preguntas comunes sobre Tracify: cómo funciona, legalidad, privacidad, dispositivos compatibles y precios.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Contacta con soporte Tracify — Ayuda 24/7",
+      "description": "¿Necesitas ayuda para rastrear un número? El equipo de soporte Tracify está en línea 24/7. Respuestas rápidas sobre suscripciones, rastreo, facturación o privacidad.",
+      "ogTitle": "Contacta con soporte Tracify — Ayuda 24/7",
+      "ogDesc": "¿Necesitas ayuda para rastrear un número? El equipo de soporte Tracify está en línea 24/7. Respuestas rápidas sobre suscripciones, rastreo, facturación o privacidad.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Política de privacidad | Tracify",
+      "description": "Política de privacidad de Tracify: datos recopilados, cómo se usan, cómo se cifran y cómo cumplimos con GDPR, CCPA y PECR. Rastreador basado en consentimiento.",
+      "ogTitle": "Política de privacidad | Tracify",
+      "ogDesc": "Política de privacidad de Tracify: datos recopilados, cómo se usan, cómo se cifran y cómo cumplimos con GDPR, CCPA y PECR. Rastreador basado en consentimiento.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Términos y condiciones | Tracify",
+      "description": "Términos de servicio Tracify: uso de cuenta, suscripciones, cancelaciones, uso permitido y responsabilidades legales. Plataforma de rastreo basada en consentimiento.",
+      "ogTitle": "Términos y condiciones | Tracify",
+      "ogDesc": "Términos de servicio Tracify: uso de cuenta, suscripciones, cancelaciones, uso permitido y responsabilidades legales. Plataforma de rastreo basada en consentimiento.",
+      "h1": ""
+    }
+  }
+}

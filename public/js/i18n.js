@@ -377,6 +377,79 @@
         }
     }
 
+    // Cache for SEO translations (per lang) to avoid refetching
+    const seoCache = {};
+
+    /**
+     * Derive the SEO page key from the current URL path.
+     * Mirrors the server-side mapping in utils/seo.js.
+     */
+    function getSeoPageKeyFromPath() {
+        let path = window.location.pathname || '/';
+        // Strip language prefix (e.g. /en, /pt_BR, /zh-TW)
+        path = path.replace(/^\/([a-z]{2}(?:[_-][A-Za-z]{2})?)(?=\/|$)/, '') || '/';
+        if (path === '' || path === '/') return 'home';
+        if (path === '/how-it-works') return 'howItWorks';
+        if (path === '/faq') return 'faq';
+        if (path === '/contact') return 'contact';
+        if (path === '/privacy') return 'privacy';
+        if (path === '/terms') return 'terms';
+        if (path === '/blog' || path === '/blog/') return 'blog';
+        if (path === '/blog/how-to-track-a-phone-number') return 'blogPost_howToTrack';
+        if (path === '/blog/phone-tracker-apps-comparison') return 'blogPost_comparison';
+        if (path === '/blog/is-tracking-a-phone-number-legal') return 'blogPost_legality';
+        if (path === '/blog/find-lost-phone-by-number') return 'blogPost_findLost';
+        return null;
+    }
+
+    /**
+     * Fetch SEO meta JSON for a language (with in-memory cache + English fallback).
+     */
+    async function loadSeoMeta(lang) {
+        if (seoCache[lang]) return seoCache[lang];
+        try {
+            const response = await fetch(`/translations/seo/${lang}.json`);
+            if (!response.ok) throw new Error('SEO meta not found');
+            const data = await response.json();
+            seoCache[lang] = data;
+            return data;
+        } catch (e) {
+            if (lang !== 'en') {
+                try {
+                    const response = await fetch('/translations/seo/en.json');
+                    const data = await response.json();
+                    seoCache[lang] = data;
+                    return data;
+                } catch (_) {
+                    return null;
+                }
+            }
+            return null;
+        }
+    }
+
+    /**
+     * Update <title> and <meta description> for the current page/lang.
+     * Non-fatal — if anything fails, leaves server-rendered values untouched.
+     */
+    async function applySeoMetaForLang(lang) {
+        try {
+            const pageKey = getSeoPageKeyFromPath();
+            if (!pageKey) return;
+            const seo = await loadSeoMeta(lang);
+            if (!seo || !seo.pages) return;
+            const page = seo.pages[pageKey] || (seoCache.en && seoCache.en.pages && seoCache.en.pages[pageKey]);
+            if (!page) return;
+            if (page.title) document.title = page.title;
+            if (page.description) {
+                let metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) metaDesc.setAttribute('content', page.description);
+            }
+        } catch (e) {
+            console.warn('Failed to apply SEO meta for lang', lang, e);
+        }
+    }
+
     /**
      * Get translation for a key (supports nested keys like "nav.login")
      */
@@ -476,6 +549,8 @@
         translatePage();
         setTextDirection();
         updateURL(lang);
+        // Keep <title> + meta description in sync with the selected language
+        applySeoMetaForLang(lang);
 
         // Update language selector if exists
         const langSelector = document.getElementById('langSelector');

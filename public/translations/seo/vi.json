@@ -1,0 +1,47 @@
+{
+  "lang": "vi",
+  "pages": {
+    "home": {
+      "title": "Định vị mọi điện thoại — Theo dõi bất kỳ ai, ở bất kỳ đâu, ngay lập tức | Tracify",
+      "description": "Theo dõi bất kỳ ai ở bất kỳ đâu và tìm vị trí của họ ngay lập tức qua số điện thoại. Trình theo dõi điện thoại thời gian thực dựa trên sự đồng ý. iOS + Android, không cần cài ứng dụng. Dùng thử $0.50.",
+      "ogTitle": "Định vị mọi điện thoại — Theo dõi bất kỳ ai, ở bất kỳ đâu, ngay lập tức | Tracify",
+      "ogDesc": "Theo dõi bất kỳ ai ở bất kỳ đâu và tìm vị trí của họ ngay lập tức qua số điện thoại. Trình theo dõi điện thoại thời gian thực dựa trên sự đồng ý. iOS + Android, không cần cài ứng dụng. Dùng thử $0.50.",
+      "h1": "Định vị mọi điện thoại ở mọi nơi"
+    },
+    "howItWorks": {
+      "title": "Tracify hoạt động như thế nào — Theo dõi trong 3 bước",
+      "description": "Tìm hiểu cách Tracify định vị bất kỳ điện thoại nào qua ba bước dựa trên sự đồng ý: nhập số điện thoại, gửi SMS tùy chỉnh, nhận tọa độ GPS thời gian thực trên bảng điều khiển của bạn.",
+      "ogTitle": "Tracify hoạt động như thế nào — Theo dõi trong 3 bước",
+      "ogDesc": "Khám phá cách Tracify định vị điện thoại qua 3 bước: nhập số, gửi SMS, nhận tọa độ GPS.",
+      "h1": ""
+    },
+    "faq": {
+      "title": "Tracify FAQ — Câu hỏi về theo dõi điện thoại",
+      "description": "Giải đáp các câu hỏi thường gặp về dịch vụ theo dõi điện thoại Tracify: cách hoạt động, tính hợp pháp, quyền riêng tư, thiết bị được hỗ trợ, bảng giá và cơ chế theo dõi dựa trên sự đồng ý.",
+      "ogTitle": "Tracify FAQ — Câu hỏi về theo dõi điện thoại",
+      "ogDesc": "Câu trả lời cho các câu hỏi thường gặp về Tracify: cách hoạt động, tính hợp pháp, quyền riêng tư, thiết bị hỗ trợ, giá.",
+      "h1": ""
+    },
+    "contact": {
+      "title": "Liên hệ hỗ trợ Tracify — 24/7",
+      "description": "Cần trợ giúp theo dõi số điện thoại? Đội ngũ hỗ trợ Tracify trực tuyến 24/7. Gửi tin nhắn để nhận câu trả lời nhanh về đăng ký, theo dõi, thanh toán hoặc quyền riêng tư.",
+      "ogTitle": "Liên hệ hỗ trợ Tracify — 24/7",
+      "ogDesc": "Cần trợ giúp? Đội ngũ Tracify luôn sẵn sàng 24/7.",
+      "h1": ""
+    },
+    "privacy": {
+      "title": "Chính sách bảo mật | Tracify",
+      "description": "Chính sách bảo mật của Tracify: dữ liệu chúng tôi thu thập, cách sử dụng, cách mã hóa dữ liệu của bạn, và cách chúng tôi tuân thủ GDPR, CCPA và PECR. Bảo mật theo dõi điện thoại dựa trên sự đồng ý.",
+      "ogTitle": "Chính sách bảo mật | Tracify",
+      "ogDesc": "Cách Tracify bảo vệ dữ liệu của bạn.",
+      "h1": ""
+    },
+    "terms": {
+      "title": "Điều khoản sử dụng | Tracify",
+      "description": "Điều khoản dịch vụ của nền tảng theo dõi điện thoại dựa trên sự đồng ý Tracify: sử dụng tài khoản, đăng ký, hủy bỏ, mục đích sử dụng được phép và trách nhiệm pháp lý.",
+      "ogTitle": "Điều khoản sử dụng | Tracify",
+      "ogDesc": "Điều khoản sử dụng dịch vụ Tracify.",
+      "h1": ""
+    }
+  }
+}
