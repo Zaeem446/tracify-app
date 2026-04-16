@@ -467,6 +467,48 @@
             .admin-info span { display: none; }
             th, td { padding: 10px 12px; font-size: 0.85rem; }
         }
+
+        /* ===== MOBILE NAVIGATION — hamburger + overlay ===== */
+        .admin-nav-toggle { display: none; }
+        .sidebar-overlay { display: none; }
+
+        @media (max-width: 768px) {
+            .admin-nav-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: transparent;
+                border: none;
+                padding: 8px;
+                cursor: pointer;
+                color: var(--text);
+                min-height: 44px;
+                min-width: 44px;
+                margin-right: 10px;
+            }
+            .sidebar.open {
+                display: block !important;
+                width: 260px;
+                z-index: 999;
+                box-shadow: 2px 0 20px rgba(0,0,0,0.25);
+            }
+            /* Restore labels inside open mobile sidebar (override 1024px icon-only rule) */
+            .sidebar.open .sidebar-logo span,
+            .sidebar.open .nav-item span,
+            .sidebar.open .nav-section { display: initial !important; }
+            .sidebar-overlay.active {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.5);
+                z-index: 998;
+            }
+            /* Put hamburger + title on left, actions wrap below */
+            .header { justify-content: flex-start; }
+        }
     </style>
 </head>
 <body>
@@ -537,9 +579,19 @@
         </nav>
     </aside>
 
+    <!-- Mobile sidebar overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
     <!-- Main Content -->
     <main class="main">
         <div class="header">
+            <button id="admin-nav-toggle" class="admin-nav-toggle" aria-label="Menu" type="button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                    <line x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            </button>
             <h1 id="pageTitle">Dashboard</h1>
             <div class="header-actions">
                 <div class="admin-info">
@@ -1178,6 +1230,25 @@
             await fetch('/api/auth/admin/logout', { method: 'POST' });
             window.location.href = '/admin/login';
         }
+
+        // Mobile sidebar hamburger toggle
+        document.getElementById('admin-nav-toggle')?.addEventListener('click', () => {
+            document.querySelector('.sidebar')?.classList.toggle('open');
+            document.getElementById('sidebarOverlay')?.classList.toggle('active');
+        });
+        document.getElementById('sidebarOverlay')?.addEventListener('click', () => {
+            document.querySelector('.sidebar')?.classList.remove('open');
+            document.getElementById('sidebarOverlay')?.classList.remove('active');
+        });
+        // Close sidebar when a nav item is clicked on mobile
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    document.querySelector('.sidebar')?.classList.remove('open');
+                    document.getElementById('sidebarOverlay')?.classList.remove('active');
+                }
+            });
+        });
 
         // Pixels & Tags functions
         async function loadPixels() {
