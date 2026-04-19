@@ -99,6 +99,114 @@
       "ogDesc": "A practical guide to finding a lost phone using its number.",
       "h1": "How to Find a Lost Phone by Number",
       "image": "https://tracify-geo.com/og/blog-find-lost.png"
+    },
+    "blogPost_withoutKnowing": {
+      "title": "Can You Track a Phone Without Them Knowing? Here's the Truth",
+      "description": "Why covert phone tracking is illegal and risky. Learn the real dangers of spyware, stalkerware, and why consent-based tracking is the smarter, legal alternative.",
+      "keywords": "track phone without them knowing, covert phone tracking, phone spyware, stalkerware, legal phone tracking",
+      "ogTitle": "Can You Track a Phone Without Them Knowing?",
+      "ogDesc": "The truth about covert phone tracking, spyware risks, and why consent-based tracking wins.",
+      "h1": "Can You Track a Phone Without Them Knowing?",
+      "image": "https://tracify-geo.com/og/blog.png"
+    },
+    "blogPost_bestApps2026": {
+      "title": "8 Best Phone Tracker Apps in 2026 — Ranked and Reviewed",
+      "description": "We tested Tracify, mSpy, Life360, Find My, Cocospy, and more. Definitive ranking with pros, cons, prices, and privacy ratings for every phone tracker app in 2026.",
+      "keywords": "best phone tracker apps 2026, phone tracker app review, top phone trackers, tracify vs mspy, phone tracker ranking",
+      "ogTitle": "8 Best Phone Tracker Apps in 2026",
+      "ogDesc": "We tested the top phone trackers. Here's the definitive ranking with pros, cons, and prices.",
+      "h1": "8 Best Phone Tracker Apps in 2026",
+      "image": "https://tracify-geo.com/og/blog.png"
+    },
+    "blogPost_trackOnline": {
+      "title": "Track a Phone Location by Number Online — What Actually Works",
+      "description": "Most free online phone trackers are scams. Here's what genuinely works for tracking a phone location by number from your browser in 2026, with no app install.",
+      "keywords": "track phone location online, online phone tracker, track phone by number online, phone location by number free",
+      "ogTitle": "Track a Phone Location by Number Online",
+      "ogDesc": "Most online trackers are scams. Here's what genuinely works in 2026.",
+      "h1": "Track a Phone Location by Number Online",
+      "image": "https://tracify-geo.com/og/blog.png"
+    },
+    "blogPost_findSomeone": {
+      "title": "How to Find Someone's Location by Phone Number — Every Method",
+      "description": "Carrier lookups, device finders, consent-based tracking, and law enforcement options. Every method to find someone's location by phone number, explained with legal considerations.",
+      "keywords": "find someone location by phone number, locate person by phone number, find location by number, phone number lookup location",
+      "ogTitle": "Find Someone's Location by Phone Number",
+      "ogDesc": "Every method to find someone's location by phone number — explained with legal info.",
+      "h1": "How to Find Someone's Location by Phone Number",
+      "image": "https://tracify-geo.com/og/blog.png"
+    },
+    "blogPost_trackChild": {
+      "title": "How to Track My Child's Phone — A Parent's Safety Guide for 2026",
+      "description": "Age-appropriate strategies for tracking your child's phone. Built-in parental controls, Family Sharing, Family Link, and consent-based tracking to keep kids safe.",
+      "keywords": "track child phone, parental phone tracking, family phone tracker, track kids phone location, parental controls phone",
+      "ogTitle": "How to Track My Child's Phone — Parent's Guide",
+      "ogDesc": "Age-appropriate phone tracking strategies for parents. Keep kids safe without breaking trust.",
+      "h1": "How to Track My Child's Phone",
+      "image": "https://tracify-geo.com/og/blog.png"
+    },
+    "blogPost_lostTurnedOff": {
+      "title": "How to Find a Lost Phone That Is Turned Off — Recovery Guide",
+      "description": "Your phone is dead and won't ring. Use last-known location, IMEI tracking, carrier assistance, and SMS-based recovery to find a lost phone that is turned off.",
+      "keywords": "find lost phone turned off, locate dead phone, phone turned off tracker, find phone that is off, lost phone recovery",
+      "ogTitle": "Find a Lost Phone That Is Turned Off",
+      "ogDesc": "Phone dead and won't ring? Here's how to find it using last-known location and IMEI tracking.",
+      "h1": "How to Find a Lost Phone That Is Turned Off",
+      "image": "https://tracify-geo.com/og/blog.png"
+    },
+    "blogPost_stolenPhone": {
+      "title": "How to Track a Stolen Phone — Emergency Action Plan for 2026",
+      "description": "Your phone was just stolen. Here's exactly what to do in the first 10 minutes, first hour, and beyond to recover your stolen phone or protect your data.",
+      "keywords": "track stolen phone, stolen phone tracker, find stolen phone, recover stolen phone, phone theft what to do",
+      "ogTitle": "How to Track a Stolen Phone — Emergency Plan",
+      "ogDesc": "Phone stolen? Here's your step-by-step emergency action plan to recover it or protect your data.",
+      "h1": "How to Track a Stolen Phone",
+      "image": "https://tracify-geo.com/og/blog.png"
+    },
+    "blogPost_beingTracked": {
+      "title": "How to Know If Someone Is Tracking Your Phone — Detection Guide",
+      "description": "Signs of spyware, how to detect tracking apps on iPhone and Android, and how to remove them. Learn the difference between legitimate and illegitimate phone tracking.",
+      "keywords": "someone tracking my phone, detect phone tracking, phone spyware detection, is my phone being tracked, stalkerware signs",
+      "ogTitle": "How to Know If Someone Is Tracking Your Phone",
+      "ogDesc": "Signs of spyware, detection methods, and how to remove tracking apps from your phone.",
+      "h1": "How to Know If Someone Is Tracking Your Phone",
+      "image": "https://tracify-geo.com/og/blog.png"
+    },
+    "blogPost_lawsByCountry": {
+      "title": "Phone Tracking Laws by Country — A Complete Legal Guide for 2026",
+      "description": "Country-by-country breakdown of phone tracking laws in the US, UK, EU, Australia, Canada, India, UAE, and Japan. Consent rules, penalties, and what's legal.",
+      "keywords": "phone tracking laws, tracking laws by country, is phone tracking legal, phone tracking consent laws, GDPR phone tracking",
+      "ogTitle": "Phone Tracking Laws by Country — 2026 Guide",
+      "ogDesc": "Country-by-country legal guide: consent rules, penalties, and what's legal for phone tracking.",
+      "h1": "Phone Tracking Laws by Country",
+      "image": "https://tracify-geo.com/og/blog.png"
+    },
+    "blogPost_howItWorkstech": {
+      "title": "How Does Phone Number Tracking Work? A Technical Explainer",
+      "description": "GPS satellites, cell tower triangulation, Wi-Fi positioning, and consent-based SMS tracking explained. How each phone tracking method works and what data is collected.",
+      "keywords": "how does phone tracking work, phone tracking technology, GPS tracking explained, cell tower triangulation, phone location technology",
+      "ogTitle": "How Does Phone Tracking Work? — Technical Guide",
+      "ogDesc": "GPS, cell towers, Wi-Fi positioning, and SMS-based tracking — every method explained.",
+      "h1": "How Does Phone Number Tracking Work?",
+      "image": "https://tracify-geo.com/og/blog.png"
+    },
+    "blogPost_gpsVsCellTower": {
+      "title": "GPS Tracking vs. Cell Tower Tracking — Accuracy, Battery, and More",
+      "description": "GPS gives 3-5m accuracy. Cell towers give 300m-3km. Compare GPS tracking vs cell tower tracking on accuracy, battery drain, indoor performance, and privacy.",
+      "keywords": "GPS vs cell tower tracking, GPS tracking accuracy, cell tower triangulation, phone tracking accuracy, GPS vs cellular location",
+      "ogTitle": "GPS Tracking vs. Cell Tower Tracking — Compared",
+      "ogDesc": "GPS gives 3-5m accuracy. Cell towers give 300m-3km. Which is better and when?",
+      "h1": "GPS Tracking vs. Cell Tower Tracking",
+      "image": "https://tracify-geo.com/og/blog.png"
+    },
+    "blogPost_vsLife360": {
+      "title": "Tracify vs. Life360 — Which Phone Tracker Is Right for You?",
+      "description": "Life360 is great for family circles. Tracify is built for one-time, no-app location checks. Head-to-head comparison of features, pricing, privacy, and use cases.",
+      "keywords": "tracify vs life360, life360 alternative, phone tracker comparison, best phone tracker, life360 vs tracify review",
+      "ogTitle": "Tracify vs. Life360 — Which Is Better?",
+      "ogDesc": "Family circles vs one-time checks. Head-to-head comparison of features, pricing, and privacy.",
+      "h1": "Tracify vs. Life360",
+      "image": "https://tracify-geo.com/og/blog.png"
     }
   }
 }

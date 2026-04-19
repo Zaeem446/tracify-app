@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--SEO_HEAD-->
+    <script src="/api/pixels/active"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #4CAF50; --primary-dark: #388E3C; --primary-light: #81C784; --text: #2b2b2b; --text-light: #666; }
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%); min-height: 100vh; padding: 20px; }
+        .header { text-align: center; padding: 30px 20px; }
+        .logo { display: inline-flex; align-items: center; gap: 10px; font-size: 1.8rem; font-weight: 700; color: white; text-decoration: none; margin-bottom: 12px; }
+        .breadcrumb { color: rgba(255, 255, 255, 0.85); font-size: 0.9rem; margin-bottom: 20px; }
+        .breadcrumb a { color: white; text-decoration: none; opacity: 0.85; }
+        .breadcrumb a:hover { opacity: 1; }
+        .content-container { max-width: 780px; margin: 0 auto; }
+        .article-card { background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
+        .article-body { padding: 44px 34px; }
+        h1 { color: var(--primary-dark); font-size: 2rem; line-height: 1.25; margin-bottom: 18px; font-weight: 800; }
+        h2 { color: var(--primary-dark); font-size: 1.35rem; margin: 28px 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--primary-light); }
+        h3 { color: var(--primary-dark); font-size: 1.1rem; margin: 18px 0 8px; }
+        p { color: var(--text); line-height: 1.78; margin-bottom: 14px; font-size: 1rem; }
+        ul, ol { margin: 10px 0 14px 24px; }
+        li { color: var(--text); line-height: 1.78; margin-bottom: 8px; font-size: 1rem; }
+        .lede { font-size: 1.12rem; color: var(--text); line-height: 1.75; margin-bottom: 22px; }
+        .meta { color: var(--text-light); font-size: 0.85rem; margin-bottom: 12px; }
+        .cta-box { background: #e8f5e9; border-left: 4px solid var(--primary); padding: 20px 22px; border-radius: 0 12px 12px 0; margin: 24px 0; }
+        .cta-box h3 { margin-top: 0; color: var(--primary-dark); }
+        .cta-btn { display: inline-block; background: var(--primary); color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 8px; }
+        .cta-btn:hover { background: var(--primary-dark); }
+        .footer { text-align: center; padding: 30px 20px; color: white; }
+        .footer-links { display: flex; justify-content: center; gap: 28px; margin-bottom: 20px; flex-wrap: wrap; }
+        .footer-link { color: white; text-decoration: none; font-weight: 500; }
+        .footer-link:hover { opacity: 0.8; }
+        @media (max-width: 600px) { h1 { font-size: 1.55rem; } .article-body { padding: 30px 22px; } }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/" class="logo">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="20" r="18" stroke="white" stroke-width="3"/>
+                <circle cx="20" cy="20" r="8" fill="white"/>
+                <path d="M20 2V10M20 30V38M2 20H10M30 20H38" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span>Tracify</span>
+        </a>
+        <nav class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog">Blog</a> &rsaquo; How to Know If Someone Is Tracking Your Phone</nav>
+    </div>
+    <div class="content-container">
+        <article class="article-card">
+            <div class="article-body">
+                <p class="meta">Updated April 2026 &middot; 8 min read</p>
+                <h1>How to Know If Someone Is Tracking Your Phone &mdash; Signs, Detection, and Prevention</h1>
+                <p class="lede">That uneasy feeling that someone knows where you are, what you're reading, or who you're calling &mdash; it might not be paranoia. Stalkerware and covert tracking have grown into a serious problem, with the Coalition Against Stalkerware reporting a 37% increase in detected installations between 2023 and 2025. This guide explains the <strong>signs that someone is tracking your phone</strong>, how to detect and remove tracking software, and the difference between illegitimate spying and ethical, consent-based location sharing.</p>
+
+                <h2>How phones get tracked without your knowledge</h2>
+                <p>Before we cover the warning signs, it helps to understand the methods someone might use to track you. There are four main categories, ranked from most common to least common:</p>
+
+                <h3>1. Stalkerware / spyware apps</h3>
+                <p>These are commercial apps marketed as "parental monitoring" or "employee oversight" tools but frequently used by abusive partners, stalkers, and controlling family members. Names you may have heard include mSpy, FlexiSpy, Cocospy, and Spyic. They typically require a few minutes of physical access to your phone to install, and once running, they can:</p>
+                <ul>
+                    <li>Track your GPS location in real time.</li>
+                    <li>Read your text messages, emails, and chat apps.</li>
+                    <li>Record phone calls.</li>
+                    <li>Access your camera and microphone.</li>
+                    <li>Log keystrokes (including passwords).</li>
+                </ul>
+                <p>These apps are designed to be invisible. They hide from the app drawer and often disguise themselves as system processes like "System Service" or "Phone Health."</p>
+
+                <h3>2. Built-in tracking features misused</h3>
+                <p>Someone with access to your Apple ID or Google Account can use Find My or Find My Device to track your location without installing anything. An ex-partner who knows your password, a parent who set up your phone, or a roommate who once logged into your device can all do this remotely.</p>
+
+                <h3>3. Shared location via messaging apps</h3>
+                <p>Apps like WhatsApp, Google Maps, iMessage, and Telegram have "share my location" features. If someone enabled continuous location sharing during your relationship and you forgot to turn it off, they can still see where you are &mdash; indefinitely, in some cases.</p>
+
+                <h3>4. SS7 network vulnerabilities and cell-site simulators</h3>
+                <p>These are sophisticated attacks used by intelligence agencies and, occasionally, criminal organizations. SS7 exploits abuse vulnerabilities in the telephone signaling system to intercept calls and track locations. Cell-site simulators (sometimes called "Stingrays") impersonate cell towers to capture phone data. These are extremely rare for ordinary individuals and essentially impossible to detect with consumer tools. If you're a journalist, activist, or political figure and suspect this level of surveillance, consult a professional security firm.</p>
+
+                <div class="cta-box">
+                    <h3>Tracking should always be transparent</h3>
+                    <p>Tracify works by sending an SMS that the recipient must actively approve before any location data is shared. No hidden apps, no covert access, no spying. That's how ethical tracking should work.</p>
+                    <a href="/how-it-works" class="cta-btn">See How Tracify Works &rarr;</a>
+                </div>
+
+                <h2>Warning signs that your phone is being tracked</h2>
+                <p>No single sign is definitive proof of tracking, but if you notice several of these simultaneously, it warrants investigation.</p>
+
+                <h3>Battery draining faster than usual</h3>
+                <p>Tracking apps run continuously in the background, using GPS, cellular data, and CPU resources. If your phone's battery life has dropped noticeably &mdash; say from lasting all day to dying by 3 PM &mdash; without any change in your usage habits, it could indicate background software.</p>
+                <p><strong>How to check:</strong></p>
+                <ul>
+                    <li><strong>iPhone:</strong> Settings &gt; Battery. Look for unfamiliar apps consuming disproportionate power.</li>
+                    <li><strong>Android:</strong> Settings &gt; Battery &gt; Battery Usage. Sort by consumption and look for unknown services.</li>
+                </ul>
+
+                <h3>Unexplained data usage spikes</h3>
+                <p>Stalkerware transmits collected data (location, messages, recordings) to a remote server. This requires mobile data. If your data usage has increased significantly without explanation, check which apps are responsible.</p>
+                <p><strong>How to check:</strong></p>
+                <ul>
+                    <li><strong>iPhone:</strong> Settings &gt; Cellular. Scroll down to see data usage per app.</li>
+                    <li><strong>Android:</strong> Settings &gt; Network &amp; Internet &gt; Data Usage &gt; App Data Usage.</li>
+                </ul>
+                <p>Look for apps you don't recognize consuming hundreds of megabytes.</p>
+
+                <h3>Phone gets hot when idle</h3>
+                <p>If your phone feels warm to the touch while sitting on a table &mdash; no apps open, no charging &mdash; something is working in the background. GPS tracking is particularly processor-intensive and generates noticeable heat.</p>
+
+                <h3>Unusual sounds during calls</h3>
+                <p>While modern digital networks have eliminated most call quality issues, some tracking apps that intercept or record calls can introduce faint clicking, static, or echoing sounds. This is not a reliable indicator on its own (network issues cause the same symptoms), but combined with other signs, it's worth noting.</p>
+
+                <h3>Phone takes longer to shut down</h3>
+                <p>When you power off your phone, it needs to close all running processes. If stalkerware is running, the shutdown process may take noticeably longer than usual, especially if the app is trying to transmit a final batch of data before the phone goes offline.</p>
+
+                <h3>Unfamiliar apps or profiles</h3>
+                <p>This is the most concrete indicator. Stalkerware has to exist on your phone as an installed app or configuration profile, even if it's hidden from the normal app drawer.</p>
+                <p><strong>How to check on iPhone:</strong></p>
+                <ul>
+                    <li>Go to Settings &gt; General &gt; VPN &amp; Device Management. If you see any profiles you didn't install (especially "MDM" or "Mobile Device Management" profiles), someone may have gained control of your device.</li>
+                    <li>Check Settings &gt; General &gt; iPhone Storage. Scroll through every app. If you see anything you don't recognize, research it.</li>
+                </ul>
+                <p><strong>How to check on Android:</strong></p>
+                <ul>
+                    <li>Go to Settings &gt; Apps &gt; Show System Apps (varies by manufacturer). Look for apps with generic names like "System Service," "Phone Health," "Update Service," or anything you don't recognize.</li>
+                    <li>Check Settings &gt; Security &gt; Device Admin Apps. If any app you didn't authorize has device administrator privileges, that's a red flag.</li>
+                    <li>Check Settings &gt; Accessibility &gt; Installed Services. Stalkerware often requests accessibility permissions to read screen content.</li>
+                </ul>
+
+                <h3>Someone knows things they shouldn't</h3>
+                <p>This is the most unsettling sign and often the one that prompts people to investigate. If someone consistently knows where you've been, who you've talked to, or what you've said in private messages &mdash; without you telling them &mdash; your phone may be compromised.</p>
+
+                <h2>How to detect tracking apps</h2>
+                <p>Beyond checking for the signs above, you can use dedicated tools to scan for stalkerware.</p>
+
+                <h3>Use a reputable antivirus/anti-stalkerware app</h3>
+                <ul>
+                    <li><strong>Malwarebytes</strong> (iOS and Android) &mdash; free scan that detects most known stalkerware.</li>
+                    <li><strong>Lookout</strong> (iOS and Android) &mdash; specifically designed to detect stalkerware and notify you.</li>
+                    <li><strong>Kaspersky</strong> (Android) &mdash; their TinyCheck tool was specifically developed to detect stalkerware and is recommended by the Coalition Against Stalkerware.</li>
+                    <li><strong>Certo</strong> (iOS and Android) &mdash; focused entirely on spyware detection. The iOS version can detect configuration profile-based spyware that other scanners miss.</li>
+                </ul>
+
+                <h3>Check location sharing settings</h3>
+                <p>Review every app that has access to your location:</p>
+                <ul>
+                    <li><strong>iPhone:</strong> Settings &gt; Privacy &amp; Security &gt; Location Services. Review every app. Set unknown or suspicious apps to "Never."</li>
+                    <li><strong>Android:</strong> Settings &gt; Location &gt; App Location Permissions. Review all apps with "Allowed all the time" access. Very few apps legitimately need continuous location access.</li>
+                </ul>
+
+                <h3>Check for shared Apple ID or Google Account access</h3>
+                <ul>
+                    <li><strong>Apple:</strong> Settings &gt; [Your Name] &gt; scroll to bottom to see all devices signed into your Apple ID. Remove any device you don't recognize.</li>
+                    <li><strong>Google:</strong> myaccount.google.com &gt; Security &gt; Your Devices. Remove unrecognized devices. Also check "Third-party apps with account access" and revoke anything suspicious.</li>
+                </ul>
+
+                <h2>How to remove tracking from your phone</h2>
+                <p>If you've confirmed or strongly suspect tracking, here's how to stop it.</p>
+
+                <h3>Option 1: Remove the specific app or profile</h3>
+                <p>If you've identified the stalkerware app, uninstall it. On Android, you may need to revoke its device administrator privileges first (Settings &gt; Security &gt; Device Admin Apps &gt; deselect the app). On iPhone, remove any unknown configuration profiles (Settings &gt; General &gt; VPN &amp; Device Management &gt; tap the profile &gt; Remove).</p>
+
+                <h3>Option 2: Factory reset</h3>
+                <p>The nuclear option. A factory reset removes all apps and data, including any stalkerware. Before doing this:</p>
+                <ol>
+                    <li>Back up your photos, contacts, and important data to a computer (not to the cloud account that may be compromised).</li>
+                    <li>Perform the reset: iPhone (Settings &gt; General &gt; Transfer or Reset iPhone &gt; Erase All Content and Settings) or Android (Settings &gt; System &gt; Reset &gt; Factory Data Reset).</li>
+                    <li>Set up the phone as new &mdash; do NOT restore from a backup, as the stalkerware may be included in the backup.</li>
+                    <li>Change all passwords (email, Apple ID / Google Account, social media, banking) from the freshly reset phone.</li>
+                    <li>Enable two-factor authentication on all accounts.</li>
+                </ol>
+
+                <h3>Option 3: Get a new phone number</h3>
+                <p>If the tracking is tied to your phone number (via SIM-based attacks or SMS interception), a new number may be necessary. Contact your carrier to get a new SIM with a new number. Keep the old number active briefly to transfer important accounts, then deactivate it.</p>
+
+                <h3>Important: If you're in danger</h3>
+                <p>If the person tracking you is an abusive partner or stalker, removing the tracking app may alert them (many stalkerware apps notify the installer when they're removed). If you're in a domestic violence situation, contact the <strong>National Domestic Violence Hotline</strong> (1-800-799-7233 in the US) before making changes to your phone. They have tech safety specialists who can help you plan a safe exit. In the UK, contact <strong>Refuge</strong> (0808 2000 247).</p>
+
+                <h2>Legitimate vs. illegitimate tracking</h2>
+                <p>Not all tracking is malicious. Understanding the difference matters.</p>
+
+                <h3>Legitimate tracking (with consent)</h3>
+                <ul>
+                    <li><strong>Family location sharing</strong> &mdash; parents and children voluntarily sharing locations via Apple Family Sharing, Google Family Link, or Life360. Everyone knows about it and agrees to participate.</li>
+                    <li><strong>Consent-based services</strong> &mdash; services like Tracify that send an explicit SMS request. The recipient must actively tap a link and approve sharing. If they ignore the message, nothing is shared. No software is installed on their phone. For a deeper look at the legal framework, see our article on <a href="/blog/is-tracking-a-phone-number-legal">whether tracking a phone number is legal</a>.</li>
+                    <li><strong>Employee tracking with disclosure</strong> &mdash; companies that track company-owned devices with a clear, signed policy. The employee knows and has agreed as a condition of using the company device.</li>
+                    <li><strong>Find My / Find My Device</strong> &mdash; tracking your own devices or devices within your family group with everyone's knowledge.</li>
+                </ul>
+
+                <h3>Illegitimate tracking (without consent)</h3>
+                <ul>
+                    <li><strong>Stalkerware installed on a partner's phone</strong> &mdash; illegal in most jurisdictions, even between spouses.</li>
+                    <li><strong>Covert employee monitoring on personal devices</strong> &mdash; an employer tracking an employee's personal phone without disclosure violates privacy laws.</li>
+                    <li><strong>Ex-partner using retained account access</strong> &mdash; continuing to track someone via a shared Apple ID or Google Account after a relationship ends is unauthorized access.</li>
+                    <li><strong>AirTag / SmartTag stalking</strong> &mdash; placing a Bluetooth tracker in someone's bag or car without their knowledge. Both Apple and Google now have anti-stalking alerts that notify you when an unknown tracker is traveling with you.</li>
+                </ul>
+                <p>The critical dividing line is <strong>informed, ongoing consent</strong>. If the person being tracked doesn't know about it and hasn't agreed to it, it's almost certainly illegal and always unethical.</p>
+
+                <h2>How to protect yourself going forward</h2>
+                <p>Once you've removed any trackers, take these preventive steps:</p>
+                <ol>
+                    <li><strong>Use a strong, unique passcode</strong> &mdash; stalkerware requires physical access to install. A 6-digit PIN or alphanumeric passcode prevents casual access. Never share your passcode with anyone.</li>
+                    <li><strong>Enable biometric authentication</strong> &mdash; Face ID or fingerprint unlock means no one can access your phone while you're asleep or not looking.</li>
+                    <li><strong>Review app permissions monthly</strong> &mdash; set a calendar reminder to check which apps have location, microphone, and camera access.</li>
+                    <li><strong>Keep your OS updated</strong> &mdash; software updates patch security vulnerabilities that stalkerware exploits.</li>
+                    <li><strong>Don't leave your phone unattended</strong> &mdash; especially around people you don't fully trust. It takes less than three minutes to install stalkerware.</li>
+                    <li><strong>Use a password manager</strong> &mdash; unique passwords for every account mean that compromising one doesn't compromise everything.</li>
+                    <li><strong>Review shared accounts</strong> &mdash; after a breakup or falling out, change shared passwords and remove the other person's access from Apple Family Sharing, Google Family Group, and any shared location apps.</li>
+                    <li><strong>Check for AirTags regularly</strong> &mdash; if you're concerned about physical trackers, use Apple's "Find My" app (even on Android via the "Tracker Detect" app) to scan for unknown Bluetooth trackers near you.</li>
+                </ol>
+
+                <h2>Frequently asked questions</h2>
+
+                <h3>Can someone track my phone through a text message?</h3>
+                <p>Not through a standard text message. However, if a text contains a link that installs malware when tapped, that malware could enable tracking. Never tap links in messages from unknown senders. Legitimate services like Tracify send SMS requests that only share your location if you explicitly approve &mdash; they can't access your phone just by sending a text. Visit our <a href="/faq">FAQ page</a> for more on how consent-based tracking works.</p>
+
+                <h3>Can my phone be tracked if location services are off?</h3>
+                <p>With location services off, GPS-based tracking stops. However, some stalkerware can re-enable location services silently. Your phone can also be approximately located via cell tower triangulation (by your carrier) and Wi-Fi positioning, neither of which requires location services to be "on" in your settings. Turning off location services reduces but doesn't eliminate all tracking vectors.</p>
+
+                <h3>Does a VPN prevent phone tracking?</h3>
+                <p>A VPN encrypts your internet traffic and masks your IP address, which prevents tracking via IP geolocation. However, it does not affect GPS tracking, cell tower tracking, or stalkerware that's already installed on your phone. A VPN is one layer of privacy, not a complete solution. For a broader look at tracking methods, see our guide on <a href="/blog/how-to-track-a-phone-number">how to track a phone number</a>.</p>
+
+                <h3>Is it possible to track a phone without installing software?</h3>
+                <p>Yes. Someone with access to your Apple ID or Google Account can track your phone via Find My or Find My Device without installing anything. Shared location features in WhatsApp, Google Maps, and iMessage also work without additional software. This is why changing passwords and reviewing shared access is critical after any security concern.</p>
+
+                <div class="cta-box">
+                    <h3>Ready to try Tracify?</h3>
+                    <p>Start tracking any phone number in 60 seconds. No app install needed.</p>
+                    <a href="/#pricing" class="cta-btn">Try Tracify for $0.50 &rarr;</a>
+                </div>
+            </div>
+        </article>
+    </div>
+    <div class="footer">
+        <div class="footer-links">
+            <a href="/" class="footer-link">Home</a>
+            <a href="/how-it-works" class="footer-link">How It Works</a>
+            <a href="/faq" class="footer-link">FAQ</a>
+            <a href="/contact" class="footer-link">Contact</a>
+            <a href="/privacy" class="footer-link">Privacy</a>
+            <a href="/terms" class="footer-link">Terms</a>
+        </div>
+        <p style="font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-bottom: 10px;">Tracify is a service operated by Finalecom Solution LLC.</p>
+        <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem;">&copy; Tracify - 2026</p>
+    </div>
+    <script src="/js/i18n.js"></script>
+</body>
+</html>

@@ -256,10 +256,22 @@ app.get('/blog', (req, res) => {
 
 // Blog posts
 const BLOG_POSTS = {
-    'how-to-track-a-phone-number':      'blogPost_howToTrack',
-    'phone-tracker-apps-comparison':    'blogPost_comparison',
-    'is-tracking-a-phone-number-legal': 'blogPost_legality',
-    'find-lost-phone-by-number':        'blogPost_findLost'
+    'how-to-track-a-phone-number':              'blogPost_howToTrack',
+    'phone-tracker-apps-comparison':             'blogPost_comparison',
+    'is-tracking-a-phone-number-legal':          'blogPost_legality',
+    'find-lost-phone-by-number':                 'blogPost_findLost',
+    'track-phone-number-without-them-knowing':   'blogPost_withoutKnowing',
+    'best-phone-tracker-apps-2026':              'blogPost_bestApps2026',
+    'track-phone-location-by-number-online':     'blogPost_trackOnline',
+    'find-someone-location-by-phone-number':     'blogPost_findSomeone',
+    'track-childs-phone':                        'blogPost_trackChild',
+    'find-lost-phone-turned-off':                'blogPost_lostTurnedOff',
+    'track-stolen-phone':                        'blogPost_stolenPhone',
+    'how-to-know-if-someone-tracking-your-phone':'blogPost_beingTracked',
+    'phone-tracking-laws-by-country':            'blogPost_lawsByCountry',
+    'how-does-phone-tracking-work':              'blogPost_howItWorkstech',
+    'gps-tracking-vs-cell-tower':                'blogPost_gpsVsCellTower',
+    'tracify-vs-life360':                        'blogPost_vsLife360'
 };
 
 app.get('/blog/:slug', (req, res, next) => {

@@ -58,7 +58,19 @@ const INDEXABLE_PAGES = [
     { key: 'blogPost_howToTrack',      bare: '/blog/how-to-track-a-phone-number',     priority: 0.6, changefreq: 'monthly', perLang: false },
     { key: 'blogPost_comparison',      bare: '/blog/phone-tracker-apps-comparison',   priority: 0.6, changefreq: 'monthly', perLang: false },
     { key: 'blogPost_legality',        bare: '/blog/is-tracking-a-phone-number-legal', priority: 0.6, changefreq: 'monthly', perLang: false },
-    { key: 'blogPost_findLost',        bare: '/blog/find-lost-phone-by-number',       priority: 0.6, changefreq: 'monthly', perLang: false }
+    { key: 'blogPost_findLost',        bare: '/blog/find-lost-phone-by-number',       priority: 0.6, changefreq: 'monthly', perLang: false },
+    { key: 'blogPost_withoutKnowing',  bare: '/blog/track-phone-number-without-them-knowing', priority: 0.6, changefreq: 'monthly', perLang: false },
+    { key: 'blogPost_bestApps2026',    bare: '/blog/best-phone-tracker-apps-2026',    priority: 0.6, changefreq: 'monthly', perLang: false },
+    { key: 'blogPost_trackOnline',     bare: '/blog/track-phone-location-by-number-online', priority: 0.6, changefreq: 'monthly', perLang: false },
+    { key: 'blogPost_findSomeone',     bare: '/blog/find-someone-location-by-phone-number', priority: 0.6, changefreq: 'monthly', perLang: false },
+    { key: 'blogPost_trackChild',      bare: '/blog/track-childs-phone',              priority: 0.6, changefreq: 'monthly', perLang: false },
+    { key: 'blogPost_lostTurnedOff',   bare: '/blog/find-lost-phone-turned-off',      priority: 0.6, changefreq: 'monthly', perLang: false },
+    { key: 'blogPost_stolenPhone',     bare: '/blog/track-stolen-phone',              priority: 0.6, changefreq: 'monthly', perLang: false },
+    { key: 'blogPost_beingTracked',    bare: '/blog/how-to-know-if-someone-tracking-your-phone', priority: 0.6, changefreq: 'monthly', perLang: false },
+    { key: 'blogPost_lawsByCountry',   bare: '/blog/phone-tracking-laws-by-country',  priority: 0.6, changefreq: 'monthly', perLang: false },
+    { key: 'blogPost_howItWorkstech',  bare: '/blog/how-does-phone-tracking-work',    priority: 0.6, changefreq: 'monthly', perLang: false },
+    { key: 'blogPost_gpsVsCellTower',  bare: '/blog/gps-tracking-vs-cell-tower',      priority: 0.6, changefreq: 'monthly', perLang: false },
+    { key: 'blogPost_vsLife360',       bare: '/blog/tracify-vs-life360',              priority: 0.6, changefreq: 'monthly', perLang: false }
 ];
 
 const templateCache = new Map();
