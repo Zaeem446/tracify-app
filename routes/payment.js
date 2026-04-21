@@ -36,6 +36,9 @@ async function requireCustomerAuth(req, res, next) {
 
 // Get pricing plans
 router.get('/plans', (req, res) => {
+    const { plan } = req.query;
+    const planConfig = PRICE_MAP[plan] || PRICE_MAP.main;
+
     res.json({
         trial: {
             id: 'trial',
@@ -47,8 +50,8 @@ router.get('/plans', (req, res) => {
         },
         monthly: {
             id: 'monthly',
-            name: 'Monthly Subscription',
-            amount: 30.00,
+            name: planConfig.name,
+            amount: planConfig.amount,
             currency: 'USD',
             duration: '30 days',
             description: 'Unlimited access with monthly billing'
@@ -60,14 +63,25 @@ router.get('/plans', (req, res) => {
 const MONTHLY_PRICE_ID = 'price_1TIADCIggzd46qoMesRQlnq7';
 const TRIAL_AMOUNT = 50; // $0.50 in cents
 
+// Price map for different landing pages
+const PRICE_MAP = {
+    main:  { priceId: 'price_1TIADCIggzd46qoMesRQlnq7', amount: 30.00, name: 'Tracify Monthly' },
+    go:    { priceId: 'price_1TOlBLIggzd46qoM1vxwPRlv', amount: 19.99, name: 'Tracify GPS Locate' },
+    track: { priceId: 'price_1TOlCcIggzd46qoMiNL1Ii4p', amount: 14.99, name: 'Tracify Activity Monitor' },
+    find:  { priceId: 'price_1TOlDPIggzd46qoMePMApfor', amount: 14.98, name: 'Tracify Device Finder' },
+};
+
 // ============================================================
 // Reusable: Create a Stripe Checkout Session for a customer
 // Used by both signup (auth.js) and the /payment page button
 // ============================================================
-async function createCheckoutSessionForCustomer(customerId, customerEmail) {
+async function createCheckoutSessionForCustomer(customerId, customerEmail, plan) {
     if (!stripe) {
         throw new Error('Stripe not configured');
     }
+
+    // Look up plan config, default to main
+    const planConfig = PRICE_MAP[plan] || PRICE_MAP.main;
 
     const appUrl = process.env.APP_URL || 'http://localhost:3000';
 
@@ -79,23 +93,24 @@ async function createCheckoutSessionForCustomer(customerId, customerEmail) {
                 price_data: {
                     currency: 'usd',
                     product_data: {
-                        name: 'Tracify 24-Hour Trial',
+                        name: planConfig.name + ' — 24-Hour Trial',
                         description: 'Full access to all platform features for 24 hours'
                     },
                     unit_amount: TRIAL_AMOUNT, // $0.50 in cents
                 },
                 quantity: 1,
             },
-            // Recurring $30/month subscription (starts after trial)
+            // Recurring subscription (starts after trial)
             {
-                price: MONTHLY_PRICE_ID,
+                price: planConfig.priceId,
                 quantity: 1,
             },
         ],
         subscription_data: {
-            trial_period_days: 1, // 1-day trial, $30 charges after 24h
+            trial_period_days: 1, // 1-day trial, monthly charges after 24h
             metadata: {
                 tracifyCustomerId: String(customerId),
+                plan: plan || 'main',
             },
         },
         client_reference_id: String(customerId),
@@ -104,6 +119,7 @@ async function createCheckoutSessionForCustomer(customerId, customerEmail) {
         cancel_url: `${appUrl}/payment?cancelled=true`,
         metadata: {
             tracifyCustomerId: String(customerId),
+            plan: plan || 'main',
         },
     });
 
@@ -361,7 +377,8 @@ router.post('/create-checkout-session', requireCustomerAuth, async (req, res) =>
             return res.status(404).json({ error: 'Customer not found' });
         }
 
-        const session = await createCheckoutSessionForCustomer(req.customerId, customer.email);
+        // Use customer's source as plan for correct pricing
+        const session = await createCheckoutSessionForCustomer(req.customerId, customer.email, customer.source);
 
         res.json({ checkoutUrl: session.url });
 
@@ -545,7 +562,8 @@ router.post('/webhook', express.raw({ type: 'application/json' }), async (req, r
                     await db.subscriptions.extendSubscription(
                         subscription.id,
                         newExpiresAt.toISOString(),
-                        'monthly'
+                        'monthly',
+                        amountPaid
                     );
 
                     await db.payments.create(

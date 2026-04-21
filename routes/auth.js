@@ -31,7 +31,7 @@ function generatePassword(length = 8) {
 // Customer signup - creates account and sends password via email
 router.post('/signup', async (req, res) => {
     try {
-        const { email, phoneToTrack, countryCode } = req.body;
+        const { email, phoneToTrack, countryCode, source, plan } = req.body;
 
         if (!email) {
             return res.status(400).json({ error: 'Email is required' });
@@ -53,6 +53,11 @@ router.post('/signup', async (req, res) => {
         // Store phone to track if provided
         if (phoneToTrack) {
             await db.customers.updatePhoneToTrack(customerId, `${countryCode || ''}${phoneToTrack}`);
+        }
+
+        // Store source landing page
+        if (source) {
+            await db.customers.updateSource(customerId, source);
         }
 
         // Create session token
@@ -80,7 +85,7 @@ router.post('/signup', async (req, res) => {
         try {
             const createCheckoutSession = getCreateCheckoutSession();
             if (createCheckoutSession) {
-                const session = await createCheckoutSession(customerId, email);
+                const session = await createCheckoutSession(customerId, email, plan || source);
                 checkoutUrl = session.url;
                 console.log('Checkout session created during signup:', session.id);
             }

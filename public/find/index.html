@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracify — Find My Phone | Emergency GPS Locator</title>
+    <meta name="description" content="Lost or stolen phone? Emergency GPS locate in under 60 seconds. Works on any phone, any carrier, worldwide. No app needed.">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Space Grotesk', sans-serif; background: #FFFCF7; overflow-x: hidden; -webkit-font-smoothing: antialiased; color: #1C1412; }
+        #root { min-height: 100vh; }
+        .leaflet-container { background: #FFF7ED !important; }
+        ::selection { background: #D9770644; color: #fff; }
+        @keyframes tracify-mapring { 0% { transform: translate(-50%,-50%) scale(0.5); opacity: 0.4; } 100% { transform: translate(-50%,-50%) scale(2.5); opacity: 0; } }
+        @keyframes tracify-pindrop { 0% { transform: translateY(-30px) scale(0.8); opacity: 0; } 100% { transform: translateY(0) scale(1); opacity: 1; } }
+        .tracify-pin-icon { background: none !important; border: none !important; }
+        @keyframes radar-sweep { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes ping-out { 0% { transform: scale(0.8); opacity: 0.8; } 100% { transform: scale(3); opacity: 0; } }
+        @keyframes status-blink { 0%,100% { opacity: 1; } 50% { opacity: 0.2; } }
+        @keyframes emergency-flash { 0%,90%,100% { opacity: 0; } 95% { opacity: 0.03; } }
+        @keyframes scan-h { 0% { left: -30%; } 100% { left: 130%; } }
+        @keyframes counter-up { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="/go/components/countries.jsx"></script>
+    <script type="text/babel" src="/go/components/brand.jsx"></script>
+    <script type="text/babel" src="/go/components/real-map.jsx"></script>
+    <script type="text/babel" src="/find/app.jsx"></script>
+</body>
+</html>

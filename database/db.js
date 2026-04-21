@@ -116,6 +116,11 @@ async function initialize() {
             );
         `);
 
+        // Migration: add source column to customers
+        await client.query(`
+            ALTER TABLE customers ADD COLUMN IF NOT EXISTS source VARCHAR(20) DEFAULT NULL
+        `);
+
         // Create default admin if not exists
         const adminCheck = await client.query(
             'SELECT id FROM admin_users WHERE username = $1',
@@ -211,6 +216,13 @@ const customerQueries = {
         await pool.query(
             'UPDATE customers SET phone_to_track = $1 WHERE id = $2',
             [phone, id]
+        );
+    },
+
+    updateSource: async (id, source) => {
+        await pool.query(
+            'UPDATE customers SET source = $1 WHERE id = $2',
+            [source, id]
         );
     },
 
@@ -338,13 +350,22 @@ const subscriptionQueries = {
         return result.rows[0] || null;
     },
 
-    extendSubscription: async (id, newExpiresAt, planType = 'monthly') => {
-        await pool.query(
-            `UPDATE subscriptions
-             SET expires_at = $1, plan_type = $2, status = 'active'
-             WHERE id = $3`,
-            [newExpiresAt, planType, id]
-        );
+    extendSubscription: async (id, newExpiresAt, planType = 'monthly', amount = null) => {
+        if (amount) {
+            await pool.query(
+                `UPDATE subscriptions
+                 SET expires_at = $1, plan_type = $2, status = 'active', amount = $3
+                 WHERE id = $4`,
+                [newExpiresAt, planType, amount, id]
+            );
+        } else {
+            await pool.query(
+                `UPDATE subscriptions
+                 SET expires_at = $1, plan_type = $2, status = 'active'
+                 WHERE id = $3`,
+                [newExpiresAt, planType, id]
+            );
+        }
     }
 };
 

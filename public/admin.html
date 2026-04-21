@@ -675,13 +675,14 @@
                         <thead>
                             <tr>
                                 <th>Email</th>
+                                <th>Source</th>
                                 <th>Plan</th>
                                 <th>Status</th>
                                 <th>Joined</th>
                             </tr>
                         </thead>
                         <tbody id="recent-customers">
-                            <tr><td colspan="4" class="loading">Loading...</td></tr>
+                            <tr><td colspan="5" class="loading">Loading...</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -710,6 +711,7 @@
                                 <th>ID</th>
                                 <th>Email</th>
                                 <th>Phone to Track</th>
+                                <th>Source</th>
                                 <th>Plan</th>
                                 <th>Subscribed At</th>
                                 <th>Expires At</th>
@@ -717,7 +719,7 @@
                             </tr>
                         </thead>
                         <tbody id="customers-table">
-                            <tr><td colspan="7" class="loading">Loading...</td></tr>
+                            <tr><td colspan="8" class="loading">Loading...</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -953,11 +955,19 @@
 
                 const tbody = document.getElementById('recent-customers');
                 if (activity.recentCustomers.length === 0) {
-                    tbody.innerHTML = '<tr><td colspan="4" class="empty-state">No customers yet</td></tr>';
+                    tbody.innerHTML = '<tr><td colspan="5" class="empty-state">No customers yet</td></tr>';
                 } else {
                     tbody.innerHTML = activity.recentCustomers.map(c => `
                         <tr>
                             <td>${c.email}</td>
+                            <td>${(() => {
+                                const src = c.source;
+                                if (!src) return '<span class="badge" style="background:#f0f0f0;color:#666">Main</span>';
+                                if (src === 'go') return '<span class="badge" style="background:#dcfce7;color:#166534">GPS</span>';
+                                if (src === 'track') return '<span class="badge" style="background:#ede9fe;color:#5b21b6">Monitor</span>';
+                                if (src === 'find') return '<span class="badge" style="background:#fef3c7;color:#92400e">Finder</span>';
+                                return '<span class="badge badge-info">' + src + '</span>';
+                            })()}</td>
                             <td>${c.plan_type || 'None'}</td>
                             <td><span class="badge ${c.subscription_status === 'active' ? 'badge-success' : 'badge-warning'}">${c.subscription_status || 'No subscription'}</span></td>
                             <td>${new Date(c.created_at).toLocaleDateString()}</td>
@@ -987,18 +997,27 @@
             let items = allCustomers.filter(c =>
                 (c.email || '').toLowerCase().includes(search) ||
                 (c.phone_to_track || '').toLowerCase().includes(search) ||
+                (c.source || '').toLowerCase().includes(search) ||
                 (c.plan_type || '').toLowerCase().includes(search)
             );
             items = sortByOption(items, sort, 'created_at', 'email');
             const tbody = document.getElementById('customers-table');
             if (items.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="7" class="empty-state">No customers found</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="8" class="empty-state">No customers found</td></tr>';
             } else {
                 tbody.innerHTML = items.map(c => `
                     <tr onclick="showCustomerDetail(${c.id})" style="cursor:pointer">
                         <td>#${c.id}</td>
                         <td>${c.email}</td>
                         <td>${c.phone_to_track || '-'}</td>
+                        <td>${(() => {
+                            const src = c.source;
+                            if (!src) return '<span class="badge" style="background:#f0f0f0;color:#666">Main</span>';
+                            if (src === 'go') return '<span class="badge" style="background:#dcfce7;color:#166534">GPS</span>';
+                            if (src === 'track') return '<span class="badge" style="background:#ede9fe;color:#5b21b6">Monitor</span>';
+                            if (src === 'find') return '<span class="badge" style="background:#fef3c7;color:#92400e">Finder</span>';
+                            return '<span class="badge badge-info">' + src + '</span>';
+                        })()}</td>
                         <td>${c.plan_type || 'None'}</td>
                         <td>${c.subscription_started ? new Date(c.subscription_started).toLocaleString() : '-'}</td>
                         <td>${c.subscription_expires ? new Date(c.subscription_expires).toLocaleString() : '-'}</td>
@@ -1158,6 +1177,14 @@
                 body.innerHTML = `
                     <div class="detail-row"><div class="detail-label">ID</div><div class="detail-value">#${data.customer.id}</div></div>
                     <div class="detail-row"><div class="detail-label">Email</div><div class="detail-value">${data.customer.email}</div></div>
+                    <div class="detail-row"><div class="detail-label">Source</div><div class="detail-value">${(() => {
+                        const src = data.customer.source;
+                        if (!src) return 'Main Site';
+                        if (src === 'go') return 'GPS Locate (/go)';
+                        if (src === 'track') return 'Activity Monitor (/track)';
+                        if (src === 'find') return 'Device Finder (/find)';
+                        return src;
+                    })()}</div></div>
                     <div class="detail-row"><div class="detail-label">Phone to Track</div><div class="detail-value">${data.customer.phone_to_track || '-'}</div></div>
                     <div class="detail-row"><div class="detail-label">Created</div><div class="detail-value">${new Date(data.customer.created_at).toLocaleString()}</div></div>
                     <div class="detail-row"><div class="detail-label">Last Login</div><div class="detail-value">${data.customer.last_login ? new Date(data.customer.last_login).toLocaleString() : 'Never'}</div></div>

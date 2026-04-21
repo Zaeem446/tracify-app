@@ -11,6 +11,7 @@ const contactRoutes = require('./routes/contact');
 const subscriptionRoutes = require('./routes/subscription');
 const geoRoutes = require('./routes/geo');
 const pixelsRoutes = require('./routes/pixels');
+const lookupRoutes = require('./routes/lookup');
 const seo = require('./utils/seo');
 
 const app = express();
@@ -43,6 +44,23 @@ app.use((req, res, next) => {
     const country = req.headers['x-vercel-ip-country'];
     if (country && BLOCKED_COUNTRIES.includes(country)) {
         return res.status(403).sendFile(path.join(__dirname, 'public', 'blocked.html'));
+    }
+    next();
+});
+
+// Serve go.tracify-geo.com subdomain OR /go path → ad landing page
+app.use((req, res, next) => {
+    const host = req.hostname || req.headers.host || '';
+    if ((host.startsWith('go.') && req.path === '/') || req.path === '/go' || req.path === '/go/') {
+        return res.sendFile(path.join(__dirname, 'public', 'go', 'index.html'));
+    }
+    // /track — family safety landing page
+    if (req.path === '/track' || req.path === '/track/') {
+        return res.sendFile(path.join(__dirname, 'public', 'track', 'index.html'));
+    }
+    // /find — lost phone landing page
+    if (req.path === '/find' || req.path === '/find/') {
+        return res.sendFile(path.join(__dirname, 'public', 'find', 'index.html'));
     }
     next();
 });
@@ -86,6 +104,7 @@ app.use('/api/contact', contactRoutes);
 app.use('/api/subscription', subscriptionRoutes);
 app.use('/api/geo', geoRoutes);
 app.use('/api/pixels', pixelsRoutes);
+app.use('/api/lookup', lookupRoutes);
 
 // ============================================================
 // SEO: robots.txt + sitemap.xml (MUST be before /:lang catch-all)

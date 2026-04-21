@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tracify - Locate Any Phone Number Instantly</title>
+  <meta name="description" content="Enter any phone number and locate it instantly. See carrier, country, local time and more. Try Tracify now.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <style>
+    html, body { margin: 0; padding: 0; background: #F7F3EB; }
+    body { font-family: 'Geist', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    * { box-sizing: border-box; }
+    a { color: inherit; }
+    button { font-family: inherit; }
+    .leaflet-container { background: #EFE8DA; font-family: 'Geist', system-ui; }
+    .tracify-pin-icon { background: none !important; border: none !important; }
+    @keyframes tracify-mapring { 0% { transform: translate(-50%,-50%) scale(0.5); opacity: 0.5; } 100% { transform: translate(-50%,-50%) scale(2.4); opacity: 0; } }
+    @keyframes tracify-pindrop { 0% { transform: translateY(-24px) scale(0.6); opacity: 0; } 60% { transform: translateY(3px) scale(1.04); opacity: 1; } 100% { transform: translateY(0) scale(1); opacity: 1; } }
+    @keyframes tracify-fadein { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes tracify-popin { 0% { transform: translateY(20px) scale(0.94); opacity: 0; } 100% { transform: translateY(0) scale(1); opacity: 1; } }
+    @keyframes tracify-shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    @keyframes tracify-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes tracify-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    @keyframes tracify-scan { 0% { transform: translateY(-100%); } 100% { transform: translateY(100%); } }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" src="/go/components/countries.jsx"></script>
+  <script type="text/babel" src="/go/components/brand.jsx"></script>
+  <script type="text/babel" src="/go/components/real-map.jsx"></script>
+  <script type="text/babel" src="/go/app.jsx"></script>
+</body>
+</html>
