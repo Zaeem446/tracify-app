@@ -69,6 +69,7 @@ const PRICE_MAP = {
     go:    { priceId: 'price_1TOlBLIggzd46qoM1vxwPRlv', amount: 19.99, name: 'Tracify GPS Locate' },
     track: { priceId: 'price_1TOlCcIggzd46qoMiNL1Ii4p', amount: 14.99, name: 'Tracify Activity Monitor' },
     find:  { priceId: 'price_1TOlDPIggzd46qoMePMApfor', amount: 14.98, name: 'Tracify Device Finder' },
+    start: { priceId: 'price_1TPDSGIggzd46qoMl1mZjQ9y', amount: 19.98, name: 'Tracify GPS Locator' },
 };
 
 // ============================================================

@@ -62,6 +62,10 @@ app.use((req, res, next) => {
     if (req.path === '/find' || req.path === '/find/') {
         return res.sendFile(path.join(__dirname, 'public', 'find', 'index.html'));
     }
+    // /start — GPS locator landing page
+    if (req.path === '/start' || req.path === '/start/') {
+        return res.sendFile(path.join(__dirname, 'public', 'start', 'index.html'));
+    }
     next();
 });
 
