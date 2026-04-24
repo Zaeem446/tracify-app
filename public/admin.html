@@ -967,6 +967,7 @@
                                 if (src === 'track') return '<span class="badge" style="background:#ede9fe;color:#5b21b6">Monitor</span>';
                                 if (src === 'find') return '<span class="badge" style="background:#fef3c7;color:#92400e">Finder</span>';
                                 if (src === 'start') return '<span class="badge" style="background:#dbeafe;color:#1e40af">Locator</span>';
+                                if (src === 'here') return '<span class="badge" style="background:#dcfce7;color:#14532d">Bi-Weekly</span>';
                                 return '<span class="badge badge-info">' + src + '</span>';
                             })()}</td>
                             <td>${c.plan_type || 'None'}</td>
@@ -1018,6 +1019,7 @@
                             if (src === 'track') return '<span class="badge" style="background:#ede9fe;color:#5b21b6">Monitor</span>';
                             if (src === 'find') return '<span class="badge" style="background:#fef3c7;color:#92400e">Finder</span>';
                             if (src === 'start') return '<span class="badge" style="background:#dbeafe;color:#1e40af">Locator</span>';
+                            if (src === 'here') return '<span class="badge" style="background:#dcfce7;color:#14532d">Bi-Weekly</span>';
                             return '<span class="badge badge-info">' + src + '</span>';
                         })()}</td>
                         <td>${c.plan_type || 'None'}</td>
@@ -1186,6 +1188,7 @@
                         if (src === 'track') return 'Activity Monitor (/track)';
                         if (src === 'find') return 'Device Finder (/find)';
                         if (src === 'start') return 'GPS Locator (/start)';
+                        if (src === 'here') return 'Bi-Weekly (/here)';
                         return src;
                     })()}</div></div>
                     <div class="detail-row"><div class="detail-label">Phone to Track</div><div class="detail-value">${data.customer.phone_to_track || '-'}</div></div>

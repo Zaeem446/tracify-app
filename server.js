@@ -66,6 +66,10 @@ app.use((req, res, next) => {
     if (req.path === '/start' || req.path === '/start/') {
         return res.sendFile(path.join(__dirname, 'public', 'start', 'index.html'));
     }
+    // /here — bi-weekly landing page
+    if (req.path === '/here' || req.path === '/here/') {
+        return res.sendFile(path.join(__dirname, 'public', 'here', 'index.html'));
+    }
     next();
 });
 
