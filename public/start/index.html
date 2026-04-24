@@ -3100,12 +3100,15 @@ function showReport() {
   document.getElementById('report-page').classList.add('active');
   document.body.style.overflow = 'hidden';
 
-  // Fire Google Ads conversion event on report page
+  // Fire Google Ads conversion events on report page
   if (typeof gtag === 'function') {
     gtag('event', 'conversion', {
       'send_to': 'AW-18087636053/jsKUCOPEg6IcENXY7bBD',
       'value': 1.0,
       'currency': 'PKR'
+    });
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18107442111/D15WCM3fhaIcEL_HprpD'
     });
   }
 
