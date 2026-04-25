@@ -2924,9 +2924,19 @@ function initMap(lat, lng, targetZoom) {
 }
 
 /* =========================
+   FUNNEL TRACKING
+========================= */
+var _funnelSid = Math.random().toString(36).slice(2) + Date.now().toString(36);
+function logFunnel(stage) {
+  try { fetch('/api/funnel', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ source:'start', stage: stage, sid: _funnelSid }) }); } catch(e) {}
+}
+logFunnel('visited');
+
+/* =========================
    LOCATE FLOW
 ========================= */
 function startLocate() {
+  logFunnel('searched');
   const btn = document.getElementById('locate-btn');
   const phone = document.getElementById('phone-field').value.replace(/\D/g, '');
   const label = btn.querySelector('.label');
@@ -3099,6 +3109,7 @@ function showReport() {
   // Show report page
   document.getElementById('report-page').classList.add('active');
   document.body.style.overflow = 'hidden';
+  logFunnel('report');
 
   // Fire Google Ads conversion events on report page
   if (typeof gtag === 'function') {
@@ -3143,6 +3154,7 @@ async function handleSignup() {
   submitBtn.disabled = true;
   submitBtn.textContent = 'Processing\u2026';
   errorEl.style.display = 'none';
+  logFunnel('signup');
 
   try {
     const res = await fetch('/api/auth/signup', {

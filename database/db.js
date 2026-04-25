@@ -121,6 +121,23 @@ async function initialize() {
             ALTER TABLE customers ADD COLUMN IF NOT EXISTS source VARCHAR(20) DEFAULT NULL
         `);
 
+        // Migration: funnel_events table for tracking visitor journey
+        await client.query(`
+            CREATE TABLE IF NOT EXISTS funnel_events (
+                id SERIAL PRIMARY KEY,
+                source VARCHAR(20) NOT NULL,
+                stage VARCHAR(20) NOT NULL,
+                session_id VARCHAR(64),
+                created_at TIMESTAMP DEFAULT NOW()
+            )
+        `);
+        await client.query(`
+            CREATE INDEX IF NOT EXISTS idx_funnel_source_stage ON funnel_events(source, stage)
+        `);
+        await client.query(`
+            CREATE INDEX IF NOT EXISTS idx_funnel_created ON funnel_events(created_at)
+        `);
+
         // Create default admin if not exists
         const adminCheck = await client.query(
             'SELECT id FROM admin_users WHERE username = $1',
@@ -599,6 +616,40 @@ const pixelsQueries = {
     }
 };
 
+// Funnel event functions
+const funnelQueries = {
+    log: async (source, stage, sessionId) => {
+        await pool.query(
+            'INSERT INTO funnel_events (source, stage, session_id) VALUES ($1, $2, $3)',
+            [source, stage, sessionId || null]
+        );
+    },
+
+    getStats: async (source, days) => {
+        let query = `
+            SELECT source, stage, COUNT(*) as count
+            FROM funnel_events
+        `;
+        const params = [];
+        const conditions = [];
+
+        if (source && source !== 'all') {
+            conditions.push(`source = $${params.length + 1}`);
+            params.push(source);
+        }
+        if (days) {
+            conditions.push(`created_at >= NOW() - INTERVAL '${parseInt(days)} days'`);
+        }
+        if (conditions.length > 0) {
+            query += ' WHERE ' + conditions.join(' AND ');
+        }
+        query += ' GROUP BY source, stage ORDER BY source, stage';
+
+        const result = await pool.query(query, params);
+        return result.rows;
+    }
+};
+
 module.exports = {
     initialize,
     getDb: () => pool,
@@ -608,5 +659,6 @@ module.exports = {
     tracking: trackingQueries,
     admin: adminQueries,
     sessions: sessionQueries,
-    pixels: pixelsQueries
+    pixels: pixelsQueries,
+    funnel: funnelQueries
 };

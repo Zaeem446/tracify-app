@@ -112,6 +112,21 @@ app.use('/api/contact', contactRoutes);
 app.use('/api/subscription', subscriptionRoutes);
 app.use('/api/geo', geoRoutes);
 app.use('/api/pixels', pixelsRoutes);
+
+// Funnel tracking — public endpoint (no auth)
+app.post('/api/funnel', async (req, res) => {
+    try {
+        const { source, stage, sid } = req.body;
+        const validStages = ['visited', 'searched', 'report', 'signup', 'paid'];
+        if (!source || !stage || !validStages.includes(stage)) {
+            return res.status(400).json({ error: 'Invalid' });
+        }
+        await db.funnel.log(source, stage, sid);
+        res.json({ ok: true });
+    } catch (e) {
+        res.json({ ok: true }); // silent fail — don't break user flow
+    }
+});
 app.use('/api/lookup', lookupRoutes);
 
 // ============================================================

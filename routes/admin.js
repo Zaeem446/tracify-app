@@ -200,6 +200,18 @@ router.get('/stats', requireAdmin, async (req, res) => {
     }
 });
 
+// Funnel stats
+router.get('/funnel', requireAdmin, async (req, res) => {
+    try {
+        const { source, days } = req.query;
+        const stats = await db.funnel.getStats(source || 'all', days ? parseInt(days) : null);
+        res.json({ stats });
+    } catch (error) {
+        console.error('Funnel stats error:', error);
+        res.status(500).json({ error: 'Failed to fetch funnel stats' });
+    }
+});
+
 // Get all customers
 router.get('/customers', requireAdmin, async (req, res) => {
     try {
