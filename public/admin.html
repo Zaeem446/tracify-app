@@ -705,18 +705,26 @@
                             <option value="start">Locator (/start)</option>
                             <option value="here">Bi-Weekly (/here)</option>
                         </select>
+                        <select class="sort-select" id="filter-status" onchange="renderCustomers()">
+                            <option value="all">All Status</option>
+                            <option value="subscribed">Subscribed</option>
+                            <option value="signup-only">Signup Only</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
                         <select class="sort-select" id="sort-customers" onchange="renderCustomers()">
                             <option value="newest">Newest first</option>
                             <option value="oldest">Oldest first</option>
                             <option value="email-az">Email A-Z</option>
                             <option value="email-za">Email Z-A</option>
                         </select>
+                        <span id="customers-count" style="font-size:13px;color:#666;white-space:nowrap;font-weight:600;"></span>
                     </div>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
                             <tr>
+                                <th>Sr#</th>
                                 <th>ID</th>
                                 <th>Email</th>
                                 <th>Phone to Track</th>
@@ -728,7 +736,7 @@
                             </tr>
                         </thead>
                         <tbody id="customers-table">
-                            <tr><td colspan="8" class="loading">Loading...</td></tr>
+                            <tr><td colspan="9" class="loading">Loading...</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -1006,6 +1014,7 @@
             const search = (document.getElementById('search-customers').value || '').toLowerCase();
             const sort = document.getElementById('sort-customers').value;
             const sourceFilter = document.getElementById('filter-source').value;
+            const statusFilter = document.getElementById('filter-status').value;
             let items = allCustomers.filter(c => {
                 const matchesSearch = (c.email || '').toLowerCase().includes(search) ||
                     (c.phone_to_track || '').toLowerCase().includes(search) ||
@@ -1014,15 +1023,22 @@
                 const matchesSource = sourceFilter === 'all' ||
                     (sourceFilter === 'main' && !c.source) ||
                     c.source === sourceFilter;
-                return matchesSearch && matchesSource;
+                const st = c.subscription_status;
+                const matchesStatus = statusFilter === 'all' ||
+                    (statusFilter === 'subscribed' && st === 'active') ||
+                    (statusFilter === 'signup-only' && (!st || st === 'Inactive')) ||
+                    (statusFilter === 'cancelled' && st === 'cancelled');
+                return matchesSearch && matchesSource && matchesStatus;
             });
             items = sortByOption(items, sort, 'created_at', 'email');
+            document.getElementById('customers-count').textContent = items.length + ' of ' + allCustomers.length;
             const tbody = document.getElementById('customers-table');
             if (items.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="8" class="empty-state">No customers found</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="9" class="empty-state">No customers found</td></tr>';
             } else {
-                tbody.innerHTML = items.map(c => `
+                tbody.innerHTML = items.map((c, idx) => `
                     <tr onclick="showCustomerDetail(${c.id})" style="cursor:pointer">
+                        <td>${idx + 1}</td>
                         <td>#${c.id}</td>
                         <td>${c.email}</td>
                         <td>${c.phone_to_track || '-'}</td>
