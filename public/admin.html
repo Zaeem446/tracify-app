@@ -694,8 +694,17 @@
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title">All Customers</h2>
-                    <div style="display:flex;gap:10px;align-items:center;">
+                    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
                         <input type="text" placeholder="Search..." class="search-input" id="search-customers" oninput="renderCustomers()">
+                        <select class="sort-select" id="filter-source" onchange="renderCustomers()">
+                            <option value="all">All Sources</option>
+                            <option value="main">Main</option>
+                            <option value="go">GPS (/go)</option>
+                            <option value="track">Monitor (/track)</option>
+                            <option value="find">Finder (/find)</option>
+                            <option value="start">Locator (/start)</option>
+                            <option value="here">Bi-Weekly (/here)</option>
+                        </select>
                         <select class="sort-select" id="sort-customers" onchange="renderCustomers()">
                             <option value="newest">Newest first</option>
                             <option value="oldest">Oldest first</option>
@@ -996,12 +1005,17 @@
         function renderCustomers() {
             const search = (document.getElementById('search-customers').value || '').toLowerCase();
             const sort = document.getElementById('sort-customers').value;
-            let items = allCustomers.filter(c =>
-                (c.email || '').toLowerCase().includes(search) ||
-                (c.phone_to_track || '').toLowerCase().includes(search) ||
-                (c.source || '').toLowerCase().includes(search) ||
-                (c.plan_type || '').toLowerCase().includes(search)
-            );
+            const sourceFilter = document.getElementById('filter-source').value;
+            let items = allCustomers.filter(c => {
+                const matchesSearch = (c.email || '').toLowerCase().includes(search) ||
+                    (c.phone_to_track || '').toLowerCase().includes(search) ||
+                    (c.source || '').toLowerCase().includes(search) ||
+                    (c.plan_type || '').toLowerCase().includes(search);
+                const matchesSource = sourceFilter === 'all' ||
+                    (sourceFilter === 'main' && !c.source) ||
+                    c.source === sourceFilter;
+                return matchesSearch && matchesSource;
+            });
             items = sortByOption(items, sort, 'created_at', 'email');
             const tbody = document.getElementById('customers-table');
             if (items.length === 0) {
