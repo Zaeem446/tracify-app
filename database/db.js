@@ -248,7 +248,9 @@ const customerQueries = {
             SELECT c.*, s.plan_type, s.status as subscription_status,
                    s.started_at as subscription_started, s.expires_at as subscription_expires
             FROM customers c
-            LEFT JOIN subscriptions s ON c.id = s.customer_id AND s.status = 'active'
+            LEFT JOIN subscriptions s ON s.id = (
+                SELECT id FROM subscriptions WHERE customer_id = c.id ORDER BY started_at DESC LIMIT 1
+            )
             ORDER BY c.created_at DESC
         `);
         return result.rows;
