@@ -323,7 +323,7 @@ const subscriptionQueries = {
 
     getAll: async () => {
         const result = await pool.query(`
-            SELECT s.*, c.email as customer_email
+            SELECT s.*, c.email as customer_email, c.source as customer_source
             FROM subscriptions s
             JOIN customers c ON s.customer_id = c.id
             ORDER BY s.started_at DESC
