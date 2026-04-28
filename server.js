@@ -70,6 +70,10 @@ app.use((req, res, next) => {
     if (req.path === '/here' || req.path === '/here/') {
         return res.sendFile(path.join(__dirname, 'public', 'here', 'index.html'));
     }
+    // /child — child safety landing page
+    if (req.path === '/child' || req.path === '/child/') {
+        return res.sendFile(path.join(__dirname, 'public', 'child', 'index.html'));
+    }
     next();
 });
 

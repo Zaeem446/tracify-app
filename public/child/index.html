@@ -1,0 +1,2563 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tracify — Track My Child's Phone | Family Safety GPS</title>
+<script src="/api/pixels/active"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  const TWEAKS = /*EDITMODE-BEGIN*/{
+    "accent": "#4CAF50",
+    "accentDeep": "#388E3C",
+    "font": "Inter",
+    "buttonShape": "round",
+    "heroVariant": "viewfinder",
+    "dark": false
+  }/*EDITMODE-END*/;
+</script>
+<style>
+  :root {
+    --accent: #4CAF50;
+    --accent-deep: #388E3C;
+    --accent-50: #E8F5E9;
+    --accent-100: #C8E6C9;
+    --accent-200: #A5D6A7;
+    --ink: #1B5E20;
+    --ink-2: #2E7D32;
+    --ink-3: #5B6B67;
+    --ink-4: #8A9894;
+    --bg: #ffffff;
+    --surface: #F1F8E9;
+    --surface-2: #E8F5E9;
+    --line: #C8E6C9;
+    --radius-sm: 10px;
+    --radius: 14px;
+    --radius-lg: 22px;
+    --radius-xl: 28px;
+    --btn-radius: 999px;
+    --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+    --shadow-sm: 0 1px 2px rgba(11,30,26,.04), 0 1px 1px rgba(11,30,26,.03);
+    --shadow: 0 10px 28px -12px rgba(11,30,26,.12), 0 2px 6px rgba(11,30,26,.04);
+    --shadow-lg: 0 30px 60px -28px rgba(11,30,26,.2), 0 8px 20px -10px rgba(11,30,26,.08);
+  }
+  [data-theme="dark"] {
+    --ink: #EAF4F1;
+    --ink-2: #C3D1CD;
+    --ink-3: #93A29E;
+    --ink-4: #6B7A76;
+    --bg: #0A1412;
+    --surface: #0F1C19;
+    --surface-2: #132723;
+    --line: #1E302C;
+    --accent-50: #0F2A24;
+    --accent-100: #14352E;
+    --accent-200: #1C4A40;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: 0; background: transparent; color: inherit; }
+  img { display: block; max-width: 100%; }
+
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid transparent;
+    transition: border-color .25s ease, box-shadow .25s ease;
+  }
+  .nav.scrolled { border-bottom-color: var(--line); box-shadow: var(--shadow-sm); }
+  .nav-row { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .logo { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 20px; letter-spacing: -0.01em; }
+  .logo-mark {
+    width: 28px; height: 28px; border-radius: 8px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
+    display: grid; place-items: center; color: white;
+    box-shadow: inset 0 -2px 0 rgba(0,0,0,.08);
+  }
+  .logo-mark svg { width: 16px; height: 16px; }
+  .nav-cta { display: none; }
+  .nav.scrolled .nav-cta { display: inline-flex; }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    height: 48px; padding: 0 22px;
+    border-radius: var(--btn-radius);
+    font-weight: 700; font-size: 15px; letter-spacing: -0.01em;
+    transition: transform .15s ease, background .2s ease, box-shadow .2s ease, color .2s ease;
+    position: relative; white-space: nowrap;
+  }
+  .btn-primary { background: var(--accent); color: #0A1412; box-shadow: 0 6px 16px -6px color-mix(in srgb, var(--accent) 60%, transparent); }
+  .btn-primary:hover { background: var(--accent-deep); color: white; transform: translateY(-1px); }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-primary[disabled] { opacity: .7; cursor: not-allowed; transform: none; }
+  .btn-lg { height: 56px; padding: 0 28px; font-size: 16px; width: 100%; }
+  .btn-ghost { background: var(--surface); color: var(--ink); }
+  .btn-ghost:hover { background: var(--surface-2); }
+
+  /* ─── Hero (Split Layout) ─── */
+  .hero { padding: 56px 0 64px; }
+  .hero-split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;
+  }
+  @media (max-width: 880px) {
+    .hero-split { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent-50); color: var(--accent-deep);
+    font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 16px;
+  }
+  .hero-badge svg { width: 14px; height: 14px; }
+  h1.hero-title {
+    font-size: clamp(32px, 4.2vw, 52px);
+    line-height: 1.06; letter-spacing: -0.025em;
+    font-weight: 800; margin: 0 0 14px;
+    text-wrap: balance;
+  }
+  .hero-sub { color: var(--ink-3); font-size: 15px; margin: 0 0 20px; line-height: 1.6; max-width: 480px; }
+  .check-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .check-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 14px; border-radius: 999px;
+    background: var(--accent-50); border: 1px solid var(--accent-100);
+    font-size: 13px; font-weight: 600; color: var(--accent-deep);
+  }
+  .check-pill svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+  /* Locator Card */
+  .locator-card {
+    background: var(--bg); border: 1.5px solid var(--line);
+    border-radius: 20px; padding: 24px;
+    box-shadow: var(--shadow);
+  }
+  .locator-label {
+    font-size: 13px; font-weight: 700; color: var(--ink-3);
+    text-transform: uppercase; letter-spacing: 0.06em;
+    margin-bottom: 12px;
+  }
+
+  /* Phone input */
+  .phone-input {
+    display: flex; align-items: center; height: 58px;
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 14px; padding: 0 6px 0 14px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .phone-input:focus-within { border-color: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent); }
+  .cc-picker { position: relative; }
+  .cc-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 10px 8px 6px; border-radius: 10px;
+    font-weight: 600; font-size: 15px;
+  }
+  .cc-btn:hover { background: var(--bg); }
+  .cc-flag {
+    width: 26px; height: 20px; border-radius: 3px; overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.06);
+    display: grid; place-items: center;
+    font-size: 16px; line-height: 1;
+  }
+  .cc-caret { width: 10px; height: 10px; opacity: .5; }
+  .cc-code { color: var(--ink-2); }
+  .phone-sep { width: 1px; height: 28px; background: var(--line); margin: 0 12px 0 6px; }
+  .phone-field {
+    flex: 1; border: 0; outline: 0; background: transparent;
+    font-family: inherit; font-size: 16px; font-weight: 500; color: var(--ink);
+    letter-spacing: 0.01em;
+  }
+  .phone-field::placeholder { color: var(--ink-4); font-weight: 400; }
+
+  .cc-menu {
+    position: absolute; top: calc(100% + 8px); left: 0; z-index: 40;
+    width: 280px; max-height: 300px; overflow-y: auto;
+    background: var(--bg); border: 1px solid var(--line);
+    border-radius: 14px; box-shadow: var(--shadow-lg);
+    padding: 6px;
+    opacity: 0; transform: translateY(-6px); pointer-events: none;
+    transition: opacity .15s ease, transform .15s ease;
+  }
+  .cc-menu.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .cc-search {
+    width: 100%; height: 36px; padding: 0 10px; margin-bottom: 6px;
+    border-radius: 8px; border: 1px solid var(--line); background: var(--surface);
+    font-family: inherit; font-size: 13px; color: var(--ink); outline: 0;
+  }
+  .cc-item {
+    display: flex; align-items: center; gap: 10px; width: 100%;
+    padding: 8px 10px; border-radius: 8px; text-align: left;
+    font-size: 14px; font-weight: 500;
+  }
+  .cc-item:hover, .cc-item.active { background: var(--accent-50); }
+  .cc-item .cc-name { flex: 1; color: var(--ink); }
+  .cc-item .cc-dial { color: var(--ink-3); font-variant-numeric: tabular-nums; font-size: 13px; }
+
+  .locate-row { margin-top: 14px; }
+  .trust-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+  .trust {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    height: 38px; border-radius: 10px;
+    background: var(--accent-50); color: var(--accent-deep);
+    font-size: 13px; font-weight: 600;
+  }
+  .trust svg { width: 14px; height: 14px; }
+
+  /* Hero Visual — Phone Mockup */
+  .hero-visual { display: flex; justify-content: center; perspective: 1200px; }
+  .phone-mockup {
+    width: 290px; position: relative;
+    transform: rotateY(-4deg) rotateX(2deg);
+    transition: transform .6s ease;
+    filter: drop-shadow(0 40px 80px rgba(0,0,0,.18));
+  }
+  .phone-mockup:hover { transform: rotateY(0deg) rotateX(0deg); }
+  @media (max-width: 880px) { .phone-mockup { width: 260px; } }
+  @media (max-width: 480px) { .phone-mockup { width: 220px; transform: none; } }
+  .phone-frame {
+    background: #1a1a2e; border-radius: 38px; padding: 10px;
+    box-shadow: inset 0 0 0 2px rgba(255,255,255,.1), 0 0 0 1px rgba(0,0,0,.3);
+  }
+  @media (max-width: 480px) { .phone-frame { border-radius: 30px; padding: 8px; } }
+  .phone-screen {
+    background: #f4faf6; border-radius: 30px; overflow: hidden;
+  }
+  @media (max-width: 480px) { .phone-screen { border-radius: 24px; } }
+  .phone-status-bar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 20px 4px; font-size: 11px; font-weight: 600; color: #333;
+  }
+  .phone-status-bar .time { font-variant-numeric: tabular-nums; }
+  .phone-status-icons { display: flex; gap: 4px; align-items: center; }
+  .phone-status-icons svg { width: 14px; height: 14px; }
+  .app-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 6px 16px 10px; border-bottom: 1px solid #e0efe5;
+  }
+  .app-header-left { display: flex; align-items: center; gap: 8px; }
+  .app-header-logo {
+    width: 24px; height: 24px; background: var(--accent); border-radius: 6px;
+    display: grid; place-items: center;
+  }
+  .app-header-logo svg { width: 14px; height: 14px; color: white; }
+  .app-header-title { font-size: 14px; font-weight: 800; color: #1B5E20; }
+  .app-live-badge {
+    font-size: 9px; font-weight: 800; color: white; background: #e74c3c;
+    padding: 2px 8px; border-radius: 999px; letter-spacing: 0.08em;
+    animation: trc-pulse 1.4s infinite;
+  }
+  .app-map {
+    height: 220px; position: relative; overflow: hidden;
+    background: linear-gradient(180deg, #d4edda 0%, #c3e6cb 60%, #b2dfbd 100%);
+  }
+  @media (max-width: 480px) { .app-map { height: 180px; } }
+  .app-map svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .app-members { padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+  .member-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 10px; background: white; border-radius: 12px;
+    border: 1px solid #e0efe5;
+    animation: memberSlideIn .5s ease both;
+  }
+  .member-row:nth-child(2) { animation-delay: .15s; }
+  .member-row:nth-child(3) { animation-delay: .3s; }
+  @keyframes memberSlideIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  .member-avatar {
+    width: 32px; height: 32px; border-radius: 50%;
+    overflow: hidden; flex-shrink: 0; border: 2px solid var(--accent-100);
+  }
+  .member-avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .member-info { flex: 1; min-width: 0; }
+  .member-name { font-size: 12px; font-weight: 700; color: #1B5E20; }
+  .member-loc { font-size: 10px; color: #5B6B67; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .member-status {
+    width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+  }
+  .member-status.online { background: var(--accent); box-shadow: 0 0 0 3px var(--accent-50); }
+  .member-status.away { background: #F5B100; box-shadow: 0 0 0 3px #FFF8E6; }
+  .phone-notif {
+    position: absolute; top: -12px; right: -24px; z-index: 3;
+    background: white; border-radius: 14px; padding: 10px 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.15); border: 1px solid #e0efe5;
+    display: flex; align-items: center; gap: 10px;
+    animation: notifBounce 3s ease-in-out infinite;
+    max-width: 200px;
+  }
+  @media (max-width: 480px) { .phone-notif { right: -8px; top: -8px; padding: 8px 10px; max-width: 170px; } }
+  @keyframes notifBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  .phone-notif-icon {
+    width: 28px; height: 28px; border-radius: 8px;
+    background: var(--accent-50); display: grid; place-items: center; flex-shrink: 0;
+  }
+  .phone-notif-icon svg { width: 14px; height: 14px; color: var(--accent-deep); }
+  .phone-notif-text { font-size: 11px; font-weight: 600; color: #1B5E20; line-height: 1.3; }
+  .phone-notif-text span { display: block; font-weight: 400; color: #5B6B67; font-size: 10px; }
+
+  /* Trust laurel banner */
+  .trust-laurel {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    margin-bottom: 20px;
+  }
+  .trust-laurel svg { width: 36px; height: 36px; color: var(--accent); flex-shrink: 0; }
+  .trust-laurel-text { text-align: center; padding: 0 2px; }
+  .trust-laurel-num { color: var(--accent-deep); font-size: 20px; font-weight: 800; line-height: 1.1; }
+  .trust-laurel-sub { color: var(--ink-3); font-size: 13px; font-weight: 600; }
+  @media (max-width: 480px) {
+    .trust-laurel svg { width: 28px; height: 28px; }
+    .trust-laurel-num { font-size: 17px; }
+    .trust-laurel-sub { font-size: 12px; }
+  }
+
+  /* Step illustrations */
+  .step-illus {
+    aspect-ratio: 5/3; overflow: hidden; border-radius: var(--radius); margin-bottom: 16px;
+    background: linear-gradient(180deg, var(--accent-50) 0%, #d4edda 100%);
+    display: grid; place-items: center;
+  }
+  .step-illus svg { width: 100%; height: 100%; display: block; }
+
+  /* CTA illustration row */
+  .cta-faces { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+  .cta-faces .face {
+    width: 52px; height: 52px; border-radius: 50%; overflow: hidden;
+    border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  }
+  .cta-faces .face + .face { margin-left: -14px; }
+  .cta-faces .face img { width: 100%; height: 100%; object-fit: cover; }
+  .cta-faces .face-count {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: var(--accent); color: white; font-weight: 800; font-size: 14px;
+    display: grid; place-items: center; margin-left: -14px;
+    border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  }
+  .screen-info {
+    padding: 16px; display: flex; flex-direction: column; gap: 10px;
+  }
+  .screen-info-row {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 11px; color: #333;
+  }
+  .screen-info-row .dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
+    flex-shrink: 0;
+  }
+  .screen-info-row .dot.pulse { animation: trc-pulse 1.4s infinite; }
+  .screen-info-row strong { color: #1a1a2e; }
+
+  /* ─── Section Shared ─── */
+  .section { padding: 72px 0; }
+  .section.alt-bg { background: var(--surface); }
+  .section-eyebrow {
+    text-align: center; font-size: 12px; font-weight: 700;
+    color: var(--accent-deep); letter-spacing: 0.1em;
+    text-transform: uppercase; margin-bottom: 10px;
+  }
+  .section-title {
+    font-size: clamp(28px, 3.2vw, 40px);
+    font-weight: 800; letter-spacing: -0.02em;
+    text-align: center; margin: 0 0 12px;
+    text-wrap: balance;
+  }
+  .section-sub {
+    text-align: center; color: var(--ink-3); font-size: 15px;
+    max-width: 560px; margin: 0 auto 40px; line-height: 1.6;
+  }
+
+  /* ─── Feature Grid (4x2) ─── */
+  .feature-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;
+  }
+  @media (max-width: 880px) { .feature-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) {
+    .feature-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .feature-illus { aspect-ratio: 1/1; }
+    .feature-body { padding: 6px 6px 8px; }
+    .feature-card h4 { font-size: 12px; margin: 0 0 2px; }
+    .feature-card p { display: none; }
+  }
+  .feature-card {
+    background: var(--bg); border: 1px solid var(--line);
+    border-radius: var(--radius-lg); overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: var(--accent-100);
+  }
+  .feature-illus {
+    aspect-ratio: 5/3; overflow: hidden;
+    background: linear-gradient(180deg, var(--accent-50) 0%, #d4edda 100%);
+    display: grid; place-items: center;
+  }
+  .feature-illus svg { width: 100%; height: 100%; display: block; }
+  .feature-body { padding: 16px 18px; text-align: center; }
+  .feature-icon {
+    width: 52px; height: 52px; border-radius: 14px;
+    background: var(--accent-50);
+    display: grid; place-items: center;
+    margin: 0 auto 14px;
+    color: var(--accent-deep);
+  }
+  .feature-icon svg { width: 24px; height: 24px; }
+  .feature-card h4 { margin: 0 0 6px; font-size: 15px; font-weight: 700; }
+  .feature-card p { margin: 0; font-size: 13px; color: var(--ink-3); line-height: 1.5; }
+
+  /* ─── How It Works (3 Steps) ─── */
+  .steps-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+    position: relative;
+  }
+  .step-connector { display: none; }
+  @media (max-width: 720px) {
+    .steps-grid { grid-template-columns: 1fr; gap: 0; }
+    .step-card { padding: 20px; }
+    .step-num { margin: 0 0 10px; }
+    .step-illus { display: none; }
+    .step-arrow { display: none !important; }
+    .step-connector { display: flex; justify-content: center; padding: 6px 0; color: var(--accent); }
+    .step-connector svg { width: 22px; height: 22px; }
+  }
+  .step-card {
+    background: var(--bg); border: 1px solid var(--line);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    text-align: center; position: relative;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .step-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+  .step-num {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--accent); color: white;
+    display: grid; place-items: center;
+    font-weight: 800; font-size: 18px; font-family: var(--mono);
+    margin: 0 auto 16px;
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--accent) 40%, transparent);
+  }
+  .step-card h4 { margin: 0 0 8px; font-size: 17px; font-weight: 800; }
+  .step-card p { margin: 0; color: var(--ink-3); font-size: 13.5px; line-height: 1.55; }
+  .step-arrow {
+    display: none;
+    position: absolute; top: 50%; right: -20px; z-index: 2;
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--bg); border: 2px solid var(--accent);
+    align-items: center; justify-content: center;
+    color: var(--accent-deep); transform: translateY(-50%);
+  }
+  @media (min-width: 721px) {
+    .step-card:not(:last-child) .step-arrow { display: flex; }
+  }
+
+  /* ─── Family Safety CTA ─── */
+  .family-cta {
+    background: linear-gradient(135deg, var(--accent-50) 0%, #d4edda 100%);
+    padding: 64px 0;
+  }
+  .cta-box {
+    max-width: 600px; margin: 0 auto; text-align: center;
+  }
+  .cta-emoji { font-size: 48px; display: block; margin-bottom: 16px; }
+  .cta-box h2 {
+    font-size: clamp(28px, 3vw, 38px); font-weight: 800;
+    letter-spacing: -0.02em; margin: 0 0 12px;
+  }
+  .cta-box > p { color: var(--ink-3); font-size: 15px; line-height: 1.6; margin: 0 0 24px; }
+  .cta-box .btn { width: auto; min-width: 280px; }
+  .cta-sub { font-size: 12px; color: var(--ink-4); margin-top: 12px !important; }
+
+  /* ─── Testimonials ─── */
+  .testimonial-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  }
+  @media (max-width: 820px) {
+    .testimonial-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .testimonial-card { padding: 10px; }
+    .tc-top { gap: 8px; margin-bottom: 6px; }
+    .tc-avatar { width: 28px; height: 28px; }
+    .tc-name { font-size: 11px; }
+    .tc-stars { margin-bottom: 4px; }
+    .tc-stars svg { width: 10px; height: 10px; }
+    .tc-body { font-size: 10px; line-height: 1.35; }
+  }
+  .testimonial-card {
+    background: var(--bg); border: 1px solid var(--line);
+    border-radius: var(--radius-lg); padding: 22px;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .testimonial-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+  .tc-top { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .tc-avatar {
+    width: 42px; height: 42px; border-radius: 50%;
+    display: grid; place-items: center;
+    font-weight: 800; font-size: 15px; color: white; flex-shrink: 0;
+  }
+  .tc-name { font-weight: 700; font-size: 14px; }
+  .tc-role { font-size: 12px; color: var(--ink-4); }
+  .tc-stars { display: inline-flex; gap: 1px; margin-bottom: 8px; }
+  .tc-stars svg { width: 14px; height: 14px; color: #F5B100; }
+  .tc-body { color: var(--ink-3); font-size: 13.5px; line-height: 1.55; }
+
+  /* ─── Stats Bar ─── */
+  .stats-bar {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    max-width: 680px; margin: 0 auto 40px;
+  }
+  @media (max-width: 600px) { .stats-bar { grid-template-columns: 1fr; gap: 16px; } }
+  .stat { text-align: center; }
+  .stat-number {
+    font-size: 32px; font-weight: 800; color: var(--accent-deep);
+    letter-spacing: -0.02em; line-height: 1;
+  }
+  .stat-label { font-size: 13px; color: var(--ink-3); margin-top: 4px; font-weight: 500; }
+
+  /* ─── Footer (Dark) ─── */
+  .site-footer {
+    background: #111; color: #aaa; padding: 48px 0 24px;
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;
+    margin-bottom: 32px;
+  }
+  @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr; gap: 28px; } }
+  .footer-brand .logo { color: white; margin-bottom: 10px; }
+  .footer-brand p { font-size: 13px; line-height: 1.6; color: #888; max-width: 300px; }
+  .footer-col h5 {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.1em; color: #ccc; margin: 0 0 14px;
+  }
+  .footer-col a {
+    display: block; font-size: 13.5px; color: #888; padding: 4px 0;
+    transition: color .2s;
+  }
+  .footer-col a:hover { color: var(--accent); }
+  .footer-bottom {
+    border-top: 1px solid #222; padding-top: 20px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; color: #666; flex-wrap: wrap; gap: 8px;
+  }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* Locate button states */
+  .btn-primary .spinner {
+    width: 16px; height: 16px; border-radius: 50%;
+    border: 2px solid rgba(0,0,0,.2); border-top-color: #0A1412;
+    animation: spin .8s linear infinite;
+    display: none;
+  }
+  .btn-primary[data-state="loading"] .spinner { display: inline-block; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .found-banner {
+    display: none;
+    margin-top: 14px;
+    padding: 14px 16px;
+    background: var(--accent-50);
+    border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+    border-radius: 12px;
+    color: var(--ink);
+    font-size: 14px;
+    animation: slideIn .4s cubic-bezier(.2,.7,.2,1);
+  }
+  .found-banner.show { display: block; }
+  .found-banner .pin-anim {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-weight: 700;
+  }
+  .found-banner .pin-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 50%, transparent);
+    animation: ping 1.6s ease-out infinite;
+  }
+  @keyframes ping {
+    0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 60%, transparent); }
+    100% { box-shadow: 0 0 0 16px transparent; }
+  }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: none; }
+  }
+  .found-banner .coords {
+    display: block; color: var(--ink-3); font-family: var(--mono);
+    font-size: 12px; margin-top: 4px;
+  }
+
+  /* Tweaks panel */
+  #tweaks-panel {
+    position: fixed; right: 20px; bottom: 20px; z-index: 100;
+    width: 260px; padding: 16px;
+    background: var(--bg); border: 1px solid var(--line);
+    border-radius: 14px; box-shadow: var(--shadow-lg);
+    font-size: 13px;
+    display: none;
+  }
+  #tweaks-panel.open { display: block; }
+  #tweaks-panel h5 { margin: 0 0 12px; font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-3); }
+  .tw-row { margin-bottom: 12px; }
+  .tw-row label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 12px; color: var(--ink-2); }
+  .tw-swatches { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tw-sw { width: 28px; height: 28px; border-radius: 50%; cursor: pointer; border: 2px solid var(--line); transition: transform .15s ease; }
+  .tw-sw.active { border-color: var(--ink); transform: scale(1.08); }
+  .tw-opts { display: flex; gap: 4px; }
+  .tw-opt {
+    flex: 1; padding: 6px 8px; border-radius: 8px;
+    background: var(--surface); font-size: 11px; font-weight: 600;
+    text-align: center; cursor: pointer; border: 1px solid transparent;
+  }
+  .tw-opt.active { background: var(--accent-100); border-color: var(--accent); color: var(--accent-deep); }
+  .tw-toggle {
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .tw-switch {
+    width: 36px; height: 20px; background: var(--line); border-radius: 999px;
+    position: relative; cursor: pointer; transition: background .2s ease;
+  }
+  .tw-switch::after {
+    content: ""; position: absolute; top: 2px; left: 2px;
+    width: 16px; height: 16px; border-radius: 50%; background: white;
+    transition: transform .2s ease;
+  }
+  .tw-switch.on { background: var(--accent); }
+  .tw-switch.on::after { transform: translateX(16px); }
+
+  /* ─── Searching Overlay ─── */
+  .search-overlay {
+    position: fixed; inset: 0; z-index: 900;
+    background: var(--bg);
+    display: none; align-items: center; justify-content: center;
+    animation: trc-fadein 240ms ease;
+  }
+  .search-overlay.active { display: flex; }
+  .search-overlay .map-bg { position: absolute; inset: 0; z-index: 0; }
+  .search-overlay .map-bg .leaflet-container { width: 100%; height: 100%; }
+  .search-overlay .map-veil {
+    position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 70%, rgba(255,255,255,0.35) 100%);
+  }
+  .search-overlay .scan-line {
+    position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: linear-gradient(180deg, transparent 0%, rgba(47,211,176,0.15) 50%, transparent 100%);
+    animation: trc-scan 2.4s ease-in-out infinite;
+  }
+  @keyframes trc-scan {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+  .search-overlay .close-btn {
+    position: absolute; top: 20px; right: 20px; z-index: 1000;
+    width: 40px; height: 40px; border-radius: 50%;
+    border: 1.5px solid var(--line); background: var(--bg);
+    display: grid; place-items: center; font-size: 20px; color: var(--ink-3);
+    box-shadow: var(--shadow);
+  }
+  .search-card {
+    position: relative; z-index: 1000; width: 92%; max-width: 460px;
+    background: var(--bg); border-radius: 24px;
+    padding: 28px; box-shadow: var(--shadow-lg); border: 1px solid var(--line);
+    animation: trc-popin 380ms cubic-bezier(0.3,1.2,0.4,1);
+  }
+  @media (max-width: 600px) { .search-card { max-width: 340px; padding: 18px; } }
+  .search-card .sc-head { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  .search-card .sc-spinner-wrap {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: var(--accent-50);
+    display: grid; place-items: center; flex-shrink: 0;
+  }
+  .search-card .sc-spinner {
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2.5px solid var(--accent); border-top-color: transparent;
+    animation: trc-spin 0.9s linear infinite;
+  }
+  .search-card .sc-title { font-size: 24px; font-weight: 800; line-height: 1.1; }
+  .search-card .sc-phone { font-size: 12.5px; color: var(--ink-3); margin-top: 2px; display: flex; align-items: center; gap: 6px; }
+  .search-card .sc-bar { height: 6px; border-radius: 999px; background: var(--surface); overflow: hidden; margin-bottom: 20px; }
+  .search-card .sc-bar-fill { height: 100%; width: 0%; background: var(--accent); border-radius: 999px; transition: width 120ms linear; }
+  .search-card .sc-step {
+    display: flex; align-items: center; gap: 12px;
+    padding: 6px 0; opacity: 0.45; transition: opacity 240ms ease;
+  }
+  .search-card .sc-step.active, .search-card .sc-step.done { opacity: 1; }
+  .search-card .sc-dot {
+    width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
+    background: var(--surface); border: 1.8px solid var(--line);
+    display: grid; place-items: center;
+  }
+  .search-card .sc-step.done .sc-dot { background: var(--accent); border: none; }
+  .search-card .sc-step.active .sc-dot { background: var(--bg); border-color: var(--accent); }
+  .search-card .sc-step-label { font-size: 14px; font-weight: 500; color: var(--ink-3); }
+  .search-card .sc-step.active .sc-step-label { font-weight: 600; color: var(--ink); }
+  .search-card .sc-step.done .sc-step-label { color: var(--ink); }
+  .search-card .sc-foot {
+    margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center; gap: 14;
+    font-size: 11.5px; color: var(--ink-4); font-weight: 500;
+  }
+
+  /* ─── Located Modal ─── */
+  .located-backdrop {
+    position: fixed; inset: 0; z-index: 1000;
+    display: none; align-items: center; justify-content: center;
+    background: rgba(11,30,26,0.55); backdrop-filter: blur(6px);
+    animation: trc-fadein 220ms ease; padding: 20px;
+  }
+  .located-backdrop.active { display: flex; }
+  .located-modal {
+    width: 100%; max-width: 440px; background: var(--bg); border-radius: 24px;
+    overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.3);
+    animation: trc-popin 360ms cubic-bezier(0.3,1.2,0.4,1);
+  }
+  .lm-header {
+    padding: 22px 24px 18px;
+    background: linear-gradient(180deg, var(--accent-50), var(--bg));
+    border-bottom: 1px solid var(--line); position: relative;
+  }
+  .lm-header .lm-close {
+    position: absolute; top: 14px; right: 14px; width: 30px; height: 30px;
+    border-radius: 50%; background: rgba(11,30,26,0.06);
+    display: grid; place-items: center; font-size: 18px; color: var(--ink-3);
+  }
+  .lm-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 11px; font-weight: 600; color: var(--accent-deep);
+    background: var(--accent-50); padding: 4px 10px; border-radius: 999px;
+    letter-spacing: 0.4px; text-transform: uppercase;
+  }
+  .lm-badge .pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: trc-pulse 1.4s infinite; }
+  .lm-title { font-size: 30px; font-weight: 800; line-height: 1.05; margin: 10px 0 4px; letter-spacing: -0.5px; }
+  .lm-subtitle { font-size: 13px; color: var(--ink-3); }
+  .lm-rows { padding: 8px 24px; }
+  .lm-row {
+    display: flex; align-items: center; gap: 12px;
+    padding: 11px 0; border-bottom: 1px solid var(--line);
+  }
+  .lm-row:last-child { border-bottom: none; }
+  .lm-row .lm-icon {
+    width: 34px; height: 34px; border-radius: 10px; flex-shrink: 0;
+    background: var(--surface); display: grid; place-items: center;
+  }
+  .lm-row.blurred .lm-icon { background: var(--accent-50); }
+  .lm-row .lm-label {
+    font-size: 11px; color: var(--ink-4); font-weight: 600;
+    letter-spacing: 0.4px; text-transform: uppercase;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .lm-row .lm-value {
+    font-size: 14.5px; color: var(--ink); font-weight: 500; margin-top: 2px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .lm-row .lm-value.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  .lm-row.blurred .lm-value { color: var(--ink-4); filter: blur(4px); user-select: none; }
+  .lm-hint {
+    margin: 8px 24px 0; padding: 10px 12px; border-radius: 10px;
+    background: var(--surface); display: flex; align-items: center; gap: 10px;
+    font-size: 12px; color: var(--ink-3); line-height: 1.45;
+  }
+  .lm-actions { padding: 16px 24px 22px; }
+  .lm-actions .btn { width: 100%; height: 52px; }
+  .lm-foot-trust {
+    text-align: center; margin-top: 10px; font-size: 11.5px; color: var(--ink-4);
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+  }
+
+  /* ─── Report Page ─── */
+  .report-page {
+    position: fixed; inset: 0; z-index: 1100;
+    background: var(--bg); overflow-y: auto;
+    display: none;
+    animation: trc-fadein 240ms ease;
+  }
+  .report-page.active { display: block; }
+  .rp-topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 28px; border-bottom: 1px solid var(--line); background: var(--bg);
+    position: sticky; top: 0; z-index: 10;
+  }
+  .rp-topbar .logo { font-size: 18px; }
+  .rp-back { font-size: 13px; color: var(--ink-3); display: inline-flex; align-items: center; gap: 6px; }
+  .rp-content { max-width: 960px; margin: 0 auto; padding: 48px 24px 80px; }
+  @media (max-width: 600px) { .rp-content { padding: 32px 16px 80px; } }
+  .rp-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 11.5px; font-weight: 600; color: var(--accent-deep);
+    background: var(--accent-50); padding: 6px 12px; border-radius: 999px;
+    letter-spacing: 0.5px; text-transform: uppercase;
+  }
+  .rp-badge .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: trc-pulse 1.4s infinite; }
+  .rp-title {
+    font-size: clamp(32px, 6vw, 56px); font-weight: 800;
+    line-height: 1; letter-spacing: -1.5px; margin: 18px 0 14px;
+  }
+  .rp-sub { font-size: 17px; color: var(--ink-3); max-width: 560px; line-height: 1.55; margin: 0 0 40px; }
+  @media (max-width: 600px) { .rp-title { letter-spacing: -0.5px; } .rp-sub { font-size: 15px; } }
+  .rp-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: start; }
+  @media (max-width: 800px) { .rp-grid { grid-template-columns: 1fr; } }
+  .rp-data-card { background: var(--bg); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; }
+  .rp-map-strip {
+    height: 140px; background: linear-gradient(135deg, var(--accent-100), var(--accent-50));
+    position: relative; overflow: hidden; border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .rp-map-strip .located-pill {
+    background: var(--bg); padding: 10px 16px; border-radius: 999px;
+    box-shadow: var(--shadow); font-size: 13.5px; font-weight: 600;
+    display: flex; align-items: center; gap: 8px; position: relative; z-index: 2;
+  }
+  .rp-section-label {
+    padding: 18px 22px 8px; font-size: 13px; color: var(--ink-4);
+    font-weight: 600; letter-spacing: 0.4px; text-transform: uppercase;
+  }
+  .rp-row {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 22px; border-top: 1px solid var(--line);
+  }
+  .rp-row .rp-icon {
+    width: 38px; height: 38px; border-radius: 11px; background: var(--surface);
+    display: grid; place-items: center; flex-shrink: 0;
+  }
+  .rp-row .rp-label { font-size: 11.5px; color: var(--ink-4); font-weight: 600; letter-spacing: 0.4px; text-transform: uppercase; }
+  .rp-row .rp-value { font-size: 15.5px; color: var(--ink); font-weight: 500; margin-top: 3px; }
+  .rp-row .rp-value.mono { font-family: var(--mono); }
+  .rp-row.blurred .rp-value { color: var(--ink-4); filter: blur(5px); user-select: none; font-family: var(--mono); }
+  .rp-locked {
+    position: relative; padding: 18px 22px 22px;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--surface) 100%);
+    border-top: 1px solid var(--line);
+  }
+  .rp-locked-label {
+    font-size: 12px; color: var(--ink-4); font-weight: 600;
+    letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .rp-locked-item {
+    display: flex; align-items: center; gap: 14px; padding: 12px 0;
+  }
+  .rp-locked-item + .rp-locked-item { border-top: 1px dashed var(--line); }
+  .rp-locked-item .rp-label { font-size: 11.5px; color: var(--ink-4); font-weight: 600; letter-spacing: 0.4px; text-transform: uppercase; }
+  .rp-locked-item .rp-value { font-family: var(--mono); color: var(--ink-4); filter: blur(5px); user-select: none; font-size: 14.5px; white-space: nowrap; overflow: hidden; margin-top: 3px; }
+
+  .rp-signup-card {
+    background: var(--bg); border: 1px solid var(--line); border-radius: 20px;
+    padding: 24px; position: sticky; top: 80px;
+  }
+  @media (max-width: 800px) { .rp-signup-card { position: static; } }
+  .rp-signup-card h3 { font-size: 28px; font-weight: 800; line-height: 1.1; margin: 16px 0 6px; letter-spacing: -0.3px; }
+  .rp-signup-card p { font-size: 13.5px; color: var(--ink-3); margin: 0 0 20px; line-height: 1.55; }
+  .rp-email-label { margin-bottom: 4px; font-size: 12px; font-weight: 600; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.4px; }
+  .rp-email-input {
+    width: 100%; border: 1.5px solid var(--line); border-radius: 12px;
+    padding: 14px 16px; font-size: 15px; outline: none;
+    font-family: var(--font); background: var(--surface);
+    transition: border-color 200ms; color: var(--ink);
+  }
+  .rp-email-input:focus { border-color: var(--accent); }
+  .rp-error { margin-top: 8px; font-size: 13px; color: #D94545; font-weight: 500; }
+  .rp-trust-badges {
+    display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap;
+    border-top: 1px solid var(--line); padding-top: 18px;
+  }
+  .rp-trust-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 11.5px; color: var(--ink-3); background: var(--surface);
+    border: 1px solid var(--line); padding: 6px 12px; border-radius: 999px;
+  }
+
+  /* ─── Animations ─── */
+  @keyframes trc-fadein { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes trc-popin { from { opacity: 0; transform: scale(0.92); } to { opacity: 1; transform: scale(1); } }
+  @keyframes trc-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+  @keyframes trc-spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="nav" id="nav">
+  <div class="wrap nav-row">
+    <a class="logo" href="#">
+      <span class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 21s-7-6.5-7-12a7 7 0 1 1 14 0c0 5.5-7 12-7 12z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+      </span>
+      Tracify
+    </a>
+    <button class="btn btn-primary nav-cta" onclick="document.getElementById('phone-field').focus()">Get Started</button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="wrap hero-split">
+    <div class="hero-content">
+      <div class="trust-laurel">
+        <svg viewBox="0 0 48 48" fill="none"><path d="M24 4c-3 4-8 6-14 6 0 8 2 16 6 20s8 6 8 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M24 4c3 4 8 6 14 6 0 8-2 16-6 20s-8 6-8 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="24" cy="20" r="4" fill="currentColor" opacity=".3"/></svg>
+        <div class="trust-laurel-text">
+          <div class="trust-laurel-num">25+ million users</div>
+          <div class="trust-laurel-sub">have trusted us</div>
+        </div>
+        <svg viewBox="0 0 48 48" fill="none" style="transform:scaleX(-1)"><path d="M24 4c-3 4-8 6-14 6 0 8 2 16 6 20s8 6 8 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M24 4c3 4 8 6 14 6 0 8-2 16-6 20s-8 6-8 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="24" cy="20" r="4" fill="currentColor" opacity=".3"/></svg>
+      </div>
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/></svg>
+        Child Safety
+      </div>
+      <h1 class="hero-title">Track My Child's Phone</h1>
+      <p class="hero-sub">Stay Connected &amp; Keep Your Loved Ones Safe. Track locations securely with advanced technology designed for families and personal device safety.</p>
+
+      <div class="check-pills">
+        <span class="check-pill">
+          <svg viewBox="0 0 20 20" fill="#4CAF50"><path d="M16.7 5.3a1 1 0 0 0-1.4 0L8 12.6 4.7 9.3a1 1 0 1 0-1.4 1.4l4 4a1 1 0 0 0 1.4 0l8-8a1 1 0 0 0 0-1.4z"/></svg>
+          Safe &amp; Private
+        </span>
+        <span class="check-pill">
+          <svg viewBox="0 0 20 20" fill="#4CAF50"><path d="M16.7 5.3a1 1 0 0 0-1.4 0L8 12.6 4.7 9.3a1 1 0 1 0-1.4 1.4l4 4a1 1 0 0 0 1.4 0l8-8a1 1 0 0 0 0-1.4z"/></svg>
+          Easy Setup
+        </span>
+        <span class="check-pill">
+          <svg viewBox="0 0 20 20" fill="#4CAF50"><path d="M16.7 5.3a1 1 0 0 0-1.4 0L8 12.6 4.7 9.3a1 1 0 1 0-1.4 1.4l4 4a1 1 0 0 0 1.4 0l8-8a1 1 0 0 0 0-1.4z"/></svg>
+          Real-Time Tracking
+        </span>
+      </div>
+
+      <div class="locator-card">
+        <div class="locator-label">Enter phone number to locate</div>
+        <div class="phone-input">
+          <div class="cc-picker" id="cc-picker">
+            <button class="cc-btn" id="cc-btn" aria-haspopup="listbox" aria-expanded="false">
+              <span class="cc-flag" id="cc-flag-display">&#x1F310;</span>
+              <span class="cc-code" id="cc-code-display">+1</span>
+              <svg class="cc-caret" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4l3 3 3-3"/></svg>
+            </button>
+            <div class="cc-menu" id="cc-menu" role="listbox">
+              <input type="text" class="cc-search" id="cc-search" placeholder="Search country..." />
+              <div id="cc-list"></div>
+            </div>
+          </div>
+          <div class="phone-sep"></div>
+          <input type="tel" class="phone-field" id="phone-field" placeholder="000 000 0000" inputmode="numeric" />
+        </div>
+        <div class="locate-row">
+          <button class="btn btn-primary btn-lg" id="locate-btn" data-state="idle" onclick="startLocate()">
+            <span class="spinner"></span>
+            <span class="label">Locate</span>
+          </button>
+        </div>
+        <div class="found-banner" id="found-banner">
+          <div class="pin-anim">
+            <span class="pin-dot"></span>
+            <span id="found-text">Signal found &mdash; pinpointing device&hellip;</span>
+          </div>
+          <span class="coords" id="found-coords"></span>
+        </div>
+        <div class="trust-row">
+          <span class="trust">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/></svg>
+            100% Confidential
+          </span>
+          <span class="trust">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+            SSL Secured
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="phone-mockup">
+        <!-- Floating notification -->
+        <div class="phone-notif">
+          <div class="phone-notif-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="phone-notif-text">
+            Emma arrived at school
+            <span>2 min ago</span>
+          </div>
+        </div>
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-status-bar">
+              <span class="time">9:41</span>
+              <div class="phone-status-icons">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3a4.24 4.24 0 0 0-6 0zm-4-4l2 2a7.07 7.07 0 0 1 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+              </div>
+            </div>
+            <div class="app-header">
+              <div class="app-header-left">
+                <div class="app-header-logo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/></svg>
+                </div>
+                <span class="app-header-title">Tracify</span>
+              </div>
+              <span class="app-live-badge">LIVE</span>
+            </div>
+            <div class="app-map">
+              <svg viewBox="0 0 300 220" fill="none">
+                <path d="M0 60h300" stroke="#a3d9a5" stroke-width="8" opacity=".4"/>
+                <path d="M0 130h300" stroke="#a3d9a5" stroke-width="6" opacity=".35"/>
+                <path d="M0 180h300" stroke="#a3d9a5" stroke-width="5" opacity=".3"/>
+                <path d="M80 0v220" stroke="#a3d9a5" stroke-width="7" opacity=".35"/>
+                <path d="M170 0v220" stroke="#a3d9a5" stroke-width="6" opacity=".3"/>
+                <path d="M240 0v220" stroke="#a3d9a5" stroke-width="5" opacity=".25"/>
+                <rect x="85" y="65" width="80" height="60" rx="14" fill="#81c784" opacity=".3"/>
+                <circle cx="105" cy="85" r="6" fill="#66bb6a" opacity=".5"/>
+                <circle cx="130" cy="95" r="8" fill="#66bb6a" opacity=".4"/>
+                <circle cx="148" cy="80" r="5" fill="#66bb6a" opacity=".45"/>
+                <rect x="185" y="45" width="30" height="20" rx="4" fill="#c8e6c9" opacity=".5"/>
+                <rect x="190" y="80" width="40" height="25" rx="4" fill="#c8e6c9" opacity=".4"/>
+                <rect x="20" y="140" width="45" height="30" rx="4" fill="#c8e6c9" opacity=".4"/>
+                <g transform="translate(125, 90)">
+                  <circle r="20" fill="#4CAF50" opacity=".15"><animate attributeName="r" values="12;22;12" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".2;.05;.2" dur="2s" repeatCount="indefinite"/></circle>
+                  <circle r="10" fill="#4CAF50" opacity=".25"><animate attributeName="r" values="8;14;8" dur="2s" repeatCount="indefinite"/></circle>
+                  <circle r="5" fill="#4CAF50"/><circle r="2" fill="white"/>
+                </g>
+                <g transform="translate(200, 155)">
+                  <circle r="6" fill="#2196F3" opacity=".3"/><circle r="3.5" fill="#2196F3"/><circle r="1.5" fill="white"/>
+                </g>
+                <path d="M125 90 L145 110 L170 125 L200 155" stroke="#4CAF50" stroke-width="2" stroke-dasharray="4 3" opacity=".5">
+                  <animate attributeName="stroke-dashoffset" values="0;-14" dur="1.5s" repeatCount="indefinite"/>
+                </path>
+              </svg>
+            </div>
+            <div class="app-members">
+              <div class="member-row">
+                <div class="member-avatar"><img src="https://i.pravatar.cc/64?img=47" alt="Emma" loading="lazy"></div>
+                <div class="member-info"><div class="member-name">Emma</div><div class="member-loc">Lincoln Middle School</div></div>
+                <div class="member-status online"></div>
+              </div>
+              <div class="member-row">
+                <div class="member-avatar"><img src="https://i.pravatar.cc/64?img=33" alt="Jake" loading="lazy"></div>
+                <div class="member-info"><div class="member-name">Jake</div><div class="member-loc">Oakwood Park, walking</div></div>
+                <div class="member-status online"></div>
+              </div>
+              <div class="member-row">
+                <div class="member-avatar"><img src="https://i.pravatar.cc/64?img=57" alt="Lily" loading="lazy"></div>
+                <div class="member-info"><div class="member-name">Lily</div><div class="member-loc">Home</div></div>
+                <div class="member-status away"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section alt-bg reveal">
+  <div class="wrap">
+    <div class="section-eyebrow">Features</div>
+    <h2 class="section-title">Everything You Need to Keep Your Family Safe</h2>
+    <p class="section-sub">Powerful tools designed with parents in mind. Monitor, protect, and stay connected.</p>
+    <div class="feature-grid">
+      <!-- Real-Time GPS -->
+      <div class="feature-card">
+        <div class="feature-illus">
+          <svg viewBox="0 0 280 168" fill="none">
+            <rect width="280" height="168" fill="#e8f5e9"/>
+            <path d="M0 55h280" stroke="#c8e6c9" stroke-width="3"/><path d="M0 105h280" stroke="#c8e6c9" stroke-width="2"/>
+            <path d="M75 0v168" stroke="#c8e6c9" stroke-width="3"/><path d="M185 0v168" stroke="#c8e6c9" stroke-width="2"/>
+            <rect x="90" y="60" width="60" height="40" rx="10" fill="#81c784" opacity=".25"/>
+            <g transform="translate(140,82)">
+              <circle r="28" fill="#4CAF50" opacity=".1"><animate attributeName="r" values="18;32;18" dur="2.5s" repeatCount="indefinite"/></circle>
+              <path d="M0-18c-7.7 0-14 6.3-14 14 0 10.5 14 22 14 22s14-11.5 14-22c0-7.7-6.3-14-14-14z" fill="#4CAF50"/>
+              <circle cy="-4" r="5" fill="white"/>
+            </g>
+            <circle cx="140" cy="82" r="42" stroke="#4CAF50" stroke-width="1" stroke-dasharray="4 3" opacity=".35"/>
+            <!-- Parent avatar -->
+            <circle cx="68" cy="130" r="14" fill="#e8f5e9" stroke="#4CAF50" stroke-width="1.5"/>
+            <image href="https://i.pravatar.cc/56?img=32" x="54" y="116" width="28" height="28" clip-path="circle(14px at 14px 14px)"/>
+            <text x="88" y="132" font-size="9" fill="#388E3C" font-weight="600" font-family="Inter,sans-serif">Watching live</text>
+          </svg>
+        </div>
+        <div class="feature-body">
+          <h4>Real-Time GPS</h4>
+          <p>See your child's exact location on a live map, updated every few seconds.</p>
+        </div>
+      </div>
+      <!-- Location History -->
+      <div class="feature-card">
+        <div class="feature-illus">
+          <svg viewBox="0 0 280 168" fill="none">
+            <rect width="280" height="168" fill="#e8f5e9"/>
+            <path d="M45 128 Q78 98 108 92 Q138 86 158 68 Q178 48 218 50" stroke="#4CAF50" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="200" stroke-dashoffset="200"><animate attributeName="stroke-dashoffset" values="200;0" dur="2.5s" fill="freeze"/></path>
+            <circle cx="45" cy="128" r="5" fill="#a5d6a7" stroke="white" stroke-width="2"/>
+            <circle cx="108" cy="92" r="5" fill="#81c784" stroke="white" stroke-width="2"/>
+            <circle cx="158" cy="68" r="5" fill="#4CAF50" stroke="white" stroke-width="2"/>
+            <circle cx="218" cy="50" r="7" fill="#388E3C" stroke="white" stroke-width="2"/>
+            <text x="30" y="146" font-size="9" fill="#5B6B67" font-family="Inter,sans-serif">8:00</text>
+            <text x="95" y="110" font-size="9" fill="#5B6B67" font-family="Inter,sans-serif">8:30</text>
+            <text x="145" y="60" font-size="9" fill="#5B6B67" font-family="Inter,sans-serif">9:00</text>
+            <text x="210" y="42" font-size="9" fill="#388E3C" font-weight="700" font-family="Inter,sans-serif">Now</text>
+            <!-- Child face at end -->
+            <circle cx="218" cy="50" r="11" fill="white" stroke="#388E3C" stroke-width="1.5"/>
+            <image href="https://i.pravatar.cc/44?img=47" x="207" y="39" width="22" height="22" clip-path="circle(11px at 11px 11px)"/>
+            <!-- Clock -->
+            <g transform="translate(232,130)"><circle r="18" fill="white" stroke="#c8e6c9" stroke-width="2"/><circle r="2" fill="#388E3C"/><line x1="0" y1="0" x2="0" y2="-10" stroke="#388E3C" stroke-width="2" stroke-linecap="round"/><line x1="0" y1="0" x2="7" y2="0" stroke="#388E3C" stroke-width="1.5" stroke-linecap="round"/></g>
+          </svg>
+        </div>
+        <div class="feature-body">
+          <h4>Location History</h4>
+          <p>View a complete timeline of where your child has been throughout the day.</p>
+        </div>
+      </div>
+      <!-- Safe Zone Alerts -->
+      <div class="feature-card">
+        <div class="feature-illus">
+          <svg viewBox="0 0 280 168" fill="none">
+            <rect width="280" height="168" fill="#e8f5e9"/>
+            <rect x="100" y="56" width="80" height="52" rx="6" fill="#c8e6c9"/>
+            <rect x="130" y="78" width="20" height="30" rx="2" fill="#a5d6a7"/>
+            <polygon points="100,56 140,30 180,56" fill="#81c784"/>
+            <rect x="108" y="64" width="14" height="10" rx="2" fill="#f1f8e9"/>
+            <rect x="158" y="64" width="14" height="10" rx="2" fill="#f1f8e9"/>
+            <text x="122" y="49" font-size="8" fill="#388E3C" font-weight="600" font-family="Inter,sans-serif">SCHOOL</text>
+            <circle cx="140" cy="82" r="52" stroke="#4CAF50" stroke-width="2.5" stroke-dasharray="8 4" fill="none" opacity=".45"><animate attributeName="stroke-dashoffset" values="0;24" dur="2s" repeatCount="indefinite"/></circle>
+            <!-- Child walking towards school -->
+            <circle cx="62" cy="100" r="12" fill="white" stroke="#4CAF50" stroke-width="1.5"/>
+            <image href="https://i.pravatar.cc/48?img=33" x="50" y="88" width="24" height="24" clip-path="circle(12px at 12px 12px)"/>
+            <!-- Alert bell -->
+            <g transform="translate(216,36)"><circle r="16" fill="white" stroke="#4CAF50" stroke-width="2"/><path d="M0-5c-3 0-5.5 2.5-5.5 5.5v2.5l-1.5 1.5v1h14v-1l-1.5-1.5V.5C5.5-2.5 3-5 0-5z" fill="#4CAF50"/><circle cy="7" r="2" fill="#4CAF50"/></g>
+          </svg>
+        </div>
+        <div class="feature-body">
+          <h4>Safe Zone Alerts</h4>
+          <p>Get notified instantly when your child enters or leaves designated areas.</p>
+        </div>
+      </div>
+      <!-- Battery Monitor -->
+      <div class="feature-card">
+        <div class="feature-illus">
+          <svg viewBox="0 0 280 168" fill="none">
+            <rect width="280" height="168" fill="#e8f5e9"/>
+            <!-- Phone outline -->
+            <rect x="105" y="28" width="70" height="112" rx="12" fill="white" stroke="#c8e6c9" stroke-width="2"/>
+            <rect x="128" y="32" width="24" height="4" rx="2" fill="#e0e0e0"/>
+            <!-- Battery icon big -->
+            <rect x="120" y="55" width="40" height="50" rx="6" fill="none" stroke="#4CAF50" stroke-width="2.5"/>
+            <rect x="133" y="50" width="14" height="6" rx="2" fill="#4CAF50"/>
+            <rect x="124" y="75" width="32" height="26" rx="3" fill="#4CAF50" opacity=".7"/>
+            <text x="131" y="93" font-size="12" fill="white" font-weight="800" font-family="Inter,sans-serif">42%</text>
+            <!-- Warning -->
+            <g transform="translate(210, 70)"><circle r="18" fill="#FFF3E0" stroke="#F5B100" stroke-width="1.5"/><text x="0" y="5" text-anchor="middle" font-size="18" fill="#F5B100" font-weight="700">!</text></g>
+            <text x="192" y="98" font-size="8" fill="#F5B100" font-weight="600" font-family="Inter,sans-serif">Low Battery</text>
+            <!-- Parent notified face -->
+            <circle cx="56" cy="120" r="14" fill="white" stroke="#4CAF50" stroke-width="1.5"/>
+            <image href="https://i.pravatar.cc/56?img=12" x="42" y="106" width="28" height="28" clip-path="circle(14px at 14px 14px)"/>
+            <text x="40" y="144" font-size="8" fill="#5B6B67" font-family="Inter,sans-serif">Alert sent</text>
+          </svg>
+        </div>
+        <div class="feature-body">
+          <h4>Battery Monitor</h4>
+          <p>Know when your child's phone battery is running low before they go offline.</p>
+        </div>
+      </div>
+      <!-- Activity Timeline -->
+      <div class="feature-card">
+        <div class="feature-illus">
+          <svg viewBox="0 0 280 168" fill="none">
+            <rect width="280" height="168" fill="#e8f5e9"/>
+            <!-- Timeline vertical line -->
+            <line x1="80" y1="20" x2="80" y2="148" stroke="#c8e6c9" stroke-width="2"/>
+            <!-- Entry 1 -->
+            <circle cx="80" cy="38" r="6" fill="#4CAF50"/><circle cx="80" cy="38" r="3" fill="white"/>
+            <rect x="96" y="26" width="140" height="24" rx="8" fill="white" stroke="#c8e6c9" stroke-width="1"/>
+            <text x="106" y="35" font-size="8" fill="#388E3C" font-weight="700" font-family="Inter,sans-serif">Home</text>
+            <text x="106" y="45" font-size="7" fill="#5B6B67" font-family="Inter,sans-serif">7:30 AM — Left for school</text>
+            <!-- Entry 2 -->
+            <circle cx="80" cy="78" r="6" fill="#4CAF50"/><circle cx="80" cy="78" r="3" fill="white"/>
+            <rect x="96" y="66" width="140" height="24" rx="8" fill="white" stroke="#c8e6c9" stroke-width="1"/>
+            <text x="106" y="75" font-size="8" fill="#388E3C" font-weight="700" font-family="Inter,sans-serif">Bus Stop</text>
+            <text x="106" y="85" font-size="7" fill="#5B6B67" font-family="Inter,sans-serif">7:45 AM — Waiting 3 min</text>
+            <!-- Entry 3 -->
+            <circle cx="80" cy="118" r="6" fill="#388E3C"/><circle cx="80" cy="118" r="3" fill="white"/>
+            <rect x="96" y="106" width="140" height="24" rx="8" fill="white" stroke="#4CAF50" stroke-width="1.5"/>
+            <text x="106" y="115" font-size="8" fill="#388E3C" font-weight="700" font-family="Inter,sans-serif">Lincoln School</text>
+            <text x="106" y="125" font-size="7" fill="#5B6B67" font-family="Inter,sans-serif">8:05 AM — Arrived safely</text>
+            <!-- Child avatar at latest -->
+            <circle cx="245" cy="118" r="11" fill="white" stroke="#388E3C" stroke-width="1.5"/>
+            <image href="https://i.pravatar.cc/44?img=47" x="234" y="107" width="22" height="22" clip-path="circle(11px at 11px 11px)"/>
+          </svg>
+        </div>
+        <div class="feature-body">
+          <h4>Activity Timeline</h4>
+          <p>Track movements, stops, and travel patterns over hours and days.</p>
+        </div>
+      </div>
+      <!-- Smart Alerts -->
+      <div class="feature-card">
+        <div class="feature-illus">
+          <svg viewBox="0 0 280 168" fill="none">
+            <rect width="280" height="168" fill="#e8f5e9"/>
+            <!-- Notification cards stacked -->
+            <rect x="55" y="22" width="170" height="36" rx="10" fill="white" stroke="#c8e6c9" stroke-width="1.5" opacity=".5" transform="rotate(-2 140 40)"/>
+            <rect x="50" y="42" width="180" height="40" rx="10" fill="white" stroke="#4CAF50" stroke-width="1.5"/>
+            <circle cx="72" cy="62" r="12" fill="#e8f5e9" stroke="#4CAF50" stroke-width="1"/>
+            <image href="https://i.pravatar.cc/48?img=47" x="60" y="50" width="24" height="24" clip-path="circle(12px at 12px 12px)"/>
+            <text x="90" y="58" font-size="9" fill="#1B5E20" font-weight="700" font-family="Inter,sans-serif">Emma left school zone</text>
+            <text x="90" y="70" font-size="8" fill="#5B6B67" font-family="Inter,sans-serif">2 minutes ago</text>
+            <!-- Second notification -->
+            <rect x="50" y="92" width="180" height="40" rx="10" fill="white" stroke="#c8e6c9" stroke-width="1.5"/>
+            <circle cx="72" cy="112" r="12" fill="#e8f5e9" stroke="#81c784" stroke-width="1"/>
+            <image href="https://i.pravatar.cc/48?img=33" x="60" y="100" width="24" height="24" clip-path="circle(12px at 12px 12px)"/>
+            <text x="90" y="108" font-size="9" fill="#1B5E20" font-weight="700" font-family="Inter,sans-serif">Jake arrived at home</text>
+            <text x="90" y="120" font-size="8" fill="#5B6B67" font-family="Inter,sans-serif">15 minutes ago</text>
+            <!-- Bell icon -->
+            <g transform="translate(248,30)"><circle r="14" fill="#4CAF50"/><path d="M0-5c-3 0-5.5 2.5-5.5 5.5v2l-1.5 1.5v1h14v-1L5.5 2.5V.5C5.5-2.5 3-5 0-5z" fill="white"/><circle cy="6" r="1.5" fill="white"/><circle cx="5" cy="-6" r="5" fill="#e74c3c"/><text x="5" y="-3.5" text-anchor="middle" font-size="7" fill="white" font-weight="700">3</text></g>
+          </svg>
+        </div>
+        <div class="feature-body">
+          <h4>Smart Alerts</h4>
+          <p>Automatic notifications for unusual activity, new locations, and more.</p>
+        </div>
+      </div>
+      <!-- Multi-Device -->
+      <div class="feature-card">
+        <div class="feature-illus">
+          <svg viewBox="0 0 280 168" fill="none">
+            <rect width="280" height="168" fill="#e8f5e9"/>
+            <!-- Three family member circles -->
+            <circle cx="90" cy="72" r="24" fill="white" stroke="#4CAF50" stroke-width="2"/>
+            <image href="https://i.pravatar.cc/96?img=47" x="66" y="48" width="48" height="48" clip-path="circle(24px at 24px 24px)"/>
+            <text x="90" y="108" text-anchor="middle" font-size="9" fill="#1B5E20" font-weight="700" font-family="Inter,sans-serif">Emma</text>
+            <circle cx="140" cy="72" r="24" fill="white" stroke="#81c784" stroke-width="2"/>
+            <image href="https://i.pravatar.cc/96?img=33" x="116" y="48" width="48" height="48" clip-path="circle(24px at 24px 24px)"/>
+            <text x="140" y="108" text-anchor="middle" font-size="9" fill="#1B5E20" font-weight="700" font-family="Inter,sans-serif">Jake</text>
+            <circle cx="190" cy="72" r="24" fill="white" stroke="#81c784" stroke-width="2"/>
+            <image href="https://i.pravatar.cc/96?img=57" x="166" y="48" width="48" height="48" clip-path="circle(24px at 24px 24px)"/>
+            <text x="190" y="108" text-anchor="middle" font-size="9" fill="#1B5E20" font-weight="700" font-family="Inter,sans-serif">Lily</text>
+            <!-- Status dots -->
+            <circle cx="108" cy="54" r="5" fill="#4CAF50" stroke="white" stroke-width="2"/>
+            <circle cx="158" cy="54" r="5" fill="#4CAF50" stroke="white" stroke-width="2"/>
+            <circle cx="208" cy="54" r="5" fill="#F5B100" stroke="white" stroke-width="2"/>
+            <!-- "All tracked" label -->
+            <rect x="85" y="120" width="110" height="24" rx="12" fill="white" stroke="#4CAF50" stroke-width="1.5"/>
+            <text x="140" y="136" text-anchor="middle" font-size="9" fill="#388E3C" font-weight="700" font-family="Inter,sans-serif">All 3 tracked</text>
+          </svg>
+        </div>
+        <div class="feature-body">
+          <h4>Multi-Device</h4>
+          <p>Track multiple children from a single dashboard. One account, whole family.</p>
+        </div>
+      </div>
+      <!-- No App Needed -->
+      <div class="feature-card">
+        <div class="feature-illus">
+          <svg viewBox="0 0 280 168" fill="none">
+            <rect width="280" height="168" fill="#e8f5e9"/>
+            <!-- Phone with SMS bubble -->
+            <rect x="95" y="25" width="60" height="100" rx="10" fill="white" stroke="#c8e6c9" stroke-width="2"/>
+            <rect x="112" y="29" width="26" height="4" rx="2" fill="#e0e0e0"/>
+            <!-- SMS bubble -->
+            <rect x="102" y="50" width="46" height="28" rx="8" fill="#4CAF50"/>
+            <text x="110" y="62" font-size="7" fill="white" font-weight="600" font-family="Inter,sans-serif">Consent</text>
+            <text x="110" y="72" font-size="7" fill="white" font-weight="600" font-family="Inter,sans-serif">approved</text>
+            <polygon points="115,78 120,86 125,78" fill="#4CAF50"/>
+            <!-- Checkmark -->
+            <g transform="translate(155,55)"><circle r="14" fill="#4CAF50"/><path d="M-5 0l4 4 8-8" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+            <!-- No download icon -->
+            <g transform="translate(195,110)">
+              <circle r="20" fill="white" stroke="#c8e6c9" stroke-width="1.5"/>
+              <path d="M0-8v12m-5-5l5 5 5-5" stroke="#ccc" stroke-width="2" stroke-linecap="round"/>
+              <line x1="-8" y1="-8" x2="8" y2="8" stroke="#e74c3c" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+            <text x="195" y="140" text-anchor="middle" font-size="8" fill="#5B6B67" font-family="Inter,sans-serif">No download</text>
+            <!-- Parent face -->
+            <circle cx="60" cy="110" r="14" fill="white" stroke="#4CAF50" stroke-width="1.5"/>
+            <image href="https://i.pravatar.cc/56?img=26" x="46" y="96" width="28" height="28" clip-path="circle(14px at 14px 14px)"/>
+          </svg>
+        </div>
+        <div class="feature-body">
+          <h4>No App Needed</h4>
+          <p>Works via SMS consent — no app installation required on the tracked device.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-title">Start Tracking in 3 Simple Steps</h2>
+    <p class="section-sub">No technical skills required. Set up in under 60 seconds.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-illus">
+          <svg viewBox="0 0 280 168" fill="none">
+            <rect width="280" height="168" fill="#e8f5e9"/>
+            <!-- Phone with keypad -->
+            <rect x="100" y="20" width="80" height="128" rx="14" fill="white" stroke="#c8e6c9" stroke-width="2"/>
+            <rect x="125" y="25" width="30" height="5" rx="2.5" fill="#e0e0e0"/>
+            <!-- Number input field -->
+            <rect x="112" y="45" width="56" height="18" rx="6" fill="#e8f5e9" stroke="#4CAF50" stroke-width="1.5"/>
+            <text x="120" y="57" font-size="9" fill="#388E3C" font-weight="700" font-family="Inter,sans-serif">+1 555...</text>
+            <!-- Keypad dots -->
+            <circle cx="124" cy="80" r="6" fill="#c8e6c9"/><circle cx="140" cy="80" r="6" fill="#c8e6c9"/><circle cx="156" cy="80" r="6" fill="#c8e6c9"/>
+            <circle cx="124" cy="98" r="6" fill="#c8e6c9"/><circle cx="140" cy="98" r="6" fill="#c8e6c9"/><circle cx="156" cy="98" r="6" fill="#c8e6c9"/>
+            <circle cx="140" cy="116" r="6" fill="#4CAF50"/>
+            <!-- Country flags -->
+            <text x="46" y="60" font-size="18">&#x1F1FA;&#x1F1F8;</text>
+            <text x="42" y="100" font-size="14">&#x1F1EC;&#x1F1E7;</text>
+            <text x="48" y="130" font-size="12">&#x1F1E8;&#x1F1E6;</text>
+            <text x="200" y="55" font-size="14">&#x1F1E9;&#x1F1EA;</text>
+            <text x="204" y="90" font-size="16">&#x1F1EB;&#x1F1F7;</text>
+            <text x="198" y="125" font-size="12">&#x1F1E6;&#x1F1FA;</text>
+          </svg>
+        </div>
+        <div class="step-num">1</div>
+        <h4>Enter phone number</h4>
+        <p>Type your child's phone number with the country code. We support 190+ countries worldwide.</p>
+        <div class="step-arrow">
+          <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+      <div class="step-connector"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14m-5-5l5 5 5-5"/></svg></div>
+      <div class="step-card">
+        <div class="step-illus">
+          <svg viewBox="0 0 280 168" fill="none">
+            <rect width="280" height="168" fill="#e8f5e9"/>
+            <!-- Phone receiving SMS -->
+            <rect x="90" y="24" width="70" height="110" rx="12" fill="white" stroke="#c8e6c9" stroke-width="2"/>
+            <rect x="110" y="28" width="30" height="4" rx="2" fill="#e0e0e0"/>
+            <!-- SMS bubble -->
+            <rect x="98" y="48" width="54" height="34" rx="10" fill="#4CAF50"/>
+            <text x="106" y="62" font-size="7.5" fill="white" font-weight="600" font-family="Inter,sans-serif">Tracify: Allow</text>
+            <text x="106" y="74" font-size="7.5" fill="white" font-weight="600" font-family="Inter,sans-serif">location? Yes/No</text>
+            <polygon points="112,82 118,90 124,82" fill="#4CAF50"/>
+            <!-- Checkmark response -->
+            <rect x="108" y="94" width="44" height="20" rx="8" fill="#e8f5e9" stroke="#81c784" stroke-width="1"/>
+            <text x="116" y="108" font-size="8" fill="#388E3C" font-weight="700" font-family="Inter,sans-serif">Yes!</text>
+            <!-- Child face -->
+            <circle cx="196" cy="68" r="22" fill="white" stroke="#4CAF50" stroke-width="2"/>
+            <image href="https://i.pravatar.cc/88?img=47" x="174" y="46" width="44" height="44" clip-path="circle(22px at 22px 22px)"/>
+            <text x="196" y="100" text-anchor="middle" font-size="9" fill="#1B5E20" font-weight="600" font-family="Inter,sans-serif">Emma</text>
+            <!-- Checkmark badge -->
+            <g transform="translate(212,52)"><circle r="8" fill="#4CAF50"/><path d="M-3 0l2.5 2.5 5-5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/></g>
+          </svg>
+        </div>
+        <div class="step-num">2</div>
+        <h4>Send consent SMS</h4>
+        <p>We send a consent link via SMS. Once accepted, location sharing begins automatically.</p>
+        <div class="step-arrow">
+          <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+      <div class="step-connector"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14m-5-5l5 5 5-5"/></svg></div>
+      <div class="step-card">
+        <div class="step-illus">
+          <svg viewBox="0 0 280 168" fill="none">
+            <rect width="280" height="168" fill="#e8f5e9"/>
+            <!-- Map with pin -->
+            <path d="M0 55h280" stroke="#c8e6c9" stroke-width="2"/><path d="M0 95h280" stroke="#c8e6c9" stroke-width="1.5"/>
+            <path d="M80 0v168" stroke="#c8e6c9" stroke-width="2"/><path d="M200 0v168" stroke="#c8e6c9" stroke-width="1.5"/>
+            <rect x="90" y="60" width="55" height="30" rx="8" fill="#81c784" opacity=".25"/>
+            <!-- Animated pin -->
+            <g transform="translate(140,75)">
+              <circle r="24" fill="#4CAF50" opacity=".1"><animate attributeName="r" values="16;28;16" dur="2s" repeatCount="indefinite"/></circle>
+              <path d="M0-16c-7 0-12 5.4-12 12 0 9 12 20 12 20s12-11 12-20c0-6.6-5-12-12-12z" fill="#4CAF50"/>
+              <circle cy="-4" r="5" fill="white"/>
+            </g>
+            <!-- Child face on pin -->
+            <circle cx="140" cy="59" r="9" fill="white" stroke="#388E3C" stroke-width="1.5"/>
+            <image href="https://i.pravatar.cc/36?img=47" x="131" y="50" width="18" height="18" clip-path="circle(9px at 9px 9px)"/>
+            <!-- Dashboard card -->
+            <rect x="175" y="108" width="90" height="48" rx="10" fill="white" stroke="#c8e6c9" stroke-width="1.5"/>
+            <circle cx="190" cy="124" r="7" fill="#e8f5e9" stroke="#4CAF50" stroke-width="1"/>
+            <text x="202" y="122" font-size="7" fill="#388E3C" font-weight="700" font-family="Inter,sans-serif">Emma</text>
+            <text x="202" y="132" font-size="6" fill="#5B6B67" font-family="Inter,sans-serif">At school - safe</text>
+            <rect x="185" y="140" width="70" height="10" rx="5" fill="#e8f5e9"/>
+            <rect x="185" y="140" width="50" height="10" rx="5" fill="#4CAF50" opacity=".5"/>
+            <!-- Parent watching -->
+            <circle cx="50" cy="130" r="16" fill="white" stroke="#81c784" stroke-width="1.5"/>
+            <image href="https://i.pravatar.cc/64?img=32" x="34" y="114" width="32" height="32" clip-path="circle(16px at 16px 16px)"/>
+          </svg>
+        </div>
+        <div class="step-num">3</div>
+        <h4>Track in real time</h4>
+        <p>See your child's exact location on a live map with street-level accuracy, updated continuously.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Family Safety CTA -->
+<section class="family-cta reveal">
+  <div class="wrap">
+    <div class="cta-box">
+      <div class="cta-faces">
+        <div class="face"><img src="https://i.pravatar.cc/104?img=32" alt="" loading="lazy"></div>
+        <div class="face"><img src="https://i.pravatar.cc/104?img=47" alt="" loading="lazy"></div>
+        <div class="face"><img src="https://i.pravatar.cc/104?img=33" alt="" loading="lazy"></div>
+        <div class="face"><img src="https://i.pravatar.cc/104?img=12" alt="" loading="lazy"></div>
+        <div class="face"><img src="https://i.pravatar.cc/104?img=57" alt="" loading="lazy"></div>
+        <div class="face-count">500K+</div>
+      </div>
+      <h2>Join 500K+ Families Staying Safe</h2>
+      <p>Keep track of your child's location in real time. Know where they are, make sure they're safe, and never worry about losing contact. Don't wait until it's too late.</p>
+      <button class="btn btn-primary btn-lg" onclick="scrollToTop()">
+        Start Tracking Now for $0.50
+        <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="cta-sub">$0.50 for 24h trial, then $17.99/mo. Cancel anytime.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section alt-bg reveal">
+  <div class="wrap">
+    <div class="section-eyebrow">Testimonials</div>
+    <h2 class="section-title">Trusted by Parents Worldwide</h2>
+    <div class="stats-bar">
+      <div class="stat">
+        <div class="stat-number">190+</div>
+        <div class="stat-label">Countries supported</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">500K+</div>
+        <div class="stat-label">Families protected</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">4.8</div>
+        <div class="stat-label">Average rating</div>
+      </div>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="tc-top">
+          <div class="tc-avatar" style="background:linear-gradient(135deg,#4CAF50,#81C784);">S</div>
+          <div><div class="tc-name">Sarah M.</div></div>
+        </div>
+        <div class="tc-stars"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg></div>
+        <div class="tc-body">"I can finally let my kids walk to school without constant worry. The real-time tracking gives me peace of mind every single day."</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="tc-top">
+          <div class="tc-avatar" style="background:linear-gradient(135deg,#2196F3,#64B5F6);">M</div>
+          <div><div class="tc-name">Michael R.</div></div>
+        </div>
+        <div class="tc-stars"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg></div>
+        <div class="tc-body">"Setup took less than a minute. Now I know exactly when my teenager arrives home from practice. Worth every penny."</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="tc-top">
+          <div class="tc-avatar" style="background:linear-gradient(135deg,#FF9800,#FFB74D);">L</div>
+          <div><div class="tc-name">Linda K.</div></div>
+        </div>
+        <div class="tc-stars"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg></div>
+        <div class="tc-body">"My grandchildren visit different friends after school. Now I always know they're safe without having to call every 5 minutes."</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="tc-top">
+          <div class="tc-avatar" style="background:linear-gradient(135deg,#9C27B0,#CE93D8);">D</div>
+          <div><div class="tc-name">David P.</div></div>
+        </div>
+        <div class="tc-stars"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg></div>
+        <div class="tc-body">"I work night shifts and can't always be there. Tracify lets me check on my daughter anytime. The safe zone alerts are a lifesaver."</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="tc-top">
+          <div class="tc-avatar" style="background:linear-gradient(135deg,#E91E63,#F48FB1);">J</div>
+          <div><div class="tc-name">Jennifer T.</div></div>
+        </div>
+        <div class="tc-stars"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg></div>
+        <div class="tc-body">"My 16-year-old just got her license. This app lets me make sure she's driving safely without being overbearing. Highly recommend."</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="tc-top">
+          <div class="tc-avatar" style="background:linear-gradient(135deg,#00BCD4,#80DEEA);">R</div>
+          <div><div class="tc-name">Robert A.</div></div>
+        </div>
+        <div class="tc-stars"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="currentColor"/></svg></div>
+        <div class="tc-body">"As both a parent and a teacher, I recommend Tracify to every family. Consent-based tracking that respects privacy while keeping kids safe."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 21s-7-6.5-7-12a7 7 0 1 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </span>
+          Tracify
+        </div>
+        <p>Consent-based phone tracking for families. Keep your loved ones safe with real-time GPS location monitoring.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <a href="#" onclick="scrollToTop();return false;">Track a Phone</a>
+        <a href="/how-it-works">How It Works</a>
+        <a href="/faq">FAQ</a>
+        <a href="/blog">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/contact">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Tracify. All rights reserved.</span>
+      <span>Built for families, everywhere.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── Searching Overlay ─── -->
+<div class="search-overlay" id="search-overlay">
+  <div class="map-bg"><div id="search-map" style="width:100%;height:100%;"></div></div>
+  <div class="map-veil"></div>
+  <div class="scan-line"></div>
+  <button class="close-btn" onclick="closeSearch()" aria-label="Cancel">&times;</button>
+  <div class="search-card">
+    <div class="sc-head">
+      <div class="sc-spinner-wrap"><div class="sc-spinner"></div></div>
+      <div style="flex:1;min-width:0;">
+        <div class="sc-title">Searching...</div>
+        <div class="sc-phone"><span id="sc-flag"></span><span id="sc-phone-display"></span></div>
+      </div>
+    </div>
+    <div class="sc-bar"><div class="sc-bar-fill" id="sc-bar-fill"></div></div>
+    <div id="sc-steps">
+      <div class="sc-step" data-step="0">
+        <div class="sc-dot"></div>
+        <div class="sc-step-label">Connecting to the cellular base station</div>
+      </div>
+      <div class="sc-step" data-step="1">
+        <div class="sc-dot"></div>
+        <div class="sc-step-label">Identifying the network operator</div>
+      </div>
+      <div class="sc-step" data-step="2">
+        <div class="sc-dot"></div>
+        <div class="sc-step-label">Connecting to the phone</div>
+      </div>
+    </div>
+    <div class="sc-foot">
+      <span>
+        <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/></svg>
+        100% confidential
+      </span>
+      <span>&middot;</span>
+      <span>
+        <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        SSL secured
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Located Modal ─── -->
+<div class="located-backdrop" id="located-modal" onclick="closeLocated()">
+  <div class="located-modal" onclick="event.stopPropagation()">
+    <div class="lm-header">
+      <button class="lm-close" onclick="closeLocated()" aria-label="Close">&times;</button>
+      <div class="lm-badge"><span class="pulse"></span> Located</div>
+      <div class="lm-title">Signal found</div>
+      <div class="lm-subtitle">Last seen about 2 minutes ago &middot; Accuracy &plusmn;47 m</div>
+    </div>
+    <div class="lm-rows">
+      <div class="lm-row">
+        <div class="lm-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"><path d="M3 11a6 6 0 0110 0"/><path d="M5.5 9a3 3 0 015 0"/><circle cx="8" cy="11.5" r="1" fill="var(--accent)"/></svg></div>
+        <div><div class="lm-label">SIM carrier</div><div class="lm-value" id="lm-carrier">...</div></div>
+      </div>
+      <div class="lm-row">
+        <div class="lm-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="2" width="7" height="12" rx="1.3"/><path d="M7 12h2"/></svg></div>
+        <div><div class="lm-label">Number</div><div class="lm-value mono" id="lm-phone">...</div></div>
+      </div>
+      <div class="lm-row">
+        <div class="lm-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14V3"/><path d="M4 3h7l-1.5 2.5L11 8H4"/></svg></div>
+        <div><div class="lm-label">Country</div><div class="lm-value" id="lm-country">...</div></div>
+      </div>
+      <div class="lm-row">
+        <div class="lm-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="5.5"/><path d="M8 5v3l2 1.5"/></svg></div>
+        <div><div class="lm-label">Local time <span style="width:6px;height:6px;border-radius:50%;background:#6EE5A5;display:inline-block;animation:trc-pulse 1.4s infinite;"></span></div><div class="lm-value mono" id="lm-time">--:--:--</div></div>
+      </div>
+      <div class="lm-row blurred">
+        <div class="lm-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="var(--accent)"><path d="M8 1.5c-2.8 0-5 2.2-5 5 0 3.5 5 8 5 8s5-4.5 5-8c0-2.8-2.2-5-5-5z"/><circle cx="8" cy="6.5" r="2" fill="#fff"/></svg></div>
+        <div><div class="lm-label">City <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="var(--accent)" stroke-width="1.4"><rect x="2" y="5" width="7" height="5" rx="1"/><path d="M3.5 5V3.5a2 2 0 014 0V5"/></svg></div><div class="lm-value mono">██████████</div></div>
+      </div>
+      <div class="lm-row blurred">
+        <div class="lm-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="var(--accent)"><path d="M8 1.5c-2.8 0-5 2.2-5 5 0 3.5 5 8 5 8s5-4.5 5-8c0-2.8-2.2-5-5-5z"/><circle cx="8" cy="6.5" r="2" fill="#fff"/></svg></div>
+        <div><div class="lm-label">Exact address <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="var(--accent)" stroke-width="1.4"><rect x="2" y="5" width="7" height="5" rx="1"/><path d="M3.5 5V3.5a2 2 0 014 0V5"/></svg></div><div class="lm-value mono">██ ████████ ███, ██████</div></div>
+      </div>
+    </div>
+    <div class="lm-hint">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="var(--ink-4)" stroke-width="1.2" style="flex-shrink:0;"><circle cx="7" cy="7" r="5.5"/><path d="M7 4v3m0 2v.5" stroke-linecap="round"/></svg>
+      Exact street, recent trail and WiFi are hidden. Unlock the full report to reveal.
+    </div>
+    <div class="lm-actions">
+      <button class="btn btn-primary btn-lg" onclick="showReport()">
+        Continue
+        <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10m-4-4l4 4-4 4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="lm-foot-trust">
+        <span>SSL secured</span><span>&middot;</span>
+        <span>100% confidential</span><span>&middot;</span>
+        <span>Cancel anytime</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Report Page ─── -->
+<div class="report-page" id="report-page">
+  <div class="rp-topbar">
+    <div class="logo">
+      <div class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      Tracify
+    </div>
+    <button class="rp-back" onclick="closeReport()">
+      <svg width="12" height="12" viewBox="0 0 12 12"><path d="M10 6H2m4-3L2 6l4 3" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Back
+    </button>
+  </div>
+  <div class="rp-content">
+    <div class="rp-badge"><span class="pulse"></span> Report ready</div>
+    <h1 class="rp-title">Your report is<br/>ready to unlock.</h1>
+    <p class="rp-sub">We found a match for your number. Enter your email to reveal the exact street, recent trail, and WiFi network.</p>
+    <div class="rp-grid">
+      <div class="rp-data-card">
+        <div class="rp-map-strip">
+          <svg viewBox="0 0 400 140" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;opacity:0.4;">
+            <defs><pattern id="rpt-dots2" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="var(--accent)" opacity="0.4"/></pattern></defs>
+            <rect width="400" height="140" fill="url(#rpt-dots2)"/>
+            <path d="M0 100 Q80 70 160 85 T320 60 L400 75" stroke="var(--accent)" stroke-width="1.2" fill="none" opacity="0.35" stroke-dasharray="3 4"/>
+          </svg>
+          <div class="located-pill">
+            <svg width="14" height="14" viewBox="0 0 22 22"><path d="M11 2C7 2 3.5 5 3.5 9c0 5 7.5 11 7.5 11s7.5-6 7.5-11c0-4-3.5-7-7.5-7z" fill="var(--accent)"/><circle cx="11" cy="9" r="3" fill="#fff"/></svg>
+            Located
+          </div>
+        </div>
+        <div class="rp-section-label">What we found</div>
+        <div class="rp-row"><div class="rp-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"><path d="M3 11a6 6 0 0110 0"/><path d="M5.5 9a3 3 0 015 0"/><circle cx="8" cy="11.5" r="1" fill="var(--accent)"/></svg></div><div><div class="rp-label">SIM carrier</div><div class="rp-value" id="rp-carrier">...</div></div></div>
+        <div class="rp-row"><div class="rp-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="2" width="7" height="12" rx="1.3"/><path d="M7 12h2"/></svg></div><div><div class="rp-label">Number</div><div class="rp-value mono" id="rp-phone">...</div></div></div>
+        <div class="rp-row"><div class="rp-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14V3"/><path d="M4 3h7l-1.5 2.5L11 8H4"/></svg></div><div><div class="rp-label">Country</div><div class="rp-value" id="rp-country">...</div></div></div>
+        <div class="rp-row blurred"><div class="rp-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="var(--accent)"><path d="M8 1.5c-2.8 0-5 2.2-5 5 0 3.5 5 8 5 8s5-4.5 5-8c0-2.8-2.2-5-5-5z"/><circle cx="8" cy="6.5" r="2" fill="#fff"/></svg></div><div><div class="rp-label">City</div><div class="rp-value mono">██████████</div></div></div>
+        <div class="rp-row"><div class="rp-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="5.5"/><path d="M8 5v3l2 1.5"/></svg></div><div><div class="rp-label">Accuracy</div><div class="rp-value">&plusmn;47 m from last known point</div></div></div>
+        <div class="rp-locked">
+          <div class="rp-locked-label">
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="5" width="7" height="5" rx="1"/><path d="M3.5 5V3.5a2 2 0 014 0V5"/></svg>
+            Locked — unlock below
+          </div>
+          <div class="rp-locked-item"><div><div class="rp-label">Exact street address</div><div class="rp-value">███ ████████ Ave, ██████</div></div></div>
+          <div class="rp-locked-item"><div><div class="rp-label">Last 7 days trail</div><div class="rp-value">██ pings &middot; ██ places visited</div></div></div>
+          <div class="rp-locked-item"><div><div class="rp-label">Current WiFi network</div><div class="rp-value">████████_████ (5 GHz)</div></div></div>
+          <div class="rp-locked-item"><div><div class="rp-label">Top visited places</div><div class="rp-value">██████ &middot; ██████ &middot; ██████</div></div></div>
+        </div>
+      </div>
+      <div class="rp-signup-card">
+        <div style="width:48px;height:48px;border-radius:14px;background:var(--accent-50);display:grid;place-items:center;margin-bottom:16px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+        </div>
+        <h3>Unlock full report</h3>
+        <p>Enter your email to get started. We'll create your account and send your password.</p>
+        <div class="rp-email-label">Email address</div>
+        <input type="email" id="rp-email" class="rp-email-input" placeholder="you@example.com" autofocus />
+        <div class="rp-error" id="rp-error" style="display:none;"></div>
+        <button class="btn btn-primary btn-lg" id="rp-submit" onclick="handleSignup()" style="margin-top:16px;" disabled>
+          Start for $0.50
+          <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10m-4-4l4 4-4 4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div style="text-align:center;margin-top:14px;">
+          <div style="font-size:12px;color:var(--ink-4);line-height:1.5;">$0.50 for 24h trial, then $17.99/mo. Cancel anytime.</div>
+          <div style="font-size:11px;color:var(--ink-4);margin-top:6px;">By continuing, you agree to our <a href="/terms" style="color:var(--accent);">Terms</a> and <a href="/privacy" style="color:var(--accent);">Privacy Policy</a>.</div>
+        </div>
+        <div class="rp-trust-badges">
+          <span class="rp-trust-badge">4.8 ★ on App Store</span>
+          <span class="rp-trust-badge">500k+ lookups</span>
+          <span class="rp-trust-badge">GDPR compliant</span>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:11.5px;color:var(--ink-4);margin-top:48px;">Tracify &middot; Family location &middot; Not affiliated with any carrier</div>
+  </div>
+</div>
+
+<!-- Tweaks panel -->
+<div id="tweaks-panel">
+  <h5>Tweaks</h5>
+  <div class="tw-row">
+    <label>Accent color</label>
+    <div class="tw-swatches" id="tw-accent">
+      <div class="tw-sw" data-a="#4CAF50" data-d="#388E3C" style="background:#4CAF50"></div>
+      <div class="tw-sw" data-a="#4F8DFF" data-d="#2C63D8" style="background:#4F8DFF"></div>
+      <div class="tw-sw" data-a="#FF8A4B" data-d="#D9622A" style="background:#FF8A4B"></div>
+      <div class="tw-sw" data-a="#9C6CFF" data-d="#6E42D6" style="background:#9C6CFF"></div>
+      <div class="tw-sw" data-a="#1FB26A" data-d="#128F52" style="background:#1FB26A"></div>
+    </div>
+  </div>
+  <div class="tw-row">
+    <label>Font</label>
+    <div class="tw-opts" id="tw-font">
+      <div class="tw-opt" data-f="Manrope">Manrope</div>
+      <div class="tw-opt" data-f="Inter">Inter</div>
+      <div class="tw-opt" data-f="DM Sans">DM Sans</div>
+    </div>
+  </div>
+  <div class="tw-row">
+    <label>Button shape</label>
+    <div class="tw-opts" id="tw-shape">
+      <div class="tw-opt" data-s="pill" data-r="999px">Pill</div>
+      <div class="tw-opt" data-s="round" data-r="14px">Round</div>
+      <div class="tw-opt" data-s="square" data-r="4px">Square</div>
+    </div>
+  </div>
+  <div class="tw-row tw-toggle">
+    <label style="margin:0;">Dark mode</label>
+    <div class="tw-switch" id="tw-dark"></div>
+  </div>
+</div>
+
+<script>
+/* =========================
+   COUNTRY DATA
+========================= */
+const COUNTRIES = [
+  {name:'United States', code:'US', dial:'+1', flag:'\u{1F1FA}\u{1F1F8}', tz:'America/New_York', tzOffset:-5, carriers:['Verizon','AT&T','T-Mobile'], capital:'Washington, DC'},
+  {name:'Canada', code:'CA', dial:'+1', flag:'\u{1F1E8}\u{1F1E6}', tz:'America/Toronto', tzOffset:-5, carriers:['Bell','Rogers','Telus'], capital:'Ottawa'},
+  {name:'United Kingdom', code:'GB', dial:'+44', flag:'\u{1F1EC}\u{1F1E7}', tz:'Europe/London', tzOffset:0, carriers:['EE','Vodafone','Three','O2'], capital:'London'},
+  {name:'Germany', code:'DE', dial:'+49', flag:'\u{1F1E9}\u{1F1EA}', tz:'Europe/Berlin', tzOffset:1, carriers:['Telekom','Vodafone','O2'], capital:'Berlin'},
+  {name:'France', code:'FR', dial:'+33', flag:'\u{1F1EB}\u{1F1F7}', tz:'Europe/Paris', tzOffset:1, carriers:['Orange','SFR','Bouygues'], capital:'Paris'},
+  {name:'Spain', code:'ES', dial:'+34', flag:'\u{1F1EA}\u{1F1F8}', tz:'Europe/Madrid', tzOffset:1, carriers:['Movistar','Vodafone','Orange'], capital:'Madrid'},
+  {name:'Italy', code:'IT', dial:'+39', flag:'\u{1F1EE}\u{1F1F9}', tz:'Europe/Rome', tzOffset:1, carriers:['TIM','Vodafone','WindTre'], capital:'Rome'},
+  {name:'Netherlands', code:'NL', dial:'+31', flag:'\u{1F1F3}\u{1F1F1}', tz:'Europe/Amsterdam', tzOffset:1, carriers:['KPN','T-Mobile','Vodafone'], capital:'Amsterdam'},
+  {name:'Sweden', code:'SE', dial:'+46', flag:'\u{1F1F8}\u{1F1EA}', tz:'Europe/Stockholm', tzOffset:1, carriers:['Telia','Tele2','Tre'], capital:'Stockholm'},
+  {name:'Norway', code:'NO', dial:'+47', flag:'\u{1F1F3}\u{1F1F4}', tz:'Europe/Oslo', tzOffset:1, carriers:['Telenor','Telia','Ice'], capital:'Oslo'},
+  {name:'Australia', code:'AU', dial:'+61', flag:'\u{1F1E6}\u{1F1FA}', tz:'Australia/Sydney', tzOffset:11, carriers:['Telstra','Optus','Vodafone'], capital:'Canberra'},
+  {name:'New Zealand', code:'NZ', dial:'+64', flag:'\u{1F1F3}\u{1F1FF}', tz:'Pacific/Auckland', tzOffset:12, carriers:['Spark','Vodafone','2degrees'], capital:'Wellington'},
+  {name:'Japan', code:'JP', dial:'+81', flag:'\u{1F1EF}\u{1F1F5}', tz:'Asia/Tokyo', tzOffset:9, carriers:['NTT Docomo','SoftBank','au KDDI'], capital:'Tokyo'},
+  {name:'South Korea', code:'KR', dial:'+82', flag:'\u{1F1F0}\u{1F1F7}', tz:'Asia/Seoul', tzOffset:9, carriers:['SK Telecom','KT','LG U+'], capital:'Seoul'},
+  {name:'China', code:'CN', dial:'+86', flag:'\u{1F1E8}\u{1F1F3}', tz:'Asia/Shanghai', tzOffset:8, carriers:['China Mobile','China Unicom','China Telecom'], capital:'Beijing'},
+  {name:'India', code:'IN', dial:'+91', flag:'\u{1F1EE}\u{1F1F3}', tz:'Asia/Kolkata', tzOffset:5, carriers:['Jio','Airtel','Vi'], capital:'New Delhi'},
+  {name:'Pakistan', code:'PK', dial:'+92', flag:'\u{1F1F5}\u{1F1F0}', tz:'Asia/Karachi', tzOffset:5, carriers:['Jazz','Zong','Telenor','Ufone'], capital:'Islamabad'},
+  {name:'Bangladesh', code:'BD', dial:'+880', flag:'\u{1F1E7}\u{1F1E9}', tz:'Asia/Dhaka', tzOffset:6, carriers:['Grameenphone','Robi','Banglalink'], capital:'Dhaka'},
+  {name:'Indonesia', code:'ID', dial:'+62', flag:'\u{1F1EE}\u{1F1E9}', tz:'Asia/Jakarta', tzOffset:7, carriers:['Telkomsel','Indosat','XL Axiata'], capital:'Jakarta'},
+  {name:'Philippines', code:'PH', dial:'+63', flag:'\u{1F1F5}\u{1F1ED}', tz:'Asia/Manila', tzOffset:8, carriers:['Globe','Smart','DITO'], capital:'Manila'},
+  {name:'Thailand', code:'TH', dial:'+66', flag:'\u{1F1F9}\u{1F1ED}', tz:'Asia/Bangkok', tzOffset:7, carriers:['AIS','True','DTAC'], capital:'Bangkok'},
+  {name:'Vietnam', code:'VN', dial:'+84', flag:'\u{1F1FB}\u{1F1F3}', tz:'Asia/Ho_Chi_Minh', tzOffset:7, carriers:['Viettel','Mobifone','VinaPhone'], capital:'Hanoi'},
+  {name:'Singapore', code:'SG', dial:'+65', flag:'\u{1F1F8}\u{1F1EC}', tz:'Asia/Singapore', tzOffset:8, carriers:['Singtel','StarHub','M1'], capital:'Singapore'},
+  {name:'Malaysia', code:'MY', dial:'+60', flag:'\u{1F1F2}\u{1F1FE}', tz:'Asia/Kuala_Lumpur', tzOffset:8, carriers:['Maxis','Celcom','Digi'], capital:'Kuala Lumpur'},
+  {name:'UAE', code:'AE', dial:'+971', flag:'\u{1F1E6}\u{1F1EA}', tz:'Asia/Dubai', tzOffset:4, carriers:['Etisalat','du'], capital:'Abu Dhabi'},
+  {name:'Saudi Arabia', code:'SA', dial:'+966', flag:'\u{1F1F8}\u{1F1E6}', tz:'Asia/Riyadh', tzOffset:3, carriers:['STC','Mobily','Zain'], capital:'Riyadh'},
+  {name:'T\u00FCrkiye', code:'TR', dial:'+90', flag:'\u{1F1F9}\u{1F1F7}', tz:'Europe/Istanbul', tzOffset:3, carriers:['Turkcell','Vodafone','Turk Telekom'], capital:'Ankara'},
+  {name:'Egypt', code:'EG', dial:'+20', flag:'\u{1F1EA}\u{1F1EC}', tz:'Africa/Cairo', tzOffset:2, carriers:['Vodafone','Orange','Etisalat'], capital:'Cairo'},
+  {name:'South Africa', code:'ZA', dial:'+27', flag:'\u{1F1FF}\u{1F1E6}', tz:'Africa/Johannesburg', tzOffset:2, carriers:['Vodacom','MTN','Cell C'], capital:'Pretoria'},
+  {name:'Nigeria', code:'NG', dial:'+234', flag:'\u{1F1F3}\u{1F1EC}', tz:'Africa/Lagos', tzOffset:1, carriers:['MTN','Glo','Airtel'], capital:'Abuja'},
+  {name:'Kenya', code:'KE', dial:'+254', flag:'\u{1F1F0}\u{1F1EA}', tz:'Africa/Nairobi', tzOffset:3, carriers:['Safaricom','Airtel','Telkom'], capital:'Nairobi'},
+  {name:'Brazil', code:'BR', dial:'+55', flag:'\u{1F1E7}\u{1F1F7}', tz:'America/Sao_Paulo', tzOffset:-3, carriers:['Vivo','Claro','TIM'], capital:'Bras\u00EDlia'},
+  {name:'Argentina', code:'AR', dial:'+54', flag:'\u{1F1E6}\u{1F1F7}', tz:'America/Argentina/Buenos_Aires', tzOffset:-3, carriers:['Claro','Movistar','Personal'], capital:'Buenos Aires'},
+  {name:'Mexico', code:'MX', dial:'+52', flag:'\u{1F1F2}\u{1F1FD}', tz:'America/Mexico_City', tzOffset:-6, carriers:['Telcel','AT&T','Movistar'], capital:'Mexico City'},
+  {name:'Chile', code:'CL', dial:'+56', flag:'\u{1F1E8}\u{1F1F1}', tz:'America/Santiago', tzOffset:-4, carriers:['Entel','Movistar','Claro'], capital:'Santiago'},
+  {name:'Colombia', code:'CO', dial:'+57', flag:'\u{1F1E8}\u{1F1F4}', tz:'America/Bogota', tzOffset:-5, carriers:['Claro','Movistar','Tigo'], capital:'Bogot\u00E1'},
+  {name:'Poland', code:'PL', dial:'+48', flag:'\u{1F1F5}\u{1F1F1}', tz:'Europe/Warsaw', tzOffset:1, carriers:['Orange','Play','T-Mobile'], capital:'Warsaw'},
+  {name:'Portugal', code:'PT', dial:'+351', flag:'\u{1F1F5}\u{1F1F9}', tz:'Europe/Lisbon', tzOffset:0, carriers:['NOS','MEO','Vodafone'], capital:'Lisbon'},
+  {name:'Ireland', code:'IE', dial:'+353', flag:'\u{1F1EE}\u{1F1EA}', tz:'Europe/Dublin', tzOffset:0, carriers:['Three','Vodafone','Eir'], capital:'Dublin'},
+  {name:'Denmark', code:'DK', dial:'+45', flag:'\u{1F1E9}\u{1F1F0}', tz:'Europe/Copenhagen', tzOffset:1, carriers:['TDC','Telia','3'], capital:'Copenhagen'},
+  {name:'Finland', code:'FI', dial:'+358', flag:'\u{1F1EB}\u{1F1EE}', tz:'Europe/Helsinki', tzOffset:2, carriers:['Elisa','DNA','Telia'], capital:'Helsinki'},
+  {name:'Switzerland', code:'CH', dial:'+41', flag:'\u{1F1E8}\u{1F1ED}', tz:'Europe/Zurich', tzOffset:1, carriers:['Swisscom','Sunrise','Salt'], capital:'Bern'},
+  {name:'Austria', code:'AT', dial:'+43', flag:'\u{1F1E6}\u{1F1F9}', tz:'Europe/Vienna', tzOffset:1, carriers:['A1','Magenta','Drei'], capital:'Vienna'},
+  {name:'Belgium', code:'BE', dial:'+32', flag:'\u{1F1E7}\u{1F1EA}', tz:'Europe/Brussels', tzOffset:1, carriers:['Proximus','BASE','Orange'], capital:'Brussels'},
+];
+
+/* =========================
+   CARRIER PREFIX MAP
+========================= */
+const CARRIER_PREFIXES = {
+  PK: [
+    { p: ['300','301','302','303','304','305','306','307','308','309'], name: 'Jazz' },
+    { p: ['310','311','312','313','314','315','316','317','318','319'], name: 'Zong' },
+    { p: ['320','321','322','323','324','325','326','327','328','329'], name: 'Jazz' },
+    { p: ['330','331','332','333','334','335','336','337','338','339'], name: 'Ufone' },
+    { p: ['340','341','342','343','344','345','346','347','348','349'], name: 'Jazz' },
+    { p: ['355'], name: 'SCOM' }
+  ],
+  IN: [
+    { p: ['70','71','72','73','74','75','76','77','78','79'], name: 'Jio' },
+    { p: ['80','81','82','83','84','85','86','87','88','89'], name: 'Airtel' },
+    { p: ['90','91','92','93','94','95','96','97','98','99'], name: 'Vi (Vodafone Idea)' }
+  ],
+  US: [
+    { p: ['212','332','646','917','718','347'], name: 'Verizon' },
+    { p: ['213','310','323','424','818'], name: 'T-Mobile' },
+    { p: ['312','773','872','224','847'], name: 'AT&T' },
+    { p: ['415','628','510','650'], name: 'Verizon' },
+    { p: ['305','786','954','561'], name: 'T-Mobile' },
+    { p: ['214','469','972','817'], name: 'AT&T' }
+  ],
+  GB: [
+    { p: ['74','75','77','78'], name: 'EE' },
+    { p: ['73','79'], name: 'Vodafone' },
+    { p: ['76'], name: 'Three' },
+    { p: ['70','71','72'], name: 'O2' }
+  ],
+  DE: [
+    { p: ['151','160','170','171','175'], name: 'Telekom' },
+    { p: ['152','162','172','173','174'], name: 'Vodafone' },
+    { p: ['157','163','177','178'], name: 'O2' },
+    { p: ['159','176','179'], name: 'O2' }
+  ],
+  FR: [{ p: ['6','7'], name: 'Orange' }],
+  BR: [{ p: ['11','21','31','41','51','61','71','81','91'], name: 'Vivo' }],
+  AE: [{ p: ['50','54','56'], name: 'Etisalat' }, { p: ['52','55','58'], name: 'du' }],
+  SA: [{ p: ['50','53','55'], name: 'STC' }, { p: ['54','56'], name: 'Mobily' }, { p: ['58','59'], name: 'Zain' }]
+};
+
+/* =========================
+   CITY POOLS
+========================= */
+const CITY_POOLS = {
+  PK: ['Karachi','Lahore','Islamabad','Rawalpindi','Faisalabad','Multan','Peshawar','Quetta','Hyderabad','Sialkot'],
+  IN: ['Mumbai','Delhi','Bengaluru','Hyderabad','Chennai','Kolkata','Pune','Ahmedabad','Jaipur','Lucknow'],
+  US: ['New York, NY','Los Angeles, CA','Chicago, IL','Houston, TX','Phoenix, AZ','Dallas, TX','Miami, FL','San Francisco, CA','Seattle, WA','Boston, MA'],
+  GB: ['London','Manchester','Birmingham','Leeds','Glasgow','Liverpool','Edinburgh','Bristol'],
+  DE: ['Berlin','Munich','Hamburg','Cologne','Frankfurt','Stuttgart','D\u00FCsseldorf','Leipzig'],
+  FR: ['Paris','Marseille','Lyon','Toulouse','Nice','Nantes','Bordeaux','Lille'],
+  BR: ['S\u00E3o Paulo','Rio de Janeiro','Bras\u00EDlia','Salvador','Fortaleza','Belo Horizonte','Curitiba','Recife'],
+  AE: ['Dubai','Abu Dhabi','Sharjah','Ajman'],
+  SA: ['Riyadh','Jeddah','Mecca','Medina','Dammam'],
+  CA: ['Toronto','Montreal','Vancouver','Calgary','Ottawa','Edmonton'],
+  AU: ['Sydney','Melbourne','Brisbane','Perth','Adelaide'],
+  JP: ['Tokyo','Osaka','Yokohama','Nagoya','Sapporo','Kyoto'],
+  CN: ['Beijing','Shanghai','Guangzhou','Shenzhen','Chengdu'],
+  MX: ['Mexico City','Guadalajara','Monterrey','Puebla','Tijuana'],
+  NG: ['Lagos','Abuja','Kano','Ibadan','Port Harcourt'],
+  ID: ['Jakarta','Surabaya','Bandung','Medan','Makassar'],
+  TR: ['Istanbul','Ankara','Izmir','Bursa','Antalya'],
+  EG: ['Cairo','Alexandria','Giza','Luxor'],
+  ZA: ['Johannesburg','Cape Town','Durban','Pretoria'],
+  IT: ['Rome','Milan','Naples','Turin','Florence'],
+  ES: ['Madrid','Barcelona','Valencia','Seville','Bilbao'],
+  NL: ['Amsterdam','Rotterdam','The Hague','Utrecht']
+};
+
+/* =========================
+   PHONE LENGTHS
+========================= */
+const PHONE_LENGTHS = {
+  US:[10,10], CA:[10,10], MX:[10,10], BR:[10,11], AR:[10,11],
+  GB:[10,11], IE:[7,9], DE:[10,11], FR:[9,9], ES:[9,9],
+  IT:[9,10], NL:[9,9], SE:[7,9], NO:[8,8], PL:[9,9],
+  TR:[10,10], IN:[10,10], PK:[10,10], CN:[11,11], JP:[10,11],
+  KR:[10,11], ID:[9,12], PH:[10,10], TH:[9,9], VN:[9,10],
+  AU:[9,9], NZ:[8,10], ZA:[9,9], NG:[10,10], EG:[10,10],
+  AE:[7,9], SA:[9,9], IL:[9,9]
+};
+
+/* =========================
+   CITY COORDINATES
+========================= */
+const CITY_COORDS = {
+  'New York, NY':[40.7128,-74.0060,12],'Los Angeles, CA':[34.0522,-118.2437,12],'Chicago, IL':[41.8781,-87.6298,12],
+  'Houston, TX':[29.7604,-95.3698,12],'Phoenix, AZ':[33.4484,-112.0740,12],'Dallas, TX':[32.7767,-96.7970,12],
+  'Miami, FL':[25.7617,-80.1918,12],'San Francisco, CA':[37.7749,-122.4194,13],'Seattle, WA':[47.6062,-122.3321,12],
+  'Boston, MA':[42.3601,-71.0589,13],'Washington, DC':[38.9072,-77.0369,13],
+  'Toronto':[43.6532,-79.3832,12],'Montreal':[45.5017,-73.5673,12],'Vancouver':[49.2827,-123.1207,12],
+  'Calgary':[51.0447,-114.0719,12],'Ottawa':[45.4215,-75.6972,12],'Edmonton':[53.5461,-113.4938,12],
+  'London':[51.5074,-0.1278,12],'Manchester':[53.4808,-2.2426,13],'Birmingham':[52.4862,-1.8904,13],
+  'Leeds':[53.8008,-1.5491,13],'Glasgow':[55.8642,-4.2518,13],'Liverpool':[53.4084,-2.9916,13],
+  'Edinburgh':[55.9533,-3.1883,13],'Bristol':[51.4545,-2.5879,13],
+  'Berlin':[52.5200,13.4050,12],'Munich':[48.1351,11.5820,12],'Hamburg':[53.5511,9.9937,12],
+  'Cologne':[50.9375,6.9603,13],'Frankfurt':[50.1109,8.6821,13],'Stuttgart':[48.7758,9.1829,13],
+  'D\u00FCsseldorf':[51.2277,6.7735,13],'Leipzig':[51.3397,12.3731,13],
+  'Paris':[48.8566,2.3522,12],'Marseille':[43.2965,5.3698,13],'Lyon':[45.7640,4.8357,13],
+  'Toulouse':[43.6047,1.4442,13],'Nice':[43.7102,7.2620,13],'Nantes':[47.2184,-1.5536,13],
+  'Bordeaux':[44.8378,-0.5792,13],'Lille':[50.6292,3.0573,13],
+  'Madrid':[40.4168,-3.7038,12],'Barcelona':[41.3851,2.1734,13],'Valencia':[39.4699,-0.3763,13],
+  'Seville':[37.3891,-5.9845,13],'Bilbao':[43.2630,-2.9350,13],
+  'Rome':[41.9028,12.4964,12],'Milan':[45.4642,9.1900,13],'Naples':[40.8518,14.2681,13],
+  'Turin':[45.0703,7.6869,13],'Florence':[43.7696,11.2558,13],
+  'Amsterdam':[52.3676,4.9041,13],'Rotterdam':[51.9244,4.4777,13],'The Hague':[52.0705,4.3007,13],'Utrecht':[52.0907,5.1214,13],
+  'Stockholm':[59.3293,18.0686,12],'Oslo':[59.9139,10.7522,12],
+  'Sydney':[33.8688,151.2093,12],'Melbourne':[-37.8136,144.9631,12],'Brisbane':[-27.4698,153.0251,12],
+  'Perth':[-31.9505,115.8605,12],'Adelaide':[-34.9285,138.6007,12],'Canberra':[-35.2809,149.1300,12],
+  'Wellington':[-41.2865,174.7762,13],
+  'Tokyo':[35.6762,139.6503,11],'Osaka':[34.6937,135.5023,12],'Yokohama':[35.4437,139.6380,12],
+  'Nagoya':[35.1815,136.9066,12],'Sapporo':[43.0618,141.3545,12],'Kyoto':[35.0116,135.7681,13],
+  'Seoul':[37.5665,126.9780,12],'Beijing':[39.9042,116.4074,11],'Shanghai':[31.2304,121.4737,12],
+  'Guangzhou':[23.1291,113.2644,12],'Shenzhen':[22.5431,114.0579,12],'Chengdu':[30.5728,104.0668,12],
+  'Mumbai':[19.0760,72.8777,12],'Delhi':[28.7041,77.1025,12],'Bengaluru':[12.9716,77.5946,12],
+  'Hyderabad':[17.3850,78.4867,12],'Chennai':[13.0827,80.2707,12],'Kolkata':[22.5726,88.3639,12],
+  'Pune':[18.5204,73.8567,12],'Ahmedabad':[23.0225,72.5714,12],'Jaipur':[26.9124,75.7873,12],'Lucknow':[26.8467,80.9462,12],
+  'New Delhi':[28.6139,77.2090,12],
+  'Karachi':[24.8607,67.0011,12],'Lahore':[31.5204,74.3587,12],'Islamabad':[33.6844,73.0479,12],
+  'Rawalpindi':[33.5651,73.0169,12],'Faisalabad':[31.4504,73.1350,12],'Multan':[30.1575,71.5249,12],
+  'Peshawar':[34.0151,71.5249,12],'Quetta':[30.1798,66.9750,12],'Sialkot':[32.4945,74.5229,13],
+  'Dhaka':[23.8103,90.4125,12],
+  'Jakarta':[-6.2088,106.8456,12],'Surabaya':[-7.2575,112.7521,12],'Bandung':[-6.9175,107.6191,12],
+  'Medan':[3.5952,98.6722,12],'Makassar':[-5.1477,119.4327,12],
+  'Manila':[14.5995,120.9842,12],'Bangkok':[13.7563,100.5018,12],'Hanoi':[21.0278,105.8342,12],
+  'Singapore':[1.3521,103.8198,12],'Kuala Lumpur':[3.1390,101.6869,12],
+  'Dubai':[25.2048,55.2708,12],'Abu Dhabi':[24.4539,54.3773,12],'Sharjah':[25.3463,55.4209,13],'Ajman':[25.4052,55.5136,13],
+  'Riyadh':[24.7136,46.6753,12],'Jeddah':[21.4858,39.1925,12],'Mecca':[21.3891,39.8579,13],
+  'Medina':[24.5247,39.5692,13],'Dammam':[26.3927,49.9777,13],
+  'Istanbul':[41.0082,28.9784,12],'Ankara':[39.9334,32.8597,12],'Izmir':[38.4237,27.1428,12],
+  'Bursa':[40.1885,29.0610,12],'Antalya':[36.8969,30.7133,12],
+  'Cairo':[30.0444,31.2357,12],'Alexandria':[31.2001,29.9187,12],'Giza':[30.0131,31.2089,13],'Luxor':[25.6872,32.6396,13],
+  'Johannesburg':[-26.2041,28.0473,12],'Cape Town':[-33.9249,18.4241,12],'Durban':[-29.8587,31.0218,12],'Pretoria':[-25.7479,28.2293,12],
+  'Lagos':[6.5244,3.3792,12],'Abuja':[9.0579,7.4951,12],'Kano':[12.0022,8.5920,12],'Ibadan':[7.3775,3.9470,13],'Port Harcourt':[4.8156,7.0498,13],
+  'Nairobi':[-1.2921,36.8219,12],
+  'S\u00E3o Paulo':[-23.5505,-46.6333,12],'Rio de Janeiro':[-22.9068,-43.1729,12],'Bras\u00EDlia':[-15.7975,-47.8919,12],
+  'Salvador':[-12.9714,-38.5124,12],'Fortaleza':[-3.7172,-38.5433,12],'Belo Horizonte':[-19.9167,-43.9345,12],
+  'Curitiba':[-25.4284,-49.2733,12],'Recife':[-8.0476,-34.8770,12],
+  'Buenos Aires':[-34.6037,-58.3816,12],
+  'Mexico City':[19.4326,-99.1332,12],'Guadalajara':[20.6597,-103.3496,12],'Monterrey':[25.6866,-100.3161,12],
+  'Puebla':[19.0414,-98.2063,12],'Tijuana':[32.5149,-117.0382,12],
+  'Santiago':[-33.4489,-70.6693,12],'Bogot\u00E1':[4.7110,-74.0721,12],
+  'Warsaw':[52.2297,21.0122,12],'Lisbon':[38.7223,-9.1393,12],'Dublin':[53.3498,-6.2603,12],
+  'Copenhagen':[55.6761,12.5683,12],'Helsinki':[60.1699,24.9384,12],'Bern':[46.9480,7.4474,13],
+  'Vienna':[48.2082,16.3738,12],'Brussels':[50.8503,4.3517,12]
+};
+
+/* =========================
+   CARRIER + CITY RESOLVER
+========================= */
+function seedHash(str) {
+  let h = 0;
+  for (let i = 0; i < str.length; i++) { h = ((h << 5) - h + str.charCodeAt(i)) | 0; }
+  return Math.abs(h);
+}
+
+function resolveCarrierAndCity(country, digits) {
+  let carrier = null;
+  const prefixes = CARRIER_PREFIXES[country.code];
+  if (prefixes && digits.length >= 2) {
+    for (const entry of prefixes) {
+      for (const p of entry.p) {
+        if (digits.startsWith(p)) { carrier = entry.name; break; }
+      }
+      if (carrier) break;
+    }
+  }
+  if (!carrier && country.carriers && country.carriers.length) {
+    carrier = country.carriers[seedHash(digits) % country.carriers.length];
+  }
+  if (!carrier) carrier = 'Unknown';
+
+  const pool = CITY_POOLS[country.code];
+  let city = country.capital || country.name;
+  if (pool && pool.length) {
+    city = pool[seedHash(digits + 'city') % pool.length];
+  }
+
+  return { carrier, city };
+}
+
+/* =========================
+   STATE
+========================= */
+let currentCountry = COUNTRIES[0];
+let leafletMap = null;
+let timeInterval = null;
+let locateData = { carrier: '', city: '', phone: '', fullNumber: '' };
+
+/* =========================
+   COUNTRY PICKER
+========================= */
+function renderCountryList(filter = '') {
+  const list = document.getElementById('cc-list');
+  const q = filter.trim().toLowerCase();
+  const filtered = COUNTRIES.filter(c =>
+    !q || c.name.toLowerCase().includes(q) || c.dial.includes(q) || c.code.toLowerCase().includes(q)
+  );
+  list.innerHTML = filtered.map(c => `
+    <button class="cc-item ${c.code===currentCountry.code?'active':''}" data-code="${c.code}">
+      <span class="cc-flag">${c.flag}</span>
+      <span class="cc-name">${c.name}</span>
+      <span class="cc-dial">${c.dial}</span>
+    </button>`).join('');
+  list.querySelectorAll('.cc-item').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const c = COUNTRIES.find(x => x.code === btn.dataset.code);
+      if (c) {
+        currentCountry = c;
+        document.getElementById('cc-flag-display').textContent = c.flag;
+        document.getElementById('cc-code-display').textContent = c.dial;
+        const cc2 = document.getElementById('cc-code-display-2'); if (cc2) cc2.textContent = c.dial;
+        closeCC();
+      }
+    });
+  });
+}
+
+function openCC() {
+  document.getElementById('cc-menu').classList.add('open');
+  document.getElementById('cc-btn').setAttribute('aria-expanded', 'true');
+  setTimeout(() => document.getElementById('cc-search').focus(), 50);
+}
+function closeCC() {
+  document.getElementById('cc-menu').classList.remove('open');
+  document.getElementById('cc-btn').setAttribute('aria-expanded', 'false');
+}
+
+document.getElementById('cc-btn').addEventListener('click', (e) => {
+  e.stopPropagation();
+  const menu = document.getElementById('cc-menu');
+  menu.classList.contains('open') ? closeCC() : openCC();
+});
+document.addEventListener('click', (e) => {
+  if (!document.getElementById('cc-picker').contains(e.target)) closeCC();
+});
+document.getElementById('cc-search').addEventListener('input', (e) => {
+  renderCountryList(e.target.value);
+});
+document.getElementById('cc-search').addEventListener('click', (e) => e.stopPropagation());
+
+renderCountryList();
+
+/* =========================
+   MAP HELPERS
+========================= */
+function destroyMap() {
+  if (leafletMap) {
+    leafletMap.remove();
+    leafletMap = null;
+  }
+}
+
+function initMap(lat, lng, targetZoom) {
+  destroyMap();
+  var container = document.getElementById('search-map');
+  container.innerHTML = '';
+  var startZoom = 4;
+  leafletMap = L.map(container, {
+    zoomControl: false,
+    attributionControl: false,
+    dragging: false,
+    scrollWheelZoom: false,
+    doubleClickZoom: false,
+    touchZoom: false,
+    keyboard: false
+  }).setView([lat, lng], startZoom);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    opacity: 0.75
+  }).addTo(leafletMap);
+
+  // Animate zoom-in over the search duration (4.2s)
+  var finalZoom = targetZoom || 13;
+  var steps = [
+    { delay: 400,  zoom: Math.min(startZoom + 2, finalZoom) },
+    { delay: 1400, zoom: Math.min(startZoom + 5, finalZoom) },
+    { delay: 2800, zoom: Math.min(startZoom + 7, finalZoom) },
+    { delay: 3800, zoom: finalZoom }
+  ];
+  steps.forEach(function(s) {
+    setTimeout(function() {
+      if (leafletMap) {
+        leafletMap.flyTo([lat, lng], s.zoom, { duration: 1.2, easeLinearity: 0.3 });
+      }
+    }, s.delay);
+  });
+}
+
+/* =========================
+   FUNNEL TRACKING
+========================= */
+var _funnelSid = Math.random().toString(36).slice(2) + Date.now().toString(36);
+function logFunnel(stage) {
+  try { fetch('/api/funnel', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ source:'child', stage: stage, sid: _funnelSid }) }); } catch(e) {}
+}
+logFunnel('visited');
+
+/* =========================
+   LOCATE FLOW
+========================= */
+function startLocate() {
+  logFunnel('searched');
+  const btn = document.getElementById('locate-btn');
+  const phone = document.getElementById('phone-field').value.replace(/\D/g, '');
+  const label = btn.querySelector('.label');
+  const banner = document.getElementById('found-banner');
+
+  // Hide the landing page found-banner
+  if (banner) banner.classList.remove('show');
+
+  // Validate phone length
+  const lenRange = PHONE_LENGTHS[currentCountry.code] || [7, 15];
+  if (phone.length < lenRange[0]) {
+    const field = document.getElementById('phone-field');
+    field.animate([
+      { transform: 'translateX(0)' }, { transform: 'translateX(-6px)' },
+      { transform: 'translateX(6px)' }, { transform: 'translateX(-4px)' },
+      { transform: 'translateX(0)' }
+    ], { duration: 300 });
+    field.focus();
+    return;
+  }
+
+  // Resolve carrier and city from number
+  const resolved = resolveCarrierAndCity(currentCountry, phone);
+  const fullNumber = currentCountry.dial + phone;
+  locateData = { carrier: resolved.carrier, city: resolved.city, phone: fullNumber, fullNumber: fullNumber };
+
+  // Disable locate button
+  btn.dataset.state = 'loading';
+  btn.disabled = true;
+  if (label) label.textContent = 'Locating\u2026';
+
+  // Show search overlay
+  const overlay = document.getElementById('search-overlay');
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  // Set phone display in search card
+  const scFlag = document.getElementById('sc-flag');
+  const scPhone = document.getElementById('sc-phone-display');
+  if (scFlag) scFlag.textContent = currentCountry.flag + ' ';
+  if (scPhone) scPhone.textContent = fullNumber;
+
+  // Initialize map centered on the detected city
+  const cityCoords = CITY_COORDS[resolved.city] || CITY_COORDS[currentCountry.capital] || null;
+  if (cityCoords) {
+    setTimeout(() => initMap(cityCoords[0], cityCoords[1], cityCoords[2]), 100);
+  } else {
+    // Fallback: use a rough center based on tz offset
+    setTimeout(() => initMap(30, currentCountry.tzOffset * 15, 4), 100);
+  }
+
+  // Reset progress
+  const barFill = document.getElementById('sc-bar-fill');
+  barFill.style.width = '0%';
+  const steps = document.querySelectorAll('#sc-steps .sc-step');
+  steps.forEach(s => { s.classList.remove('active', 'done'); });
+
+  // Fire background API lookup (non-blocking)
+  let apiResult = null;
+  fetch('/api/lookup/phone?number=' + encodeURIComponent(fullNumber))
+    .then(r => r.json())
+    .then(d => { apiResult = d; })
+    .catch(() => {});
+
+  // Progress animation: 3 steps, 1400ms each = 4200ms total
+  const stepDuration = 1400;
+  const totalDuration = stepDuration * 3;
+
+  // Animate progress bar
+  let startTime = Date.now();
+  const progressInterval = setInterval(() => {
+    const elapsed = Date.now() - startTime;
+    const pct = Math.min((elapsed / totalDuration) * 100, 100);
+    barFill.style.width = pct + '%';
+    if (elapsed >= totalDuration) clearInterval(progressInterval);
+  }, 30);
+
+  // Step transitions
+  steps.forEach((step, i) => {
+    setTimeout(() => {
+      steps.forEach((s, j) => {
+        if (j < i) { s.classList.remove('active'); s.classList.add('done'); }
+        else if (j === i) { s.classList.add('active'); s.classList.remove('done'); }
+        else { s.classList.remove('active', 'done'); }
+      });
+    }, i * stepDuration);
+  });
+
+  // Mark last step done
+  setTimeout(() => {
+    steps.forEach(s => { s.classList.remove('active'); s.classList.add('done'); });
+  }, totalDuration - 200);
+
+  // When done, show located modal
+  setTimeout(() => {
+    barFill.style.width = '100%';
+    // Reset button
+    btn.dataset.state = 'idle';
+    btn.disabled = false;
+    if (label) label.textContent = 'Locate';
+
+    // If API returned a carrier, use it
+    if (apiResult && apiResult.carrier) locateData.carrier = apiResult.carrier;
+    if (apiResult && apiResult.city) locateData.city = apiResult.city;
+
+    showLocated();
+  }, totalDuration + 300);
+
+  // Push state for back button
+  history.pushState({ overlay: 'searching' }, '', '/child#searching');
+}
+
+/* =========================
+   LOCATED MODAL
+========================= */
+function showLocated() {
+  // Hide search overlay
+  const overlay = document.getElementById('search-overlay');
+  overlay.classList.remove('active');
+  destroyMap();
+
+  // Populate located modal
+  const lmCarrier = document.getElementById('lm-carrier');
+  const lmPhone = document.getElementById('lm-phone');
+  const lmCountry = document.getElementById('lm-country');
+  const lmTime = document.getElementById('lm-time');
+
+  if (lmCarrier) lmCarrier.textContent = locateData.carrier;
+  if (lmPhone) lmPhone.textContent = locateData.phone;
+  if (lmCountry) lmCountry.textContent = currentCountry.flag + ' ' + currentCountry.name;
+
+  // Start live time update
+  if (timeInterval) clearInterval(timeInterval);
+  function updateTime() {
+    try {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString('en-US', {
+        timeZone: currentCountry.tz,
+        hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+      });
+      if (lmTime) lmTime.textContent = timeStr;
+    } catch(e) {
+      if (lmTime) lmTime.textContent = new Date().toLocaleTimeString('en-US', { hour12: false });
+    }
+  }
+  updateTime();
+  timeInterval = setInterval(updateTime, 1000);
+
+  // Show modal
+  document.getElementById('located-modal').classList.add('active');
+  history.replaceState({ overlay: 'located' }, '', '/child#located');
+}
+
+/* =========================
+   REPORT PAGE
+========================= */
+function showReport() {
+  // Hide located modal
+  document.getElementById('located-modal').classList.remove('active');
+  if (timeInterval) { clearInterval(timeInterval); timeInterval = null; }
+
+  // Populate report fields
+  const rpCarrier = document.getElementById('rp-carrier');
+  const rpPhone = document.getElementById('rp-phone');
+  const rpCountry = document.getElementById('rp-country');
+  if (rpCarrier) rpCarrier.textContent = locateData.carrier;
+  if (rpPhone) rpPhone.textContent = locateData.phone;
+  if (rpCountry) rpCountry.textContent = currentCountry.flag + ' ' + currentCountry.name;
+
+  // Show report page
+  document.getElementById('report-page').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  logFunnel('report');
+
+  // Focus email
+  setTimeout(() => {
+    const emailInput = document.getElementById('rp-email');
+    if (emailInput) emailInput.focus();
+  }, 200);
+
+  history.pushState({ overlay: 'report' }, '', '/child#report');
+}
+
+/* =========================
+   SIGNUP HANDLER
+========================= */
+async function handleSignup() {
+  const emailInput = document.getElementById('rp-email');
+  const submitBtn = document.getElementById('rp-submit');
+  const errorEl = document.getElementById('rp-error');
+  const email = (emailInput.value || '').trim();
+
+  // Validate email
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    errorEl.textContent = 'Please enter a valid email address.';
+    errorEl.style.display = 'block';
+    emailInput.focus();
+    return;
+  }
+
+  // Disable button
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Processing\u2026';
+  errorEl.style.display = 'none';
+  logFunnel('signup');
+
+  try {
+    const res = await fetch('/api/auth/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: email,
+        phoneToTrack: locateData.fullNumber,
+        countryCode: currentCountry.code,
+        source: 'child',
+        plan: 'child'
+      })
+    });
+    const data = await res.json();
+
+    if (res.ok && data.checkoutUrl) {
+      window.location.href = data.checkoutUrl;
+      return;
+    } else if (res.ok) {
+      window.location.href = '/payment';
+      return;
+    }
+
+    // Handle errors
+    if (data.error && data.error.toLowerCase().includes('already exists')) {
+      window.location.href = '/payment';
+      return;
+    }
+
+    errorEl.textContent = data.error || 'Something went wrong. Please try again.';
+    errorEl.style.display = 'block';
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Start for $0.50';
+  } catch(err) {
+    errorEl.textContent = 'Network error. Please check your connection and try again.';
+    errorEl.style.display = 'block';
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Start for $0.50';
+  }
+}
+
+/* =========================
+   CLOSE FUNCTIONS
+========================= */
+function closeSearch() {
+  document.getElementById('search-overlay').classList.remove('active');
+  document.body.style.overflow = '';
+  destroyMap();
+
+  // Reset button state
+  const btn = document.getElementById('locate-btn');
+  const label = btn ? btn.querySelector('.label') : null;
+  if (btn) { btn.dataset.state = 'idle'; btn.disabled = false; }
+  if (label) label.textContent = 'Locate';
+
+  history.replaceState(null, '', '/child');
+}
+
+function closeLocated() {
+  document.getElementById('located-modal').classList.remove('active');
+  document.body.style.overflow = '';
+  if (timeInterval) { clearInterval(timeInterval); timeInterval = null; }
+  history.replaceState(null, '', '/child');
+}
+
+function closeReport() {
+  document.getElementById('report-page').classList.remove('active');
+  document.body.style.overflow = '';
+  history.replaceState(null, '', '/child');
+}
+
+/* =========================
+   BACK BUTTON ROUTING
+========================= */
+window.addEventListener('popstate', (e) => {
+  const hash = window.location.hash;
+  // Close all overlays first
+  document.getElementById('search-overlay').classList.remove('active');
+  document.getElementById('located-modal').classList.remove('active');
+  document.getElementById('report-page').classList.remove('active');
+  document.body.style.overflow = '';
+  destroyMap();
+  if (timeInterval) { clearInterval(timeInterval); timeInterval = null; }
+
+  // Re-open the correct overlay based on hash
+  if (hash === '#searching') {
+    document.getElementById('search-overlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  } else if (hash === '#located') {
+    document.getElementById('located-modal').classList.add('active');
+  } else if (hash === '#report') {
+    document.getElementById('report-page').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+});
+
+// On page load, clear any leftover hash state
+if (window.location.hash && ['#searching','#located','#report'].includes(window.location.hash)) {
+  history.replaceState(null, '', '/child');
+}
+
+/* =========================
+   SCROLL-TO-TOP
+========================= */
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  setTimeout(() => document.getElementById('phone-field').focus(), 600);
+}
+
+/* =========================
+   STICKY HEADER + REVEALS
+========================= */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* =========================
+   TWEAKS
+========================= */
+function applyTweaks(t) {
+  const r = document.documentElement;
+  r.style.setProperty('--accent', t.accent);
+  r.style.setProperty('--accent-deep', t.accentDeep);
+  r.style.setProperty('--accent-50', colorMix(t.accent, '#ffffff', 0.88));
+  r.style.setProperty('--accent-100', colorMix(t.accent, '#ffffff', 0.78));
+  r.style.setProperty('--accent-200', colorMix(t.accent, '#ffffff', 0.60));
+  r.style.setProperty('--font', `'${t.font}', sans-serif`);
+  const radii = { pill: '999px', round: '14px', square: '4px' };
+  r.style.setProperty('--btn-radius', radii[t.buttonShape] || '999px');
+  r.setAttribute('data-theme', t.dark ? 'dark' : 'light');
+
+  // Load font if not Manrope
+  if (t.font && t.font !== 'Manrope') {
+    const id = 'tw-font-' + t.font.replace(/\s/g,'-');
+    if (!document.getElementById(id)) {
+      const link = document.createElement('link');
+      link.id = id;
+      link.rel = 'stylesheet';
+      link.href = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(t.font)}:wght@400;500;600;700;800&display=swap`;
+      document.head.appendChild(link);
+    }
+  }
+}
+function colorMix(a, b, pct) {
+  // quick hex lerp
+  const ha = a.replace('#',''), hb = b.replace('#','');
+  const ar = parseInt(ha.substr(0,2),16), ag = parseInt(ha.substr(2,2),16), ab = parseInt(ha.substr(4,2),16);
+  const br = parseInt(hb.substr(0,2),16), bg = parseInt(hb.substr(2,2),16), bb = parseInt(hb.substr(4,2),16);
+  const r = Math.round(ar + (br-ar)*pct);
+  const g = Math.round(ag + (bg-ag)*pct);
+  const bl = Math.round(ab + (bb-ab)*pct);
+  return '#' + [r,g,bl].map(n => n.toString(16).padStart(2,'0')).join('');
+}
+
+let tweaks = { ...TWEAKS };
+applyTweaks(tweaks);
+
+// Panel wiring
+function refreshTweaksUI() {
+  document.querySelectorAll('#tw-accent .tw-sw').forEach(el => {
+    el.classList.toggle('active', el.dataset.a === tweaks.accent);
+  });
+  document.querySelectorAll('#tw-font .tw-opt').forEach(el => {
+    el.classList.toggle('active', el.dataset.f === tweaks.font);
+  });
+  document.querySelectorAll('#tw-shape .tw-opt').forEach(el => {
+    el.classList.toggle('active', el.dataset.s === tweaks.buttonShape);
+  });
+  document.getElementById('tw-dark').classList.toggle('on', !!tweaks.dark);
+}
+function persist() {
+  try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits: tweaks }, '*'); } catch(e) {}
+}
+
+document.querySelectorAll('#tw-accent .tw-sw').forEach(el => {
+  el.addEventListener('click', () => {
+    tweaks.accent = el.dataset.a; tweaks.accentDeep = el.dataset.d;
+    applyTweaks(tweaks); refreshTweaksUI(); persist();
+  });
+});
+document.querySelectorAll('#tw-font .tw-opt').forEach(el => {
+  el.addEventListener('click', () => { tweaks.font = el.dataset.f; applyTweaks(tweaks); refreshTweaksUI(); persist(); });
+});
+document.querySelectorAll('#tw-shape .tw-opt').forEach(el => {
+  el.addEventListener('click', () => { tweaks.buttonShape = el.dataset.s; applyTweaks(tweaks); refreshTweaksUI(); persist(); });
+});
+document.getElementById('tw-dark').addEventListener('click', () => {
+  tweaks.dark = !tweaks.dark; applyTweaks(tweaks); refreshTweaksUI(); persist();
+});
+refreshTweaksUI();
+
+// Edit-mode protocol
+window.addEventListener('message', (e) => {
+  const d = e.data || {};
+  if (d.type === '__activate_edit_mode') document.getElementById('tweaks-panel').classList.add('open');
+  if (d.type === '__deactivate_edit_mode') document.getElementById('tweaks-panel').classList.remove('open');
+});
+window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+
+/* =========================
+   EMAIL VALIDATION
+========================= */
+document.getElementById('rp-email').addEventListener('input', (e) => {
+  const val = (e.target.value || '').trim();
+  const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+  document.getElementById('rp-submit').disabled = !valid;
+  // Hide error when user types
+  document.getElementById('rp-error').style.display = 'none';
+});
+
+/* =========================
+   PHONE INPUT + ENTER KEY
+========================= */
+document.getElementById('phone-field').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') startLocate();
+});
+
+document.getElementById('phone-field').addEventListener('input', (e) => {
+  let v = e.target.value.replace(/\D/g, '').slice(0, 12);
+  if (v.length > 6) v = v.slice(0,3) + ' ' + v.slice(3,6) + ' ' + v.slice(6);
+  else if (v.length > 3) v = v.slice(0,3) + ' ' + v.slice(3);
+  e.target.value = v;
+});
+
+/* =========================
+   AUTO-DETECT COUNTRY
+========================= */
+(async function autoDetectCountry() {
+  try {
+    const res = await fetch('/api/geo/detect');
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data && data.countryCode) {
+      const match = COUNTRIES.find(c => c.code === data.countryCode);
+      if (match) {
+        currentCountry = match;
+        document.getElementById('cc-flag-display').textContent = match.flag;
+        document.getElementById('cc-code-display').textContent = match.dial;
+        const cc2 = document.getElementById('cc-code-display-2');
+        if (cc2) cc2.textContent = match.dial;
+        renderCountryList();
+      }
+    }
+  } catch(e) { /* silent fail */ }
+})();
+</script>
+</body>
+</html>
