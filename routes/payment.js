@@ -72,6 +72,7 @@ const PRICE_MAP = {
     start: { priceId: 'price_1TPDSGIggzd46qoMl1mZjQ9y', amount: 19.98, name: 'Tracify GPS Locator' },
     here:  { priceId: 'price_1TPbEpIggzd46qoM6k7rDlUy', amount: 4.99, name: 'Tracify Bi-Weekly' },
     child: { priceId: 'price_1TRIpTIggzd46qoMILE389kV', amount: 17.99, name: 'Tracify Child Safety' },
+    lostphone: { priceId: 'price_1TRLZXIggzd46qoMQqAM4kS4', amount: 17.98, name: 'Tracify Phone Finder' },
 };
 
 // ============================================================

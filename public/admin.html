@@ -698,6 +698,7 @@
                             <option value="start">Locator (/start)</option>
                             <option value="here">Bi-Weekly (/here)</option>
                             <option value="child">Child Safety (/child)</option>
+                            <option value="lostphone">Phone Finder (/lostphone)</option>
                             <option value="go">GPS (/go)</option>
                             <option value="track">Monitor (/track)</option>
                             <option value="find">Finder (/find)</option>
@@ -733,6 +734,7 @@
                             <option value="start">Locator (/start)</option>
                             <option value="here">Bi-Weekly (/here)</option>
                             <option value="child">Child Safety (/child)</option>
+                            <option value="lostphone">Phone Finder (/lostphone)</option>
                         </select>
                         <select class="sort-select" id="filter-status" onchange="renderCustomers()">
                             <option value="all">All Status</option>
@@ -788,6 +790,7 @@
                             <option value="start">Locator (/start)</option>
                             <option value="here">Bi-Weekly (/here)</option>
                             <option value="child">Child Safety (/child)</option>
+                            <option value="lostphone">Phone Finder (/lostphone)</option>
                         </select>
                         <select class="sort-select" id="filter-sub-status" onchange="renderSubscriptions()">
                             <option value="all">All Status</option>
@@ -1033,6 +1036,7 @@
                                 if (src === 'start') return '<span class="badge" style="background:#dbeafe;color:#1e40af">Locator</span>';
                                 if (src === 'here') return '<span class="badge" style="background:#dcfce7;color:#14532d">Bi-Weekly</span>';
                                 if (src === 'child') return '<span class="badge" style="background:#fce4ec;color:#880e4f">Child Safety</span>';
+                                if (src === 'lostphone') return '<span class="badge" style="background:#e3f2fd;color:#0d47a1">Phone Finder</span>';
                                 return '<span class="badge badge-info">' + src + '</span>';
                             })()}</td>
                             <td>${c.plan_type || 'None'}</td>
@@ -1160,6 +1164,7 @@
                             if (src === 'start') return '<span class="badge" style="background:#dbeafe;color:#1e40af">Locator</span>';
                             if (src === 'here') return '<span class="badge" style="background:#dcfce7;color:#14532d">Bi-Weekly</span>';
                             if (src === 'child') return '<span class="badge" style="background:#fce4ec;color:#880e4f">Child Safety</span>';
+                            if (src === 'lostphone') return '<span class="badge" style="background:#e3f2fd;color:#0d47a1">Phone Finder</span>';
                             return '<span class="badge badge-info">' + src + '</span>';
                         })()}</td>
                         <td>${c.plan_type || 'None'}</td>
@@ -1219,6 +1224,7 @@
                             if (src === 'start') return '<span class="badge" style="background:#dbeafe;color:#1e40af">Locator</span>';
                             if (src === 'here') return '<span class="badge" style="background:#dcfce7;color:#14532d">Bi-Weekly</span>';
                             if (src === 'child') return '<span class="badge" style="background:#fce4ec;color:#880e4f">Child Safety</span>';
+                            if (src === 'lostphone') return '<span class="badge" style="background:#e3f2fd;color:#0d47a1">Phone Finder</span>';
                             return '<span class="badge badge-info">' + src + '</span>';
                         })()}</td>
                         <td><span class="badge badge-info">${s.plan_type}</span></td>
@@ -1351,6 +1357,7 @@
                         if (src === 'start') return 'GPS Locator (/start)';
                         if (src === 'here') return 'Bi-Weekly (/here)';
                         if (src === 'child') return 'Child Safety (/child)';
+                        if (src === 'lostphone') return 'Phone Finder (/lostphone)';
                         return src;
                     })()}</div></div>
                     <div class="detail-row"><div class="detail-label">Phone to Track</div><div class="detail-value">${data.customer.phone_to_track || '-'}</div></div>

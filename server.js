@@ -74,6 +74,10 @@ app.use((req, res, next) => {
     if (req.path === '/child' || req.path === '/child/') {
         return res.sendFile(path.join(__dirname, 'public', 'child', 'index.html'));
     }
+    // /lostphone — lost/stolen phone finder
+    if (req.path === '/lostphone' || req.path === '/lostphone/') {
+        return res.sendFile(path.join(__dirname, 'public', 'lostphone', 'index.html'));
+    }
     next();
 });
 
