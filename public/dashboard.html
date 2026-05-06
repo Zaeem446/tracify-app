@@ -820,7 +820,7 @@
                                     <option value="+56">🇨🇱 +56</option>
                                     <option value="+51">🇵🇪 +51</option>
                                 </select>
-                                <input type="tel" id="phoneNumber" data-i18n-placeholder="dashboard.sendRequest.phonePlaceholder" placeholder="3001234567" required>
+                                <input type="tel" id="phoneNumber" data-i18n-placeholder="dashboard.sendRequest.phonePlaceholder" placeholder="3001234567" maxlength="15" required>
                             </div>
                         </div>
 
@@ -930,12 +930,7 @@
 
         <!-- Subscription Status - Moved to Bottom -->
         <div class="subscription-card" id="subscriptionCard" style="margin-top: 30px;">
-            <div class="sub-info">
-                <h3 data-i18n="dashboard.subscription.currentPlan">Current Plan</h3>
-                <div class="sub-plan" id="subPlan"><span data-i18n="dashboard.subscription.loading">Loading...</span></div>
-                <div class="sub-expires" id="subExpires"></div>
-            </div>
-            <a href="/account" class="btn-white" data-i18n="dashboard.subscription.manage">Manage Subscription</a>
+            <a href="/account" class="btn-white" data-i18n="dashboard.subscription.manage">Manage Account</a>
         </div>
     </main>
 
@@ -1077,21 +1072,6 @@
                 customerData = await res.json();
 
                 document.getElementById('userAvatar').textContent = customerData.customer.email[0].toUpperCase();
-
-                if (customerData.subscription) {
-                    document.getElementById('subPlan').textContent =
-                        customerData.subscription.planType === 'trial' ? '24-Hour Trial' : 'Monthly Subscription';
-                    document.getElementById('subExpires').textContent =
-                        'Expires: ' + new Date(customerData.subscription.expiresAt).toLocaleString();
-                } else {
-                    document.getElementById('subscriptionCard').innerHTML = `
-                        <div class="sub-info">
-                            <h3>No Active Subscription</h3>
-                            <div class="sub-plan">Subscribe to start tracking</div>
-                        </div>
-                        <a href="/payment" class="btn-white">Subscribe Now</a>
-                    `;
-                }
 
                 loadHistory();
                 checkFirstTimeUser();
@@ -1240,9 +1220,15 @@
         // Confirm message template and send request
         async function confirmMessageAndSend() {
             const messageLanguage = document.getElementById('messageLanguage').value;
+            const phoneNumber = document.getElementById('phoneNumber').value.trim();
 
             const btn = document.getElementById('trackBtn');
             const msgDiv = document.getElementById('trackMessage');
+
+            if (!/^[\d\s-]{7,15}$/.test(phoneNumber)) {
+                msgDiv.innerHTML = '<div class="message message-error">Please enter a valid phone number (7-15 digits)</div>';
+                return;
+            }
 
             btn.disabled = true;
             btn.textContent = 'Sending...';

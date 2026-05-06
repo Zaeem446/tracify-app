@@ -191,7 +191,7 @@
     "subscription": {
       "currentPlan": "Pelan Semasa",
       "loading": "Memuatkan...",
-      "manage": "Urus Langganan"
+      "manage": "Urus Akaun"
     },
     "messageModal": {
       "title": "Tetapan Mesej",
@@ -244,7 +244,7 @@
       "logout": "Log Keluar"
     },
     "title": "Tetapan Akaun",
-    "subtitle": "Urus akaun dan langganan anda",
+    "subtitle": "Urus tetapan akaun anda",
     "accountInfo": {
       "title": "Maklumat Akaun",
       "email": "Alamat E-mel",

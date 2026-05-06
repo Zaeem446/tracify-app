@@ -206,6 +206,45 @@
             padding: 25px;
         }
 
+        /* Collapsible subscription card */
+        #subscriptionCard .card-header {
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #subscriptionCard .card-header:hover {
+            background: rgba(0,0,0,0.02);
+        }
+
+        #subscriptionCard .chevron {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            color: var(--text-secondary, #888);
+        }
+
+        #subscriptionCard.collapsed .chevron {
+            transform: rotate(0deg);
+        }
+
+        #subscriptionCard:not(.collapsed) .chevron {
+            transform: rotate(90deg);
+        }
+
+        #subscriptionCard .card-body {
+            overflow: hidden;
+            max-height: 500px;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+        }
+
+        #subscriptionCard.collapsed .card-body {
+            max-height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
         /* Account Info */
         .info-row {
             display: grid;
@@ -501,7 +540,7 @@
     <!-- Main Content -->
     <main class="main">
         <h1 class="page-title" data-i18n="account.title">Account Settings</h1>
-        <p class="page-subtitle" data-i18n="account.subtitle">Manage your account and subscription</p>
+        <p class="page-subtitle" data-i18n="account.subtitle">Manage your account settings</p>
 
         <!-- Account Information -->
         <div class="card">
@@ -529,8 +568,8 @@
         </div>
 
         <!-- Subscription -->
-        <div class="card" id="subscriptionCard">
-            <div class="card-header">
+        <div class="card collapsed" id="subscriptionCard">
+            <div class="card-header" onclick="toggleSubscription()">
                 <h2 class="card-title">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
@@ -538,6 +577,7 @@
                     </svg>
                     <span data-i18n="account.subscription.title">Subscription</span>
                 </h2>
+                <span class="chevron">&#9656;</span>
             </div>
             <div class="card-body">
                 <div class="subscription-grid">
@@ -614,6 +654,12 @@
 
     <script>
         let customerData = null;
+
+        // Toggle subscription card expand/collapse
+        function toggleSubscription() {
+            const card = document.getElementById('subscriptionCard');
+            card.classList.toggle('collapsed');
+        }
 
         // Toggle dropdown
         function toggleDropdown() {

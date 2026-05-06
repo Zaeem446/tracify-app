@@ -175,7 +175,7 @@
     "subscription": {
       "currentPlan": "Gói hiện tại",
       "loading": "Đang tải...",
-      "manage": "Quản lý đăng ký"
+      "manage": "Quản lý tài khoản"
     },
     "messageModal": {
       "title": "Cài đặt tin nhắn",
@@ -204,7 +204,7 @@
   },
   "account": {
     "title": "Cài đặt tài khoản",
-    "subtitle": "Quản lý tài khoản và đăng ký của bạn",
+    "subtitle": "Quản lý cài đặt tài khoản của bạn",
     "nav": {
       "dashboard": "Bảng điều khiển",
       "account": "Tài khoản",

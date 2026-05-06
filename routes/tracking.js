@@ -37,6 +37,10 @@ router.post('/request', requireActiveSubscription, async (req, res) => {
             return res.status(400).json({ error: 'Phone number is required' });
         }
 
+        if (!/^[\d\s-]{7,15}$/.test(phoneNumber)) {
+            return res.status(400).json({ error: 'Please enter a valid phone number (7-15 digits)' });
+        }
+
         // Rate limit check: 1 SMS per 3 hours
         const lastRequestTime = await db.tracking.getLastRequestTime(req.customerId);
         if (lastRequestTime) {

@@ -191,7 +191,7 @@
     "subscription": {
       "currentPlan": "Trenutni plan",
       "loading": "Učitavanje...",
-      "manage": "Upravljaj pretplatom"
+      "manage": "Управљај налогом"
     },
     "messageModal": {
       "title": "Podešavanja poruke",
@@ -244,7 +244,7 @@
       "logout": "Odjavi se"
     },
     "title": "Podešavanja naloga",
-    "subtitle": "Upravljaj svojim nalogom i pretplatom",
+    "subtitle": "Управљајте подешавањима свог налога",
     "accountInfo": {
       "title": "Informacije o nalogu",
       "email": "E-mail adresa",

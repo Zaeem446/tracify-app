@@ -191,7 +191,7 @@
     "subscription": {
       "currentPlan": "當前計劃",
       "loading": "載入中...",
-      "manage": "管理訂閱"
+      "manage": "管理帳戶"
     },
     "messageModal": {
       "title": "訊息設定",
@@ -244,7 +244,7 @@
       "logout": "登出"
     },
     "title": "賬戶設定",
-    "subtitle": "管理您的賬戶和訂閱",
+    "subtitle": "管理您的帳戶設定",
     "accountInfo": {
       "title": "賬戶資訊",
       "email": "電子郵件地址",

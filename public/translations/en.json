@@ -275,7 +275,7 @@
     "subscription": {
       "currentPlan": "Current Plan",
       "loading": "Loading...",
-      "manage": "Manage Subscription"
+      "manage": "Manage Account"
     },
     "messageModal": {
       "title": "Message Settings",
@@ -328,7 +328,7 @@
       "logout": "Logout"
     },
     "title": "Account Settings",
-    "subtitle": "Manage your account and subscription",
+    "subtitle": "Manage your account settings",
     "accountInfo": {
       "title": "Account Information",
       "email": "Email Address",

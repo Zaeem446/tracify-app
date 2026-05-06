@@ -191,7 +191,7 @@
     "subscription": {
       "currentPlan": "Uhlelo Lwamanje",
       "loading": "Iyalayisha...",
-      "manage": "Phatha Ukubhaliselwa"
+      "manage": "Phatha i-Akhawunti"
     },
     "messageModal": {
       "title": "Izilungiselelo Zomlayezo",
@@ -244,7 +244,7 @@
       "logout": "Phuma"
     },
     "title": "Izilungiselelo Ze-akhawunti",
-    "subtitle": "Phatha i-akhawunti yakho nokubhaliselwa",
+    "subtitle": "Phatha izilungiselelo ze-akhawunti yakho",
     "accountInfo": {
       "title": "Ulwazi Lwe-akhawunti",
       "email": "Ikheli Le-imeyli",

@@ -191,7 +191,7 @@
     "subscription": {
       "currentPlan": "Plan actuel",
       "loading": "Chargement...",
-      "manage": "Gérer l'abonnement"
+      "manage": "Gérer le compte"
     },
     "messageModal": {
       "title": "Paramètres du message",
@@ -244,7 +244,7 @@
       "logout": "Déconnexion"
     },
     "title": "Paramètres du compte",
-    "subtitle": "Gérez votre compte et votre abonnement",
+    "subtitle": "Gérez les paramètres de votre compte",
     "accountInfo": {
       "title": "Informations du compte",
       "email": "Adresse e-mail",

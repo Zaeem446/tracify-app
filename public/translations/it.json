@@ -191,7 +191,7 @@
     "subscription": {
       "currentPlan": "Piano attuale",
       "loading": "Caricamento...",
-      "manage": "Gestisci abbonamento"
+      "manage": "Gestisci account"
     },
     "messageModal": {
       "title": "Impostazioni messaggio",
@@ -244,7 +244,7 @@
       "logout": "Esci"
     },
     "title": "Impostazioni account",
-    "subtitle": "Gestisci il tuo account e abbonamento",
+    "subtitle": "Gestisci le impostazioni del tuo account",
     "accountInfo": {
       "title": "Informazioni account",
       "email": "Indirizzo email",

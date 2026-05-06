@@ -191,7 +191,7 @@
     "subscription": {
       "currentPlan": "Plano atual",
       "loading": "Carregando...",
-      "manage": "Gerenciar assinatura"
+      "manage": "Gerenciar conta"
     },
     "messageModal": {
       "title": "Configurações de mensagem",
@@ -244,7 +244,7 @@
       "logout": "Sair"
     },
     "title": "Configurações da conta",
-    "subtitle": "Gerencie sua conta e assinatura",
+    "subtitle": "Gerencie as configurações da sua conta",
     "accountInfo": {
       "title": "Informações da conta",
       "email": "Endereço de e-mail",

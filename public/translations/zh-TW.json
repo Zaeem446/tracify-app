@@ -175,7 +175,7 @@
     "subscription": {
       "currentPlan": "當前計劃",
       "loading": "加載中...",
-      "manage": "管理訂閱"
+      "manage": "管理帳戶"
     },
     "messageModal": {
       "title": "消息設置",
@@ -204,7 +204,7 @@
   },
   "account": {
     "title": "帳戶設置",
-    "subtitle": "管理您的帳戶和訂閱",
+    "subtitle": "管理您的帳戶設定",
     "nav": {
       "dashboard": "儀表板",
       "account": "帳戶",

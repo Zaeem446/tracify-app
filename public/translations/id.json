@@ -175,7 +175,7 @@
     "subscription": {
       "currentPlan": "Paket Saat Ini",
       "loading": "Memuat...",
-      "manage": "Kelola Langganan"
+      "manage": "Kelola Akun"
     },
     "messageModal": {
       "title": "Pengaturan Pesan",
@@ -204,7 +204,7 @@
   },
   "account": {
     "title": "Pengaturan Akun",
-    "subtitle": "Kelola akun dan langganan Anda",
+    "subtitle": "Kelola pengaturan akun Anda",
     "nav": {
       "dashboard": "Dasbor",
       "account": "Akun",

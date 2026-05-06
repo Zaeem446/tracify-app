@@ -191,7 +191,7 @@
     "subscription": {
       "currentPlan": "Nuværende plan",
       "loading": "Indlæser...",
-      "manage": "Administrer abonnement"
+      "manage": "Administrer konto"
     },
     "messageModal": {
       "title": "Beskedindstillinger",
@@ -244,7 +244,7 @@
       "logout": "Log ud"
     },
     "title": "Kontoindstillinger",
-    "subtitle": "Administrer din konto og dit abonnement",
+    "subtitle": "Administrer dine kontoindstillinger",
     "accountInfo": {
       "title": "Kontoinformation",
       "email": "E-mailadresse",

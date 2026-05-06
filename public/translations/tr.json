@@ -191,7 +191,7 @@
     "subscription": {
       "currentPlan": "Mevcut Plan",
       "loading": "Yükleniyor...",
-      "manage": "Aboneliği Yönet"
+      "manage": "Hesabı Yönet"
     },
     "messageModal": {
       "title": "Mesaj Ayarları",
@@ -244,7 +244,7 @@
       "logout": "Çıkış Yap"
     },
     "title": "Hesap Ayarları",
-    "subtitle": "Hesabınızı ve aboneliğinizi yönetin",
+    "subtitle": "Hesap ayarlarınızı yönetin",
     "accountInfo": {
       "title": "Hesap Bilgileri",
       "email": "E-posta Adresi",

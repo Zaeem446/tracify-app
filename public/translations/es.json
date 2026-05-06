@@ -191,7 +191,7 @@
     "subscription": {
       "currentPlan": "Plan actual",
       "loading": "Cargando...",
-      "manage": "Administrar suscripción"
+      "manage": "Administrar cuenta"
     },
     "messageModal": {
       "title": "Configuración de mensaje",
@@ -244,7 +244,7 @@
       "logout": "Cerrar sesión"
     },
     "title": "Configuración de cuenta",
-    "subtitle": "Administra tu cuenta y suscripción",
+    "subtitle": "Administra la configuración de tu cuenta",
     "accountInfo": {
       "title": "Información de cuenta",
       "email": "Dirección de correo electrónico",

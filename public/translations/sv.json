@@ -175,7 +175,7 @@
     "subscription": {
       "currentPlan": "Nuvarande plan",
       "loading": "Laddar...",
-      "manage": "Hantera prenumeration"
+      "manage": "Hantera konto"
     },
     "messageModal": {
       "title": "Meddelandeinställningar",
@@ -204,7 +204,7 @@
   },
   "account": {
     "title": "Kontoinställningar",
-    "subtitle": "Hantera ditt konto och din prenumeration",
+    "subtitle": "Hantera dina kontoinställningar",
     "nav": {
       "dashboard": "Instrumentpanel",
       "account": "Konto",
