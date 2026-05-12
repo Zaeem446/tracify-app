@@ -955,18 +955,28 @@
                     <label style="display: block; margin-bottom: 12px; font-weight: 600; color: var(--text); font-size: 0.9rem;" data-i18n="dashboard.messageModal.selectTemplate">Select a message template</label>
 
                     <label class="message-template-option" style="display: flex; gap: 12px; padding: 15px; border: 2px solid var(--border); border-radius: 10px; margin-bottom: 12px; cursor: pointer; transition: all 0.2s;">
-                        <input type="radio" name="messageTemplate" value="lost" checked style="margin-top: 3px; width: 18px; height: 18px; cursor: pointer;">
+                        <input type="radio" name="messageTemplate" value="lost1" checked style="margin-top: 3px; width: 18px; height: 18px; cursor: pointer;">
                         <span style="flex: 1; color: var(--text); line-height: 1.5;" data-i18n="dashboard.messageModal.template1">I'm the owner of this phone, and it's currently lost. If you've found it, please let me know.</span>
                     </label>
 
                     <label class="message-template-option" style="display: flex; gap: 12px; padding: 15px; border: 2px solid var(--border); border-radius: 10px; margin-bottom: 12px; cursor: pointer; transition: all 0.2s;">
-                        <input type="radio" name="messageTemplate" value="wrong" style="margin-top: 3px; width: 18px; height: 18px; cursor: pointer;">
-                        <span style="flex: 1; color: var(--text); line-height: 1.5;" data-i18n="dashboard.messageModal.template2">If this phone isn't yours, could you let me know?</span>
+                        <input type="radio" name="messageTemplate" value="lost2" style="margin-top: 3px; width: 18px; height: 18px; cursor: pointer;">
+                        <span style="flex: 1; color: var(--text); line-height: 1.5;" data-i18n="dashboard.messageModal.template2">This phone was reported lost. Please tap the link below so we can locate it.</span>
+                    </label>
+
+                    <label class="message-template-option" style="display: flex; gap: 12px; padding: 15px; border: 2px solid var(--border); border-radius: 10px; margin-bottom: 12px; cursor: pointer; transition: all 0.2s;">
+                        <input type="radio" name="messageTemplate" value="loved1" style="margin-top: 3px; width: 18px; height: 18px; cursor: pointer;">
+                        <span style="flex: 1; color: var(--text); line-height: 1.5;" data-i18n="dashboard.messageModal.template3">One of your loved ones is looking for you.</span>
+                    </label>
+
+                    <label class="message-template-option" style="display: flex; gap: 12px; padding: 15px; border: 2px solid var(--border); border-radius: 10px; margin-bottom: 12px; cursor: pointer; transition: all 0.2s;">
+                        <input type="radio" name="messageTemplate" value="loved2" style="margin-top: 3px; width: 18px; height: 18px; cursor: pointer;">
+                        <span style="flex: 1; color: var(--text); line-height: 1.5;" data-i18n="dashboard.messageModal.template4">Someone who cares about you wants to know you're safe. Please share your location.</span>
                     </label>
 
                     <label class="message-template-option" style="display: flex; gap: 12px; padding: 15px; border: 2px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.2s;">
-                        <input type="radio" name="messageTemplate" value="casual" style="margin-top: 3px; width: 18px; height: 18px; cursor: pointer;">
-                        <span style="flex: 1; color: var(--text); line-height: 1.5;" data-i18n="dashboard.messageModal.template3">No rush, but check this out when you have a sec:</span>
+                        <input type="radio" name="messageTemplate" value="loved3" style="margin-top: 3px; width: 18px; height: 18px; cursor: pointer;">
+                        <span style="flex: 1; color: var(--text); line-height: 1.5;" data-i18n="dashboard.messageModal.template5">A family member is trying to reach you. Tap below to share your location with them.</span>
                     </label>
                 </div>
 
@@ -1133,12 +1143,14 @@
 
         // Message templates
         const messageTemplates = {
-            lost: "I'm the owner of this phone, and it's currently lost. If you've found it, please let me know.",
-            wrong: "If this phone isn't yours, could you let me know?",
-            casual: "No rush, but check this out when you have a sec:"
+            lost1: "I'm the owner of this phone, and it's currently lost. If you've found it, please let me know.",
+            lost2: "This phone was reported lost. Please tap the link below so we can locate it.",
+            loved1: "One of your loved ones is looking for you.",
+            loved2: "Someone who cares about you wants to know you're safe. Please share your location.",
+            loved3: "A family member is trying to reach you. Tap below to share your location with them."
         };
 
-        let selectedMessageTemplate = 'lost';
+        let selectedMessageTemplate = 'lost1';
 
         // Update dashboard map
         function updateDashboardMap(lat, lng) {
@@ -1240,7 +1252,7 @@
                     body: JSON.stringify({
                         phoneNumber: document.getElementById('phoneNumber').value,
                         countryCode: document.getElementById('countryCode').value,
-                        messageTemplate: selectedMessageTemplate,
+                        customMessage: messageTemplates[selectedMessageTemplate],
                         messageLanguage: messageLanguage
                     })
                 });
