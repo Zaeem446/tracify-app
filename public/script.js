@@ -543,6 +543,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 <form id="loginForm">
                     <input type="email" id="loginEmail" data-i18n-placeholder="modal.login.emailPlaceholder" placeholder="${t('modal.login.emailPlaceholder')}" required>
                     <input type="password" id="loginPassword" data-i18n-placeholder="modal.login.passwordPlaceholder" placeholder="${t('modal.login.passwordPlaceholder')}" required>
+                    <p class="login-link" style="text-align: right; margin: -5px 0 10px;">
+                        <a href="#" id="forgotPasswordLink" onclick="handleForgotPassword(); return false;">Forgot Password?</a>
+                    </p>
                     <button type="submit" id="loginBtn" data-i18n="modal.login.loginBtn">${t('modal.login.loginBtn')}</button>
                 </form>
 
@@ -593,6 +596,42 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Forgot password handler
+    window.handleForgotPassword = async function() {
+        const email = document.getElementById('loginEmail').value.trim();
+        const msgDiv = document.getElementById('loginModalMessage');
+        const link = document.getElementById('forgotPasswordLink');
+
+        if (!email) {
+            msgDiv.innerHTML = '<div class="msg-error">Please enter your email first</div>';
+            return;
+        }
+
+        link.textContent = 'Sending...';
+        link.style.pointerEvents = 'none';
+
+        try {
+            const res = await fetch('/api/auth/forgot-password', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email })
+            });
+
+            const data = await res.json();
+
+            if (res.ok && data.success) {
+                msgDiv.innerHTML = '<div class="msg-success">New password sent to your email!</div>';
+            } else {
+                msgDiv.innerHTML = `<div class="msg-error">${data.error || 'Failed to reset password'}</div>`;
+            }
+        } catch (error) {
+            msgDiv.innerHTML = '<div class="msg-error">Connection error. Please try again.</div>';
+        }
+
+        link.textContent = 'Forgot Password?';
+        link.style.pointerEvents = '';
+    };
 
     // Initialize modals
     createEmailModal();

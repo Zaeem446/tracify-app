@@ -112,6 +112,88 @@ If you didn't create this account, please ignore this email.
     return info;
 }
 
+async function sendResetPasswordEmail(email, password) {
+    const transport = await getTransporter();
+
+    const mailOptions = {
+        from: process.env.SMTP_FROM || '"Tracify" <noreply@tracify.com>',
+        to: email,
+        subject: 'Tracify - Your Password Has Been Reset',
+        html: `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <style>
+                    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+                    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+                    .header { background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+                    .content { background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; }
+                    .password-box { background: white; border: 2px solid #4CAF50; border-radius: 8px; padding: 20px; text-align: center; margin: 20px 0; }
+                    .password { font-size: 28px; font-weight: bold; color: #2E7D32; letter-spacing: 3px; }
+                    .button { display: inline-block; background: #4CAF50; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+                    .footer { text-align: center; margin-top: 20px; color: #666; font-size: 12px; }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <div class="header">
+                        <h1>Password Reset</h1>
+                    </div>
+                    <div class="content">
+                        <p>Hello,</p>
+                        <p>Your password has been reset. Here is your new password:</p>
+
+                        <div class="password-box">
+                            <p style="margin: 0 0 10px 0; color: #666;">Your New Password</p>
+                            <div class="password">${password}</div>
+                        </div>
+
+                        <p><strong>Important:</strong> Please save this password in a secure place. You'll need it to log in to your account.</p>
+
+                        <center>
+                            <a href="${process.env.APP_URL || 'http://localhost:3000'}/login" class="button">Login to Tracify</a>
+                        </center>
+
+                        <div class="footer">
+                            <p>If you didn't request this reset, please contact support.</p>
+                            <p>&copy; ${new Date().getFullYear()} Tracify. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </body>
+            </html>
+        `,
+        text: `
+Password Reset
+
+Your password has been reset.
+
+Your New Password: ${password}
+
+Please save this password in a secure place. You'll need it to log in to your account.
+
+Login at: ${process.env.APP_URL || 'http://localhost:3000'}/login
+
+If you didn't request this reset, please contact support.
+
+© ${new Date().getFullYear()} Tracify. All rights reserved.
+        `
+    };
+
+    const info = await transport.sendMail(mailOptions);
+
+    if (testAccount) {
+        const previewUrl = nodemailer.getTestMessageUrl(info);
+        console.log('\n📧 PASSWORD RESET EMAIL SENT!');
+        console.log('To:', email);
+        console.log('New Password:', password);
+        console.log('Preview URL:', previewUrl);
+        console.log('(Open this URL to view the email)\n');
+    }
+
+    return info;
+}
+
 async function sendTrackingConsentRequest(recipientPhone, senderEmail, customMessage, trackingId) {
     const appUrl = process.env.APP_URL || 'http://localhost:3000';
     const consentLink = `${appUrl}/api/tracking/consent/${trackingId}`;
@@ -230,6 +312,7 @@ Reply to this email to respond to ${name}.
 
 module.exports = {
     sendPasswordEmail,
+    sendResetPasswordEmail,
     sendTrackingConsentRequest,
     sendContactForm
 };

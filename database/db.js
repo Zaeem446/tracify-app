@@ -243,6 +243,11 @@ const customerQueries = {
         );
     },
 
+    updatePassword: async (id, newPassword) => {
+        const hashedPassword = bcrypt.hashSync(newPassword, 10);
+        await pool.query('UPDATE customers SET password = $1 WHERE id = $2', [hashedPassword, id]);
+    },
+
     getAll: async () => {
         const result = await pool.query(`
             SELECT c.*, s.plan_type, s.status as subscription_status,

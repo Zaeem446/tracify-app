@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { v4: uuidv4 } = require('uuid');
 const db = require('../database/db');
-const { sendPasswordEmail } = require('../utils/email');
+const { sendPasswordEmail, sendResetPasswordEmail } = require('../utils/email');
 
 const router = express.Router();
 const JWT_SECRET = process.env.JWT_SECRET || 'tracify-secret-key-change-in-production';
@@ -160,6 +160,47 @@ router.post('/login', async (req, res) => {
     } catch (error) {
         console.error('Login error:', error);
         res.status(500).json({ error: 'Login failed. Please try again.' });
+    }
+});
+
+// In-memory rate limit for password resets (1 per 30 minutes per email)
+const resetTimestamps = new Map();
+
+// Forgot password - generates new password and emails it
+router.post('/forgot-password', async (req, res) => {
+    try {
+        const { email } = req.body;
+
+        if (!email) {
+            return res.status(400).json({ error: 'Email is required' });
+        }
+
+        const customer = await db.customers.findByEmail(email);
+        if (!customer) {
+            return res.status(404).json({ error: 'No account found with this email' });
+        }
+
+        // Rate limit check
+        const lastReset = resetTimestamps.get(email);
+        if (lastReset && Date.now() - lastReset < 30 * 60 * 1000) {
+            return res.status(429).json({ error: 'Please wait before requesting another reset' });
+        }
+
+        // Generate new password and update in DB
+        const newPassword = generatePassword();
+        await db.customers.updatePassword(customer.id, newPassword);
+
+        // Send reset email
+        await sendResetPasswordEmail(email, newPassword);
+
+        // Update rate limit
+        resetTimestamps.set(email, Date.now());
+
+        res.json({ success: true, message: 'A new password has been sent to your email.' });
+
+    } catch (error) {
+        console.error('Forgot password error:', error);
+        res.status(500).json({ error: 'Failed to reset password. Please try again.' });
     }
 });
 
