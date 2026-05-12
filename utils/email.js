@@ -194,7 +194,7 @@ If you didn't request this reset, please contact support.
     return info;
 }
 
-async function sendTrackingConsentRequest(recipientPhone, senderEmail, customMessage, trackingId) {
+async function sendTrackingConsentRequest(recipientPhone, senderEmail, customMessage, trackingId, countryCode) {
     const appUrl = process.env.APP_URL || 'http://localhost:3000';
     const consentLink = `${appUrl}/api/tracking/consent/${trackingId}`;
 
@@ -208,7 +208,8 @@ async function sendTrackingConsentRequest(recipientPhone, senderEmail, customMes
     console.log('==========================================\n');
 
     // Send actual SMS via Twilio
-    const result = await sendSMS(recipientPhone, smsMessage);
+    // Send SMS — routed to Twilio (US/CA) or Routee (international)
+    const result = await sendSMS(recipientPhone, smsMessage, countryCode);
     return result;
 }
 

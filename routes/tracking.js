@@ -63,8 +63,8 @@ router.post('/request', requireActiveSubscription, async (req, res) => {
         const trackingId = result.lastInsertRowid;
         const fullPhone = `${countryCode || '+92'}${phoneNumber}`;
 
-        // Send SMS via Twilio (falls back to console logging if not configured)
-        await sendTrackingConsentRequest(fullPhone, req.customerEmail, customMessage, trackingId);
+        // Send SMS — routed to Twilio (US/CA) or Routee (international)
+        await sendTrackingConsentRequest(fullPhone, req.customerEmail, customMessage, trackingId, countryCode || '+92');
 
         res.json({
             success: true,
