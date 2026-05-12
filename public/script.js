@@ -77,7 +77,7 @@ function updateModalTranslations() {
         if (passwordInput) passwordInput.placeholder = t('modal.login.passwordPlaceholder');
         if (loginBtn && !loginBtn.disabled) loginBtn.textContent = t('modal.login.loginBtn');
         if (dividerSpan) dividerSpan.textContent = t('modal.login.or');
-        if (forgotLink) forgotLink.textContent = t('modal.login.forgotPassword') || 'Forgot Password?';
+        if (forgotLink) forgotLink.textContent = 'Forgot Password?';
         if (signupLinkP) signupLinkP.innerHTML = `${t('modal.login.noAccount')} <a href="#" onclick="closeLoginModal(); showEmailModal(); return false;">${t('modal.login.signupLink')}</a>`;
     }
 }
