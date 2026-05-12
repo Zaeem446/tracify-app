@@ -68,7 +68,8 @@ function updateModalTranslations() {
         const passwordInput = loginModal.querySelector('#loginPassword');
         const loginBtn = loginModal.querySelector('#loginBtn');
         const dividerSpan = loginModal.querySelector('.modal-divider span');
-        const signupLinkP = loginModal.querySelector('.login-link');
+        const signupLinkP = loginModal.querySelector('.signup-link-p');
+        const forgotLink = loginModal.querySelector('#forgotPasswordLink');
 
         if (h2) h2.textContent = t('modal.login.title');
         if (subtitle) subtitle.textContent = t('modal.login.subtitle');
@@ -76,6 +77,7 @@ function updateModalTranslations() {
         if (passwordInput) passwordInput.placeholder = t('modal.login.passwordPlaceholder');
         if (loginBtn && !loginBtn.disabled) loginBtn.textContent = t('modal.login.loginBtn');
         if (dividerSpan) dividerSpan.textContent = t('modal.login.or');
+        if (forgotLink) forgotLink.textContent = t('modal.login.forgotPassword') || 'Forgot Password?';
         if (signupLinkP) signupLinkP.innerHTML = `${t('modal.login.noAccount')} <a href="#" onclick="closeLoginModal(); showEmailModal(); return false;">${t('modal.login.signupLink')}</a>`;
     }
 }
@@ -551,7 +553,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <div class="modal-divider"><span data-i18n="modal.login.or">${t('modal.login.or')}</span></div>
 
-                <p class="login-link">${t('modal.login.noAccount')} <a href="#" onclick="closeLoginModal(); showEmailModal(); return false;">${t('modal.login.signupLink')}</a></p>
+                <p class="login-link signup-link-p">${t('modal.login.noAccount')} <a href="#" onclick="closeLoginModal(); showEmailModal(); return false;">${t('modal.login.signupLink')}</a></p>
             </div>
         `;
         document.body.appendChild(modal);
