@@ -518,7 +518,7 @@
       "title": "Enter Your Email",
       "subtitle": "We'll send your account password to this email address.",
       "emailPlaceholder": "your@email.com",
-      "agreeText": "I agree to receive promotional emails and updates from Tracify",
+      "agreeText": "By signing up, I agree to receive SMS messages and emails from Tracify. Msg & data rates may apply. Reply STOP to opt out.",
       "agreeRequired": "*",
       "continueBtn": "Continue",
       "termsText": "By continuing, you agree to our",
