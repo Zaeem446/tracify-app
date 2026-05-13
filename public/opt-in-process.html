@@ -3,141 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wmi5ds3irc");
-    </script>
-    <title>Tracify — SMS Opt-In Process Documentation</title>
+    <title>Tracify — SMS Opt-In Process</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, Helvetica, sans-serif; color: #1a1a1a; background: #fff; padding: 40px; max-width: 800px; margin: 0 auto; line-height: 1.6; }
-        h1 { font-size: 22px; margin-bottom: 4px; }
+        body { font-family: Arial, Helvetica, sans-serif; color: #1a1a1a; background: #fff; padding: 40px; max-width: 700px; margin: 0 auto; line-height: 1.7; }
+        h1 { font-size: 22px; margin-bottom: 6px; }
         .subtitle { color: #666; font-size: 13px; margin-bottom: 30px; }
-        h2 { font-size: 16px; margin: 28px 0 12px; padding-bottom: 6px; border-bottom: 2px solid #4CAF50; display: inline-block; }
-        p { font-size: 14px; margin-bottom: 10px; }
-        .flow { display: flex; gap: 0; margin: 24px 0; align-items: stretch; }
-        .step { flex: 1; background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; text-align: center; position: relative; }
-        .step-num { width: 28px; height: 28px; background: #4CAF50; color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; margin-bottom: 8px; }
-        .step-title { font-weight: 700; font-size: 13px; margin-bottom: 4px; }
-        .step-desc { font-size: 12px; color: #555; }
-        .arrow { display: flex; align-items: center; padding: 0 6px; font-size: 20px; color: #4CAF50; font-weight: 700; }
-        .sms-box { background: #e8f5e9; border: 1px solid #c8e6c9; border-radius: 8px; padding: 14px 18px; margin: 16px 0; font-size: 13px; font-family: monospace; }
-        .consent-mock { background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 20px; margin: 16px 0; text-align: center; max-width: 360px; }
-        .consent-mock h3 { font-size: 16px; margin-bottom: 8px; }
-        .consent-mock p { font-size: 12px; color: #555; margin-bottom: 14px; }
-        .btn-mock { display: inline-block; padding: 10px 20px; border-radius: 5px; font-size: 13px; font-weight: 600; margin: 0 4px; color: #fff; }
-        .btn-green { background: #4CAF50; }
-        .btn-red { background: #f44336; }
-        .section { margin-bottom: 24px; }
-        .highlight { background: #fff3e0; border-left: 3px solid #ff9800; padding: 10px 14px; font-size: 13px; margin: 16px 0; border-radius: 0 6px 6px 0; }
-        ul { padding-left: 20px; margin: 8px 0; }
-        li { font-size: 13px; margin-bottom: 4px; }
+        h2 { font-size: 16px; margin: 24px 0 10px; }
+        p { font-size: 14px; margin-bottom: 12px; }
+        .consent-box { background: #f5f5f5; border: 1px solid #ddd; border-radius: 8px; padding: 16px 20px; margin: 16px 0; font-size: 14px; }
         .footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid #e0e0e0; font-size: 11px; color: #999; text-align: center; }
-        @media print { body { padding: 20px; } }
     </style>
 </head>
 <body>
 
     <h1>Tracify — SMS Opt-In Process</h1>
-    <p class="subtitle">Consent-based location sharing platform &bull; https://tracify-geo.com &bull; Document date: April 2026</p>
+    <p class="subtitle">https://tracify-geo.com</p>
 
-    <!-- OVERVIEW -->
-    <div class="section">
-        <h2>Overview</h2>
-        <p>Tracify sends individual, transactional SMS messages to specific phone numbers provided by authenticated, paying subscribers. Each SMS contains a one-time consent link. <strong>No location data is ever collected without explicit, multi-step opt-in from the SMS recipient.</strong></p>
+    <h2>How Users Opt In</h2>
+    <p>Users opt in to receive SMS messages during account signup at tracify-geo.com. Before completing registration, users must check a required checkbox that reads:</p>
+
+    <div class="consent-box">
+        <strong>&#9745;</strong> "By signing up, I agree to receive SMS messages and emails from Tracify. Msg & data rates may apply. Reply STOP to opt out."
     </div>
 
-    <!-- FLOW DIAGRAM -->
-    <div class="section">
-        <h2>Opt-In Flow (5 Steps)</h2>
-        <div class="flow">
-            <div class="step">
-                <div class="step-num">1</div>
-                <div class="step-title">Subscriber Pays</div>
-                <div class="step-desc">Creates account, purchases subscription via Stripe checkout</div>
-            </div>
-            <div class="arrow">&rarr;</div>
-            <div class="step">
-                <div class="step-num">2</div>
-                <div class="step-title">Enters Phone</div>
-                <div class="step-desc">Subscriber enters target phone number on dashboard</div>
-            </div>
-            <div class="arrow">&rarr;</div>
-            <div class="step">
-                <div class="step-num">3</div>
-                <div class="step-title">SMS Sent</div>
-                <div class="step-desc">Single SMS with consent link sent to target</div>
-            </div>
-            <div class="arrow">&rarr;</div>
-            <div class="step">
-                <div class="step-num">4</div>
-                <div class="step-title">Recipient Consents</div>
-                <div class="step-desc">Taps link, clicks "Share My Location" on consent page</div>
-            </div>
-            <div class="arrow">&rarr;</div>
-            <div class="step">
-                <div class="step-num">5</div>
-                <div class="step-title">Browser Prompt</div>
-                <div class="step-desc">Approves native browser geolocation permission</div>
-            </div>
-        </div>
-        <p>The recipient must complete <strong>all three consent actions</strong> (steps 3, 4, 5) before any data is shared. Declining at any stage stops the process entirely.</p>
-    </div>
+    <p>The checkbox is required — signup cannot proceed without it. This consent is collected on all landing pages across the website.</p>
 
-    <!-- SMS EXAMPLE -->
-    <div class="section">
-        <h2>Example SMS Message</h2>
-        <div class="sms-box">
-            Someone you know wants to check on your location.<br>
-            Click here to respond: https://tracify-geo.com/api/tracking/consent/44
-        </div>
-        <p>Messages are 1–2 sentences plus a unique HTTPS link. Each link is single-use and expires after one response. No marketing, promotional, or bulk content is ever included.</p>
-    </div>
-
-    <!-- CONSENT PAGE -->
-    <div class="section">
-        <h2>Consent Page (What Recipient Sees)</h2>
-        <div class="consent-mock">
-            <div style="font-size: 24px; margin-bottom: 6px;">&#128205;</div>
-            <h3>Location Sharing Request</h3>
-            <p>Someone has requested to know your location using Tracify.<br>By clicking "Share Location", you consent to sharing your current GPS coordinates.</p>
-            <span class="btn-mock btn-green">Share My Location</span>
-            <span class="btn-mock btn-red">Decline</span>
-        </div>
-        <p>After clicking "Share My Location", the browser displays a <strong>native geolocation permission prompt</strong> ("Allow this site to access your location?"). The recipient must tap "Allow" — this is a third layer of consent controlled by the device operating system.</p>
-    </div>
-
-    <!-- SAFEGUARDS -->
-    <div class="section">
-        <h2>Anti-Abuse Safeguards</h2>
-        <ul>
-            <li><strong>Rate limit:</strong> Maximum 1 SMS per subscriber per 3 hours</li>
-            <li><strong>Authentication required:</strong> Only logged-in, paying subscribers can send requests</li>
-            <li><strong>Single-use links:</strong> Each consent link works once and then expires permanently</li>
-            <li><strong>No follow-ups:</strong> Recipients who ignore or decline are never contacted again automatically</li>
-            <li><strong>No bulk sending:</strong> Each SMS is individually triggered by a subscriber action</li>
-            <li><strong>One-time capture:</strong> Location is recorded once (single lat/lng), no continuous tracking</li>
-            <li><strong>No app required:</strong> Recipient does not need to install anything</li>
-        </ul>
-    </div>
-
-    <!-- KEY FACTS -->
-    <div class="section">
-        <h2>Key Facts</h2>
-        <div class="highlight">
-            <strong>Message type:</strong> Transactional (not marketing)<br>
-            <strong>Volume:</strong> ~50–150 messages/week, growing to ~500–1,000/week<br>
-            <strong>Recipients:</strong> Individual phone numbers of people personally known to subscribers (family, partners, friends)<br>
-            <strong>Sending number:</strong> Single dedicated US number<br>
-            <strong>Opt-out:</strong> Recipients can decline on the consent page or simply ignore the SMS. No recurring messages are sent.
-        </div>
-    </div>
+    <h2>Message Details</h2>
+    <p><strong>Type:</strong> Transactional (consent-based location sharing requests)</p>
+    <p><strong>Frequency:</strong> One SMS per request, no recurring or marketing messages</p>
+    <p><strong>Opt-out:</strong> Recipients can reply STOP at any time or simply ignore the message</p>
+    <p><strong>Sending number:</strong> +1 (863) 734-6054</p>
 
     <div class="footer">
-        Tracify &bull; tracify-geo.com &bull; Consent-Based Location Sharing Platform &bull; This document may be saved as PDF via browser Print &rarr; Save as PDF
+        Tracify &bull; tracify-geo.com
     </div>
 
 </body>
