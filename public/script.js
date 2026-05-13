@@ -290,8 +290,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     <div style="margin: 15px 0; display: flex; align-items: start; gap: 10px;">
                         <input type="checkbox" id="emailSubscription" required style="width: 18px; height: 18px; margin-top: 2px; cursor: pointer;">
-                        <label for="emailSubscription" style="font-size: 0.9rem; color: #333; cursor: pointer; line-height: 1.4;" data-i18n="modal.signup.agreeText">
-                            ${t('modal.signup.agreeText')} <span style="color: #f44336;">${t('modal.signup.agreeRequired')}</span>
+                        <label for="emailSubscription" style="font-size: 0.85rem; color: #333; cursor: pointer; line-height: 1.4;">
+                            By signing up, I agree to receive SMS messages and emails from Tracify. Msg & data rates may apply. Reply STOP to opt out. <span style="color: #f44336;">*</span>
                         </label>
                     </div>
 
