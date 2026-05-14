@@ -12,7 +12,7 @@ mkdir -p "$OUT_DIR"
 
 # Format: name|eyebrow|headline (HTML: <em> wraps gradient word)|description|badge
 PAGES=(
-  "home|Phone Tracker|Locate Any Phone, <em>Anywhere</em>|Real-time consent-based phone tracker. Works on every iPhone and Android — no install.|\$0.50 trial"
+  "home|Phone Tracker|Locate Any Phone, <em>Anywhere</em>|Real-time consent-based phone tracker. Works on every iPhone and Android — no install.|\$1.47 trial"
   "how-it-works|How It Works|Track a Phone Number in <em>3 Steps</em>|Enter the number. Send a consent SMS. Get precise GPS location in under 60 seconds.|Consent-based"
   "faq|FAQ|Phone Tracker <em>Questions</em> Answered|Everything you want to know — how it works, legality, privacy, devices, and pricing.|Consent-based"
   "contact|Support|<em>24/7</em> Support, Real Humans|Need help tracking a phone? Our support team is online around the clock.|Fast response"

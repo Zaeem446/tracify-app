@@ -1087,9 +1087,9 @@ function ReportPage({ onBack, country, phone, carrier, city }) {
               color: validEmail && !loading ? '#0C0C0C' : '#78716C', borderRadius: 10,
               fontSize: 15, fontWeight: 700, cursor: validEmail && !loading ? 'pointer' : 'not-allowed',
               boxShadow: validEmail && !loading ? `0 8px 24px ${AMBER_GLOW}` : 'none', fontFamily: FONT
-            }}>{loading ? 'Setting up...' : 'Start for $0.50'}</button>
+            }}>{loading ? 'Setting up...' : 'Start for $1.47'}</button>
             <div style={{ textAlign: 'center', marginTop: 12, fontSize: 11, color: '#A8A29E', lineHeight: 1.6 }}>
-              $0.50 for 24h access, then $14.98/mo. Cancel anytime.<br />
+              $1.47 for 24h access, then $14.98/mo. Cancel anytime.<br />
               <a href="/terms" style={{ color: AMBER, textDecoration: 'none' }}>Terms</a> & <a href="/privacy" style={{ color: AMBER, textDecoration: 'none' }}>Privacy</a>
             </div>
           </div>

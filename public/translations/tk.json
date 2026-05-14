@@ -296,7 +296,7 @@
     "billing": {
       "title": "3. Hasaba alynmak we hasaplaşyk",
       "content1": "Tracify ulanmak üçin hasap döretmeli we hyzmatymyza abuna bolmaly. Biziň baha gurluşymyz şeýledir:",
-      "trial": "24 sagatlaýyn synag döwri: 0.50 ABŞ dollary",
+      "trial": "24 sagatlaýyn synag döwri: 1.47 ABŞ dollary",
       "monthly": "Aýlyk abuna: 30.00 ABŞ dollary (synag döwri gutarandan soň awtomatiki tölenýär)",
       "content2": "Abuna bolmak bilen, abunany ýatyrýançaňyz aýlyk esasda töleg usulyndan pul almaga bize ygtyýar berýärsiňiz. Ähli tölegler Stripe arkaly howpsuz usulda işlenýär."
     },

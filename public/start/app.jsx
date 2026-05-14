@@ -474,8 +474,8 @@ function ReportPage(props) {
             <p style={{fontSize:13,color:C.gray,margin:'0 0 20px',lineHeight:1.5}}>Enter your email to get started.</p>
             <input type="email" value={email} onChange={function(e){setEmail(e.target.value);}} onKeyDown={function(e){if(e.key==='Enter')handleSubmit();}} placeholder="you@example.com" autoFocus style={{width:'100%',border:'1.5px solid #ddd',borderRadius:12,padding:'14px 16px',fontSize:15,outline:'none',boxSizing:'border-box',background:'#f9f9f9'}} onFocus={function(e){e.target.style.borderColor=C.accent;}} onBlur={function(e){e.target.style.borderColor='#ddd';}}/>
             {error&&<div style={{marginTop:8,fontSize:13,color:'#dc2626',fontWeight:500}}>{error}</div>}
-            <button onClick={handleSubmit} disabled={!validEmail||loading} style={{marginTop:16,width:'100%',height:54,border:'none',background:validEmail&&!loading?C.accent:'#ccc',color:'#fff',borderRadius:12,fontSize:16,fontWeight:600,cursor:validEmail&&!loading?'pointer':'not-allowed'}}>{loading?'Creating account...':'Start for $0.50'}</button>
-            <div style={{textAlign:'center',marginTop:14,fontSize:12,color:'#aaa'}}>$0.50 for 24h trial, then $19.98/mo. Cancel anytime.</div>
+            <button onClick={handleSubmit} disabled={!validEmail||loading} style={{marginTop:16,width:'100%',height:54,border:'none',background:validEmail&&!loading?C.accent:'#ccc',color:'#fff',borderRadius:12,fontSize:16,fontWeight:600,cursor:validEmail&&!loading?'pointer':'not-allowed'}}>{loading?'Creating account...':'Start for $1.47'}</button>
+            <div style={{textAlign:'center',marginTop:14,fontSize:12,color:'#aaa'}}>$1.47 for 24h trial, then $19.98/mo. Cancel anytime.</div>
             <div style={{textAlign:'center',marginTop:6,fontSize:11,color:'#bbb'}}>By continuing, you agree to our <a href="/terms" style={{color:C.accent,textDecoration:'none'}}>Terms</a> and <a href="/privacy" style={{color:C.accent,textDecoration:'none'}}>Privacy Policy</a>.</div>
           </div>
         </div>

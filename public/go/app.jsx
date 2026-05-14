@@ -1272,13 +1272,13 @@ function ReportPage({ onBack, country, phone, carrier, city, accent }) {
                 display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8
               }}
             >
-              {loading ? 'Creating account...' : 'Start for $0.50'}
+              {loading ? 'Creating account...' : 'Start for $1.47'}
               {!loading && <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10m-4-4l4 4-4 4" stroke="#fff" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>}
             </button>
 
             <div style={{ textAlign: 'center', marginTop: 14 }}>
               <div style={{ fontSize: 12, color: '#8B8378', lineHeight: 1.5 }}>
-                $0.50 for 24h trial, then $19.99/mo. Cancel anytime.
+                $1.47 for 24h trial, then $19.99/mo. Cancel anytime.
               </div>
               <div style={{ fontSize: 11, color: '#A39C8E', marginTop: 6 }}>
                 By continuing, you agree to our <a href="/terms" style={{ color: accent, textDecoration: 'none' }}>Terms</a> and <a href="/privacy" style={{ color: accent, textDecoration: 'none' }}>Privacy Policy</a>.

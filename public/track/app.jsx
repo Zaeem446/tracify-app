@@ -821,9 +821,9 @@ function ReportPage({ onBack, country, phone, carrier, city }) {
               background: validEmail && !loading ? `linear-gradient(135deg, ${ACCENT}, #9333EA)` : '#D6D0E5',
               color: '#fff', borderRadius: 10, fontSize: 15, fontWeight: 600, cursor: validEmail && !loading ? 'pointer' : 'not-allowed',
               boxShadow: validEmail && !loading ? `0 8px 24px ${ACCENT_GLOW}` : 'none', fontFamily: FONT
-            }}>{loading ? 'Creating account...' : 'Start for $0.50'}</button>
+            }}>{loading ? 'Creating account...' : 'Start for $1.47'}</button>
             <div style={{ textAlign: 'center', marginTop: 12, fontSize: 11, color: '#9490A3', lineHeight: 1.6 }}>
-              $0.50 for 24h trial, then $14.99/mo. Cancel anytime.<br />
+              $1.47 for 24h trial, then $14.99/mo. Cancel anytime.<br />
               <a href="/terms" style={{ color: ACCENT, textDecoration: 'none' }}>Terms</a> & <a href="/privacy" style={{ color: ACCENT, textDecoration: 'none' }}>Privacy</a>
             </div>
           </div>

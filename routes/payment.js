@@ -43,7 +43,7 @@ router.get('/plans', (req, res) => {
         trial: {
             id: 'trial',
             name: 'Trial Period',
-            amount: 0.50,
+            amount: 1.47,
             currency: 'USD',
             duration: '24 hours',
             description: 'Full access to all platform services for 24 hours'
@@ -442,7 +442,7 @@ router.get('/verify-session', requireCustomerAuth, async (req, res) => {
         const subscriptionResult = await db.subscriptions.create(
             tracifyCustomerId,
             'trial',
-            0.50,
+            1.47,
             expiresAt.toISOString(),
             stripeCustomerId,
             stripeSubscriptionId
@@ -452,7 +452,7 @@ router.get('/verify-session', requireCustomerAuth, async (req, res) => {
         await db.payments.create(
             tracifyCustomerId,
             subscriptionResult.lastInsertRowid,
-            0.50,
+            1.47,
             session.payment_intent || session.id,
             'card',
             'completed'
@@ -524,7 +524,7 @@ router.post('/webhook', express.raw({ type: 'application/json' }), async (req, r
                 const subscriptionResult = await db.subscriptions.create(
                     tracifyCustomerId,
                     'trial',
-                    0.50,
+                    1.47,
                     expiresAt.toISOString(),
                     stripeCustomerId,
                     stripeSubscriptionId
@@ -534,7 +534,7 @@ router.post('/webhook', express.raw({ type: 'application/json' }), async (req, r
                 await db.payments.create(
                     tracifyCustomerId,
                     subscriptionResult.lastInsertRowid,
-                    0.50,
+                    1.47,
                     session.payment_intent || session.id,
                     'card',
                     'completed'
