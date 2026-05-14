@@ -1252,69 +1252,7 @@
             </g>
           </svg>
         </div>
-        <div class="feat-label">Real-time location</div>
-      </div>
-      <div class="feat-card reveal">
-        <div class="feat-illus">
-          <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" aria-label="Location history">
-            <defs>
-              <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9FAF4"/><stop offset="1" stop-color="#D2F1E6"/></linearGradient>
-            </defs>
-            <rect width="200" height="160" fill="url(#sky2)"/>
-            <!-- ground -->
-            <rect x="0" y="130" width="200" height="30" fill="#C2E9DB"/>
-            <!-- large map card -->
-            <g transform="translate(18, 18)">
-              <rect x="0" y="0" width="164" height="112" rx="10" fill="#CFF3E8" stroke="#A9E8D5" stroke-width="1"/>
-              <!-- roads -->
-              <path d="M0 30 L164 20" stroke="#A9E8D5" stroke-width="4" stroke-linecap="round"/>
-              <path d="M0 72 L164 82" stroke="#A9E8D5" stroke-width="4" stroke-linecap="round"/>
-              <path d="M40 0 L50 112" stroke="#A9E8D5" stroke-width="3" stroke-linecap="round"/>
-              <path d="M110 0 L120 112" stroke="#A9E8D5" stroke-width="3" stroke-linecap="round"/>
-              <!-- blocks -->
-              <rect x="6" y="36" width="24" height="30" rx="2" fill="#fff" opacity=".7"/>
-              <rect x="60" y="28" width="40" height="38" rx="2" fill="#fff" opacity=".7"/>
-              <rect x="128" y="86" width="30" height="22" rx="2" fill="#fff" opacity=".7"/>
-              <rect x="60" y="78" width="40" height="28" rx="2" fill="#fff" opacity=".7"/>
-              <!-- trail path -->
-              <path d="M18 96 L40 80 L70 60 L92 40 L130 28 L150 40" stroke="#0BAF8E" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4 3" fill="none">
-                <animate attributeName="stroke-dashoffset" from="14" to="0" dur="1.5s" repeatCount="indefinite"/>
-              </path>
-              <!-- stops with times -->
-              <g>
-                <circle cx="18" cy="96" r="6" fill="#0B1E1A"/>
-                <circle cx="18" cy="96" r="3" fill="#2FD3B0"/>
-                <rect x="0" y="102" width="30" height="10" rx="2" fill="#0B1E1A"/>
-                <text x="15" y="109" text-anchor="middle" font-family="monospace" font-size="6" font-weight="700" fill="#2FD3B0">08:15</text>
-              </g>
-              <g>
-                <circle cx="70" cy="60" r="5" fill="#0BAF8E"/>
-                <rect x="56" y="44" width="30" height="10" rx="2" fill="#fff" stroke="#0BAF8E" stroke-width="1"/>
-                <text x="71" y="51" text-anchor="middle" font-family="monospace" font-size="6" font-weight="700" fill="#0B1E1A">10:42</text>
-              </g>
-              <g>
-                <circle cx="130" cy="28" r="5" fill="#0BAF8E"/>
-                <rect x="116" y="12" width="30" height="10" rx="2" fill="#fff" stroke="#0BAF8E" stroke-width="1"/>
-                <text x="131" y="19" text-anchor="middle" font-family="monospace" font-size="6" font-weight="700" fill="#0B1E1A">13:20</text>
-              </g>
-              <!-- current pin (end) -->
-              <g transform="translate(150, 40)">
-                <circle r="4" fill="#2FD3B0" opacity=".4">
-                  <animate attributeName="r" values="4;14;4" dur="1.8s" repeatCount="indefinite"/>
-                  <animate attributeName="opacity" values=".5;0;.5" dur="1.8s" repeatCount="indefinite"/>
-                </circle>
-                <path d="M0 -10 a6 6 0 0 1 6 6 c0 5-6 10-6 10 s-6-5-6-10 a6 6 0 0 1 6-6z" fill="#0B1E1A"/>
-                <circle cy="-4" r="2.5" fill="#2FD3B0"/>
-              </g>
-            </g>
-            <!-- header tab -->
-            <g transform="translate(18, 6)">
-              <rect x="0" y="0" width="80" height="14" rx="7" fill="#0B1E1A"/>
-              <text x="40" y="9.5" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="800" fill="#2FD3B0">TODAY · 3 STOPS</text>
-            </g>
-          </svg>
-        </div>
-        <div class="feat-label">Location history</div>
+        <div class="feat-label">Live GPS pinpoint</div>
       </div>
       <div class="feat-card reveal">
         <div class="feat-illus">
@@ -1367,83 +1305,8 @@
             </g>
           </svg>
         </div>
-        <div class="feat-label">Place alerts</div>
+        <div class="feat-label">Zone notifications</div>
       </div>
-      <div class="feat-card reveal">
-        <div class="feat-illus">
-          <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" aria-label="AR search">
-            <defs>
-              <linearGradient id="sky4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9FAF4"/><stop offset="1" stop-color="#D2F1E6"/></linearGradient>
-              <clipPath id="phone4clip"><rect x="5" y="8" width="58" height="96" rx="4"/></clipPath>
-            </defs>
-            <rect width="200" height="160" fill="url(#sky4)"/>
-            <rect x="0" y="130" width="200" height="30" fill="#C2E9DB"/>
-            <!-- background skyline (what you see in real world) -->
-            <g opacity=".9">
-              <rect x="130" y="54" width="30" height="78" fill="#AEDDCD"/>
-              <rect x="162" y="38" width="26" height="94" fill="#8CCDB9"/>
-              <rect x="110" y="74" width="18" height="58" fill="#AEDDCD"/>
-              <!-- windows -->
-              <g fill="#F5D562" opacity=".7">
-                <rect x="134" y="60" width="4" height="5"/><rect x="142" y="60" width="4" height="5"/><rect x="150" y="60" width="4" height="5"/>
-                <rect x="134" y="72" width="4" height="5"/><rect x="142" y="72" width="4" height="5"/><rect x="150" y="72" width="4" height="5"/>
-                <rect x="168" y="44" width="4" height="5"/><rect x="176" y="44" width="4" height="5"/>
-                <rect x="168" y="56" width="4" height="5"/><rect x="176" y="56" width="4" height="5"/>
-              </g>
-            </g>
-            <!-- AR label floating above building -->
-            <g transform="translate(142, 30)">
-              <rect x="-24" y="-8" width="48" height="16" rx="8" fill="#0B1E1A"/>
-              <circle cx="-16" cy="0" r="3" fill="#2FD3B0"/>
-              <text x="-9" y="2.5" font-family="sans-serif" font-size="6" font-weight="800" fill="#fff">ALEX · 120m</text>
-              <path d="M-2 8 L2 8 L0 12 Z" fill="#0B1E1A"/>
-            </g>
-            <!-- hand holding phone (foreground) -->
-            <g transform="translate(6, 30)">
-              <!-- phone -->
-              <rect x="0" y="0" width="68" height="112" rx="9" fill="#0B1E1A"/>
-              <rect x="3" y="4" width="62" height="104" rx="6" fill="#22312D"/>
-              <!-- notch -->
-              <rect x="26" y="5" width="16" height="3" rx="1.5" fill="#0B1E1A"/>
-              <!-- camera view inside phone -->
-              <g clip-path="url(#phone4clip)" transform="translate(-2, 0)">
-                <!-- simulated building -->
-                <rect x="5" y="8" width="58" height="96" fill="#2A3B37"/>
-                <rect x="12" y="28" width="44" height="76" fill="#3B4A45"/>
-                <!-- lit windows -->
-                <g fill="#F5D562">
-                  <rect x="16" y="36" width="6" height="8"/><rect x="26" y="36" width="6" height="8"/><rect x="36" y="36" width="6" height="8"/><rect x="46" y="36" width="6" height="8"/>
-                  <rect x="16" y="50" width="6" height="8"/><rect x="26" y="50" width="6" height="8"/><rect x="36" y="50" width="6" height="8" opacity=".4"/><rect x="46" y="50" width="6" height="8"/>
-                  <rect x="16" y="64" width="6" height="8"/><rect x="26" y="64" width="6" height="8" opacity=".4"/><rect x="36" y="64" width="6" height="8"/><rect x="46" y="64" width="6" height="8"/>
-                </g>
-                <!-- AR pin pulsing inside camera view -->
-                <g transform="translate(34, 32)">
-                  <circle r="10" fill="#2FD3B0" opacity=".3">
-                    <animate attributeName="r" values="8;18;8" dur="2s" repeatCount="indefinite"/>
-                    <animate attributeName="opacity" values=".45;0;.45" dur="2s" repeatCount="indefinite"/>
-                  </circle>
-                  <path d="M0 -10 a7 7 0 0 1 7 7 c0 5-7 12-7 12 s-7-7-7-12 a7 7 0 0 1 7-7z" fill="#fff" stroke="#2FD3B0" stroke-width="1.5"/>
-                  <circle cy="-3" r="2.5" fill="#0BAF8E"/>
-                </g>
-                <!-- bottom AR HUD -->
-                <rect x="8" y="90" width="52" height="12" rx="2" fill="#0B1E1A" opacity=".7"/>
-                <text x="34" y="98" text-anchor="middle" font-family="monospace" font-size="5" font-weight="700" fill="#2FD3B0">AR · TAP TO NAVIGATE</text>
-              </g>
-              <!-- compass badge corner -->
-              <g transform="translate(55, 18)">
-                <circle r="7" fill="#fff"/>
-                <path d="M0 -5 L2 0 L0 5 L-2 0 Z" fill="#FF4D4D"/>
-                <text y="2.5" text-anchor="middle" font-family="sans-serif" font-size="4" font-weight="800" fill="#0B1E1A">N</text>
-              </g>
-            </g>
-            <!-- thumb/hand -->
-            <path d="M2 130 Q10 100 30 105 L60 110 L76 122 Q78 140 50 142 L10 140 Z" fill="#FFD7B3"/>
-            <path d="M2 130 Q10 100 30 105 L60 110 L76 122" stroke="#E8C79C" stroke-width="1" fill="none"/>
-          </svg>
-        </div>
-        <div class="feat-label">AR search</div>
-      </div>
-      <!-- row 2 -->
       <div class="feat-card reveal">
         <div class="feat-illus">
           <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" aria-label="SOS button">
@@ -1522,70 +1385,71 @@
             </g>
           </svg>
         </div>
-        <div class="feat-label">SOS button</div>
+        <div class="feat-label">Emergency alert</div>
       </div>
       <div class="feat-card reveal">
         <div class="feat-illus">
-          <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" aria-label="Fall detection">
+          <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" aria-label="Location history">
             <defs>
-              <linearGradient id="sky6" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9FAF4"/><stop offset="1" stop-color="#D2F1E6"/></linearGradient>
+              <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9FAF4"/><stop offset="1" stop-color="#D2F1E6"/></linearGradient>
             </defs>
-            <rect width="200" height="160" fill="url(#sky6)"/>
+            <rect width="200" height="160" fill="url(#sky2)"/>
+            <!-- ground -->
             <rect x="0" y="130" width="200" height="30" fill="#C2E9DB"/>
-            <!-- motion streaks behind watch -->
-            <g stroke="#FF4D4D" stroke-width="2" stroke-linecap="round" opacity=".5">
-              <path d="M10 60 L26 58"/>
-              <path d="M8 72 L22 70"/>
-              <path d="M12 84 L24 82"/>
+            <!-- large map card -->
+            <g transform="translate(18, 18)">
+              <rect x="0" y="0" width="164" height="112" rx="10" fill="#CFF3E8" stroke="#A9E8D5" stroke-width="1"/>
+              <!-- roads -->
+              <path d="M0 30 L164 20" stroke="#A9E8D5" stroke-width="4" stroke-linecap="round"/>
+              <path d="M0 72 L164 82" stroke="#A9E8D5" stroke-width="4" stroke-linecap="round"/>
+              <path d="M40 0 L50 112" stroke="#A9E8D5" stroke-width="3" stroke-linecap="round"/>
+              <path d="M110 0 L120 112" stroke="#A9E8D5" stroke-width="3" stroke-linecap="round"/>
+              <!-- blocks -->
+              <rect x="6" y="36" width="24" height="30" rx="2" fill="#fff" opacity=".7"/>
+              <rect x="60" y="28" width="40" height="38" rx="2" fill="#fff" opacity=".7"/>
+              <rect x="128" y="86" width="30" height="22" rx="2" fill="#fff" opacity=".7"/>
+              <rect x="60" y="78" width="40" height="28" rx="2" fill="#fff" opacity=".7"/>
+              <!-- trail path -->
+              <path d="M18 96 L40 80 L70 60 L92 40 L130 28 L150 40" stroke="#0BAF8E" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4 3" fill="none">
+                <animate attributeName="stroke-dashoffset" from="14" to="0" dur="1.5s" repeatCount="indefinite"/>
+              </path>
+              <!-- stops with times -->
+              <g>
+                <circle cx="18" cy="96" r="6" fill="#0B1E1A"/>
+                <circle cx="18" cy="96" r="3" fill="#2FD3B0"/>
+                <rect x="0" y="102" width="30" height="10" rx="2" fill="#0B1E1A"/>
+                <text x="15" y="109" text-anchor="middle" font-family="monospace" font-size="6" font-weight="700" fill="#2FD3B0">08:15</text>
+              </g>
+              <g>
+                <circle cx="70" cy="60" r="5" fill="#0BAF8E"/>
+                <rect x="56" y="44" width="30" height="10" rx="2" fill="#fff" stroke="#0BAF8E" stroke-width="1"/>
+                <text x="71" y="51" text-anchor="middle" font-family="monospace" font-size="6" font-weight="700" fill="#0B1E1A">10:42</text>
+              </g>
+              <g>
+                <circle cx="130" cy="28" r="5" fill="#0BAF8E"/>
+                <rect x="116" y="12" width="30" height="10" rx="2" fill="#fff" stroke="#0BAF8E" stroke-width="1"/>
+                <text x="131" y="19" text-anchor="middle" font-family="monospace" font-size="6" font-weight="700" fill="#0B1E1A">13:20</text>
+              </g>
+              <!-- current pin (end) -->
+              <g transform="translate(150, 40)">
+                <circle r="4" fill="#2FD3B0" opacity=".4">
+                  <animate attributeName="r" values="4;14;4" dur="1.8s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" values=".5;0;.5" dur="1.8s" repeatCount="indefinite"/>
+                </circle>
+                <path d="M0 -10 a6 6 0 0 1 6 6 c0 5-6 10-6 10 s-6-5-6-10 a6 6 0 0 1 6-6z" fill="#0B1E1A"/>
+                <circle cy="-4" r="2.5" fill="#2FD3B0"/>
+              </g>
             </g>
-            <!-- smartwatch -->
-            <g transform="translate(30, 40)">
-              <!-- strap top -->
-              <path d="M8 0 L42 0 L40 16 L10 16 Z" fill="#0B1E1A"/>
-              <path d="M14 -8 L36 -8 L36 0 L14 0 Z" fill="#2A3B37"/>
-              <!-- strap bottom -->
-              <path d="M10 64 L40 64 L42 80 L8 80 Z" fill="#0B1E1A"/>
-              <path d="M14 80 L36 80 L36 88 L14 88 Z" fill="#2A3B37"/>
-              <!-- watch body -->
-              <rect x="0" y="14" width="50" height="52" rx="10" fill="#0B1E1A"/>
-              <rect x="3" y="17" width="44" height="46" rx="8" fill="#FFF0F0"/>
-              <!-- crown -->
-              <rect x="50" y="32" width="4" height="8" rx="1" fill="#3FAE8C"/>
-              <!-- alert content on watch -->
-              <circle cx="25" cy="32" r="8" fill="#FF4D4D">
-                <animate attributeName="opacity" values="1;.5;1" dur="1s" repeatCount="indefinite"/>
-              </circle>
-              <text x="25" y="36" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="900" fill="#fff">!</text>
-              <text x="25" y="48" text-anchor="middle" font-family="sans-serif" font-size="5" font-weight="800" fill="#0B1E1A">FALL</text>
-              <text x="25" y="55" text-anchor="middle" font-family="sans-serif" font-size="5" font-weight="800" fill="#FF4D4D">DETECTED</text>
-            </g>
-            <!-- alert modal on right -->
-            <g transform="translate(94, 22)">
-              <rect x="0" y="0" width="94" height="96" rx="8" fill="#fff" stroke="#FF4D4D" stroke-width="1.5"/>
-              <!-- icon top -->
-              <circle cx="47" cy="16" r="10" fill="#FFE7E7"/>
-              <path d="M47 11 L47 18 M47 21 L47 22" stroke="#FF4D4D" stroke-width="2" stroke-linecap="round"/>
-              <!-- title -->
-              <text x="47" y="34" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="800" fill="#0B1E1A">Fall Detected</text>
-              <text x="47" y="42" text-anchor="middle" font-family="sans-serif" font-size="4.5" fill="#5B6B67">Calling emergency in</text>
-              <!-- countdown ring (bigger, centered around time) -->
-              <circle cx="47" cy="60" r="12" fill="none" stroke="#FFE7E7" stroke-width="2"/>
-              <circle cx="47" cy="60" r="12" fill="none" stroke="#FF4D4D" stroke-width="2" stroke-dasharray="75.4" stroke-dashoffset="26" stroke-linecap="round" transform="rotate(-90 47 60)"/>
-              <text x="47" y="63" text-anchor="middle" font-family="monospace" font-size="7" font-weight="900" fill="#FF4D4D">00:08</text>
-              <!-- buttons -->
-              <rect x="8" y="76" width="36" height="14" rx="7" fill="#E5EDEA"/>
-              <text x="26" y="85" text-anchor="middle" font-family="sans-serif" font-size="6" font-weight="800" fill="#0B1E1A">I'm OK</text>
-              <rect x="50" y="76" width="36" height="14" rx="7" fill="#FF4D4D"/>
-              <text x="68" y="85" text-anchor="middle" font-family="sans-serif" font-size="6" font-weight="800" fill="#fff">Call Now</text>
-            </g>
-            <!-- heart pulse small -->
-            <g transform="translate(12, 110)">
-              <path d="M0 8 L6 8 L10 2 L14 14 L18 6 L22 10 L30 10" stroke="#FF4D4D" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- header tab -->
+            <g transform="translate(18, 6)">
+              <rect x="0" y="0" width="80" height="14" rx="7" fill="#0B1E1A"/>
+              <text x="40" y="9.5" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="800" fill="#2FD3B0">TODAY · 3 STOPS</text>
             </g>
           </svg>
         </div>
-        <div class="feat-label">Fall detection</div>
+        <div class="feat-label">Route timeline</div>
       </div>
+      <!-- row 2 -->
       <div class="feat-card reveal">
         <div class="feat-illus">
           <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" aria-label="Crash and speed control">
@@ -1682,7 +1546,143 @@
             </g>
           </svg>
         </div>
-        <div class="feat-label">Crash &amp; speed control</div>
+        <div class="feat-label">Drive monitor</div>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-illus">
+          <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" aria-label="AR search">
+            <defs>
+              <linearGradient id="sky4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9FAF4"/><stop offset="1" stop-color="#D2F1E6"/></linearGradient>
+              <clipPath id="phone4clip"><rect x="5" y="8" width="58" height="96" rx="4"/></clipPath>
+            </defs>
+            <rect width="200" height="160" fill="url(#sky4)"/>
+            <rect x="0" y="130" width="200" height="30" fill="#C2E9DB"/>
+            <!-- background skyline (what you see in real world) -->
+            <g opacity=".9">
+              <rect x="130" y="54" width="30" height="78" fill="#AEDDCD"/>
+              <rect x="162" y="38" width="26" height="94" fill="#8CCDB9"/>
+              <rect x="110" y="74" width="18" height="58" fill="#AEDDCD"/>
+              <!-- windows -->
+              <g fill="#F5D562" opacity=".7">
+                <rect x="134" y="60" width="4" height="5"/><rect x="142" y="60" width="4" height="5"/><rect x="150" y="60" width="4" height="5"/>
+                <rect x="134" y="72" width="4" height="5"/><rect x="142" y="72" width="4" height="5"/><rect x="150" y="72" width="4" height="5"/>
+                <rect x="168" y="44" width="4" height="5"/><rect x="176" y="44" width="4" height="5"/>
+                <rect x="168" y="56" width="4" height="5"/><rect x="176" y="56" width="4" height="5"/>
+              </g>
+            </g>
+            <!-- AR label floating above building -->
+            <g transform="translate(142, 30)">
+              <rect x="-24" y="-8" width="48" height="16" rx="8" fill="#0B1E1A"/>
+              <circle cx="-16" cy="0" r="3" fill="#2FD3B0"/>
+              <text x="-9" y="2.5" font-family="sans-serif" font-size="6" font-weight="800" fill="#fff">ALEX · 120m</text>
+              <path d="M-2 8 L2 8 L0 12 Z" fill="#0B1E1A"/>
+            </g>
+            <!-- hand holding phone (foreground) -->
+            <g transform="translate(6, 30)">
+              <!-- phone -->
+              <rect x="0" y="0" width="68" height="112" rx="9" fill="#0B1E1A"/>
+              <rect x="3" y="4" width="62" height="104" rx="6" fill="#22312D"/>
+              <!-- notch -->
+              <rect x="26" y="5" width="16" height="3" rx="1.5" fill="#0B1E1A"/>
+              <!-- camera view inside phone -->
+              <g clip-path="url(#phone4clip)" transform="translate(-2, 0)">
+                <!-- simulated building -->
+                <rect x="5" y="8" width="58" height="96" fill="#2A3B37"/>
+                <rect x="12" y="28" width="44" height="76" fill="#3B4A45"/>
+                <!-- lit windows -->
+                <g fill="#F5D562">
+                  <rect x="16" y="36" width="6" height="8"/><rect x="26" y="36" width="6" height="8"/><rect x="36" y="36" width="6" height="8"/><rect x="46" y="36" width="6" height="8"/>
+                  <rect x="16" y="50" width="6" height="8"/><rect x="26" y="50" width="6" height="8"/><rect x="36" y="50" width="6" height="8" opacity=".4"/><rect x="46" y="50" width="6" height="8"/>
+                  <rect x="16" y="64" width="6" height="8"/><rect x="26" y="64" width="6" height="8" opacity=".4"/><rect x="36" y="64" width="6" height="8"/><rect x="46" y="64" width="6" height="8"/>
+                </g>
+                <!-- AR pin pulsing inside camera view -->
+                <g transform="translate(34, 32)">
+                  <circle r="10" fill="#2FD3B0" opacity=".3">
+                    <animate attributeName="r" values="8;18;8" dur="2s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values=".45;0;.45" dur="2s" repeatCount="indefinite"/>
+                  </circle>
+                  <path d="M0 -10 a7 7 0 0 1 7 7 c0 5-7 12-7 12 s-7-7-7-12 a7 7 0 0 1 7-7z" fill="#fff" stroke="#2FD3B0" stroke-width="1.5"/>
+                  <circle cy="-3" r="2.5" fill="#0BAF8E"/>
+                </g>
+                <!-- bottom AR HUD -->
+                <rect x="8" y="90" width="52" height="12" rx="2" fill="#0B1E1A" opacity=".7"/>
+                <text x="34" y="98" text-anchor="middle" font-family="monospace" font-size="5" font-weight="700" fill="#2FD3B0">AR · TAP TO NAVIGATE</text>
+              </g>
+              <!-- compass badge corner -->
+              <g transform="translate(55, 18)">
+                <circle r="7" fill="#fff"/>
+                <path d="M0 -5 L2 0 L0 5 L-2 0 Z" fill="#FF4D4D"/>
+                <text y="2.5" text-anchor="middle" font-family="sans-serif" font-size="4" font-weight="800" fill="#0B1E1A">N</text>
+              </g>
+            </g>
+            <!-- thumb/hand -->
+            <path d="M2 130 Q10 100 30 105 L60 110 L76 122 Q78 140 50 142 L10 140 Z" fill="#FFD7B3"/>
+            <path d="M2 130 Q10 100 30 105 L60 110 L76 122" stroke="#E8C79C" stroke-width="1" fill="none"/>
+          </svg>
+        </div>
+        <div class="feat-label">Camera locate</div>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-illus">
+          <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" aria-label="Fall detection">
+            <defs>
+              <linearGradient id="sky6" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9FAF4"/><stop offset="1" stop-color="#D2F1E6"/></linearGradient>
+            </defs>
+            <rect width="200" height="160" fill="url(#sky6)"/>
+            <rect x="0" y="130" width="200" height="30" fill="#C2E9DB"/>
+            <!-- motion streaks behind watch -->
+            <g stroke="#FF4D4D" stroke-width="2" stroke-linecap="round" opacity=".5">
+              <path d="M10 60 L26 58"/>
+              <path d="M8 72 L22 70"/>
+              <path d="M12 84 L24 82"/>
+            </g>
+            <!-- smartwatch -->
+            <g transform="translate(30, 40)">
+              <!-- strap top -->
+              <path d="M8 0 L42 0 L40 16 L10 16 Z" fill="#0B1E1A"/>
+              <path d="M14 -8 L36 -8 L36 0 L14 0 Z" fill="#2A3B37"/>
+              <!-- strap bottom -->
+              <path d="M10 64 L40 64 L42 80 L8 80 Z" fill="#0B1E1A"/>
+              <path d="M14 80 L36 80 L36 88 L14 88 Z" fill="#2A3B37"/>
+              <!-- watch body -->
+              <rect x="0" y="14" width="50" height="52" rx="10" fill="#0B1E1A"/>
+              <rect x="3" y="17" width="44" height="46" rx="8" fill="#FFF0F0"/>
+              <!-- crown -->
+              <rect x="50" y="32" width="4" height="8" rx="1" fill="#3FAE8C"/>
+              <!-- alert content on watch -->
+              <circle cx="25" cy="32" r="8" fill="#FF4D4D">
+                <animate attributeName="opacity" values="1;.5;1" dur="1s" repeatCount="indefinite"/>
+              </circle>
+              <text x="25" y="36" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="900" fill="#fff">!</text>
+              <text x="25" y="48" text-anchor="middle" font-family="sans-serif" font-size="5" font-weight="800" fill="#0B1E1A">FALL</text>
+              <text x="25" y="55" text-anchor="middle" font-family="sans-serif" font-size="5" font-weight="800" fill="#FF4D4D">DETECTED</text>
+            </g>
+            <!-- alert modal on right -->
+            <g transform="translate(94, 22)">
+              <rect x="0" y="0" width="94" height="96" rx="8" fill="#fff" stroke="#FF4D4D" stroke-width="1.5"/>
+              <!-- icon top -->
+              <circle cx="47" cy="16" r="10" fill="#FFE7E7"/>
+              <path d="M47 11 L47 18 M47 21 L47 22" stroke="#FF4D4D" stroke-width="2" stroke-linecap="round"/>
+              <!-- title -->
+              <text x="47" y="34" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="800" fill="#0B1E1A">Fall Detected</text>
+              <text x="47" y="42" text-anchor="middle" font-family="sans-serif" font-size="4.5" fill="#5B6B67">Calling emergency in</text>
+              <!-- countdown ring (bigger, centered around time) -->
+              <circle cx="47" cy="60" r="12" fill="none" stroke="#FFE7E7" stroke-width="2"/>
+              <circle cx="47" cy="60" r="12" fill="none" stroke="#FF4D4D" stroke-width="2" stroke-dasharray="75.4" stroke-dashoffset="26" stroke-linecap="round" transform="rotate(-90 47 60)"/>
+              <text x="47" y="63" text-anchor="middle" font-family="monospace" font-size="7" font-weight="900" fill="#FF4D4D">00:08</text>
+              <!-- buttons -->
+              <rect x="8" y="76" width="36" height="14" rx="7" fill="#E5EDEA"/>
+              <text x="26" y="85" text-anchor="middle" font-family="sans-serif" font-size="6" font-weight="800" fill="#0B1E1A">I'm OK</text>
+              <rect x="50" y="76" width="36" height="14" rx="7" fill="#FF4D4D"/>
+              <text x="68" y="85" text-anchor="middle" font-family="sans-serif" font-size="6" font-weight="800" fill="#fff">Call Now</text>
+            </g>
+            <!-- heart pulse small -->
+            <g transform="translate(12, 110)">
+              <path d="M0 8 L6 8 L10 2 L14 14 L18 6 L22 10 L30 10" stroke="#FF4D4D" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </svg>
+        </div>
+        <div class="feat-label">Motion sensor</div>
       </div>
       <div class="feat-card reveal">
         <div class="feat-illus">
@@ -1773,7 +1773,7 @@
             </g>
           </svg>
         </div>
-        <div class="feat-label">Pair with wearables</div>
+        <div class="feat-label">Device sync</div>
       </div>
     </div>
   </div>
@@ -1784,10 +1784,96 @@
   <div class="wrap">
     <h2 class="section-title reveal">Our technologies</h2>
     <div class="tech-grid">
-      <!-- GPS -->
       <div class="tech-card reveal">
         <div class="tech-face">
-          <span class="tech-chip">GNSS · L1/L5</span>
+          <span class="tech-chip">Connect · BLE / Cell</span>
+          <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" aria-label="IoT devices">
+            <!-- orbit rings -->
+            <g fill="none" stroke="#2FD3B0" stroke-width="1" opacity=".35">
+              <circle cx="160" cy="104" r="50" stroke-dasharray="2 4"/>
+              <circle cx="160" cy="104" r="78" stroke-dasharray="2 4"/>
+            </g>
+            <!-- center hub (phone) -->
+            <g transform="translate(160, 104)">
+              <circle r="32" fill="#0B1E1A"/>
+              <circle r="32" fill="none" stroke="#2FD3B0" stroke-width="1" opacity=".5">
+                <animate attributeName="r" values="30;50;30" dur="2.4s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values=".6;0;.6" dur="2.4s" repeatCount="indefinite"/>
+              </circle>
+              <!-- phone silhouette -->
+              <rect x="-10" y="-16" width="20" height="32" rx="3" fill="#E7FAF5"/>
+              <rect x="-10" y="-16" width="20" height="32" rx="3" fill="none" stroke="#0B1E1A" stroke-width="1"/>
+              <rect x="-3" y="-14" width="6" height="1" rx=".5" fill="#0B1E1A"/>
+              <circle cy="12" r="1.5" fill="#0B1E1A"/>
+              <!-- signal bars on screen -->
+              <g fill="#2FD3B0">
+                <rect x="-6" y="-2" width="2" height="4"/>
+                <rect x="-3" y="-4" width="2" height="6"/>
+                <rect x="0" y="-6" width="2" height="8"/>
+                <rect x="3" y="-8" width="2" height="10"/>
+              </g>
+            </g>
+
+            <!-- connection lines to devices with animated pulses -->
+            <g stroke="#0BAF8E" stroke-width="1" stroke-dasharray="3 3" fill="none" opacity=".7">
+              <line x1="160" y1="72" x2="160" y2="32">
+                <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="1.6s" repeatCount="indefinite"/>
+              </line>
+              <line x1="188" y1="86" x2="240" y2="54">
+                <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="1.8s" repeatCount="indefinite"/>
+              </line>
+              <line x1="196" y1="118" x2="260" y2="140">
+                <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="2s" repeatCount="indefinite"/>
+              </line>
+              <line x1="132" y1="86" x2="76" y2="52">
+                <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="1.4s" repeatCount="indefinite"/>
+              </line>
+              <line x1="124" y1="118" x2="58" y2="138">
+                <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="2.2s" repeatCount="indefinite"/>
+              </line>
+            </g>
+
+            <!-- device: smartwatch (top) -->
+            <g transform="translate(160, 24)">
+              <rect x="-10" y="-8" width="20" height="16" rx="4" fill="#1F2B27"/>
+              <rect x="-6" y="-4" width="12" height="8" rx="1" fill="#2FD3B0"/>
+              <rect x="-2" y="-12" width="4" height="4" fill="#1F2B27"/>
+              <rect x="-2" y="8" width="4" height="4" fill="#1F2B27"/>
+            </g>
+            <!-- device: earbuds (top-right) -->
+            <g transform="translate(240, 46)">
+              <rect x="-10" y="-6" width="20" height="14" rx="4" fill="#fff" stroke="#0B1E1A" stroke-width="1"/>
+              <circle cx="-4" cy="1" r="2" fill="#2FD3B0"/>
+              <circle cx="4" cy="1" r="2" fill="#2FD3B0"/>
+            </g>
+            <!-- device: GPS tracker tag (bottom-right) -->
+            <g transform="translate(260, 144)">
+              <rect x="-10" y="-10" width="20" height="20" rx="6" fill="#E7FAF5" stroke="#0BAF8E" stroke-width="1.5"/>
+              <path d="M0 -5 a3 3 0 0 1 3 3 c0 2-3 5-3 5 s-3-3-3-5 a3 3 0 0 1 3-3z" fill="#0BAF8E"/>
+            </g>
+            <!-- device: car key / vehicle (left) -->
+            <g transform="translate(68, 44)">
+              <rect x="-12" y="-6" width="24" height="12" rx="3" fill="#0B1E1A"/>
+              <rect x="-6" y="-3" width="4" height="6" rx="1" fill="#FF4D4D"/>
+              <rect x="0" y="-3" width="4" height="6" rx="1" fill="#2FD3B0"/>
+              <rect x="6" y="-3" width="4" height="3" rx="1" fill="#F5D562"/>
+            </g>
+            <!-- device: sensor/thermostat (bottom-left) -->
+            <g transform="translate(50, 144)">
+              <circle r="11" fill="#fff" stroke="#0B1E1A" stroke-width="1"/>
+              <circle r="7" fill="#0B1E1A"/>
+              <text y="2.5" text-anchor="middle" font-family="monospace" font-size="6" font-weight="700" fill="#2FD3B0">21\u00b0</text>
+            </g>
+          </svg>
+        </div>
+        <div class="tech-body">
+          <h3 class="tech-label">Universal device pairing</h3>
+          <p class="tech-desc">Works with smartwatches, Bluetooth tags, cellular trackers, and more — all managed from one place.</p>
+        </div>
+      </div>
+      <div class="tech-card reveal">
+        <div class="tech-face">
+          <span class="tech-chip">SAT · Multi-band</span>
           <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" aria-label="Precise GPS tracking">
             <defs>
               <radialGradient id="gpsGlow" cx="50%" cy="100%" r="80%">
@@ -1865,15 +1951,13 @@
           </svg>
         </div>
         <div class="tech-body">
-          <h3 class="tech-label">Precise GPS tracking</h3>
-          <p class="tech-desc">Multi-constellation GNSS with dual-frequency correction — sub-meter accuracy even in dense cities.</p>
+          <h3 class="tech-label">Satellite positioning</h3>
+          <p class="tech-desc">Connects to multiple satellite networks with dual-band frequency for pinpoint accuracy in any environment.</p>
         </div>
       </div>
-
-      <!-- ML -->
       <div class="tech-card reveal">
         <div class="tech-face">
-          <span class="tech-chip">Neural Engine</span>
+          <span class="tech-chip">AI · Deep Learning</span>
           <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" aria-label="Modern ML algorithms">
             <!-- soft background -->
             <rect width="320" height="200" fill="transparent"/>
@@ -1976,97 +2060,8 @@
           </svg>
         </div>
         <div class="tech-body">
-          <h3 class="tech-label">Modern ML algorithms</h3>
-          <p class="tech-desc">Neural models classify movement patterns, flag anomalies, and predict arrival times in real time.</p>
-        </div>
-      </div>
-
-      <!-- IoT -->
-      <div class="tech-card reveal">
-        <div class="tech-face">
-          <span class="tech-chip">Mesh · BLE / LTE-M</span>
-          <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" aria-label="IoT devices">
-            <!-- orbit rings -->
-            <g fill="none" stroke="#2FD3B0" stroke-width="1" opacity=".35">
-              <circle cx="160" cy="104" r="50" stroke-dasharray="2 4"/>
-              <circle cx="160" cy="104" r="78" stroke-dasharray="2 4"/>
-            </g>
-            <!-- center hub (phone) -->
-            <g transform="translate(160, 104)">
-              <circle r="32" fill="#0B1E1A"/>
-              <circle r="32" fill="none" stroke="#2FD3B0" stroke-width="1" opacity=".5">
-                <animate attributeName="r" values="30;50;30" dur="2.4s" repeatCount="indefinite"/>
-                <animate attributeName="opacity" values=".6;0;.6" dur="2.4s" repeatCount="indefinite"/>
-              </circle>
-              <!-- phone silhouette -->
-              <rect x="-10" y="-16" width="20" height="32" rx="3" fill="#E7FAF5"/>
-              <rect x="-10" y="-16" width="20" height="32" rx="3" fill="none" stroke="#0B1E1A" stroke-width="1"/>
-              <rect x="-3" y="-14" width="6" height="1" rx=".5" fill="#0B1E1A"/>
-              <circle cy="12" r="1.5" fill="#0B1E1A"/>
-              <!-- signal bars on screen -->
-              <g fill="#2FD3B0">
-                <rect x="-6" y="-2" width="2" height="4"/>
-                <rect x="-3" y="-4" width="2" height="6"/>
-                <rect x="0" y="-6" width="2" height="8"/>
-                <rect x="3" y="-8" width="2" height="10"/>
-              </g>
-            </g>
-
-            <!-- connection lines to devices with animated pulses -->
-            <g stroke="#0BAF8E" stroke-width="1" stroke-dasharray="3 3" fill="none" opacity=".7">
-              <line x1="160" y1="72" x2="160" y2="32">
-                <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="1.6s" repeatCount="indefinite"/>
-              </line>
-              <line x1="188" y1="86" x2="240" y2="54">
-                <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="1.8s" repeatCount="indefinite"/>
-              </line>
-              <line x1="196" y1="118" x2="260" y2="140">
-                <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="2s" repeatCount="indefinite"/>
-              </line>
-              <line x1="132" y1="86" x2="76" y2="52">
-                <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="1.4s" repeatCount="indefinite"/>
-              </line>
-              <line x1="124" y1="118" x2="58" y2="138">
-                <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="2.2s" repeatCount="indefinite"/>
-              </line>
-            </g>
-
-            <!-- device: smartwatch (top) -->
-            <g transform="translate(160, 24)">
-              <rect x="-10" y="-8" width="20" height="16" rx="4" fill="#1F2B27"/>
-              <rect x="-6" y="-4" width="12" height="8" rx="1" fill="#2FD3B0"/>
-              <rect x="-2" y="-12" width="4" height="4" fill="#1F2B27"/>
-              <rect x="-2" y="8" width="4" height="4" fill="#1F2B27"/>
-            </g>
-            <!-- device: earbuds (top-right) -->
-            <g transform="translate(240, 46)">
-              <rect x="-10" y="-6" width="20" height="14" rx="4" fill="#fff" stroke="#0B1E1A" stroke-width="1"/>
-              <circle cx="-4" cy="1" r="2" fill="#2FD3B0"/>
-              <circle cx="4" cy="1" r="2" fill="#2FD3B0"/>
-            </g>
-            <!-- device: GPS tracker tag (bottom-right) -->
-            <g transform="translate(260, 144)">
-              <rect x="-10" y="-10" width="20" height="20" rx="6" fill="#E7FAF5" stroke="#0BAF8E" stroke-width="1.5"/>
-              <path d="M0 -5 a3 3 0 0 1 3 3 c0 2-3 5-3 5 s-3-3-3-5 a3 3 0 0 1 3-3z" fill="#0BAF8E"/>
-            </g>
-            <!-- device: car key / vehicle (left) -->
-            <g transform="translate(68, 44)">
-              <rect x="-12" y="-6" width="24" height="12" rx="3" fill="#0B1E1A"/>
-              <rect x="-6" y="-3" width="4" height="6" rx="1" fill="#FF4D4D"/>
-              <rect x="0" y="-3" width="4" height="6" rx="1" fill="#2FD3B0"/>
-              <rect x="6" y="-3" width="4" height="3" rx="1" fill="#F5D562"/>
-            </g>
-            <!-- device: sensor/thermostat (bottom-left) -->
-            <g transform="translate(50, 144)">
-              <circle r="11" fill="#fff" stroke="#0B1E1A" stroke-width="1"/>
-              <circle r="7" fill="#0B1E1A"/>
-              <text y="2.5" text-anchor="middle" font-family="monospace" font-size="6" font-weight="700" fill="#2FD3B0">21\u00b0</text>
-            </g>
-          </svg>
-        </div>
-        <div class="tech-body">
-          <h3 class="tech-label">Wide IoT device support</h3>
-          <p class="tech-desc">BLE, LTE-M, and Wi-Fi mesh — pair watches, tags, trackers, and vehicles from one unified app.</p>
+          <h3 class="tech-label">Smart pattern analysis</h3>
+          <p class="tech-desc">Intelligent models that learn movement habits, detect unusual activity, and estimate arrival times automatically.</p>
         </div>
       </div>
     </div>
