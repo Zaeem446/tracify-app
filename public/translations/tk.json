@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Ählumumy gurşaw:</strong> iOS, Android, GSM, CDMA, LTE we 5G-de işleýär, ykjam ulgamlaryň bar bolan her bir ýurdunda.",
     "s3Li3": "<strong>Gurnama ýok:</strong> siziň ýa-da niýetlenýän enjamda gurnaljak zat ýok. Her zat Tracify web dolandyryş panelinden işleýär.",
     "s3Li4": "<strong>Hakyky wagtda GPS:</strong> razylyk berlensoň, takyk GPS koordinatlaryny alýarsyňyz — trianglýasiýa çaklamalary däl.",
-    "s3Li5": "<strong>Aýdyň baha:</strong> diňe $0.50-e 24 sagatlyk doly girişli synag, soňra aýda $30. Islendik wagtda bir gezek basyp ýatyryň.",
+    "s3Li5": "<strong>Aýdyň baha:</strong> diňe $1.47-e 24 sagatlyk doly girişli synag, soňra aýda $30. Islendik wagtda bir gezek basyp ýatyryň.",
     "s4Title": "Tracify-y kim ulanýar?",
     "s4P": "Adamlar Tracify-y dynç alyşdaky söýgülileri bilen täzeden baglanyşmak, uzakdan bile çaga terbiýelemek, ýaşy uly maşgala agzalaryny barlamak, meýdandaky kärdeşleri bilen utgaşdyrmak we beýleki mümkinçilikler şowsuz bolanda ýitirilen telefony çalt tapmak üçin ulanýarlar. Umumy zat: hemmesi ýönekeý, kanuny, gizlinlige hormat goýýan usulda telefonyň nirededigini — şu wagt — bilmek isleýär.",
     "s5Title": "Tracify-y şu gün synap görüň",
-    "s5P": "$0.50-e 24 sagatlyk synagy başladyň we iki minutdan az wagtyň içinde birinji telefony tapyň. Size laýyk gelmese, islendik wagtda ýatyryň — soraglarsyz.",
+    "s5P": "$1.47-e 24 sagatlyk synagy başladyň we iki minutdan az wagtyň içinde birinji telefony tapyň. Size laýyk gelmese, islendik wagtda ýatyryň — soraglarsyz.",
     "s5Cta": "24 sagatlyk synagy başla"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "Biriniň habary bolmazdan yzarlap bilerinmi?",
     "a13": "Ýok. Tracify razylyga esaslanýan hyzmatdyr we alyjynyň ýerleşýän ýeriniň soralýandygyny elmydama habar berer. Alyjy ýerleşýän ýerini paýlaşmak üçin işjeň bir baglanyşyga degmeli. Bu Tracify-y kanuny we ahlakly saklaýar.",
     "q14": "Tracify näçe durýar?",
-    "a14": "Tracify diňe $0.50-e 24 sagatlyk doly girişli synag hödürleýär. Synagdan soň abunaňyz awtomatiki ýagdaýda aýda $30-a täzelenýär. Hasap sahypaňyzdan ýa-da goldaw toparymyz bilen habarlaşyp, islendik wagtda ýatyryp bilersiňiz.",
+    "a14": "Tracify diňe $1.47-e 24 sagatlyk doly girişli synag hödürleýär. Synagdan soň abunaňyz awtomatiki ýagdaýda aýda $30-a täzelenýär. Hasap sahypaňyzdan ýa-da goldaw toparymyz bilen habarlaşyp, islendik wagtda ýatyryp bilersiňiz.",
     "q15": "Haýsy töleg usullaryny kabul edýärsiňiz?",
     "a15": "Töleg amal edijimiz Stripe arkaly ähli esasy karz we debet kartlary (Visa, Mastercard, American Express, Discover) we meşhur sanly gapjyklary kabul edýäris. Tölegler ygtybarly amal edilýär we biz hiç haçan serwerlerimizde çig kart maglumatlaryny saklamaýarys.",
     "q16": "Abunamy nädip ýatyrmaly?",

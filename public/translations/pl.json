@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Globalny zasięg:</strong> działa na iOS, Androidzie, w sieciach GSM, CDMA, LTE i 5G, w każdym kraju z zasięgiem komórkowym.",
     "s3Li3": "<strong>Bez instalacji:</strong> nic nie musisz instalować ani na swoim urządzeniu, ani na urządzeniu odbiorcy. Wszystko działa z panelu internetowego Tracify.",
     "s3Li4": "<strong>GPS w czasie rzeczywistym:</strong> po wyrażeniu zgody otrzymujesz dokładne współrzędne GPS — a nie przybliżone szacunki z triangulacji.",
-    "s3Li5": "<strong>Przejrzyste ceny:</strong> 24-godzinna pełna wersja próbna za jedyne $0,50, a potem $30 miesięcznie. Anulowanie jednym kliknięciem w dowolnym momencie.",
+    "s3Li5": "<strong>Przejrzyste ceny:</strong> 24-godzinna pełna wersja próbna za jedyne $1,47, a potem $30 miesięcznie. Anulowanie jednym kliknięciem w dowolnym momencie.",
     "s4Title": "Kto korzysta z Tracify?",
     "s4P": "Ludzie używają Tracify, by odnaleźć bliskich na wakacjach, wspólnie wychowywać dzieci na odległość, sprawdzić starszych członków rodziny, skoordynować się ze współpracownikami w terenie i szybko zlokalizować zgubiony telefon, gdy inne sposoby zawiodły. Łączy ich jedno: chcą prostego, legalnego i szanującego prywatność sposobu, by wiedzieć, gdzie jest telefon — właśnie teraz.",
     "s5Title": "Wypróbuj Tracify już dziś",
-    "s5P": "Rozpocznij 24-godzinny okres próbny za $0,50 i zlokalizuj pierwszy telefon w mniej niż dwie minuty. Jeśli usługa Ci nie odpowiada, anuluj w dowolnej chwili — bez pytań.",
+    "s5P": "Rozpocznij 24-godzinny okres próbny za $1,47 i zlokalizuj pierwszy telefon w mniej niż dwie minuty. Jeśli usługa Ci nie odpowiada, anuluj w dowolnej chwili — bez pytań.",
     "s5Cta": "Rozpocznij 24-godzinny okres próbny"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "Czy mogę śledzić kogoś bez jego wiedzy?",
     "a13": "Nie. Tracify to usługa oparta na zgodzie i zawsze informuje odbiorcę o żądaniu lokalizacji. Odbiorca musi aktywnie dotknąć linku, aby udostępnić lokalizację. To właśnie sprawia, że Tracify jest legalny i etyczny.",
     "q14": "Ile kosztuje Tracify?",
-    "a14": "Tracify oferuje 24-godzinny pełny dostęp próbny za jedyne $0,50. Po okresie próbnym subskrypcja odnawia się automatycznie za $30 miesięcznie. Możesz anulować w dowolnej chwili na stronie konta lub kontaktując się z obsługą.",
+    "a14": "Tracify oferuje 24-godzinny pełny dostęp próbny za jedyne $1,47. Po okresie próbnym subskrypcja odnawia się automatycznie za $30 miesięcznie. Możesz anulować w dowolnej chwili na stronie konta lub kontaktując się z obsługą.",
     "q15": "Jakie metody płatności akceptujecie?",
     "a15": "Akceptujemy wszystkie główne karty kredytowe i debetowe (Visa, Mastercard, American Express, Discover) oraz popularne portfele cyfrowe przez naszego operatora płatności Stripe. Płatności są przetwarzane bezpiecznie, a dane kart nigdy nie trafiają na nasze serwery.",
     "q16": "Jak anulować subskrypcję?",

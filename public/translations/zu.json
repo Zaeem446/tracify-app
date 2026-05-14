@@ -296,7 +296,7 @@
     "billing": {
       "title": "3. Ukubhalisa I-akhawunti Nokubilwa",
       "content1": "Ukuze usebenzise i-Tracify, kumele udale i-akhawunti futhi ubhalisele isevisi yethu. Isakhiwo sethu samanani simi kanje:",
-      "trial": "Isikhathi sokuhlola samahora angu-24: $0.50 USD",
+      "trial": "Isikhathi sokuhlola samahora angu-24: $1.47 USD",
       "monthly": "Ukubhaliselwa kwenyanga: $30.00 USD (kukhokhelwa ngokuzenzakalelayo ngemva kokuphela kwesikhathi sokuhlola)",
       "content2": "Ngokubhalisela, ugunyaza ukuthi sikhokhise indlela yakho yokukhokha njalo ngenyanga kuze kube uyakhansela ukubhaliselwa kwakho. Zonke izinkokhelo zisetshenzwa ngokuphepha nge-Stripe."
     },
@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Ukusabalala emhlabeni wonke:</strong> isebenza ku-iOS, Android, GSM, CDMA, LTE, ne-5G, kuwo wonke amazwe lapho amanethiwekhi eselula ekhona.",
     "s3Li3": "<strong>Akukho ukufakwa:</strong> akukho okudingekayo ukukufaka edivayisini yakho noma edivayisini eyinhloso. Konke kusebenza kusuka kuphaneli ye-Tracify esebenza kuwebhu.",
     "s3Li4": "<strong>I-GPS yesikhathi sangempela:</strong> uma imvume inikeziwe, uthola amakhodinathi we-GPS anembayo — hhayi ukuqagela ngokubhekwa kwezindlela.",
-    "s3Li5": "<strong>Intengo esobala:</strong> isivivinyo sokufinyelela okugcwele samahora angama-24 ngo-$0.50 kuphela, bese kuba ngu-$30 ngenyanga. Khansela noma nini ngokuchofoza okukodwa.",
+    "s3Li5": "<strong>Intengo esobala:</strong> isivivinyo sokufinyelela okugcwele samahora angama-24 ngo-$1.47 kuphela, bese kuba ngu-$30 ngenyanga. Khansela noma nini ngokuchofoza okukodwa.",
     "s4Title": "Ubani osebenzisa i-Tracify?",
     "s4P": "Abantu basebenzisa i-Tracify ukuze baxhumane futhi nabathandekayo babo beseholidini, bakhulise izingane bekude, bahlole amalungu omndeni asakhulile, basebenzisane nozakwabo abasemsebenzini, futhi bathole ngokushesha ifoni elahlekile lapho ezinye izinketho zihlulekile. Into efanayo: bonke bafuna indlela elula, esemthethweni, ehlonipha ubumfihlo yokwazi ukuthi ifoni ikuphi — manje nje.",
     "s5Title": "Zama i-Tracify namuhla",
-    "s5P": "Qala isivivinyo sakho samahora angama-24 ngo-$0.50 bese uthola ifoni yokuqala ngaphansi kwemizuzu emibili. Uma ingekona eyakho, khansela noma nini — ngaphandle kwemibuzo.",
+    "s5P": "Qala isivivinyo sakho samahora angama-24 ngo-$1.47 bese uthola ifoni yokuqala ngaphansi kwemizuzu emibili. Uma ingekona eyakho, khansela noma nini — ngaphandle kwemibuzo.",
     "s5Cta": "Qala isivivinyo samahora angama-24"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "Ngingamlandelela umuntu engazi?",
     "a13": "Cha. I-Tracify iyinsizakalo esekelwe emvumeni futhi izokwazisa umamukeli njalo ukuthi indawo yakhe iyacelwa. Umamukeli kufanele athephe isixhumanisi ngesenzo ukuze abelane ngendawo yakhe. Yilokhu okugcina i-Tracify isemthethweni nangokwemikhuba.",
     "q14": "Ibiza malini i-Tracify?",
-    "a14": "I-Tracify inikeza isivivinyo sokufinyelela okugcwele samahora angama-24 ngo-$0.50 kuphela. Ngemuva kwesivivinyo, ukubhalisa kwakho kuyavuselelwa ngokuzenzakalelayo ngo-$30 ngenyanga. Ungakhansela noma nini kusuka ekhasini lakho le-akhawunti noma ngokuxhumana nethimba lethu lokuxhasa.",
+    "a14": "I-Tracify inikeza isivivinyo sokufinyelela okugcwele samahora angama-24 ngo-$1.47 kuphela. Ngemuva kwesivivinyo, ukubhalisa kwakho kuyavuselelwa ngokuzenzakalelayo ngo-$30 ngenyanga. Ungakhansela noma nini kusuka ekhasini lakho le-akhawunti noma ngokuxhumana nethimba lethu lokuxhasa.",
     "q15": "Iziphi izindlela zokukhokha ozamukelayo?",
     "a15": "Samukela wonke amakhadi amakhulu esikweletu nedebhithi (Visa, Mastercard, American Express, Discover) nezinjunjuba zedijithali ezijwayelekile ngomcubunguli wethu wezinkokhelo, i-Stripe. Izinkokhelo zicutshungulwa ngokuphephile futhi asilokothi silondoloze idatha yekhadi eluhlaza kumaseva ethu.",
     "q16": "Ngingakukhansela kanjani ukubhalisa kwami?",

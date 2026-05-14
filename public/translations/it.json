@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Copertura universale:</strong> funziona su iOS, Android, GSM, CDMA, LTE e 5G, in ogni paese in cui esistono reti mobili.",
     "s3Li3": "<strong>Nessuna installazione:</strong> non c'è nulla da installare sul tuo dispositivo né su quello del destinatario. Tutto avviene dalla dashboard web Tracify.",
     "s3Li4": "<strong>GPS in tempo reale:</strong> una volta concesso il consenso, ottieni coordinate GPS precise — non stime basate sulla triangolazione.",
-    "s3Li5": "<strong>Prezzi trasparenti:</strong> prova completa di 24 ore a soli $0,50, poi $30 al mese. Cancella quando vuoi con un clic.",
+    "s3Li5": "<strong>Prezzi trasparenti:</strong> prova completa di 24 ore a soli $1,47, poi $30 al mese. Cancella quando vuoi con un clic.",
     "s4Title": "Chi usa Tracify?",
     "s4P": "Le persone usano Tracify per ritrovare i propri cari in vacanza, gestire la co-genitorialità a distanza, controllare i familiari anziani, coordinarsi con i colleghi sul campo e localizzare velocemente un telefono smarrito quando le altre opzioni hanno fallito. Il filo conduttore: tutti vogliono un modo semplice, legale e rispettoso della privacy per sapere dov'è un telefono — proprio ora.",
     "s5Title": "Prova Tracify oggi",
-    "s5P": "Avvia la tua prova di 24 ore per $0,50 e localizza il primo telefono in meno di due minuti. Se non fa per te, cancella quando vuoi — senza domande.",
+    "s5P": "Avvia la tua prova di 24 ore per $1,47 e localizza il primo telefono in meno di due minuti. Se non fa per te, cancella quando vuoi — senza domande.",
     "s5Cta": "Inizia la prova di 24 ore"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "Posso tracciare qualcuno a sua insaputa?",
     "a13": "No. Tracify è un servizio basato sul consenso e notifica sempre al destinatario che è stata richiesta la sua posizione. Il destinatario deve toccare attivamente un link per condividerla. È proprio questo a mantenere Tracify legale ed etico.",
     "q14": "Quanto costa Tracify?",
-    "a14": "Tracify offre una prova completa di 24 ore a soli $0,50. Al termine della prova, l'abbonamento si rinnova automaticamente a $30 al mese. Puoi cancellarlo in qualsiasi momento dalla pagina del tuo account o contattando la nostra assistenza.",
+    "a14": "Tracify offre una prova completa di 24 ore a soli $1,47. Al termine della prova, l'abbonamento si rinnova automaticamente a $30 al mese. Puoi cancellarlo in qualsiasi momento dalla pagina del tuo account o contattando la nostra assistenza.",
     "q15": "Quali metodi di pagamento accettate?",
     "a15": "Accettiamo tutte le principali carte di credito e debito (Visa, Mastercard, American Express, Discover) e i più comuni portafogli digitali tramite il nostro processore di pagamento Stripe. I pagamenti sono gestiti in modo sicuro e non conserviamo mai i dati grezzi delle carte sui nostri server.",
     "q16": "Come cancello il mio abbonamento?",

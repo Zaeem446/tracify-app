@@ -503,11 +503,11 @@
     "s3Li2": "<strong>Global täckning:</strong> fungerar på iOS, Android, GSM, CDMA, LTE och 5G, i alla länder där mobilnät finns.",
     "s3Li3": "<strong>Ingen installation:</strong> inget att installera på din enhet eller målenheten. Allt körs från Tracifys webbpanel.",
     "s3Li4": "<strong>GPS i realtid:</strong> när samtycke har getts får du exakta GPS-koordinater — inga ungefärliga trianguleringar.",
-    "s3Li5": "<strong>Öppen prissättning:</strong> 24-timmars full åtkomst för endast $0,50, därefter $30 per månad. Avsluta när som helst med ett klick.",
+    "s3Li5": "<strong>Öppen prissättning:</strong> 24-timmars full åtkomst för endast $1,47, därefter $30 per månad. Avsluta när som helst med ett klick.",
     "s4Title": "Vem använder Tracify?",
     "s4P": "Människor använder Tracify för att återknyta kontakt med nära och kära på semester, för att samarbeta om barn på distans, för att kolla till äldre familjemedlemmar, för att samordna med kollegor ute på fält och för att snabbt hitta en borttappad telefon när andra alternativ har misslyckats. Den gemensamma nämnaren: alla vill ha ett enkelt, lagligt och integritetsrespekterande sätt att veta var en telefon finns — just nu.",
     "s5Title": "Prova Tracify idag",
-    "s5P": "Starta din 24-timmarsprövning för $0,50 och lokalisera den första telefonen på mindre än två minuter. Om det inte passar dig kan du avsluta när som helst — utan frågor.",
+    "s5P": "Starta din 24-timmarsprövning för $1,47 och lokalisera den första telefonen på mindre än två minuter. Om det inte passar dig kan du avsluta när som helst — utan frågor.",
     "s5Cta": "Starta 24-timmarsprövningen"
   },
   "faqPage": {
@@ -544,7 +544,7 @@
     "q13": "Kan jag spåra någon utan deras vetskap?",
     "a13": "Nej. Tracify är en samtyckesbaserad tjänst och kommer alltid att meddela mottagaren att deras plats begärs. Mottagaren måste aktivt trycka på en länk för att dela sin plats. Det är detta som håller Tracify lagligt och etiskt.",
     "q14": "Vad kostar Tracify?",
-    "a14": "Tracify erbjuder en 24-timmars prövning med full åtkomst för endast $0,50. Efter prövningen förnyas ditt abonnemang automatiskt till $30 per månad. Du kan avsluta när som helst från din kontosida eller genom att kontakta vårt supportteam.",
+    "a14": "Tracify erbjuder en 24-timmars prövning med full åtkomst för endast $1,47. Efter prövningen förnyas ditt abonnemang automatiskt till $30 per månad. Du kan avsluta när som helst från din kontosida eller genom att kontakta vårt supportteam.",
     "q15": "Vilka betalningsmetoder accepterar ni?",
     "a15": "Vi accepterar alla större kredit- och betalkort (Visa, Mastercard, American Express, Discover) och vanliga digitala plånböcker via vår betalningsleverantör Stripe. Betalningar behandlas säkert och vi lagrar aldrig okrypterad kortdata på våra servrar.",
     "q16": "Hur avslutar jag mitt abonnemang?",

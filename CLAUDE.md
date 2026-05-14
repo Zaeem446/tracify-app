@@ -142,7 +142,7 @@ plans/                 - Architecture plan docs
 ## Subscription & Payment Flow
 1. User visits landing page → enters phone number → signup modal
 2. `POST /api/auth/signup` → account created, password emailed, Stripe Checkout Session created
-3. Stripe Checkout: $0.50 trial (one-time) + monthly subscription (1-day trial period)
+3. Stripe Checkout: $1.47 trial (one-time) + monthly subscription (1-day trial period)
 4. After payment → `/payment-success` → `GET /api/payment/verify-session` → creates subscription + payment in DB
 5. Monthly: Stripe charges → webhook `invoice.payment_succeeded` → extends sub 30 days + records payment
 6. Failed payment: webhook → marks subscription expired
@@ -160,7 +160,7 @@ plans/                 - Architecture plan docs
 | child | `/child` | $17.99 | `price_1TRIpTIggzd46qoMILE389kV` |
 | lostphone | `/lostphone` | $17.98 | `price_1TRLZXIggzd46qoMQqAM4kS4` |
 
-All have $0.50 trial with 24-hour full access.
+All have $1.47 trial with 24-hour full access.
 
 ## SMS/Tracking Flow
 1. Dashboard: user enters phone + country code + custom message

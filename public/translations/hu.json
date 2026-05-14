@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Univerzális lefedettség:</strong> iOS-en, Androidon, GSM-en, CDMA-n, LTE-n és 5G-n is működik, minden országban, ahol mobilhálózatok léteznek.",
     "s3Li3": "<strong>Nincs telepítés:</strong> semmit sem kell telepíteni az Ön vagy a céleszközre. Minden a Tracify webes vezérlőpultjából fut.",
     "s3Li4": "<strong>Valós idejű GPS:</strong> a hozzájárulás megadása után pontos GPS-koordinátákat kap — nem háromszögeléses becsléseket.",
-    "s3Li5": "<strong>Átlátható árazás:</strong> 24 órás teljes hozzáférésű próbaidőszak mindössze $0.50-ért, majd havi $30. Bármikor egyetlen kattintással lemondható.",
+    "s3Li5": "<strong>Átlátható árazás:</strong> 24 órás teljes hozzáférésű próbaidőszak mindössze $1.47-ért, majd havi $30. Bármikor egyetlen kattintással lemondható.",
     "s4Title": "Kik használják a Tracifyt?",
     "s4P": "Az emberek azért használják a Tracifyt, hogy újra kapcsolatba lépjenek szeretteikkel nyaralás közben, távolról is együttneveljék a gyerekeiket, ellenőrizzék idős családtagjaikat, koordináljanak a terepen dolgozó kollégákkal és gyorsan megtalálják az elveszett telefont, amikor más lehetőségek csődöt mondtak. A közös bennük: mindannyian egyszerű, legális, az adatvédelmet tiszteletben tartó módot keresnek arra, hogy megtudják, hol van egy telefon — most azonnal.",
     "s5Title": "Próbálja ki a Tracifyt még ma",
-    "s5P": "Indítsa el a 24 órás próbaidőszakot $0.50-ért, és találja meg az első telefont két percnél is rövidebb idő alatt. Ha nem Önnek való, bármikor lemondhatja — kérdés nélkül.",
+    "s5P": "Indítsa el a 24 órás próbaidőszakot $1.47-ért, és találja meg az első telefont két percnél is rövidebb idő alatt. Ha nem Önnek való, bármikor lemondhatja — kérdés nélkül.",
     "s5Cta": "Indítsa el a 24 órás próbát"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "Követhetek valakit anélkül, hogy tudna róla?",
     "a13": "Nem. A Tracify hozzájárulás alapú szolgáltatás, és mindig értesíti a címzettet, hogy a helyzetét kérik. A címzettnek aktívan egy linkre kell koppintania ahhoz, hogy megoszthassa a helyzetét. Ez tartja a Tracifyt legálisnak és etikusnak.",
     "q14": "Mennyibe kerül a Tracify?",
-    "a14": "A Tracify 24 órás teljes hozzáférésű próbaidőszakot kínál mindössze $0.50-ért. A próbaidőszak után az előfizetése automatikusan megújul havi $30-ért. Bármikor lemondhatja a fiókoldaláról vagy a támogatási csapatunkkal való kapcsolatfelvétellel.",
+    "a14": "A Tracify 24 órás teljes hozzáférésű próbaidőszakot kínál mindössze $1.47-ért. A próbaidőszak után az előfizetése automatikusan megújul havi $30-ért. Bármikor lemondhatja a fiókoldaláról vagy a támogatási csapatunkkal való kapcsolatfelvétellel.",
     "q15": "Milyen fizetési módokat fogadnak el?",
     "a15": "Minden nagyobb hitel- és betéti kártyát (Visa, Mastercard, American Express, Discover) és elterjedt digitális tárcákat elfogadunk a fizetési feldolgozónkon, a Stripe-on keresztül. A fizetéseket biztonságosan dolgozzuk fel, és soha nem tárolunk nyers kártyaadatokat a szervereinken.",
     "q16": "Hogyan mondhatom le az előfizetésemet?",

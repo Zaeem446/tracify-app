@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Evrensel kapsama:</strong> iOS, Android, GSM, CDMA, LTE ve 5G üzerinde, mobil şebekenin bulunduğu her ülkede çalışır.",
     "s3Li3": "<strong>Kurulum yok:</strong> ne sizin cihazınıza ne de hedefin cihazına hiçbir şey kurmanız gerekmez. Her şey Tracify web kontrol panelinden çalışır.",
     "s3Li4": "<strong>Gerçek zamanlı GPS:</strong> onay verildikten sonra üçgenleme tahminleri değil, kesin GPS koordinatları alırsınız.",
-    "s3Li5": "<strong>Şeffaf fiyatlandırma:</strong> yalnızca $0.50'lik 24 saatlik tam erişimli deneme, ardından ayda $30. Tek tıklamayla istediğiniz zaman iptal edin.",
+    "s3Li5": "<strong>Şeffaf fiyatlandırma:</strong> yalnızca $1.47'lik 24 saatlik tam erişimli deneme, ardından ayda $30. Tek tıklamayla istediğiniz zaman iptal edin.",
     "s4Title": "Tracify'ı kimler kullanır?",
     "s4P": "İnsanlar Tracify'ı tatildeki sevdikleriyle yeniden iletişim kurmak, uzaktan ortak ebeveynlik yapmak, yaşlı aile bireylerinin iyi olup olmadığını kontrol etmek, sahadaki meslektaşlarıyla koordinasyon sağlamak ve diğer seçenekler işe yaramadığında kaybolan bir telefonu hızlıca bulmak için kullanır. Ortak noktaları: hepsi bir telefonun nerede olduğunu — şu anda — öğrenmek için basit, yasal ve gizliliğe saygılı bir yol istiyor.",
     "s5Title": "Tracify'ı bugün deneyin",
-    "s5P": "$0.50 karşılığında 24 saatlik deneme sürenizi başlatın ve ilk telefonu iki dakikadan kısa sürede bulun. Size uygun değilse istediğiniz zaman iptal edin — hiçbir soru sorulmaz.",
+    "s5P": "$1.47 karşılığında 24 saatlik deneme sürenizi başlatın ve ilk telefonu iki dakikadan kısa sürede bulun. Size uygun değilse istediğiniz zaman iptal edin — hiçbir soru sorulmaz.",
     "s5Cta": "24 saatlik denemeyi başlat"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "Birini haberi olmadan takip edebilir miyim?",
     "a13": "Hayır. Tracify onay tabanlı bir hizmettir ve alıcıya her zaman konumunun istendiğini bildirir. Alıcının konumunu paylaşmak için aktif olarak bir bağlantıya dokunması gerekir. Tracify'ı yasal ve etik tutan da budur.",
     "q14": "Tracify ne kadar?",
-    "a14": "Tracify, yalnızca $0.50'ye 24 saatlik tam erişimli bir deneme sunar. Denemeden sonra aboneliğiniz otomatik olarak ayda $30'a yenilenir. Hesap sayfanızdan veya destek ekibimizle iletişime geçerek istediğiniz zaman iptal edebilirsiniz.",
+    "a14": "Tracify, yalnızca $1.47'ye 24 saatlik tam erişimli bir deneme sunar. Denemeden sonra aboneliğiniz otomatik olarak ayda $30'a yenilenir. Hesap sayfanızdan veya destek ekibimizle iletişime geçerek istediğiniz zaman iptal edebilirsiniz.",
     "q15": "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
     "a15": "Ödeme işlemcimiz Stripe aracılığıyla tüm büyük kredi ve banka kartlarını (Visa, Mastercard, American Express, Discover) ve yaygın dijital cüzdanları kabul ediyoruz. Ödemeler güvenli bir şekilde işlenir ve ham kart verilerini asla sunucularımızda saklamayız.",
     "q16": "Aboneliğimi nasıl iptal ederim?",

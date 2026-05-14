@@ -296,7 +296,7 @@
     "billing": {
       "title": "3. Kontoregistrering og fakturering",
       "content1": "For å bruke Tracify må du opprette en konto og abonnere på tjenesten vår. Prisstrukturen vår er som følger:",
-      "trial": "24-timers prøveperiode: $0.50 USD",
+      "trial": "24-timers prøveperiode: $1.47 USD",
       "monthly": "Månedsabonnement: $30.00 USD (belastes automatisk etter at prøveperioden er over)",
       "content2": "Ved å abonnere autoriserer du oss til å belaste betalingsmetoden din på en gjentakende månedlig basis til du avbryter abonnementet. Alle betalinger behandles sikkert gjennom Stripe."
     },
@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Global dekning:</strong> fungerer på iOS, Android, GSM, CDMA, LTE og 5G, i alle land med mobilnett.",
     "s3Li3": "<strong>Ingen installasjon:</strong> ingenting å installere på enheten din eller målenheten. Alt kjører fra Tracifys nettdashbord.",
     "s3Li4": "<strong>GPS i sanntid:</strong> når samtykket er gitt, får du nøyaktige GPS-koordinater — ikke upresise trianguleringer.",
-    "s3Li5": "<strong>Åpne priser:</strong> 24-timers full tilgang for bare $0,50, deretter $30 per måned. Avslutt når som helst med ett klikk.",
+    "s3Li5": "<strong>Åpne priser:</strong> 24-timers full tilgang for bare $1,47, deretter $30 per måned. Avslutt når som helst med ett klikk.",
     "s4Title": "Hvem bruker Tracify?",
     "s4P": "Folk bruker Tracify for å få kontakt med sine kjære på ferie, for å samarbeide om barn på avstand, for å sjekke inn med eldre familiemedlemmer, for å koordinere med kolleger ute i felt og for raskt å finne en mistet telefon når andre alternativer har slått feil. Fellesnevneren: alle vil ha en enkel, lovlig og personvernvennlig måte å vite hvor en telefon er — akkurat nå.",
     "s5Title": "Prøv Tracify i dag",
-    "s5P": "Start 24-timersprøven for $0,50 og lokaliser den første telefonen på under to minutter. Er det ikke noe for deg, kan du avslutte når som helst — uten spørsmål.",
+    "s5P": "Start 24-timersprøven for $1,47 og lokaliser den første telefonen på under to minutter. Er det ikke noe for deg, kan du avslutte når som helst — uten spørsmål.",
     "s5Cta": "Start 24-timersprøven"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "Kan jeg spore noen uten at de vet det?",
     "a13": "Nei. Tracify er en samtykkebasert tjeneste og vil alltid varsle mottakeren om at posisjonen deres blir forespurt. Mottakeren må aktivt trykke på en lenke for å dele posisjonen sin. Det er dette som holder Tracify lovlig og etisk.",
     "q14": "Hva koster Tracify?",
-    "a14": "Tracify tilbyr en 24-timers prøve med full tilgang for bare $0,50. Etter prøven fornyes abonnementet ditt automatisk til $30 per måned. Du kan avslutte når som helst fra kontosiden din eller ved å kontakte supportteamet vårt.",
+    "a14": "Tracify tilbyr en 24-timers prøve med full tilgang for bare $1,47. Etter prøven fornyes abonnementet ditt automatisk til $30 per måned. Du kan avslutte når som helst fra kontosiden din eller ved å kontakte supportteamet vårt.",
     "q15": "Hvilke betalingsmåter godtar dere?",
     "a15": "Vi godtar alle store kreditt- og debetkort (Visa, Mastercard, American Express, Discover) og vanlige digitale lommebøker gjennom vår betalingsleverandør Stripe. Betalinger behandles sikkert, og vi lagrer aldri rå kortdata på serverne våre.",
     "q16": "Hvordan avslutter jeg abonnementet?",

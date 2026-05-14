@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Globálne pokrytie:</strong> funguje na iOS, Androide, v sieťach GSM, CDMA, LTE aj 5G vo všetkých krajinách s mobilným signálom.",
     "s3Li3": "<strong>Bez inštalácie:</strong> netreba nič inštalovať ani do vášho zariadenia, ani do zariadenia príjemcu. Všetko beží z webového panela Tracify.",
     "s3Li4": "<strong>GPS v reálnom čase:</strong> po udelení súhlasu získate presné GPS súradnice — nie približné odhady z triangulácie.",
-    "s3Li5": "<strong>Transparentné ceny:</strong> 24-hodinový plný prístup skúšobne len za $0,50, potom $30 mesačne. Zrušenie jedným kliknutím kedykoľvek.",
+    "s3Li5": "<strong>Transparentné ceny:</strong> 24-hodinový plný prístup skúšobne len za $1,47, potom $30 mesačne. Zrušenie jedným kliknutím kedykoľvek.",
     "s4Title": "Kto používa Tracify?",
     "s4P": "Ľudia používajú Tracify, aby sa spojili s blízkymi na dovolenke, koordinovali rodičovstvo na diaľku, skontrolovali starších príbuzných, dohodli sa s kolegami v teréne a rýchlo našli stratený telefón, keď ostatné možnosti zlyhali. Spoločné je jedno: všetci chcú jednoduchý, legálny a súkromie rešpektujúci spôsob, ako vedieť, kde telefón práve teraz je.",
     "s5Title": "Vyskúšajte Tracify ešte dnes",
-    "s5P": "Začnite 24-hodinovú skúšobnú verziu za $0,50 a nájdite prvý telefón za menej než dve minúty. Ak vám nevyhovuje, zrušte kedykoľvek — bez otázok.",
+    "s5P": "Začnite 24-hodinovú skúšobnú verziu za $1,47 a nájdite prvý telefón za menej než dve minúty. Ak vám nevyhovuje, zrušte kedykoľvek — bez otázok.",
     "s5Cta": "Spustiť 24-hodinovú skúšobnú verziu"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "Môžem niekoho sledovať bez jeho vedomia?",
     "a13": "Nie. Tracify je služba založená na súhlase a príjemcu vždy upozorní, že je požadovaná jeho poloha. Príjemca musí aktívne ťuknúť na odkaz, aby polohu zdieľal. Práve to robí Tracify legálnym a etickým.",
     "q14": "Koľko Tracify stojí?",
-    "a14": "Tracify ponúka 24-hodinový plný prístup skúšobne len za $0,50. Po skúšobnom období sa predplatné automaticky obnoví za $30 mesačne. Zrušiť môžete kedykoľvek na stránke účtu alebo kontaktovaním podpory.",
+    "a14": "Tracify ponúka 24-hodinový plný prístup skúšobne len za $1,47. Po skúšobnom období sa predplatné automaticky obnoví za $30 mesačne. Zrušiť môžete kedykoľvek na stránke účtu alebo kontaktovaním podpory.",
     "q15": "Aké spôsoby platby akceptujete?",
     "a15": "Akceptujeme všetky hlavné kreditné a debetné karty (Visa, Mastercard, American Express, Discover) aj bežné digitálne peňaženky cez platobnú službu Stripe. Platby sú spracované bezpečne a údaje kariet neukladáme na naše servery.",
     "q16": "Ako zruším predplatné?",

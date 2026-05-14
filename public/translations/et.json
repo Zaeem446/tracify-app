@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Ülemaailmne kate:</strong> töötab iOS-is, Androidis, GSM-is, CDMA-s, LTE-s ja 5G-s kõikides riikides, kus mobiilsidevõrgud on olemas.",
     "s3Li3": "<strong>Ei mingit paigaldust:</strong> midagi ei pea paigaldama teie seadmesse ega sihtseadmesse. Kõik töötab Tracify veebijuhtpaneelist.",
     "s3Li4": "<strong>Reaalajas GPS:</strong> kui nõusolek on antud, saate täpsed GPS-koordinaadid — mitte umbkaudsed triangulatsioonid.",
-    "s3Li5": "<strong>Läbipaistev hinnakujundus:</strong> 24-tunnine täispääsu prooviperiood vaid $0,50 eest, seejärel $30 kuus. Tühistage igal ajal ühe klõpsuga.",
+    "s3Li5": "<strong>Läbipaistev hinnakujundus:</strong> 24-tunnine täispääsu prooviperiood vaid $1,47 eest, seejärel $30 kuus. Tühistage igal ajal ühe klõpsuga.",
     "s4Title": "Kes Tracifyt kasutavad?",
     "s4P": "Inimesed kasutavad Tracifyt, et taastada kontakt lähedastega puhkuse ajal, jagada vanemlikke kohustusi kauguse tagant, vaadata järele vanemaealisi pereliikmeid, koordineerida kolleegidega väljas ja leida kiiresti üles kaotatud telefon, kui teised võimalused on läbi kukkunud. Ühine nimetaja: kõik tahavad lihtsat, seaduslikku ja privaatsust austavat viisi teada, kus telefon on — just praegu.",
     "s5Title": "Proovige Tracifyt täna",
-    "s5P": "Alustage oma 24-tunnist prooviperioodi hinnaga $0,50 ja leidke esimene telefon vähem kui kahe minutiga. Kui see teile ei sobi, tühistage igal ajal — ilma küsimusteta.",
+    "s5P": "Alustage oma 24-tunnist prooviperioodi hinnaga $1,47 ja leidke esimene telefon vähem kui kahe minutiga. Kui see teile ei sobi, tühistage igal ajal — ilma küsimusteta.",
     "s5Cta": "Alusta 24-tunnist prooviperioodi"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "Kas ma saan kedagi tema teadmata jälgida?",
     "a13": "Ei. Tracify on nõusolekupõhine teenus ja teavitab saajat alati, kui tema asukohta küsitakse. Saaja peab aktiivselt puudutama linki oma asukoha jagamiseks. Just see hoiab Tracify seadusliku ja eetilisena.",
     "q14": "Palju Tracify maksab?",
-    "a14": "Tracify pakub 24-tunnist täispääsu prooviperioodi vaid $0,50 eest. Pärast prooviperioodi pikeneb teie tellimus automaatselt hinnaga $30 kuus. Saate tellimuse igal ajal tühistada oma kontolehelt või võttes ühendust meie tugitiimiga.",
+    "a14": "Tracify pakub 24-tunnist täispääsu prooviperioodi vaid $1,47 eest. Pärast prooviperioodi pikeneb teie tellimus automaatselt hinnaga $30 kuus. Saate tellimuse igal ajal tühistada oma kontolehelt või võttes ühendust meie tugitiimiga.",
     "q15": "Milliseid maksemeetodeid aktsepteerite?",
     "a15": "Aktsepteerime kõiki suuri krediit- ja deebetkaarte (Visa, Mastercard, American Express, Discover) ja levinud digitaalseid rahakotte meie makseteenuse pakkuja Stripe kaudu. Maksed töödeldakse turvaliselt ja me ei säilita kunagi toorkaardiandmeid oma serverites.",
     "q16": "Kuidas ma oma tellimuse tühistan?",

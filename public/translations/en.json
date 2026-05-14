@@ -65,11 +65,11 @@
     "s3Li2": "<strong>Universal coverage:</strong> works on iOS, Android, GSM, CDMA, LTE, and 5G, across every country where mobile networks exist.",
     "s3Li3": "<strong>No installation:</strong> nothing to install on your device or the target device. Everything runs from the Tracify web dashboard.",
     "s3Li4": "<strong>Real-time GPS:</strong> once consent is given, you get precise GPS coordinates — not triangulated guesses.",
-    "s3Li5": "<strong>Transparent pricing:</strong> 24-hour full-access trial for just $0.50, then $30 per month. Cancel any time in one click.",
+    "s3Li5": "<strong>Transparent pricing:</strong> 24-hour full-access trial for just $1.47, then $30 per month. Cancel any time in one click.",
     "s4Title": "Who uses Tracify?",
     "s4P": "People use Tracify to reconnect with loved ones on holiday, co-parent across distance, check on elderly family members, coordinate with colleagues in the field, and quickly locate a lost phone when other options have failed. The common thread: they all want a simple, legal, privacy-respecting way to know where a phone is — right now.",
     "s5Title": "Try Tracify today",
-    "s5P": "Start your 24-hour trial for $0.50 and locate the first phone in under two minutes. If it's not for you, cancel any time — no questions asked.",
+    "s5P": "Start your 24-hour trial for $1.47 and locate the first phone in under two minutes. If it's not for you, cancel any time — no questions asked.",
     "s5Cta": "Start the 24-hour trial"
   },
   "features": {
@@ -148,7 +148,7 @@
     "q13": "Can I track someone without their knowledge?",
     "a13": "No. Tracify is a consent-based service and will always notify the recipient that their location is being requested. The recipient must actively tap a link to share their location. This is what keeps Tracify legal and ethical.",
     "q14": "How much does Tracify cost?",
-    "a14": "Tracify offers a 24-hour full-access trial for just $0.50. After the trial, your subscription automatically renews at $30 per month. You can cancel at any time from your account page or by contacting our support team.",
+    "a14": "Tracify offers a 24-hour full-access trial for just $1.47. After the trial, your subscription automatically renews at $30 per month. You can cancel at any time from your account page or by contacting our support team.",
     "q15": "Which payment methods do you accept?",
     "a15": "We accept every major credit and debit card (Visa, Mastercard, American Express, Discover) and common digital wallets through our payment processor, Stripe. Payments are processed securely and we never store raw card data on our servers.",
     "q16": "How do I cancel my subscription?",
@@ -380,7 +380,7 @@
     "billing": {
       "title": "3. Account Registration and Billing",
       "content1": "To use Tracify, you must create an account and subscribe to our service. Our pricing structure is as follows:",
-      "trial": "24-hour trial period: $0.50 USD",
+      "trial": "24-hour trial period: $1.47 USD",
       "monthly": "Monthly subscription: $30.00 USD (automatically charged after the trial period ends)",
       "content2": "By subscribing, you authorize us to charge your payment method on a recurring monthly basis until you cancel your subscription. All payments are processed securely through Stripe."
     },

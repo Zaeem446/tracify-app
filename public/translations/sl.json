@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Globalna pokritost:</strong> deluje na iOS, Android, GSM, CDMA, LTE in 5G v vseh državah, kjer obstajajo mobilna omrežja.",
     "s3Li3": "<strong>Brez namestitve:</strong> ničesar ni treba namestiti ne na vašo napravo ne na napravo prejemnika. Vse deluje iz spletne nadzorne plošče Tracify.",
     "s3Li4": "<strong>GPS v realnem času:</strong> po privolitvi prejmete natančne koordinate GPS — in ne približnih ocen s triangulacijo.",
-    "s3Li5": "<strong>Pregledne cene:</strong> 24-urni polni preizkusni dostop za le $0,50, nato $30 na mesec. Odpoved z enim klikom kadar koli.",
+    "s3Li5": "<strong>Pregledne cene:</strong> 24-urni polni preizkusni dostop za le $1,47, nato $30 na mesec. Odpoved z enim klikom kadar koli.",
     "s4Title": "Kdo uporablja Tracify?",
     "s4P": "Ljudje uporabljajo Tracify, da se povežejo z bližnjimi na dopustu, starševsko sodelujejo na daljavo, preverijo starejše člane družine, se uskladijo s sodelavci na terenu in hitro najdejo izgubljen telefon, ko druge možnosti odpovedo. Skupno je eno: vsi želijo preprost, zakonit in zasebnosti prijazen način, da vedo, kje je telefon — ravno zdaj.",
     "s5Title": "Preizkusite Tracify že danes",
-    "s5P": "Začnite 24-urni preizkus za $0,50 in prvi telefon poiščite v manj kot dveh minutah. Če vam ne ustreza, prekličite kadar koli — brez vprašanj.",
+    "s5P": "Začnite 24-urni preizkus za $1,47 in prvi telefon poiščite v manj kot dveh minutah. Če vam ne ustreza, prekličite kadar koli — brez vprašanj.",
     "s5Cta": "Zaženite 24-urni preizkus"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "Ali lahko sledim nekomu brez njegove vednosti?",
     "a13": "Ne. Tracify je storitev na podlagi privolitve in prejemnika vedno obvesti, da je bila zahtevana njegova lokacija. Prejemnik mora aktivno pritisniti povezavo, da deli lokacijo. Ravno to dela Tracify zakonitega in etičnega.",
     "q14": "Koliko stane Tracify?",
-    "a14": "Tracify ponuja 24-urni polni preizkusni dostop za le $0,50. Po preizkusnem obdobju se naročnina samodejno obnovi za $30 na mesec. Prekličete lahko kadar koli na strani računa ali prek naše podpore.",
+    "a14": "Tracify ponuja 24-urni polni preizkusni dostop za le $1,47. Po preizkusnem obdobju se naročnina samodejno obnovi za $30 na mesec. Prekličete lahko kadar koli na strani računa ali prek naše podpore.",
     "q15": "Katere načine plačila sprejemate?",
     "a15": "Sprejemamo vse glavne kreditne in debetne kartice (Visa, Mastercard, American Express, Discover) in običajne digitalne denarnice prek našega plačilnega partnerja Stripe. Plačila se obdelujejo varno in podatkov o karticah nikoli ne shranjujemo na naših strežnikih.",
     "q16": "Kako prekličem naročnino?",

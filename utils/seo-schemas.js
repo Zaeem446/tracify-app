@@ -53,7 +53,7 @@ function softwareApplication() {
             {
                 '@type': 'Offer',
                 name: '24-Hour Trial',
-                price: '0.50',
+                price: '1.47',
                 priceCurrency: 'USD',
                 description: '24-hour full-access trial'
             },

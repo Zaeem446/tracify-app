@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Global dækning:</strong> fungerer på iOS, Android, GSM, CDMA, LTE og 5G, i alle lande hvor der er mobilnet.",
     "s3Li3": "<strong>Ingen installation:</strong> intet skal installeres på din enhed eller målenheden. Alt kører fra Tracifys webdashboard.",
     "s3Li4": "<strong>GPS i realtid:</strong> når samtykket er givet, får du præcise GPS-koordinater — ikke upræcise trianguleringer.",
-    "s3Li5": "<strong>Gennemsigtig pris:</strong> 24-timers fuld adgang for kun $0,50, derefter $30 om måneden. Afmeld når som helst med ét klik.",
+    "s3Li5": "<strong>Gennemsigtig pris:</strong> 24-timers fuld adgang for kun $1,47, derefter $30 om måneden. Afmeld når som helst med ét klik.",
     "s4Title": "Hvem bruger Tracify?",
     "s4P": "Folk bruger Tracify til at genoprette kontakt med familie og venner på ferie, til at samarbejde om børn over afstand, til at holde øje med ældre familiemedlemmer, til at koordinere med kolleger i marken og til hurtigt at finde en tabt telefon, når andre muligheder ikke har virket. Det fælles træk: de ønsker alle en enkel, lovlig og privatlivsvenlig måde at vide, hvor en telefon er — lige nu.",
     "s5Title": "Prøv Tracify i dag",
-    "s5P": "Start din 24-timers prøve for $0,50 og lokalisér den første telefon på under to minutter. Hvis det ikke er noget for dig, kan du afmelde når som helst — uden spørgsmål.",
+    "s5P": "Start din 24-timers prøve for $1,47 og lokalisér den første telefon på under to minutter. Hvis det ikke er noget for dig, kan du afmelde når som helst — uden spørgsmål.",
     "s5Cta": "Start 24-timers prøven"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "Kan jeg spore nogen uden deres viden?",
     "a13": "Nej. Tracify er en samtykkebaseret tjeneste og vil altid underrette modtageren om, at deres placering anmodes om. Modtageren skal aktivt trykke på et link for at dele sin placering. Det er det, der holder Tracify lovligt og etisk.",
     "q14": "Hvad koster Tracify?",
-    "a14": "Tracify tilbyder en 24-timers prøve med fuld adgang for kun $0,50. Efter prøven fornyes dit abonnement automatisk til $30 om måneden. Du kan afmelde når som helst fra din kontoside eller ved at kontakte vores support.",
+    "a14": "Tracify tilbyder en 24-timers prøve med fuld adgang for kun $1,47. Efter prøven fornyes dit abonnement automatisk til $30 om måneden. Du kan afmelde når som helst fra din kontoside eller ved at kontakte vores support.",
     "q15": "Hvilke betalingsmetoder accepterer I?",
     "a15": "Vi accepterer alle større kredit- og debetkort (Visa, Mastercard, American Express, Discover) samt almindelige digitale tegnebøger via vores betalingsudbyder Stripe. Betalinger behandles sikkert, og vi gemmer aldrig rå kortdata på vores servere.",
     "q16": "Hvordan afmelder jeg mit abonnement?",

@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Maailmanlaajuinen kattavuus:</strong> toimii iOS:llä, Androidilla, GSM:llä, CDMA:lla, LTE:llä ja 5G:llä kaikissa maissa, joissa matkapuhelinverkot ovat käytössä.",
     "s3Li3": "<strong>Ei asennusta:</strong> mitään ei asenneta laitteellesi eikä kohdelaitteelle. Kaikki toimii Tracifyn verkkohallintapaneelissa.",
     "s3Li4": "<strong>GPS reaaliajassa:</strong> suostumuksen antamisen jälkeen saat tarkat GPS-koordinaatit — ei epätarkkoja kolmiomittauksia.",
-    "s3Li5": "<strong>Läpinäkyvä hinnoittelu:</strong> 24 tunnin täysi käyttöoikeuskokeilu vain $0,50, sen jälkeen $30 kuukaudessa. Peruuta milloin tahansa yhdellä klikkauksella.",
+    "s3Li5": "<strong>Läpinäkyvä hinnoittelu:</strong> 24 tunnin täysi käyttöoikeuskokeilu vain $1,47, sen jälkeen $30 kuukaudessa. Peruuta milloin tahansa yhdellä klikkauksella.",
     "s4Title": "Ketkä käyttävät Tracifyä?",
     "s4P": "Ihmiset käyttävät Tracifyä pitääkseen yhteyttä läheisiinsä lomalla, hoitaakseen yhteishuoltajuutta etäältä, tarkistaakseen iäkkäitä perheenjäseniä, koordinoidakseen kenttätyössä olevien kollegoiden kanssa ja paikantaakseen nopeasti kadonneen puhelimen, kun muut vaihtoehdot ovat epäonnistuneet. Yhteinen piirre: kaikki haluavat yksinkertaisen, laillisen ja yksityisyyttä kunnioittavan tavan tietää, missä puhelin on — juuri nyt.",
     "s5Title": "Kokeile Tracifyä tänään",
-    "s5P": "Aloita 24 tunnin kokeilu hintaan $0,50 ja paikanna ensimmäinen puhelin alle kahdessa minuutissa. Jos se ei sovi sinulle, peruuta milloin tahansa — ilman kysymyksiä.",
+    "s5P": "Aloita 24 tunnin kokeilu hintaan $1,47 ja paikanna ensimmäinen puhelin alle kahdessa minuutissa. Jos se ei sovi sinulle, peruuta milloin tahansa — ilman kysymyksiä.",
     "s5Cta": "Aloita 24 tunnin kokeilu"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "Voinko seurata jotakuta hänen tietämättään?",
     "a13": "En. Tracify on suostumukseen perustuva palvelu ja ilmoittaa aina vastaanottajalle, että hänen sijaintiaan pyydetään. Vastaanottajan on aktiivisesti napautettava linkkiä jakaakseen sijaintinsa. Juuri tämä pitää Tracifyn laillisena ja eettisenä.",
     "q14": "Mitä Tracify maksaa?",
-    "a14": "Tracify tarjoaa 24 tunnin täyden käyttöoikeuskokeilun vain $0,50 hintaan. Kokeilun jälkeen tilauksesi uusiutuu automaattisesti hintaan $30 kuukaudessa. Voit peruuttaa milloin tahansa tilisivultasi tai ottamalla yhteyttä tukitiimiimme.",
+    "a14": "Tracify tarjoaa 24 tunnin täyden käyttöoikeuskokeilun vain $1,47 hintaan. Kokeilun jälkeen tilauksesi uusiutuu automaattisesti hintaan $30 kuukaudessa. Voit peruuttaa milloin tahansa tilisivultasi tai ottamalla yhteyttä tukitiimiimme.",
     "q15": "Mitä maksutapoja hyväksytte?",
     "a15": "Hyväksymme kaikki suuret luotto- ja maksukortit (Visa, Mastercard, American Express, Discover) sekä yleiset digitaaliset lompakot maksupalvelutarjoajamme Stripen kautta. Maksut käsitellään turvallisesti, emmekä koskaan säilytä korttitietoja palvelimillamme.",
     "q16": "Miten peruutan tilaukseni?",

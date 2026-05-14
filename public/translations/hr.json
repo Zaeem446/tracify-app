@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Globalna pokrivenost:</strong> radi na iOS-u, Androidu, GSM, CDMA, LTE i 5G mrežama u svim državama gdje postoje mobilne mreže.",
     "s3Li3": "<strong>Bez instalacije:</strong> ništa se ne instalira ni na vaš uređaj ni na uređaj primatelja. Sve radi iz Tracify web ploče.",
     "s3Li4": "<strong>GPS u stvarnom vremenu:</strong> nakon pristanka dobivate precizne GPS koordinate — a ne približne procjene triangulacijom.",
-    "s3Li5": "<strong>Transparentne cijene:</strong> 24-satni puni pristup probno za samo $0,50, potom $30 mjesečno. Otkaz jednim klikom u bilo kojem trenutku.",
+    "s3Li5": "<strong>Transparentne cijene:</strong> 24-satni puni pristup probno za samo $1,47, potom $30 mjesečno. Otkaz jednim klikom u bilo kojem trenutku.",
     "s4Title": "Tko koristi Tracify?",
     "s4P": "Ljudi koriste Tracify kako bi se povezali s voljenima na odmoru, roditeljski surađivali na daljinu, provjerili starije članove obitelji, koordinirali se s kolegama na terenu i brzo pronašli izgubljeni telefon kad druge opcije nisu uspjele. Zajedničko je jedno: svi žele jednostavan, zakonit i privatnost poštujući način da znaju gdje je telefon — upravo sada.",
     "s5Title": "Isprobajte Tracify danas",
-    "s5P": "Započnite 24-satno probno razdoblje za $0,50 i pronađite prvi telefon u manje od dvije minute. Ako vam ne odgovara, otkažite bilo kada — bez pitanja.",
+    "s5P": "Započnite 24-satno probno razdoblje za $1,47 i pronađite prvi telefon u manje od dvije minute. Ako vam ne odgovara, otkažite bilo kada — bez pitanja.",
     "s5Cta": "Započni 24-satno probno razdoblje"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "Mogu li pratiti nekoga bez njegovog znanja?",
     "a13": "Ne. Tracify je usluga temeljena na pristanku i uvijek obavještava primatelja da je njegova lokacija zatražena. Primatelj mora aktivno dodirnuti poveznicu kako bi podijelio lokaciju. Upravo to čini Tracify zakonitim i etičkim.",
     "q14": "Koliko Tracify košta?",
-    "a14": "Tracify nudi 24-satni puni probni pristup za samo $0,50. Nakon probe, pretplata se automatski obnavlja za $30 mjesečno. Možete otkazati u bilo kojem trenutku sa stranice računa ili kontaktiranjem naše podrške.",
+    "a14": "Tracify nudi 24-satni puni probni pristup za samo $1,47. Nakon probe, pretplata se automatski obnavlja za $30 mjesečno. Možete otkazati u bilo kojem trenutku sa stranice računa ili kontaktiranjem naše podrške.",
     "q15": "Koje načine plaćanja prihvaćate?",
     "a15": "Prihvaćamo sve glavne kreditne i debitne kartice (Visa, Mastercard, American Express, Discover) i uobičajene digitalne novčanike putem našeg platnog partnera Stripea. Plaćanja se obrađuju sigurno i nikada ne pohranjujemo sirove podatke kartica na naše poslužitelje.",
     "q16": "Kako otkazati pretplatu?",

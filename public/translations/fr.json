@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Couverture universelle :</strong> fonctionne sur iOS, Android, GSM, CDMA, LTE et 5G, dans tous les pays où existent des réseaux mobiles.",
     "s3Li3": "<strong>Aucune installation :</strong> rien à installer sur votre appareil ni sur l'appareil cible. Tout passe par le tableau de bord web Tracify.",
     "s3Li4": "<strong>GPS en temps réel :</strong> une fois le consentement donné, vous obtenez des coordonnées GPS précises — et non des estimations par triangulation.",
-    "s3Li5": "<strong>Tarification transparente :</strong> essai complet de 24 heures pour seulement $0,50, puis $30 par mois. Résiliable à tout moment en un clic.",
+    "s3Li5": "<strong>Tarification transparente :</strong> essai complet de 24 heures pour seulement $1,47, puis $30 par mois. Résiliable à tout moment en un clic.",
     "s4Title": "Qui utilise Tracify ?",
     "s4P": "Nos utilisateurs se servent de Tracify pour renouer avec leurs proches en vacances, pour coparenter à distance, pour prendre des nouvelles d'un parent âgé, pour coordonner leurs équipes sur le terrain, ou pour retrouver rapidement un téléphone perdu quand les autres options ont échoué. Le point commun : tous veulent un moyen simple, légal et respectueux de la vie privée de savoir où se trouve un téléphone — maintenant.",
     "s5Title": "Essayez Tracify aujourd'hui",
-    "s5P": "Lancez votre essai de 24 heures pour $0,50 et localisez votre premier téléphone en moins de deux minutes. Si cela ne vous convient pas, résiliez à tout moment — sans justification.",
+    "s5P": "Lancez votre essai de 24 heures pour $1,47 et localisez votre premier téléphone en moins de deux minutes. Si cela ne vous convient pas, résiliez à tout moment — sans justification.",
     "s5Cta": "Démarrer l'essai de 24 heures"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "Puis-je suivre quelqu'un à son insu ?",
     "a13": "Non. Tracify est un service fondé sur le consentement et notifiera toujours le destinataire qu'une demande de localisation a été émise. Celui-ci doit activement appuyer sur un lien pour partager sa position. C'est ce qui rend Tracify légal et éthique.",
     "q14": "Combien coûte Tracify ?",
-    "a14": "Tracify propose un essai complet de 24 heures pour seulement $0,50. À la fin de l'essai, votre abonnement se renouvelle automatiquement à $30 par mois. Vous pouvez résilier à tout moment depuis votre espace client ou en contactant notre assistance.",
+    "a14": "Tracify propose un essai complet de 24 heures pour seulement $1,47. À la fin de l'essai, votre abonnement se renouvelle automatiquement à $30 par mois. Vous pouvez résilier à tout moment depuis votre espace client ou en contactant notre assistance.",
     "q15": "Quels moyens de paiement acceptez-vous ?",
     "a15": "Nous acceptons toutes les grandes cartes de crédit et de débit (Visa, Mastercard, American Express, Discover) ainsi que les portefeuilles numériques courants via notre prestataire de paiement Stripe. Les paiements sont traités en toute sécurité et nous ne stockons jamais les données brutes de carte sur nos serveurs.",
     "q16": "Comment résilier mon abonnement ?",

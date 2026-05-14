@@ -503,11 +503,11 @@
     "s3Li2": "<strong>Phủ sóng toàn cầu:</strong> hoạt động trên iOS, Android, GSM, CDMA, LTE và 5G, ở mọi quốc gia có mạng di động.",
     "s3Li3": "<strong>Không cài đặt:</strong> không cần cài gì trên thiết bị của bạn hay của đối phương. Mọi thứ chạy từ bảng điều khiển web của Tracify.",
     "s3Li4": "<strong>GPS thời gian thực:</strong> khi có sự đồng thuận, bạn nhận tọa độ GPS chính xác — không phải ước tính tam giác.",
-    "s3Li5": "<strong>Giá minh bạch:</strong> dùng thử toàn quyền 24 giờ chỉ $0.50, sau đó $30 mỗi tháng. Hủy bất cứ lúc nào chỉ bằng một cú nhấp.",
+    "s3Li5": "<strong>Giá minh bạch:</strong> dùng thử toàn quyền 24 giờ chỉ $1.47, sau đó $30 mỗi tháng. Hủy bất cứ lúc nào chỉ bằng một cú nhấp.",
     "s4Title": "Ai đang sử dụng Tracify?",
     "s4P": "Mọi người dùng Tracify để kết nối lại với người thân đang đi du lịch, đồng hành cùng con cái ở xa, thăm hỏi người thân lớn tuổi, phối hợp với đồng nghiệp ngoài hiện trường và nhanh chóng tìm điện thoại bị thất lạc khi các phương án khác đều thất bại. Điểm chung là: tất cả đều muốn một cách đơn giản, hợp pháp, tôn trọng quyền riêng tư để biết điện thoại đang ở đâu — ngay lúc này.",
     "s5Title": "Thử Tracify ngay hôm nay",
-    "s5P": "Bắt đầu bản dùng thử 24 giờ với $0.50 và định vị chiếc điện thoại đầu tiên trong chưa đầy hai phút. Nếu không phù hợp, hãy hủy bất cứ lúc nào — không cần giải thích.",
+    "s5P": "Bắt đầu bản dùng thử 24 giờ với $1.47 và định vị chiếc điện thoại đầu tiên trong chưa đầy hai phút. Nếu không phù hợp, hãy hủy bất cứ lúc nào — không cần giải thích.",
     "s5Cta": "Bắt đầu bản dùng thử 24 giờ"
   },
   "faqPage": {
@@ -544,7 +544,7 @@
     "q13": "Tôi có thể định vị ai đó mà họ không hay biết không?",
     "a13": "Không. Tracify là dịch vụ dựa trên sự đồng thuận và luôn thông báo cho người nhận rằng vị trí của họ đang được yêu cầu. Người nhận phải chủ động nhấn vào liên kết để chia sẻ vị trí. Đây chính là điều giữ cho Tracify hợp pháp và đúng đạo đức.",
     "q14": "Tracify có giá bao nhiêu?",
-    "a14": "Tracify cung cấp bản dùng thử toàn quyền 24 giờ chỉ với $0.50. Sau bản dùng thử, gói đăng ký tự động gia hạn với giá $30 mỗi tháng. Bạn có thể hủy bất cứ lúc nào từ trang tài khoản hoặc bằng cách liên hệ đội hỗ trợ.",
+    "a14": "Tracify cung cấp bản dùng thử toàn quyền 24 giờ chỉ với $1.47. Sau bản dùng thử, gói đăng ký tự động gia hạn với giá $30 mỗi tháng. Bạn có thể hủy bất cứ lúc nào từ trang tài khoản hoặc bằng cách liên hệ đội hỗ trợ.",
     "q15": "Các bạn chấp nhận phương thức thanh toán nào?",
     "a15": "Chúng tôi chấp nhận mọi thẻ tín dụng và ghi nợ lớn (Visa, Mastercard, American Express, Discover) và các ví điện tử phổ biến thông qua đơn vị xử lý thanh toán Stripe. Thanh toán được xử lý an toàn và chúng tôi không bao giờ lưu dữ liệu thẻ gốc trên máy chủ.",
     "q16": "Tôi hủy đăng ký bằng cách nào?",

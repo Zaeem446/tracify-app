@@ -296,7 +296,7 @@
     "billing": {
       "title": "3. Pagpaparehistro ng Account at Pagsingil",
       "content1": "Upang magamit ang Tracify, kailangan mong lumikha ng account at mag-subscribe sa aming serbisyo. Ang aming istruktura ng presyo ay ang mga sumusunod:",
-      "trial": "24 na oras na panahon ng pagsubok: $0.50 USD",
+      "trial": "24 na oras na panahon ng pagsubok: $1.47 USD",
       "monthly": "Buwanang subscription: $30.00 USD (awtomatikong sinisingil pagkatapos ng panahon ng pagsubok)",
       "content2": "Sa pag-subscribe, pinapahintulutan mo kaming singilin ang iyong paraan ng pagbabayad sa paulit-ulit na buwanang batayan hanggang kanselahin mo ang iyong subscription. Lahat ng pagbabayad ay ligtas na pinoproseso sa pamamagitan ng Stripe."
     },
@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Saklaw ang buong mundo:</strong> gumagana sa iOS, Android, GSM, CDMA, LTE, at 5G, sa bawat bansang may mobile network.",
     "s3Li3": "<strong>Walang installation:</strong> walang kailangang i-install sa iyong device o sa device ng target. Lahat ay gumagana mula sa Tracify web dashboard.",
     "s3Li4": "<strong>Real-time GPS:</strong> kapag naibigay ang pahintulot, makakakuha ka ng tumpak na GPS coordinates — hindi triangulation guesses.",
-    "s3Li5": "<strong>Transparent na presyo:</strong> 24-oras na full-access trial sa $0.50 lamang, saka $30 kada buwan. Kanselahin anumang oras sa isang click.",
+    "s3Li5": "<strong>Transparent na presyo:</strong> 24-oras na full-access trial sa $1.47 lamang, saka $30 kada buwan. Kanselahin anumang oras sa isang click.",
     "s4Title": "Sino ang gumagamit ng Tracify?",
     "s4P": "Ginagamit ng mga tao ang Tracify upang muling makonekta sa mga mahal sa buhay na nasa bakasyon, mag-co-parent sa malayo, tingnan ang kondisyon ng mga nakatatandang kapamilya, mag-coordinate sa mga katrabaho sa field, at mabilis na mahanap ang nawawalang telepono kapag nabigo na ang ibang opsyon. Ang pagkakatulad: lahat sila ay gustong magkaroon ng simple, legal, at gumagalang sa privacy na paraan upang malaman kung nasaan ang isang telepono — ngayon din.",
     "s5Title": "Subukan ang Tracify ngayon",
-    "s5P": "Simulan ang iyong 24-oras na trial sa halagang $0.50 at mag-locate ng unang telepono sa loob ng dalawang minuto. Kung hindi ito para sa iyo, kanselahin anumang oras — walang tatanungin.",
+    "s5P": "Simulan ang iyong 24-oras na trial sa halagang $1.47 at mag-locate ng unang telepono sa loob ng dalawang minuto. Kung hindi ito para sa iyo, kanselahin anumang oras — walang tatanungin.",
     "s5Cta": "Simulan ang 24-oras na trial"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "Maaari ba akong mag-track ng isang tao nang hindi niya alam?",
     "a13": "Hindi. Ang Tracify ay isang consent-based na serbisyo at palaging ipaalam sa tatanggap na hinihiling ang kanilang lokasyon. Dapat aktibong i-tap ng tatanggap ang link upang ibahagi ang lokasyon niya. Ito ang nagpapanatiling legal at etikal ang Tracify.",
     "q14": "Magkano ang Tracify?",
-    "a14": "Nag-aalok ang Tracify ng 24-oras na full-access trial sa halagang $0.50 lamang. Pagkatapos ng trial, awtomatikong magre-renew ang iyong subscription sa $30 kada buwan. Maaari kang magkansela anumang oras mula sa iyong account page o sa pamamagitan ng pakikipag-ugnayan sa aming support team.",
+    "a14": "Nag-aalok ang Tracify ng 24-oras na full-access trial sa halagang $1.47 lamang. Pagkatapos ng trial, awtomatikong magre-renew ang iyong subscription sa $30 kada buwan. Maaari kang magkansela anumang oras mula sa iyong account page o sa pamamagitan ng pakikipag-ugnayan sa aming support team.",
     "q15": "Anong mga paraan ng pagbabayad ang tinatanggap ninyo?",
     "a15": "Tumatanggap kami ng bawat pangunahing credit at debit card (Visa, Mastercard, American Express, Discover) at mga karaniwang digital wallet sa pamamagitan ng aming payment processor, ang Stripe. Ligtas na pinoproseso ang mga bayad at hindi namin kailanman iniimbak ang raw card data sa aming mga server.",
     "q16": "Paano ko kanselahin ang aking subscription?",

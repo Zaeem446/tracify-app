@@ -296,7 +296,7 @@
     "billing": {
       "title": "3. Pendaftaran Akaun dan Pengebilan",
       "content1": "Untuk menggunakan Tracify, anda mesti membuat akaun dan melanggan perkhidmatan kami. Struktur harga kami adalah seperti berikut:",
-      "trial": "Tempoh percubaan 24 jam: $0.50 USD",
+      "trial": "Tempoh percubaan 24 jam: $1.47 USD",
       "monthly": "Langganan bulanan: $30.00 USD (dicaj secara automatik selepas tempoh percubaan tamat)",
       "content2": "Dengan melanggan, anda memberi kuasa kepada kami untuk mengenakan caj pada kaedah pembayaran anda secara berulang setiap bulan sehingga anda membatalkan langganan. Semua pembayaran diproses dengan selamat melalui Stripe."
     },
@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Liputan sejagat:</strong> berfungsi pada iOS, Android, GSM, CDMA, LTE dan 5G, di setiap negara yang mempunyai rangkaian mudah alih.",
     "s3Li3": "<strong>Tanpa pemasangan:</strong> tiada apa-apa yang perlu dipasang pada peranti anda atau peranti sasaran. Semuanya dijalankan dari papan pemuka web Tracify.",
     "s3Li4": "<strong>GPS masa nyata:</strong> setelah persetujuan diberikan, anda memperoleh koordinat GPS yang tepat — bukan tekaan triangulasi.",
-    "s3Li5": "<strong>Harga telus:</strong> percubaan akses penuh 24 jam hanya $0.50, kemudian $30 sebulan. Batalkan bila-bila masa dengan satu klik.",
+    "s3Li5": "<strong>Harga telus:</strong> percubaan akses penuh 24 jam hanya $1.47, kemudian $30 sebulan. Batalkan bila-bila masa dengan satu klik.",
     "s4Title": "Siapa yang menggunakan Tracify?",
     "s4P": "Orang ramai menggunakan Tracify untuk berhubung semula dengan orang tersayang ketika bercuti, mengasuh anak dari jauh, menyemak keadaan ahli keluarga yang berusia, berkoordinasi dengan rakan sekerja di lapangan, dan mencari telefon yang hilang dengan cepat apabila pilihan lain gagal. Persamaannya: semua mereka mahukan cara yang mudah, sah dan menghormati privasi untuk mengetahui kedudukan sesebuah telefon — sekarang juga.",
     "s5Title": "Cuba Tracify hari ini",
-    "s5P": "Mulakan percubaan 24 jam anda dengan $0.50 dan kesan lokasi telefon pertama dalam masa kurang daripada dua minit. Jika tidak sesuai, batalkan bila-bila masa — tanpa banyak soal.",
+    "s5P": "Mulakan percubaan 24 jam anda dengan $1.47 dan kesan lokasi telefon pertama dalam masa kurang daripada dua minit. Jika tidak sesuai, batalkan bila-bila masa — tanpa banyak soal.",
     "s5Cta": "Mulakan percubaan 24 jam"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "Bolehkah saya menjejak seseorang tanpa pengetahuan mereka?",
     "a13": "Tidak boleh. Tracify ialah perkhidmatan berasaskan persetujuan dan akan sentiasa memaklumkan penerima bahawa lokasi mereka sedang diminta. Penerima mesti secara aktif mengetik pautan untuk berkongsi lokasinya. Inilah yang memastikan Tracify kekal sah dan beretika.",
     "q14": "Berapakah harga Tracify?",
-    "a14": "Tracify menawarkan percubaan akses penuh 24 jam hanya $0.50. Selepas percubaan, langganan anda akan diperbaharui secara automatik pada $30 sebulan. Anda boleh membatalkan bila-bila masa daripada halaman akaun anda atau dengan menghubungi pasukan sokongan kami.",
+    "a14": "Tracify menawarkan percubaan akses penuh 24 jam hanya $1.47. Selepas percubaan, langganan anda akan diperbaharui secara automatik pada $30 sebulan. Anda boleh membatalkan bila-bila masa daripada halaman akaun anda atau dengan menghubungi pasukan sokongan kami.",
     "q15": "Kaedah pembayaran apa yang anda terima?",
     "a15": "Kami menerima setiap kad kredit dan debit utama (Visa, Mastercard, American Express, Discover) dan dompet digital biasa melalui pemproses pembayaran kami, Stripe. Pembayaran diproses dengan selamat dan kami tidak pernah menyimpan data kad mentah di pelayan kami.",
     "q16": "Bagaimana saya boleh membatalkan langganan?",

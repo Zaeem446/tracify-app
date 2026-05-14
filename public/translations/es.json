@@ -296,7 +296,7 @@
     "billing": {
       "title": "3. Registro de Cuenta y Facturación",
       "content1": "Para usar Tracify, debe crear una cuenta y suscribirse a nuestro servicio. Nuestra estructura de precios es la siguiente:",
-      "trial": "Período de prueba de 24 horas: $0.50 USD",
+      "trial": "Período de prueba de 24 horas: $1.47 USD",
       "monthly": "Suscripción mensual: $30.00 USD (se cobra automáticamente después del período de prueba)",
       "content2": "Al suscribirse, nos autoriza a cobrar su método de pago de forma recurrente mensualmente hasta que cancele su suscripción. Todos los pagos se procesan de forma segura a través de Stripe."
     },
@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Cobertura universal:</strong> funciona en iOS, Android, GSM, CDMA, LTE y 5G, en todos los países donde existen redes móviles.",
     "s3Li3": "<strong>Sin instalación:</strong> no hay nada que instalar en tu dispositivo ni en el del objetivo. Todo se ejecuta desde el panel web de Tracify.",
     "s3Li4": "<strong>GPS en tiempo real:</strong> una vez concedido el consentimiento, obtienes coordenadas GPS precisas — no estimaciones por triangulación.",
-    "s3Li5": "<strong>Precios transparentes:</strong> prueba completa de 24 horas por solo $0,50 y después $30 al mes. Cancela cuando quieras con un solo clic.",
+    "s3Li5": "<strong>Precios transparentes:</strong> prueba completa de 24 horas por solo $1,47 y después $30 al mes. Cancela cuando quieras con un solo clic.",
     "s4Title": "¿Quién utiliza Tracify?",
     "s4P": "La gente usa Tracify para reencontrarse con seres queridos de vacaciones, compartir la crianza a distancia, estar pendiente de familiares mayores, coordinarse con compañeros en el terreno y localizar rápidamente un teléfono perdido cuando otras opciones han fallado. Lo que tienen en común: todos quieren una forma sencilla, legal y respetuosa con la privacidad de saber dónde está un teléfono — ahora mismo.",
     "s5Title": "Prueba Tracify hoy mismo",
-    "s5P": "Comienza tu prueba de 24 horas por $0,50 y localiza el primer teléfono en menos de dos minutos. Si no es para ti, cancela cuando quieras — sin preguntas.",
+    "s5P": "Comienza tu prueba de 24 horas por $1,47 y localiza el primer teléfono en menos de dos minutos. Si no es para ti, cancela cuando quieras — sin preguntas.",
     "s5Cta": "Iniciar la prueba de 24 horas"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "¿Puedo rastrear a alguien sin que lo sepa?",
     "a13": "No. Tracify es un servicio basado en consentimiento y siempre notificará al destinatario que se está solicitando su ubicación. El destinatario debe tocar activamente un enlace para compartirla. Eso es lo que mantiene a Tracify dentro de la legalidad y la ética.",
     "q14": "¿Cuánto cuesta Tracify?",
-    "a14": "Tracify ofrece una prueba completa de 24 horas por solo $0,50. Tras la prueba, tu suscripción se renueva automáticamente a $30 al mes. Puedes cancelar cuando quieras desde la página de tu cuenta o contactando con nuestro soporte.",
+    "a14": "Tracify ofrece una prueba completa de 24 horas por solo $1,47. Tras la prueba, tu suscripción se renueva automáticamente a $30 al mes. Puedes cancelar cuando quieras desde la página de tu cuenta o contactando con nuestro soporte.",
     "q15": "¿Qué métodos de pago aceptan?",
     "a15": "Aceptamos todas las tarjetas de crédito y débito más importantes (Visa, Mastercard, American Express, Discover) y los monederos digitales habituales a través de nuestro procesador de pagos, Stripe. Los pagos se procesan de forma segura y nunca almacenamos datos de tarjeta en nuestros servidores.",
     "q16": "¿Cómo cancelo mi suscripción?",

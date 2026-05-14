@@ -17,11 +17,11 @@ const ar = {
         s3Li2: "<strong>تغطية عالمية:</strong> يعمل على iOS وAndroid وGSM وCDMA وLTE و5G، في كل دولة توجد فيها شبكات هاتف محمول.",
         s3Li3: "<strong>بدون تثبيت:</strong> لا شيء لتثبيته على جهازك أو جهاز الهدف. كل شيء يعمل من لوحة تحكم Tracify على الويب.",
         s3Li4: "<strong>GPS في الوقت الفعلي:</strong> بمجرد منح الموافقة، تحصل على إحداثيات GPS دقيقة — وليست تخمينات ثلاثية.",
-        s3Li5: "<strong>تسعير شفاف:</strong> تجربة كاملة لمدة 24 ساعة مقابل $0.50 فقط، ثم $30 شهريًا. يمكنك الإلغاء في أي وقت بنقرة واحدة.",
+        s3Li5: "<strong>تسعير شفاف:</strong> تجربة كاملة لمدة 24 ساعة مقابل $1.47 فقط، ثم $30 شهريًا. يمكنك الإلغاء في أي وقت بنقرة واحدة.",
         s4Title: "من يستخدم Tracify؟",
         s4P: "يستخدم الناس Tracify لإعادة التواصل مع أحبائهم أثناء العطلات، والتعاون في تربية الأطفال عن بُعد، والاطمئنان على أفراد الأسرة من كبار السن، والتنسيق مع الزملاء في الميدان، وتحديد موقع هاتف مفقود بسرعة عندما تفشل الخيارات الأخرى. القاسم المشترك بينهم جميعًا: أنهم يريدون طريقة بسيطة وقانونية تحترم الخصوصية لمعرفة مكان الهاتف — الآن.",
         s5Title: "جرّب Tracify اليوم",
-        s5P: "ابدأ تجربتك لمدة 24 ساعة مقابل $0.50 وحدد موقع أول هاتف في أقل من دقيقتين. إذا لم يكن مناسبًا لك، يمكنك الإلغاء في أي وقت — دون أسئلة.",
+        s5P: "ابدأ تجربتك لمدة 24 ساعة مقابل $1.47 وحدد موقع أول هاتف في أقل من دقيقتين. إذا لم يكن مناسبًا لك، يمكنك الإلغاء في أي وقت — دون أسئلة.",
         s5Cta: "ابدأ التجربة لمدة 24 ساعة"
     },
     faqPage: {
@@ -58,7 +58,7 @@ const ar = {
         q13: "هل يمكنني تتبع شخص دون علمه؟",
         a13: "لا. Tracify خدمة قائمة على الموافقة وستخطر المستلم دائمًا بأنه يُطلب موقعه. يجب على المستلم أن ينقر فعليًا على رابط لمشاركة موقعه. هذا ما يُبقي Tracify قانونيًا وأخلاقيًا.",
         q14: "كم يكلف Tracify؟",
-        a14: "يقدم Tracify تجربة كاملة لمدة 24 ساعة مقابل $0.50 فقط. بعد التجربة، يتم تجديد اشتراكك تلقائيًا بسعر $30 شهريًا. يمكنك الإلغاء في أي وقت من صفحة حسابك أو بالتواصل مع فريق الدعم لدينا.",
+        a14: "يقدم Tracify تجربة كاملة لمدة 24 ساعة مقابل $1.47 فقط. بعد التجربة، يتم تجديد اشتراكك تلقائيًا بسعر $30 شهريًا. يمكنك الإلغاء في أي وقت من صفحة حسابك أو بالتواصل مع فريق الدعم لدينا.",
         q15: "ما طرق الدفع التي تقبلونها؟",
         a15: "نقبل جميع بطاقات الائتمان والخصم الرئيسية (Visa وMastercard وAmerican Express وDiscover) والمحافظ الرقمية الشائعة من خلال معالج الدفع لدينا، Stripe. تُعالَج المدفوعات بأمان ولا نخزن أبدًا بيانات البطاقة الخام على خوادمنا.",
         q16: "كيف ألغي اشتراكي؟",
@@ -111,11 +111,11 @@ const he = {
         s3Li2: "<strong>כיסוי גלובלי:</strong> פועל ב-iOS, Android, GSM, CDMA, LTE ו-5G, בכל מדינה שבה קיימות רשתות סלולריות.",
         s3Li3: "<strong>ללא התקנה:</strong> אין מה להתקין במכשיר שלכם או במכשיר היעד. הכל רץ מלוח הבקרה של Tracify בדפדפן.",
         s3Li4: "<strong>GPS בזמן אמת:</strong> ברגע שניתנת הסכמה, אתם מקבלים קואורדינטות GPS מדויקות — לא ניחושים מבוססי טריאנגולציה.",
-        s3Li5: "<strong>תמחור שקוף:</strong> ניסיון מלא ל-24 שעות תמורת $0.50 בלבד, ולאחר מכן $30 לחודש. ניתן לבטל בכל עת בלחיצה אחת.",
+        s3Li5: "<strong>תמחור שקוף:</strong> ניסיון מלא ל-24 שעות תמורת $1.47 בלבד, ולאחר מכן $30 לחודש. ניתן לבטל בכל עת בלחיצה אחת.",
         s4Title: "מי משתמש ב-Tracify?",
         s4P: "אנשים משתמשים ב-Tracify כדי להתחבר מחדש ליקיריהם בחופשה, לתאם הורות ממרחק, לבדוק שלום של בני משפחה מבוגרים, לתאם עם עמיתים בשטח ולאתר במהירות טלפון אבוד כשאפשרויות אחרות נכשלו. המכנה המשותף: כולם רוצים דרך פשוטה, חוקית ומכבדת פרטיות לדעת היכן נמצא טלפון — ברגע זה.",
         s5Title: "נסו את Tracify היום",
-        s5P: "התחילו את תקופת הניסיון ל-24 שעות תמורת $0.50 ואתרו את הטלפון הראשון תוך פחות משתי דקות. אם זה לא מתאים לכם, בטלו בכל עת — ללא שאלות.",
+        s5P: "התחילו את תקופת הניסיון ל-24 שעות תמורת $1.47 ואתרו את הטלפון הראשון תוך פחות משתי דקות. אם זה לא מתאים לכם, בטלו בכל עת — ללא שאלות.",
         s5Cta: "התחל את תקופת הניסיון ל-24 שעות"
     },
     faqPage: {
@@ -152,7 +152,7 @@ const he = {
         q13: "האם אפשר לעקוב אחרי מישהו בלי ידיעתו?",
         a13: "לא. Tracify הוא שירות מבוסס-הסכמה ותמיד יודיע לנמען שמבקשים את מיקומו. הנמען חייב ללחוץ באופן פעיל על קישור כדי לשתף את מיקומו. זה מה ששומר על Tracify חוקי ואתי.",
         q14: "כמה Tracify עולה?",
-        a14: "Tracify מציע ניסיון מלא ל-24 שעות תמורת $0.50 בלבד. לאחר הניסיון, המנוי שלכם מתחדש אוטומטית במחיר $30 לחודש. ניתן לבטל בכל עת מדף החשבון או על ידי פנייה לצוות התמיכה שלנו.",
+        a14: "Tracify מציע ניסיון מלא ל-24 שעות תמורת $1.47 בלבד. לאחר הניסיון, המנוי שלכם מתחדש אוטומטית במחיר $30 לחודש. ניתן לבטל בכל עת מדף החשבון או על ידי פנייה לצוות התמיכה שלנו.",
         q15: "אילו אמצעי תשלום אתם מקבלים?",
         a15: "אנחנו מקבלים את כל כרטיסי האשראי והחיוב הגדולים (Visa, Mastercard, American Express, Discover) וארנקים דיגיטליים נפוצים דרך מעבד התשלומים שלנו, Stripe. התשלומים מעובדים באופן מאובטח ואנחנו לעולם לא שומרים נתוני כרטיס גולמיים בשרתים שלנו.",
         q16: "איך מבטלים את המנוי?",
@@ -205,11 +205,11 @@ const tr = {
         s3Li2: "<strong>Evrensel kapsama:</strong> iOS, Android, GSM, CDMA, LTE ve 5G üzerinde, mobil şebekenin bulunduğu her ülkede çalışır.",
         s3Li3: "<strong>Kurulum yok:</strong> ne sizin cihazınıza ne de hedefin cihazına hiçbir şey kurmanız gerekmez. Her şey Tracify web kontrol panelinden çalışır.",
         s3Li4: "<strong>Gerçek zamanlı GPS:</strong> onay verildikten sonra üçgenleme tahminleri değil, kesin GPS koordinatları alırsınız.",
-        s3Li5: "<strong>Şeffaf fiyatlandırma:</strong> yalnızca $0.50'lik 24 saatlik tam erişimli deneme, ardından ayda $30. Tek tıklamayla istediğiniz zaman iptal edin.",
+        s3Li5: "<strong>Şeffaf fiyatlandırma:</strong> yalnızca $1.47'lik 24 saatlik tam erişimli deneme, ardından ayda $30. Tek tıklamayla istediğiniz zaman iptal edin.",
         s4Title: "Tracify'ı kimler kullanır?",
         s4P: "İnsanlar Tracify'ı tatildeki sevdikleriyle yeniden iletişim kurmak, uzaktan ortak ebeveynlik yapmak, yaşlı aile bireylerinin iyi olup olmadığını kontrol etmek, sahadaki meslektaşlarıyla koordinasyon sağlamak ve diğer seçenekler işe yaramadığında kaybolan bir telefonu hızlıca bulmak için kullanır. Ortak noktaları: hepsi bir telefonun nerede olduğunu — şu anda — öğrenmek için basit, yasal ve gizliliğe saygılı bir yol istiyor.",
         s5Title: "Tracify'ı bugün deneyin",
-        s5P: "$0.50 karşılığında 24 saatlik deneme sürenizi başlatın ve ilk telefonu iki dakikadan kısa sürede bulun. Size uygun değilse istediğiniz zaman iptal edin — hiçbir soru sorulmaz.",
+        s5P: "$1.47 karşılığında 24 saatlik deneme sürenizi başlatın ve ilk telefonu iki dakikadan kısa sürede bulun. Size uygun değilse istediğiniz zaman iptal edin — hiçbir soru sorulmaz.",
         s5Cta: "24 saatlik denemeyi başlat"
     },
     faqPage: {
@@ -246,7 +246,7 @@ const tr = {
         q13: "Birini haberi olmadan takip edebilir miyim?",
         a13: "Hayır. Tracify onay tabanlı bir hizmettir ve alıcıya her zaman konumunun istendiğini bildirir. Alıcının konumunu paylaşmak için aktif olarak bir bağlantıya dokunması gerekir. Tracify'ı yasal ve etik tutan da budur.",
         q14: "Tracify ne kadar?",
-        a14: "Tracify, yalnızca $0.50'ye 24 saatlik tam erişimli bir deneme sunar. Denemeden sonra aboneliğiniz otomatik olarak ayda $30'a yenilenir. Hesap sayfanızdan veya destek ekibimizle iletişime geçerek istediğiniz zaman iptal edebilirsiniz.",
+        a14: "Tracify, yalnızca $1.47'ye 24 saatlik tam erişimli bir deneme sunar. Denemeden sonra aboneliğiniz otomatik olarak ayda $30'a yenilenir. Hesap sayfanızdan veya destek ekibimizle iletişime geçerek istediğiniz zaman iptal edebilirsiniz.",
         q15: "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
         a15: "Ödeme işlemcimiz Stripe aracılığıyla tüm büyük kredi ve banka kartlarını (Visa, Mastercard, American Express, Discover) ve yaygın dijital cüzdanları kabul ediyoruz. Ödemeler güvenli bir şekilde işlenir ve ham kart verilerini asla sunucularımızda saklamayız.",
         q16: "Aboneliğimi nasıl iptal ederim?",
@@ -299,11 +299,11 @@ const el = {
         s3Li2: "<strong>Παγκόσμια κάλυψη:</strong> λειτουργεί σε iOS, Android, GSM, CDMA, LTE και 5G, σε κάθε χώρα όπου υπάρχουν δίκτυα κινητής τηλεφωνίας.",
         s3Li3: "<strong>Χωρίς εγκατάσταση:</strong> δεν χρειάζεται να εγκαταστήσετε τίποτα στη συσκευή σας ή στη συσκευή-στόχο. Όλα εκτελούνται από τον διαδικτυακό πίνακα ελέγχου Tracify.",
         s3Li4: "<strong>GPS σε πραγματικό χρόνο:</strong> μόλις δοθεί η συγκατάθεση, λαμβάνετε ακριβείς συντεταγμένες GPS — όχι εικασίες τριγωνισμού.",
-        s3Li5: "<strong>Διαφανής τιμολόγηση:</strong> δοκιμή πλήρους πρόσβασης 24 ωρών για μόλις $0.50, στη συνέχεια $30 τον μήνα. Ακυρώστε οποιαδήποτε στιγμή με ένα κλικ.",
+        s3Li5: "<strong>Διαφανής τιμολόγηση:</strong> δοκιμή πλήρους πρόσβασης 24 ωρών για μόλις $1.47, στη συνέχεια $30 τον μήνα. Ακυρώστε οποιαδήποτε στιγμή με ένα κλικ.",
         s4Title: "Ποιος χρησιμοποιεί το Tracify;",
         s4P: "Οι άνθρωποι χρησιμοποιούν το Tracify για να συνδεθούν ξανά με αγαπημένους τους στις διακοπές, να συνεργαστούν ως γονείς από απόσταση, να ελέγξουν ηλικιωμένα μέλη της οικογένειας, να συντονιστούν με συναδέλφους στο πεδίο και να εντοπίσουν γρήγορα ένα χαμένο τηλέφωνο όταν άλλες επιλογές έχουν αποτύχει. Το κοινό σημείο: όλοι θέλουν έναν απλό, νόμιμο, σεβαστό προς την ιδιωτικότητα τρόπο να γνωρίζουν πού βρίσκεται ένα τηλέφωνο — αυτή τη στιγμή.",
         s5Title: "Δοκιμάστε το Tracify σήμερα",
-        s5P: "Ξεκινήστε τη δοκιμή 24 ωρών για $0.50 και εντοπίστε το πρώτο τηλέφωνο σε λιγότερο από δύο λεπτά. Εάν δεν είναι για εσάς, ακυρώστε οποιαδήποτε στιγμή — χωρίς ερωτήσεις.",
+        s5P: "Ξεκινήστε τη δοκιμή 24 ωρών για $1.47 και εντοπίστε το πρώτο τηλέφωνο σε λιγότερο από δύο λεπτά. Εάν δεν είναι για εσάς, ακυρώστε οποιαδήποτε στιγμή — χωρίς ερωτήσεις.",
         s5Cta: "Ξεκινήστε τη δοκιμή 24 ωρών"
     },
     faqPage: {
@@ -340,7 +340,7 @@ const el = {
         q13: "Μπορώ να παρακολουθώ κάποιον χωρίς να το γνωρίζει;",
         a13: "Όχι. Το Tracify είναι μια υπηρεσία βάσει συγκατάθεσης και θα ειδοποιεί πάντα τον παραλήπτη ότι ζητείται η τοποθεσία του. Ο παραλήπτης πρέπει ενεργά να αγγίξει έναν σύνδεσμο για να μοιραστεί την τοποθεσία του. Αυτό κρατά το Tracify νόμιμο και ηθικό.",
         q14: "Πόσο κοστίζει το Tracify;",
-        a14: "Το Tracify προσφέρει μια δοκιμή πλήρους πρόσβασης 24 ωρών για μόλις $0.50. Μετά τη δοκιμή, η συνδρομή σας ανανεώνεται αυτόματα στα $30 τον μήνα. Μπορείτε να ακυρώσετε οποιαδήποτε στιγμή από τη σελίδα του λογαριασμού σας ή επικοινωνώντας με την ομάδα υποστήριξής μας.",
+        a14: "Το Tracify προσφέρει μια δοκιμή πλήρους πρόσβασης 24 ωρών για μόλις $1.47. Μετά τη δοκιμή, η συνδρομή σας ανανεώνεται αυτόματα στα $30 τον μήνα. Μπορείτε να ακυρώσετε οποιαδήποτε στιγμή από τη σελίδα του λογαριασμού σας ή επικοινωνώντας με την ομάδα υποστήριξής μας.",
         q15: "Ποιες μεθόδους πληρωμής αποδέχεστε;",
         a15: "Αποδεχόμαστε κάθε μεγάλη πιστωτική και χρεωστική κάρτα (Visa, Mastercard, American Express, Discover) και κοινά ψηφιακά πορτοφόλια μέσω του επεξεργαστή πληρωμών μας, Stripe. Οι πληρωμές επεξεργάζονται με ασφάλεια και δεν αποθηκεύουμε ποτέ ακατέργαστα δεδομένα καρτών στους διακομιστές μας.",
         q16: "Πώς ακυρώνω τη συνδρομή μου;",
@@ -393,14 +393,14 @@ const hu = {
         s3Li2: "<strong>Univerzális lefedettség:</strong> iOS-en, Androidon, GSM-en, CDMA-n, LTE-n és 5G-n is működik, minden országban, ahol mobilhálózatok léteznek.",
         s3Li3: "<strong>Nincs telepítés:</strong> semmit sem kell telepíteni az Ön vagy a céleszközre. Minden a Tracify webes vezérlőpultjából fut.",
         s3Li4: "<strong>Valós idejű GPS:</strong> a hozzájárulás megadása után pontos GPS-koordinátákat kap — nem háromszögeléses becsléseket.",
-        s3Li5: "<strong>Átlátható árazás:</strong> 24 órás teljes hozzáférésű próbaidőszak mindössze $0.50-ért, majd havi $30. Bármikor egyetlen kattintással lemondható."
+        s3Li5: "<strong>Átlátható árazás:</strong> 24 órás teljes hozzáférésű próbaidőszak mindössze $1.47-ért, majd havi $30. Bármikor egyetlen kattintással lemondható."
     }
 };
 
 hu.howItWorksPage.s4Title = "Kik használják a Tracifyt?";
 hu.howItWorksPage.s4P = "Az emberek azért használják a Tracifyt, hogy újra kapcsolatba lépjenek szeretteikkel nyaralás közben, távolról is együttneveljék a gyerekeiket, ellenőrizzék idős családtagjaikat, koordináljanak a terepen dolgozó kollégákkal és gyorsan megtalálják az elveszett telefont, amikor más lehetőségek csődöt mondtak. A közös bennük: mindannyian egyszerű, legális, az adatvédelmet tiszteletben tartó módot keresnek arra, hogy megtudják, hol van egy telefon — most azonnal.";
 hu.howItWorksPage.s5Title = "Próbálja ki a Tracifyt még ma";
-hu.howItWorksPage.s5P = "Indítsa el a 24 órás próbaidőszakot $0.50-ért, és találja meg az első telefont két percnél is rövidebb idő alatt. Ha nem Önnek való, bármikor lemondhatja — kérdés nélkül.";
+hu.howItWorksPage.s5P = "Indítsa el a 24 órás próbaidőszakot $1.47-ért, és találja meg az első telefont két percnél is rövidebb idő alatt. Ha nem Önnek való, bármikor lemondhatja — kérdés nélkül.";
 hu.howItWorksPage.s5Cta = "Indítsa el a 24 órás próbát";
 
 hu.faqPage = {
@@ -437,7 +437,7 @@ hu.faqPage = {
     q13: "Követhetek valakit anélkül, hogy tudna róla?",
     a13: "Nem. A Tracify hozzájárulás alapú szolgáltatás, és mindig értesíti a címzettet, hogy a helyzetét kérik. A címzettnek aktívan egy linkre kell koppintania ahhoz, hogy megoszthassa a helyzetét. Ez tartja a Tracifyt legálisnak és etikusnak.",
     q14: "Mennyibe kerül a Tracify?",
-    a14: "A Tracify 24 órás teljes hozzáférésű próbaidőszakot kínál mindössze $0.50-ért. A próbaidőszak után az előfizetése automatikusan megújul havi $30-ért. Bármikor lemondhatja a fiókoldaláról vagy a támogatási csapatunkkal való kapcsolatfelvétellel.",
+    a14: "A Tracify 24 órás teljes hozzáférésű próbaidőszakot kínál mindössze $1.47-ért. A próbaidőszak után az előfizetése automatikusan megújul havi $30-ért. Bármikor lemondhatja a fiókoldaláról vagy a támogatási csapatunkkal való kapcsolatfelvétellel.",
     q15: "Milyen fizetési módokat fogadnak el?",
     a15: "Minden nagyobb hitel- és betéti kártyát (Visa, Mastercard, American Express, Discover) és elterjedt digitális tárcákat elfogadunk a fizetési feldolgozónkon, a Stripe-on keresztül. A fizetéseket biztonságosan dolgozzuk fel, és soha nem tárolunk nyers kártyaadatokat a szervereinken.",
     q16: "Hogyan mondhatom le az előfizetésemet?",
@@ -490,11 +490,11 @@ lt.howItWorksPage = {
     s3Li2: "<strong>Pasaulinė aprėptis:</strong> veikia iOS, Android, GSM, CDMA, LTE ir 5G įrenginiuose, kiekvienoje šalyje, kurioje yra mobiliojo ryšio tinklai.",
     s3Li3: "<strong>Be diegimo:</strong> nieko nereikia diegti nei jūsų, nei tikslinio įrenginio. Viskas veikia iš Tracify interneto valdymo skydelio.",
     s3Li4: "<strong>Realiojo laiko GPS:</strong> davus sutikimą, gausite tikslias GPS koordinates — ne trianguliuotus spėjimus.",
-    s3Li5: "<strong>Skaidrios kainos:</strong> 24 valandų pilnos prieigos bandymas tik už $0.50, tada $30 per mėnesį. Atšaukite bet kada vienu paspaudimu.",
+    s3Li5: "<strong>Skaidrios kainos:</strong> 24 valandų pilnos prieigos bandymas tik už $1.47, tada $30 per mėnesį. Atšaukite bet kada vienu paspaudimu.",
     s4Title: "Kas naudoja Tracify?",
     s4P: "Žmonės naudoja Tracify, kad vėl susisiektų su artimaisiais atostogų metu, bendradarbiautų auginant vaikus per atstumą, pasitikrintų vyresniųjų šeimos narių būklę, koordinuotų veiksmus su kolegomis lauke ir greitai rastų pamestą telefoną, kai kiti variantai nepavyksta. Bendra tai: visi nori paprasto, teisėto, privatumą gerbiančio būdo sužinoti, kur yra telefonas — būtent dabar.",
     s5Title: "Išbandykite Tracify šiandien",
-    s5P: "Pradėkite 24 valandų bandymą už $0.50 ir raskite pirmąjį telefoną per mažiau nei dvi minutes. Jei netinka, atšaukite bet kada — be jokių klausimų.",
+    s5P: "Pradėkite 24 valandų bandymą už $1.47 ir raskite pirmąjį telefoną per mažiau nei dvi minutes. Jei netinka, atšaukite bet kada — be jokių klausimų.",
     s5Cta: "Pradėti 24 valandų bandymą"
 };
 
@@ -532,7 +532,7 @@ lt.faqPage = {
     q13: "Ar galiu sekti ką nors be jo žinios?",
     a13: "Ne. Tracify yra sutikimu paremta paslauga ir visada praneš gavėjui, kad prašoma jo vietos. Gavėjas turi aktyviai bakstelėti nuorodą, kad pasidalintų savo vieta. Tai palaiko Tracify teisėtą ir etišką.",
     q14: "Kiek kainuoja Tracify?",
-    a14: "Tracify siūlo 24 valandų pilnos prieigos bandymą tik už $0.50. Po bandymo jūsų prenumerata automatiškai atsinaujina už $30 per mėnesį. Galite atšaukti bet kada iš savo paskyros puslapio arba susisiekę su mūsų palaikymo komanda.",
+    a14: "Tracify siūlo 24 valandų pilnos prieigos bandymą tik už $1.47. Po bandymo jūsų prenumerata automatiškai atsinaujina už $30 per mėnesį. Galite atšaukti bet kada iš savo paskyros puslapio arba susisiekę su mūsų palaikymo komanda.",
     q15: "Kokius mokėjimo būdus priimate?",
     a15: "Priimame visas pagrindines kredito ir debeto korteles (Visa, Mastercard, American Express, Discover) ir populiarias skaitmenines pinigines per mūsų mokėjimų apdorotoją Stripe. Mokėjimai apdorojami saugiai ir niekada nesaugome neapdorotų kortelių duomenų savo serveriuose.",
     q16: "Kaip atšaukti prenumeratą?",
@@ -585,11 +585,11 @@ lv.howItWorksPage = {
     s3Li2: "<strong>Vispasaules pārklājums:</strong> darbojas iOS, Android, GSM, CDMA, LTE un 5G ierīcēs, ikvienā valstī, kur pastāv mobilo sakaru tīkli.",
     s3Li3: "<strong>Bez instalēšanas:</strong> nekas nav jāinstalē ne jūsu, ne mērķa ierīcē. Viss darbojas no Tracify tīmekļa vadības paneļa.",
     s3Li4: "<strong>Reāllaika GPS:</strong> tiklīdz tiek dota piekrišana, jūs saņemat precīzas GPS koordinātas — nevis triangulācijas minējumus.",
-    s3Li5: "<strong>Caurskatāma cenu noteikšana:</strong> 24 stundu pilnas piekļuves izmēģinājums tikai par $0.50, pēc tam $30 mēnesī. Atceliet jebkurā laikā ar vienu klikšķi.",
+    s3Li5: "<strong>Caurskatāma cenu noteikšana:</strong> 24 stundu pilnas piekļuves izmēģinājums tikai par $1.47, pēc tam $30 mēnesī. Atceliet jebkurā laikā ar vienu klikšķi.",
     s4Title: "Kas izmanto Tracify?",
     s4P: "Cilvēki izmanto Tracify, lai atkal sazinātos ar tuviniekiem atvaļinājumā, kopīgi audzinātu bērnus no attāluma, pārbaudītu vecāka gadagājuma ģimenes locekļus, koordinētu darbu ar kolēģiem laukā un ātri atrastu pazudušu tālruni, kad citas iespējas ir izgāzušās. Kopīgais: visi vēlas vienkāršu, likumīgu, konfidencialitāti cienošu veidu, kā uzzināt, kur atrodas tālrunis — tieši tagad.",
     s5Title: "Izmēģiniet Tracify šodien",
-    s5P: "Sāciet 24 stundu izmēģinājumu par $0.50 un atrodiet pirmo tālruni mazāk nekā divās minūtēs. Ja tas nav priekš jums, atceliet jebkurā laikā — bez jautājumiem.",
+    s5P: "Sāciet 24 stundu izmēģinājumu par $1.47 un atrodiet pirmo tālruni mazāk nekā divās minūtēs. Ja tas nav priekš jums, atceliet jebkurā laikā — bez jautājumiem.",
     s5Cta: "Sākt 24 stundu izmēģinājumu"
 };
 
@@ -627,7 +627,7 @@ lv.faqPage = {
     q13: "Vai es varu izsekot kādu bez viņa ziņas?",
     a13: "Nē. Tracify ir piekrišanas balstīts pakalpojums un vienmēr informēs saņēmēju, ka tiek pieprasīta viņa atrašanās vieta. Saņēmējam aktīvi jāpieskaras saitei, lai dalītos ar savu atrašanās vietu. Tieši tas padara Tracify likumīgu un ētisku.",
     q14: "Cik maksā Tracify?",
-    a14: "Tracify piedāvā 24 stundu pilnas piekļuves izmēģinājumu tikai par $0.50. Pēc izmēģinājuma jūsu abonements automātiski atjaunojas par $30 mēnesī. Jūs varat atcelt jebkurā laikā no sava konta lapas vai sazinoties ar mūsu atbalsta komandu.",
+    a14: "Tracify piedāvā 24 stundu pilnas piekļuves izmēģinājumu tikai par $1.47. Pēc izmēģinājuma jūsu abonements automātiski atjaunojas par $30 mēnesī. Jūs varat atcelt jebkurā laikā no sava konta lapas vai sazinoties ar mūsu atbalsta komandu.",
     q15: "Kādas maksājumu metodes jūs pieņemat?",
     a15: "Mēs pieņemam visas galvenās kredītkartes un debetkartes (Visa, Mastercard, American Express, Discover) un izplatītākos digitālos makus, izmantojot mūsu maksājumu apstrādātāju Stripe. Maksājumi tiek apstrādāti droši, un mēs nekad neuzglabājam neapstrādātus kartes datus savos serveros.",
     q16: "Kā atcelt manu abonementu?",
@@ -680,11 +680,11 @@ tk.howItWorksPage = {
     s3Li2: "<strong>Ählumumy gurşaw:</strong> iOS, Android, GSM, CDMA, LTE we 5G-de işleýär, ykjam ulgamlaryň bar bolan her bir ýurdunda.",
     s3Li3: "<strong>Gurnama ýok:</strong> siziň ýa-da niýetlenýän enjamda gurnaljak zat ýok. Her zat Tracify web dolandyryş panelinden işleýär.",
     s3Li4: "<strong>Hakyky wagtda GPS:</strong> razylyk berlensoň, takyk GPS koordinatlaryny alýarsyňyz — trianglýasiýa çaklamalary däl.",
-    s3Li5: "<strong>Aýdyň baha:</strong> diňe $0.50-e 24 sagatlyk doly girişli synag, soňra aýda $30. Islendik wagtda bir gezek basyp ýatyryň.",
+    s3Li5: "<strong>Aýdyň baha:</strong> diňe $1.47-e 24 sagatlyk doly girişli synag, soňra aýda $30. Islendik wagtda bir gezek basyp ýatyryň.",
     s4Title: "Tracify-y kim ulanýar?",
     s4P: "Adamlar Tracify-y dynç alyşdaky söýgülileri bilen täzeden baglanyşmak, uzakdan bile çaga terbiýelemek, ýaşy uly maşgala agzalaryny barlamak, meýdandaky kärdeşleri bilen utgaşdyrmak we beýleki mümkinçilikler şowsuz bolanda ýitirilen telefony çalt tapmak üçin ulanýarlar. Umumy zat: hemmesi ýönekeý, kanuny, gizlinlige hormat goýýan usulda telefonyň nirededigini — şu wagt — bilmek isleýär.",
     s5Title: "Tracify-y şu gün synap görüň",
-    s5P: "$0.50-e 24 sagatlyk synagy başladyň we iki minutdan az wagtyň içinde birinji telefony tapyň. Size laýyk gelmese, islendik wagtda ýatyryň — soraglarsyz.",
+    s5P: "$1.47-e 24 sagatlyk synagy başladyň we iki minutdan az wagtyň içinde birinji telefony tapyň. Size laýyk gelmese, islendik wagtda ýatyryň — soraglarsyz.",
     s5Cta: "24 sagatlyk synagy başla"
 };
 
@@ -722,7 +722,7 @@ tk.faqPage = {
     q13: "Biriniň habary bolmazdan yzarlap bilerinmi?",
     a13: "Ýok. Tracify razylyga esaslanýan hyzmatdyr we alyjynyň ýerleşýän ýeriniň soralýandygyny elmydama habar berer. Alyjy ýerleşýän ýerini paýlaşmak üçin işjeň bir baglanyşyga degmeli. Bu Tracify-y kanuny we ahlakly saklaýar.",
     q14: "Tracify näçe durýar?",
-    a14: "Tracify diňe $0.50-e 24 sagatlyk doly girişli synag hödürleýär. Synagdan soň abunaňyz awtomatiki ýagdaýda aýda $30-a täzelenýär. Hasap sahypaňyzdan ýa-da goldaw toparymyz bilen habarlaşyp, islendik wagtda ýatyryp bilersiňiz.",
+    a14: "Tracify diňe $1.47-e 24 sagatlyk doly girişli synag hödürleýär. Synagdan soň abunaňyz awtomatiki ýagdaýda aýda $30-a täzelenýär. Hasap sahypaňyzdan ýa-da goldaw toparymyz bilen habarlaşyp, islendik wagtda ýatyryp bilersiňiz.",
     q15: "Haýsy töleg usullaryny kabul edýärsiňiz?",
     a15: "Töleg amal edijimiz Stripe arkaly ähli esasy karz we debet kartlary (Visa, Mastercard, American Express, Discover) we meşhur sanly gapjyklary kabul edýäris. Tölegler ygtybarly amal edilýär we biz hiç haçan serwerlerimizde çig kart maglumatlaryny saklamaýarys.",
     q16: "Abunamy nädip ýatyrmaly?",
@@ -775,11 +775,11 @@ zu.howItWorksPage = {
     s3Li2: "<strong>Ukusabalala emhlabeni wonke:</strong> isebenza ku-iOS, Android, GSM, CDMA, LTE, ne-5G, kuwo wonke amazwe lapho amanethiwekhi eselula ekhona.",
     s3Li3: "<strong>Akukho ukufakwa:</strong> akukho okudingekayo ukukufaka edivayisini yakho noma edivayisini eyinhloso. Konke kusebenza kusuka kuphaneli ye-Tracify esebenza kuwebhu.",
     s3Li4: "<strong>I-GPS yesikhathi sangempela:</strong> uma imvume inikeziwe, uthola amakhodinathi we-GPS anembayo — hhayi ukuqagela ngokubhekwa kwezindlela.",
-    s3Li5: "<strong>Intengo esobala:</strong> isivivinyo sokufinyelela okugcwele samahora angama-24 ngo-$0.50 kuphela, bese kuba ngu-$30 ngenyanga. Khansela noma nini ngokuchofoza okukodwa.",
+    s3Li5: "<strong>Intengo esobala:</strong> isivivinyo sokufinyelela okugcwele samahora angama-24 ngo-$1.47 kuphela, bese kuba ngu-$30 ngenyanga. Khansela noma nini ngokuchofoza okukodwa.",
     s4Title: "Ubani osebenzisa i-Tracify?",
     s4P: "Abantu basebenzisa i-Tracify ukuze baxhumane futhi nabathandekayo babo beseholidini, bakhulise izingane bekude, bahlole amalungu omndeni asakhulile, basebenzisane nozakwabo abasemsebenzini, futhi bathole ngokushesha ifoni elahlekile lapho ezinye izinketho zihlulekile. Into efanayo: bonke bafuna indlela elula, esemthethweni, ehlonipha ubumfihlo yokwazi ukuthi ifoni ikuphi — manje nje.",
     s5Title: "Zama i-Tracify namuhla",
-    s5P: "Qala isivivinyo sakho samahora angama-24 ngo-$0.50 bese uthola ifoni yokuqala ngaphansi kwemizuzu emibili. Uma ingekona eyakho, khansela noma nini — ngaphandle kwemibuzo.",
+    s5P: "Qala isivivinyo sakho samahora angama-24 ngo-$1.47 bese uthola ifoni yokuqala ngaphansi kwemizuzu emibili. Uma ingekona eyakho, khansela noma nini — ngaphandle kwemibuzo.",
     s5Cta: "Qala isivivinyo samahora angama-24"
 };
 
@@ -817,7 +817,7 @@ zu.faqPage = {
     q13: "Ngingamlandelela umuntu engazi?",
     a13: "Cha. I-Tracify iyinsizakalo esekelwe emvumeni futhi izokwazisa umamukeli njalo ukuthi indawo yakhe iyacelwa. Umamukeli kufanele athephe isixhumanisi ngesenzo ukuze abelane ngendawo yakhe. Yilokhu okugcina i-Tracify isemthethweni nangokwemikhuba.",
     q14: "Ibiza malini i-Tracify?",
-    a14: "I-Tracify inikeza isivivinyo sokufinyelela okugcwele samahora angama-24 ngo-$0.50 kuphela. Ngemuva kwesivivinyo, ukubhalisa kwakho kuyavuselelwa ngokuzenzakalelayo ngo-$30 ngenyanga. Ungakhansela noma nini kusuka ekhasini lakho le-akhawunti noma ngokuxhumana nethimba lethu lokuxhasa.",
+    a14: "I-Tracify inikeza isivivinyo sokufinyelela okugcwele samahora angama-24 ngo-$1.47 kuphela. Ngemuva kwesivivinyo, ukubhalisa kwakho kuyavuselelwa ngokuzenzakalelayo ngo-$30 ngenyanga. Ungakhansela noma nini kusuka ekhasini lakho le-akhawunti noma ngokuxhumana nethimba lethu lokuxhasa.",
     q15: "Iziphi izindlela zokukhokha ozamukelayo?",
     a15: "Samukela wonke amakhadi amakhulu esikweletu nedebhithi (Visa, Mastercard, American Express, Discover) nezinjunjuba zedijithali ezijwayelekile ngomcubunguli wethu wezinkokhelo, i-Stripe. Izinkokhelo zicutshungulwa ngokuphephile futhi asilokothi silondoloze idatha yekhadi eluhlaza kumaseva ethu.",
     q16: "Ngingakukhansela kanjani ukubhalisa kwami?",

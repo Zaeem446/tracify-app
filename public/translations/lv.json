@@ -485,11 +485,11 @@
     "s3Li2": "<strong>Vispasaules pārklājums:</strong> darbojas iOS, Android, GSM, CDMA, LTE un 5G ierīcēs, ikvienā valstī, kur pastāv mobilo sakaru tīkli.",
     "s3Li3": "<strong>Bez instalēšanas:</strong> nekas nav jāinstalē ne jūsu, ne mērķa ierīcē. Viss darbojas no Tracify tīmekļa vadības paneļa.",
     "s3Li4": "<strong>Reāllaika GPS:</strong> tiklīdz tiek dota piekrišana, jūs saņemat precīzas GPS koordinātas — nevis triangulācijas minējumus.",
-    "s3Li5": "<strong>Caurskatāma cenu noteikšana:</strong> 24 stundu pilnas piekļuves izmēģinājums tikai par $0.50, pēc tam $30 mēnesī. Atceliet jebkurā laikā ar vienu klikšķi.",
+    "s3Li5": "<strong>Caurskatāma cenu noteikšana:</strong> 24 stundu pilnas piekļuves izmēģinājums tikai par $1.47, pēc tam $30 mēnesī. Atceliet jebkurā laikā ar vienu klikšķi.",
     "s4Title": "Kas izmanto Tracify?",
     "s4P": "Cilvēki izmanto Tracify, lai atkal sazinātos ar tuviniekiem atvaļinājumā, kopīgi audzinātu bērnus no attāluma, pārbaudītu vecāka gadagājuma ģimenes locekļus, koordinētu darbu ar kolēģiem laukā un ātri atrastu pazudušu tālruni, kad citas iespējas ir izgāzušās. Kopīgais: visi vēlas vienkāršu, likumīgu, konfidencialitāti cienošu veidu, kā uzzināt, kur atrodas tālrunis — tieši tagad.",
     "s5Title": "Izmēģiniet Tracify šodien",
-    "s5P": "Sāciet 24 stundu izmēģinājumu par $0.50 un atrodiet pirmo tālruni mazāk nekā divās minūtēs. Ja tas nav priekš jums, atceliet jebkurā laikā — bez jautājumiem.",
+    "s5P": "Sāciet 24 stundu izmēģinājumu par $1.47 un atrodiet pirmo tālruni mazāk nekā divās minūtēs. Ja tas nav priekš jums, atceliet jebkurā laikā — bez jautājumiem.",
     "s5Cta": "Sākt 24 stundu izmēģinājumu"
   },
   "faqPage": {
@@ -526,7 +526,7 @@
     "q13": "Vai es varu izsekot kādu bez viņa ziņas?",
     "a13": "Nē. Tracify ir piekrišanas balstīts pakalpojums un vienmēr informēs saņēmēju, ka tiek pieprasīta viņa atrašanās vieta. Saņēmējam aktīvi jāpieskaras saitei, lai dalītos ar savu atrašanās vietu. Tieši tas padara Tracify likumīgu un ētisku.",
     "q14": "Cik maksā Tracify?",
-    "a14": "Tracify piedāvā 24 stundu pilnas piekļuves izmēģinājumu tikai par $0.50. Pēc izmēģinājuma jūsu abonements automātiski atjaunojas par $30 mēnesī. Jūs varat atcelt jebkurā laikā no sava konta lapas vai sazinoties ar mūsu atbalsta komandu.",
+    "a14": "Tracify piedāvā 24 stundu pilnas piekļuves izmēģinājumu tikai par $1.47. Pēc izmēģinājuma jūsu abonements automātiski atjaunojas par $30 mēnesī. Jūs varat atcelt jebkurā laikā no sava konta lapas vai sazinoties ar mūsu atbalsta komandu.",
     "q15": "Kādas maksājumu metodes jūs pieņemat?",
     "a15": "Mēs pieņemam visas galvenās kredītkartes un debetkartes (Visa, Mastercard, American Express, Discover) un izplatītākos digitālos makus, izmantojot mūsu maksājumu apstrādātāju Stripe. Maksājumi tiek apstrādāti droši, un mēs nekad neuzglabājam neapstrādātus kartes datus savos serveros.",
     "q16": "Kā atcelt manu abonementu?",
