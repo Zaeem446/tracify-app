@@ -500,6 +500,126 @@ router.get('/diagnose/:email', requireAdmin, async (req, res) => {
     }
 });
 
+// ==================== Webhook Diagnostic ====================
+
+// Diagnose webhook issue: compare Stripe data vs DB for a customer
+router.get('/webhook-diag/:email', requireAdmin, async (req, res) => {
+    try {
+        const email = decodeURIComponent(req.params.email);
+        const pool = db.getDb();
+
+        // Init Stripe
+        const stripe = process.env.STRIPE_SECRET_KEY
+            ? require('stripe')(process.env.STRIPE_SECRET_KEY)
+            : null;
+
+        if (!stripe) {
+            return res.status(500).json({ error: 'Stripe not configured on this server' });
+        }
+
+        // Get customer from DB
+        const customer = await db.customers.findByEmail(email);
+        if (!customer) {
+            return res.status(404).json({ error: 'Customer not found', email });
+        }
+
+        // Get subscriptions from DB
+        const dbSubs = await pool.query(
+            'SELECT * FROM subscriptions WHERE customer_id = $1 ORDER BY started_at DESC',
+            [customer.id]
+        );
+
+        // Get payments from DB
+        const dbPayments = await db.payments.getByCustomerId(customer.id);
+
+        const results = {
+            customer: { id: customer.id, email: customer.email },
+            dbSubscriptions: dbSubs.rows.length,
+            dbPayments: dbPayments.length,
+            subscriptionChecks: []
+        };
+
+        // For each subscription with a stripe_subscription_id, check Stripe
+        for (const sub of dbSubs.rows) {
+            const check = {
+                dbId: sub.id,
+                stripeSubId: sub.stripe_subscription_id,
+                dbStatus: sub.status,
+                dbPlanType: sub.plan_type,
+                dbAmount: sub.amount,
+                dbExpiresAt: sub.expires_at,
+                stripeStatus: null,
+                stripeInvoices: [],
+                dbLookupWorks: false,
+                errors: []
+            };
+
+            if (!sub.stripe_subscription_id) {
+                check.errors.push('No stripe_subscription_id in DB');
+                results.subscriptionChecks.push(check);
+                continue;
+            }
+
+            // Test 1: Does findByStripeSubscriptionId work?
+            try {
+                const found = await db.subscriptions.findByStripeSubscriptionId(sub.stripe_subscription_id);
+                check.dbLookupWorks = !!found;
+                if (!found) {
+                    check.errors.push('findByStripeSubscriptionId returned null despite ID existing in DB');
+                }
+            } catch (e) {
+                check.errors.push('findByStripeSubscriptionId threw: ' + e.message);
+            }
+
+            // Test 2: Get subscription from Stripe
+            try {
+                const stripeSub = await stripe.subscriptions.retrieve(sub.stripe_subscription_id);
+                check.stripeStatus = stripeSub.status;
+                check.stripeCustomer = stripeSub.customer;
+                check.stripeCurrentPeriodEnd = new Date(stripeSub.current_period_end * 1000).toISOString();
+            } catch (e) {
+                check.errors.push('Stripe subscription lookup failed: ' + e.message);
+            }
+
+            // Test 3: Get all invoices from Stripe for this subscription
+            try {
+                const invoices = await stripe.invoices.list({
+                    subscription: sub.stripe_subscription_id,
+                    limit: 20
+                });
+                check.stripeInvoices = invoices.data.map(inv => ({
+                    id: inv.id,
+                    amount: inv.amount_paid / 100,
+                    status: inv.status,
+                    billing_reason: inv.billing_reason,
+                    created: new Date(inv.created * 1000).toISOString(),
+                    payment_intent: inv.payment_intent
+                }));
+            } catch (e) {
+                check.errors.push('Stripe invoices lookup failed: ' + e.message);
+            }
+
+            // Test 4: Check which Stripe invoices are missing from DB payments
+            const dbPaymentIds = dbPayments.map(p => p.stripe_payment_id);
+            check.missingPayments = check.stripeInvoices
+                .filter(inv => inv.amount > 1.75 && inv.status === 'paid')
+                .filter(inv => !dbPaymentIds.includes(inv.payment_intent) && !dbPaymentIds.includes(inv.id))
+                .map(inv => ({
+                    invoiceId: inv.id,
+                    amount: inv.amount,
+                    date: inv.created,
+                    billing_reason: inv.billing_reason
+                }));
+
+            results.subscriptionChecks.push(check);
+        }
+
+        res.json(results);
+    } catch (error) {
+        res.status(500).json({ error: error.message, stack: error.stack });
+    }
+});
+
 // ==================== Pixels & Tags ====================
 
 const { invalidateCache: invalidatePixelsCache } = require('./pixels');
