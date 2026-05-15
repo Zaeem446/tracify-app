@@ -311,9 +311,150 @@ Reply to this email to respond to ${name}.
     return info;
 }
 
+async function sendPaymentConfirmation(email, { amount, isTrial }) {
+    const transport = await getTransporter();
+    const appUrl = process.env.APP_URL || 'http://localhost:3000';
+
+    let bodyContent;
+    if (isTrial) {
+        bodyContent = `
+            <p>Hello,</p>
+            <p>Your payment of <strong>$${parseFloat(amount).toFixed(2)}</strong> has been received. Your 24-hour trial is now active.</p>
+
+            <p><strong>What's included:</strong></p>
+            <ul>
+                <li>Full access to all tracking features</li>
+                <li>Unlimited location requests</li>
+                <li>Real-time GPS updates</li>
+            </ul>
+
+            <p>Your trial expires in 24 hours. After that, your subscription will automatically continue at your selected plan rate.</p>
+        `;
+    } else {
+        const nextBillingDate = new Date();
+        nextBillingDate.setDate(nextBillingDate.getDate() + 30);
+        const formattedDate = nextBillingDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+        bodyContent = `
+            <p>Hello,</p>
+            <p>Your payment of <strong>$${parseFloat(amount).toFixed(2)}</strong> has been received. Your subscription has been renewed for another 30 days.</p>
+
+            <p>Your next billing date is <strong>${formattedDate}</strong>.</p>
+        `;
+    }
+
+    const mailOptions = {
+        from: process.env.SMTP_FROM || '"Tracify" <noreply@tracify-geo.com>',
+        to: email,
+        subject: 'Tracify - Payment Confirmed',
+        html: `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <style>
+                    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+                    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+                    .header { background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+                    .content { background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; }
+                    .button { display: inline-block; background: #4CAF50; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+                    .footer { text-align: center; margin-top: 20px; color: #666; font-size: 12px; }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <div class="header">
+                        <h1>Payment Confirmed</h1>
+                    </div>
+                    <div class="content">
+                        ${bodyContent}
+
+                        <center>
+                            <a href="${appUrl}/dashboard" class="button">Go to Dashboard</a>
+                        </center>
+
+                        ${!isTrial ? '<p style="margin-top: 20px;">To manage your subscription, visit your Account page.</p>' : ''}
+
+                        <div class="footer">
+                            <p>If you have questions, contact us at support@tracify-geo.com</p>
+                            <p>&copy; ${new Date().getFullYear()} Tracify. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </body>
+            </html>
+        `
+    };
+
+    if (!transport) {
+        console.log('Payment confirmation email logged (SMTP not configured):', email, amount);
+        return { logged: true };
+    }
+
+    return transport.sendMail(mailOptions);
+}
+
+async function sendCancellationEmail(email) {
+    const transport = await getTransporter();
+    const appUrl = process.env.APP_URL || 'http://localhost:3000';
+
+    const mailOptions = {
+        from: process.env.SMTP_FROM || '"Tracify" <noreply@tracify-geo.com>',
+        to: email,
+        subject: 'Tracify - Subscription Cancelled',
+        html: `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <style>
+                    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+                    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+                    .header { background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+                    .content { background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; }
+                    .button { display: inline-block; background: #4CAF50; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+                    .footer { text-align: center; margin-top: 20px; color: #666; font-size: 12px; }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <div class="header">
+                        <h1>Subscription Cancelled</h1>
+                    </div>
+                    <div class="content">
+                        <p>Hello,</p>
+                        <p>Your Tracify subscription has been cancelled. You will not be charged again.</p>
+
+                        <p>Your access remains active until the end of your current billing period.</p>
+
+                        <p>If you change your mind, you can resubscribe anytime.</p>
+
+                        <center>
+                            <a href="${appUrl}/" class="button">Resubscribe</a>
+                        </center>
+
+                        <div class="footer">
+                            <p>If you have questions, contact us at support@tracify-geo.com</p>
+                            <p>&copy; ${new Date().getFullYear()} Tracify. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </body>
+            </html>
+        `
+    };
+
+    if (!transport) {
+        console.log('Cancellation email logged (SMTP not configured):', email);
+        return { logged: true };
+    }
+
+    return transport.sendMail(mailOptions);
+}
+
 module.exports = {
     sendPasswordEmail,
     sendResetPasswordEmail,
     sendTrackingConsentRequest,
-    sendContactForm
+    sendContactForm,
+    sendPaymentConfirmation,
+    sendCancellationEmail
 };

@@ -1,5 +1,6 @@
 const express = require('express');
 const db = require('../database/db');
+const { sendPaymentConfirmation, sendCancellationEmail } = require('../utils/email');
 
 const router = express.Router();
 
@@ -345,6 +346,10 @@ router.post('/cancel', requireCustomerAuth, async (req, res) => {
 
         await db.subscriptions.cancel(subscription.id);
 
+        // Send cancellation confirmation email (fire-and-forget)
+        sendCancellationEmail(req.customerEmail)
+            .catch(err => console.error('Cancellation email failed:', err.message));
+
         res.json({
             success: true,
             message: 'Subscription cancelled successfully. You will not be charged again.'
@@ -459,6 +464,10 @@ router.get('/verify-session', requireCustomerAuth, async (req, res) => {
         );
 
         console.log(`Checkout verified: customer ${tracifyCustomerId}, subscription ${stripeSubscriptionId}`);
+
+        // Send trial payment confirmation email (fire-and-forget)
+        sendPaymentConfirmation(req.customerEmail, { amount: 1.47, isTrial: true })
+            .catch(err => console.error('Trial payment email failed:', err.message));
 
         res.json({
             success: true,
@@ -580,6 +589,13 @@ router.post('/webhook', express.raw({ type: 'application/json' }), async (req, r
                     );
 
                     console.log(`Subscription ${subscription.id} extended, payment of $${amountPaid} recorded`);
+
+                    // Send recurring payment confirmation email (fire-and-forget)
+                    const customer = await db.customers.findById(subscription.customer_id);
+                    if (customer) {
+                        sendPaymentConfirmation(customer.email, { amount: amountPaid, isTrial: false })
+                            .catch(err => console.error('Recurring payment email failed:', err.message));
+                    }
                 } else {
                     console.log(`No subscription found for Stripe ID: ${stripeSubscriptionId}`);
                 }

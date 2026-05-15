@@ -121,6 +121,14 @@ async function initialize() {
             ALTER TABLE customers ADD COLUMN IF NOT EXISTS source VARCHAR(20) DEFAULT NULL
         `);
 
+        // Migration: add IP address columns for dispute evidence
+        await client.query(`
+            ALTER TABLE customers ADD COLUMN IF NOT EXISTS signup_ip VARCHAR(45) DEFAULT NULL
+        `);
+        await client.query(`
+            ALTER TABLE customers ADD COLUMN IF NOT EXISTS last_ip VARCHAR(45) DEFAULT NULL
+        `);
+
         // Migration: funnel_events table for tracking visitor journey
         await client.query(`
             CREATE TABLE IF NOT EXISTS funnel_events (
@@ -197,11 +205,11 @@ async function initialize() {
 
 // Customer functions
 const customerQueries = {
-    create: async (email, password) => {
+    create: async (email, password, ip) => {
         const hashedPassword = bcrypt.hashSync(password, 10);
         const result = await pool.query(
-            'INSERT INTO customers (email, password) VALUES ($1, $2) RETURNING id',
-            [email, hashedPassword]
+            'INSERT INTO customers (email, password, signup_ip, last_ip) VALUES ($1, $2, $3, $3) RETURNING id',
+            [email, hashedPassword, ip || null]
         );
         return { lastInsertRowid: result.rows[0].id };
     },
@@ -222,10 +230,10 @@ const customerQueries = {
         return result.rows[0] || null;
     },
 
-    updateLastLogin: async (id) => {
+    updateLastLogin: async (id, ip) => {
         await pool.query(
-            'UPDATE customers SET last_login = NOW() WHERE id = $1',
-            [id]
+            'UPDATE customers SET last_login = NOW(), last_ip = $2 WHERE id = $1',
+            [id, ip || null]
         );
     },
 

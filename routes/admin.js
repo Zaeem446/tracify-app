@@ -476,7 +476,9 @@ router.get('/diagnose/:email', requireAdmin, async (req, res) => {
                 id: customer.id,
                 email: customer.email,
                 created_at: customer.created_at,
-                last_login: customer.last_login
+                last_login: customer.last_login,
+                signup_ip: customer.signup_ip,
+                last_ip: customer.last_ip
             },
             allSubscriptions: allSubs.rows.map(s => ({
                 id: s.id,

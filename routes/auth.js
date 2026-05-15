@@ -18,6 +18,12 @@ function getCreateCheckoutSession() {
     return _createCheckoutSession;
 }
 
+// Extract real client IP (Vercel sets x-forwarded-for with client IP first)
+function getClientIp(req) {
+    const forwarded = req.headers['x-forwarded-for'];
+    return forwarded ? forwarded.split(',')[0].trim() : req.ip;
+}
+
 // Generate random password
 function generatePassword(length = 8) {
     const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789';
@@ -46,8 +52,9 @@ router.post('/signup', async (req, res) => {
         // Generate password
         const password = generatePassword();
 
-        // Create customer
-        const result = await db.customers.create(email, password);
+        // Create customer (with IP for dispute evidence)
+        const ip = getClientIp(req);
+        const result = await db.customers.create(email, password, ip);
         const customerId = result.lastInsertRowid;
 
         // Store phone to track if provided
@@ -128,8 +135,9 @@ router.post('/login', async (req, res) => {
             return res.status(401).json({ error: 'Invalid email or password' });
         }
 
-        // Update last login
-        await db.customers.updateLastLogin(customer.id);
+        // Update last login (with IP for dispute evidence)
+        const ip = getClientIp(req);
+        await db.customers.updateLastLogin(customer.id, ip);
 
         // Create session
         const sessionToken = uuidv4();
